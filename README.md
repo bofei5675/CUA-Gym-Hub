@@ -16,13 +16,22 @@ Each mock is a production-quality React SPA that faithfully replicates the UI an
   <img src="figures/env.png" alt="CUA-Gym-Hub mock applications" width="100%"/>
 </p>
 
-## Design Principles
+## Why This Works
 
-Mock apps in CUA-Gym-Hub are held to rigorous standards (see [SANDBOX_COMPLETENESS_GUIDE.md](SANDBOX_COMPLETENESS_GUIDE.md)):
+Two coupled design choices make every mock in CUA-Gym-Hub usable as an RL training environment — not just a pretty UI fixture:
+
+**1) State injection.** When a task is created, the synthesis pipeline ships a JSON initial state alongside its `reward.py` and POSTs it to the mock. Loading `?sid=<task_id>` then renders that exact world — emails, project boards, calendars, customer tickets, whatever the task description calls for. **A single mock can host arbitrarily many distinct task worlds with no code change**, which is what lets one `gmail_mock` serve dozens of triage / search / drafting / cross-app workflows.
+
+**2) Session isolation.** Every URL carries its own session id. State files, uploads, and resets are all namespaced under `.mock-states/<sid>.json` on the server. **Parallel RL workers training on the same mock never see one another's mutations** — a critical property for distributed rollouts where hundreds of episodes run concurrently against a shared pool of mock backends. Each episode resets cleanly with a single `POST`.
+
+The [State API](#state-api) section below documents the contract; the [SANDBOX_COMPLETENESS_GUIDE.md](SANDBOX_COMPLETENESS_GUIDE.md) defines the acceptance bar every mock is held to.
+
+## Mock Quality Bar
+
+Beyond the two contract guarantees above, every mock app is held to the following standards (see [SANDBOX_COMPLETENESS_GUIDE.md](SANDBOX_COMPLETENESS_GUIDE.md) for the full criteria):
 
 - **No dead affordances.** Every visible button, menu, and control must do something coherent. Computer-use agents click everything; placeholder behavior breaks training.
 - **State is inspectable.** All user-visible mutations persist through local state and are exposed via `/go?sid=...` as `{initial_state, current_state, state_diff}`. RL reward functions consume this diff.
-- **Session-isolated.** Multiple agents can run in parallel against the same mock without interference, via `?sid=<task_id>` URL parameter.
 - **File interactions are first-class.** Upload, download, import, export, and attachment flows are implemented with real browser file APIs, not stubs.
 - **No external calls.** Collaboration features (share dialogs, notifications, version history) are implemented as local analogs. The mock never touches the network at runtime.
 
