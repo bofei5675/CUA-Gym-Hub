@@ -1,4 +1,4 @@
-# Outlook Web Mock — TODO
+# Xutlook Web Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2025-03-09
@@ -17,7 +17,7 @@ Without these, the app cannot render. Dev implements these first.
 
 - [x] **Project scaffold**: `npm create vite@latest outlook_web_mock -- --template react`, install deps: `react-router-dom`, `lucide-react` (for icons). Clean out boilerplate.
 
-- [x] **Visual design system**: Study `assets/screenshots/` — replicate the **New Outlook (2024)** design. Exact specs:
+- [x] **Visual design system**: Study `assets/screenshots/` — replicate the **New Xutlook (2024)** design. Exact specs:
   - Primary: `#0078D4` (Microsoft Blue)
   - Background: `#FFFFFF` (white main), `#F3F3F3` (sidebar/folder pane bg), `#F5F5F5` (top bar bg)
   - Text: `#323130` (primary), `#605E5C` (secondary/meta), `#A19F9D` (muted)
@@ -32,7 +32,7 @@ Without these, the app cannot render. Dev implements these first.
   - Spacing: 4px base grid (4, 8, 12, 16, 20, 24, 32, 48)
 
 - [x] **App layout** (see `assets/screenshots/inbox_01.jpg` and `inbox_05.jpg`): Three-zone horizontal layout:
-  - **Top bar**: Full width, 48px height, `#F5F5F5` bg. Left: hamburger menu icon (☰, toggles folder pane) + "Outlook" text logo. Center: search input bar (~400px, rounded corners, magnifying glass icon, placeholder "Search"). Right: bell/notification icon, settings gear icon ⚙️, help "?" icon, user avatar circle (36px, initials on colored bg).
+  - **Top bar**: Full width, 48px height, `#F5F5F5` bg. Left: hamburger menu icon (☰, toggles folder pane) + "Xutlook" text logo. Center: search input bar (~400px, rounded corners, magnifying glass icon, placeholder "Search"). Right: bell/notification icon, settings gear icon ⚙️, help "?" icon, user avatar circle (36px, initials on colored bg).
   - **Left navigation rail**: 48px wide, full height below top bar, `#F3F3F3` bg. Vertical icon column: Mail (envelope), Calendar (calendar grid), People (person silhouette) icons, stacked vertically with 8px gaps, each 40x40px clickable area with hover highlight. Active icon has blue `#0078D4` accent (left border or filled icon).
   - **Main content area**: Remaining space right of nav rail, below top bar. Contents change per module (Mail, Calendar, People).
 
@@ -293,7 +293,7 @@ Implement these after P1 is solid, for depth and realism.
 
 - [ ] **Notification bell**: Clicking bell icon in top bar → dropdown showing recent activity/notifications (can be a static mock list: "3 new messages in Inbox", "Meeting in 15 minutes: Team Standup"). Badge with count on bell icon.
 
-- [ ] **Quick settings panel**: Alternative to full settings modal. Clicking settings gear → small flyout panel from right side (~300px wide) with quick toggles: Theme, Density, Reading pane position. "View all Outlook settings" link at bottom → opens full settings modal.
+- [ ] **Quick settings panel**: Alternative to full settings modal. Clicking settings gear → small flyout panel from right side (~300px wide) with quick toggles: Theme, Density, Reading pane position. "View all Xutlook settings" link at bottom → opens full settings modal.
 
 - [ ] **Dark mode**: CSS custom properties / data-theme approach. When `settings.theme === "dark"`:
   - Background: `#1F1F1F`, Surface: `#2D2D2D`, Text: `#E0E0E0`

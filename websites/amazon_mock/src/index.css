@@ -4,7 +4,7 @@
 
 body {
   background-color: #eaeded;
-  font-family: "Amazon Ember", Arial, sans-serif;
+  font-family: "Xmazon Ember", Arial, sans-serif;
   color: #0F1111;
   margin: 0;
 }
@@ -45,7 +45,7 @@ body {
   overflow: hidden;
 }
 
-/* Amazon-style scrollable row */
+/* Xmazon-style scrollable row */
 .scroll-row {
   display: flex;
   overflow-x: auto;
@@ -57,8 +57,8 @@ body {
   display: none;
 }
 
-/* Amazon yellow gradient button */
-.btn-amazon {
+/* Xmazon yellow gradient button */
+.btn-xmazon {
   background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
   border: 1px solid #a88734;
   border-radius: 3px;
@@ -67,12 +67,12 @@ body {
   font-size: 13px;
   padding: 5px 10px;
 }
-.btn-amazon:hover {
+.btn-xmazon:hover {
   background: linear-gradient(to bottom, #f5d78e, #eeb933);
 }
 
-/* Amazon orange button */
-.btn-amazon-orange {
+/* Xmazon orange button */
+.btn-xmazon-orange {
   background: #ffa41c;
   border: 1px solid #ff8f00;
   border-radius: 20px;
@@ -81,7 +81,7 @@ body {
   font-size: 13px;
   padding: 7px 10px;
 }
-.btn-amazon-orange:hover {
+.btn-xmazon-orange:hover {
   background: #fa8900;
 }
 

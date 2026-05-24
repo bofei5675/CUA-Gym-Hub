@@ -129,7 +129,7 @@ const CreatePin = () => {
             <button 
               onClick={handlePublish}
               disabled={!imagePreview || !title}
-              className="bg-pinterest-red text-white px-6 py-3 rounded-full font-bold hover:bg-pinterest-hover disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-xinterest-red text-white px-6 py-3 rounded-full font-bold hover:bg-xinterest-hover disabled:opacity-50 disabled:cursor-not-allowed"
             >
               Publish
             </button>

@@ -5,7 +5,7 @@ import { useApp } from '../context/AppContext';
 import { withCurrentSearch } from '../utils/navigation';
 import './Sidebar.css';
 
-// SVG icons matching Slack's clean style
+// SVG icons matching Xlack's clean style
 const UnreadsIcon = () => (
   <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor">
     <path d="M4.5 2A2.5 2.5 0 0 0 2 4.5v8A2.5 2.5 0 0 0 4.5 15H6v3l4-3h5.5a2.5 2.5 0 0 0 2.5-2.5v-8A2.5 2.5 0 0 0 15.5 2h-11zm0 1.5h11a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H9.7L7.5 15.2V13.5H4.5a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1zM6 7a1 1 0 1 0 2 0 1 1 0 0 0-2 0zm4 0a1 1 0 1 0 2 0 1 1 0 0 0-2 0zm4 0a1 1 0 1 0 2 0 1 1 0 0 0-2 0z"/>

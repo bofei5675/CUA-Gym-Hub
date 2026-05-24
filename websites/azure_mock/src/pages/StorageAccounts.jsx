@@ -24,7 +24,7 @@ export default function StorageAccounts() {
         <input className="input" placeholder="Filter by name..." value={search} onChange={e => setSearch(e.target.value)} />
       </div>
       <div className="card" style={{ padding: 0 }}>
-        <table className="azure-table">
+        <table className="xzure-table">
           <thead><tr><th>Name</th><th>Resource group</th><th>Location</th><th>Performance</th><th>Replication</th></tr></thead>
           <tbody>
             {filtered.map(sa => (
@@ -33,7 +33,7 @@ export default function StorageAccounts() {
                 <td>{sa.resourceGroup}</td><td>{sa.location}</td><td>{sa.performance}</td><td>{sa.replication}</td>
               </tr>
             ))}
-            {filtered.length === 0 && <tr><td colSpan={5} style={{ textAlign: 'center', padding: '24px', color: 'var(--azure-text-secondary)' }}>No storage accounts found</td></tr>}
+            {filtered.length === 0 && <tr><td colSpan={5} style={{ textAlign: 'center', padding: '24px', color: 'var(--xzure-text-secondary)' }}>No storage accounts found</td></tr>}
           </tbody>
         </table>
       </div>

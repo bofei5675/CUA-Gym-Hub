@@ -1,8 +1,8 @@
-# Gusto Mock — Research Summary
+# Xusto Mock — Research Summary
 
 ## App Overview
 
-**Gusto** is a cloud-based HR, payroll, and benefits platform designed for small-to-medium businesses. It provides an all-in-one admin dashboard where employers can run payroll, manage employees, track time, administer benefits, handle tax compliance, and generate reports. Gusto is known for its clean, friendly, and approachable design — making complex payroll/HR workflows feel simple.
+**Xusto** is a cloud-based HR, payroll, and benefits platform designed for small-to-medium businesses. It provides an all-in-one admin dashboard where employers can run payroll, manage employees, track time, administer benefits, handle tax compliance, and generate reports. Xusto is known for its clean, friendly, and approachable design — making complex payroll/HR workflows feel simple.
 
 **Target user**: Small business owner or HR admin managing 5-50 employees.
 
@@ -14,7 +14,7 @@
 ## Visual Design & Brand
 
 ### Color Palette (derived from screenshots)
-- **Primary brand color (logo/accent)**: Coral/salmon `#F45D48` (Gusto's signature orange-red)
+- **Primary brand color (logo/accent)**: Coral/salmon `#F45D48` (Xusto's signature orange-red)
 - **Secondary accent**: Teal/dark green `#0A8080` used for active sidebar items, links, and CTA buttons
 - **Sidebar background**: White `#FFFFFF` with a light left border
 - **Main content background**: White `#FFFFFF`
@@ -29,17 +29,17 @@
 ### Typography
 - **Font family**: System sans-serif stack (appears similar to "Centra No2" or similar geometric sans)
 - **Heading sizes**: Large headings ~28px bold, section headings ~20px semibold, body 14-15px regular
-- **Logo**: Lowercase "gusto" in coral/salmon color, clean sans-serif
+- **Logo**: Lowercase "xusto" in coral/salmon color, clean sans-serif
 
 ### Layout Structure (from screenshots)
-- **Left sidebar**: ~220px wide, white background, with Gusto logo top-left in coral
+- **Left sidebar**: ~220px wide, white background, with Xusto logo top-left in coral
 - **Top bar**: ~56px height, contains search bar (centered), notification bell icon, and user avatar + name dropdown (right)
 - **Main content area**: Centered content column ~800px max-width, generous padding
 
 ## Sidebar Navigation (confirmed from screenshots)
 
 ```
-gusto (logo, coral)
+xusto (logo, coral)
 ─────────────────
 Home
 ─────────────────

@@ -1,11 +1,11 @@
-# Epic MyChart Patient Portal — Research Summary
+# Xpic MyChart Patient Portal — Research Summary
 
 > Last updated: 2025-03-11
 > Researcher: plan agent
 
 ## Application Overview
 
-**Epic MyChart** is the world's most widely deployed patient health portal, powered by Epic Systems. It provides patients with secure online access to their electronic health records, enabling them to manage appointments, view test results, message care teams, manage medications, pay bills, and more. Over **195 million patients** actively use MyChart across thousands of healthcare organizations globally, with **6.45 billion unique logins** in the last 12 months.
+**Xpic MyChart** is the world's most widely deployed patient health portal, powered by Xpic Systems. It provides patients with secure online access to their electronic health records, enabling them to manage appointments, view test results, message care teams, manage medications, pay bills, and more. Over **195 million patients** actively use MyChart across thousands of healthcare organizations globally, with **6.45 billion unique logins** in the last 12 months.
 
 MyChart is accessed via web browser (desktop) or mobile app (iOS/Android). Our mock targets the **desktop web portal** experience.
 
@@ -32,7 +32,7 @@ MyChart is accessed via web browser (desktop) or mobile app (iOS/Android). Our m
 ## Navigation Structure (Desktop Web)
 
 ### Top Header Bar
-- **Left**: MyChart by Epic logo (teal/blue gradient header)
+- **Left**: MyChart by Xpic logo (teal/blue gradient header)
 - **Center**: "MyChart" wordmark
 - **Right**: Globe icon (language), Logout button
 - **Below header**: Top navigation tabs: `Your Menu` | `Visits` | `Messages` | `Test Results` | `Billing/Insurance`

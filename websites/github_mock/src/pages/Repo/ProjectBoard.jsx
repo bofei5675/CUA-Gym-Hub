@@ -71,27 +71,27 @@
             {columns.map(col => (
               <div
                 key={col.id}
-                className="w-80 bg-[#010409] border border-github-border rounded-md flex flex-col"
+                className="w-80 bg-[#010409] border border-xithub-border rounded-md flex flex-col"
                 onDragOver={handleDragOver}
                 onDrop={(e) => handleDrop(e, col.id)}
               >
-                <div className="p-3 border-b border-github-border flex items-center justify-between bg-[#161b22] rounded-t-md">
+                <div className="p-3 border-b border-xithub-border flex items-center justify-between bg-[#161b22] rounded-t-md">
                   <div className="flex items-center gap-2">
                     <span className={`w-3 h-3 rounded-full ${col.id === 'done' ? 'bg-purple-500' : col.id === 'inprogress' ? 'bg-yellow-500' : 'bg-gray-500'}`}></span>
                     <span className="font-semibold text-sm">{col.title}</span>
-                    <span className="bg-github-border px-2 rounded-full text-xs text-github-muted">
+                    <span className="bg-xithub-border px-2 rounded-full text-xs text-xithub-muted">
                       {issues.filter(i => i.column === col.id).length}
                     </span>
                   </div>
                   <div className="relative">
                     <button
                       onClick={() => setColumnMenu(columnMenu === col.id ? null : col.id)}
-                      className="text-github-muted hover:text-white"
+                      className="text-xithub-muted hover:text-white"
                     >
                       <MoreHorizontal size={16} />
                     </button>
                     {columnMenu === col.id && (
-                      <div className="absolute right-0 top-full mt-1 w-40 bg-[#161b22] border border-github-border rounded-md shadow-lg z-40 py-1">
+                      <div className="absolute right-0 top-full mt-1 w-40 bg-[#161b22] border border-xithub-border rounded-md shadow-lg z-40 py-1">
                         <button
                           onClick={() => { setAddingToColumn(col.id); setColumnMenu(null); }}
                           className="w-full text-left px-3 py-1.5 text-xs hover:bg-[#21262d]"
@@ -115,18 +115,18 @@
                       key={issue.id}
                       draggable
                       onDragStart={(e) => handleDragStart(e, issue.id)}
-                      className="bg-[#161b22] border border-github-border rounded-md p-3 shadow-sm cursor-move hover:border-github-muted group"
+                      className="bg-[#161b22] border border-xithub-border rounded-md p-3 shadow-sm cursor-move hover:border-xithub-muted group"
                     >
                       <div className="flex items-start gap-2 mb-1">
                         <AlertCircle size={14} className="text-green-500 mt-1" />
                         <Link
                           to={`/${owner?.username}/${repo.name}/issues/${issue.number}`}
-                          className="text-sm font-medium text-github-text group-hover:text-github-accent hover:underline"
+                          className="text-sm font-medium text-xithub-text group-hover:text-xithub-accent hover:underline"
                         >
                           {issue.title}
                         </Link>
                       </div>
-                      <div className="flex items-center gap-2 mt-2 text-xs text-github-muted">
+                      <div className="flex items-center gap-2 mt-2 text-xs text-xithub-muted">
                         <span>#{issue.number}</span>
                         {issue.labels.map(l => (
                           <span key={l} className="w-2 h-2 rounded-full bg-blue-500"></span>
@@ -136,7 +136,7 @@
                   ))}
 
                   {addingToColumn === col.id ? (
-                    <div className="bg-[#161b22] border border-github-border rounded-md p-2">
+                    <div className="bg-[#161b22] border border-xithub-border rounded-md p-2">
                       <input
                         type="text"
                         placeholder="Enter a title"
@@ -146,19 +146,19 @@
                           if (e.key === 'Enter') handleAddItem(col.id);
                           if (e.key === 'Escape') { setAddingToColumn(null); setNewItemTitle(''); }
                         }}
-                        className="w-full bg-[#0d1117] border border-github-border rounded px-2 py-1 text-sm text-github-text focus:ring-1 focus:ring-github-accent outline-none mb-2"
+                        className="w-full bg-[#0d1117] border border-xithub-border rounded px-2 py-1 text-sm text-xithub-text focus:ring-1 focus:ring-xithub-accent outline-none mb-2"
                         autoFocus
                       />
                       <div className="flex gap-2">
                         <button
                           onClick={() => handleAddItem(col.id)}
-                          className="bg-github-success text-white px-2 py-1 rounded text-xs font-semibold hover:bg-opacity-90"
+                          className="bg-xithub-success text-white px-2 py-1 rounded text-xs font-semibold hover:bg-opacity-90"
                         >
                           Add
                         </button>
                         <button
                           onClick={() => { setAddingToColumn(null); setNewItemTitle(''); }}
-                          className="text-github-muted hover:text-white text-xs"
+                          className="text-xithub-muted hover:text-white text-xs"
                         >
                           Cancel
                         </button>
@@ -167,7 +167,7 @@
                   ) : (
                     <button
                       onClick={() => setAddingToColumn(col.id)}
-                      className="w-full py-2 text-github-muted hover:text-github-accent text-sm flex items-center gap-2 px-2"
+                      className="w-full py-2 text-xithub-muted hover:text-xithub-accent text-sm flex items-center gap-2 px-2"
                     >
                       <Plus size={14} /> Add item
                     </button>

@@ -75,14 +75,14 @@
             </h2>
             <button
               onClick={() => setShowNewForm(!showNewForm)}
-              className="bg-github-success text-white px-4 py-1.5 rounded-md font-semibold text-sm hover:bg-opacity-90 flex items-center gap-2"
+              className="bg-xithub-success text-white px-4 py-1.5 rounded-md font-semibold text-sm hover:bg-opacity-90 flex items-center gap-2"
             >
               <Plus size={16} /> New branch
             </button>
           </div>
 
           {showNewForm && (
-            <form onSubmit={handleCreateBranch} className="mb-6 border border-github-border rounded-md p-4 bg-github-card">
+            <form onSubmit={handleCreateBranch} className="mb-6 border border-xithub-border rounded-md p-4 bg-xithub-card">
               <h3 className="font-semibold text-white mb-3">Create a branch</h3>
               {branchError && (
                 <div className="mb-3 px-3 py-2 bg-red-900/30 border border-red-700/50 rounded-md text-sm text-red-400">
@@ -91,23 +91,23 @@
               )}
               <div className="flex gap-3 items-end">
                 <div className="flex-1">
-                  <label className="block text-xs text-github-muted mb-1">Branch name</label>
+                  <label className="block text-xs text-xithub-muted mb-1">Branch name</label>
                   <input
                     type="text"
                     value={newBranchName}
                     onChange={e => { setNewBranchName(e.target.value); setBranchError(''); }}
                     placeholder="new-feature"
-                    className="w-full bg-[#0d1117] border border-github-border rounded-md px-3 py-1.5 text-sm text-github-text focus:ring-1 focus:ring-github-accent outline-none"
+                    className="w-full bg-[#0d1117] border border-xithub-border rounded-md px-3 py-1.5 text-sm text-xithub-text focus:ring-1 focus:ring-xithub-accent outline-none"
                     required
                   />
                   {branchError && <p className="mt-1 text-xs text-red-400">{branchError}</p>}
                 </div>
                 <div>
-                  <label className="block text-xs text-github-muted mb-1">Base branch</label>
+                  <label className="block text-xs text-xithub-muted mb-1">Base branch</label>
                   <select
                     value={baseBranch}
                     onChange={e => setBaseBranch(e.target.value)}
-                    className="bg-[#0d1117] border border-github-border rounded-md px-3 py-1.5 text-sm text-github-text focus:ring-1 focus:ring-github-accent outline-none"
+                    className="bg-[#0d1117] border border-xithub-border rounded-md px-3 py-1.5 text-sm text-xithub-text focus:ring-1 focus:ring-xithub-accent outline-none"
                   >
                     {branches.map(b => (
                       <option key={b.id} value={b.name}>{b.name}</option>
@@ -116,7 +116,7 @@
                 </div>
                 <button
                   type="submit"
-                  className="bg-github-success text-white px-4 py-1.5 rounded-md font-semibold text-sm hover:bg-opacity-90"
+                  className="bg-xithub-success text-white px-4 py-1.5 rounded-md font-semibold text-sm hover:bg-opacity-90"
                 >
                   Create branch
                 </button>
@@ -127,10 +127,10 @@
 
           {/* Default branch */}
           <div className="mb-4">
-            <h3 className="text-sm font-semibold text-github-muted mb-2">Default branch</h3>
+            <h3 className="text-sm font-semibold text-xithub-muted mb-2">Default branch</h3>
           </div>
 
-          <div className="border border-github-border rounded-md divide-y divide-github-border">
+          <div className="border border-xithub-border rounded-md divide-y divide-xithub-border">
             {branches.map(branch => {
               const lastCommit = getLastCommit(branch);
               const isDefault = branch.name === repo.defaultBranch;
@@ -140,8 +140,8 @@
                 <div key={branch.id} className="p-4 flex items-center justify-between hover:bg-[#161b22]">
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
-                      <GitBranch size={14} className="text-github-muted shrink-0" />
-                      <span className="font-mono text-sm text-github-text font-semibold">
+                      <GitBranch size={14} className="text-xithub-muted shrink-0" />
+                      <span className="font-mono text-sm text-xithub-text font-semibold">
                         {branch.name}
                       </span>
                       {isDefault && (
@@ -155,7 +155,7 @@
                         </span>
                       )}
                     </div>
-                    <div className="text-xs text-github-muted flex items-center gap-3">
+                    <div className="text-xs text-xithub-muted flex items-center gap-3">
                       {lastCommit && (
                         <>
                           <span className="truncate max-w-[300px]">{lastCommit.message}</span>
@@ -168,7 +168,7 @@
 
                   <div className="flex items-center gap-4 shrink-0">
                     {aheadBehind && (
-                      <div className="text-xs text-github-muted">
+                      <div className="text-xs text-xithub-muted">
                         <span className="text-green-400">{aheadBehind.ahead} ahead</span>
                         {' / '}
                         <span className="text-red-400">{aheadBehind.behind} behind</span>
@@ -187,7 +187,7 @@
                             </button>
                             <button
                               onClick={() => setConfirmDelete(null)}
-                              className="px-2 py-0.5 text-xs text-github-muted border border-github-border rounded hover:bg-[#30363d]"
+                              className="px-2 py-0.5 text-xs text-xithub-muted border border-xithub-border rounded hover:bg-[#30363d]"
                             >
                               No
                             </button>
@@ -195,7 +195,7 @@
                         ) : (
                           <button
                             onClick={() => setConfirmDelete(branch.id)}
-                            className="p-1.5 text-github-muted hover:text-red-400 rounded hover:bg-[#30363d]"
+                            className="p-1.5 text-xithub-muted hover:text-red-400 rounded hover:bg-[#30363d]"
                             title="Delete branch"
                           >
                             <Trash2 size={14} />
@@ -208,7 +208,7 @@
               );
             })}
             {branches.length === 0 && (
-              <div className="p-8 text-center text-github-muted text-sm">
+              <div className="p-8 text-center text-xithub-muted text-sm">
                 No branches found for this repository.
               </div>
             )}

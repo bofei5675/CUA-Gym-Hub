@@ -28,7 +28,7 @@ interface AppContextType {
   updateCurrentUser: (updates: Partial<import('../types').User>) => void;
 }
 
-const INITIAL_KEY_PREFIX = 'asana-app-initialState';
+const INITIAL_KEY_PREFIX = 'xsana-app-initialState';
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
 

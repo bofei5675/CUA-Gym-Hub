@@ -204,7 +204,7 @@ export default function Home() {
       {/* Why Book Section */}
       <section className="section" style={{ background: 'var(--color-white)', padding: '48px 0' }}>
         <div className="container">
-          <h2 style={{ color: 'var(--color-navy)', marginBottom: '32px', textAlign: 'center' }}>Why book with Expedia?</h2>
+          <h2 style={{ color: 'var(--color-navy)', marginBottom: '32px', textAlign: 'center' }}>Why book with Xpedia?</h2>
           <div className="why-grid">
             <div className="why-card">
               <div className="why-icon"><Shield size={28} color="var(--color-action-blue)" /></div>
@@ -259,7 +259,7 @@ export default function Home() {
             </div>
           </div>
           <div className="footer-bottom">
-            <span>&copy; 2026 Expedia, Inc. All rights reserved. (Mock)</span>
+            <span>&copy; 2026 Xpedia, Inc. All rights reserved. (Mock)</span>
           </div>
         </div>
       </footer>
@@ -270,7 +270,7 @@ export default function Home() {
           actions={<button className="btn-primary" onClick={() => setFooterTopic(null)}>Done</button>}
         >
           <p style={{ color: 'var(--color-medium-gray)', lineHeight: 1.6 }}>
-            Local Expedia {footerTopic.section.toLowerCase()} panel. This keeps footer navigation inspectable and closeable while staying inside the sandbox.
+            Local Xpedia {footerTopic.section.toLowerCase()} panel. This keeps footer navigation inspectable and closeable while staying inside the sandbox.
           </p>
           <div style={{ marginTop: 12, padding: 12, border: '1px solid var(--color-border-gray)', borderRadius: 8 }}>
             Saved to this session as a local help-center draft.

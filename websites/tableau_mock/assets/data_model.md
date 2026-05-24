@@ -1,4 +1,4 @@
-# Tableau Mock -- Data Model
+# Xableau Mock -- Data Model
 
 This document defines all entity types, their fields, relationships, and realistic example values for `dataManager.js`.
 
@@ -20,7 +20,7 @@ Top-level container. Only one workbook is open at a time.
 
 ## 2. DataSource
 
-A connected data source with tables/fields. We pre-load "Sample - Superstore" as the canonical dataset (matching real Tableau).
+A connected data source with tables/fields. We pre-load "Sample - Superstore" as the canonical dataset (matching real Xableau).
 
 | Field | Type | Example |
 |-------|------|---------|

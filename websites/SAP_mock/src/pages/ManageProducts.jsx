@@ -8,8 +8,8 @@ const MATERIAL_TYPE_LABELS = {
 }
 
 function StatusIcon({ status }) {
-  if (status === 'Active') return <span style={{ color: 'var(--sap-status-success)' }}>●</span>
-  if (status === 'Inactive') return <span style={{ color: 'var(--sap-text-secondary)' }}>○</span>
+  if (status === 'Active') return <span style={{ color: 'var(--xap-status-success)' }}>●</span>
+  if (status === 'Inactive') return <span style={{ color: 'var(--xap-text-secondary)' }}>○</span>
   return <span>—</span>
 }
 
@@ -96,31 +96,31 @@ export default function ManageProducts() {
             </div>
           )}
           <div className="filter-bar-actions">
-            <button className="btn-ghost" style={{ fontSize: '12px', color: 'var(--sap-text-secondary)' }}>Adapt Filters (4)</button>
+            <button className="btn-ghost" style={{ fontSize: '12px', color: 'var(--xap-text-secondary)' }}>Adapt Filters (4)</button>
             <button className="btn-primary" onClick={applyFilters}>Go</button>
           </div>
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4px' }}>
             <button onClick={() => setFilterCollapsed(c => !c)}
-              style={{ background: 'none', border: 'none', color: 'var(--sap-text-secondary)', cursor: 'pointer', fontSize: '18px' }}>
+              style={{ background: 'none', border: 'none', color: 'var(--xap-text-secondary)', cursor: 'pointer', fontSize: '18px' }}>
               {filterCollapsed ? '▽' : '△'}
             </button>
           </div>
         </div>
 
         <div className="section-card">
-          <div style={{ padding: '8px 12px', borderBottom: '1px solid var(--sap-border)' }}>
+          <div style={{ padding: '8px 12px', borderBottom: '1px solid var(--xap-border)' }}>
             <div className="table-toolbar">
               <span className="table-count">Materials ({filtered.length})</span>
               <div className="table-toolbar-right">
                 <button className="btn-ghost" disabled={selected.length === 0}>Copy</button>
-                <span style={{ color: 'var(--sap-border)', margin: '0 4px' }}>|</span>
+                <span style={{ color: 'var(--xap-border)', margin: '0 4px' }}>|</span>
                 <button className="btn-ghost" title="Settings">⚙</button>
                 <button className="btn-ghost" title="Export">⬇</button>
               </div>
             </div>
           </div>
           <div style={{ overflowX: 'auto' }}>
-            <table className="sap-table">
+            <table className="xap-table">
               <thead>
                 <tr>
                   <th style={{ width: '40px' }}><input type="checkbox" checked={selected.length === filtered.length && filtered.length > 0} onChange={toggleAll} /></th>
@@ -137,7 +137,7 @@ export default function ManageProducts() {
               </thead>
               <tbody>
                 {filtered.length === 0 ? (
-                  <tr><td colSpan={10} style={{ textAlign: 'center', padding: '32px', color: 'var(--sap-text-secondary)' }}>No materials found.</td></tr>
+                  <tr><td colSpan={10} style={{ textAlign: 'center', padding: '32px', color: 'var(--xap-text-secondary)' }}>No materials found.</td></tr>
                 ) : filtered.map(mat => (
                   <tr key={mat.id} className={selected.includes(mat.id) ? 'selected' : ''}>
                     <td><input type="checkbox" checked={selected.includes(mat.id)} onChange={() => toggleSelect(mat.id)} /></td>

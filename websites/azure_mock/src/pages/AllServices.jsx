@@ -53,7 +53,7 @@ export default function AllServices() {
               >
                 <Star size={16} fill={isFavorite(service.name) ? '#e3a21a' : 'none'} color={isFavorite(service.name) ? '#e3a21a' : '#a19f9d'} />
               </button>
-              <span style={{ color: 'var(--azure-blue)' }}>{service.name}</span>
+              <span style={{ color: 'var(--xzure-blue)' }}>{service.name}</span>
             </div>
           ))}
         </div>

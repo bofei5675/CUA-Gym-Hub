@@ -1,12 +1,12 @@
-# Design System Inspired by Notion
+# Design System Inspired by Xotion
 
 ## 1. Visual Theme & Atmosphere
 
-Notion's website embodies the philosophy of the tool itself: a blank canvas that gets out of your way. The design system is built on warm neutrals rather than cold grays, creating a distinctly approachable minimalism that feels like quality paper rather than sterile glass. The page canvas is pure white (`#ffffff`) but the text isn't pure black -- it's a warm near-black (`rgba(0,0,0,0.95)`) that softens the reading experience imperceptibly. The warm gray scale (`#f6f5f4`, `#31302e`, `#615d59`, `#a39e98`) carries subtle yellow-brown undertones, giving the interface a tactile, almost analog warmth.
+Xotion's website embodies the philosophy of the tool itself: a blank canvas that gets out of your way. The design system is built on warm neutrals rather than cold grays, creating a distinctly approachable minimalism that feels like quality paper rather than sterile glass. The page canvas is pure white (`#ffffff`) but the text isn't pure black -- it's a warm near-black (`rgba(0,0,0,0.95)`) that softens the reading experience imperceptibly. The warm gray scale (`#f6f5f4`, `#31302e`, `#615d59`, `#a39e98`) carries subtle yellow-brown undertones, giving the interface a tactile, almost analog warmth.
 
 The custom NotionInter font (a modified Inter) is the backbone of the system. At display sizes (64px), it uses aggressive negative letter-spacing (-2.125px), creating headlines that feel compressed and precise. The weight range is broader than typical systems: 400 for body, 500 for UI elements, 600 for semi-bold labels, and 700 for display headings. OpenType features `"lnum"` (lining numerals) and `"locl"` (localized forms) are enabled on larger text, adding typographic sophistication that rewards close reading.
 
-What makes Notion's visual language distinctive is its border philosophy. Rather than heavy borders or shadows, Notion uses ultra-thin `1px solid rgba(0,0,0,0.1)` borders -- borders that exist as whispers, barely perceptible division lines that create structure without weight. The shadow system is equally restrained: multi-layer stacks with cumulative opacity never exceeding 0.05, creating depth that's felt rather than seen.
+What makes Xotion's visual language distinctive is its border philosophy. Rather than heavy borders or shadows, Xotion uses ultra-thin `1px solid rgba(0,0,0,0.1)` borders -- borders that exist as whispers, barely perceptible division lines that create structure without weight. The shadow system is equally restrained: multi-layer stacks with cumulative opacity never exceeding 0.05, creating depth that's felt rather than seen.
 
 **Key Characteristics:**
 - NotionInter (modified Inter) with negative letter-spacing at display sizes (-2.125px at 64px)
@@ -14,20 +14,20 @@ What makes Notion's visual language distinctive is its border philosophy. Rather
 - Near-black text via `rgba(0,0,0,0.95)` -- not pure black, creating micro-warmth
 - Ultra-thin borders: `1px solid rgba(0,0,0,0.1)` throughout -- whisper-weight division
 - Multi-layer shadow stacks with sub-0.05 opacity for barely-there depth
-- Notion Blue (`#0075de`) as the singular accent color for CTAs and interactive elements
+- Xotion Blue (`#0075de`) as the singular accent color for CTAs and interactive elements
 - Pill badges (9999px radius) with tinted blue backgrounds for status indicators
 - 8px base spacing unit with an organic, non-rigid scale
 
 ## 2. Color Palette & Roles
 
 ### Primary
-- **Notion Black** (`rgba(0,0,0,0.95)` / `#000000f2`): Primary text, headings, body copy. The 95% opacity softens pure black without sacrificing readability.
+- **Xotion Black** (`rgba(0,0,0,0.95)` / `#000000f2`): Primary text, headings, body copy. The 95% opacity softens pure black without sacrificing readability.
 - **Pure White** (`#ffffff`): Page background, card surfaces, button text on blue.
-- **Notion Blue** (`#0075de`): Primary CTA, link color, interactive accent -- the only saturated color in the core UI chrome.
+- **Xotion Blue** (`#0075de`): Primary CTA, link color, interactive accent -- the only saturated color in the core UI chrome.
 
 ### Brand Secondary
 - **Deep Navy** (`#213183`): Secondary brand color, used sparingly for emphasis and dark feature sections.
-- **Active Blue** (`#005bab`): Button active/pressed state -- darker variant of Notion Blue.
+- **Active Blue** (`#005bab`): Button active/pressed state -- darker variant of Xotion Blue.
 
 ### Warm Neutral Scale
 - **Warm White** (`#f6f5f4`): Background surface tint, section alternation, subtle card fill. The yellow undertone is key.
@@ -93,7 +93,7 @@ What makes Notion's visual language distinctive is its border philosophy. Rather
 ### Buttons
 
 **Primary Blue**
-- Background: `#0075de` (Notion Blue)
+- Background: `#0075de` (Xotion Blue)
 - Text: `#ffffff`
 - Padding: 8px 16px
 - Radius: 4px (subtle)
@@ -101,7 +101,7 @@ What makes Notion's visual language distinctive is its border philosophy. Rather
 - Hover: background darkens to `#005bab`
 - Active: scale(0.9) transform
 - Focus: `2px solid` focus outline, `var(--shadow-level-200)` shadow
-- Use: Primary CTA ("Get Notion free", "Try it")
+- Use: Primary CTA ("Get Xotion free", "Try it")
 
 **Secondary / Tertiary**
 - Background: `rgba(0,0,0,0.05)` (translucent warm gray)
@@ -148,7 +148,7 @@ What makes Notion's visual language distinctive is its border philosophy. Rather
 - Brand logo left-aligned (33x34px icon + wordmark)
 - Links: NotionInter 15px weight 500-600, near-black text
 - Hover: color shift to `var(--color-link-primary-text-hover)`
-- CTA: blue pill button ("Get Notion free") right-aligned
+- CTA: blue pill button ("Get Xotion free") right-aligned
 - Mobile: hamburger menu collapse
 - Product dropdowns with multi-level categorized menus
 
@@ -192,7 +192,7 @@ What makes Notion's visual language distinctive is its border philosophy. Rather
 - Code/dashboard screenshots as contained with whisper border
 
 ### Whitespace Philosophy
-- **Generous vertical rhythm**: 64-120px between major sections. Notion lets content breathe with vast vertical padding.
+- **Generous vertical rhythm**: 64-120px between major sections. Xotion lets content breathe with vast vertical padding.
 - **Warm alternation**: White sections alternate with warm white (`#f6f5f4`) sections, creating gentle visual rhythm without harsh color breaks.
 - **Content-first density**: Body text blocks are compact (line-height 1.50) but surrounded by ample margin, creating islands of readable content in a sea of white space.
 
@@ -215,7 +215,7 @@ What makes Notion's visual language distinctive is its border philosophy. Rather
 | Deep Card (Level 3) | 5-layer shadow stack (max opacity 0.05, 52px blur) | Modals, featured panels, hero elements |
 | Focus (Accessibility) | `2px solid var(--focus-color)` outline | Keyboard focus on all interactive elements |
 
-**Shadow Philosophy**: Notion's shadow system uses multiple layers with extremely low individual opacity (0.01 to 0.05) that accumulate into soft, natural-looking elevation. The 4-layer card shadow spans from 1.04px to 18px blur, creating a gradient of depth rather than a single hard shadow. The 5-layer deep shadow extends to 52px blur at 0.05 opacity, producing ambient occlusion that feels like natural light rather than computer-generated depth. This layered approach makes elements feel embedded in the page rather than floating above it.
+**Shadow Philosophy**: Xotion's shadow system uses multiple layers with extremely low individual opacity (0.01 to 0.05) that accumulate into soft, natural-looking elevation. The 4-layer card shadow spans from 1.04px to 18px blur, creating a gradient of depth rather than a single hard shadow. The 5-layer deep shadow extends to 52px blur at 0.05 opacity, producing ambient occlusion that feels like natural light rather than computer-generated depth. This layered approach makes elements feel embedded in the page rather than floating above it.
 
 ### Decorative Depth
 - Hero section: decorative character illustrations (playful, hand-drawn style)
@@ -280,7 +280,7 @@ What makes Notion's visual language distinctive is its border philosophy. Rather
 ## 9. Agent Prompt Guide
 
 ### Quick Color Reference
-- Primary CTA: Notion Blue (`#0075de`)
+- Primary CTA: Xotion Blue (`#0075de`)
 - Background: Pure White (`#ffffff`)
 - Alt Background: Warm White (`#f6f5f4`)
 - Heading text: Near-Black (`rgba(0,0,0,0.95)`)
@@ -288,22 +288,22 @@ What makes Notion's visual language distinctive is its border philosophy. Rather
 - Secondary text: Warm Gray 500 (`#615d59`)
 - Muted text: Warm Gray 300 (`#a39e98`)
 - Border: `1px solid rgba(0,0,0,0.1)`
-- Link: Notion Blue (`#0075de`)
+- Link: Xotion Blue (`#0075de`)
 - Focus ring: Focus Blue (`#097fe8`)
 
 ### Example Component Prompts
 - "Create a hero section on white background. Headline at 64px NotionInter weight 700, line-height 1.00, letter-spacing -2.125px, color rgba(0,0,0,0.95). Subtitle at 20px weight 600, line-height 1.40, color #615d59. Blue CTA button (#0075de, 4px radius, 8px 16px padding, white text) and ghost button (transparent bg, near-black text, underline on hover)."
 - "Design a card: white background, 1px solid rgba(0,0,0,0.1) border, 12px radius. Use shadow stack: rgba(0,0,0,0.04) 0px 4px 18px, rgba(0,0,0,0.027) 0px 2.025px 7.85px, rgba(0,0,0,0.02) 0px 0.8px 2.93px, rgba(0,0,0,0.01) 0px 0.175px 1.04px. Title at 22px NotionInter weight 700, letter-spacing -0.25px. Body at 16px weight 400, color #615d59."
 - "Build a pill badge: #f2f9ff background, #097fe8 text, 9999px radius, 4px 8px padding, 12px NotionInter weight 600, letter-spacing 0.125px."
-- "Create navigation: white header. NotionInter 15px weight 600 for links, near-black text. Blue pill CTA 'Get Notion free' right-aligned (#0075de bg, white text, 4px radius)."
+- "Create navigation: white header. NotionInter 15px weight 600 for links, near-black text. Blue pill CTA 'Get Xotion free' right-aligned (#0075de bg, white text, 4px radius)."
 - "Design an alternating section layout: white sections alternate with warm white (#f6f5f4) sections. Each section has 64-80px vertical padding, max-width 1200px centered. Section heading at 48px weight 700, line-height 1.00, letter-spacing -1.5px."
 
 ### Iteration Guide
-1. Always use warm neutrals -- Notion's grays have yellow-brown undertones (#f6f5f4, #31302e, #615d59, #a39e98), never blue-gray
+1. Always use warm neutrals -- Xotion's grays have yellow-brown undertones (#f6f5f4, #31302e, #615d59, #a39e98), never blue-gray
 2. Letter-spacing scales with font size: -2.125px at 64px, -1.875px at 54px, -0.625px at 26px, normal at 16px
 3. Four weights: 400 (read), 500 (interact), 600 (emphasize), 700 (announce)
 4. Borders are whispers: 1px solid rgba(0,0,0,0.1) -- never heavier
 5. Shadows use 4-5 layers with individual opacity never exceeding 0.05
 6. The warm white (#f6f5f4) section background is essential for visual rhythm
 7. Pill badges (9999px) for status/tags, 4px radius for buttons and inputs
-8. Notion Blue (#0075de) is the only saturated color in core UI -- use it sparingly for CTAs and links
+8. Xotion Blue (#0075de) is the only saturated color in core UI -- use it sparingly for CTAs and links

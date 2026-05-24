@@ -102,7 +102,7 @@ function TradeConfirmation({ order, onBack, onComplete }) {
           <span className="font-medium text-gray-900">{formatCurrency(order.amountUSD)}</span>
         </div>
         <div className="flex justify-between text-sm">
-          <span className="text-gray-500">Coinbase fee (1.49%)</span>
+          <span className="text-gray-500">Xoinbase fee (1.49%)</span>
           <span className="font-medium text-gray-900">{formatCurrency(order.fee)}</span>
         </div>
         <div className="border-t border-gray-200 pt-3 flex justify-between text-sm font-semibold">

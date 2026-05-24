@@ -65,12 +65,12 @@ export default function CreateVM() {
       <h1 className="page-title">Create a virtual machine</h1>
 
       {/* Tab bar */}
-      <div style={{ display: 'flex', borderBottom: '1px solid var(--azure-border)', marginBottom: '24px', gap: '0' }}>
+      <div style={{ display: 'flex', borderBottom: '1px solid var(--xzure-border)', marginBottom: '24px', gap: '0' }}>
         {tabs.map((tab, i) => (
           <button key={i} onClick={() => setActiveTab(i)} style={{
-            padding: '8px 16px', border: 'none', borderBottom: activeTab === i ? '2px solid var(--azure-blue)' : '2px solid transparent',
+            padding: '8px 16px', border: 'none', borderBottom: activeTab === i ? '2px solid var(--xzure-blue)' : '2px solid transparent',
             background: 'none', cursor: 'pointer', fontWeight: activeTab === i ? 600 : 400,
-            color: activeTab === i ? 'var(--azure-blue)' : 'var(--azure-text-secondary)', fontSize: '14px'
+            color: activeTab === i ? 'var(--xzure-blue)' : 'var(--xzure-text-secondary)', fontSize: '14px'
           }}>
             {tab}
           </button>
@@ -91,7 +91,7 @@ export default function CreateVM() {
             </div>
             <div className="section-header">Instance details</div>
             <div style={{ display: 'grid', gap: '12px' }}>
-              <label>Virtual machine name *<input className="input" style={{ width: '100%', marginTop: '4px', borderColor: activeTab === 0 && form.name === '' && form._touched ? 'var(--azure-error)' : undefined }} value={form.name} onChange={e => update('name', e.target.value)} placeholder="Enter name" /></label>
+              <label>Virtual machine name *<input className="input" style={{ width: '100%', marginTop: '4px', borderColor: activeTab === 0 && form.name === '' && form._touched ? 'var(--xzure-error)' : undefined }} value={form.name} onChange={e => update('name', e.target.value)} placeholder="Enter name" /></label>
               <label>Region<select className="input" style={{ width: '100%', marginTop: '4px' }} value={form.location} onChange={e => update('location', e.target.value)}>
                 {regions.map(r => <option key={r} value={r}>{r}</option>)}
               </select></label>
@@ -125,7 +125,7 @@ export default function CreateVM() {
               {(form.authType || 'SSH public key') === 'SSH public key' ? (
                 <label>SSH public key source<select className="input" style={{ width: '100%', marginTop: '4px' }}>
                   <option>Generate new key pair</option>
-                  <option>Use existing key stored in Azure</option>
+                  <option>Use existing key stored in Xzure</option>
                   <option>Use existing public key</option>
                 </select></label>
               ) : (
@@ -204,12 +204,12 @@ export default function CreateVM() {
             <div style={{ display: 'grid', gap: '16px' }}>
               <div>
                 <div style={{ fontWeight: 600, marginBottom: '4px' }}>Custom data</div>
-                <div style={{ fontSize: '13px', color: 'var(--azure-text-secondary)', marginBottom: '8px' }}>Pass a script or configuration to your VM on startup.</div>
+                <div style={{ fontSize: '13px', color: 'var(--xzure-text-secondary)', marginBottom: '8px' }}>Pass a script or configuration to your VM on startup.</div>
                 <textarea className="input" style={{ width: '100%', minHeight: '100px', fontFamily: 'monospace', fontSize: '13px' }} placeholder="#!/bin/bash&#10;# cloud-init script here" value={form.customData || ''} onChange={e => update('customData', e.target.value)} />
               </div>
               <div>
                 <div style={{ fontWeight: 600, marginBottom: '4px' }}>Extensions</div>
-                <div style={{ fontSize: '13px', color: 'var(--azure-text-secondary)' }}>Extensions can be added after VM creation.</div>
+                <div style={{ fontSize: '13px', color: 'var(--xzure-text-secondary)' }}>Extensions can be added after VM creation.</div>
               </div>
               <div>
                 <div style={{ fontWeight: 600, marginBottom: '8px' }}>Proximity placement group</div>
@@ -223,7 +223,7 @@ export default function CreateVM() {
         {activeTab === 5 && (
           <>
             <div className="section-header">Tags</div>
-            <table className="azure-table" style={{ marginBottom: '12px' }}>
+            <table className="xzure-table" style={{ marginBottom: '12px' }}>
               <thead><tr><th>Key</th><th>Value</th><th></th></tr></thead>
               <tbody>
                 {Object.entries(form.tags).map(([k, v]) => (

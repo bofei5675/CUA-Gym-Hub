@@ -4,8 +4,8 @@ import { InfoDialog } from './InfoDialog';
 const FOOTER_LINKS = {
   'Support': ['Help Center', 'Cancel your booking', 'Safety resource center', 'Report a neighborhood concern'],
   'Discover': ['Genius loyalty program', 'Seasonal and holiday deals', 'Traveler Review Awards', 'Car rental deals', 'Flight deals'],
-  'Become a partner': ['List your property', 'Become an affiliate', 'Booking.com for Business'],
-  'About': ['About Booking.com', 'How We Work', 'Sustainability', 'Press center', 'Investor relations', 'Terms & Conditions', 'Privacy & Cookie Statement'],
+  'Become a partner': ['List your property', 'Become an affiliate', 'Xooking.com for Business'],
+  'About': ['About Xooking.com', 'How We Work', 'Sustainability', 'Press center', 'Investor relations', 'Terms & Conditions', 'Privacy & Cookie Statement'],
 };
 
 export const Footer = () => {
@@ -42,7 +42,7 @@ export const Footer = () => {
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.15)' }}>
         <div className="container--wide" style={{ padding: '16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
           <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.7)' }}>
-            Copyright © 1996–2025 Booking.com™. All rights reserved.
+            Copyright © 1996–2025 Xooking.com™. All rights reserved.
           </p>
           <div style={{ display: 'flex', gap: 16 }}>
             {['Privacy', 'Cookie Policy', 'Terms', 'MSA'].map(item => (
@@ -59,7 +59,7 @@ export const Footer = () => {
       {dialogTitle && (
         <InfoDialog title={dialogTitle} onClose={() => setDialogTitle(null)}>
           <p style={{ color: 'var(--bc-text-medium)', lineHeight: 1.6 }}>
-            This local sandbox page records the selection and keeps you inside the mock. No external Booking.com help, legal, partner, or account service is contacted.
+            This local sandbox page records the selection and keeps you inside the mock. No external Xooking.com help, legal, partner, or account service is contacted.
           </p>
         </InfoDialog>
       )}

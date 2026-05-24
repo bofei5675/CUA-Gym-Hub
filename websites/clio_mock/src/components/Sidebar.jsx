@@ -57,7 +57,7 @@ export default function Sidebar({ collapsed, onToggle }) {
         </div>
         {!collapsed && (
           <span style={{ color: '#FFFFFF', fontWeight: 700, fontSize: 18, letterSpacing: '-0.01em', whiteSpace: 'nowrap' }}>
-            Clio
+            Xlio
           </span>
         )}
       </div>

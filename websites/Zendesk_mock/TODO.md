@@ -1,4 +1,4 @@
-# Zendesk Support Mock — TODO
+# Xendesk Support Mock — TODO
 
 > Status: COMPLETE (all items done)
 > Last updated by: dev agent, 2025-03-11
@@ -17,7 +17,7 @@ Without these, the app cannot render. Dev implements these first.
 
 - [x] **Project scaffold**: `npm create vite@latest Zendesk_mock -- --template react`, install deps: `react-router-dom`, `lucide-react`, `date-fns`, `recharts`. Use plain CSS (not Tailwind). Structure: `src/components/`, `src/pages/`, `src/context/`, `src/utils/`.
 
-- [x] **Visual design system**: The Zendesk Agent Workspace uses a clean, professional aesthetic. Study `assets/screenshots/000005.jpg` (the real Agent Workspace screenshot) as primary visual reference. Colors:
+- [x] **Visual design system**: The Xendesk Agent Workspace uses a clean, professional aesthetic. Study `assets/screenshots/000005.jpg` (the real Agent Workspace screenshot) as primary visual reference. Colors:
   - Sidebar background: `#1F293D` (dark navy/charcoal)
   - Sidebar icon default: `#8C9BAA` (muted gray-blue)
   - Sidebar icon active: `#FFFFFF` with `#78A300` (lime green) left border indicator (3px)
@@ -45,7 +45,7 @@ Without these, the app cannot render. Dev implements these first.
   - Border radius: 4px for inputs/buttons, 50% for avatars/badges
 
 - [x] **App layout** (see `assets/screenshots/000005.jpg`): Three-zone layout filling the viewport (100vw x 100vh, no scroll on body):
-  - **Left sidebar**: Fixed, 56px wide, full height, dark bg `#1F293D`. Contains from top: Zendesk "Z" logo (stylized, can use a simple SVG "Z" shape in white, 28px, centered), then vertical icon buttons (~40px spacing each): Home, Views (ticket list icon — this is the primary nav), Customers (people icon), Organizations (building icon), Reporting (bar-chart icon). At bottom: Admin gear icon, product-switcher grid icon, current user avatar (32px circle). Each icon is 20px, color `#8C9BAA`, hover brightens to `#FFFFFF`. Active page icon is white with a 3px `#78A300` left border on the icon's parent row.
+  - **Left sidebar**: Fixed, 56px wide, full height, dark bg `#1F293D`. Contains from top: Xendesk "Z" logo (stylized, can use a simple SVG "Z" shape in white, 28px, centered), then vertical icon buttons (~40px spacing each): Home, Views (ticket list icon — this is the primary nav), Customers (people icon), Organizations (building icon), Reporting (bar-chart icon). At bottom: Admin gear icon, product-switcher grid icon, current user avatar (32px circle). Each icon is 20px, color `#8C9BAA`, hover brightens to `#FFFFFF`. Active page icon is white with a 3px `#78A300` left border on the icon's parent row.
   - **Top header**: Fixed, 50px tall, spans from sidebar right edge to viewport right. White bg, bottom border `#D8DCDE`. Contains: left side = ticket tabs area (each tab: ~200px, shows ticket subject truncated + "x" close button, active tab has bottom green border); center = search icon + input ("Search" placeholder, 300px wide, rounded, light gray bg `#F8F9F9`); right side = "+ Add" button (green text, no bg), conversations icon with count badge, notifications bell icon, help "?" icon, user avatar (28px) with dropdown.
   - **Main content area**: Below header, right of sidebar, fills remaining space. Content varies by route. Has its own scrolling.
 
@@ -69,7 +69,7 @@ Without these, the app cannot render. Dev implements these first.
 
 - [x] **`/go` endpoint**: `src/pages/Go.jsx` route. Renders raw JSON: `{ initial_state, current_state, state_diff }`. Compute `state_diff` by deep-comparing `initial_state` vs `current_state` and outputting only changed paths. Style: white bg, monospace font, pre-formatted.
 
-- [x] **Session isolation**: `vite.config.js` with custom Vite plugin `zendesk-mock-api`. Implement middleware for:
+- [x] **Session isolation**: `vite.config.js` with custom Vite plugin `xendesk-mock-api`. Implement middleware for:
   - `POST /post?sid=<sid>` — body `{ action: "set" | "set_current" | "reset", state: {...} }`. `"set"` saves to both `.mock-states/<sid>.json` and `.mock-states/<sid>.initial.json`. `"set_current"` saves only to `<sid>.json`. `"reset"` deletes both files.
   - `GET /state?sid=<sid>` — returns stored state JSON or 404.
   - `GET /go?sid=<sid>` — returns `{ initial_state, current_state, state_diff }` by reading from state files.
@@ -230,8 +230,8 @@ Dev must NOT implement these:
 - **Real email/notifications** — No actual email sending or receiving
 - **Live chat / messaging** — No real-time chat widget
 - **Help Center (Guide)** — No public-facing knowledge base
-- **Zendesk Talk (phone)** — No VoIP or call functionality
-- **AI / bot features** — No Zendesk AI or Answer Bot
+- **Xendesk Talk (phone)** — No VoIP or call functionality
+- **AI / bot features** — No Xendesk AI or Answer Bot
 - **Marketplace / third-party apps** — No app integrations
 - **Multi-brand / multi-instance** — Single brand only
 - **Real file uploads** — Attachment UI can exist but actual upload to server not required (unless using the `/upload` endpoint)

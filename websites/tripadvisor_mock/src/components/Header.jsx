@@ -76,7 +76,7 @@ export default function Header() {
             </svg>
           </div>
           <span style={{ fontSize: '20px', fontWeight: 700, color: '#1A1A1A', letterSpacing: '-0.5px' }}>
-            Tripadvisor
+            Xripadvisor
           </span>
         </Link>
 

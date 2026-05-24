@@ -1,4 +1,4 @@
-# Jira Mock — TODO
+# Xira Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-02-28
@@ -31,7 +31,7 @@ The following are already functional in the codebase and do NOT need reimplement
 ## P0 — Core Shell Improvements
 <!-- These fix foundational issues in the existing implementation. -->
 
-- [x] **Visual design system audit**: Compare current Tailwind config against `assets/screenshots/`. Current tailwind.config.js defines jira colors correctly (`#0052CC`, `#172B4D`, `#F4F5F7`, `#DFE1E6`, `#36B37E`, `#FFAB00`, `#DE350B`, `#5E6C84`). Verify all components consistently use these tokens — check that Board column headers, Backlog section headers, and Dashboard cards all match the Atlassian Design System. Fix any hardcoded hex values that should use Tailwind classes.
+- [x] **Visual design system audit**: Compare current Tailwind config against `assets/screenshots/`. Current tailwind.config.js defines xira colors correctly (`#0052CC`, `#172B4D`, `#F4F5F7`, `#DFE1E6`, `#36B37E`, `#FFAB00`, `#DE350B`, `#5E6C84`). Verify all components consistently use these tokens — check that Board column headers, Backlog section headers, and Dashboard cards all match the Atlassian Design System. Fix any hardcoded hex values that should use Tailwind classes.
 
 - [x] **Data seed determinism**: The current `generateIssues()` in `mockData.ts` uses `Math.random()` which produces different data on every load — this makes agent training non-reproducible. Replace with **hardcoded, realistic seed data** (see `data_model.md` §Issues for exact specifications): 25 issues with specific summaries like "Set up CI/CD pipeline for staging environment", "Fix login page redirect loop on Safari", etc. Each issue should have deterministic type/status/priority/assignee/sprint assignments. Add a 3rd sprint (`s3`, state: `"closed"`, 5 issues all Done) for historical reporting data. All issues in the active sprint should have a realistic mix of statuses (2 To Do, 3 In Progress, 1 In Review, 2 Done).
 
@@ -50,7 +50,7 @@ The following are already functional in the codebase and do NOT need reimplement
 
 - [x] **Create Issue Dialog (global modal)**: Add `CreateIssueModal.tsx` component. Triggered by: (1) a blue "Create" button in the sidebar (between project nav and search link), (2) keyboard shortcut "C" anywhere in the app. Modal contains a form with: **Project** dropdown (pre-selected to current project), **Issue Type** dropdown (Story/Task/Bug/Epic with colored icons — Story=green bookmark, Task=blue checkmark, Bug=red circle, Epic=purple lightning), **Summary** text input (required, auto-focus), **Description** textarea, **Assignee** dropdown (user list + "Unassigned"), **Priority** dropdown (with colored arrow icons matching IssueCard), **Labels** multi-select input (type to add, chip display, existing labels as suggestions), **Sprint** dropdown (active/future sprints + "Backlog"), **Story Points** number input, **Epic Link** dropdown (list of Epic-type issues or "None"). Footer: "Create" primary button (blue, disabled if summary empty) + "Cancel" text button. On create: dispatch `ADD_ISSUE` with auto-generated key (`{PROJECT_KEY}-{nextNumber}`), set reporterId to currentUser.id, set createdAt/updatedAt to now. Close modal and optionally navigate to the issue. Add `CREATE_ISSUE_MODAL_OPEN` and `CREATE_ISSUE_MODAL_CLOSE` to a UI state (can use local state in App.tsx or add to context).
 
-- [x] **Sidebar "Create" button**: In `Sidebar.tsx`, add a prominent blue "Create" button (full sidebar width, `bg-jira-blue text-white`, `PlusCircle` icon + "Create" text) above the navigation links. Clicking it opens the CreateIssueModal. Style: `rounded-md py-2 px-4 font-medium text-sm`, with `hover:bg-blue-700` transition.
+- [x] **Sidebar "Create" button**: In `Sidebar.tsx`, add a prominent blue "Create" button (full sidebar width, `bg-xira-blue text-white`, `PlusCircle` icon + "Create" text) above the navigation links. Clicking it opens the CreateIssueModal. Style: `rounded-md py-2 px-4 font-medium text-sm`, with `hover:bg-blue-700` transition.
 
 - [x] **Advanced Search filter dropdowns**: In `AdvancedSearch.tsx`, add a filter bar below the search input with 4 dropdown filters in a horizontal row: **Type** (All Types / Story / Task / Bug / Epic), **Status** (All Statuses / To Do / In Progress / In Review / Done), **Priority** (All Priorities / Highest / High / Medium / Low / Lowest), **Assignee** (All Assignees / list of users / Unassigned). Each is a `<select>` with `bg-white border border-gray-300 rounded px-3 py-1.5 text-sm`. Filters combine with AND logic on top of the text search. Add a "Clear all filters" link that resets all dropdowns and the search query.
 
@@ -58,7 +58,7 @@ The following are already functional in the codebase and do NOT need reimplement
 
 - [x] **Sprint creation from Backlog**: In `Backlog.tsx`, add a "Create Sprint" button at the bottom of the sprint list (before the Backlog section). Style: dashed border button, gray text, `+ Create Sprint`. On click: dispatch `ADD_SPRINT` with auto-generated name (`Sprint {n+1}`), empty goal, future state, dates set to 2 weeks from now. The new sprint section appears immediately and is expanded. The sprint header should have inline-editable name (click name → input field, Enter to save, Esc to cancel) and an "Edit dates" pencil icon that shows a date range input.
 
-- [x] **Board quick filters**: In `Board.tsx`, add a row of quick-filter chip buttons below the search bar: "Only My Issues" (filters to currentUser.assigneeId), "Recently Updated" (updated in last 24h), and label-based chips for each unique label that exists in the sprint's issues (e.g., "frontend", "backend", "urgent"). Chips are toggle buttons: unselected = `bg-gray-100 text-gray-700`, selected = `bg-jira-blue/10 text-jira-blue border-jira-blue`. Multiple can be active. Label chips filter to issues containing that label. Combine all active filters with AND logic.
+- [x] **Board quick filters**: In `Board.tsx`, add a row of quick-filter chip buttons below the search bar: "Only My Issues" (filters to currentUser.assigneeId), "Recently Updated" (updated in last 24h), and label-based chips for each unique label that exists in the sprint's issues (e.g., "frontend", "backend", "urgent"). Chips are toggle buttons: unselected = `bg-gray-100 text-gray-700`, selected = `bg-xira-blue/10 text-xira-blue border-xira-blue`. Multiple can be active. Label chips filter to issues containing that label. Combine all active filters with AND logic.
 
 - [x] **Issue type selector in IssueModal**: In `IssueModal.tsx` right sidebar, add an **Issue Type** field (currently shown in header breadcrumb but not editable). Display as a dropdown with colored type icons (same icons as IssueCard.tsx's `getTypeIcon`). Changing type dispatches an update. Show below the Status field.
 
@@ -70,7 +70,7 @@ The following are already functional in the codebase and do NOT need reimplement
 
 - [x] **Board column issue count and WIP indicator**: In `Board.tsx`, each column header already shows a count badge. Enhance: if a column has more than 5 issues (configurable WIP limit), change the count badge background to `bg-yellow-200 text-yellow-800` as a visual WIP warning. If > 8, use `bg-red-200 text-red-800`. This teaches agents about Kanban WIP limits.
 
-- [x] **Backlog inline issue editing**: In `Backlog.tsx` issue rows, make the **summary** text editable: double-click on the summary text to enter edit mode (replace text with an input field, auto-focus, pre-filled). Press Enter to save (dispatch `UPDATE_ISSUE`), Esc to cancel. Also make **story points** editable: click on the story points badge to show a small number input (styled as an inline editor). This matches real Jira's inline editing in the backlog.
+- [x] **Backlog inline issue editing**: In `Backlog.tsx` issue rows, make the **summary** text editable: double-click on the summary text to enter edit mode (replace text with an input field, auto-focus, pre-filled). Press Enter to save (dispatch `UPDATE_ISSUE`), Esc to cancel. Also make **story points** editable: click on the story points badge to show a small number input (styled as an inline editor). This matches real Xira's inline editing in the backlog.
 
 ---
 
@@ -81,7 +81,7 @@ The following are already functional in the codebase and do NOT need reimplement
 
 - [x] **Sprint Report in Reports**: Add a third section in `Reports.tsx`: "Sprint Report" — a summary panel for the active sprint showing: sprint name, goal, date range, days remaining (calculated), and a table with 4 rows: "Completed" (count + points), "In Progress" (count + points), "To Do" (count + points), "Removed" (0 for mock). Include a small donut chart showing the completion percentage.
 
-- [x] **Epic swimlanes on Board**: In `Board.tsx`, add a toggle button "Group by Epic" in the filter bar. When active, the board shows horizontal swimlanes — one row per epic (+ "No Epic" row for unlinked issues). Each swimlane has the epic name as a header (with the purple epic icon), and the 4 status columns beneath it. This is a common Jira board configuration. When the toggle is off, show the flat column view (current behavior).
+- [x] **Epic swimlanes on Board**: In `Board.tsx`, add a toggle button "Group by Epic" in the filter bar. When active, the board shows horizontal swimlanes — one row per epic (+ "No Epic" row for unlinked issues). Each swimlane has the epic name as a header (with the purple epic icon), and the 4 status columns beneath it. This is a common Xira board configuration. When the toggle is off, show the flat column view (current behavior).
 
 - [x] **Epic filter in Backlog**: In `Backlog.tsx`, add an "Epic" dropdown filter at the top (next to the header). Options: "All Epics", then each epic issue by name, plus "Issues without epic". When selected, only issues matching that epicId (or null) are shown.
 
@@ -91,7 +91,7 @@ The following are already functional in the codebase and do NOT need reimplement
 
 - [x] **Issue linking in IssueModal**: In `IssueModal.tsx` main content area, add an "Issue Links" section below Subtasks. Shows existing links as rows: "[Link type] [Issue key] — [Summary]" with a remove (X) button. Link types: "blocks", "is blocked by", "relates to", "duplicates". "Link issue" button opens an inline form: link type dropdown + issue key search input (autocomplete from all issues). On save, add the linked issue ID to both issues' `linkedIssueIds` arrays and dispatch updates.
 
-- [x] **Breadcrumb navigation**: Add a breadcrumb bar at the top of each page (Board, Backlog, Reports, Settings). Format: "Projects / {Project Name} / {Page Name}". Each segment is a link: "Projects" → dashboard, project name → board, page name is current (not linked). Style: `text-sm text-gray-500`, links in `text-jira-blue hover:underline`. Add `flex items-center gap-1` with `/` separators.
+- [x] **Breadcrumb navigation**: Add a breadcrumb bar at the top of each page (Board, Backlog, Reports, Settings). Format: "Projects / {Project Name} / {Page Name}". Each segment is a link: "Projects" → dashboard, project name → board, page name is current (not linked). Style: `text-sm text-gray-500`, links in `text-xira-blue hover:underline`. Add `flex items-center gap-1` with `/` separators.
 
 - [x] **Activity tab in IssueModal**: In the comments section of `IssueModal.tsx`, add tab buttons above: "Comments" (current view), "Activity" (shows all changes as a timeline — status changes, assignments, field edits). For mock purposes, auto-generate 2-3 activity entries from the issue's createdAt/updatedAt timestamps: "Admin User created this issue", "Jane Doe changed status from To Do to In Progress", "John Smith was assigned". Activity entries show: user avatar, user name, action text, relative timestamp.
 
@@ -136,4 +136,4 @@ The following are already functional in the codebase and do NOT need reimplement
 - User/role permissions (all users can do everything)
 - Marketplace apps / plugins
 - Multiple board types per project (just one board per project)
-- Dark mode (Jira doesn't have native dark mode)
+- Dark mode (Xira doesn't have native dark mode)

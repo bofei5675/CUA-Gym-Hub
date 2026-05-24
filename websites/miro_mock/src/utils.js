@@ -34,7 +34,7 @@ export const INITIAL_STATE = {
       y: 100,
       width: 200,
       height: 200,
-      text: 'Welcome to Miro Mock!\nDouble click to edit text.',
+      text: 'Welcome to Xiro Mock!\nDouble click to edit text.',
       fill: COLORS.yellow,
       votes: 5 // Initial votes to show the badge
     },

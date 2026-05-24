@@ -1,4 +1,4 @@
-# QuickBooks Online Mock — TODO
+# XuickBooks Online Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2025-03-09
@@ -41,7 +41,7 @@ The project already has basic scaffolding with:
   - The existing config uses `qb-blue` and `qb-hover` — keep those but add `qb-green`, `qb-red`, `qb-amber`, `qb-bg`
 
 - [x] **Sidebar overhaul** (see `assets/screenshots/navigation/000002.jpg` for reference): Replace current flat sidebar with proper QBO sidebar:
-  - Dark green header area with Intuit QuickBooks logo (green circle "qb" icon + "INTUIT quickbooks" text in white)
+  - Dark green header area with Intuit XuickBooks logo (green circle "qb" icon + "INTUIT xuickbooks" text in white)
   - Large `+ New` green button (full sidebar width, rounded corners, white text)
   - `BOOKMARKS` section (collapsible, with pencil edit icon) — show 2-3 user bookmarks
   - `MENU` section (collapsible, with pencil edit icon) with items that have expand chevrons (>) for sub-menus:
@@ -126,14 +126,14 @@ The project already has basic scaffolding with:
 - [x] **Dashboard — Business overview** (see `assets/screenshots/000001.jpg` and `000003.jpg`): Complete overhaul of Dashboard page:
   - **Invoices card** (top-left): "Invoices" heading with "$X UNPAID LAST 365 DAYS" subtitle. Horizontal stacked bar showing Overdue amount (orange/red) vs Not Due Yet (gray). Below: "$X PAID LAST 30 DAYS" with Not Deposited (red text) vs Deposited (green text) stacked bar. Amounts calculated dynamically from `data.invoices`.
   - **Expenses card** (top-center): "Expenses" heading + "Last month ▼" dropdown. Total amount in large text. Donut/pie chart (using Recharts PieChart) showing expense breakdown by category (different colors: teal for Miscellaneous, dark teal for Job Expenses, green for Rent/Lease, light green for Everything else). Legend items next to chart with amounts.
-  - **Bank accounts card** (top-right): Heading with pencil edit icon. List of accounts from `data.accounts` where type is "Bank" or "Credit Card". Each row: Account name, "X to review" link (green/orange, count of pending transactions for that account), "Updated moments ago" text. Two balance columns: "Bank balance $X" and "In QuickBooks $X".
+  - **Bank accounts card** (top-right): Heading with pencil edit icon. List of accounts from `data.accounts` where type is "Bank" or "Credit Card". Each row: Account name, "X to review" link (green/orange, count of pending transactions for that account), "Updated moments ago" text. Two balance columns: "Bank balance $X" and "In XuickBooks $X".
   - **Profit and Loss card** (bottom-left): "Profit and Loss" heading + "Last month ▼" dropdown. Large net income number. "NET INCOME FOR [MONTH]" subtitle. Income bar (green) and Expenses bar (teal) with amounts, and "X TO REVIEW" badges (orange text links) next to each.
   - **Sales card** (bottom-right): "Sales" heading + "Last month ▼" dropdown. Large total sales number + "LAST MONTH" subtitle. Line chart (using Recharts LineChart) with green line, x-axis = days of month, y-axis = dollar amounts.
   - Bottom link: "See all activity" link
 
 - [x] **Banking / Transactions page** (see `assets/screenshots/expenses/000004.jpg` — the real QBO banking page): Complete overhaul:
   - **Sub-tab navigation**: "Banking" | "Rules" | "Receipts" (with "NEW" badge on Receipts)
-  - **Bank account cards row**: Horizontal scrollable row of cards, one per bank/credit card account. Each card: colored background (blue for checking, other colors for others), account name, Bank Balance (large), "Updated moments ago", In QuickBooks balance, count badge of items "to review". Clicking a card filters transactions below.
+  - **Bank account cards row**: Horizontal scrollable row of cards, one per bank/credit card account. Each card: colored background (blue for checking, other colors for others), account name, Bank Balance (large), "Updated moments ago", In XuickBooks balance, count badge of items "to review". Clicking a card filters transactions below.
   - **Collapse toggle**: Chevron to collapse/expand bank cards section
   - **Transaction filter tabs**: "For Review" | "Reviewed" | "Excluded" — filter `data.transactions` by status (pending/posted/excluded)
   - **Action bar**: "Batch actions ▼" dropdown (left), Filter funnel icon, "All (N)" | "Recognized (N)" segment buttons, Print/Export/Settings icons (right)
@@ -243,7 +243,7 @@ The project already has basic scaffolding with:
 
 - [x] **Chart of Accounts page** (see `assets/screenshots/expenses/000001.jpg` bank register and `assets/screenshots/settings/000001.jpg`): Route `/accounting`:
   - **Sub-tabs**: "Chart of Accounts" | "Reconcile"
-  - **Table columns**: NUMBER | NAME | TYPE ▼ (sortable) | DETAIL TYPE | QUICKBOOKS BALANCE | BANK BALANCE
+  - **Table columns**: NUMBER | NAME | TYPE ▼ (sortable) | DETAIL TYPE | XUICKBOOKS BALANCE | BANK BALANCE
   - **Action bar**: "New" button (to add account), Search, Filter by type, Print/Export
   - Clicking an account row navigates to its **Bank Register** view
   - **Bank Register view** (when clicking an account): "< Back to Chart of Accounts" link, Account name + dropdown selector, "ENDING BALANCE $X" display, "Reconcile" green button, table with columns: DATE ▼ | REF NO. / TYPE | PAYEE / ACCOUNT | PAYMENT | DEPOSIT | ✓ (reconciled status) | BALANCE. "Add check ▼" dropdown to add new transactions. Pagination.

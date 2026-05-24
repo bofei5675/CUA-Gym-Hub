@@ -34,7 +34,7 @@ function Sidebar({ isOpen, onClose }) {
             <div className="w-8 h-8 bg-[#0052FF] rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-sm">C</span>
             </div>
-            <span className="text-xl font-bold text-gray-900">Coinbase</span>
+            <span className="text-xl font-bold text-gray-900">Xoinbase</span>
           </div>
           <button
             onClick={onClose}
@@ -66,7 +66,7 @@ function Sidebar({ isOpen, onClose }) {
         </div>
 
         <div className="p-4 border-t border-gray-200">
-          <div className="text-xs text-gray-400">Coinbase Mock</div>
+          <div className="text-xs text-gray-400">Xoinbase Mock</div>
         </div>
       </nav>
     </>

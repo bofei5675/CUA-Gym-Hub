@@ -29,7 +29,7 @@
 
       const [mergeStrategy, setMergeStrategy] = useState(() => pr?.mergeStrategy || 'merge');
 
-      if (!pr) return <div className="p-8 text-center text-github-muted">Pull Request not found</div>;
+      if (!pr) return <div className="p-8 text-center text-xithub-muted">Pull Request not found</div>;
 
       const isMerged = pr.status === 'merged';
       const isClosed = pr.status === 'closed';
@@ -182,7 +182,7 @@
           ? 'bg-red-600'
           : isDraft
             ? 'bg-gray-600'
-            : 'bg-github-success';
+            : 'bg-xithub-success';
 
       const statusIcon = isMerged
         ? <GitMerge size={16} />
@@ -201,7 +201,7 @@
 
       return (
         <div className="max-w-6xl mx-auto">
-          <div className="mb-6 pb-6 border-b border-github-border">
+          <div className="mb-6 pb-6 border-b border-xithub-border">
             <div className="flex items-center justify-between mb-2">
               {isEditing ? (
                 <div className="flex-1 flex items-center gap-2">
@@ -209,19 +209,19 @@
                     type="text"
                     value={editTitle}
                     onChange={e => setEditTitle(e.target.value)}
-                    className="flex-1 text-2xl bg-[#0d1117] border border-github-border rounded-md px-3 py-1 text-white focus:ring-2 focus:ring-github-accent outline-none"
+                    className="flex-1 text-2xl bg-[#0d1117] border border-xithub-border rounded-md px-3 py-1 text-white focus:ring-2 focus:ring-xithub-accent outline-none"
                   />
-                  <button onClick={handleSaveEdit} className="px-3 py-1 bg-github-success text-white rounded-md text-sm font-semibold hover:bg-opacity-90">Save</button>
-                  <button onClick={() => setIsEditing(false)} className="px-3 py-1 text-github-muted hover:text-white text-sm">Cancel</button>
+                  <button onClick={handleSaveEdit} className="px-3 py-1 bg-xithub-success text-white rounded-md text-sm font-semibold hover:bg-opacity-90">Save</button>
+                  <button onClick={() => setIsEditing(false)} className="px-3 py-1 text-xithub-muted hover:text-white text-sm">Cancel</button>
                 </div>
               ) : (
                 <>
                   <h1 className="text-3xl font-normal text-white">
-                    {pr.title} <span className="text-github-muted">#{pr.number}</span>
+                    {pr.title} <span className="text-xithub-muted">#{pr.number}</span>
                   </h1>
                   <button
                     onClick={handleEdit}
-                    className="px-3 py-1 bg-[#21262d] border border-github-border rounded-md text-sm font-semibold hover:bg-[#30363d]"
+                    className="px-3 py-1 bg-[#21262d] border border-xithub-border rounded-md text-sm font-semibold hover:bg-[#30363d]"
                   >
                     Edit
                   </button>
@@ -232,8 +232,8 @@
                <span className={`px-3 py-1 rounded-full text-white font-semibold flex items-center gap-1 ${statusBadge}`}>
                   {statusIcon} {statusText}
                </span>
-               <span className="text-github-muted">
-                 <span className="font-semibold text-github-text">{author?.username}</span> wants to merge 1 commit into <span className="font-mono bg-[#21262d] px-1 rounded">{pr.baseBranch}</span> from <span className="font-mono bg-[#21262d] px-1 rounded">{pr.compareBranch}</span>
+               <span className="text-xithub-muted">
+                 <span className="font-semibold text-xithub-text">{author?.username}</span> wants to merge 1 commit into <span className="font-mono bg-[#21262d] px-1 rounded">{pr.baseBranch}</span> from <span className="font-mono bg-[#21262d] px-1 rounded">{pr.compareBranch}</span>
                </span>
             </div>
           </div>
@@ -241,21 +241,21 @@
           <div className="flex gap-8">
             <div className="flex-1">
                {/* Description */}
-               <div className="border border-github-border rounded-md mb-6">
-                  <div className="bg-[#161b22] border-b border-github-border p-2 px-4 text-sm flex justify-between">
+               <div className="border border-xithub-border rounded-md mb-6">
+                  <div className="bg-[#161b22] border-b border-xithub-border p-2 px-4 text-sm flex justify-between">
                      <span className="font-semibold">{author?.username}</span>
-                     <span className="text-github-muted">commented on {new Date(pr.createdAt).toLocaleDateString()}</span>
+                     <span className="text-xithub-muted">commented on {new Date(pr.createdAt).toLocaleDateString()}</span>
                   </div>
                   {isEditing ? (
-                    <div className="p-4 bg-github-bg">
+                    <div className="p-4 bg-xithub-bg">
                       <textarea
                         value={editDescription}
                         onChange={e => setEditDescription(e.target.value)}
-                        className="w-full h-48 bg-[#0d1117] border border-github-border rounded-md p-3 text-github-text focus:ring-1 focus:ring-github-accent outline-none resize-y"
+                        className="w-full h-48 bg-[#0d1117] border border-xithub-border rounded-md p-3 text-xithub-text focus:ring-1 focus:ring-xithub-accent outline-none resize-y"
                       />
                     </div>
                   ) : (
-                    <div className="p-4 bg-github-bg prose prose-invert max-w-none text-sm">
+                    <div className="p-4 bg-xithub-bg prose prose-invert max-w-none text-sm">
                        <LinkedMarkdown repoId={pr.repoId}>{pr.description}</LinkedMarkdown>
                     </div>
                   )}
@@ -266,8 +266,8 @@
                  const commentAuthor = state.users.find(u => u.id === c.authorId);
                  const isOwnComment = c.authorId === state.currentUser.id;
                  return (
-                   <div key={c.id} className="border border-github-border rounded-md mb-6">
-                     <div className="bg-[#161b22] border-b border-github-border p-2 px-4 text-sm flex justify-between items-center">
+                   <div key={c.id} className="border border-xithub-border rounded-md mb-6">
+                     <div className="bg-[#161b22] border-b border-xithub-border p-2 px-4 text-sm flex justify-between items-center">
                        <div className="flex items-center gap-2">
                          <span className="font-semibold">{commentAuthor?.username}</span>
                          {c.isReview && (
@@ -281,17 +281,17 @@
                          )}
                        </div>
                        <div className="flex items-center gap-2">
-                         <span className="text-github-muted">commented on {new Date(c.date).toLocaleDateString()}</span>
+                         <span className="text-xithub-muted">commented on {new Date(c.date).toLocaleDateString()}</span>
                          {isOwnComment && (
                            <div className="relative">
                              <button
                                onClick={() => setShowCommentMenu(showCommentMenu === c.id ? null : c.id)}
-                               className="p-1 rounded hover:bg-[#30363d] text-github-muted hover:text-white"
+                               className="p-1 rounded hover:bg-[#30363d] text-xithub-muted hover:text-white"
                              >
                                <MoreHorizontal size={14} />
                              </button>
                              {showCommentMenu === c.id && (
-                               <div className="absolute right-0 top-full mt-1 w-32 bg-[#161b22] border border-github-border rounded-md shadow-lg z-50">
+                               <div className="absolute right-0 top-full mt-1 w-32 bg-[#161b22] border border-xithub-border rounded-md shadow-lg z-50">
                                  <button
                                    onClick={() => handleEditComment(c.id)}
                                    className="w-full text-left px-3 py-2 text-sm hover:bg-[#21262d]"
@@ -311,29 +311,29 @@
                        </div>
                      </div>
                      {editingCommentId === c.id ? (
-                       <div className="p-4 bg-github-bg">
+                       <div className="p-4 bg-xithub-bg">
                          <textarea
                            value={editCommentContent}
                            onChange={e => setEditCommentContent(e.target.value)}
-                           className="w-full h-24 bg-[#0d1117] border border-github-border rounded-md p-2 text-github-text focus:ring-1 focus:ring-github-accent outline-none resize-y mb-2"
+                           className="w-full h-24 bg-[#0d1117] border border-xithub-border rounded-md p-2 text-xithub-text focus:ring-1 focus:ring-xithub-accent outline-none resize-y mb-2"
                          />
                          <div className="flex gap-2 justify-end">
                            <button
                              onClick={() => { setEditingCommentId(null); setEditCommentContent(''); }}
-                             className="px-3 py-1 text-github-muted hover:text-white text-sm"
+                             className="px-3 py-1 text-xithub-muted hover:text-white text-sm"
                            >
                              Cancel
                            </button>
                            <button
                              onClick={() => handleSaveCommentEdit(c.id)}
-                             className="px-3 py-1 bg-github-success text-white rounded-md text-sm font-semibold hover:bg-opacity-90"
+                             className="px-3 py-1 bg-xithub-success text-white rounded-md text-sm font-semibold hover:bg-opacity-90"
                            >
                              Save
                            </button>
                          </div>
                        </div>
                      ) : (
-                       <div className="p-4 bg-github-bg text-sm prose prose-invert max-w-none"><LinkedMarkdown repoId={pr.repoId}>{c.content}</LinkedMarkdown></div>
+                       <div className="p-4 bg-xithub-bg text-sm prose prose-invert max-w-none"><LinkedMarkdown repoId={pr.repoId}>{c.content}</LinkedMarkdown></div>
                      )}
                    </div>
                  );
@@ -341,17 +341,17 @@
 
                {/* Merge Box */}
                {isOpen && isDraft && (
-                 <div className="border border-github-border rounded-md bg-[#161b22] mb-6">
+                 <div className="border border-xithub-border rounded-md bg-[#161b22] mb-6">
                     <div className="p-4 flex items-start gap-4">
                        <div className="bg-gray-500/20 p-2 rounded-full text-gray-400 border border-gray-500/50">
                           <GitPullRequest size={20} />
                        </div>
                        <div className="flex-1">
                           <h3 className="font-semibold text-white">This pull request is still a work in progress</h3>
-                          <p className="text-sm text-github-muted mb-3">Draft pull requests cannot be merged.</p>
+                          <p className="text-sm text-xithub-muted mb-3">Draft pull requests cannot be merged.</p>
                           <button
                             onClick={handleMarkReady}
-                            className="bg-github-success text-white px-4 py-2 rounded-md font-semibold text-sm hover:bg-opacity-90"
+                            className="bg-xithub-success text-white px-4 py-2 rounded-md font-semibold text-sm hover:bg-opacity-90"
                           >
                              Ready for review
                           </button>
@@ -360,10 +360,10 @@
                  </div>
                )}
                {isOpen && !isDraft && (
-                 <div className="border border-github-border rounded-md bg-[#161b22] mb-6">
+                 <div className="border border-xithub-border rounded-md bg-[#161b22] mb-6">
                     {/* CI Checks */}
                     {(pr.checks || []).length > 0 && (
-                      <div className="border-b border-github-border">
+                      <div className="border-b border-xithub-border">
                         {(() => {
                           const checks = pr.checks || [];
                           const hasFailure = checks.some(c => c.status === 'failure');
@@ -390,7 +390,7 @@
                                     <span className="text-sm font-semibold text-white">Some checks are pending</span>
                                   </>
                                 )}
-                                <span className="text-xs text-github-muted ml-1">
+                                <span className="text-xs text-xithub-muted ml-1">
                                   {successCount} successful, {failureCount} failing, {pendingCount} pending
                                 </span>
                               </div>
@@ -401,7 +401,7 @@
                                     {check.status === 'failure' && <X size={14} className="text-red-500 shrink-0" />}
                                     {check.status === 'pending' && <Clock size={14} className="text-yellow-500 shrink-0" />}
                                     <span className="text-white font-medium">{check.name}</span>
-                                    <span className="text-github-muted text-xs">{check.detail}</span>
+                                    <span className="text-xithub-muted text-xs">{check.detail}</span>
                                   </div>
                                 ))}
                               </div>
@@ -422,22 +422,22 @@
                        </div>
                        <div className="flex-1">
                           <h3 className="font-semibold text-white">This branch has no conflicts with the base branch</h3>
-                          <p className="text-sm text-github-muted mb-3">Merging can be performed automatically.</p>
+                          <p className="text-sm text-xithub-muted mb-3">Merging can be performed automatically.</p>
                           <div className="relative inline-flex">
                             <button
                               onClick={handleMerge}
-                              className="bg-github-success text-white px-4 py-2 rounded-l-md font-semibold text-sm hover:bg-opacity-90 flex items-center gap-2"
+                              className="bg-xithub-success text-white px-4 py-2 rounded-l-md font-semibold text-sm hover:bg-opacity-90 flex items-center gap-2"
                             >
                                <GitMerge size={16} /> {selectedStrategy.label}
                             </button>
                             <button
                               onClick={() => setShowMergeDropdown(!showMergeDropdown)}
-                              className="bg-github-success text-white px-2 py-2 rounded-r-md font-semibold text-sm hover:bg-opacity-90 border-l border-green-700"
+                              className="bg-xithub-success text-white px-2 py-2 rounded-r-md font-semibold text-sm hover:bg-opacity-90 border-l border-green-700"
                             >
                               <ChevronDown size={16} />
                             </button>
                             {showMergeDropdown && (
-                              <div className="absolute top-full left-0 mt-1 w-80 bg-[#161b22] border border-github-border rounded-md shadow-xl z-50 overflow-hidden">
+                              <div className="absolute top-full left-0 mt-1 w-80 bg-[#161b22] border border-xithub-border rounded-md shadow-xl z-50 overflow-hidden">
                                 {mergeStrategies.map(strategy => (
                                   <button
                                     key={strategy.id}
@@ -453,14 +453,14 @@
                                   >
                                     <div className="pt-0.5">
                                       {mergeStrategy === strategy.id ? (
-                                        <Check size={14} className="text-github-accent" />
+                                        <Check size={14} className="text-xithub-accent" />
                                       ) : (
                                         <div className="w-3.5" />
                                       )}
                                     </div>
                                     <div>
                                       <div className="text-sm font-semibold text-white">{strategy.label}</div>
-                                      <div className="text-xs text-github-muted mt-0.5">{strategy.desc}</div>
+                                      <div className="text-xs text-xithub-muted mt-0.5">{strategy.desc}</div>
                                     </div>
                                   </button>
                                 ))}
@@ -480,36 +480,36 @@
                        </div>
                        <div>
                           <h3 className="font-semibold text-white">Pull request successfully merged and closed</h3>
-                          <p className="text-sm text-github-muted">You're all set—the {pr.compareBranch} branch can be safely deleted.</p>
+                          <p className="text-sm text-xithub-muted">You're all set—the {pr.compareBranch} branch can be safely deleted.</p>
                        </div>
                     </div>
                  </div>
                )}
 
                {/* Comment form */}
-               <form onSubmit={handleComment} className="border border-github-border rounded-md overflow-hidden bg-github-bg mb-6">
-                 <div className="bg-[#161b22] border-b border-github-border p-2">
+               <form onSubmit={handleComment} className="border border-xithub-border rounded-md overflow-hidden bg-xithub-bg mb-6">
+                 <div className="bg-[#161b22] border-b border-xithub-border p-2">
                    <span className="text-sm font-semibold px-2">Write</span>
                  </div>
                  <div className="p-2">
                    <textarea
-                     className="w-full h-24 bg-[#0d1117] border border-github-border rounded-md p-2 text-github-text focus:ring-1 focus:ring-github-accent outline-none"
+                     className="w-full h-24 bg-[#0d1117] border border-xithub-border rounded-md p-2 text-xithub-text focus:ring-1 focus:ring-xithub-accent outline-none"
                      placeholder="Leave a comment"
                      value={comment}
                      onChange={e => setComment(e.target.value)}
                    ></textarea>
                  </div>
-                 <div className="p-2 flex justify-end gap-2 bg-[#161b22] border-t border-github-border">
+                 <div className="p-2 flex justify-end gap-2 bg-[#161b22] border-t border-xithub-border">
                    {!isMerged && (
                      <button
                        type="button"
                        onClick={handleToggleStatus}
-                       className={`px-4 py-1.5 rounded-md font-semibold text-sm border border-github-border hover:bg-[#30363d] ${isOpen ? 'text-red-400' : 'text-green-400'}`}
+                       className={`px-4 py-1.5 rounded-md font-semibold text-sm border border-xithub-border hover:bg-[#30363d] ${isOpen ? 'text-red-400' : 'text-green-400'}`}
                      >
                        {isOpen ? 'Close pull request' : 'Reopen pull request'}
                      </button>
                    )}
-                   <button type="submit" className="bg-github-success text-white px-4 py-1.5 rounded-md font-semibold text-sm hover:bg-opacity-90">
+                   <button type="submit" className="bg-xithub-success text-white px-4 py-1.5 rounded-md font-semibold text-sm hover:bg-opacity-90">
                      Comment
                    </button>
                  </div>
@@ -522,39 +522,39 @@
                    <div className="relative">
                      <button
                        onClick={() => setShowReviewForm(!showReviewForm)}
-                       className="px-4 py-1.5 bg-github-success text-white rounded-md font-semibold text-sm hover:bg-opacity-90"
+                       className="px-4 py-1.5 bg-xithub-success text-white rounded-md font-semibold text-sm hover:bg-opacity-90"
                      >
                        Review changes
                      </button>
                      {showReviewForm && (
-                       <div className="absolute right-0 top-full mt-2 w-96 bg-[#161b22] border border-github-border rounded-md shadow-xl z-50">
+                       <div className="absolute right-0 top-full mt-2 w-96 bg-[#161b22] border border-xithub-border rounded-md shadow-xl z-50">
                          <div className="p-4">
                            <textarea
                              value={reviewBody}
                              onChange={e => setReviewBody(e.target.value)}
                              placeholder="Leave a review comment..."
-                             className="w-full h-24 bg-[#0d1117] border border-github-border rounded-md p-2 text-github-text text-sm focus:ring-1 focus:ring-github-accent outline-none resize-y mb-3"
+                             className="w-full h-24 bg-[#0d1117] border border-xithub-border rounded-md p-2 text-xithub-text text-sm focus:ring-1 focus:ring-xithub-accent outline-none resize-y mb-3"
                            />
                            <div className="space-y-2 mb-4">
                              <label className="flex items-start gap-3 cursor-pointer p-2 rounded hover:bg-[#21262d]">
-                               <input type="radio" name="reviewType" value="comment" checked={reviewType === 'comment'} onChange={() => setReviewType('comment')} className="mt-0.5 accent-github-accent" />
+                               <input type="radio" name="reviewType" value="comment" checked={reviewType === 'comment'} onChange={() => setReviewType('comment')} className="mt-0.5 accent-xithub-accent" />
                                <div>
                                  <div className="text-sm font-medium text-white">Comment</div>
-                                 <div className="text-xs text-github-muted">Submit general feedback without explicit approval.</div>
+                                 <div className="text-xs text-xithub-muted">Submit general feedback without explicit approval.</div>
                                </div>
                              </label>
                              <label className="flex items-start gap-3 cursor-pointer p-2 rounded hover:bg-[#21262d]">
                                <input type="radio" name="reviewType" value="approve" checked={reviewType === 'approve'} onChange={() => setReviewType('approve')} className="mt-0.5 accent-green-500" />
                                <div>
                                  <div className="text-sm font-medium text-green-400">Approve</div>
-                                 <div className="text-xs text-github-muted">Submit feedback and approve merging these changes.</div>
+                                 <div className="text-xs text-xithub-muted">Submit feedback and approve merging these changes.</div>
                                </div>
                              </label>
                              <label className="flex items-start gap-3 cursor-pointer p-2 rounded hover:bg-[#21262d]">
                                <input type="radio" name="reviewType" value="request_changes" checked={reviewType === 'request_changes'} onChange={() => setReviewType('request_changes')} className="mt-0.5 accent-red-500" />
                                <div>
                                  <div className="text-sm font-medium text-red-400">Request changes</div>
-                                 <div className="text-xs text-github-muted">Submit feedback that must be addressed before merging.</div>
+                                 <div className="text-xs text-xithub-muted">Submit feedback that must be addressed before merging.</div>
                                </div>
                              </label>
                            </div>
@@ -562,9 +562,9 @@
                              <button
                                onClick={handleSubmitReview}
                                className={`px-4 py-1.5 rounded-md font-semibold text-sm text-white ${
-                                 reviewType === 'approve' ? 'bg-github-success hover:bg-opacity-90' :
+                                 reviewType === 'approve' ? 'bg-xithub-success hover:bg-opacity-90' :
                                  reviewType === 'request_changes' ? 'bg-red-600 hover:bg-opacity-90' :
-                                 'bg-github-success hover:bg-opacity-90'
+                                 'bg-xithub-success hover:bg-opacity-90'
                                }`}
                              >
                                Submit review
@@ -576,10 +576,10 @@
                    </div>
                  )}
                </div>
-               <div className="border border-github-border rounded-md overflow-hidden">
-                  <div className="bg-[#161b22] border-b border-github-border p-2 px-4 flex items-center justify-between">
-                     <div className="font-mono text-sm text-github-text">src/auth/Login.js</div>
-                     <button className="text-xs text-github-muted hover:text-github-accent">View file</button>
+               <div className="border border-xithub-border rounded-md overflow-hidden">
+                  <div className="bg-[#161b22] border-b border-xithub-border p-2 px-4 flex items-center justify-between">
+                     <div className="font-mono text-sm text-xithub-text">src/auth/Login.js</div>
+                     <button className="text-xs text-xithub-muted hover:text-xithub-accent">View file</button>
                   </div>
                   <div className="bg-[#0d1117] font-mono text-sm overflow-x-auto p-4">
                      <div className="text-green-500">+ function login() {'{'}</div>
@@ -591,16 +591,16 @@
 
             {/* Sidebar */}
             <div className="w-64 space-y-6">
-               <div className="border-b border-github-border pb-4 relative">
+               <div className="border-b border-xithub-border pb-4 relative">
                   <div
                     onClick={() => setShowReviewerMenu(!showReviewerMenu)}
-                    className="flex items-center justify-between text-github-muted hover:text-github-accent cursor-pointer mb-1"
+                    className="flex items-center justify-between text-xithub-muted hover:text-xithub-accent cursor-pointer mb-1"
                   >
                      <span className="text-sm font-semibold">Reviewers</span>
                      <span className="text-xs">⚙</span>
                   </div>
                   {showReviewerMenu && (
-                    <div className="absolute left-0 top-8 w-full bg-[#161b22] border border-github-border rounded-md shadow-lg z-40 py-1">
+                    <div className="absolute left-0 top-8 w-full bg-[#161b22] border border-xithub-border rounded-md shadow-lg z-40 py-1">
                       {state.users.filter(u => u.id !== pr.authorId).map(u => {
                         const isReviewer = (pr.reviewers || []).some(r => r.userId === u.id);
                         return (
@@ -609,7 +609,7 @@
                             onClick={() => handleToggleReviewer(u.id)}
                             className="w-full text-left px-3 py-1.5 text-xs hover:bg-[#21262d] flex items-center gap-2"
                           >
-                            <span className={`w-3 h-3 rounded-sm border ${isReviewer ? 'bg-github-accent border-github-accent' : 'border-github-border'}`}></span>
+                            <span className={`w-3 h-3 rounded-sm border ${isReviewer ? 'bg-xithub-accent border-xithub-accent' : 'border-xithub-border'}`}></span>
                             <img src={u.avatar} alt={u.username} className="w-4 h-4 rounded-full" />
                             {u.username}
                           </button>
@@ -618,7 +618,7 @@
                     </div>
                   )}
                   {(!pr.reviewers || pr.reviewers.length === 0) ? (
-                    <div className="text-xs text-github-muted">No reviews yet</div>
+                    <div className="text-xs text-xithub-muted">No reviews yet</div>
                   ) : (
                     <div className="space-y-2">
                       {pr.reviewers.map(reviewer => {
@@ -634,7 +634,7 @@
                             {reviewer.status === 'changes_requested' && (
                               <X size={14} className="text-red-500" />
                             )}
-                            <span className="text-github-text">{reviewerUser?.username || 'Unknown'}</span>
+                            <span className="text-xithub-text">{reviewerUser?.username || 'Unknown'}</span>
                           </div>
                         );
                       })}
@@ -642,16 +642,16 @@
                   )}
                </div>
 
-               <div className="border-b border-github-border pb-4 relative">
+               <div className="border-b border-xithub-border pb-4 relative">
                   <div
                     onClick={() => setShowAssigneeMenu(!showAssigneeMenu)}
-                    className="flex items-center justify-between text-github-muted hover:text-github-accent cursor-pointer mb-1"
+                    className="flex items-center justify-between text-xithub-muted hover:text-xithub-accent cursor-pointer mb-1"
                   >
                      <span className="text-sm font-semibold">Assignees</span>
                      <span className="text-xs">⚙</span>
                   </div>
                   {showAssigneeMenu && (
-                    <div className="absolute left-0 top-8 w-full bg-[#161b22] border border-github-border rounded-md shadow-lg z-40 py-1">
+                    <div className="absolute left-0 top-8 w-full bg-[#161b22] border border-xithub-border rounded-md shadow-lg z-40 py-1">
                       {state.users.map(u => {
                         const isAssigned = (pr.assignees || []).includes(u.id);
                         return (
@@ -660,7 +660,7 @@
                             onClick={() => handleToggleAssignee(u.id)}
                             className="w-full text-left px-3 py-1.5 text-xs hover:bg-[#21262d] flex items-center gap-2"
                           >
-                            <span className={`w-3 h-3 rounded-sm border ${isAssigned ? 'bg-github-accent border-github-accent' : 'border-github-border'}`}></span>
+                            <span className={`w-3 h-3 rounded-sm border ${isAssigned ? 'bg-xithub-accent border-xithub-accent' : 'border-xithub-border'}`}></span>
                             <img src={u.avatar} alt={u.username} className="w-4 h-4 rounded-full" />
                             {u.username}
                           </button>
@@ -668,7 +668,7 @@
                       })}
                     </div>
                   )}
-                  <div className="text-xs text-github-muted">
+                  <div className="text-xs text-xithub-muted">
                     {(pr.assignees || []).length > 0
                       ? (pr.assignees || []).map(id => state.users.find(u => u.id === id)?.username || id).join(', ')
                       : 'No one assigned'}

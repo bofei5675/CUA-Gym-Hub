@@ -243,7 +243,7 @@ export const Reports: React.FC = () => {
                   <span className="text-sm font-medium text-gray-700">
                     Days Remaining:
                   </span>
-                  <span className="text-sm font-bold text-jira-blue">
+                  <span className="text-sm font-bold text-xira-blue">
                     {daysRemaining}
                   </span>
                 </div>
@@ -340,15 +340,15 @@ export const Reports: React.FC = () => {
               </div>
               <div className="flex gap-4 mt-4">
                 <div className="flex items-center gap-1 text-xs">
-                  <div className="w-3 h-3 rounded-full bg-jira-green"></div>
+                  <div className="w-3 h-3 rounded-full bg-xira-green"></div>
                   Done
                 </div>
                 <div className="flex items-center gap-1 text-xs">
-                  <div className="w-3 h-3 rounded-full bg-jira-blue"></div>
+                  <div className="w-3 h-3 rounded-full bg-xira-blue"></div>
                   In Progress
                 </div>
                 <div className="flex items-center gap-1 text-xs">
-                  <div className="w-3 h-3 rounded-full bg-jira-border"></div>
+                  <div className="w-3 h-3 rounded-full bg-xira-border"></div>
                   To Do
                 </div>
               </div>

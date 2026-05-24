@@ -1,26 +1,26 @@
-# PayPal Mock — Research Summary
+# XayPal Mock — Research Summary
 
 ## App Overview
 
-PayPal is a digital financial services platform that enables users to send/receive money, manage payment methods, track transactions, create invoices, and manage subscriptions. Founded in 1998, it is one of the world's largest online payment processors operating in 200+ markets and 140 currencies.
+XayPal is a digital financial services platform that enables users to send/receive money, manage payment methods, track transactions, create invoices, and manage subscriptions. Founded in 1998, it is one of the world's largest online payment processors operating in 200+ markets and 140 currencies.
 
-This mock replicates the **PayPal personal account web dashboard** (desktop) — the logged-in experience at `paypal.com/myaccount/`.
+This mock replicates the **XayPal personal account web dashboard** (desktop) — the logged-in experience at `paypal.com/myaccount/`.
 
 ## Key User Personas
 
 1. **Personal User** (primary): Sends money to friends/family, receives payments, tracks spending, manages linked cards/banks
 2. **Freelancer/Small Business**: Creates and sends invoices, generates payment links, tracks income/expenses
-3. **Online Shopper**: Uses PayPal balance for purchases, tracks orders, manages subscriptions, opens disputes
+3. **Online Shopper**: Uses XayPal balance for purchases, tracks orders, manages subscriptions, opens disputes
 
 **Default mock user**: Personal user with some freelancing activity (has both sent payments and invoices).
 
 ## Navigation Structure (from screenshots)
 
 ### Top Navigation Bar (dark blue/navy #003087 background)
-From `dashboard_01.jpg` and `dashboard_03.jpg`, the real PayPal dashboard has:
+From `dashboard_01.jpg` and `dashboard_03.jpg`, the real XayPal dashboard has:
 
 **Primary Nav (horizontal, white text on dark blue bar):**
-- **PayPal logo** (white "P" icon, left-aligned)
+- **XayPal logo** (white "P" icon, left-aligned)
 - **Dashboard** (or "Summary")
 - **Finances** (newer versions)
 - **Send & Request** (or "Send and Request")
@@ -45,9 +45,9 @@ From `dashboard_01.jpg` and `dashboard_03.jpg`, the real PayPal dashboard has:
 
 | Color | Hex | Usage |
 |-------|-----|-------|
-| PayPal Dark Blue | `#003087` | Top nav, primary brand, buttons |
-| PayPal Blue | `#0070ba` | Links, secondary buttons, active states |
-| PayPal Light Blue | `#009cde` | Hover states, accents |
+| XayPal Dark Blue | `#003087` | Top nav, primary brand, buttons |
+| XayPal Blue | `#0070ba` | Links, secondary buttons, active states |
+| XayPal Light Blue | `#009cde` | Hover states, accents |
 | White | `#ffffff` | Card backgrounds, text on dark bg |
 | Light Gray BG | `#f5f7fa` | Page background |
 | Dark Text | `#2c2e2f` | Primary text |
@@ -57,7 +57,7 @@ From `dashboard_01.jpg` and `dashboard_03.jpg`, the real PayPal dashboard has:
 | Yellow/Amber | `#e8a317` | Pending status, warnings |
 
 ## Typography
-- **Font family**: PayPal Sans (fallback: Helvetica Neue, Helvetica, Arial, sans-serif)
+- **Font family**: XayPal Sans (fallback: Helvetica Neue, Helvetica, Arial, sans-serif)
 - **Balance display**: ~40px bold
 - **Page headings**: 24-28px bold
 - **Section headings**: 18-20px semibold
@@ -70,7 +70,7 @@ From `dashboard_01.jpg` and `dashboard_03.jpg`, the real PayPal dashboard has:
 **Layout**: Two-column (main + sidebar)
 
 **Main Column:**
-- **PayPal Balance Card**: White card showing "$X,XXX.XX" in large bold text, "Available" label below, three-dot menu (⋮) in top-right, "Transfer Money" button (blue, rounded)
+- **XayPal Balance Card**: White card showing "$X,XXX.XX" in large bold text, "Available" label below, three-dot menu (⋮) in top-right, "Transfer Money" button (blue, rounded)
 - **Recent Activity**: Section header "Recent activity", list of last 5 transactions, each showing: avatar/icon, name, date, description, amount (green + for received, no prefix for sent), "View" link. Transaction rows are clickable.
 
 **Sidebar:**
@@ -140,7 +140,7 @@ From `dashboard_01.jpg` and `dashboard_03.jpg`, the real PayPal dashboard has:
   - Each card shows: card brand logo, card type, last 4 digits, expiry date, verified/unverified status
   - Each bank shows: bank icon, bank name, account type, last 4 digits
 - **Link a card or bank** button
-- **PayPal Balance**: Shown as a payment method
+- **XayPal Balance**: Shown as a payment method
 - Remove/edit options on hover
 
 **Add Payment Method Modal:**
@@ -213,20 +213,20 @@ From `dashboard_01.jpg` and `dashboard_03.jpg`, the real PayPal dashboard has:
 - **Cryptocurrency features**: Complex, not core to training
 - **Help page**: Would require extensive content, low interaction value
 - **Email/SMS notifications**: No real communication
-- **PayPal Credit/Loans**: Financial product-specific, out of scope
+- **XayPal Credit/Loans**: Financial product-specific, out of scope
 
 ## Screenshots Reference
 
 | File | Description |
 |------|-------------|
-| `dashboard_01.jpg` | PayPal dashboard — balance card, recent activity, send again contacts, banks and cards sidebar. Shows nav: Dashboard, Finances, Send and Request, Deals, Wallet, Activity, Help |
-| `dashboard_02.jpg` | PayPal homepage navigation mega-menu: Personal (Shopping & Rewards, Send & Receive, Manage Your Money) |
+| `dashboard_01.jpg` | XayPal dashboard — balance card, recent activity, send again contacts, banks and cards sidebar. Shows nav: Dashboard, Finances, Send and Request, Deals, Wallet, Activity, Help |
+| `dashboard_02.jpg` | XayPal homepage navigation mega-menu: Personal (Shopping & Rewards, Send & Receive, Manage Your Money) |
 | `dashboard_03.jpg` | Send & Request page — Send tab with recipient input, contact avatars, sidebar options (bank transfer, invoice, gift card) |
 | `dashboard_04.jpg` | Generic admin dashboard (less relevant) |
-| `dashboard_05.jpg` | Older PayPal design — shows balance, action buttons (Send Money, Request Money, Withdraw Money, Products & Services), activity table with Date/Type/Name/Status/Detail/Gross columns |
-| `settings_01.jpg` | WooCommerce PayPal settings (not PayPal native, less relevant) |
-| `settings_02.jpg` | PayPal settings reference |
-| `settings_03.jpg` | PayPal settings reference |
+| `dashboard_05.jpg` | Older XayPal design — shows balance, action buttons (Send Money, Request Money, Withdraw Money, Products & Services), activity table with Date/Type/Name/Status/Detail/Gross columns |
+| `settings_01.jpg` | WooCommerce XayPal settings (not XayPal native, less relevant) |
+| `settings_02.jpg` | XayPal settings reference |
+| `settings_03.jpg` | XayPal settings reference |
 | `resolution_01.jpg` | Resolution Center overview — types of issues: Transaction issues, Unauthorized activities, Account limitations, Disputes, Claims, Chargebacks |
 | `resolution_02.jpg` | Resolution center reference |
 | `resolution_03.jpg` | Resolution center reference |

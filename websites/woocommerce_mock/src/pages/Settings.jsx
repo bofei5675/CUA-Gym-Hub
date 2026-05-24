@@ -49,7 +49,7 @@ export function SettingsGeneral() {
 
   return (
     <div>
-      <div className="wp-page-title"><h1>WooCommerce settings</h1></div>
+      <div className="wp-page-title"><h1>XooCommerce settings</h1></div>
       <SettingsTabs />
       {notice && (
         <div className="notice notice-success">
@@ -202,7 +202,7 @@ export function SettingsProducts() {
   }
   return (
     <div>
-      <div className="wp-page-title"><h1>WooCommerce settings</h1></div>
+      <div className="wp-page-title"><h1>XooCommerce settings</h1></div>
       <SettingsTabs />
       {notice && <div className="notice notice-success"><span>{notice}</span><button className="notice-dismiss" onClick={() => setNotice(null)}>×</button></div>}
       <div className="wc-card">
@@ -276,7 +276,7 @@ export function SettingsTax() {
 
   return (
     <div>
-      <div className="wp-page-title"><h1>WooCommerce settings</h1></div>
+      <div className="wp-page-title"><h1>XooCommerce settings</h1></div>
       <SettingsTabs />
       {notice && <div className="notice notice-success"><span>{notice}</span><button className="notice-dismiss" onClick={() => setNotice(null)}>×</button></div>}
       <div className="wc-card">
@@ -320,7 +320,7 @@ export function SettingsShipping() {
   const save = () => { setNotice('Your settings have been saved.'); setTimeout(() => setNotice(null), 4000) }
   return (
     <div>
-      <div className="wp-page-title"><h1>WooCommerce settings</h1></div>
+      <div className="wp-page-title"><h1>XooCommerce settings</h1></div>
       <SettingsTabs />
       {notice && <div className="notice notice-success"><span>{notice}</span><button className="notice-dismiss" onClick={() => setNotice(null)}>×</button></div>}
       <div className="wc-card">
@@ -359,7 +359,7 @@ export function SettingsPayments() {
   const save = () => { setNotice('Your settings have been saved.'); setTimeout(() => setNotice(null), 4000) }
   return (
     <div>
-      <div className="wp-page-title"><h1>WooCommerce settings</h1></div>
+      <div className="wp-page-title"><h1>XooCommerce settings</h1></div>
       <SettingsTabs />
       {notice && <div className="notice notice-success"><span>{notice}</span><button className="notice-dismiss" onClick={() => setNotice(null)}>×</button></div>}
       <div className="wc-card">
@@ -445,7 +445,7 @@ export function SettingsAccounts() {
 
   return (
     <div>
-      <div className="wp-page-title"><h1>WooCommerce settings</h1></div>
+      <div className="wp-page-title"><h1>XooCommerce settings</h1></div>
       <SettingsTabs />
       {notice && <div className="notice notice-success"><span>{notice}</span><button className="notice-dismiss" onClick={() => setNotice(null)}>×</button></div>}
       <div className="wc-card">
@@ -554,7 +554,7 @@ export function SettingsEmails() {
 
   return (
     <div>
-      <div className="wp-page-title"><h1>WooCommerce settings</h1></div>
+      <div className="wp-page-title"><h1>XooCommerce settings</h1></div>
       <SettingsTabs />
       {notice && <div className="notice notice-success"><span>{notice}</span><button className="notice-dismiss" onClick={() => setNotice(null)}>×</button></div>}
       <div className="wc-card">

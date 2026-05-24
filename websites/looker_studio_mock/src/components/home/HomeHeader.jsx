@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Search, Plus, HelpCircle, X, BarChart2, Database, Compass } from 'lucide-react'
 import { useApp } from '../../context/AppContext'
 
-// Looker Studio logo SVG component
+// Xooker Studio logo SVG component
 function LookerIcon() {
   return (
     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -82,7 +82,7 @@ export default function HomeHeader() {
           onClick={() => navigate('/')}>
           <LookerIcon />
           <span style={{ fontSize: '18px', color: '#5F6368', fontWeight: 400, whiteSpace: 'nowrap' }}>
-            Looker Studio
+            Xooker Studio
           </span>
         </div>
 

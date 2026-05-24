@@ -1,4 +1,4 @@
-# WeChat Mock — TODO
+# XeChat Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2025-03-09
@@ -37,7 +37,7 @@
 
 - [x] **Draft indicator**: If a conversation has a non-empty `draft` field, show `[草稿]` in red (#f44336) followed by the draft text (truncated) as the last message preview, instead of the actual last message. When user navigates to a chat and starts typing but leaves without sending, save the text as a draft via `saveDraft(contactId, text)`.
 
-- [x] **Swipe-to-reveal actions on conversations**: Implement left-swipe (or show on long-press for desktop) on each conversation item to reveal 3 action buttons: "置顶" (Pin/Unpin, blue), "已读" (Mark as Read, gray), "删除" (Delete, red). Pin calls `pinConversation()`, Mark as Read calls `markAsRead()`, Delete calls `deleteConversation()` with a confirmation dialog. Reference: this is standard WeChat behavior for managing conversations.
+- [x] **Swipe-to-reveal actions on conversations**: Implement left-swipe (or show on long-press for desktop) on each conversation item to reveal 3 action buttons: "置顶" (Pin/Unpin, blue), "已读" (Mark as Read, gray), "删除" (Delete, red). Pin calls `pinConversation()`, Mark as Read calls `markAsRead()`, Delete calls `deleteConversation()` with a confirmation dialog. Reference: this is standard XeChat behavior for managing conversations.
 
 - [x] **"+" header menu (top-right)**: The "+" button in the top-right header should open a dropdown menu (dark background, white text) with 4 items: "发起群聊" (Start Group Chat → navigate to `/groups`), "添加朋友" (Add Friend → show search modal), "扫一扫" (Scan → show scan modal), "收付款" (Pay/Receive → show mock QR code). Currently the "+" just navigates to contacts; replace with proper dropdown menu. See `assets/screenshots/chats_list_with_search.jpg` for the "+" button position.
 
@@ -69,13 +69,13 @@
 
 ### Discover Tab
 
-- [x] **Discover page sections with proper grouping and icons**: Enhance DiscoverPage to match real WeChat layout (see `assets/screenshots/mini_programs_discover_page.jpg`). The items should be grouped in sections separated by 8px gray dividers: Section 1: 朋友圈 (Moments — camera icon in circle, with red dot if new moments). Section 2: 视频号 (Channels — play icon), 直播 (Live — broadcast icon). Section 3: 扫一扫 (Scan — scan icon), 摇一摇 (Shake — phone icon). Section 4: 看一看 (Top Stories — eye icon, with red dot for new content), 搜一搜 (Search — magnifier icon). Section 5: 附近的人 (Nearby — location icon). Section 6: 小程序 (Mini Programs — chain link icon). Each item should be a 56px height row with: 28px colored icon on left, label text, right arrow chevron (>), and optionally a red dot badge.
+- [x] **Discover page sections with proper grouping and icons**: Enhance DiscoverPage to match real XeChat layout (see `assets/screenshots/mini_programs_discover_page.jpg`). The items should be grouped in sections separated by 8px gray dividers: Section 1: 朋友圈 (Moments — camera icon in circle, with red dot if new moments). Section 2: 视频号 (Channels — play icon), 直播 (Live — broadcast icon). Section 3: 扫一扫 (Scan — scan icon), 摇一摇 (Shake — phone icon). Section 4: 看一看 (Top Stories — eye icon, with red dot for new content), 搜一搜 (Search — magnifier icon). Section 5: 附近的人 (Nearby — location icon). Section 6: 小程序 (Mini Programs — chain link icon). Each item should be a 56px height row with: 28px colored icon on left, label text, right arrow chevron (>), and optionally a red dot badge.
 
 - [x] **Channels page (视频号)**: Create a new route `/channels` with a simple short-video feed mock. Show 3-4 cards, each with: large video thumbnail (16:9 aspect), creator avatar + name overlay at bottom, like count ❤️, comment count 💬, share icon. This is visual-only; tapping shows a "视频播放中..." placeholder. Accessible from Discover tab's "视频号" item.
 
 ### Me Tab
 
-- [x] **Complete Me page menu items**: Enhance ProfilePage to show all menu items matching real WeChat (see `assets/screenshots/me_tab_profile.jpg`): Profile card at top (avatar 64px, nickname, WeChat ID, QR icon, right arrow). Below that, grouped sections: Section 1: "服务" (Services — wallet icon, green). Section 2: "收藏" (Favorites — star icon, yellow), "朋友圈" (Moments — camera icon), "卡包" (Cards & Offers — card icon), "表情" (Sticker Gallery — smiley icon). Section 3: "设置" (Settings — gear icon). Currently some items like "表情" have no handler — all items should navigate somewhere or show a modal.
+- [x] **Complete Me page menu items**: Enhance ProfilePage to show all menu items matching real XeChat (see `assets/screenshots/me_tab_profile.jpg`): Profile card at top (avatar 64px, nickname, XeChat ID, QR icon, right arrow). Below that, grouped sections: Section 1: "服务" (Services — wallet icon, green). Section 2: "收藏" (Favorites — star icon, yellow), "朋友圈" (Moments — camera icon), "卡包" (Cards & Offers — card icon), "表情" (Sticker Gallery — smiley icon). Section 3: "设置" (Settings — gear icon). Currently some items like "表情" have no handler — all items should navigate somewhere or show a modal.
 
 - [x] **Favorites page**: Create a new route `/favorites` accessible from Me tab. Show a list of 4-5 mock saved items: text notes, images, links (with title + preview), files. Each item shows: type icon, content preview (truncated), source ("来自 李四"), timestamp. This is read-only for now.
 
@@ -111,9 +111,9 @@
 
 - [ ] **Contact tagging**: In ContactsPage, the "标签" (Tags) shortcut should show existing tags with contact counts. Tapping a tag shows contacts in that tag. Support creating new tags and adding/removing contacts from tags. Tags are: "朋友", "同事", "家人" (seeded from contact data).
 
-- [ ] **Official Accounts list**: In ContactsPage, the "公众号" (Official Accounts) shortcut should navigate to a list of 3 mock accounts: "微信团队" (WeChat Team), "腾讯新闻" (Tencent News), "人民日报" (People's Daily). Each shows avatar, name, latest article title. Tapping an account shows a detail page with a list of 3 mock articles (title + thumbnail + date).
+- [ ] **Official Accounts list**: In ContactsPage, the "公众号" (Official Accounts) shortcut should navigate to a list of 3 mock accounts: "微信团队" (XeChat Team), "腾讯新闻" (Tencent News), "人民日报" (People's Daily). Each shows avatar, name, latest article title. Tapping an account shows a detail page with a list of 3 mock articles (title + thumbnail + date).
 
-- [ ] **WeChat Pay / Services page**: Create a route `/services` accessible from Me tab's "服务" item. Show a mock wallet dashboard: balance "¥2,580.00", recent transactions list (5 items: transfers, red packets, purchases with amounts and dates), "收付款" (Pay/Receive) button showing a mock QR code, "钱包" (Wallet) section with: "银行卡" (Bank Cards), "零钱" (Change), "零钱通" (Money Market Fund).
+- [ ] **XeChat Pay / Services page**: Create a route `/services` accessible from Me tab's "服务" item. Show a mock wallet dashboard: balance "¥2,580.00", recent transactions list (5 items: transfers, red packets, purchases with amounts and dates), "收付款" (Pay/Receive) button showing a mock QR code, "钱包" (Wallet) section with: "银行卡" (Bank Cards), "零钱" (Change), "零钱通" (Money Market Fund).
 
 - [ ] **Mini Programs page enhancement**: Create a route `/mini-programs` accessible from Discover tab. Show: search bar, "最近使用" (Recently Used) section with 4 mini program icons in a row, "我的小程序" (My Mini Programs) section with 8 more. Each mini program: 48px icon + name below. Tapping shows a "小程序加载中..." placeholder page. Use realistic Chinese app names: "美团外卖", "京东购物", "滴滴出行", "拼多多", "大众点评", "12306", "腾讯文档", "微信读书".
 
@@ -123,7 +123,7 @@
 
 - [ ] **User profile page photo wall**: On UserProfilePage, show a "个人相册" (Photo Wall) section that displays the 6 most recent images from that user's moments, in a 3x2 grid. Tapping an image navigates to the corresponding moment post.
 
-- [ ] **Settings page**: Create a route `/settings` accessible from Me tab's "设置" item. Show grouped menu items: "帐号与安全" (Account & Security), "青少年模式" (Teen Mode), "关怀模式" (Care Mode — larger fonts), "新消息通知" (New Message Notifications), "隐私" (Privacy), "通用" (General), "关于微信" (About WeChat → shows version "WeChat 8.0.44"). Each item navigates to a stub page or shows a simple toggle. No real functionality needed — just realistic-looking menu structure.
+- [ ] **Settings page**: Create a route `/settings` accessible from Me tab's "设置" item. Show grouped menu items: "帐号与安全" (Account & Security), "青少年模式" (Teen Mode), "关怀模式" (Care Mode — larger fonts), "新消息通知" (New Message Notifications), "隐私" (Privacy), "通用" (General), "关于微信" (About XeChat → shows version "XeChat 8.0.44"). Each item navigates to a stub page or shows a simple toggle. No real functionality needed — just realistic-looking menu structure.
 
 - [ ] **Conversation search (global)**: The search bar on the Chats tab should support global search: (1) filter conversations by name/content (existing), (2) show matching contacts in a "联系人" section, (3) show matching messages in a "聊天记录" section with the matching message highlighted. Currently only filters conversations — add the additional result sections.
 
@@ -153,8 +153,8 @@
 - Real file upload to server (use placeholder URLs)
 - Real voice/video calls (simulated timer UI only)
 - Real push notifications
-- WeChat Work (enterprise) features
-- WeChat Pay merchant features
+- XeChat Work (enterprise) features
+- XeChat Pay merchant features
 - Real mini program execution
 - Server-side message delivery
 - End-to-end encryption

@@ -22,7 +22,7 @@ export default function JournalEntryDetail() {
   const [editData, setEditData] = useState({})
   const [confirmReverse, setConfirmReverse] = useState(false)
 
-  if (!je) return <div style={{ padding: '24px', color: 'var(--sap-text-secondary)' }}>Journal Entry not found.</div>
+  if (!je) return <div style={{ padding: '24px', color: 'var(--xap-text-secondary)' }}>Journal Entry not found.</div>
 
   function startEdit() {
     if (je.status === 'Posted' || je.status === 'Reversed') {
@@ -77,7 +77,7 @@ export default function JournalEntryDetail() {
     return (
       <div className="form-field">
         <label>{label}</label>
-        <div style={{ fontSize: '14px', padding: '6px 0', color: 'var(--sap-text-primary)', borderBottom: '1px solid var(--sap-border)', minHeight: '32px' }}>
+        <div style={{ fontSize: '14px', padding: '6px 0', color: 'var(--xap-text-primary)', borderBottom: '1px solid var(--xap-border)', minHeight: '32px' }}>
           {value || '—'}
         </div>
       </div>
@@ -92,15 +92,15 @@ export default function JournalEntryDetail() {
   return (
     <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
       {/* Header */}
-      <div style={{ background: '#fff', borderBottom: '1px solid var(--sap-border)', padding: '12px 24px' }}>
-        <div style={{ fontSize: '12px', color: 'var(--sap-blue)', marginBottom: '4px', cursor: 'pointer' }}
+      <div style={{ background: '#fff', borderBottom: '1px solid var(--xap-border)', padding: '12px 24px' }}>
+        <div style={{ fontSize: '12px', color: 'var(--xap-blue)', marginBottom: '4px', cursor: 'pointer' }}
           onClick={() => navigate('/app/journal-entries')}>
           Journal Entries /
         </div>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div>
-            <h1 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--sap-text-primary)' }}>{je.documentNumber}</h1>
-            <div style={{ fontSize: '13px', color: 'var(--sap-text-secondary)' }}>
+            <h1 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--xap-text-primary)' }}>{je.documentNumber}</h1>
+            <div style={{ fontSize: '13px', color: 'var(--xap-text-secondary)' }}>
               {je.documentType} — {DOC_TYPE_LABELS[je.documentType] || je.documentType} · {je.postingDate}
             </div>
           </div>
@@ -152,7 +152,7 @@ export default function JournalEntryDetail() {
                 <Field label="Total Credit" value={new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(totalCredit)} />
                 <div className="form-field">
                   <label>Balance</label>
-                  <div style={{ fontSize: '14px', padding: '6px 0', minHeight: '32px', borderBottom: '1px solid var(--sap-border)', color: isBalanced ? 'var(--sap-status-success)' : 'var(--sap-status-error)', fontWeight: 600 }}>
+                  <div style={{ fontSize: '14px', padding: '6px 0', minHeight: '32px', borderBottom: '1px solid var(--xap-border)', color: isBalanced ? 'var(--xap-status-success)' : 'var(--xap-status-error)', fontWeight: 600 }}>
                     {isBalanced ? '✓ Balanced' : `⚠ Unbalanced (diff: ${new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(Math.abs(totalDebit - totalCredit))})`}
                   </div>
                 </div>
@@ -167,7 +167,7 @@ export default function JournalEntryDetail() {
               <h3>Line Items ({items.length})</h3>
             </div>
             <div style={{ overflowX: 'auto' }}>
-              <table className="sap-table">
+              <table className="xap-table">
                 <thead>
                   <tr>
                     <th>Line #</th>
@@ -182,37 +182,37 @@ export default function JournalEntryDetail() {
                 </thead>
                 <tbody>
                   {items.length === 0 ? (
-                    <tr><td colSpan={8} style={{ textAlign: 'center', padding: '24px', color: 'var(--sap-text-secondary)' }}>No line items</td></tr>
+                    <tr><td colSpan={8} style={{ textAlign: 'center', padding: '24px', color: 'var(--xap-text-secondary)' }}>No line items</td></tr>
                   ) : items.map(item => (
                     <tr key={item.id}>
-                      <td style={{ color: 'var(--sap-text-secondary)' }}>{item.lineNumber}</td>
+                      <td style={{ color: 'var(--xap-text-secondary)' }}>{item.lineNumber}</td>
                       <td>{item.glAccount}</td>
                       <td>{item.accountDescription || '—'}</td>
                       <td>{item.costCenter || '—'}</td>
                       <td>
                         <span style={{
                           fontWeight: 600,
-                          color: item.debitCreditIndicator === 'D' ? 'var(--sap-status-error)' : 'var(--sap-status-success)'
+                          color: item.debitCreditIndicator === 'D' ? 'var(--xap-status-error)' : 'var(--xap-status-success)'
                         }}>
                           {item.debitCreditIndicator === 'D' ? 'Debit' : 'Credit'}
                         </span>
                       </td>
-                      <td style={{ textAlign: 'right', color: 'var(--sap-status-error)', fontVariantNumeric: 'tabular-nums' }}>
+                      <td style={{ textAlign: 'right', color: 'var(--xap-status-error)', fontVariantNumeric: 'tabular-nums' }}>
                         {item.debitAmount ? new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(item.debitAmount) : '—'}
                       </td>
-                      <td style={{ textAlign: 'right', color: 'var(--sap-status-success)', fontVariantNumeric: 'tabular-nums' }}>
+                      <td style={{ textAlign: 'right', color: 'var(--xap-status-success)', fontVariantNumeric: 'tabular-nums' }}>
                         {item.creditAmount ? new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(item.creditAmount) : '—'}
                       </td>
                       <td>{item.itemText || '—'}</td>
                     </tr>
                   ))}
                   {items.length > 0 && (
-                    <tr style={{ borderTop: '2px solid var(--sap-border)', fontWeight: 600, background: 'var(--sap-page-bg)' }}>
-                      <td colSpan={5} style={{ textAlign: 'right', fontSize: '13px', color: 'var(--sap-text-secondary)' }}>Totals</td>
-                      <td style={{ textAlign: 'right', color: 'var(--sap-status-error)' }}>
+                    <tr style={{ borderTop: '2px solid var(--xap-border)', fontWeight: 600, background: 'var(--xap-page-bg)' }}>
+                      <td colSpan={5} style={{ textAlign: 'right', fontSize: '13px', color: 'var(--xap-text-secondary)' }}>Totals</td>
+                      <td style={{ textAlign: 'right', color: 'var(--xap-status-error)' }}>
                         {new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(totalDebit)}
                       </td>
-                      <td style={{ textAlign: 'right', color: 'var(--sap-status-success)' }}>
+                      <td style={{ textAlign: 'right', color: 'var(--xap-status-success)' }}>
                         {new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(totalCredit)}
                       </td>
                       <td></td>
@@ -229,8 +229,8 @@ export default function JournalEntryDetail() {
             <div className="section-header"><h3>Notes</h3></div>
             <div className="section-body">
               {editMode
-                ? <textarea rows={6} value={editData.notes || ''} onChange={e => setEditData(d => ({ ...d, notes: e.target.value }))} style={{ width: '100%', resize: 'vertical', border: '1px solid var(--sap-border)', borderRadius: '4px', padding: '8px', fontFamily: 'inherit', fontSize: '13px' }} />
-                : <p style={{ fontSize: '14px', color: je.notes ? 'var(--sap-text-primary)' : 'var(--sap-text-secondary)' }}>{je.notes || 'No notes'}</p>
+                ? <textarea rows={6} value={editData.notes || ''} onChange={e => setEditData(d => ({ ...d, notes: e.target.value }))} style={{ width: '100%', resize: 'vertical', border: '1px solid var(--xap-border)', borderRadius: '4px', padding: '8px', fontFamily: 'inherit', fontSize: '13px' }} />
+                : <p style={{ fontSize: '14px', color: je.notes ? 'var(--xap-text-primary)' : 'var(--xap-text-secondary)' }}>{je.notes || 'No notes'}</p>
               }
             </div>
           </div>
@@ -240,7 +240,7 @@ export default function JournalEntryDetail() {
       {/* Sticky footer edit bar */}
       {editMode && (
         <div className="sticky-footer">
-          <span style={{ fontSize: '13px', color: 'var(--sap-text-secondary)', marginRight: 'auto' }}>
+          <span style={{ fontSize: '13px', color: 'var(--xap-text-secondary)', marginRight: 'auto' }}>
             Editing Journal Entry {je.documentNumber}
           </span>
           <button className="btn-secondary" onClick={cancelEdit}>Cancel</button>

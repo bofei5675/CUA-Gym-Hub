@@ -92,7 +92,7 @@ const Explore = () => {
           {/* Trending section */}
           <div className="max-w-[1400px] mx-auto px-4 pt-8 pb-4">
             <div className="flex items-center gap-2 mb-6">
-              <TrendingUp size={20} className="text-pinterest-red" />
+              <TrendingUp size={20} className="text-xinterest-red" />
               <h2 className="text-2xl font-bold">Trending now</h2>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8">
@@ -121,7 +121,7 @@ const Explore = () => {
           {/* Categories grid */}
           <div className="max-w-[1400px] mx-auto px-4 pb-8">
             <div className="flex items-center gap-2 mb-6">
-              <Sparkles size={20} className="text-pinterest-red" />
+              <Sparkles size={20} className="text-xinterest-red" />
               <h2 className="text-2xl font-bold">Browse by category</h2>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

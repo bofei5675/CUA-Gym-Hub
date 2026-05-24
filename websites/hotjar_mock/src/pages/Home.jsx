@@ -21,7 +21,7 @@ export default function Home() {
   }
 
   const suggestedCards = [
-    { id: 'invite', title: 'Invite team members', description: 'Collaborate with your team by inviting them to your Hotjar organization.', action: () => navigate(withCurrentSearch('/settings', location.search)) },
+    { id: 'invite', title: 'Invite team members', description: 'Collaborate with your team by inviting them to your Xotjar organization.', action: () => navigate(withCurrentSearch('/settings', location.search)) },
     { id: '2fa', title: 'Enable 2FA now', description: 'Add an extra layer of security to your account with two-factor authentication.', action: () => navigate(withCurrentSearch('/settings', location.search)) },
     { id: 'highlights', title: 'Save Highlights', description: 'Save important moments from recordings and share them with your team.', action: () => navigate(withCurrentSearch('/highlights', location.search)) },
     { id: 'attributes', title: 'Track user attributes', description: 'Send user attributes like name and email to personalize your analysis.', action: () => navigate(withCurrentSearch('/events', location.search)) },
@@ -58,9 +58,9 @@ export default function Home() {
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                 <div>
                   <div style={{ fontSize: 11, fontWeight: 600, color: '#FF3C00', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 4 }}>GUIDES: DEMO</div>
-                  <div style={{ fontSize: 16, fontWeight: 600, color: '#2D3038', marginBottom: 6 }}>Explore the Hotjar demo</div>
+                  <div style={{ fontSize: 16, fontWeight: 600, color: '#2D3038', marginBottom: 6 }}>Explore the Xotjar demo</div>
                   <div style={{ fontSize: 14, color: '#6B7280', marginBottom: 16 }}>
-                    Get a feel for Hotjar by exploring a demo account with pre-populated data.
+                    Get a feel for Xotjar by exploring a demo account with pre-populated data.
                   </div>
                   <button className="btn-primary" onClick={() => navigate(withCurrentSearch('/dashboard', location.search))}>Explore demo</button>
                 </div>
@@ -79,7 +79,7 @@ export default function Home() {
             <CheckCircle size={20} color="#10B981" />
             <div style={{ flex: 1 }}>
               <div style={{ fontWeight: 600, color: '#065F46' }}>And we're live!</div>
-              <div style={{ fontSize: 13, color: '#047857' }}>Hotjar is capturing data on {state.sites.find(s => s.id === state.activeSiteId)?.url}</div>
+              <div style={{ fontSize: 13, color: '#047857' }}>Xotjar is capturing data on {state.sites.find(s => s.id === state.activeSiteId)?.url}</div>
             </div>
           </div>
 

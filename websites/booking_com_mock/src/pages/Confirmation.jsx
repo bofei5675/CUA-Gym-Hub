@@ -51,7 +51,7 @@ export const Confirmation = () => {
 
   const downloadReceipt = () => {
     const receipt = [
-      'Booking.com sandbox confirmation',
+      'Xooking.com sandbox confirmation',
       `Confirmation number: ${booking.confirmationNumber}`,
       `PIN code: ${booking.pinCode}`,
       `Guest: ${guestName}`,

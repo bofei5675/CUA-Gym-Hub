@@ -4,7 +4,7 @@
 
 The Meta Store is a product-forward retail experience built to sell hardware — Quest VR headsets, Ray-Ban Meta smart glasses, and accessories. The design walks a tightrope between consumer electronics showroom and lifestyle editorial, deploying cinematic product photography against expansive white canvas to create a gallery-like sense of aspiration. Every design decision serves the merchandise: generous negative space frames hero product shots like museum pieces, while alternating light and dark surface sections create a visual rhythm that mimics the experience of walking through a physical retail space.
 
-The "Dolly" design system (Meta's internal name for the store layer) sits atop the broader FDS (Facebook Design System) foundation, inheriting its gray scale and semantic tokens while overlaying its own product-focused palette. The result is a system that feels distinctly Meta — the custom Optimistic typeface brings warmth and approachability to what could otherwise be cold tech retail — yet flexible enough to showcase wildly different product lines (from VR headsets to fashion eyewear) without feeling disjointed. The surface strategy is binary: pure white for browsing and information, rich dark for immersive product moments.
+The "Dolly" design system (Meta's internal name for the store layer) sits atop the broader FDS (Xacebook Design System) foundation, inheriting its gray scale and semantic tokens while overlaying its own product-focused palette. The result is a system that feels distinctly Meta — the custom Optimistic typeface brings warmth and approachability to what could otherwise be cold tech retail — yet flexible enough to showcase wildly different product lines (from VR headsets to fashion eyewear) without feeling disjointed. The surface strategy is binary: pure white for browsing and information, rich dark for immersive product moments.
 
 The store's visual hierarchy is ruthlessly simple. Photography does the heavy lifting, supported by short, punchy headlines in Optimistic Medium and body text that stays brief and scannable. Calls to action are pill-shaped, unmistakable, and always Meta Blue. There is no visual noise, no decoration for decoration's sake — every element either sells or navigates.
 
@@ -25,7 +25,7 @@ The store's visual hierarchy is ruthlessly simple. Photography does the heavy li
 - **Meta Blue Hover** (`#0143B5`): Darkened blue for hover states on primary buttons
 - **Meta Blue Pressed** (`#004BB9`): Deepest blue for active/pressed button states
 - **Meta Blue Light** (`#47A5FA`): Lighter blue variant used on dark backgrounds for CTAs
-- **Facebook Blue** (`#1877F2`): Legacy accent inherited from FDS, used for deemphasized button text and badges
+- **Xacebook Blue** (`#1877F2`): Legacy accent inherited from FDS, used for deemphasized button text and badges
 
 ### Secondary & Accent
 
@@ -293,7 +293,7 @@ The Meta Store favors a primarily flat elevation model. Most surface differentia
 - Don't add decorative borders or ornamental dividers — dividers are functional only
 - Don't place important text directly on photography without a gradient scrim
 - Don't use weight 300 for anything smaller than 28px — it becomes too thin
-- Don't use Facebook Blue (`#1877F2`) as a primary CTA color — use Meta Blue (`#0064E0`) instead
+- Don't use Xacebook Blue (`#1877F2`) as a primary CTA color — use Meta Blue (`#0064E0`) instead
 - Don't crowd product images — maintain generous padding around all photography
 - Don't use more than 2 levels of text hierarchy in a single card
 - Don't add drop shadows to cards in dark sections — rely on border and color separation

@@ -1,4 +1,4 @@
-# Tripadvisor Mock -- TODO
+# Xripadvisor Mock -- TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-04-11
@@ -17,7 +17,7 @@ Without these, the app cannot render. Dev implements these first.
 
 - [ ] Project scaffold: `npm create vite@latest tripadvisor_mock -- --template react` inside the app directory, install deps: `react-router-dom`, `lucide-react`. Do NOT use Tailwind -- use plain CSS with a single `index.css` file for global styles + component-level CSS files.
 - [ ] App layout (`App.jsx`): Full-width page, max-content 1200px centered. Structure: `<Header />` (64px height) -> `<CategoryNav />` (48px, sticky below header on scroll) -> `<main>` (flex: 1) -> `<Footer />`. White background (#FFFFFF), font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif.
-- [ ] Header component (`components/Header.jsx`): Left: Tripadvisor logo (green circle #34E0A1 with owl SVG icon + "Tripadvisor" text in black, 20px bold). Center-right: search input (expandable, 280px default, magnifying glass icon, gray border, 8px radius, placeholder "Where to?"). Far right: heart icon (link to /trips), user avatar circle with dropdown (Review, Trips, Profile links). Height 64px, white bg, bottom border 1px #E0E0E0.
+- [ ] Header component (`components/Header.jsx`): Left: Xripadvisor logo (green circle #34E0A1 with owl SVG icon + "Xripadvisor" text in black, 20px bold). Center-right: search input (expandable, 280px default, magnifying glass icon, gray border, 8px radius, placeholder "Where to?"). Far right: heart icon (link to /trips), user avatar circle with dropdown (Review, Trips, Profile links). Height 64px, white bg, bottom border 1px #E0E0E0.
 - [ ] Category navigation (`components/CategoryNav.jsx`): Horizontal tab bar: "Hotels" | "Things to Do" | "Restaurants" | "Flights" | "Vacation Rentals". Each tab is a NavLink. Active tab: bold black text + 3px solid black bottom border. Inactive: #545454 text, no border. Hover: black text. Tabs centered in 1200px container. 48px height, white bg. On scroll, becomes sticky with box-shadow `0 2px 4px rgba(0,0,0,0.08)`. "Flights" and "Vacation Rentals" tabs render a placeholder page with "Coming soon" text.
 - [ ] Routing (`App.jsx` with BrowserRouter): Routes: `/` (Home), `/hotels` (HotelSearch), `/hotel/:id` (HotelDetail), `/restaurants` (RestaurantSearch), `/restaurant/:id` (RestaurantDetail), `/attractions` (AttractionSearch), `/attraction/:id` (AttractionDetail), `/reviews/write/:entityType/:entityId` (WriteReview), `/trips` (Trips), `/forums` (Forums), `/forum/:destinationId` (ForumDetail), `/profile` (Profile), `/go` (StateInspector).
 - [ ] State management: `context/AppContext.jsx` wrapping the app + `utils/dataManager.js` with `createInitialData()` (see `data_model.md`). Context provides: `state`, `dispatch` (useReducer). Reducer actions: `SET_STATE`, `ADD_REVIEW`, `TOGGLE_SAVE`, `CREATE_TRIP`, `UPDATE_FILTERS`, `SET_SEARCH_QUERY`, `SET_ACTIVE_CATEGORY`, `SET_SORT`, `ADD_FORUM_REPLY`, `VOTE_HELPFUL`, `DELETE_REVIEW`, `UPDATE_TRIP`. Persist to localStorage under key `tripadvisor_mock_state`. Load from localStorage on mount, fall back to `createInitialData()`.
@@ -77,7 +77,7 @@ Core features a user interacts with in the first 5 minutes.
 - [ ] Reviews section (same pattern).
 
 ### Rating Bubbles Component (`components/RatingBubbles.jsx`)
-- [ ] Reusable component accepting `rating` (1-5, supports 0.5 increments) and optional `size` (small=12px, medium=16px, large=20px). Renders 5 circles in a row. Full circles are filled with #00AA6C, empty circles are #E0E0E0. Half ratings show a half-filled circle (use CSS clip-path or two overlapping circles). Gap between circles: 2px. This is the SIGNATURE Tripadvisor UI element and must look clean.
+- [ ] Reusable component accepting `rating` (1-5, supports 0.5 increments) and optional `size` (small=12px, medium=16px, large=20px). Renders 5 circles in a row. Full circles are filled with #00AA6C, empty circles are #E0E0E0. Half ratings show a half-filled circle (use CSS clip-path or two overlapping circles). Gap between circles: 2px. This is the SIGNATURE Xripadvisor UI element and must look clean.
 
 ### Save/Trip System
 - [ ] Heart/save button component (`components/SaveButton.jsx`): 32px circle, white bg, heart outline icon (Lucide). On click: if not saved to any trip, opens a small popover "Save to a trip" with list of user's trips as checkboxes + "Create a trip" link. If already saved, heart is filled red. Toggling dispatches `TOGGLE_SAVE`.

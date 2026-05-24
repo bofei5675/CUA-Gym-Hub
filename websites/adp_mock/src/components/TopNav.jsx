@@ -173,7 +173,7 @@ export default function TopNav({ onToggleSidebar }) {
 
       {/* Logo */}
       <div onClick={() => navigate('/')} style={{ cursor: 'pointer', display: 'flex', alignItems: 'baseline', marginRight: 32 }}>
-        <span style={{ color: '#D0021B', fontWeight: 700, fontSize: 24, letterSpacing: '-1px', fontStyle: 'italic' }}>adp</span>
+        <span style={{ color: '#D0021B', fontWeight: 700, fontSize: 24, letterSpacing: '-1px', fontStyle: 'italic' }}>xdp</span>
         <span style={{ color: 'rgba(255,255,255,0.45)', fontSize: 11, marginLeft: 8, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Workforce Now</span>
       </div>
 

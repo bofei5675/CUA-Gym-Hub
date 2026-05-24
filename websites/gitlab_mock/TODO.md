@@ -1,4 +1,4 @@
-# GitLab Mock — TODO
+# XitLab Mock — TODO
 
 > Status: IMPLEMENTED
 > Last updated by: dev agent, 2026-04-11
@@ -15,11 +15,11 @@
 
 - [x] **Project scaffold**: `npm create vite@latest gitlab_mock -- --template react`, install deps: `react-router-dom`, `lucide-react`. Do NOT use TypeScript — use plain JSX.
 
-- [x] **Visual design system**: GitLab uses the "Pajamas" design system. Study `assets/screenshots/000003.jpg` for the real UI. Create a CSS file (`src/styles/gitlab.css`) with CSS variables:
+- [x] **Visual design system**: XitLab uses the "Pajamas" design system. Study `assets/screenshots/000003.jpg` for the real UI. Create a CSS file (`src/styles/gitlab.css`) with CSS variables:
   - `--gl-purple`: `#7759C2` (primary action buttons, active sidebar items)
   - `--gl-purple-light`: `#A989F5`
   - `--gl-purple-dark`: `#5943B6`
-  - `--gl-orange`: `#FC6D26` (GitLab tanuki logo)
+  - `--gl-orange`: `#FC6D26` (XitLab tanuki logo)
   - `--gl-red`: `#E24329` (tanuki accent, danger)
   - `--gl-bg-primary`: `#FFFFFF` (main content background)
   - `--gl-bg-secondary`: `#FAFAFA` (sidebar background, secondary areas)
@@ -37,7 +37,7 @@
   - Base font size: 14px, border-radius: 4px for most elements, 8px for cards
 
 - [x] **App layout** (`src/components/Layout.jsx`): Three-zone layout matching screenshot 000003.jpg:
-  - **Top bar**: 48px height, white background, bottom border `#DCDCDE`. Contains: GitLab tanuki SVG logo (left, 28px), "Search or go to..." search input (centered, ~400px wide, gray bg `#F0F0F0`, rounded pill shape), right side: "+" create button, todo counter badge (shows number like "3"), user avatar (32px round).
+  - **Top bar**: 48px height, white background, bottom border `#DCDCDE`. Contains: XitLab tanuki SVG logo (left, 28px), "Search or go to..." search input (centered, ~400px wide, gray bg `#F0F0F0`, rounded pill shape), right side: "+" create button, todo counter badge (shows number like "3"), user avatar (32px round).
   - **Left sidebar**: 220px width, white background `#FAFAFA`, right border `#DCDCDE`. Scrollable. At top: current project avatar (colored square with first letter) + project name. Then navigation sections (see next item). Collapsible via hamburger in top bar.
   - **Main content**: fills remaining space, padding 24px, max-width 1200px centered, scrollable.
 
@@ -125,7 +125,7 @@
 ### Dashboard & Navigation
 
 - [x] **Dashboard page** (`src/pages/Dashboard.jsx`): The landing page when no project is selected. Full-width (no project sidebar). Shows:
-  - Header: "Welcome to GitLab" greeting with current user name
+  - Header: "Welcome to XitLab" greeting with current user name
   - "Your projects" section: list of all projects the user has access to, each showing: project avatar (colored square), full path ("acme-corp / web-platform"), description, language badge, star count, fork count, last updated relative time ("3 hours ago"), visibility icon (lock for private, globe for public)
   - Each project row is clickable → navigates to project overview
   - "New project" button (top right, green `#108548` bg)
@@ -230,7 +230,7 @@
 
 - [x] **Job detail page** (`src/pages/JobDetail.jsx`): Route `/:group/:project/-/jobs/:id`.
   - Header: "Job #X: job-name" with status badge
-  - **Log viewer**: Black background terminal-style display showing the job's `logExcerpt`. Monospace font (GitLab Mono/JetBrains Mono), green text for success lines, red for errors, white for normal output. Line numbers on left. Auto-scroll to bottom. Show duration at bottom.
+  - **Log viewer**: Black background terminal-style display showing the job's `logExcerpt`. Monospace font (XitLab Mono/JetBrains Mono), green text for success lines, red for errors, white for normal output. Line numbers on left. Auto-scroll to bottom. Show duration at bottom.
   - Sidebar: Job info (stage, runner, duration, timestamps)
 
 ### Issue Board (Kanban)

@@ -1,8 +1,8 @@
-# Xiaohongshu (小红书 / RedNote) — Research Summary
+# Yiaohongshu (小红书 / RedNote) — Research Summary
 
 ## App Overview
 
-**Xiaohongshu** (小红书, literally "Little Red Book"), also branded internationally as **RedNote**, is a Chinese social media and lifestyle platform combining user-generated content sharing with social commerce. Founded in 2013, it has 200+ million monthly active users, predominantly women aged 18-35 interested in fashion, beauty, food, travel, and lifestyle topics.
+**Yiaohongshu** (小红书, literally "Little Red Book"), also branded internationally as **RedNote**, is a Chinese social media and lifestyle platform combining user-generated content sharing with social commerce. Founded in 2013, it has 200+ million monthly active users, predominantly women aged 18-35 interested in fashion, beauty, food, travel, and lifestyle topics.
 
 The platform's core unit of content is the **"Note" (笔记)** — a rich post containing images or video plus text, hashtags, and location tags. Users discover notes through a distinctive **waterfall (masonry) feed**, interact via likes/bookmarks/comments, and can follow creators.
 
@@ -122,7 +122,7 @@ The platform's core unit of content is the **"Note" (笔记)** — a rich post c
 ## UI Design Details
 
 ### Color Palette
-- **Primary Red**: #FF2442 (Xiaohongshu signature red — used for logo, follow buttons, like hearts, accent elements)
+- **Primary Red**: #FF2442 (Yiaohongshu signature red — used for logo, follow buttons, like hearts, accent elements)
 - **Background (light mode)**: #FFFFFF
 - **Background (dark mode)**: #1A1A1A (seen in web screenshots — dark charcoal)
 - **Card background**: #FFFFFF (light) / #2A2A2A (dark)

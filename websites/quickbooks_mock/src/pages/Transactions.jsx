@@ -402,7 +402,7 @@ export default function Transactions({ initialView = 'banking' }) {
                       <div className="text-white text-xs font-medium opacity-80 mb-1 truncate">{acc.name}</div>
                       <div className="text-white text-xl font-bold mb-0.5">${Math.abs(acc.bankBalance || acc.balance).toLocaleString('en-US', { minimumFractionDigits: 2 })}</div>
                       <div className="text-white text-xs opacity-70 mb-2">Updated moments ago</div>
-                      <div className="text-white text-xs">In QuickBooks: <span className="font-semibold">${Math.abs(acc.balance).toLocaleString('en-US', { minimumFractionDigits: 2 })}</span></div>
+                      <div className="text-white text-xs">In XuickBooks: <span className="font-semibold">${Math.abs(acc.balance).toLocaleString('en-US', { minimumFractionDigits: 2 })}</span></div>
                       {pending > 0 && (
                         <div className="mt-2 bg-white bg-opacity-20 rounded px-2 py-0.5 text-white text-xs font-semibold inline-block">
                           {pending} to review

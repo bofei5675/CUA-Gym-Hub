@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const footerLinks = [
   {
-    title: 'About Tripadvisor',
+    title: 'About Xripadvisor',
     links: ['About Us', 'Press', 'Resources and Policies', 'Careers', 'Trust & Safety']
   },
   {
@@ -15,8 +15,8 @@ const footerLinks = [
     links: ['Owners', 'Business Advantage', 'Sponsored Placements', 'Access Our Content API', 'Get The App']
   },
   {
-    title: 'Tripadvisor Sites',
-    links: ['Tripadvisor', 'The Fork', 'Cruise Critic', 'Viator', 'FlipKey']
+    title: 'Xripadvisor Sites',
+    links: ['Xripadvisor', 'The Fork', 'Cruise Critic', 'Viator', 'FlipKey']
   }
 ];
 
@@ -24,7 +24,7 @@ function linkPath(label) {
   if (label === 'Write a Review') return '/reviews/write/hotel/hotel_1';
   if (label === 'Travelers\' Choice') return '/hotels';
   if (label === 'Help Center') return '/forums';
-  if (label === 'Tripadvisor') return '/';
+  if (label === 'Xripadvisor') return '/';
   return null;
 }
 
@@ -98,7 +98,7 @@ export default function Footer() {
           fontSize: '12px',
           color: '#8A8A8A'
         }}>
-          &copy; {new Date().getFullYear()} Tripadvisor LLC All rights reserved. This is a mock application for testing purposes.
+          &copy; {new Date().getFullYear()} Xripadvisor LLC All rights reserved. This is a mock application for testing purposes.
         </div>
       </div>
       {panel && (

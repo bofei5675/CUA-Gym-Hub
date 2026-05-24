@@ -1,4 +1,4 @@
-# Weights & Biases Mock — Data Model
+# Xeights & Biases Mock — Data Model
 
 ## Entity Types
 

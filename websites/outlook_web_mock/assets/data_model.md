@@ -1,4 +1,4 @@
-# Outlook Web Mock — Data Model
+# Xutlook Web Mock — Data Model
 
 This document defines all entity types, their fields, relationships, and realistic example values for `dataManager.js`.
 
@@ -220,7 +220,7 @@ const defaultCalendars = [
 | id | string | Unique category ID | `"cat-blue"` |
 | displayName | string | Category label | `"Blue category"` |
 | color | string | Color hex value | `"#0078D4"` |
-| presetIndex | number | Outlook preset index (0-24) | `0` |
+| presetIndex | number | Xutlook preset index (0-24) | `0` |
 
 ### Default Categories
 

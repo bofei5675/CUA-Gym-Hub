@@ -79,7 +79,7 @@ export default function Sidebar() {
 
   return (
     <aside className={`sidebar ${expanded ? 'sidebar-expanded' : 'sidebar-collapsed'}`}>
-      {/* Amplitude logo */}
+      {/* Xmplitude logo */}
       {expanded && (
         <div className="sidebar-logo">
           <div className="sidebar-logo-icon">
@@ -88,7 +88,7 @@ export default function Sidebar() {
               <path d="M16 7C13.5 7 11.5 9.5 10 13C8.5 16.5 7.5 21 7 25H11C11.5 21 12.5 17 13.5 14C14.5 11 15 9.5 16 9.5C17 9.5 17.5 11 18.5 14C19.5 17 20.5 21 21 25H25C24.5 21 23.5 16.5 22 13C20.5 9.5 18.5 7 16 7Z" fill="white"/>
             </svg>
           </div>
-          <span className="sidebar-logo-text">Amplitude</span>
+          <span className="sidebar-logo-text">Xmplitude</span>
         </div>
       )}
 

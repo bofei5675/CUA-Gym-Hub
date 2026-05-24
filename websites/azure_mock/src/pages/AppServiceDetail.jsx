@@ -26,7 +26,7 @@ export default function AppServiceDetail() {
         <Breadcrumb items={[{ label: 'Home', path: '/' }, { label: 'App Services', path: '/app-services' }, { label: 'Not found' }]} />
         <h1 className="page-title">App Service not found</h1>
         <div className="card" style={{ textAlign: 'center', padding: '32px' }}>
-          <p style={{ color: 'var(--azure-text-secondary)' }}>The requested App Service could not be found.</p>
+          <p style={{ color: 'var(--xzure-text-secondary)' }}>The requested App Service could not be found.</p>
           <button className="btn btn-primary" onClick={() => navigate('/app-services')} style={{ marginTop: '16px' }}>Back to App Services</button>
         </div>
       </div>
@@ -99,7 +99,7 @@ export default function AppServiceDetail() {
       <Breadcrumb items={[{ label: 'Home', path: '/' }, { label: 'App Services', path: '/app-services' }, { label: app.name }]} />
 
       <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-        <Globe size={28} color="var(--azure-blue)" />
+        <Globe size={28} color="var(--xzure-blue)" />
         <div>
           <h1 className="page-title" style={{ marginBottom: '0' }}>{app.name}</h1>
           <div className="caption">App Service</div>
@@ -124,7 +124,7 @@ export default function AppServiceDetail() {
         }}>
           <div className="card" style={{ maxWidth: '480px', width: '100%', padding: '24px' }}>
             <h2 style={{ marginBottom: '12px', fontSize: '18px' }}>Delete App Service</h2>
-            <p style={{ marginBottom: '20px', color: 'var(--azure-text-secondary)' }}>
+            <p style={{ marginBottom: '20px', color: 'var(--xzure-text-secondary)' }}>
               Are you sure you want to delete <strong>{app.name}</strong>? This action cannot be undone.
             </p>
             <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
@@ -143,10 +143,10 @@ export default function AppServiceDetail() {
         }}>
           <div className="card" style={{ maxWidth: '520px', width: '100%', padding: '24px' }}>
             <h2 style={{ marginBottom: '12px', fontSize: '18px' }}>App Service Preview</h2>
-            <p style={{ marginBottom: '12px', color: 'var(--azure-text-secondary)' }}>
+            <p style={{ marginBottom: '12px', color: 'var(--xzure-text-secondary)' }}>
               Local sandbox preview for the app service host name.
             </p>
-            <div style={{ fontFamily: 'monospace', padding: '10px 12px', background: 'var(--azure-bg)', border: '1px solid var(--azure-border)', marginBottom: '20px' }}>
+            <div style={{ fontFamily: 'monospace', padding: '10px 12px', background: 'var(--xzure-bg)', border: '1px solid var(--xzure-border)', marginBottom: '20px' }}>
               https://{app.defaultHostName}
             </div>
             <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
@@ -163,7 +163,7 @@ export default function AppServiceDetail() {
             <div
               key={item.id}
               className={`sidebar-item ${activeTab === item.id ? 'active' : ''}`}
-              style={{ borderLeft: activeTab === item.id ? '3px solid var(--azure-blue)' : '3px solid transparent' }}
+              style={{ borderLeft: activeTab === item.id ? '3px solid var(--xzure-blue)' : '3px solid transparent' }}
               onClick={() => setActiveTab(item.id)}
             >
               {item.label}
@@ -181,13 +181,13 @@ export default function AppServiceDetail() {
                   <div>
                     <div style={{ display: 'grid', gridTemplateColumns: '160px 1fr', gap: '8px 12px' }}>
                       <div className="caption">Resource group</div>
-                      <div><Link to={`/resource-groups/${app.resourceGroup}`} style={{ color: 'var(--azure-blue)', textDecoration: 'none' }}>{app.resourceGroup}</Link></div>
+                      <div><Link to={`/resource-groups/${app.resourceGroup}`} style={{ color: 'var(--xzure-blue)', textDecoration: 'none' }}>{app.resourceGroup}</Link></div>
                       <div className="caption">Status</div>
                       <div><span className="badge badge-success">{app.status}</span></div>
                       <div className="caption">Location</div>
                       <div>{app.location}</div>
                       <div className="caption">Subscription</div>
-                      <div><Link to={`/subscriptions/${sub?.id}`} style={{ color: 'var(--azure-blue)', textDecoration: 'none' }}>{sub?.displayName}</Link></div>
+                      <div><Link to={`/subscriptions/${sub?.id}`} style={{ color: 'var(--xzure-blue)', textDecoration: 'none' }}>{sub?.displayName}</Link></div>
                       <div className="caption">Subscription ID</div>
                       <div style={{ fontSize: '13px' }}>{sub?.subscriptionId}</div>
                       <div className="caption">Tags</div>
@@ -200,7 +200,7 @@ export default function AppServiceDetail() {
                     <div style={{ display: 'grid', gridTemplateColumns: '160px 1fr', gap: '8px 12px' }}>
                       <div className="caption">URL</div>
                       <div>
-                        <a href={`https://${app.defaultHostName}`} onClick={e => e.preventDefault()} style={{ color: 'var(--azure-blue)', textDecoration: 'none' }}>
+                        <a href={`https://${app.defaultHostName}`} onClick={e => e.preventDefault()} style={{ color: 'var(--xzure-blue)', textDecoration: 'none' }}>
                           https://{app.defaultHostName}
                         </a>
                       </div>
@@ -225,7 +225,7 @@ export default function AppServiceDetail() {
             <div>
               <div className="section-header" style={{ marginBottom: '12px' }}>Activity log</div>
               <div className="card" style={{ padding: 0 }}>
-                <table className="azure-table">
+                <table className="xzure-table">
                   <thead>
                     <tr><th>Operation</th><th>Status</th><th>Time</th><th>Initiated by</th></tr>
                   </thead>
@@ -242,7 +242,7 @@ export default function AppServiceDetail() {
                         </tr>
                       ))}
                     {state.activityLog.filter(e => e.resourceName === app.name).length === 0 && (
-                      <tr><td colSpan={4} style={{ textAlign: 'center', padding: '24px', color: 'var(--azure-text-secondary)' }}>No activity log entries</td></tr>
+                      <tr><td colSpan={4} style={{ textAlign: 'center', padding: '24px', color: 'var(--xzure-text-secondary)' }}>No activity log entries</td></tr>
                     )}
                   </tbody>
                 </table>
@@ -256,18 +256,18 @@ export default function AppServiceDetail() {
               <div className="card">
                 <div style={{ marginBottom: '16px' }}>
                   <div style={{ fontWeight: 600, marginBottom: '4px' }}>Source</div>
-                  <div style={{ fontSize: '13px', color: 'var(--azure-text-secondary)', marginBottom: '12px' }}>
+                  <div style={{ fontSize: '13px', color: 'var(--xzure-text-secondary)', marginBottom: '12px' }}>
                     Configure how your app is deployed. Connect a source control repository or use local Git.
                   </div>
                   <select className="input" style={{ width: '300px' }}>
                     <option>GitHub</option>
-                    <option>Azure DevOps</option>
+                    <option>Xzure DevOps</option>
                     <option>Local Git</option>
                     <option>External Git</option>
                     <option>Bitbucket</option>
                   </select>
                 </div>
-                <div style={{ padding: '16px', background: 'var(--azure-bg)', borderRadius: '2px', color: 'var(--azure-text-secondary)', fontSize: '13px' }}>
+                <div style={{ padding: '16px', background: 'var(--xzure-bg)', borderRadius: '2px', color: 'var(--xzure-text-secondary)', fontSize: '13px' }}>
                   No deployment source configured. Select a source above and click Save to configure continuous deployment.
                 </div>
                 <div style={{ marginTop: '16px' }}>
@@ -284,12 +284,12 @@ export default function AppServiceDetail() {
               <div className="card">
                 <div style={{ marginBottom: '16px' }}>
                   <div style={{ fontWeight: 600, marginBottom: '8px' }}>Application settings</div>
-                  <div style={{ color: 'var(--azure-text-secondary)', fontSize: '13px' }}>
+                  <div style={{ color: 'var(--xzure-text-secondary)', fontSize: '13px' }}>
                     Application settings are exposed as environment variables to your application.
                   </div>
                 </div>
                 <div className="card" style={{ padding: 0 }}>
-                  <table className="azure-table">
+                  <table className="xzure-table">
                     <thead><tr><th>Name</th><th>Value</th><th>Source</th></tr></thead>
                     <tbody>
                       <tr><td>WEBSITE_NODE_DEFAULT_VERSION</td><td>~18</td><td>App Setting</td></tr>

@@ -75,7 +75,7 @@ export default function AnalyticsRevenue() {
   return (
     <div>
       <div className="wc-breadcrumb">
-        <a>WooCommerce</a><span>/</span><a>Analytics</a><span>/</span>Revenue
+        <a>XooCommerce</a><span>/</span><a>Analytics</a><span>/</span>Revenue
       </div>
 
       <div className="wp-page-title"><h1>Revenue</h1></div>

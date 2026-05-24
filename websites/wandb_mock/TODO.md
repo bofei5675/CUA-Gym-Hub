@@ -1,4 +1,4 @@
-# Weights & Biases Mock — TODO
+# Xeights & Biases Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-03-08

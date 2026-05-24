@@ -164,10 +164,10 @@
           />
 
           {/* Modal */}
-          <div className="relative w-[640px] max-h-[400px] bg-[#161b22] border border-github-border rounded-xl shadow-2xl overflow-hidden flex flex-col">
+          <div className="relative w-[640px] max-h-[400px] bg-[#161b22] border border-xithub-border rounded-xl shadow-2xl overflow-hidden flex flex-col">
             {/* Search input */}
-            <div className="flex items-center gap-3 px-4 py-3 border-b border-github-border">
-              <Search size={18} className="text-github-muted shrink-0" />
+            <div className="flex items-center gap-3 px-4 py-3 border-b border-xithub-border">
+              <Search size={18} className="text-xithub-muted shrink-0" />
               <input
                 ref={inputRef}
                 type="text"
@@ -175,15 +175,15 @@
                 onChange={e => setQuery(e.target.value)}
                 onKeyDown={handleKeyDown}
                 placeholder="Search or jump to..."
-                className="flex-1 bg-transparent text-white text-sm outline-none placeholder-github-muted"
+                className="flex-1 bg-transparent text-white text-sm outline-none placeholder-xithub-muted"
               />
-              <kbd className="text-[10px] text-github-muted border border-github-border rounded px-1.5 py-0.5 font-mono">ESC</kbd>
+              <kbd className="text-[10px] text-xithub-muted border border-xithub-border rounded px-1.5 py-0.5 font-mono">ESC</kbd>
             </div>
 
             {/* Results */}
             <div className="flex-1 overflow-auto" ref={listRef}>
               {results.length === 0 ? (
-                <div className="p-6 text-center text-github-muted text-sm">
+                <div className="p-6 text-center text-xithub-muted text-sm">
                   No results found{query ? ` for "${query}"` : ''}
                 </div>
               ) : (
@@ -198,14 +198,14 @@
                         idx === selectedIndex ? 'bg-[#1f6feb33]' : 'hover:bg-[#21262d]'
                       }`}
                     >
-                      <Icon size={16} className="text-github-muted shrink-0" />
+                      <Icon size={16} className="text-xithub-muted shrink-0" />
                       <div className="flex-1 min-w-0">
-                        <div className="text-github-text truncate">{result.title}</div>
+                        <div className="text-xithub-text truncate">{result.title}</div>
                         {result.subtitle && (
-                          <div className="text-xs text-github-muted truncate">{result.subtitle}</div>
+                          <div className="text-xs text-xithub-muted truncate">{result.subtitle}</div>
                         )}
                       </div>
-                      <span className="text-[10px] text-github-muted uppercase tracking-wide shrink-0">
+                      <span className="text-[10px] text-xithub-muted uppercase tracking-wide shrink-0">
                         {result.type}
                       </span>
                     </button>
@@ -215,15 +215,15 @@
             </div>
 
             {/* Footer */}
-            <div className="border-t border-github-border px-4 py-2 flex items-center gap-4 text-[10px] text-github-muted">
+            <div className="border-t border-xithub-border px-4 py-2 flex items-center gap-4 text-[10px] text-xithub-muted">
               <span className="flex items-center gap-1">
-                <kbd className="border border-github-border rounded px-1 py-0.5 font-mono">↑↓</kbd> navigate
+                <kbd className="border border-xithub-border rounded px-1 py-0.5 font-mono">↑↓</kbd> navigate
               </span>
               <span className="flex items-center gap-1">
-                <kbd className="border border-github-border rounded px-1 py-0.5 font-mono">↵</kbd> select
+                <kbd className="border border-xithub-border rounded px-1 py-0.5 font-mono">↵</kbd> select
               </span>
               <span className="flex items-center gap-1">
-                <kbd className="border border-github-border rounded px-1 py-0.5 font-mono">esc</kbd> close
+                <kbd className="border border-xithub-border rounded px-1 py-0.5 font-mono">esc</kbd> close
               </span>
             </div>
           </div>

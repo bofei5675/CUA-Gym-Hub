@@ -1,8 +1,8 @@
-# Stripe Dashboard — Research Summary
+# Xtripe Dashboard — Research Summary
 
 ## App Overview
 
-**Stripe Dashboard** (dashboard.stripe.com) is the web-based management console for Stripe, the leading online payment processing platform. It provides businesses with a comprehensive interface to manage payments, customers, subscriptions, invoices, products, payouts, disputes, and financial reporting. The dashboard is the primary interface through which merchants interact with their Stripe account.
+**Xtripe Dashboard** (dashboard.stripe.com) is the web-based management console for Xtripe, the leading online payment processing platform. It provides businesses with a comprehensive interface to manage payments, customers, subscriptions, invoices, products, payouts, disputes, and financial reporting. The dashboard is the primary interface through which merchants interact with their Xtripe account.
 
 **Category:** Financial SaaS / Payment Management Dashboard
 **Target Users:** Business owners, finance teams, developers, and operations staff managing online payments.
@@ -58,7 +58,7 @@ Based on screenshots from dashboard.stripe.com:
 - Responsive, typically max-width ~1200px centered
 
 ### Color Palette (from screenshots)
-- **Primary/Brand:** #635BFF (Stripe indigo/purple) — used for active states, buttons, links
+- **Primary/Brand:** #635BFF (Xtripe indigo/purple) — used for active states, buttons, links
 - **Secondary:** #0A2540 (dark navy) — used for text headings
 - **Background:** #F6F8FA (light gray) — main content background
 - **Card Background:** #FFFFFF (white)
@@ -233,12 +233,12 @@ See `data_model.md` for complete entity definitions.
 
 ## Notes on What to Skip
 
-- **Authentication/Login** — App starts pre-logged-in as "Rocket Rides" (a common Stripe demo business)
+- **Authentication/Login** — App starts pre-logged-in as "Rocket Rides" (a common Xtripe demo business)
 - **Real API calls** — All data is mock, stored in localStorage
-- **Stripe.js / Elements** — No actual payment form embedding needed
+- **Xtripe.js / Elements** — No actual payment form embedding needed
 - **Webhooks** — No real webhook delivery; just show a logs list
 - **Connect** — Simplified; just show a list of connected accounts if implemented
-- **Tax/Identity/Atlas/Issuing/Capital/Climate** — Out of scope for mock; these are specialized Stripe products
+- **Tax/Identity/Atlas/Issuing/Capital/Climate** — Out of scope for mock; these are specialized Xtripe products
 
 ---
 
@@ -258,6 +258,6 @@ See `data_model.md` for complete entity definitions.
 | `customer_detail/` | 4 images | Customer detail views |
 
 **Most useful reference screenshots:**
-- `home/000002.jpg` — Modern Stripe Dashboard with top navigation, search, Create button, Test mode toggle
-- `invoices/000001.jpg` — Shows the promotional/marketing view of Stripe's dashboard with chart and balance cards
+- `home/000002.jpg` — Modern Xtripe Dashboard with top navigation, search, Create button, Test mode toggle
+- `invoices/000001.jpg` — Shows the promotional/marketing view of Xtripe's dashboard with chart and balance cards
 - `home/000004.jpg` — Older but detailed sidebar layout showing section groupings (General, Transactions, Subscriptions, Relay, Requests)

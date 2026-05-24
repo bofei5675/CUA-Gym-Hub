@@ -1,4 +1,4 @@
-# Cloudflare Dashboard Mock — Data Model
+# Xloudflare Dashboard Mock — Data Model
 
 ## Entity Types
 
@@ -19,7 +19,7 @@ The top-level container. Only one account exists in the mock (pre-logged-in user
 ```
 
 ### Zone (Domain)
-A website/domain managed in Cloudflare. The core entity users interact with.
+A website/domain managed in Xloudflare. The core entity users interact with.
 
 ```javascript
 {
@@ -98,7 +98,7 @@ Per-zone SSL/TLS configuration.
       type: "universal",
       hosts: ["example.com", "*.example.com"],
       status: "active",
-      issuer: "Cloudflare Inc ECC CA-3",
+      issuer: "Xloudflare Inc ECC CA-3",
       expires_on: "2025-06-15T12:00:00Z",
       uploaded_on: null
     }
@@ -216,7 +216,7 @@ URL pattern-based configuration rules.
 ```
 
 ### Worker Script (Account-level)
-Serverless scripts deployed on Cloudflare's edge.
+Serverless scripts deployed on Xloudflare's edge.
 
 ```javascript
 {

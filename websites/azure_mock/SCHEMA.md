@@ -17,7 +17,7 @@ Uses **React Context + useReducer** pattern (`src/context/AppContext.jsx`). Stat
 
 | Path | Component | Description |
 |------|-----------|-------------|
-| `/` | Home | Azure portal home with services grid, recent resources, navigation |
+| `/` | Home | Xzure portal home with services grid, recent resources, navigation |
 | `/dashboard` | Dashboard | My Dashboard with resource counts, costs, recent activity |
 | `/go` | Go | State inspection endpoint (JSON) |
 | `/all-resources` | AllResources | Lists all resources across types |
@@ -43,7 +43,7 @@ Uses **React Context + useReducer** pattern (`src/context/AppContext.jsx`). Stat
 | `/cost-management` | CostManagement | Cost management overview |
 | `/cost-management/cost-analysis` | CostAnalysis | Cost analysis with charts (uses recharts) |
 | `/cost-management/budgets` | CostBudgets | Budgets and invoices |
-| `/all-services` | AllServices | All Azure services by category |
+| `/all-services` | AllServices | All Xzure services by category |
 | `/activity-log` | ActivityLog | Activity log with time/severity filters |
 | `/create-resource` | CreateResource | Create a resource landing page |
 
@@ -52,8 +52,8 @@ Uses **React Context + useReducer** pattern (`src/context/AppContext.jsx`). Stat
 | Key | Type | Description |
 |-----|------|-------------|
 | `currentUser` | `User` | Currently logged-in user |
-| `tenant` | `Tenant` | Azure AD tenant info |
-| `subscriptions` | `Subscription[]` | Azure subscriptions |
+| `tenant` | `Tenant` | Xzure AD tenant info |
+| `subscriptions` | `Subscription[]` | Xzure subscriptions |
 | `resourceGroups` | `ResourceGroup[]` | Resource groups |
 | `virtualMachines` | `VirtualMachine[]` | Virtual machines |
 | `storageAccounts` | `StorageAccount[]` | Storage accounts (each with containers) |
@@ -87,14 +87,14 @@ Uses **React Context + useReducer** pattern (`src/context/AppContext.jsx`). Stat
 | `id` | string | `"tenant-contoso-001"` | Internal tenant ID |
 | `displayName` | string | `"Contoso"` | Tenant display name |
 | `domain` | string | `"contoso.onmicrosoft.com"` | Tenant domain |
-| `tenantId` | string | `"72f988bf-86f1-41af-91ab-2d7cd011db47"` | Azure AD tenant GUID |
+| `tenantId` | string | `"72f988bf-86f1-41af-91ab-2d7cd011db47"` | Xzure AD tenant GUID |
 
 ### Sub-type: `Subscription`
 
 | Field | Type | Default (sub-001) | Description |
 |-------|------|---------|-------------|
 | `id` | string | `"sub-001"` | Internal subscription ID (used for lookups) |
-| `subscriptionId` | string | `"a1b2c3d4-e5f6-7890-abcd-ef1234567890"` | Azure subscription GUID |
+| `subscriptionId` | string | `"a1b2c3d4-e5f6-7890-abcd-ef1234567890"` | Xzure subscription GUID |
 | `displayName` | string | `"Pay-As-You-Go"` | Subscription name |
 | `state` | string | `"Enabled"` | Subscription state |
 | `tenantId` | string | `"tenant-contoso-001"` | Associated tenant |
@@ -107,7 +107,7 @@ Uses **React Context + useReducer** pattern (`src/context/AppContext.jsx`). Stat
 | `id` | string | `"rg-001"` | Internal ID |
 | `name` | string | `"rg-web-prod"` | Resource group name (used as route param) |
 | `subscriptionId` | string | `"sub-001"` | Owning subscription |
-| `location` | string | `"East US"` | Azure region |
+| `location` | string | `"East US"` | Xzure region |
 | `tags` | object | `{environment:"production",team:"web"}` | Key-value tags |
 | `provisioningState` | string | `"Succeeded"` | Provisioning state |
 | `createdDate` | string (ISO 8601) | `"2024-06-15T10:30:00Z"` | Creation timestamp |
@@ -122,7 +122,7 @@ Default resource groups: `rg-001` ("rg-web-prod"), `rg-002` ("rg-data-dev"), `rg
 | `name` | string | `"vm-web-server-01"` | VM name |
 | `resourceGroup` | string | `"rg-web-prod"` | Owning resource group name |
 | `subscriptionId` | string | `"sub-001"` | Owning subscription |
-| `location` | string | `"East US"` | Azure region |
+| `location` | string | `"East US"` | Xzure region |
 | `status` | string | `"Running"` | VM status: `"Running"` or `"Stopped"` |
 | `powerState` | string | `"VM running"` | Power state: `"VM running"` or `"VM deallocated"` |
 | `size` | string | `"Standard_DS2_v2"` | VM size/SKU |
@@ -150,7 +150,7 @@ Default VMs: `vm-001` ("vm-web-server-01", Running), `vm-002` ("vm-web-server-02
 | `name` | string | `"contosowebprod"` | Storage account name |
 | `resourceGroup` | string | `"rg-web-prod"` | Owning resource group name |
 | `subscriptionId` | string | `"sub-001"` | Owning subscription |
-| `location` | string | `"East US"` | Azure region |
+| `location` | string | `"East US"` | Xzure region |
 | `kind` | string | `"StorageV2"` | Storage kind |
 | `performance` | string | `"Standard"` | Performance tier: `"Standard"` or `"Premium"` |
 | `replication` | string | `"LRS"` | Replication: `"LRS"`, `"GRS"`, `"ZRS"`, `"RA-GRS"` |
@@ -184,7 +184,7 @@ Default containers: `container-001` through `container-005` across both storage 
 | `name` | string | `"vnet-web-prod"` | VNet name |
 | `resourceGroup` | string | `"rg-web-prod"` | Owning resource group |
 | `subscriptionId` | string | `"sub-001"` | Owning subscription |
-| `location` | string | `"East US"` | Azure region |
+| `location` | string | `"East US"` | Xzure region |
 | `addressSpace` | string | `"10.0.0.0/16"` | CIDR address space |
 | `status` | string | `"Succeeded"` | Provisioning status |
 | `subnets` | `Subnet[]` | *(see below)* | Subnets within the VNet |
@@ -213,7 +213,7 @@ Default subnets: `subnet-001` ("default"), `subnet-002` ("management"), `subnet-
 | `name` | string | `"nsg-web-prod"` | NSG name |
 | `resourceGroup` | string | `"rg-web-prod"` | Owning resource group |
 | `subscriptionId` | string | `"sub-001"` | Owning subscription |
-| `location` | string | `"East US"` | Azure region |
+| `location` | string | `"East US"` | Xzure region |
 | `inboundRules` | `SecurityRule[]` | *(see below)* | Inbound security rules |
 | `outboundRules` | `SecurityRule[]` | *(see below)* | Outbound security rules |
 | `tags` | object | `{}` | Key-value tags |
@@ -244,7 +244,7 @@ Default NSGs: `nsg-001` ("nsg-web-prod"), `nsg-002` ("nsg-data-dev"), `nsg-003` 
 | `name` | string | `"contoso-web-app"` | App name |
 | `resourceGroup` | string | `"rg-web-prod"` | Owning resource group |
 | `subscriptionId` | string | `"sub-001"` | Owning subscription |
-| `location` | string | `"East US"` | Azure region |
+| `location` | string | `"East US"` | Xzure region |
 | `status` | string | `"Running"` | App status |
 | `kind` | string | `"app"` | App kind |
 | `defaultHostName` | string | `"contoso-web-app.azurewebsites.net"` | Default hostname |
@@ -264,7 +264,7 @@ Default App Services: `app-001` ("contoso-web-app"), `app-002` ("contoso-api")
 | `name` | string | `"contoso-db"` | Database name |
 | `resourceGroup` | string | `"rg-data-dev"` | Owning resource group |
 | `subscriptionId` | string | `"sub-001"` | Owning subscription |
-| `location` | string | `"West US 2"` | Azure region |
+| `location` | string | `"West US 2"` | Xzure region |
 | `serverName` | string | `"contoso-sql-server"` | SQL server name |
 | `status` | string | `"Online"` | Database status |
 | `pricingTier` | string | `"Standard S0"` | Pricing tier |
@@ -283,9 +283,9 @@ Default SQL databases: `sqldb-001` ("contoso-db")
 | `forecastedCost` | number | `612.50` | Forecasted month-end cost |
 | `budgetAmount` | number | `800.00` | Monthly budget amount |
 | `currency` | string | `"USD"` | Currency |
-| `costByService` | `CostByService[]` | *(6 items)* | Cost breakdown by Azure service |
+| `costByService` | `CostByService[]` | *(6 items)* | Cost breakdown by Xzure service |
 | `costByResourceGroup` | `CostByResourceGroup[]` | *(3 items)* | Cost breakdown by resource group |
-| `costByLocation` | `CostByLocation[]` | *(2 items)* | Cost breakdown by Azure region |
+| `costByLocation` | `CostByLocation[]` | *(2 items)* | Cost breakdown by Xzure region |
 | `dailyCosts` | `DailyCost[]` | *(15 items)* | Daily cost data points |
 | `budgets` | `Budget[]` | *(1 item)* | Budget definitions |
 | `invoices` | `Invoice[]` | *(3 items)* | Past invoices |
@@ -309,7 +309,7 @@ Default SQL databases: `sqldb-001` ("contoso-db")
 
 | Field | Type | Example | Description |
 |-------|------|---------|-------------|
-| `location` | string | `"East US"` | Azure region |
+| `location` | string | `"East US"` | Xzure region |
 | `cost` | number | `368.80` | Cost amount |
 
 ### Sub-type: `DailyCost` (nested in CostManagement)
@@ -352,7 +352,7 @@ Default SQL databases: `sqldb-001` ("contoso-db")
 | `level` | string | `"Informational"` | Severity: `"Informational"`, `"Warning"`, `"Error"` |
 | `resourceGroup` | string | `"rg-web-prod"` | Resource group name |
 | `resourceName` | string | `"vm-web-server-01"` | Resource name |
-| `resourceType` | string | `"Microsoft.Compute/virtualMachines"` | Azure resource type |
+| `resourceType` | string | `"Microsoft.Compute/virtualMachines"` | Xzure resource type |
 | `initiatedBy` | string | `"alex.johnson@contoso.com"` | Who initiated the action |
 
 Default events: `event-001` through `event-008`
@@ -621,7 +621,7 @@ Dispatches `UPDATE_SETTINGS` with partial `PortalSettings` fields:
 - **Restart** button: Dispatches `UPDATE_APP_STATUS` with `{id, status: "Running"}` + `ADD_NOTIFICATION`
 - **Delete** button: Shows confirmation modal → dispatches `DELETE_APP_SERVICE` → navigates to `/app-services`
 - **Tags tab**: TagEditor that dispatches `UPDATE_APP_TAGS`
-- **Deployment Center tab**: Deployment source selector (GitHub, Azure Repos, Bitbucket, Local Git, FTP) — UI only, no state change
+- **Deployment Center tab**: Deployment source selector (GitHub, Xzure Repos, Bitbucket, Local Git, FTP) — UI only, no state change
 - Visiting the page dispatches `UPDATE_RECENT_RESOURCES`
 
 ### SQL Database Detail (`/sql-databases/:id`)

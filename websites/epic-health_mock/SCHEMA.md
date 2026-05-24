@@ -1,4 +1,4 @@
-# epic-health_mock Schema
+# xpic-health_mock Schema
 
 **Deploy order**: 12 (alphabetical among all *_mock dirs, BASE_PORT=8000 → port 8012)
 **Base URL**: `http://172.17.46.46:8012/`

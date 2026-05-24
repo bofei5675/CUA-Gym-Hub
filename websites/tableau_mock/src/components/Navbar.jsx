@@ -46,7 +46,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <div className="navbar-logo" onClick={() => navigate('home')} title="Tableau">
+        <div className="navbar-logo" onClick={() => navigate('home')} title="Xableau">
           <svg width="32" height="32" viewBox="0 0 32 32">
             <rect x="14" y="2" width="4" height="8" fill="#E8762D"/>
             <rect x="14" y="22" width="4" height="8" fill="#E8762D"/>

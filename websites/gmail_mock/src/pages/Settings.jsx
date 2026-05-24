@@ -457,7 +457,7 @@ const SettingsPage = () => {
                   <div className="flex items-center justify-between py-3 border-b border-gray-100">
                     <div>
                       <p className="text-sm font-medium text-gray-800">Language</p>
-                      <p className="text-xs text-gray-500">Display language for Gmail</p>
+                      <p className="text-xs text-gray-500">Display language for Xmail</p>
                     </div>
                     <select
                       value={language}

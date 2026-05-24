@@ -171,7 +171,7 @@ export default function PropertyCard({ property, horizontal = false }) {
         {!horizontal && (
            <div className="mt-3 pt-3 border-t border-gray-100 flex justify-between items-center">
              <span className="text-[11px] text-gray-400 font-medium">
-               {property.daysOnZillow === 0 ? 'Just listed' : `${property.daysOnZillow}d on Zillow`}
+               {property.daysOnZillow === 0 ? 'Just listed' : `${property.daysOnZillow}d on Xillow`}
              </span>
              {agentName && <span className="text-[11px] text-gray-400">Listed by {agentName}</span>}
            </div>

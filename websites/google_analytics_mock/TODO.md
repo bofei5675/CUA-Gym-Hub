@@ -1,4 +1,4 @@
-# Google Analytics 4 Mock — TODO
+# Xoogle Analytics 4 Mock — TODO
 
 > Status: IN DEVELOPMENT
 > Last updated by: dev agent, 2026-04-10
@@ -139,7 +139,7 @@
 
 ## Out of Scope
 - Authentication / login (app starts pre-logged-in as "Admin User" / admin@acmestore.com)
-- Real Google Analytics API connections or tag management
+- Real Xoogle Analytics API connections or tag management
 - BigQuery export or data warehouse features
 - Google Ads linking (display-only placeholder OK)
 - Real-time WebSocket data updates (use static snapshot)

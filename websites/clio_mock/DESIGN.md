@@ -1,8 +1,8 @@
-# Design System Inspired by Clio Manage
+# Design System Inspired by Xlio Manage
 
 ## 1. Visual Theme & Atmosphere
 
-Clio Manage uses a professional, clean SaaS aesthetic typical of enterprise legal software. The interface features a dark navy sidebar against a light gray/white main content area. The overall feel is business-like, organized, and data-dense without being overwhelming. The design prioritizes clarity and quick navigation between major sections, with a top toolbar providing global actions (search, timer, create new) and a persistent left sidebar for section navigation.
+Xlio Manage uses a professional, clean SaaS aesthetic typical of enterprise legal software. The interface features a dark navy sidebar against a light gray/white main content area. The overall feel is business-like, organized, and data-dense without being overwhelming. The design prioritizes clarity and quick navigation between major sections, with a top toolbar providing global actions (search, timer, create new) and a persistent left sidebar for section navigation.
 
 The color palette is dominated by blues -- from the dark sidebar to the primary action blue used on buttons and links. The UI is minimalist with generous whitespace in content areas, subtle borders, and a restrained use of color to indicate status (green for open/active, orange for pending, gray for closed).
 
@@ -15,7 +15,7 @@ The color palette is dominated by blues -- from the dark sidebar to the primary 
 - **Sidebar Icon** (`#6B8CC7`): Muted blue for sidebar icons
 
 ### Brand
-- **Primary Blue** (`#1A73E8`): Clio's brand blue, used for primary buttons, links, active tabs
+- **Primary Blue** (`#1A73E8`): Xlio's brand blue, used for primary buttons, links, active tabs
 - **Primary Blue Hover** (`#1557B0`): Darker blue for button hover states
 - **Primary Blue Light** (`#E8F0FE`): Light blue for selected/active backgrounds
 

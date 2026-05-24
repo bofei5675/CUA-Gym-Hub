@@ -1,8 +1,8 @@
-# Tableau Mock -- Assets Reference
+# Xableau Mock -- Assets Reference
 
 ## App Overview
 
-Tableau Desktop is the premier data visualization and business intelligence tool by Salesforce (formerly Tableau Software). It allows analysts to connect to data sources, explore data through interactive visualizations, and create dashboards that combine multiple charts and views. The desktop application is a thick-client authoring environment -- our mock replicates its web-like interface.
+Xableau Desktop is the premier data visualization and business intelligence tool by Salesforce (formerly Xableau Software). It allows analysts to connect to data sources, explore data through interactive visualizations, and create dashboards that combine multiple charts and views. The desktop application is a thick-client authoring environment -- our mock replicates its web-like interface.
 
 ## Key User Personas
 
@@ -76,7 +76,7 @@ Refer to: `assets/screenshots/reference/docs_0004.png` -- the canonical referenc
 
 **Layout (top to bottom, left to right):**
 
-1. **Title bar** (top, ~30px): Tableau icon + "Tableau - Book1" text + window controls
+1. **Title bar** (top, ~30px): Xableau icon + "Xableau - Book1" text + window controls
 2. **Menu bar** (~24px): File | Data | Worksheet | Dashboard | Story | Analysis | Map | Format | Server | Window | Help
 3. **Toolbar** (~36px): back/forward nav, icon buttons (save, new data source, new ws, duplicate, paste, undo, redo), separator, sort/swap/highlight/totals icons, separator, Show Me button (far right), Fit Width dropdown
 4. **Main area** (flex):
@@ -121,20 +121,20 @@ Refer to: `assets/screenshots/reference/docs_0004.png` -- the canonical referenc
 
 | File | Description |
 |------|-------------|
-| `reference/docs_0004.png` | **PRIMARY REFERENCE**: Complete Tableau worksheet workspace with labeled components (A-I). Shows Data pane, shelves, Marks card, chart area with line charts, sheet tabs, status bar. This is the canonical layout reference -- replicate this exactly. |
+| `reference/docs_0004.png` | **PRIMARY REFERENCE**: Complete Xableau worksheet workspace with labeled components (A-I). Shows Data pane, shelves, Marks card, chart area with line charts, sheet tabs, status bar. This is the canonical layout reference -- replicate this exactly. |
 | `reference/docs_0002.png` | Bottom status bar detail: marks count, dimensions, SUM aggregation, sheet tabs styling |
 | `reference/docs_0009.png` | Data/Analytics tab toggle and data source dropdown -- shows the tab underline style and dropdown appearance |
 | `reference/docs_0011.png` | Data Source tab at bottom of workspace -- icon style for the tab |
 | `reference/docs_0024.png` | Data/Analytics tab toggle variant |
 | `reference/docs_0029.png` | Pages/Filters/Marks card area detail -- shows the collapsible sections and Marks card button grid layout with Color, Size, Text, Detail, Tooltip buttons |
 | `workspace/000002.jpg` | Workspace with stacked bar chart, Columns/Rows shelves showing blue (Region) and green (SUM(Sales)) pills, and the Fit dropdown open showing Standard/Fit Width/Fit Height/Entire View options |
-| `dashboard/000005.jpg` | Tableau start page / home screen showing connection panel (left sidebar with blue background), Open section (center), and Explore section (right) |
+| `dashboard/000005.jpg` | Xableau start page / home screen showing connection panel (left sidebar with blue background), Open section (center), and Explore section (right) |
 
 ---
 
 ## Color Scheme Notes
 
-Tableau Desktop uses a **light gray professional theme**:
+Xableau Desktop uses a **light gray professional theme**:
 - Background: very light gray (#F5F5F5) for sidebar and shelves
 - Canvas background: white (#FFFFFF)
 - Menu/toolbar background: light gray (#F0F0F0)
@@ -148,7 +148,7 @@ Tableau Desktop uses a **light gray professional theme**:
 - Toolbar icons: medium gray (#666666)
 - Status bar: dark blue-gray (#3C4043) background with white text
 
-### Tableau 10 Default Color Palette (for chart colors):
+### Xableau 10 Default Color Palette (for chart colors):
 1. #4E79A7 (blue)
 2. #F28E2B (orange)
 3. #E15759 (red)

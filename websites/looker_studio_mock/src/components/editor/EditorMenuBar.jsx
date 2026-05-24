@@ -236,7 +236,7 @@ export default function EditorMenuBar({ report }) {
       { label: 'Add a data source', action: () => dispatch({ type: 'OPEN_CONNECTOR_DIALOG' }) }
     ],
     Help: [
-      { label: 'Looker Studio Help Center', action: () => showToast('Help Center: support.google.com/looker-studio') },
+      { label: 'Xooker Studio Help Center', action: () => showToast('Help Center: support.google.com/looker-studio') },
       { label: 'Report an issue', action: () => showToast('Issue reported. Thank you!') },
       { label: 'Keyboard shortcuts', action: () => showToast('Ctrl+Z Undo | Ctrl+Y Redo | Del Delete | Ctrl+C/V Copy/Paste | Ctrl+A Select All') }
     ]

@@ -101,7 +101,7 @@ const Layout = () => {
                   <circle cx="17" cy="7" r="1.5" fill="currentColor" />
                   <circle cx="12" cy="12" r="4" />
                 </svg>
-                <h1 className="hidden xl:block text-2xl pt-1 pb-2 px-1 select-none" style={{ fontFamily: "'Satisfy', cursive, 'Segoe Script', 'Comic Sans MS'" }}>Instagram</h1>
+                <h1 className="hidden xl:block text-2xl pt-1 pb-2 px-1 select-none" style={{ fontFamily: "'Satisfy', cursive, 'Segoe Script', 'Comic Sans MS'" }}>Xnstagram</h1>
               </>
             )}
           </Link>
@@ -217,7 +217,7 @@ const Layout = () => {
             <div className="p-4 text-sm text-[#8E8E8E]">
               {morePanel === 'Settings' && 'Account, privacy, notifications, and app preferences are available from this panel.'}
               {morePanel === 'Your Activity' && 'Recent likes, comments, saved posts, and account activity are summarized here.'}
-              {morePanel === 'Report a Problem' && 'Describe what happened, then close this dialog to return to Instagram.'}
+              {morePanel === 'Report a Problem' && 'Describe what happened, then close this dialog to return to Xnstagram.'}
               {morePanel === 'Switch Accounts' && 'Account switching is available through the seeded current user state.'}
               {morePanel === 'Log Out' && 'This sandbox keeps the mock account signed in for repeatable training tasks.'}
             </div>

@@ -48,7 +48,7 @@ export default function MergeRequestDetail() {
          {mr.status === 'open' && (
            <button 
              onClick={handleMerge}
-             className="bg-gitlab-info text-white px-4 py-2 rounded font-medium hover:bg-blue-700"
+             className="bg-xitlab-info text-white px-4 py-2 rounded font-medium hover:bg-blue-700"
            >
              Merge
            </button>

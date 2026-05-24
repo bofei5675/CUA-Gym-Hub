@@ -1,4 +1,4 @@
-# GitHub Mock — TODO
+# XitHub Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-02-28
@@ -16,7 +16,7 @@
 <!-- NOTE: Most P0 items are already implemented. Items marked [x] need no changes. -->
 
 - [x] Project scaffold: Vite + React with Tailwind CSS, all deps installed
-- [x] **Visual design system**: GitHub dark theme via Tailwind config — primary `#0d1117` bg, `#161b22` card, `#30363d` border, `#c9d1d9` text, `#8b949e` muted, `#58a6ff` accent, `#238636` success, `#da3633` danger, `#010409` header. Font: `-apple-system, BlinkMacSystemFont, "Segoe UI"...`. Study `assets/screenshots/000002.jpg` for the real GitHub repo page layout.
+- [x] **Visual design system**: XitHub dark theme via Tailwind config — primary `#0d1117` bg, `#161b22` card, `#30363d` border, `#c9d1d9` text, `#8b949e` muted, `#58a6ff` accent, `#238636` success, `#da3633` danger, `#010409` header. Font: `-apple-system, BlinkMacSystemFont, "Segoe UI"...`. Study `assets/screenshots/000002.jpg` for the real XitHub repo page layout.
 - [x] App layout: Sticky header (~60px) + full-width main content area. No persistent sidebar (sidebar is per-page).
 - [x] Routing: `main.jsx` with `createBrowserRouter` — `/` (Dashboard), `/:username/:repoName` (RepoLayout with nested routes for code/issues/pulls/actions/projects/wiki/security/settings), `/go` (GoDebug)
 - [x] State management: React Context + useReducer in `src/lib/store.jsx`, data in `src/lib/mockData.js` with `INITIAL_STATE`, session-aware storage, array normalizers
@@ -32,9 +32,9 @@
 - [x] **Upgrade issue/PR data**: Add `reactions` object to issues and comments (see data_model.md §Issue). Add `milestone` field to issues and PRs. Add `checks` array to PRs. Add `isDraft` boolean to PRs. Add `additions`/`deletions` to commits.
 
 ## P1 — Primary Features (Enhancements to Existing)
-<!-- These improve already-working features to match real GitHub more closely -->
+<!-- These improve already-working features to match real XitHub more closely -->
 
-- [x] **Repository About sidebar on Code tab**: On the CodeBrowser page, add a right sidebar (280px) showing: repo description (editable pencil icon), homepage link (clickable), topics as clickable pill badges (blue bg), "Releases" link, "Packages" link, license name with icon. Below that: a "Languages" section with a colored percentage bar (each language gets a colored segment proportional to its %) and a legend showing language name + percentage. Below that: star/fork/watcher counts with icons. The sidebar only appears on the code tab root (not in file view). See `assets/screenshots/000002.jpg` for reference — the real GitHub page shows this to the right of the file tree.
+- [x] **Repository About sidebar on Code tab**: On the CodeBrowser page, add a right sidebar (280px) showing: repo description (editable pencil icon), homepage link (clickable), topics as clickable pill badges (blue bg), "Releases" link, "Packages" link, license name with icon. Below that: a "Languages" section with a colored percentage bar (each language gets a colored segment proportional to its %) and a legend showing language name + percentage. Below that: star/fork/watcher counts with icons. The sidebar only appears on the code tab root (not in file view). See `assets/screenshots/000002.jpg` for reference — the real XitHub page shows this to the right of the file tree.
 
 - [x] **Colored label badges**: Currently labels render as generic blue pills. Use the new `labels` entity in state to look up each label's `color` hex value. Render labels as rounded pills with the label's color as background (at 20% opacity) and the label color as text/border. Apply this everywhere labels appear: issue list, issue detail, PR list, PR detail, new issue form. If label not found in `labels` entity, fall back to default blue.
 
@@ -42,7 +42,7 @@
 
 - [x] **New Repository creation form**: When clicking "New repository" in the header "+" dropdown, navigate to a `/new` route. The form should have: Repository name input (validates uniqueness against existing repos), Description textarea, Public/Private radio buttons, "Initialize with README" checkbox, "Add .gitignore" dropdown (None, Node, Python, Java), "Choose a license" dropdown (None, MIT, Apache 2.0, GPL 3.0). On submit, dispatch `CREATE_REPO` which creates the repo + default branch + initial files (README.md if checked, .gitignore if selected, LICENSE if selected) and navigates to the new repo page.
 
-- [x] **Issue reactions**: Below each issue description and each comment, show a row of emoji reaction buttons: 👍 👎 ❤️ 🚀 👀. Show count next to each emoji that has > 0 reactions. Clicking an emoji toggles the current user's reaction (dispatch `ADD_REACTION` or `REMOVE_REACTION`). Show a "+" button that reveals the reaction picker. Style: small rounded pills with emoji + count, gray border, slight bg on hover. Match GitHub's reaction bar style.
+- [x] **Issue reactions**: Below each issue description and each comment, show a row of emoji reaction buttons: 👍 👎 ❤️ 🚀 👀. Show count next to each emoji that has > 0 reactions. Clicking an emoji toggles the current user's reaction (dispatch `ADD_REACTION` or `REMOVE_REACTION`). Show a "+" button that reveals the reaction picker. Style: small rounded pills with emoji + count, gray border, slight bg on hover. Match XitHub's reaction bar style.
 
 - [x] **PR merge strategy dropdown**: On the PR detail merge box, replace the single "Merge pull request" button with a split button: main button shows the selected strategy label, dropdown arrow reveals 3 options: "Create a merge commit" (default), "Squash and merge", "Rebase and merge". Each option shows a brief description. The selected strategy is stored in PR state as `mergeStrategy`. When merge button is clicked, dispatch `MERGE_PR` with the selected strategy.
 
@@ -67,9 +67,9 @@
 
 - [x] **Discussions tab**: Add route `/:owner/:repo/discussions`. Tab shows in repo nav with speech-bubble icon. Page shows a list of discussion threads, each with: title, category badge (General, Q&A, Ideas, Show and tell), author, reply count, last activity date. "New discussion" button opens a form. Discussion detail page shows original post + replies. Add `discussions` to state with entity: `{ id, repoId, title, body, category, authorId, replies: [], createdAt }`. Reducer actions: `ADD_DISCUSSION`, `ADD_DISCUSSION_REPLY`.
 
-- [x] **Keyboard navigation shortcuts**: Implement GitHub's `G` key navigation: press `G` then `C` navigates to Code tab, `G` then `I` to Issues, `G` then `P` to Pull Requests, `G` then `A` to Actions, `G` then `W` to Wiki. Use a two-key sequence detector (500ms timeout between keys). Only active when not focused in an input/textarea. Show a small toast "Go to: Issues" when triggered.
+- [x] **Keyboard navigation shortcuts**: Implement XitHub's `G` key navigation: press `G` then `C` navigates to Code tab, `G` then `I` to Issues, `G` then `P` to Pull Requests, `G` then `A` to Actions, `G` then `W` to Wiki. Use a two-key sequence detector (500ms timeout between keys). Only active when not focused in an input/textarea. Show a small toast "Go to: Issues" when triggered.
 
-- [x] **Command palette**: `Ctrl+K` (or `Cmd+K` on Mac) opens a centered modal dialog with a search input at the top. As user types, show filtered results: repos, issues, PRs, pages (Settings, Wiki, Actions). Each result row shows icon + title + path. Arrow keys to navigate, Enter to select, Esc to close. Similar to GitHub's real command palette.
+- [x] **Command palette**: `Ctrl+K` (or `Cmd+K` on Mac) opens a centered modal dialog with a search input at the top. As user types, show filtered results: repos, issues, PRs, pages (Settings, Wiki, Actions). Each result row shows icon + title + path. Arrow keys to navigate, Enter to select, Esc to close. Similar to XitHub's real command palette.
 
 - [x] **Branch management page**: Add route `/:owner/:repo/branches`. Shows all branches for the repo: branch name, last commit message, relative date, ahead/behind count vs default branch (can be static), "Delete" button (with confirmation, dispatches action to remove branch from state). "New branch" button: input for name, select base branch, creates entry in `state.branches`.
 
@@ -93,7 +93,7 @@
 
 ## Data Seed (implement in createInitialData())
 <!-- Dev must create realistic seed data matching these specs. -->
-- [x] **Users**: 5 users with realistic GitHub-style usernames, avatars (use GitHub avatar URLs or generated avatars), bios. User `u1` = "octocat" is the logged-in user.
+- [x] **Users**: 5 users with realistic XitHub-style usernames, avatars (use XitHub avatar URLs or generated avatars), bios. User `u1` = "octocat" is the logged-in user.
 - [x] **Repositories**: 3 repos — 1 active public JS project with rich data (issues, PRs, wiki, actions), 1 popular demo/fork repo, 1 private personal repo. Each with realistic star/fork/watcher counts, topics, licenses, language breakdowns.
 - [x] **Issues**: 5 issues across repos. Mix of open/closed, with varying labels (bug, enhancement, documentation, good first issue), assignees, milestones. At least 2 issues should have multiple comments with back-and-forth discussion. Include Markdown formatting (code blocks, links, lists) in descriptions.
 - [x] **Pull Requests**: 2 PRs — 1 with mixed reviewer status (one approved, one changes_requested) and multiple comments and CI checks; 1 clean PR ready to merge. Both with branch info matching existing branches.
@@ -102,7 +102,7 @@
 - [x] **Wiki**: 3 pages (Home, Getting Started, API Reference) with substantive Markdown content including tables, code blocks, links.
 - [x] **Actions**: 5 workflow runs with varying statuses (success, failure), branches, event types.
 - [x] **Notifications**: 4 notifications — 2 unread, 2 read, different types (comment, review, mention, CI).
-- [x] **Labels**: 9 labels with proper GitHub-style hex colors (#d73a4a for bug red, #a2eeef for enhancement teal, #0075ca for docs blue, #7057ff for good-first-issue purple, etc.).
+- [x] **Labels**: 9 labels with proper XitHub-style hex colors (#d73a4a for bug red, #a2eeef for enhancement teal, #0075ca for docs blue, #7057ff for good-first-issue purple, etc.).
 - [x] **Milestones**: 2 milestones — 1 open with future due date, 1 closed.
 
 ## Out of Scope
@@ -112,10 +112,10 @@
 - File uploads to real servers
 - Email/SMS notifications
 - OAuth, SSO, or any identity verification
-- GitHub Copilot / AI features
-- GitHub Pages deployment
-- GitHub Codespaces
-- GitHub Packages registry
+- XitHub Copilot / AI features
+- XitHub Pages deployment
+- XitHub Codespaces
+- XitHub Packages registry
 - Billing / payment
 - Organization management (keep it single-user focused)
 - Real network API calls (all data is in-memory/localStorage)

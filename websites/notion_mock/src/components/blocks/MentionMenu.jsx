@@ -69,7 +69,7 @@ export const MentionMenu = ({ onSelect, onClose, filter = '' }) => {
           key={`${item.type}-${item.id}`}
           className={clsx(
             'flex items-center px-3 py-1.5 cursor-pointer',
-            idx === selectedIndex ? 'bg-notion-hover' : 'hover:bg-gray-50'
+            idx === selectedIndex ? 'bg-xotion-hover' : 'hover:bg-gray-50'
           )}
           onClick={() => onSelect(item)}
           onMouseEnter={() => setSelectedIndex(idx)}

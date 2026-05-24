@@ -1,4 +1,4 @@
-# Twitter/X Mock — Data Model
+# Xwitter/X Mock — Data Model
 
 > Used by `src/utils/mockData.js` (or `dataManager.js`) for `createInitialData()`.
 > All IDs are string UUIDs. All timestamps are ISO 8601 strings.
@@ -114,7 +114,7 @@ Replies are structurally similar to posts but belong to a parent post. In the ex
 }
 ```
 
-### 7. List (Twitter List)
+### 7. List (Xwitter List)
 
 ```javascript
 {

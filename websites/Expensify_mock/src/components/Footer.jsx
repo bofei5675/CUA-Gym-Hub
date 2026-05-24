@@ -21,7 +21,7 @@ export default function Footer() {
           <a key={label} href={href} target="_blank" rel="noopener noreferrer">{label}</a>
         ))}
       </div>
-      <div className="footer-copyright">&copy; 2008-2024 Expensify, Inc.</div>
+      <div className="footer-copyright">&copy; 2008-2024 Xpensify, Inc.</div>
     </footer>
   );
 }

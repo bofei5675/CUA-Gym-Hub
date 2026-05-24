@@ -26,7 +26,7 @@
 | `/lists` | Lists | Shopping lists CRUD with checkable items |
 | `/deals` | Deals | Deals and coupons with clip functionality |
 | `/recipes` | Recipes | Recipe browser with add-to-cart for ingredients |
-| `/account` | Account | User profile, Instacart+ status, addresses |
+| `/account` | Account | User profile, Xnstacart+ status, addresses |
 | `/favorites` | Favorites | Saved/hearted products ("Saved Items"); accessible from user dropdown |
 | `/go` | Go | State inspection endpoint (JSON) |
 
@@ -70,7 +70,7 @@
 | `phone` | string | `"(415) 555-0142"` | Phone number |
 | `avatar` | string\|null | `null` | Avatar URL |
 | `defaultAddressId` | string | `"addr_1"` | Default delivery address ID |
-| `instacartPlus` | boolean | `true` | Whether user has Instacart+ membership |
+| `instacartPlus` | boolean | `true` | Whether user has Xnstacart+ membership |
 | `instacartPlusExpiry` | string | `"2026-01-15"` | Membership expiry date |
 | `preferredStoreId` | string | `"store_1"` | Preferred store ID |
 | `createdAt` | string | `"2023-06-15T10:00:00Z"` | Account creation timestamp |
@@ -101,7 +101,7 @@
 | `emoji` | string | Store icon emoji |
 | `description` | string | Store description |
 | `deliveryFee` | number | Standard delivery fee |
-| `deliveryFeeWithPlus` | number | Delivery fee for Instacart+ members (always 0) |
+| `deliveryFeeWithPlus` | number | Delivery fee for Xnstacart+ members (always 0) |
 | `serviceFeePercent` | number | Service fee percentage (always 5) |
 | `minOrder` | number | Minimum order amount |
 | `deliveryTimeMin` | number | Minimum delivery time in minutes |

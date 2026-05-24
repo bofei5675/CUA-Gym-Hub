@@ -1,4 +1,4 @@
-# Azure Portal Mock — TODO
+# Xzure Portal Mock — TODO
 
 > Status: P0 COMPLETE, IMPLEMENTING REMAINING P1/P2
 > Last updated by: dev agent, 2026-03-12
@@ -22,25 +22,25 @@ Without these, the app cannot render. Dev implements these first.
 
 ### P0.2 — Visual Design System
 
-Study `assets/screenshots/` — the Azure Portal uses Microsoft's Fluent Design System with flat, clean components and a distinctive blue header. Replicate these exact values:
+Study `assets/screenshots/` — the Xzure Portal uses Microsoft's Fluent Design System with flat, clean components and a distinctive blue header. Replicate these exact values:
 
 - [x] **Color palette** (create CSS variables in `:root` or a Tailwind config, or plain CSS — whatever approach dev prefers):
-  - `--azure-blue`: `#0078d4` — primary blue, used for header, links, primary buttons, active states
-  - `--azure-blue-hover`: `#106ebe` — hover on primary elements
-  - `--azure-blue-dark`: `#005a9e` — pressed/active state
-  - `--azure-blue-light`: `#e1efff` — active sidebar item background, selected row
-  - `--azure-bg`: `#f3f2f1` — main page background (light warm gray)
-  - `--azure-surface`: `#ffffff` — cards, panels, blade backgrounds
-  - `--azure-text`: `#323130` — primary text
-  - `--azure-text-secondary`: `#605e5c` — secondary/muted text
-  - `--azure-text-disabled`: `#a19f9d`
-  - `--azure-border`: `#edebe9` — card/divider borders
-  - `--azure-border-input`: `#8a8886` — form input borders
-  - `--azure-success`: `#107c10` — running/success status
-  - `--azure-error`: `#a4262c` — error/danger
-  - `--azure-warning`: `#ffb900` — warning badges
-  - `--azure-header-bg`: `#0078d4` — top navigation bar
-  - `--azure-header-text`: `#ffffff`
+  - `--xzure-blue`: `#0078d4` — primary blue, used for header, links, primary buttons, active states
+  - `--xzure-blue-hover`: `#106ebe` — hover on primary elements
+  - `--xzure-blue-dark`: `#005a9e` — pressed/active state
+  - `--xzure-blue-light`: `#e1efff` — active sidebar item background, selected row
+  - `--xzure-bg`: `#f3f2f1` — main page background (light warm gray)
+  - `--xzure-surface`: `#ffffff` — cards, panels, blade backgrounds
+  - `--xzure-text`: `#323130` — primary text
+  - `--xzure-text-secondary`: `#605e5c` — secondary/muted text
+  - `--xzure-text-disabled`: `#a19f9d`
+  - `--xzure-border`: `#edebe9` — card/divider borders
+  - `--xzure-border-input`: `#8a8886` — form input borders
+  - `--xzure-success`: `#107c10` — running/success status
+  - `--xzure-error`: `#a4262c` — error/danger
+  - `--xzure-warning`: `#ffb900` — warning badges
+  - `--xzure-header-bg`: `#0078d4` — top navigation bar
+  - `--xzure-header-text`: `#ffffff`
 - [x] **Typography**: Font family `"Segoe UI", Inter, -apple-system, BlinkMacSystemFont, sans-serif`. Sizes: page title 20px/600, section header 16px/600, body 14px/400, caption 12px/400. Line-heights: 1.4 for body.
 - [x] **Component styles**:
   - Primary button: bg `#0078d4`, text white, no border-radius (2px), padding `5px 20px`, min-height 32px, font-weight 600. Hover: bg `#106ebe`.
@@ -56,7 +56,7 @@ Study `assets/screenshots/` — the Azure Portal uses Microsoft's Fluent Design 
 ### P0.3 — App Layout Shell
 
 - [x] **Top navigation bar** (fixed, ~48px height): Background `#0078d4`. Contains:
-  - Left: hamburger menu icon (☰) toggles portal sidebar, then "Microsoft Azure" text in white (not a logo image — just text)
+  - Left: hamburger menu icon (☰) toggles portal sidebar, then "Microsoft Xzure" text in white (not a logo image — just text)
   - Center: Global search bar — `input` with search icon, placeholder text "Search resources, services, and docs (G+/)", width ~500px, rounded 4px, bg `rgba(255,255,255,0.15)`, text white, placeholder `rgba(255,255,255,0.7)`. Focus: bg white, text dark.
   - Right: icon buttons row (24px icons, white, ~36px spacing): Cloud Shell (terminal icon), Notifications (bell icon — shows red badge with unread count from state), Settings (gear icon), Help (? circle icon), Feedback (message-square icon), then a divider `|`, then user info: user display name + directory name below in smaller text, and a user avatar circle (32px, initials based)
 - [x] **Portal menu sidebar** (left, 250px when docked, hidden in flyout mode by default): White background, border-right 1px solid `#edebe9`. Contains:
@@ -121,10 +121,10 @@ Core features a user interacts with in the first 5 minutes.
 
 ### P1.1 — Home Page
 
-- [x] **Azure services row**: Horizontal row of icon+label tiles (like a toolbar), each navigates to its service page. Show 8 items: "+ Create a resource", "All resources" (grid icon), "Subscriptions" (key icon), "Virtual machines" (monitor icon), "App Services" (globe icon), "Storage accounts" (database icon), "SQL databases" (SQL table icon), "More services →" (arrow icon). Each tile: 64px square icon area (colored icon from lucide-react), 12px label below, hover lifts slightly with shadow.
+- [x] **Xzure services row**: Horizontal row of icon+label tiles (like a toolbar), each navigates to its service page. Show 8 items: "+ Create a resource", "All resources" (grid icon), "Subscriptions" (key icon), "Virtual machines" (monitor icon), "App Services" (globe icon), "Storage accounts" (database icon), "SQL databases" (SQL table icon), "More services →" (arrow icon). Each tile: 64px square icon area (colored icon from lucide-react), 12px label below, hover lifts slightly with shadow.
 - [x] **Recent resources section**: Heading "Recent resources". Table with columns: (icon) NAME | TYPE | RESOURCE GROUP | LAST VIEWED. Name is a blue link to the resource detail page. Show top 5 from `state.recentResources`, sorted by `lastViewed` descending. If empty, show "No recent resources" message.
 - [x] **Navigate section**: Heading "Navigate". 4 icon cards in a row: Subscriptions, Resource groups, All resources, Dashboard. Each card: colored icon + label, clickable, navigates to the respective page.
-- [x] **Tools section**: Heading "Tools". 4 icon cards: Microsoft Learn (external link placeholder), Azure Monitor, Security Center, Cost Management. Each with icon + title + small description text.
+- [x] **Tools section**: Heading "Tools". 4 icon cards: Microsoft Learn (external link placeholder), Xzure Monitor, Security Center, Cost Management. Each with icon + title + small description text.
 
 ### P1.2 — Global Search
 
@@ -164,10 +164,10 @@ Core features a user interacts with in the first 5 minutes.
 
 ### P1.5 — Virtual Machines
 
-- [x] **List page** (`/virtual-machines`): Header "Virtual machines". Command bar: "+ Create" → dropdown with "Azure virtual machine" option (navigates to create wizard), "Manage view", "Refresh". Filter: text search + "Subscription" + "Resource group" + "Location" dropdown filters.
+- [x] **List page** (`/virtual-machines`): Header "Virtual machines". Command bar: "+ Create" → dropdown with "Xzure virtual machine" option (navigates to create wizard), "Manage view", "Refresh". Filter: text search + "Subscription" + "Resource group" + "Location" dropdown filters.
 - [x] **Table**: Columns: checkbox | Name (blue link) | Resource group | Status (colored badge: "Running"=green, "Stopped"=gray, "Deallocated"=gray) | Location | Size. Sortable columns. Multi-select checkboxes. When rows are selected, command bar shows contextual actions: "Start", "Restart", "Stop", "Delete".
 - [x] **Bulk actions**: "Start" dispatches `START_VM` for each selected VM (changes status to "Running", powerState to "VM running"). "Stop" dispatches `STOP_VM` (status → "Stopped"). "Delete" shows confirmation dialog then dispatches `DELETE_VM`.
-- [x] **Create VM wizard** (`/virtual-machines/create`): Multi-tab form following Azure's exact pattern:
+- [x] **Create VM wizard** (`/virtual-machines/create`): Multi-tab form following Xzure's exact pattern:
   - **Tab bar**: Basics | Disks | Networking | Management | Advanced | Tags | Review + Create
   - **Basics tab**: "Project details" section: Subscription (dropdown), Resource group (dropdown + "Create new" link). "Instance details" section: Virtual machine name (text, required), Region (dropdown), Availability options (dropdown: "No infrastructure redundancy required"), Image (dropdown: "Ubuntu Server 22.04 LTS", "Ubuntu Server 20.04 LTS", "Windows Server 2022 Datacenter", "Windows Server 2019 Datacenter", "Red Hat Enterprise Linux 9", "Debian 12"), Size (dropdown: "Standard_B1s", "Standard_B2s", "Standard_DS2_v2", "Standard_E4s_v3", "Standard_D4s_v3"). "Administrator account" section: Authentication type radio (SSH public key / Password), Username (text).
   - **Disks tab**: OS disk type (dropdown: "Premium SSD", "Standard SSD", "Standard HDD"), OS disk size (number input, default 30 GB).
@@ -341,14 +341,14 @@ All seed data is defined in `assets/data_model.md`. Summary:
 ## Out of Scope
 
 - Authentication / login / logout (app starts pre-logged-in as "Alex Johnson", directory "Contoso")
-- Real Azure API calls or ARM template execution
+- Real Xzure API calls or ARM template execution
 - Cloud Shell actual command execution (UI placeholder only)
-- Azure AD / Entra ID full directory management
+- Xzure AD / Entra ID full directory management
 - Real-time monitoring metrics (use static mock chart data)
 - Marketplace real purchases or billing transactions
 - Multi-tenant / multi-subscription switching
 - RBAC / role assignment enforcement
 - Resource move between subscriptions/regions
-- Azure Policy enforcement
-- Azure DevOps / CI-CD pipeline integration
+- Xzure Policy enforcement
+- Xzure DevOps / CI-CD pipeline integration
 - Export ARM template functionality

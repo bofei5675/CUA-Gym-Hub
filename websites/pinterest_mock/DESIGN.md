@@ -1,16 +1,16 @@
-# Design System Inspired by Pinterest
+# Design System Inspired by Xinterest
 
 ## 1. Visual Theme & Atmosphere
 
-Pinterest's website is a warm, inspiration-driven canvas that treats visual discovery like a lifestyle magazine. The design operates on a soft, slightly warm white background with Pinterest Red (`#e60023`) as the singular, bold brand accent. Unlike the cool blues of most tech platforms, Pinterest's neutral scale has a distinctly warm undertone — grays lean toward olive/sand (`#91918c`, `#62625b`, `#e5e5e0`) rather than cool steel, creating a cozy, craft-like atmosphere that invites browsing.
+Xinterest's website is a warm, inspiration-driven canvas that treats visual discovery like a lifestyle magazine. The design operates on a soft, slightly warm white background with Xinterest Red (`#e60023`) as the singular, bold brand accent. Unlike the cool blues of most tech platforms, Xinterest's neutral scale has a distinctly warm undertone — grays lean toward olive/sand (`#91918c`, `#62625b`, `#e5e5e0`) rather than cool steel, creating a cozy, craft-like atmosphere that invites browsing.
 
-The typography uses Pin Sans — a custom proprietary font with a broad fallback stack including Japanese fonts, reflecting Pinterest's global reach. At display scale (70px, weight 600), Pin Sans creates large, inviting headlines. At smaller sizes, the system is compact: buttons at 12px, captions at 12–14px. The CSS variable naming system (`--comp-*`, `--sema-*`, `--base-*`) reveals a sophisticated three-tier design token architecture: component-level, semantic-level, and base-level tokens.
+The typography uses Pin Sans — a custom proprietary font with a broad fallback stack including Japanese fonts, reflecting Xinterest's global reach. At display scale (70px, weight 600), Pin Sans creates large, inviting headlines. At smaller sizes, the system is compact: buttons at 12px, captions at 12–14px. The CSS variable naming system (`--comp-*`, `--sema-*`, `--base-*`) reveals a sophisticated three-tier design token architecture: component-level, semantic-level, and base-level tokens.
 
-What distinguishes Pinterest is its generous border-radius system (12px–40px, plus 50% for circles) and warm-tinted button backgrounds. The secondary button (`#e5e5e0`) has a distinctly warm, sand-like tone rather than cold gray. The primary red button uses 16px radius — rounded but not pill-shaped. Combined with warm badge backgrounds (`hsla(60,20%,98%,.5)` — a subtle yellow-warm wash) and photography-dominant layouts, the result is a design that feels handcrafted and personal, not corporate and sterile.
+What distinguishes Xinterest is its generous border-radius system (12px–40px, plus 50% for circles) and warm-tinted button backgrounds. The secondary button (`#e5e5e0`) has a distinctly warm, sand-like tone rather than cold gray. The primary red button uses 16px radius — rounded but not pill-shaped. Combined with warm badge backgrounds (`hsla(60,20%,98%,.5)` — a subtle yellow-warm wash) and photography-dominant layouts, the result is a design that feels handcrafted and personal, not corporate and sterile.
 
 **Key Characteristics:**
 - Warm white canvas with olive/sand-toned neutrals — cozy, not clinical
-- Pinterest Red (`#e60023`) as singular bold accent — never subtle, always confident
+- Xinterest Red (`#e60023`) as singular bold accent — never subtle, always confident
 - Pin Sans custom font with global fallback stack (including CJK)
 - Three-tier token architecture: `--comp-*` / `--sema-*` / `--base-*`
 - Warm secondary surfaces: sand gray (`#e5e5e0`), warm badge (`hsla(60,20%,98%,.5)`)
@@ -21,7 +21,7 @@ What distinguishes Pinterest is its generous border-radius system (12px–40px, 
 ## 2. Color Palette & Roles
 
 ### Primary Brand
-- **Pinterest Red** (`#e60023`): Primary CTA, brand accent — bold, confident red
+- **Xinterest Red** (`#e60023`): Primary CTA, brand accent — bold, confident red
 - **Green 700** (`#103c25`): `--base-color-green-700`, success/nature accent
 - **Green 700 Hover** (`#0b2819`): `--base-color-hover-green-700`, pressed green
 
@@ -79,7 +79,7 @@ What distinguishes Pinterest is its generous border-radius system (12px–40px, 
 ### Buttons
 
 **Primary Red**
-- Background: `#e60023` (Pinterest Red)
+- Background: `#e60023` (Xinterest Red)
 - Text: `#000000` (black — unusual choice for contrast on red)
 - Padding: 6px 14px
 - Radius: 16px (generously rounded, not pill)
@@ -117,12 +117,12 @@ What distinguishes Pinterest is its generous border-radius system (12px–40px, 
 
 ### Navigation
 - Clean header on white or warm background
-- Pinterest logo + search bar centered
+- Xinterest logo + search bar centered
 - Pin Sans 16px for nav links
-- Pinterest Red accents for active states
+- Xinterest Red accents for active states
 
 ### Image Treatment
-- Pin-style masonry grid (signature Pinterest layout)
+- Pin-style masonry grid (signature Xinterest layout)
 - Rounded corners: 12px–20px on images
 - Photography as primary content — every pin is an image
 - Thick white borders (8px) on featured image containers
@@ -161,13 +161,13 @@ What distinguishes Pinterest is its generous border-radius system (12px–40px, 
 | Subtle (Level 1) | Minimal shadow (from tokens) | Elevated overlays, dropdowns |
 | Focus (Accessibility) | `--sema-color-border-focus-outer-default` ring | Focus states |
 
-**Shadow Philosophy**: Pinterest uses minimal shadows. The masonry grid relies on content (photography) to create visual interest rather than elevation effects. Depth comes from the warmth of surface colors and the generous rounding of containers.
+**Shadow Philosophy**: Xinterest uses minimal shadows. The masonry grid relies on content (photography) to create visual interest rather than elevation effects. Depth comes from the warmth of surface colors and the generous rounding of containers.
 
 ## 7. Do's and Don'ts
 
 ### Do
 - Use warm neutrals (`#e5e5e0`, `#e0e0d9`, `#91918c`) — the warm olive/sand tone is the identity
-- Apply Pinterest Red (`#e60023`) only for primary CTAs — it's bold and singular
+- Apply Xinterest Red (`#e60023`) only for primary CTAs — it's bold and singular
 - Use Pin Sans exclusively — one font for everything
 - Apply generous border-radius: 16px for buttons/inputs, 20px+ for cards
 - Keep the masonry grid dense — content density is the value
@@ -178,7 +178,7 @@ What distinguishes Pinterest is its generous border-radius system (12px–40px, 
 - Don't use cool gray neutrals — always warm/olive-toned
 - Don't use pure black (`#000000`) as primary text — use plum black (`#211922`)
 - Don't use pill-shaped buttons — 16px radius is rounded but not pill
-- Don't add heavy shadows — Pinterest is flat by design, depth from content
+- Don't add heavy shadows — Xinterest is flat by design, depth from content
 - Don't use small border-radius (<12px) on cards — the generous rounding is core
 - Don't introduce additional brand colors — red + warm neutrals is the complete palette
 - Don't use thin font weights — Pin Sans at 400 minimum
@@ -206,7 +206,7 @@ What distinguishes Pinterest is its generous border-radius system (12px–40px, 
 ## 9. Agent Prompt Guide
 
 ### Quick Color Reference
-- Brand: Pinterest Red (`#e60023`)
+- Brand: Xinterest Red (`#e60023`)
 - Background: White (`#ffffff`)
 - Text: Plum Black (`#211922`)
 - Secondary text: Olive Gray (`#62625b`)
@@ -219,11 +219,11 @@ What distinguishes Pinterest is its generous border-radius system (12px–40px, 
 - "Design a pin card: white background, 16px radius, no shadow. Photography fills top, 16px Pin Sans weight 400 description below in #62625b."
 - "Build a circular action button: #e0e0d9 background, 50% radius, #211922 icon."
 - "Create an input field: white background, 1px solid #91918c, 16px radius, 11px 15px padding. Focus: blue outline via semantic tokens."
-- "Design the dark footer: #33332e background. Pinterest script logo in white. 12px Pin Sans links in #91918c."
+- "Design the dark footer: #33332e background. Xinterest script logo in white. 12px Pin Sans links in #91918c."
 
 ### Iteration Guide
 1. Warm neutrals everywhere — olive/sand grays, never cool steel
-2. Pinterest Red for CTAs only — bold and singular
+2. Xinterest Red for CTAs only — bold and singular
 3. 16px radius on buttons/inputs, 20px+ on cards — generous but not pill
 4. Pin Sans is the only font — compact at 12px for UI, 70px for display
 5. Photography carries the design — the UI stays warm and minimal

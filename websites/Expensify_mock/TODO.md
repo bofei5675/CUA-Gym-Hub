@@ -1,4 +1,4 @@
-# Expensify Mock — TODO
+# Xpensify Mock — TODO
 
 > Status: ALL COMPLETE (P0+P1+P2)
 > Last updated by: dev agent, 2026-03-12
@@ -15,9 +15,9 @@
 
 Without these, the app cannot render. Dev implements these first.
 
-- [x] **Project scaffold**: `npm create vite@latest Expensify_mock -- --template react`, install deps: `react-router-dom`, `lucide-react`. No Tailwind — use plain CSS to match the classic Expensify styling precisely.
+- [x] **Project scaffold**: `npm create vite@latest Expensify_mock -- --template react`, install deps: `react-router-dom`, `lucide-react`. No Tailwind — use plain CSS to match the classic Xpensify styling precisely.
 
-- [x] **Visual design system**: Study `assets/screenshots/` — replicate the exact Expensify Classic look:
+- [x] **Visual design system**: Study `assets/screenshots/` — replicate the exact Xpensify Classic look:
   - **Sidebar background**: `#0E1B2A` (very dark navy blue)
   - **Primary action (buttons)**: `#03D47C` (vibrant green) with white text, border-radius 20px (pill shape)
   - **Active nav indicator**: `#0185FF` (bright blue), 3px left border on active sidebar item
@@ -34,9 +34,9 @@ Without these, the app cannot render. Dev implements these first.
   - **Amount display**: Dollar portion 16px font-weight 600, cents portion 11px superscript
 
 - [x] **App layout**: Three-zone layout matching screenshots exactly:
-  - **Left sidebar**: Fixed, 220px wide, 100vh height, `#0E1B2A` background. Top section: circular avatar (80px, pink `#E85E95` background with white initials), email text below centered in white 13px. Navigation items vertically stacked with 48px height, 24px left padding, 14px white text, icon (20px) + 12px gap + label. Active item: blue `#0185FF` left border (3px), blue icon color. Bottom: "**Expensify**" wordmark in bold white 18px, padding-bottom 24px.
+  - **Left sidebar**: Fixed, 220px wide, 100vh height, `#0E1B2A` background. Top section: circular avatar (80px, pink `#E85E95` background with white initials), email text below centered in white 13px. Navigation items vertically stacked with 48px height, 24px left padding, 14px white text, icon (20px) + 12px gap + label. Active item: blue `#0185FF` left border (3px), blue icon color. Bottom: "**Xpensify**" wordmark in bold white 18px, padding-bottom 24px.
   - **Main content**: Fills remaining width. Page title top-left (28px bold). Action buttons top-right. Scrollable content area below.
-  - **Footer**: Inside main content at bottom — gray text links (OUR PRODUCT, UPGRADE, PRICING, JOBS, ABOUT US, BLOG, COMMUNITY, STATUS, PRIVACY, HELP) centered, copyright "© 2008-2024 Expensify, Inc." right-aligned. Height ~60px, border-top 1px `#E8ECF0`.
+  - **Footer**: Inside main content at bottom — gray text links (OUR PRODUCT, UPGRADE, PRICING, JOBS, ABOUT US, BLOG, COMMUNITY, STATUS, PRIVACY, HELP) centered, copyright "© 2008-2024 Xpensify, Inc." right-aligned. Height ~60px, border-top 1px `#E8ECF0`.
   - **Concierge bubble**: Fixed position, bottom-right (20px offset), 56px blue `#0185FF` circle with white speech bubble icon, box-shadow, z-index 1000.
 
 - [x] **Routing**: `App.jsx` with `BrowserRouter`, routes:
@@ -81,7 +81,7 @@ Core features a user interacts with in the first 5 minutes. These are the intera
 
 - [x] **Inbox page layout** (`/inbox`): Title "Inbox" (28px bold). Main content is a vertical list of inbox item cards. Each card: white background, 1px border `#E8ECF0`, border-radius 8px, padding 20px, margin-bottom 12px. Card shows: left — from user avatar (40px circle) + name (bold 14px) + description (14px gray); right — timestamp (12px gray) + action button if `actionRequired` (green button "Review" or "Approve"). Unread items have a left 3px blue border.
 
-- [x] **Concierge welcome card**: First item in inbox — special card with Concierge avatar (blue circle with triangle logo), "Concierge" name, welcome message, "Watch Demo" (outlined button) and "Call" (outlined button) in top-right of card. Below: setup prompt "Are you here to setup Expensify for your business, or just yourself?" with two option cards: "Business" (suitcase icon, description) and "Individual" (piggy bank icon, description). These are clickable but just dismiss the card.
+- [x] **Concierge welcome card**: First item in inbox — special card with Concierge avatar (blue circle with triangle logo), "Concierge" name, welcome message, "Watch Demo" (outlined button) and "Call" (outlined button) in top-right of card. Below: setup prompt "Are you here to setup Xpensify for your business, or just yourself?" with two option cards: "Business" (suitcase icon, description) and "Individual" (piggy bank icon, description). These are clickable but just dismiss the card.
 
 - [x] **Inbox item interactions**: Clicking an inbox item with `actionRequired: true` and `actionType: "approve_report"` navigates to `/reports/:relatedId`. Clicking marks the item as `read: true`. "Hide" action (three-dot menu → "Hide") sets `hidden: true` and removes from visible list. "Show Hidden Tasks" toggle at bottom toggles visibility of hidden items.
 

@@ -1,11 +1,11 @@
-# Uber Eats Mock — Research Summary
+# Xber Eats Mock — Research Summary
 
 > Last updated: 2025-03-09
 > Research by: plan agent
 
 ## App Overview
 
-**Uber Eats** is Uber's online food ordering and delivery platform. It connects users with local restaurants and allows them to browse menus, customize items, place orders, and track delivery in real time. The web app (ubereats.com) mirrors the mobile experience with a desktop-optimized layout.
+**Xber Eats** is Uber's online food ordering and delivery platform. It connects users with local restaurants and allows them to browse menus, customize items, place orders, and track delivery in real time. The web app (ubereats.com) mirrors the mobile experience with a desktop-optimized layout.
 
 **Core value prop**: "Browse restaurants → Order food → Track delivery" — a three-step flow that takes users from hunger to food-at-the-door.
 
@@ -39,8 +39,8 @@
 ## Complete Feature List
 
 ### P0 — Critical (App cannot function without these)
-1. **App shell & header** — Uber Eats logo, delivery address selector, search bar, cart icon with badge count, user avatar/account dropdown
-2. **Homepage / Feed** — Restaurant cards in a responsive grid, organized by sections ("Featured", "Popular near you", "New on Uber Eats", cuisine categories)
+1. **App shell & header** — Xber Eats logo, delivery address selector, search bar, cart icon with badge count, user avatar/account dropdown
+2. **Homepage / Feed** — Restaurant cards in a responsive grid, organized by sections ("Featured", "Popular near you", "New on Xber Eats", cuisine categories)
 3. **Category browsing** — Horizontal scrollable category chips with icons: Pizza, Burgers, Sushi, Chinese, Mexican, Indian, Thai, Italian, Healthy, Dessert, Coffee, Grocery, Alcohol, etc.
 4. **Restaurant card** — Hero image, favorite heart icon (top-right), restaurant name, rating (number in circle), delivery fee, estimated delivery time, "Sponsored" label for promoted listings
 5. **Restaurant/Store page** — Banner image, restaurant info (name, rating, reviews count, cuisine type, price range $$, delivery fee, delivery time), menu organized by categories with sticky category nav
@@ -80,16 +80,16 @@
 ### Desktop Web Layout (ubereats.com)
 
 #### Header (fixed, ~64px height)
-- **Left**: Uber Eats logo (black "Uber" + green "Eats")
+- **Left**: Xber Eats logo (black "Uber" + green "Eats")
 - **Center-left**: Delivery/Pickup toggle pills
 - **Center**: Delivery address with dropdown icon + estimated delivery time
-- **Center-right**: Search bar (icon + "Search Uber Eats" placeholder)
+- **Center-right**: Search bar (icon + "Search Xber Eats" placeholder)
 - **Right**: Cart icon with item count badge, user avatar/account menu
 
 #### Homepage Body
 - **Category row**: Horizontally scrollable category pills with circular food icons + labels (Pizza, Sushi, Burgers, etc.)
 - **Promo carousel**: Full-width promotional banners (deals, Uber One, seasonal offers)
-- **Restaurant sections**: Each section has a heading ("Popular near you", "Featured on Uber Eats", "New on Uber Eats") with a horizontal scrollable row or grid of restaurant cards
+- **Restaurant sections**: Each section has a heading ("Popular near you", "Featured on Xber Eats", "New on Xber Eats") with a horizontal scrollable row or grid of restaurant cards
 - **Restaurant card**: ~280px wide card with:
   - Hero image (16:10 aspect ratio) with favorite heart icon overlay (top-right)
   - Restaurant name (bold, 16px)
@@ -202,7 +202,7 @@
 | `screenshots/search/000001.jpg` | Alexa tracking | Order status timeline: Preparing → Out for Delivery → Delivered |
 | `screenshots/store_page/000005.jpg` | Store page (design) | Category chips with icons, food item grid with images, names, prices |
 | `screenshots/item_modal/000005.jpg` | Checkout (mobile) | Checkout total, payment method selection |
-| `screenshots/restaurant/000003.jpg` | Restaurant tablet login | Uber Eats branding, green accent color |
+| `screenshots/restaurant/000003.jpg` | Restaurant tablet login | Xber Eats branding, green accent color |
 
 ---
 

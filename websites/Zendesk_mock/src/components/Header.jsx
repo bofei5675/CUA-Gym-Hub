@@ -300,7 +300,7 @@ export default function Header() {
           <div style={{ width: 520, maxWidth: 'calc(100vw - 32px)', background: '#fff', borderRadius: 6, boxShadow: '0 12px 32px rgba(0,0,0,0.24)', overflow: 'hidden' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 18px', borderBottom: '1px solid #D8DCDE' }}>
               <div style={{ fontWeight: 600, fontSize: 16, color: '#2F3941' }}>
-                {helpPanel === 'docs' ? 'Zendesk Support documentation' : 'Support center'}
+                {helpPanel === 'docs' ? 'Xendesk Support documentation' : 'Support center'}
               </div>
               <button className="header-btn" onClick={() => setHelpPanel(null)} title="Close help panel">
                 <X size={16} />

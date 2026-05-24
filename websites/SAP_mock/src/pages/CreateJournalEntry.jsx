@@ -125,8 +125,8 @@ export default function CreateJournalEntry() {
   return (
     <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
       {/* Header */}
-      <div style={{ background: '#fff', borderBottom: '1px solid var(--sap-border)', padding: '12px 24px' }}>
-        <div style={{ fontSize: '12px', color: 'var(--sap-blue)', marginBottom: '4px', cursor: 'pointer' }}
+      <div style={{ background: '#fff', borderBottom: '1px solid var(--xap-border)', padding: '12px 24px' }}>
+        <div style={{ fontSize: '12px', color: 'var(--xap-blue)', marginBottom: '4px', cursor: 'pointer' }}
           onClick={() => navigate('/app/journal-entries')}>
           Journal Entries /
         </div>
@@ -149,8 +149,8 @@ export default function CreateJournalEntry() {
               <div className="form-field">
                 <label>Posting Date *</label>
                 <input type="date" value={header.postingDate} onChange={e => setHeader(h => ({ ...h, postingDate: e.target.value }))}
-                  style={errors.postingDate ? { borderColor: 'var(--sap-status-error)' } : {}} />
-                {errors.postingDate && <span style={{ fontSize: '11px', color: 'var(--sap-status-error)' }}>{errors.postingDate}</span>}
+                  style={errors.postingDate ? { borderColor: 'var(--xap-status-error)' } : {}} />
+                {errors.postingDate && <span style={{ fontSize: '11px', color: 'var(--xap-status-error)' }}>{errors.postingDate}</span>}
               </div>
               <div className="form-field">
                 <label>Document Date</label>
@@ -186,16 +186,16 @@ export default function CreateJournalEntry() {
           <div className="section-header">
             <h3>Line Items ({lines.length})</h3>
             <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-              <span style={{ fontSize: '13px', color: isBalanced ? 'var(--sap-status-success)' : 'var(--sap-status-error)', fontWeight: 600 }}>
+              <span style={{ fontSize: '13px', color: isBalanced ? 'var(--xap-status-success)' : 'var(--xap-status-error)', fontWeight: 600 }}>
                 {isBalanced ? '✓ Balanced' : `Debit: ${totalDebit.toFixed(2)} | Credit: ${totalCredit.toFixed(2)}`}
               </span>
               <button className="btn-secondary" onClick={addLine}>Add Line</button>
             </div>
           </div>
-          {errors.lines && <div style={{ padding: '8px 16px', color: 'var(--sap-status-error)', fontSize: '13px' }}>{errors.lines}</div>}
-          {errors.balance && <div style={{ padding: '8px 16px', color: 'var(--sap-status-error)', fontSize: '13px' }}>⚠ {errors.balance}</div>}
+          {errors.lines && <div style={{ padding: '8px 16px', color: 'var(--xap-status-error)', fontSize: '13px' }}>{errors.lines}</div>}
+          {errors.balance && <div style={{ padding: '8px 16px', color: 'var(--xap-status-error)', fontSize: '13px' }}>⚠ {errors.balance}</div>}
           <div style={{ overflowX: 'auto' }}>
-            <table className="sap-table">
+            <table className="xap-table">
               <thead>
                 <tr>
                   <th>Line #</th>
@@ -211,49 +211,49 @@ export default function CreateJournalEntry() {
               <tbody>
                 {lines.map((line, idx) => (
                   <tr key={idx}>
-                    <td style={{ color: 'var(--sap-text-secondary)', fontSize: '13px' }}>{(idx + 1) * 10}</td>
+                    <td style={{ color: 'var(--xap-text-secondary)', fontSize: '13px' }}>{(idx + 1) * 10}</td>
                     <td>
                       <select value={line.glAccount} onChange={e => updateLine(idx, 'glAccount', e.target.value)}
-                        style={{ border: '1px solid var(--sap-border)', borderRadius: '4px', padding: '4px 8px', fontSize: '13px', minWidth: '120px' }}>
+                        style={{ border: '1px solid var(--xap-border)', borderRadius: '4px', padding: '4px 8px', fontSize: '13px', minWidth: '120px' }}>
                         <option value="">— Select —</option>
                         {GL_ACCOUNTS.map(g => <option key={g.account} value={g.account}>{g.account}</option>)}
                       </select>
                     </td>
-                    <td style={{ fontSize: '13px', color: 'var(--sap-text-secondary)', minWidth: '140px' }}>{line.accountDescription || '—'}</td>
+                    <td style={{ fontSize: '13px', color: 'var(--xap-text-secondary)', minWidth: '140px' }}>{line.accountDescription || '—'}</td>
                     <td>
                       <input value={line.costCenter} onChange={e => updateLine(idx, 'costCenter', e.target.value)}
                         placeholder="CC1000"
-                        style={{ width: '80px', border: '1px solid var(--sap-border)', borderRadius: '4px', padding: '4px 8px', fontSize: '13px', outline: 'none' }} />
+                        style={{ width: '80px', border: '1px solid var(--xap-border)', borderRadius: '4px', padding: '4px 8px', fontSize: '13px', outline: 'none' }} />
                     </td>
                     <td>
                       <select value={line.debitCreditIndicator} onChange={e => updateLine(idx, 'debitCreditIndicator', e.target.value)}
-                        style={{ border: '1px solid var(--sap-border)', borderRadius: '4px', padding: '4px 8px', fontSize: '13px', fontWeight: 600, color: line.debitCreditIndicator === 'D' ? 'var(--sap-status-error)' : 'var(--sap-status-success)' }}>
+                        style={{ border: '1px solid var(--xap-border)', borderRadius: '4px', padding: '4px 8px', fontSize: '13px', fontWeight: 600, color: line.debitCreditIndicator === 'D' ? 'var(--xap-status-error)' : 'var(--xap-status-success)' }}>
                         <option value="D">Debit</option>
                         <option value="C">Credit</option>
                       </select>
                     </td>
                     <td>
                       <input type="number" min="0" step="0.01" value={line.amount} onChange={e => updateLine(idx, 'amount', e.target.value)}
-                        style={{ width: '100px', border: '1px solid var(--sap-border)', borderRadius: '4px', padding: '4px 8px', fontSize: '13px', outline: 'none' }} />
+                        style={{ width: '100px', border: '1px solid var(--xap-border)', borderRadius: '4px', padding: '4px 8px', fontSize: '13px', outline: 'none' }} />
                     </td>
                     <td>
                       <input value={line.itemText} onChange={e => updateLine(idx, 'itemText', e.target.value)}
                         placeholder="Line description"
-                        style={{ width: '150px', border: '1px solid var(--sap-border)', borderRadius: '4px', padding: '4px 8px', fontSize: '13px', outline: 'none' }} />
+                        style={{ width: '150px', border: '1px solid var(--xap-border)', borderRadius: '4px', padding: '4px 8px', fontSize: '13px', outline: 'none' }} />
                     </td>
                     <td>
-                      <button style={{ background: 'none', border: 'none', color: 'var(--sap-status-error)', fontSize: '18px', cursor: 'pointer' }} onClick={() => removeLine(idx)}>×</button>
+                      <button style={{ background: 'none', border: 'none', color: 'var(--xap-status-error)', fontSize: '18px', cursor: 'pointer' }} onClick={() => removeLine(idx)}>×</button>
                     </td>
                   </tr>
                 ))}
               </tbody>
               <tfoot>
-                <tr style={{ borderTop: '2px solid var(--sap-border)', fontWeight: 600, background: 'var(--sap-page-bg)' }}>
-                  <td colSpan={5} style={{ textAlign: 'right', padding: '8px', fontSize: '13px', color: 'var(--sap-text-secondary)' }}>Totals</td>
+                <tr style={{ borderTop: '2px solid var(--xap-border)', fontWeight: 600, background: 'var(--xap-page-bg)' }}>
+                  <td colSpan={5} style={{ textAlign: 'right', padding: '8px', fontSize: '13px', color: 'var(--xap-text-secondary)' }}>Totals</td>
                   <td style={{ padding: '8px', textAlign: 'left' }}>
-                    <span style={{ color: 'var(--sap-status-error)' }}>D: {totalDebit.toFixed(2)}</span>
-                    <span style={{ margin: '0 8px', color: 'var(--sap-text-secondary)' }}>|</span>
-                    <span style={{ color: 'var(--sap-status-success)' }}>C: {totalCredit.toFixed(2)}</span>
+                    <span style={{ color: 'var(--xap-status-error)' }}>D: {totalDebit.toFixed(2)}</span>
+                    <span style={{ margin: '0 8px', color: 'var(--xap-text-secondary)' }}>|</span>
+                    <span style={{ color: 'var(--xap-status-success)' }}>C: {totalCredit.toFixed(2)}</span>
                   </td>
                   <td colSpan={2}></td>
                 </tr>

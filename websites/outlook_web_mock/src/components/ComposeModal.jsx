@@ -145,7 +145,7 @@ export default function ComposeModal({ onClose, defaults = null }) {
             {showMore && (
               <div className="absolute bottom-8 right-0 w-44 rounded border border-neutral-200 bg-white p-2 text-sm shadow-lg">
                 <button onClick={() => { setSubject(prev => prev || '(No subject)'); setShowMore(false); }} className="block w-full rounded px-2 py-1.5 text-left hover:bg-neutral-100">Use no subject</button>
-                <button onClick={() => { setBody(prev => `${prev}\n\nSent from Outlook Mock`); setShowMore(false); }} className="block w-full rounded px-2 py-1.5 text-left hover:bg-neutral-100">Insert signature</button>
+                <button onClick={() => { setBody(prev => `${prev}\n\nSent from Xutlook Mock`); setShowMore(false); }} className="block w-full rounded px-2 py-1.5 text-left hover:bg-neutral-100">Insert signature</button>
               </div>
             )}
           </div>

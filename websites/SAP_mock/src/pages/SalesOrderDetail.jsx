@@ -22,7 +22,7 @@ export default function SalesOrderDetail() {
   const [editData, setEditData] = useState({})
   const fileInputRef = useRef(null)
 
-  if (!so) return <div style={{ padding: '24px', color: 'var(--sap-text-secondary)' }}>Sales Order not found.</div>
+  if (!so) return <div style={{ padding: '24px', color: 'var(--xap-text-secondary)' }}>Sales Order not found.</div>
 
   function startEdit() { setEditData({ ...so }); setEditMode(true) }
   function cancelEdit() { setEditData({}); setEditMode(false) }
@@ -90,7 +90,7 @@ export default function SalesOrderDetail() {
     return (
       <div className="form-field">
         <label>{label}</label>
-        <div style={{ fontSize: '14px', padding: '6px 0', color: 'var(--sap-text-primary)', borderBottom: '1px solid var(--sap-border)', minHeight: '32px' }}>
+        <div style={{ fontSize: '14px', padding: '6px 0', color: 'var(--xap-text-primary)', borderBottom: '1px solid var(--xap-border)', minHeight: '32px' }}>
           {value || '—'}
         </div>
       </div>
@@ -100,15 +100,15 @@ export default function SalesOrderDetail() {
   return (
     <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
       {/* Header */}
-      <div style={{ background: '#fff', borderBottom: '1px solid var(--sap-border)', padding: '12px 24px' }}>
-        <div style={{ fontSize: '12px', color: 'var(--sap-blue)', marginBottom: '4px', cursor: 'pointer' }}
+      <div style={{ background: '#fff', borderBottom: '1px solid var(--xap-border)', padding: '12px 24px' }}>
+        <div style={{ fontSize: '12px', color: 'var(--xap-blue)', marginBottom: '4px', cursor: 'pointer' }}
           onClick={() => navigate('/app/manage-sales-orders')}>
           Sales Orders /
         </div>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div>
-            <h1 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--sap-text-primary)' }}>{so.soNumber}</h1>
-            <div style={{ fontSize: '13px', color: 'var(--sap-text-secondary)' }}>{so.orderType || 'Standard Order'} · {so.customerName}</div>
+            <h1 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--xap-text-primary)' }}>{so.soNumber}</h1>
+            <div style={{ fontSize: '13px', color: 'var(--xap-text-secondary)' }}>{so.orderType || 'Standard Order'} · {so.customerName}</div>
           </div>
           <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
             <span className={`status-badge ${STATUS_CLASS[so.status] || ''}`}>{so.status}</span>
@@ -162,7 +162,7 @@ export default function SalesOrderDetail() {
               <h3>Items ({items.length})</h3>
             </div>
             <div style={{ overflowX: 'auto' }}>
-              <table className="sap-table">
+              <table className="xap-table">
                 <thead>
                   <tr>
                     <th>Item #</th>
@@ -179,7 +179,7 @@ export default function SalesOrderDetail() {
                 </thead>
                 <tbody>
                   {items.length === 0 ? (
-                    <tr><td colSpan={10} style={{ textAlign: 'center', padding: '24px', color: 'var(--sap-text-secondary)' }}>No items</td></tr>
+                    <tr><td colSpan={10} style={{ textAlign: 'center', padding: '24px', color: 'var(--xap-text-secondary)' }}>No items</td></tr>
                   ) : items.map(item => (
                     <tr key={item.id}>
                       <td>{item.itemNumber}</td>
@@ -230,7 +230,7 @@ export default function SalesOrderDetail() {
               </div>
               {items.length > 0 && (
                 <div style={{ marginTop: '16px' }}>
-                  <table className="sap-table">
+                  <table className="xap-table">
                     <thead>
                       <tr>
                         <th>Item #</th>
@@ -250,7 +250,7 @@ export default function SalesOrderDetail() {
                           <td style={{ textAlign: 'right' }}>{new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(item.netValue)}</td>
                         </tr>
                       ))}
-                      <tr style={{ borderTop: '2px solid var(--sap-border)', fontWeight: 600 }}>
+                      <tr style={{ borderTop: '2px solid var(--xap-border)', fontWeight: 600 }}>
                         <td colSpan={4} style={{ textAlign: 'right' }}>Total</td>
                         <td style={{ textAlign: 'right' }}>
                           {new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(so.totalNetValue)}
@@ -278,9 +278,9 @@ export default function SalesOrderDetail() {
             </div>
             <div className="section-body">
               {(so.attachments || []).length === 0 ? (
-                <p style={{ fontSize: '14px', color: 'var(--sap-text-secondary)' }}>No attachments.</p>
+                <p style={{ fontSize: '14px', color: 'var(--xap-text-secondary)' }}>No attachments.</p>
               ) : (
-                <table className="sap-table">
+                <table className="xap-table">
                   <thead>
                     <tr>
                       <th>File Name</th>
@@ -313,7 +313,7 @@ export default function SalesOrderDetail() {
       {/* Sticky footer edit bar */}
       {editMode && (
         <div className="sticky-footer">
-          <span style={{ fontSize: '13px', color: 'var(--sap-text-secondary)', marginRight: 'auto' }}>
+          <span style={{ fontSize: '13px', color: 'var(--xap-text-secondary)', marginRight: 'auto' }}>
             Editing Sales Order {so.soNumber}
           </span>
           <button className="btn-secondary" onClick={cancelEdit}>Cancel</button>

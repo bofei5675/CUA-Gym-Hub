@@ -139,7 +139,7 @@ export const SlashMenu = ({ onClose, onSelect, initialQuery = '' }) => {
               <div
                 key={item.id}
                 className={`flex items-center px-3 py-2 cursor-pointer text-sm ${
-                  index === selectedIndex ? 'bg-notion-hover' : 'hover:bg-notion-hover'
+                  index === selectedIndex ? 'bg-xotion-hover' : 'hover:bg-xotion-hover'
                 }`}
                 onClick={() => onSelect(item.id)}
                 onMouseEnter={() => setSelectedIndex(index)}
@@ -148,7 +148,7 @@ export const SlashMenu = ({ onClose, onSelect, initialQuery = '' }) => {
                   <item.icon size={16} />
                 </div>
                 <div className="flex-1">
-                  <div className="font-medium text-notion-text">{item.label}</div>
+                  <div className="font-medium text-xotion-text">{item.label}</div>
                   <div className="text-xs text-gray-400 truncate">{item.description}</div>
                 </div>
               </div>

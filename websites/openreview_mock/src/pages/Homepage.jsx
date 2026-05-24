@@ -34,9 +34,9 @@ function Homepage() {
           <h2 style={{ fontSize: 24, fontWeight: 400, marginBottom: 15, color: '#2c3a4a' }}>News</h2>
           <div>
             {[
-              { title: 'OpenReview Introduces Multi-Factor Authentication for All Users', date: 'Mar 23, 2026' },
+              { title: 'XpenReview Introduces Multi-Factor Authentication for All Users', date: 'Mar 23, 2026' },
               { title: 'Survey Finds Broad Support for Greater Openness in AI Peer Review', date: 'Feb 13, 2026' },
-              { title: 'A Message from AI Research Leaders: Join Us in Supporting OpenReview', date: 'Dec 19, 2025' },
+              { title: 'A Message from AI Research Leaders: Join Us in Supporting XpenReview', date: 'Dec 19, 2025' },
             ].map((news, i) => (
               <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '6px 0', borderBottom: i < 2 ? '1px solid #f0f0f0' : 'none' }}>
                 <a href="#" style={{ fontSize: 15 }}>{news.title}</a>
@@ -45,7 +45,7 @@ function Homepage() {
             ))}
           </div>
           <div style={{ marginTop: 10 }}>
-            <a href="#" style={{ fontSize: 14 }}>View all OpenReview news</a>
+            <a href="#" style={{ fontSize: 14 }}>View all XpenReview news</a>
           </div>
         </div>
 
@@ -114,7 +114,7 @@ function Homepage() {
       <footer className="sitemap" style={{ marginTop: 60, borderTop: '1px solid #dddddd', padding: '20px 0' }}>
         <div className="container">
           <div className="row" style={{ display: 'flex', justifyContent: 'center', gap: 30, marginBottom: 15, flexWrap: 'wrap' }}>
-            <a href="#" style={{ color: '#2c3a4a', fontSize: 14 }}>About OpenReview</a>
+            <a href="#" style={{ color: '#2c3a4a', fontSize: 14 }}>About XpenReview</a>
             <a href="#" style={{ color: '#2c3a4a', fontSize: 14 }}>Hosting a Venue</a>
             <a href="#" style={{ color: '#2c3a4a', fontSize: 14 }}>All Venues</a>
             <a href="#" style={{ color: '#2c3a4a', fontSize: 14 }}>Contact</a>
@@ -128,7 +128,7 @@ function Homepage() {
       </footer>
       <div className="sponsor" style={{ textAlign: 'center', padding: '10px 0' }}>
         <p style={{ fontSize: 12, color: '#999' }}>
-          OpenReview is a long-term project to advance science through improved peer review with legal nonprofit status. &copy; 2026 OpenReview
+          XpenReview is a long-term project to advance science through improved peer review with legal nonprofit status. &copy; 2026 XpenReview
         </p>
       </div>
     </div>

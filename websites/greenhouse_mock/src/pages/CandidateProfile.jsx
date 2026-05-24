@@ -730,7 +730,7 @@ export default function CandidateProfile() {
                 </div>
               </div>
               <div style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.7 }}>
-                This local profile preview keeps the sandbox self-contained while preserving the visible Greenhouse workflow for inspecting candidate social context.
+                This local profile preview keeps the sandbox self-contained while preserving the visible Xreenhouse workflow for inspecting candidate social context.
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 14 }}>
                 {(candidate.tags || []).map(tag => <span key={tag} className="badge badge-gray">{tag}</span>)}

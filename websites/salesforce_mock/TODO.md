@@ -1,4 +1,4 @@
-# Salesforce CRM Mock — TODO
+# Xalesforce CRM Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-02-28
@@ -24,7 +24,7 @@ These items are already implemented and working:
 - [x] Toast notification system
 - [x] Global search (SearchBox component)
 - [x] Generic CreateModal component
-- [x] CSS design system with Salesforce variables (--primary: #0176D3, --success: #04844B, etc.)
+- [x] CSS design system with Xalesforce variables (--primary: #0176D3, --success: #04844B, etc.)
 
 ---
 
@@ -33,11 +33,11 @@ These items are already implemented and working:
 These are the most critical improvements for agent training. Each makes existing pages more interactive and realistic.
 
 ### 1. Opportunity Kanban/Pipeline Board View
-- [x] Add a toggle on the Opportunities page between "Table" and "Kanban" view modes (two buttons in the header area, styled like Salesforce toggle tabs: icon + text, active state has bottom blue border)
+- [x] Add a toggle on the Opportunities page between "Table" and "Kanban" view modes (two buttons in the header area, styled like Xalesforce toggle tabs: icon + text, active state has bottom blue border)
 - [x] **Kanban board layout**: Render columns for each stage (Prospecting, Qualification, Needs Analysis, Value Proposition, Proposal, Negotiation, Closed Won, Closed Lost). Each column has: a header showing stage name + count of deals + sum of amounts (formatted as "$XXK"), then a vertical stack of opportunity cards below
 - [x] **Opportunity cards in Kanban**: Each card (white background, 1px border, 8px border-radius, 12px padding) shows: opportunity name (bold, linked to detail page), account name (smaller, gray), amount (green text, formatted "$XXK"), close date, small colored circle for owner avatar. On hover: subtle shadow elevation
 - [x] **Drag-and-drop stage change**: Use native HTML5 drag/drop (no external library needed). When user drags a card from one column to another, update the opportunity's `stage` field in state and update the `probability` field to match the new stage's default probability (see data_model.md §Opportunity Stages). Show a toast "Opportunity moved to {stage}"
-- [x] **Column styling**: Columns should have a light gray background (#F3F3F3), max-height with scroll if many cards, and a subtle top border color matching Salesforce stage colors (use primary blue for active stages, green for Closed Won, red for Closed Lost)
+- [x] **Column styling**: Columns should have a light gray background (#F3F3F3), max-height with scroll if many cards, and a subtle top border color matching Xalesforce stage colors (use primary blue for active stages, green for Closed Won, red for Closed Lost)
 
 ### 2. Record Detail Page — Activity Timeline Tab
 - [x] On LeadDetail, AccountDetail, ContactDetail, OpportunityDetail, and CaseDetail pages: replace the placeholder "No activities yet" in the Activity tab with a working **Activity Timeline** component
@@ -52,7 +52,7 @@ These are the most critical improvements for agent training. Each makes existing
 - [x] On **LeadDetail**: Related tab shows: (1) **Activities** — activities related to this lead; (2) **Files** — any files (static placeholder list is fine)
 - [x] Each related list table: card container with header (entity name + count badge + "New" button on the right), table with 3-5 columns, max 5 rows with "View All" link if more exist. Clicking a name navigates to that record's detail page
 
-### 4. Salesforce Path — Interactive Stage Advancement
+### 4. Xalesforce Path — Interactive Stage Advancement
 - [x] On **OpportunityDetail**: Make the stage progress bar interactive. Each stage segment is clickable. Clicking a stage opens a small popover/dropdown below it showing: stage name, "Mark as Current Stage" button, and key fields for that stage (e.g., for "Qualification" show "Budget Confirmed?" checkbox; for "Proposal" show "Proposal Sent Date" text)
 - [x] Clicking "Mark as Current Stage" updates the opportunity's `stage` and `probability` fields, recalculates the progress bar fill, and shows a toast confirmation
 - [x] If clicking "Closed Won" stage: show a celebration effect — a brief confetti-style CSS animation (use a simple keyframe animation with colored dots that scatter and fade, no external library) and green success toast "Congratulations! Deal closed!"

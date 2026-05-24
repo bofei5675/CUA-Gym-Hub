@@ -102,7 +102,7 @@ export default function EC2InstanceDetail() {
 
   return (
     <div className="space-y-0">
-      {/* Instance Summary Header - matches real AWS Console */}
+      {/* Instance Summary Header - matches real XWS Console */}
       <div className="aws-card">
         <div className="flex items-center justify-between mb-3">
           <div>

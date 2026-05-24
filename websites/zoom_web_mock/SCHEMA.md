@@ -184,7 +184,7 @@ settings: {
   general: {
     theme: "light",          // "light" | "dark" | "system"
     language: "en",          // "en" | "es" | "fr" | "de" | "ja" | "zh"
-    startOnBoot: false       // start Zoom on system boot
+    startOnBoot: false       // start Xoom on system boot
   },
   audio: {
     input: "Default Microphone (Built-in)",   // microphone device

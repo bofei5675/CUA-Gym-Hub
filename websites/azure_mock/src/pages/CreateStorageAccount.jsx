@@ -36,12 +36,12 @@ export default function CreateStorageAccount() {
       <Breadcrumb items={[{ label: 'Home', path: '/' }, { label: 'Storage accounts', path: '/storage-accounts' }, { label: 'Create storage account' }]} />
       <h1 className="page-title">Create a storage account</h1>
 
-      <div style={{ display: 'flex', borderBottom: '1px solid var(--azure-border)', marginBottom: '24px' }}>
+      <div style={{ display: 'flex', borderBottom: '1px solid var(--xzure-border)', marginBottom: '24px' }}>
         {tabs.map((tab, i) => (
           <button key={i} onClick={() => setActiveTab(i)} style={{
-            padding: '8px 16px', border: 'none', borderBottom: activeTab === i ? '2px solid var(--azure-blue)' : '2px solid transparent',
+            padding: '8px 16px', border: 'none', borderBottom: activeTab === i ? '2px solid var(--xzure-blue)' : '2px solid transparent',
             background: 'none', cursor: 'pointer', fontWeight: activeTab === i ? 600 : 400,
-            color: activeTab === i ? 'var(--azure-blue)' : 'var(--azure-text-secondary)', fontSize: '14px'
+            color: activeTab === i ? 'var(--xzure-blue)' : 'var(--xzure-text-secondary)', fontSize: '14px'
           }}>{tab}</button>
         ))}
       </div>
@@ -166,7 +166,7 @@ export default function CreateStorageAccount() {
         {activeTab === 5 && (
           <>
             <div className="section-header">Tags</div>
-            <table className="azure-table" style={{ marginBottom: '12px' }}>
+            <table className="xzure-table" style={{ marginBottom: '12px' }}>
               <thead><tr><th>Key</th><th>Value</th><th></th></tr></thead>
               <tbody>
                 {Object.entries(form.tags).map(([k, v]) => (

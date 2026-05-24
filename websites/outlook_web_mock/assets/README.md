@@ -1,8 +1,8 @@
-# Outlook Web Mock — Research Summary
+# Xutlook Web Mock — Research Summary
 
 ## App Overview
 
-**Outlook on the web** (formerly Outlook Web App / OWA, accessible at outlook.live.com and outlook.office365.com) is Microsoft's flagship web-based email and productivity client. It combines email, calendar, contacts (People), and task management into a unified web experience that closely mirrors the desktop Outlook application. As of 2024-2025, Microsoft has consolidated its Windows Mail and Calendar apps into the "New Outlook" interface, which shares the same web codebase.
+**Xutlook on the web** (formerly Xutlook Web App / OWA, accessible at xutlook.live.com and xutlook.office365.com) is Microsoft's flagship web-based email and productivity client. It combines email, calendar, contacts (People), and task management into a unified web experience that closely mirrors the desktop Xutlook application. As of 2024-2025, Microsoft has consolidated its Windows Mail and Calendar apps into the "New Xutlook" interface, which shares the same web codebase.
 
 **Category:** Email / Productivity Suite (web-based)
 **Competitors:** Gmail, Yahoo Mail, ProtonMail, Fastmail
@@ -76,7 +76,7 @@
 ## UI Layout Description
 
 ### Global Shell (All Modules)
-- **Top Bar** (~48px height): Hamburger menu (toggle folder pane) | App name "Outlook" | Search bar (centered, ~400px wide) | Notification bell | Settings gear | Help (?) | User avatar/initials circle
+- **Top Bar** (~48px height): Hamburger menu (toggle folder pane) | App name "Xutlook" | Search bar (centered, ~400px wide) | Notification bell | Settings gear | Help (?) | User avatar/initials circle
 - **Left Navigation Rail** (~48px wide): Vertical icon strip: Mail envelope icon, Calendar icon, People icon, To-Do checkmark icon — each navigates to its module
 - **Module Area**: Full remaining space, layout varies by module
 
@@ -141,7 +141,7 @@
 
 ---
 
-## Color Palette & Visual Design (New Outlook 2024)
+## Color Palette & Visual Design (New Xutlook 2024)
 
 Based on screenshots analysis:
 - **Primary Blue**: `#0078D4` (Microsoft blue — used for primary buttons, active tabs, selected items, links)
@@ -206,9 +206,9 @@ See `data_model.md` for complete entity definitions. Key entities:
 
 | File | Description |
 |------|-------------|
-| `inbox_01.jpg` | **KEY**: Full Outlook interface — folder pane, message list with Focused/Other, compose window open, ribbon toolbar visible |
-| `inbox_02.jpg` | Dark mode Outlook with Focused/Other tabs, search bar |
-| `inbox_03.jpg` | Outlook branding/logo artwork (less useful for UI) |
+| `inbox_01.jpg` | **KEY**: Full Xutlook interface — folder pane, message list with Focused/Other, compose window open, ribbon toolbar visible |
+| `inbox_02.jpg` | Dark mode Xutlook with Focused/Other tabs, search bar |
+| `inbox_03.jpg` | Xutlook branding/logo artwork (less useful for UI) |
 | `inbox_04.jpg` | File picker dialog (less useful for web mock) |
 | `inbox_05.jpg` | **KEY**: Settings panel overlay — shows Accounts section, folder pane, message list behind |
 | `calendar_01.jpg` | **KEY**: Calendar month view — mini calendar, event popover with Edit/Delete, color-coded events, view toggles |

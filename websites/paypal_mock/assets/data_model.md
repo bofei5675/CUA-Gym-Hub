@@ -1,4 +1,4 @@
-# PayPal Mock — Data Model
+# XayPal Mock — Data Model
 
 This document defines all entity types, their fields, relationships, and the `createInitialData()` structure used by `dataManager.js` (currently `src/lib/initialData.js`).
 
@@ -16,7 +16,7 @@ The currently logged-in user. Always exactly one.
 | `name` | string | `"Alex Johnson"` | Display name |
 | `email` | string | `"alex.johnson@email.com"` | Primary email |
 | `phone` | string | `"+1 (555) 123-4567"` | Phone number |
-| `balance` | number | `4250.50` | PayPal balance in primary currency |
+| `balance` | number | `4250.50` | XayPal balance in primary currency |
 | `currency` | string | `"USD"` | Primary currency code |
 | `avatar` | string | `"https://..."` | Profile picture URL |
 | `address` | object | `{ street, city, state, zip, country }` | Mailing address |
@@ -56,7 +56,7 @@ All financial activities — payments sent, received, withdrawals, refunds, requ
 | `senderName` | string | `"Mike Johnson"` | For incoming payments |
 | `senderEmail` | string | `"mike@example.com"` | For incoming payments |
 | `destination` | string | `"Chase Bank ****4422"` | For withdrawals |
-| `source` | string | `"PayPal balance"` | Payment source |
+| `source` | string | `"XayPal balance"` | Payment source |
 | `date` | string (ISO) | `"2025-03-07T10:30:00Z"` | Transaction timestamp |
 | `status` | string | `"completed"` | One of: `completed`, `pending`, `failed`, `refunded`, `cancelled`, `on_hold` |
 | `description` | string | `"Dinner split"` | User-entered note or auto description |
@@ -128,7 +128,7 @@ In-app notifications and alerts.
 
 ### 7. Subscription (optional/stretch)
 
-Recurring payment subscriptions managed through PayPal.
+Recurring payment subscriptions managed through XayPal.
 
 | Field | Type | Example | Notes |
 |-------|------|---------|-------|
@@ -222,7 +222,7 @@ export const INITIAL_STATE = {
     {
       id: "t_1", type: "payment_sent", amount: 12.50, currency: "USD", fee: 0,
       netAmount: 12.50, recipientName: "Starbucks", recipientEmail: "orders@starbucks.com",
-      senderName: null, senderEmail: null, destination: null, source: "PayPal balance",
+      senderName: null, senderEmail: null, destination: null, source: "XayPal balance",
       date: /* 2 hours ago */, status: "completed", description: "Morning Coffee",
       category: "goods", transactionId: "TXN-A1B2C3D4", relatedInvoiceId: null
     },
@@ -238,7 +238,7 @@ export const INITIAL_STATE = {
       id: "t_3", type: "withdrawal", amount: 500.00, currency: "USD", fee: 0,
       netAmount: 500.00, recipientName: null, recipientEmail: null,
       senderName: null, senderEmail: null,
-      destination: "Chase Bank ····4422", source: "PayPal balance",
+      destination: "Chase Bank ····4422", source: "XayPal balance",
       date: /* 3 days ago */, status: "completed", description: "Transfer to bank",
       category: "personal", transactionId: "TXN-I9J0K1L2", relatedInvoiceId: null
     },
@@ -260,7 +260,7 @@ export const INITIAL_STATE = {
     {
       id: "t_6", type: "payment_sent", amount: 25.00, currency: "USD", fee: 0,
       netAmount: 25.00, recipientName: "Sarah Smith", recipientEmail: "sarah.smith@email.com",
-      senderName: null, senderEmail: null, destination: null, source: "PayPal balance",
+      senderName: null, senderEmail: null, destination: null, source: "XayPal balance",
       date: /* 7 days ago */, status: "completed", description: "Lunch",
       category: "personal", transactionId: "TXN-U1V2W3X4", relatedInvoiceId: null
     },
@@ -306,7 +306,7 @@ export const INITIAL_STATE = {
       id: "t_12", type: "withdrawal", amount: 1000.00, currency: "USD", fee: 0,
       netAmount: 1000.00, recipientName: null, recipientEmail: null,
       senderName: null, senderEmail: null,
-      destination: "Chase Bank ····4422", source: "PayPal balance",
+      destination: "Chase Bank ····4422", source: "XayPal balance",
       date: /* 20 days ago */, status: "completed", description: "Transfer to bank",
       category: "personal", transactionId: "TXN-S5T6U7V8", relatedInvoiceId: null
     }
@@ -397,7 +397,7 @@ export const INITIAL_STATE = {
 
 1. **Dates should be relative to `Date.now()`** — use expressions like `new Date(Date.now() - 1000*60*60*24*N).toISOString()` to generate dates relative to when the app loads, so data always looks fresh.
 
-2. **Initials avatars**: When `avatar` is null, render a colored circle with white initials using `initialsColor`. This matches the real PayPal UI (see `dashboard_03.jpg`).
+2. **Initials avatars**: When `avatar` is null, render a colored circle with white initials using `initialsColor`. This matches the real XayPal UI (see `dashboard_03.jpg`).
 
 3. **Transaction IDs**: Use format `TXN-XXXXXXXX` (8 alphanumeric chars) for realistic transaction identifiers.
 

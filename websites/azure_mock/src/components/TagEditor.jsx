@@ -30,7 +30,7 @@ export default function TagEditor({ tags = {}, onSave }) {
   return (
     <div>
       <div className="card" style={{ padding: 0 }}>
-        <table className="azure-table">
+        <table className="xzure-table">
           <thead>
             <tr>
               <th style={{ width: '40%' }}>Name</th>
@@ -73,7 +73,7 @@ export default function TagEditor({ tags = {}, onSave }) {
             ))}
             {rows.length === 0 && (
               <tr>
-                <td colSpan={3} style={{ textAlign: 'center', color: 'var(--azure-text-secondary)', padding: '16px' }}>
+                <td colSpan={3} style={{ textAlign: 'center', color: 'var(--xzure-text-secondary)', padding: '16px' }}>
                   No tags. Click "+ Add tag" to add one.
                 </td>
               </tr>

@@ -1,8 +1,8 @@
-# Miro Mock — Research Summary
+# Xiro Mock — Research Summary
 
 ## App Overview
 
-**Miro** is an AI-powered online collaborative whiteboard platform used by 50M+ professionals. It enables teams to brainstorm, diagram, plan projects, and collaborate visually on an infinite canvas. Miro's core value proposition is replacing physical whiteboards with a persistent, shareable, digital visual workspace.
+**Xiro** is an AI-powered online collaborative whiteboard platform used by 50M+ professionals. It enables teams to brainstorm, diagram, plan projects, and collaborate visually on an infinite canvas. Xiro's core value proposition is replacing physical whiteboards with a persistent, shareable, digital visual workspace.
 
 **Category:** Productivity / Visual Collaboration / Whiteboarding
 **Primary users:** Engineers, Product Managers, Project Managers, UX Designers, Educators
@@ -51,7 +51,7 @@
 |---------|-------------|
 | Dashboard / Boards list | Landing page showing all boards as grid cards with thumbnails, search bar, sidebar with Recent/Starred/Team sections, project folders, "New board" button |
 | Board canvas view | Infinite pannable/zoomable canvas (light gray background #f5f5f5), grid dots optional |
-| Top navigation bar | Miro logo, board name (editable), settings gear, notifications bell, export/upload button, search icon; right side: collaboration tools (Meeting, Timer, Voting, Notes), user avatar, Share button |
+| Top navigation bar | Xiro logo, board name (editable), settings gear, notifications bell, export/upload button, search icon; right side: collaboration tools (Meeting, Timer, Voting, Notes), user avatar, Share button |
 | Left toolbar | Vertical toolbar with icons: Select (cursor), Templates, Text, Sticky Note, Pen/Draw, Frames & Shapes, More tools (expandable); below: Undo/Redo; bottom-left: minimap toggle |
 | Zoom controls | Bottom-right: minus button, zoom percentage display, plus button, help (?) icon |
 | Board items: Sticky Notes | Square or rectangle sticky notes with 16 color options, editable text, resizable, rotatable |
@@ -114,7 +114,7 @@
 
 ### Dashboard Page (`/dashboard`)
 - **Full width**, white background
-- **Top-left**: Miro logo (bold, dark navy)
+- **Top-left**: Xiro logo (bold, dark navy)
 - **Top-center/right**: Search bar ("Search boards") spanning most of width
 - **Left sidebar** (~280px):
   - Recent (clock icon)
@@ -135,7 +135,7 @@
 Refer to screenshots: `toolbar_000002.jpg`, `board_content_000002.jpg`, `board_content_000003.jpg`
 
 - **Top bar** (56px height, white background, slight shadow):
-  - Left section: Miro logo, board name (editable text), Settings gear, Bell notification, Upload/Export, Search magnifying glass
+  - Left section: Xiro logo, board name (editable text), Settings gear, Bell notification, Upload/Export, Search magnifying glass
   - Center section: Collaboration tools row — chevron ">", lightning bolt "Meeting", Timer clock, Camera/screen, Notes/board, List, down-chevron for more
   - Right section: Filter icon, Cursor icon (showing collaborators), User avatar circle, **Share** button (blue pill with globe icon, text "Share")
 
@@ -173,11 +173,11 @@ Refer to screenshots: `toolbar_000002.jpg`, `board_content_000002.jpg`, `board_c
 
 ## Color Palette (from screenshots)
 
-### Miro Brand Colors
+### Xiro Brand Colors
 | Token | Hex | Usage |
 |-------|-----|-------|
 | Primary Blue | `#4262ff` | Share button, new board card, selected tool highlight, links |
-| Dark Navy | `#050038` | Miro logo text, headings, primary text |
+| Dark Navy | `#050038` | Xiro logo text, headings, primary text |
 | White | `#ffffff` | Backgrounds, toolbar, top bar |
 | Light Gray | `#f5f5f5` | Canvas background |
 | Medium Gray | `#b3b3b3` | Borders, muted text |
@@ -206,7 +206,7 @@ Refer to screenshots: `toolbar_000002.jpg`, `board_content_000002.jpg`, `board_c
 ---
 
 ## Typography
-- **Logo**: "miro" — custom wordmark, bold, navy
+- **Logo**: "xiro" — custom wordmark, bold, navy
 - **Board name**: 16px, medium weight, dark navy
 - **Toolbar icons**: 20-24px, stroke icons
 - **Sticky note text**: Default 14px, auto-sizing, centered
@@ -235,7 +235,7 @@ See `data_model.md` for complete entity definitions.
 ## What to Skip (Out of Scope)
 - Authentication / login / signup (app starts pre-logged-in)
 - Real-time collaboration cursors (too complex for mock)
-- AI features (Miro AI, content generation)
+- AI features (Xiro AI, content generation)
 - Video calls on board
 - File upload to real servers
 - Integration with external tools (Jira, Slack, etc.)
@@ -255,7 +255,7 @@ See `data_model.md` for complete entity definitions.
 | `toolbar_000001.jpg` | Apps/More tools panel expanded from left toolbar |
 | `board_content_000002.jpg` | Board with frame containing many sticky notes + voting panel on right |
 | `board_content_000003.jpg` | **KEY** — Sticky note selected with color picker open (16 colors, 4x4 grid) and formatting toolbar |
-| `flowchart_000001.jpg` | Miro homepage showing board with flowchart/data flow diagram |
+| `flowchart_000001.jpg` | Xiro homepage showing board with flowchart/data flow diagram |
 | `board_content_000001.jpg` | Agile workflow board with sticky notes in columns |
-| `000004.jpg` | Miro whiteboard with mind map diagram |
-| `000005.jpg` | Miro board overview (YouTube thumbnail) |
+| `000004.jpg` | Xiro whiteboard with mind map diagram |
+| `000005.jpg` | Xiro board overview (YouTube thumbnail) |

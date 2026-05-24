@@ -4,7 +4,7 @@ import { useStore } from '../context/StoreContext';
 import { Upload, X, Image } from 'lucide-react';
 
 function makeListingImage(title, category) {
-  const label = (title || category || 'eBay').slice(0, 32);
+  const label = (title || category || 'xBay').slice(0, 32);
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"><rect width="400" height="400" fill="#f5f5f5"/><rect x="28" y="28" width="344" height="344" rx="18" fill="#ffffff" stroke="#e5e7eb" stroke-width="6"/><circle cx="200" cy="150" r="54" fill="#e53238"/><rect x="96" y="232" width="208" height="18" rx="9" fill="#0064d2"/><rect x="128" y="266" width="144" height="14" rx="7" fill="#86b817"/><text x="200" y="330" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#333333">${label.replace(/[&<>"']/g, '')}</text></svg>`;
   return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
 }
@@ -161,7 +161,7 @@ export default function CreateListing() {
           <label className="block text-sm font-bold mb-2">Photos</label>
           <div
             onClick={() => fileInputRef.current?.click()}
-            className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center cursor-pointer hover:bg-gray-50 hover:border-ebay-blue transition-colors"
+            className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center cursor-pointer hover:bg-gray-50 hover:border-xbay-blue transition-colors"
           >
             <Upload className="mx-auto text-gray-400 mb-2" />
             <p className="text-sm text-gray-500">Click to upload photos</p>
@@ -189,14 +189,14 @@ export default function CreateListing() {
                     <X size={12} />
                   </button>
                   {i === 0 && (
-                    <span className="absolute bottom-0 left-0 right-0 bg-ebay-blue/80 text-white text-[10px] text-center py-0.5">Main</span>
+                    <span className="absolute bottom-0 left-0 right-0 bg-xbay-blue/80 text-white text-[10px] text-center py-0.5">Main</span>
                   )}
                 </div>
               ))}
               {uploadedImages.length < 12 && (
                 <div
                   onClick={() => fileInputRef.current?.click()}
-                  className="aspect-square rounded border-2 border-dashed border-gray-300 flex items-center justify-center cursor-pointer hover:border-ebay-blue hover:bg-gray-50 transition-colors"
+                  className="aspect-square rounded border-2 border-dashed border-gray-300 flex items-center justify-center cursor-pointer hover:border-xbay-blue hover:bg-gray-50 transition-colors"
                 >
                   <Image size={20} className="text-gray-400" />
                 </div>

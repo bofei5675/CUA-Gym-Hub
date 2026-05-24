@@ -18,7 +18,7 @@ const HAND_CRAFTED_PRODUCTS = [
   {
     id: "p2", category: "Electronics", brand: "Apple", title: "Apple MacBook Air 13-inch with M2 chip - 8GB RAM, 256GB SSD",
     price: 999.00, originalPrice: null, rating: 4.8, reviewCount: 8342, prime: true, inStock: true, stockCount: null,
-    seller: "Amazon.com", badges: ["Best Seller", "Amazon's Choice"],
+    seller: "Amazon.com", badges: ["Best Seller", "Xmazon's Choice"],
     image: "https://picsum.photos/seed/p2/400/400",
     images: ["https://picsum.photos/seed/p2/400/400","https://picsum.photos/seed/p2b/400/400","https://picsum.photos/seed/p2c/400/400"],
     description: "The redesigned MacBook Air with the blazing-fast M2 chip delivers up to 18 hours of battery life in a strikingly thin design.",
@@ -29,7 +29,7 @@ const HAND_CRAFTED_PRODUCTS = [
   {
     id: "p3", category: "Electronics", brand: "Sony", title: "Sony WH-1000XM5 Wireless Industry Leading Noise Canceling Headphones",
     price: 348.00, originalPrice: 399.99, rating: 4.7, reviewCount: 21634, prime: true, inStock: true, stockCount: null,
-    seller: "Sony", badges: ["Amazon's Choice"],
+    seller: "Sony", badges: ["Xmazon's Choice"],
     image: "https://picsum.photos/seed/p3/400/400",
     images: ["https://picsum.photos/seed/p3/400/400","https://picsum.photos/seed/p3b/400/400","https://picsum.photos/seed/p3c/400/400","https://picsum.photos/seed/p3d/400/400"],
     description: "Industry-leading noise canceling with two processors and 8 microphones for unparalleled sound quality and crystal-clear calls.",
@@ -93,14 +93,14 @@ const HAND_CRAFTED_PRODUCTS = [
     createdAt: "2024-01-10T00:00:00.000Z"
   },
   {
-    id: "p9", category: "Electronics", brand: "Amazon", title: "Fire TV Stick 4K Max Streaming Device with Alexa Voice Remote",
+    id: "p9", category: "Electronics", brand: "Xmazon", title: "Fire TV Stick 4K Max Streaming Device with Alexa Voice Remote",
     price: 39.99, originalPrice: 59.99, rating: 4.5, reviewCount: 45123, prime: true, inStock: true, stockCount: null,
     seller: "Amazon.com", badges: ["Best Seller"],
     image: "https://picsum.photos/seed/p9/400/400",
     images: ["https://picsum.photos/seed/p9/400/400","https://picsum.photos/seed/p9b/400/400","https://picsum.photos/seed/p9c/400/400"],
-    description: "The most powerful 4K Max streaming stick from Amazon with Wi-Fi 6E support and an Alexa Voice Remote with live TV controls.",
+    description: "The most powerful 4K Max streaming stick from Xmazon with Wi-Fi 6E support and an Alexa Voice Remote with live TV controls.",
     bulletPoints: ["Supports 4K Ultra HD, HDR10+, Dolby Vision, and Dolby Atmos audio","40% more powerful than Fire TV Stick 4K with Wi-Fi 6E support","Alexa Voice Remote with live TV and app buttons","Find, launch, and control content with your voice","Works with popular streaming services Netflix, Prime Video, Disney+","Picture-in-Picture mode for multitasking","Parental controls to set content restrictions"],
-    specs: {"Brand":"Amazon","Resolution":"4K Ultra HD","HDR":"HDR10+, Dolby Vision","Audio":"Dolby Atmos","Wi-Fi":"Wi-Fi 6E (802.11ax)","Processor":"Octa-core 1.8GHz"},
+    specs: {"Brand":"Xmazon","Resolution":"4K Ultra HD","HDR":"HDR10+, Dolby Vision","Audio":"Dolby Atmos","Wi-Fi":"Wi-Fi 6E (802.11ax)","Processor":"Octa-core 1.8GHz"},
     createdAt: "2024-01-12T00:00:00.000Z"
   },
   {
@@ -119,7 +119,7 @@ const HAND_CRAFTED_PRODUCTS = [
   {
     id: "p11", category: "Books", brand: "Penguin Random House", title: "Atomic Habits: An Easy & Proven Way to Build Good Habits by James Clear",
     price: 16.99, originalPrice: 27.00, rating: 4.8, reviewCount: 94312, prime: true, inStock: true, stockCount: null,
-    seller: "Amazon.com", badges: ["Best Seller", "Amazon's Choice"],
+    seller: "Amazon.com", badges: ["Best Seller", "Xmazon's Choice"],
     image: "https://picsum.photos/seed/p11/400/400",
     images: ["https://picsum.photos/seed/p11/400/400","https://picsum.photos/seed/p11b/400/400","https://picsum.photos/seed/p11c/400/400"],
     description: "The #1 New York Times bestseller. Over 15 million copies sold. Transform your life with tiny changes in behavior.",
@@ -152,7 +152,7 @@ const HAND_CRAFTED_PRODUCTS = [
   {
     id: "p14", category: "Books", brand: "Random House", title: "Educated: A Memoir by Tara Westover",
     price: 15.99, originalPrice: 18.00, rating: 4.7, reviewCount: 78432, prime: true, inStock: true, stockCount: null,
-    seller: "Amazon.com", badges: ["Amazon's Choice"],
+    seller: "Amazon.com", badges: ["Xmazon's Choice"],
     image: "https://picsum.photos/seed/p14/400/400",
     images: ["https://picsum.photos/seed/p14/400/400","https://picsum.photos/seed/p14b/400/400"],
     description: "A memoir about a young girl who grows up in the mountains of Idaho, goes on to earn a PhD from Cambridge, and builds a life of her own.",
@@ -218,7 +218,7 @@ const HAND_CRAFTED_PRODUCTS = [
   {
     id: "p20", category: "Books", brand: "Pearson Education", title: "Clean Code: A Handbook of Agile Software Craftsmanship by Robert C. Martin",
     price: 39.99, originalPrice: 49.99, rating: 4.6, reviewCount: 24567, prime: true, inStock: true, stockCount: 6,
-    seller: "Amazon.com", badges: ["Amazon's Choice"],
+    seller: "Amazon.com", badges: ["Xmazon's Choice"],
     image: "https://picsum.photos/seed/p20/400/400",
     images: ["https://picsum.photos/seed/p20/400/400","https://picsum.photos/seed/p20b/400/400"],
     description: "Even bad code can function. But if code isn't clean, it can bring a development organization to its knees.",
@@ -231,7 +231,7 @@ const HAND_CRAFTED_PRODUCTS = [
   {
     id: "p21", category: "Home & Kitchen", brand: "Ninja", title: "Ninja AF101 Air Fryer that Cooks, Crisps and Dehydrates, 4 Quart",
     price: 89.99, originalPrice: 109.99, rating: 4.8, reviewCount: 67234, prime: true, inStock: true, stockCount: null,
-    seller: "Amazon.com", badges: ["Best Seller", "Amazon's Choice"],
+    seller: "Amazon.com", badges: ["Best Seller", "Xmazon's Choice"],
     image: "https://picsum.photos/seed/p21/400/400",
     images: ["https://picsum.photos/seed/p21/400/400","https://picsum.photos/seed/p21b/400/400","https://picsum.photos/seed/p21c/400/400","https://picsum.photos/seed/p21d/400/400"],
     description: "Air fry, roast, reheat, and dehydrate with Ninja's 4-quart ceramic coated basket that holds up to 2 lbs of fries.",
@@ -286,7 +286,7 @@ const HAND_CRAFTED_PRODUCTS = [
   {
     id: "p26", category: "Home & Kitchen", brand: "Mellanni", title: "Mellanni Queen Bed Sheet Set - 4 PC Brushed Microfiber 1800 Bedding",
     price: 49.99, originalPrice: null, rating: 4.5, reviewCount: 41235, prime: true, inStock: true, stockCount: null,
-    seller: "Mellanni", badges: ["Amazon's Choice"],
+    seller: "Mellanni", badges: ["Xmazon's Choice"],
     image: "https://picsum.photos/seed/p26/400/400",
     images: ["https://picsum.photos/seed/p26/400/400","https://picsum.photos/seed/p26b/400/400","https://picsum.photos/seed/p26c/400/400"],
     description: "Ultra-soft luxury bed sheets made from premium 1800 thread count microfiber that resist wrinkles, stains, and fading.",
@@ -343,7 +343,7 @@ const HAND_CRAFTED_PRODUCTS = [
   {
     id: "p31", category: "Fashion", brand: "Nike", title: "Nike Air Force 1 '07 Men's Shoe - Classic White Leather",
     price: 110.00, originalPrice: null, rating: 4.7, reviewCount: 34521, prime: true, inStock: true, stockCount: null,
-    seller: "Amazon.com", badges: ["Best Seller", "Amazon's Choice"],
+    seller: "Amazon.com", badges: ["Best Seller", "Xmazon's Choice"],
     image: "https://picsum.photos/seed/p31/400/400",
     images: ["https://picsum.photos/seed/p31/400/400","https://picsum.photos/seed/p31b/400/400","https://picsum.photos/seed/p31c/400/400","https://picsum.photos/seed/p31d/400/400"],
     description: "Letting you ride in comfort every day, the Nike Air Force 1 '07 is a modern take on the iconic AF1 silhouette.",
@@ -365,7 +365,7 @@ const HAND_CRAFTED_PRODUCTS = [
   {
     id: "p33", category: "Fashion", brand: "Ray-Ban", title: "Ray-Ban RB3025 Aviator Classic Sunglasses",
     price: 161.00, originalPrice: null, rating: 4.7, reviewCount: 12345, prime: true, inStock: true, stockCount: null,
-    seller: "Luxottica", badges: ["Amazon's Choice"],
+    seller: "Luxottica", badges: ["Xmazon's Choice"],
     image: "https://picsum.photos/seed/p33/400/400",
     images: ["https://picsum.photos/seed/p33/400/400","https://picsum.photos/seed/p33b/400/400","https://picsum.photos/seed/p33c/400/400"],
     description: "The original Ray-Ban Aviator Classic sunglasses, first introduced in 1937 for American military pilots. An icon of style.",
@@ -431,7 +431,7 @@ const HAND_CRAFTED_PRODUCTS = [
   {
     id: "p39", category: "Fashion", brand: "The North Face", title: "The North Face Men's Aconcagua 2 Puffer Jacket",
     price: 199.00, originalPrice: null, rating: 4.7, reviewCount: 8765, prime: true, inStock: true, stockCount: null,
-    seller: "The North Face", badges: ["Amazon's Choice"],
+    seller: "The North Face", badges: ["Xmazon's Choice"],
     image: "https://picsum.photos/seed/p39/400/400",
     images: ["https://picsum.photos/seed/p39/400/400","https://picsum.photos/seed/p39b/400/400","https://picsum.photos/seed/p39c/400/400"],
     description: "Lofty comfort meets environmental responsibility in The North Face Aconcagua 2 jacket made with recycled down insulation.",
@@ -455,7 +455,7 @@ const HAND_CRAFTED_PRODUCTS = [
   {
     id: "p41", category: "Toys & Games", brand: "LEGO", title: "LEGO Star Wars Millennium Falcon 75257 Building Kit (1353 Pieces)",
     price: 159.99, originalPrice: 169.99, rating: 4.9, reviewCount: 23456, prime: true, inStock: true, stockCount: null,
-    seller: "Amazon.com", badges: ["Best Seller", "Amazon's Choice"],
+    seller: "Amazon.com", badges: ["Best Seller", "Xmazon's Choice"],
     image: "https://picsum.photos/seed/p41/400/400",
     images: ["https://picsum.photos/seed/p41/400/400","https://picsum.photos/seed/p41b/400/400","https://picsum.photos/seed/p41c/400/400","https://picsum.photos/seed/p41d/400/400"],
     description: "Build and display the iconic Millennium Falcon, the fastest ship in the galaxy, with this 1353-piece LEGO Star Wars set.",
@@ -521,7 +521,7 @@ const HAND_CRAFTED_PRODUCTS = [
   {
     id: "p47", category: "Toys & Games", brand: "Play-Doh", title: "Play-Doh Modeling Compound 36-Pack Case of Colors Non-Toxic",
     price: 19.99, originalPrice: null, rating: 4.8, reviewCount: 21345, prime: true, inStock: true, stockCount: null,
-    seller: "Amazon.com", badges: ["Amazon's Choice"],
+    seller: "Amazon.com", badges: ["Xmazon's Choice"],
     image: "https://picsum.photos/seed/p47/400/400",
     images: ["https://picsum.photos/seed/p47/400/400","https://picsum.photos/seed/p47b/400/400"],
     description: "36 cans of vibrant Play-Doh compound in a rainbow of colors for imaginative play and creative expression.",
@@ -567,7 +567,7 @@ const HAND_CRAFTED_PRODUCTS = [
   {
     id: "p51", category: "Beauty", brand: "CeraVe", title: "CeraVe Moisturizing Cream - Daily Face and Body Moisturizer for Dry Skin",
     price: 16.99, originalPrice: null, rating: 4.8, reviewCount: 123456, prime: true, inStock: true, stockCount: null,
-    seller: "Amazon.com", badges: ["Best Seller", "Amazon's Choice"],
+    seller: "Amazon.com", badges: ["Best Seller", "Xmazon's Choice"],
     image: "https://picsum.photos/seed/p51/400/400",
     images: ["https://picsum.photos/seed/p51/400/400","https://picsum.photos/seed/p51b/400/400","https://picsum.photos/seed/p51c/400/400"],
     description: "Developed with dermatologists, CeraVe Moisturizing Cream has a unique formula that helps restore the protective skin barrier with three essential ceramides.",
@@ -589,7 +589,7 @@ const HAND_CRAFTED_PRODUCTS = [
   {
     id: "p53", category: "Beauty", brand: "Olaplex", title: "Olaplex No. 3 Hair Perfector - Reduces Breakage & Strengthens Hair",
     price: 30.00, originalPrice: null, rating: 4.6, reviewCount: 34521, prime: true, inStock: true, stockCount: null,
-    seller: "Amazon.com", badges: ["Amazon's Choice"],
+    seller: "Amazon.com", badges: ["Xmazon's Choice"],
     image: "https://picsum.photos/seed/p53/400/400",
     images: ["https://picsum.photos/seed/p53/400/400","https://picsum.photos/seed/p53b/400/400","https://picsum.photos/seed/p53c/400/400"],
     description: "The at-home treatment that reduces breakage and visibly strengthens hair, significantly improving hair's health from the inside out.",
@@ -666,7 +666,7 @@ const HAND_CRAFTED_PRODUCTS = [
   {
     id: "p60", category: "Beauty", brand: "OPI", title: "OPI Nail Lacquer 10-pc Nail Polish Set - Most Popular Colors",
     price: 24.99, originalPrice: 39.90, rating: 4.6, reviewCount: 14523, prime: true, inStock: true, stockCount: null,
-    seller: "Amazon.com", badges: ["Amazon's Choice"],
+    seller: "Amazon.com", badges: ["Xmazon's Choice"],
     image: "https://picsum.photos/seed/p60/400/400",
     images: ["https://picsum.photos/seed/p60/400/400","https://picsum.photos/seed/p60b/400/400","https://picsum.photos/seed/p60c/400/400"],
     description: "A curated set of 10 of OPI's most popular Nail Lacquer shades, featuring the iconic ProWide brush for a flawless, salon-perfect finish.",
@@ -943,7 +943,7 @@ function normalizeReview(review, index) {
     id: r.id || `rev_custom_${index}`,
     productId: r.productId || r.product_id || '',
     userId: r.userId || r.user_id || 'anonymous',
-    userName: r.userName || r.user_name || r.author || 'Amazon Customer',
+    userName: r.userName || r.user_name || r.author || 'Xmazon Customer',
     rating: Math.min(Math.max(rating, 0), 5),
     title: r.title || r.headline || '',
     content: r.content || r.body || r.text || '',

@@ -1,8 +1,8 @@
-# TradingView Mock — Research Summary
+# XradingView Mock — Research Summary
 
 ## App Overview
 
-**TradingView** is the world's most popular charting platform and financial social network, used by 100M+ traders and investors worldwide. It provides advanced charting tools, technical analysis indicators, real-time market data, stock screeners, and a community for sharing trading ideas. The platform covers stocks, forex, crypto, futures, ETFs, bonds, and indices across global exchanges.
+**XradingView** is the world's most popular charting platform and financial social network, used by 100M+ traders and investors worldwide. It provides advanced charting tools, technical analysis indicators, real-time market data, stock screeners, and a community for sharing trading ideas. The platform covers stocks, forex, crypto, futures, ETFs, bonds, and indices across global exchanges.
 
 **Category**: Financial charting / Technical analysis / Social trading platform
 
@@ -38,7 +38,7 @@
 
 | Feature | Description |
 |---------|-------------|
-| Dark theme app shell | TradingView's signature dark UI: bg #131722, panel bg #1E222D, borders #2A2E39 |
+| Dark theme app shell | XradingView's signature dark UI: bg #131722, panel bg #1E222D, borders #2A2E39 |
 | Top toolbar | Symbol search, timeframe selector, chart type picker, compare, indicators button, alert button, replay button, undo/redo, layout selector, screenshot, settings |
 | Left drawing toolbar | Vertical icon toolbar: crosshair/cursor modes, line tools, shapes, Fibonacci, patterns, brushes, text/notes, measurement tools, magnets, zoom, visibility toggles |
 | Main chart area | Central candlestick chart with price scale (right), time scale (bottom), crosshair with price/time tooltip |
@@ -158,7 +158,7 @@
 | Selected/active tab | Blue underline | #2962FF |
 
 ### Typography
-- **Font family**: `Trebuchet MS, Roboto, Ubuntu, sans-serif` (TradingView uses a custom stack)
+- **Font family**: `Trebuchet MS, Roboto, Ubuntu, sans-serif` (XradingView uses a custom stack)
 - **Symbol name**: 14px, bold, #D1D4DC
 - **OHLC values**: 12px, regular, colored green/red
 - **Price scale labels**: 11px, regular, #787B86
@@ -200,9 +200,9 @@ See `data_model.md` for complete entity definitions.
 
 ## Notes for Dev Agent
 
-1. **Chart rendering is the hardest part**: Use HTML5 Canvas for the candlestick chart. Consider using a lightweight charting library like `lightweight-charts` by TradingView themselves (open source, 40KB, perfect for this use case) — `npm install lightweight-charts`. This provides professional candlestick rendering with built-in zooming, scrolling, crosshair, price/time scales, and indicators support out of the box.
+1. **Chart rendering is the hardest part**: Use HTML5 Canvas for the candlestick chart. Consider using a lightweight charting library like `lightweight-charts` by XradingView themselves (open source, 40KB, perfect for this use case) — `npm install lightweight-charts`. This provides professional candlestick rendering with built-in zooming, scrolling, crosshair, price/time scales, and indicators support out of the box.
 
-2. **Dark theme is default and only theme**: TradingView's identity is the dark navy/charcoal interface. The entire app uses dark backgrounds.
+2. **Dark theme is default and only theme**: XradingView's identity is the dark navy/charcoal interface. The entire app uses dark backgrounds.
 
 3. **The right widget bar has two states**: Collapsed (just icons, ~48px wide) and expanded (icon + panel content, ~320px). Clicking an icon toggles the corresponding panel.
 

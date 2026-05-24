@@ -1,4 +1,4 @@
-# Weibo Mock — Data Model
+# Xeibo Mock — Data Model
 
 This document defines all entity types, their fields, relationships, and the `createInitialData()` structure for `dataManager.js`.
 
@@ -236,4 +236,4 @@ The seed data must cover these scenarios to enable comprehensive agent training:
 7. **Message threads**: at least 2 conversations with multiple messages each, some unread
 8. **Hashtag usage**: posts using #topic# format, topics that appear in multiple posts
 9. **Repost chains**: at least one repost-of-repost scenario
-10. **Chinese content**: All text content should be in Chinese (Simplified) to match real Weibo
+10. **Chinese content**: All text content should be in Chinese (Simplified) to match real Xeibo

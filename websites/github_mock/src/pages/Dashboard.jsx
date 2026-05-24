@@ -33,7 +33,7 @@
                   <Link
                     key={repo.id}
                     to={`/${currentUser.username}/${repo.name}`}
-                    className="flex items-center gap-2 p-2 hover:bg-github-card rounded text-sm"
+                    className="flex items-center gap-2 p-2 hover:bg-xithub-card rounded text-sm"
                   >
                     <img src={`https://picsum.photos/20/20?random=${repo.id}`} alt={repo.name} className="w-4 h-4 rounded-full" />
                     <span className="font-semibold text-white">{currentUser.username}/{repo.name}</span>
@@ -43,16 +43,16 @@
               {myRepos.length > 5 && (
                 <button
                   onClick={() => setShowAllSidebar(!showAllSidebar)}
-                  className="mt-4 text-xs text-github-muted hover:text-github-accent flex items-center gap-1"
+                  className="mt-4 text-xs text-xithub-muted hover:text-xithub-accent flex items-center gap-1"
                 >
                   {showAllSidebar ? 'Show less' : 'Show more'}
                 </button>
               )}
             </div>
 
-            <div className="border-t border-github-border pt-4">
+            <div className="border-t border-xithub-border pt-4">
               <h2 className="font-semibold text-sm mb-2">Recent activity</h2>
-              <div className="border border-github-border rounded-md p-4 bg-github-card text-xs text-github-muted text-center">
+              <div className="border border-xithub-border rounded-md p-4 bg-xithub-card text-xs text-xithub-muted text-center">
                 When you have activity, we'll show it here.
               </div>
             </div>
@@ -62,12 +62,12 @@
           <div className="flex-1">
             <div className="mb-6">
               <h1 className="text-2xl font-semibold text-white mb-4">Home</h1>
-              <div className="bg-github-card border border-github-border rounded-md p-8 text-center">
+              <div className="bg-xithub-card border border-xithub-border rounded-md p-8 text-center">
                 <h3 className="text-xl font-bold text-white mb-2">Discover interesting projects</h3>
-                <p className="text-github-muted mb-4">Explore what others are building on GitMock.</p>
+                <p className="text-xithub-muted mb-4">Explore what others are building on GitMock.</p>
                 <Link
                   to={repos[0] ? `/${state.users.find(u => u.id === repos[0].ownerId)?.username}/${repos[0].name}` : '/'}
-                  className="inline-block bg-github-success text-white px-4 py-1.5 rounded-md font-semibold text-sm hover:bg-opacity-90"
+                  className="inline-block bg-xithub-success text-white px-4 py-1.5 rounded-md font-semibold text-sm hover:bg-opacity-90"
                 >
                   Explore
                 </Link>
@@ -80,20 +80,20 @@
                 const owner = state.users.find(u => u.id === repo.ownerId);
                 const isStarred = starredRepos[repo.id] || false;
                 return (
-                  <div key={repo.id} className="bg-github-card border border-github-border rounded-md p-4">
+                  <div key={repo.id} className="bg-xithub-card border border-xithub-border rounded-md p-4">
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-2">
-                        <Book size={16} className="text-github-muted" />
-                        <Link to={`/${owner?.username}/${repo.name}`} className="text-github-accent font-semibold hover:underline text-lg">
+                        <Book size={16} className="text-xithub-muted" />
+                        <Link to={`/${owner?.username}/${repo.name}`} className="text-xithub-accent font-semibold hover:underline text-lg">
                           {owner?.username} / {repo.name}
                         </Link>
-                        <span className="text-xs border border-github-border rounded-full px-2 py-0.5 text-github-muted">
+                        <span className="text-xs border border-xithub-border rounded-full px-2 py-0.5 text-xithub-muted">
                           {repo.isPrivate ? 'Private' : 'Public'}
                         </span>
                       </div>
                       <button
                         onClick={() => handleStar(repo.id)}
-                        className={`border border-github-border px-3 py-1 rounded-md text-xs font-semibold flex items-center gap-1 transition-colors ${
+                        className={`border border-xithub-border px-3 py-1 rounded-md text-xs font-semibold flex items-center gap-1 transition-colors ${
                           isStarred ? 'bg-[#2d1f00] border-yellow-700 hover:bg-[#3d2a00]' : 'bg-[#21262d] hover:bg-[#30363d]'
                         }`}
                       >
@@ -101,8 +101,8 @@
                         {isStarred ? 'Starred' : 'Star'}
                       </button>
                     </div>
-                    <p className="text-sm text-github-muted mb-4">{repo.description}</p>
-                    <div className="flex items-center gap-4 text-xs text-github-muted">
+                    <p className="text-sm text-xithub-muted mb-4">{repo.description}</p>
+                    <div className="flex items-center gap-4 text-xs text-xithub-muted">
                       <div className="flex items-center gap-1">
                         <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
                         {repo.language}

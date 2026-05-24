@@ -34,7 +34,7 @@ Amazon.com is the world's largest online e-commerce marketplace, originally star
 ## Complete Feature List
 
 ### P0 — Core Shell (Must have for app to render)
-1. **Header bar** — Dark navy (#232F3E) top bar with: Amazon logo, delivery location, search bar with category dropdown, Account & Lists, Returns & Orders, Cart with badge count
+1. **Header bar** — Dark navy (#232F3E) top bar with: Xmazon logo, delivery location, search bar with category dropdown, Account & Lists, Returns & Orders, Cart with badge count
 2. **Sub-navigation bar** — Darker navy (#37475A) bar with: "All" hamburger menu, Today's Deals, Customer Service, Registry, Gift Cards, Sell
 3. **Footer** — "Back to top" button, link columns, copyright
 4. **Routing** — Home `/`, Search `/search`, Product Detail `/product/:id`, Cart `/cart`, Checkout `/checkout`, Orders `/orders`, Wishlist `/wishlist`, State Inspector `/go`
@@ -68,7 +68,7 @@ Amazon.com is the world's largest online e-commerce marketplace, originally star
 
 ### Header (60px height)
 - **Background**: #232F3E (dark navy)
-- **Left**: Amazon logo in white with ".mock" in orange (#FF9900)
+- **Left**: Xmazon logo in white with ".mock" in orange (#FF9900)
 - **Left-center**: "Deliver to [Name]" with MapPin icon, city + zip in bold
 - **Center**: Search bar — category dropdown (gray bg #F3F3F3), text input, orange search button (#FEBD69 bg)
 - **Right**: "Hello, [Name] / Account & Lists", "Returns / & Orders", Cart icon with orange (#FF9900) count badge
@@ -111,20 +111,20 @@ Amazon.com is the world's largest online e-commerce marketplace, originally star
 ## Color Palette (from tailwind.config.js + research)
 | Token | Hex | Usage |
 |-------|-----|-------|
-| amazon (DEFAULT) | #232F3E | Top header background |
-| amazon-light | #37475A | Sub-nav, footer background |
-| amazon-blue | #007185 | Links, teal text |
-| amazon-orange | #FF9900 | Accent, star ratings, active states |
-| amazon-yellow | #FEBD69 | Primary button bg (Add to Cart) |
-| amazon-darkYellow | #F08804 | Button hover, Buy Now bg |
-| amazon-bg | #EAEDED | Page background |
+| xmazon (DEFAULT) | #232F3E | Top header background |
+| xmazon-light | #37475A | Sub-nav, footer background |
+| xmazon-blue | #007185 | Links, teal text |
+| xmazon-orange | #FF9900 | Accent, star ratings, active states |
+| xmazon-yellow | #FEBD69 | Primary button bg (Add to Cart) |
+| xmazon-darkYellow | #F08804 | Button hover, Buy Now bg |
+| xmazon-bg | #EAEDED | Page background |
 | Text primary | #0F1111 | Body text |
 | Green stock | #007600 | "In Stock" text |
 | Red price | #B12704 | Price text |
 | Prime blue | #00A8E1 | Prime badge |
 
 ## Typography
-- **Font family**: "Amazon Ember", Arial, sans-serif
+- **Font family**: "Xmazon Ember", Arial, sans-serif
 - **Body text**: #0F1111, 14px base
 - **Product titles**: 16-24px, font-weight 500
 - **Prices**: Large digits (28-32px), superscript dollar sign and cents (12px)
@@ -146,10 +146,10 @@ See `data_model.md` for full entity definitions. Key entities:
 - **Email notifications**: No order confirmation emails
 - **Real-time inventory**: All items always "In Stock"
 - **Seller accounts / marketplace management**: Consumer side only
-- **Amazon Prime subscription management**: Just show Prime badge
+- **Xmazon Prime subscription management**: Just show Prime badge
 
 ## Screenshots Reference
-- `homepage_*.jpg` — Amazon homepage with hero banner, category cards, product rows
+- `homepage_*.jpg` — Xmazon homepage with hero banner, category cards, product rows
 - `product_detail_*.jpg` — Product detail page showing 3-column layout, buy box, bullet points, reviews
 - `cart_*.jpg` — Shopping cart with item list, quantity controls, order summary sidebar
 - `search_*.jpg` — Search results with filters sidebar
@@ -157,9 +157,9 @@ See `data_model.md` for full entity definitions. Key entities:
 - `checkout_*.jpg` — Checkout flow reference
 
 ## Key Sources
-- [Amazon (company) - Wikipedia](https://en.wikipedia.org/wiki/Amazon_(company))
-- [Amazon UI Design | Figma](https://www.figma.com/community/file/1018779693941475219/amazon-ui-design)
-- [Amazon User Interface Design - Richestsoft](https://richestsoft.com/blog/amazon-user-interface-design/)
-- [Amazon's A-to-Z of E-commerce UI/UX Design | UXPin](https://www.uxpin.com/studio/blog/amazons-z-e-commerce-uiux-design/)
-- [Amazon Colors - U.S. Brand Colors](https://usbrandcolors.com/amazon-colors/)
-- [Amazon Product Detail Page Guide - LitCommerce](https://litcommerce.com/blog/amazon-product-detail-page-guide/)
+- [Xmazon (company) - Wikipedia](https://en.wikipedia.org/wiki/Amazon_(company))
+- [Xmazon UI Design | Figma](https://www.figma.com/community/file/1018779693941475219/amazon-ui-design)
+- [Xmazon User Interface Design - Richestsoft](https://richestsoft.com/blog/amazon-user-interface-design/)
+- [Xmazon's A-to-Z of E-commerce UI/UX Design | UXPin](https://www.uxpin.com/studio/blog/amazons-z-e-commerce-uiux-design/)
+- [Xmazon Colors - U.S. Brand Colors](https://usbrandcolors.com/amazon-colors/)
+- [Xmazon Product Detail Page Guide - LitCommerce](https://litcommerce.com/blog/amazon-product-detail-page-guide/)

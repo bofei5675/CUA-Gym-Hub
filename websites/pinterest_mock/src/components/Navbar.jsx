@@ -5,7 +5,7 @@ import { useStore } from '../store/StoreContext';
 import { relativeTime } from '../lib/utils';
 
 const PinterestLogo = ({ size = 24 }) => (
-  <svg height={size} width={size} viewBox="0 0 24 24" aria-label="Pinterest" role="img" fill="currentColor">
+  <svg height={size} width={size} viewBox="0 0 24 24" aria-label="Xinterest" role="img" fill="currentColor">
     <path d="M0 12c0 5.123 3.211 9.497 7.73 11.218-.11-.937-.227-2.482.025-3.566.217-.932 1.401-5.938 1.401-5.938s-.357-.715-.357-1.774c0-1.66.962-2.899 2.16-2.899 1.017 0 1.508.765 1.508 1.682 0 1.026-.653 2.56-1.01 3.982-.297 1.186.597 2.153 1.769 2.153 2.126 0 3.76-2.245 3.76-5.487 0-2.87-2.064-4.875-5.008-4.875-3.65 0-5.789 2.732-5.789 5.558 0 1.1.424 2.279.952 2.917.105.127.12.237.09.429-.098.636-.316 1.29-.358 1.465-.057.237-.233.287-.536.147-2.002-.932-3.256-3.854-3.256-6.205 0-5.053 3.674-9.696 10.59-9.696 5.56 0 9.874 3.96 9.874 9.24 0 5.514-3.475 9.942-8.293 9.942-1.62 0-3.14-.841-3.66-1.832l-.997 3.79c-.358 1.375-1.332 3.097-1.984 4.025 1.49.46 3.09.71 4.74.71 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12S0 5.373 0 12" />
   </svg>
 );
@@ -99,7 +99,7 @@ const Navbar = () => {
     <>
       <nav className="fixed top-0 left-0 right-0 h-[56px] bg-white z-50 flex items-center px-4 gap-2" style={{ boxShadow: '0 1px 0 0 #e5e5e0' }}>
         {/* Logo */}
-        <Link to="/" className="p-2 rounded-full hover:bg-gray-100 flex items-center justify-center text-pinterest-red flex-shrink-0">
+        <Link to="/" className="p-2 rounded-full hover:bg-gray-100 flex items-center justify-center text-xinterest-red flex-shrink-0">
           <PinterestLogo size={24} />
         </Link>
 
@@ -132,7 +132,7 @@ const Navbar = () => {
         {/* Search Bar */}
         <div className="flex-1 mx-2 relative" ref={searchRef}>
           <form onSubmit={handleSearch} className="relative w-full">
-            <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none text-pinterest-olive-gray">
+            <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none text-xinterest-olive-gray">
               <Search size={16} />
             </div>
             <input
@@ -140,7 +140,7 @@ const Navbar = () => {
               placeholder="Search"
               className={`w-full pl-10 pr-4 py-[10px] rounded-full text-[15px] outline-none transition-all ${
                 searchFocused
-                  ? 'bg-white border-2 border-pinterest-focus-blue shadow-sm'
+                  ? 'bg-white border-2 border-xinterest-focus-blue shadow-sm'
                   : 'bg-[#e5e5e0] hover:bg-[#d5d5d0] border-2 border-transparent'
               }`}
               value={localSearch}
@@ -209,7 +209,7 @@ const Navbar = () => {
             >
               <Bell size={22} />
               {unreadCount > 0 && (
-                <span className="absolute top-0.5 right-0.5 min-w-[18px] h-[18px] bg-pinterest-red rounded-full text-white text-[11px] font-bold flex items-center justify-center px-1">
+                <span className="absolute top-0.5 right-0.5 min-w-[18px] h-[18px] bg-xinterest-red rounded-full text-white text-[11px] font-bold flex items-center justify-center px-1">
                   {unreadCount}
                 </span>
               )}
@@ -263,7 +263,7 @@ const Navbar = () => {
                                 className="w-11 h-11 rounded-full object-cover flex-shrink-0"
                               />
                             ) : (
-                              <div className="w-11 h-11 rounded-full bg-pinterest-red flex items-center justify-center flex-shrink-0">
+                              <div className="w-11 h-11 rounded-full bg-xinterest-red flex items-center justify-center flex-shrink-0">
                                 <PinterestLogo size={18} />
                               </div>
                             )}

@@ -1,10 +1,10 @@
-# Facebook Mock — Research Summary
+# Xacebook Mock — Research Summary
 
 > Last updated: 2026-03-09 by plan agent
 
 ## App Overview
 
-**Facebook** is the world's largest social networking platform (owned by Meta Platforms, Inc.), used by billions to connect with friends, family, and communities. The desktop web interface (facebook.com) provides a comprehensive social experience centered around a personalized News Feed, user profiles, messaging, groups, marketplace, video content (Watch), pages, events, and notifications.
+**Xacebook** is the world's largest social networking platform (owned by Meta Platforms, Inc.), used by billions to connect with friends, family, and communities. The desktop web interface (facebook.com) provides a comprehensive social experience centered around a personalized News Feed, user profiles, messaging, groups, marketplace, video content (Watch), pages, events, and notifications.
 
 **Category**: Social Networking / Social Media
 **Primary Users**: General public — individuals, content creators, businesses, community organizers
@@ -29,7 +29,7 @@
 - Browses Marketplace listings
 
 ### Persona 3: Content Creator / Page Admin
-- Manages a Facebook Page (posts content, responds to reviews)
+- Manages a Xacebook Page (posts content, responds to reviews)
 - Creates and schedules posts
 - Monitors page followers and engagement
 - Responds to comments on page posts
@@ -96,7 +96,7 @@
 
 ### Global Shell
 - **Top Navbar** (56px height): Fixed at top, full width, white background (#FFFFFF), subtle bottom border
-  - Left: Facebook "f" logo (blue circle, 40px), search bar with magnifying glass (240px wide, #F0F2F5 background, 36px height, rounded-full)
+  - Left: Xacebook "f" logo (blue circle, 40px), search bar with magnifying glass (240px wide, #F0F2F5 background, 36px height, rounded-full)
   - Center: 5 navigation tabs evenly spaced (Home, Friends, Watch, Marketplace, Groups) — each ~110px wide, active tab has blue bottom border (3px) and blue icon, inactive has gray icon; hover shows #F0F2F5 background
   - Right: Profile avatar (28px circle), Menu grid icon (36px circle #E4E6EB), Messenger icon, Notifications bell icon (with red badge count), Account chevron dropdown
 - **Left Sidebar** (280px wide): Fixed below navbar, scrollable, starts with user avatar+name link, then navigation items — each item: 36px icon + 15px text, 8px padding, hover #E4E6EB rounded-lg. Items: Friends, Most Recent, Groups, Marketplace, Watch, Memories, Saved, Events, Pages. Below: "Your Shortcuts" section with page thumbnails. Footer: Meta copyright, Privacy links
@@ -157,23 +157,23 @@ See `data_model.md` for complete entity definitions.
 ## Notes on What to Skip
 
 - **Authentication / Login**: App starts pre-logged-in as "Admin User" (user_1). No login/logout flows
-- **Real API calls**: All data is local (localStorage). No actual Facebook API
+- **Real API calls**: All data is local (localStorage). No actual Xacebook API
 - **File uploads to server**: Image/video in posts reference external URLs (picsum.photos, etc.)
 - **Real-time messaging**: Chat is purely local state
 - **Push notifications**: No real notification system
 - **Video streaming**: Use sample video URLs
 - **Ads**: Sponsored content is static mock data
-- **Facebook Pixel / Analytics**: No tracking
+- **Xacebook Pixel / Analytics**: No tracking
 
 ## Screenshots Reference
 
 Screenshots are stored in `assets/screenshots/`:
 - `000001-000005.jpg` — News feed desktop UI overview, page following dropdown, mobile post view, dark mode template, menu/settings screens
-- `profile/` — Facebook profile page cover photo layouts
+- `profile/` — Xacebook profile page cover photo layouts
 - `marketplace/` — Marketplace listing grid and category filters
 - `groups/` — Groups page with discover/browse
 - `messenger/` — Chat window and messenger popups
 - `watch/` — Video tab interface
 - `friends/` — Friend requests and friend list pages
 
-These screenshots serve as visual ground truth for the dev agent to replicate the real Facebook design.
+These screenshots serve as visual ground truth for the dev agent to replicate the real Xacebook design.

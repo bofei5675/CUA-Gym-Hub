@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  font-family: "Pinterest Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Xinterest Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   -webkit-font-smoothing: antialiased;
   color: #111;
   background: #fff;
@@ -51,7 +51,7 @@ body {
     @apply px-4 py-2 rounded-full font-semibold transition-colors duration-200 cursor-pointer flex items-center justify-center gap-2;
   }
   .btn-primary {
-    @apply bg-pinterest-red text-white hover:bg-pinterest-hover;
+    @apply bg-xinterest-red text-white hover:bg-xinterest-hover;
   }
   .btn-secondary {
     @apply bg-[#e5e5e0] text-black hover:bg-[#d5d5d0];
@@ -64,7 +64,7 @@ body {
   }
 }
 
-/* Pinterest-style transitions */
+/* Xinterest-style transitions */
 .pin-card-hover {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -91,7 +91,7 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-/* Pinterest Red Save button pulse */
+/* Xinterest Red Save button pulse */
 @keyframes save-pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.05); }

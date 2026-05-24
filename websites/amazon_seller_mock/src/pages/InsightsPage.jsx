@@ -3,7 +3,7 @@ import React, { useMemo, useState } from 'react';
 const PAGE_DATA = {
   'Order Reports': {
     icon: 'O',
-    description: 'View and analyze order data across your Amazon Seller account.',
+    description: 'View and analyze order data across your Xmazon Seller account.',
     tabs: ['Summary', 'By Date', 'By Product'],
     rows: [
       { label: 'Total Orders (30 days)', value: '1,247' },

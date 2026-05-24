@@ -1,8 +1,8 @@
-# ADP Workforce Now Mock — Research Summary
+# XDP Workforce Now Mock — Research Summary
 
 ## App Overview
 
-**ADP Workforce Now** is a comprehensive, all-in-one HR and payroll platform designed for mid-sized businesses. It provides employees with self-service access to pay statements, benefits, time tracking, time-off requests, personal information management, and company resources. For managers, it adds team oversight, approvals, and analytics.
+**XDP Workforce Now** is a comprehensive, all-in-one HR and payroll platform designed for mid-sized businesses. It provides employees with self-service access to pay statements, benefits, time tracking, time-off requests, personal information management, and company resources. For managers, it adds team oversight, approvals, and analytics.
 
 This mock focuses on the **employee self-service portal** (MyADP / Workforce Now employee view), which is the primary interface employees interact with daily.
 
@@ -26,7 +26,7 @@ This mock focuses on the **employee self-service portal** (MyADP / Workforce Now
 ## Brand & Visual Design
 
 ### Color Palette
-- **Primary Red**: `#D0271D` (ADP signature red — used in logo, primary CTAs, active nav items)
+- **Primary Red**: `#D0271D` (XDP signature red — used in logo, primary CTAs, active nav items)
 - **Dark Navy**: `#1F2937` (primary text, header backgrounds)
 - **White**: `#FFFFFF` (main content background, cards)
 - **Light Gray**: `#F3F4F6` (page background, secondary areas)
@@ -37,13 +37,13 @@ This mock focuses on the **employee self-service portal** (MyADP / Workforce Now
 - **Info Blue**: `#2563EB` (links, informational badges)
 
 ### Typography
-- Font family: system sans-serif stack (ADP uses a clean sans-serif, similar to "ADP Cera Round Pro" but we use system fonts)
+- Font family: system sans-serif stack (XDP uses a clean sans-serif, similar to "XDP Cera Round Pro" but we use system fonts)
 - Headings: 600-700 weight, sizes 24px (h1), 20px (h2), 16px (h3)
 - Body: 400 weight, 14px
 - Labels/captions: 400 weight, 12px, medium gray
 
 ### Layout Structure (from screenshots)
-- **Top Navigation Bar**: ~56px tall, dark navy background, contains: ADP logo (left), main nav tabs (HOME, RESOURCES, MYSELF), and right-side icons (Messages, Calendar, Support, Search)
+- **Top Navigation Bar**: ~56px tall, dark navy background, contains: XDP logo (left), main nav tabs (HOME, RESOURCES, MYSELF), and right-side icons (Messages, Calendar, Support, Search)
 - **MYSELF Dropdown Menu**: Flyout menu with sections: My Information, Pay, Time & Attendance (expandable with sub-items), Time Off
 - **Main Content Area**: White background with card-based layout
 - **Dashboard**: Shows tiles/cards for quick actions — Pay summary, Time Off balances, Benefits overview, Company News, To-Do items
@@ -52,7 +52,7 @@ This mock focuses on the **employee self-service portal** (MyADP / Workforce Now
 
 ### P0 — Core Shell (Must have to render)
 1. App shell with top navigation bar
-2. ADP logo and branding
+2. XDP logo and branding
 3. Main navigation tabs: Home, Myself, My Team (manager)
 4. Right-side utility icons: Notifications, Calendar, Search, User profile
 5. Routing between all views
@@ -152,7 +152,7 @@ This mock focuses on the **employee self-service portal** (MyADP / Workforce Now
 
 | File | Description |
 |------|-------------|
-| 000001.jpg | ADP marketing banner showing "Payroll Tax. HR. Time. Benefits." with laptop showing Employment Profile |
+| 000001.jpg | XDP marketing banner showing "Payroll Tax. HR. Time. Benefits." with laptop showing Employment Profile |
 | 000002.jpg | Benchmarks/Annual Compensation analytics view with map and salary data |
 | 000004.jpg | **KEY**: Workforce Now navigation — MYSELF dropdown with My Information, Pay, Time & Attendance (sub-items: My Time Entry, Actual vs Scheduled, My Schedule, Holiday List, Attendance), Time Off |
 | 000005.jpg | Pay stub format showing earnings, deductions, and net pay layout |
@@ -165,4 +165,4 @@ This mock focuses on the **employee self-service portal** (MyADP / Workforce Now
 - Real file uploads or document generation
 - Email/SMS notifications
 - SSO/OAuth
-- ADP Marketplace integrations
+- XDP Marketplace integrations

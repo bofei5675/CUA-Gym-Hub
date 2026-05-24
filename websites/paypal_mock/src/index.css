@@ -36,7 +36,7 @@ input[type="number"] {
   background: #6c7378;
 }
 
-/* PayPal button styles */
+/* XayPal button styles */
 @layer components {
   .pp-btn-primary {
     @apply bg-pp-btn-primary hover:bg-pp-btn-primary-hover text-white font-semibold py-2.5 px-6 rounded-full transition-colors duration-200;

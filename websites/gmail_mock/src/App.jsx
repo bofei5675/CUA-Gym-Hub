@@ -316,10 +316,10 @@ const KeyboardShortcuts = () => {
         if (isShift && isThreadView && lastThreadEmail) {
           e.preventDefault();
           // Trigger reply all — dispatch a custom event for ThreadView to catch
-          window.dispatchEvent(new CustomEvent('gmail:reply-all'));
+          window.dispatchEvent(new CustomEvent('xmail:reply-all'));
         } else if (!isShift && isThreadView && lastThreadEmail) {
           e.preventDefault();
-          window.dispatchEvent(new CustomEvent('gmail:reply'));
+          window.dispatchEvent(new CustomEvent('xmail:reply'));
         }
         break;
       }
@@ -357,9 +357,9 @@ const KeyboardShortcuts = () => {
         if (!isShift) {
           e.preventDefault();
           if (isThreadView) {
-            window.dispatchEvent(new CustomEvent('gmail:snooze'));
+            window.dispatchEvent(new CustomEvent('xmail:snooze'));
           } else if (focusedEmailIndex >= 0) {
-            window.dispatchEvent(new CustomEvent('gmail:snooze', { detail: { emailId: visibleEmails[focusedEmailIndex]?.id } }));
+            window.dispatchEvent(new CustomEvent('xmail:snooze', { detail: { emailId: visibleEmails[focusedEmailIndex]?.id } }));
           }
         }
         break;
@@ -369,9 +369,9 @@ const KeyboardShortcuts = () => {
       case 'V': {
         e.preventDefault();
         if (isThreadView) {
-          window.dispatchEvent(new CustomEvent('gmail:move-to'));
+          window.dispatchEvent(new CustomEvent('xmail:move-to'));
         } else {
-          window.dispatchEvent(new CustomEvent('gmail:move-to-list'));
+          window.dispatchEvent(new CustomEvent('xmail:move-to-list'));
         }
         break;
       }
@@ -380,9 +380,9 @@ const KeyboardShortcuts = () => {
       case 'L': {
         e.preventDefault();
         if (isThreadView) {
-          window.dispatchEvent(new CustomEvent('gmail:label'));
+          window.dispatchEvent(new CustomEvent('xmail:label'));
         } else {
-          window.dispatchEvent(new CustomEvent('gmail:label-list'));
+          window.dispatchEvent(new CustomEvent('xmail:label-list'));
         }
         break;
       }
@@ -391,7 +391,7 @@ const KeyboardShortcuts = () => {
       case 'Z': {
         e.preventDefault();
         // Trigger the undo of the current toast if available
-        window.dispatchEvent(new CustomEvent('gmail:undo'));
+        window.dispatchEvent(new CustomEvent('xmail:undo'));
         break;
       }
 
@@ -425,8 +425,8 @@ const KeyboardShortcuts = () => {
       const toastEl = document.querySelector('[data-undo-btn]');
       if (toastEl) toastEl.click();
     };
-    window.addEventListener('gmail:undo', handleUndo);
-    return () => window.removeEventListener('gmail:undo', handleUndo);
+    window.addEventListener('xmail:undo', handleUndo);
+    return () => window.removeEventListener('xmail:undo', handleUndo);
   }, []);
 
   return null;

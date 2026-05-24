@@ -1,8 +1,8 @@
-# Hotjar Mock -- Assets & Research Summary
+# Xotjar Mock -- Assets & Research Summary
 
 ## App Overview
 
-Hotjar is a product analytics and user behavior tool (now part of Contentsquare) that helps website owners understand how users interact with their sites. It provides visual analytics through heatmaps, session recordings, surveys, and feedback widgets. Unlike traditional analytics tools that show numbers and graphs, Hotjar specializes in qualitative, visual behavior data -- showing exactly where users click, how far they scroll, and what frustrates them.
+Xotjar is a product analytics and user behavior tool (now part of Contentsquare) that helps website owners understand how users interact with their sites. It provides visual analytics through heatmaps, session recordings, surveys, and feedback widgets. Unlike traditional analytics tools that show numbers and graphs, Xotjar specializes in qualitative, visual behavior data -- showing exactly where users click, how far they scroll, and what frustrates them.
 
 ## Key User Personas
 
@@ -27,7 +27,7 @@ Hotjar is a product analytics and user behavior tool (now part of Contentsquare)
 ## Complete Feature List
 
 ### P0 -- Core (Must have for app to render)
-1. App shell with header bar (Hotjar logo, site selector, search, user menu)
+1. App shell with header bar (Xotjar logo, site selector, search, user menu)
 2. Left sidebar navigation (collapsible icon bar + expanded labels)
 3. Routing between all major views
 4. State management (AppContext + dataManager)
@@ -59,7 +59,7 @@ Hotjar is a product analytics and user behavior tool (now part of Contentsquare)
 ## UI Layout Description by View
 
 ### Header Bar
-- Left: Hotjar flame logo (links to dashboard)
+- Left: Xotjar flame logo (links to dashboard)
 - Center-left: Site selector dropdown (shows current site URL, dropdown to switch between sites)
 - Center: Search bar (magnifying glass icon + "Search..." placeholder)
 - Right: Help icon (question mark), notifications bell, user avatar with dropdown menu
@@ -136,10 +136,10 @@ See `data_model.md` for full schema. Key entities:
 - `screenshots/000003.jpg` -- Dashboard view with sidebar navigation (BEST reference for layout)
 - `screenshots/000004.jpg` -- Heatmap view with sidebar icons, device/type toggles, click heatmap overlay
 - `screenshots/heatmaps/000001.jpg` -- Scroll heatmap example (red-to-green gradient)
-- `screenshots/heatmaps/000002.jpg` -- Click heatmap with Hotjar UI frame
+- `screenshots/heatmaps/000002.jpg` -- Click heatmap with Xotjar UI frame
 - `screenshots/heatmaps/000004.jpg` -- Heatmap example from blog
 - `screenshots/surveys/000001.jpg` -- Survey builder with question editing and logic branching
-- `screenshots/recordings/000004.jpg` -- Hotjar homepage showing recording player preview
+- `screenshots/recordings/000004.jpg` -- Xotjar homepage showing recording player preview
 
 ### Reference screenshots (high-fidelity Mobbin captures -- use these for pixel-accurate implementation)
 - `screenshots/reference/botubot_0003.webp` -- **Highlights page**: shows full app shell with sidebar icons, header with site selector + icons, highlights collection view with sub-sidebar, empty state, toast notification

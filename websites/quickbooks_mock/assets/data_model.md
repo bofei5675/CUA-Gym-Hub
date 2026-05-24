@@ -1,4 +1,4 @@
-# QuickBooks Online Mock — Data Model
+# XuickBooks Online Mock — Data Model
 
 > Last updated: 2025-03-09 by plan agent
 > This file defines all entity types for `createInitialData()` in `src/lib/initialData.js`

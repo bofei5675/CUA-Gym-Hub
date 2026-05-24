@@ -3,20 +3,20 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-color: var(--wechat-bg, #ededed);
+  background-color: var(--xechat-bg, #ededed);
   overflow-y: auto;
 }
 
 .discover-header {
   padding: 12px 16px;
-  background-color: var(--wechat-header-bg, #ededed);
-  border-bottom: 0.5px solid var(--wechat-divider);
+  background-color: var(--xechat-header-bg, #ededed);
+  border-bottom: 0.5px solid var(--xechat-divider);
 }
 
 .discover-header h1 {
   font-size: 18px;
   font-weight: 600;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
 }
 
 .discover-sections {
@@ -59,7 +59,7 @@
 .discover-label {
   flex: 1;
   font-size: 16px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
 }
 
 .discover-right {
@@ -72,7 +72,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--wechat-red-badge, #f44336);
+  background-color: var(--xechat-red-badge, #f44336);
 }
 
 .arrow {
@@ -126,7 +126,7 @@
 .scan-frame {
   width: 220px;
   height: 220px;
-  border: 2px solid var(--wechat-green);
+  border: 2px solid var(--xechat-green);
   border-radius: 6px;
   position: relative;
   overflow: hidden;
@@ -138,7 +138,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(to right, transparent, var(--wechat-green), transparent);
+  background: linear-gradient(to right, transparent, var(--xechat-green), transparent);
   animation: scan 2s infinite;
 }
 
@@ -156,7 +156,7 @@
 /* Search Modal */
 .search-modal {
   flex: 1;
-  background-color: var(--wechat-bg-light);
+  background-color: var(--xechat-bg-light);
   display: flex;
   flex-direction: column;
 }
@@ -173,7 +173,7 @@
   flex: 1;
   display: flex;
   align-items: center;
-  background-color: var(--wechat-input-bg);
+  background-color: var(--xechat-input-bg);
   border-radius: 6px;
   padding: 7px 10px;
   gap: 6px;
@@ -191,7 +191,7 @@
 }
 
 .cancel-btn {
-  color: var(--wechat-green);
+  color: var(--xechat-green);
   font-size: 15px;
 }
 
@@ -202,7 +202,7 @@
 
 .hot-search h4 {
   font-size: 13px;
-  color: var(--wechat-text-secondary);
+  color: var(--xechat-text-secondary);
   margin-bottom: 12px;
 }
 
@@ -217,14 +217,14 @@
   background-color: #fff;
   border-radius: 16px;
   font-size: 13px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
   cursor: pointer;
 }
 
 /* Mini Programs Modal */
 .mini-programs-modal {
   flex: 1;
-  background-color: var(--wechat-bg-light);
+  background-color: var(--xechat-bg-light);
   display: flex;
   flex-direction: column;
 }
@@ -235,17 +235,17 @@
   justify-content: space-between;
   padding: 12px 16px;
   background-color: #fff;
-  border-bottom: 0.5px solid var(--wechat-divider);
+  border-bottom: 0.5px solid var(--xechat-divider);
 }
 
 .mp-header .back-btn {
   font-size: 24px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
 }
 
 .search-btn-mp {
   font-size: 20px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
 }
 
 .mp-header span {
@@ -265,7 +265,7 @@
 
 .mp-section h4 {
   font-size: 13px;
-  color: var(--wechat-text-secondary);
+  color: var(--xechat-text-secondary);
   margin-bottom: 12px;
 }
 
@@ -297,7 +297,7 @@
 
 .mp-name {
   font-size: 11px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
   text-align: center;
   max-width: 56px;
   overflow: hidden;

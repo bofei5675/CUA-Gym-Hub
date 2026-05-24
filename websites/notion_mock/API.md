@@ -1,4 +1,4 @@
-# Notion Mock - State API Documentation
+# Xotion Mock - State API Documentation
 
 ## Overview
 

@@ -26,7 +26,7 @@ export const ProductCard = ({ product, layout = 'grid' }) => {
           )}
         </div>
         <div className="flex-1 min-w-0">
-          <Link to={`/product/${product.id}`} className="text-[15px] font-medium hover:text-amazon-orange line-clamp-2 text-[#0066c0] leading-snug">
+          <Link to={`/product/${product.id}`} className="text-[15px] font-medium hover:text-xmazon-orange line-clamp-2 text-[#0066c0] leading-snug">
             {product.title}
           </Link>
           <div className="mt-1 mb-1.5">
@@ -72,9 +72,9 @@ export const ProductCard = ({ product, layout = 'grid' }) => {
       {product.badges && product.badges.includes('Best Seller') && (
         <span className="absolute top-0 left-0 bg-[#e47911] text-white text-[10px] font-bold px-1.5 py-0.5 z-10 rounded-br">Best Seller</span>
       )}
-      {product.badges && product.badges.includes("Amazon's Choice") && !product.badges.includes('Best Seller') && (
+      {product.badges && product.badges.includes("Xmazon's Choice") && !product.badges.includes('Best Seller') && (
         <span className="absolute top-0 left-0 bg-[#232f3e] text-white text-[10px] font-bold px-1.5 py-0.5 z-10 rounded-br">
-          <span className="text-[#f5a623]">Amazon's</span> <span>Choice</span>
+          <span className="text-[#f5a623]">Xmazon's</span> <span>Choice</span>
         </span>
       )}
 
@@ -82,7 +82,7 @@ export const ProductCard = ({ product, layout = 'grid' }) => {
         <img src={product.image} alt={product.title} className="max-h-full max-w-full object-contain" />
       </div>
 
-      <Link to={`/product/${product.id}`} className="text-[13px] text-[#0F1111] hover:text-amazon-orange line-clamp-2 mb-1 leading-snug">
+      <Link to={`/product/${product.id}`} className="text-[13px] text-[#0F1111] hover:text-xmazon-orange line-clamp-2 mb-1 leading-snug">
         {product.title}
       </Link>
 

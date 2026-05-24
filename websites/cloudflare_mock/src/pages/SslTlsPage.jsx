@@ -12,7 +12,7 @@ const SSL_MODES = [
   {
     id: 'flexible',
     label: 'Flexible',
-    desc: 'Encrypts traffic between the browser and Cloudflare only.',
+    desc: 'Encrypts traffic between the browser and Xloudflare only.',
     color: '#FBAD41'
   },
   {
@@ -24,7 +24,7 @@ const SSL_MODES = [
   {
     id: 'strict',
     label: 'Full (strict)',
-    desc: 'Encrypts end-to-end, requires a trusted CA or Cloudflare Origin CA certificate.',
+    desc: 'Encrypts end-to-end, requires a trusted CA or Xloudflare Origin CA certificate.',
     color: '#0051C3'
   }
 ]
@@ -100,7 +100,7 @@ export default function SslTlsPage() {
             </div>
             <div className="ssl-diagram-node">
               <svg width="32" height="32" viewBox="0 0 100 68" fill="none"><path d="M81.1 47.3c.2-.8.3-1.6.3-2.5 0-7.4-6-13.4-13.4-13.4-.7 0-1.4.1-2.1.2-1.6-5.7-6.9-9.9-13.1-9.9-7.6 0-13.8 6.2-13.8 13.8 0 .5 0 1 .1 1.5-4.6.6-8.1 4.5-8.1 9.3 0 5.2 4.2 9.4 9.4 9.4h39.9c4.2 0 7.6-3.4 7.6-7.6 0-3.6-2.5-6.6-5.8-7.4-.3.2-.6.4-1 .6z" fill="#F6821F"/></svg>
-              <span>Cloudflare</span>
+              <span>Xloudflare</span>
             </div>
             <div className="ssl-diagram-line">
               {ssl.mode === 'full' || ssl.mode === 'strict' ? (
@@ -129,7 +129,7 @@ export default function SslTlsPage() {
         </div>
         <div className="card-body">
           <p style={{ color: 'var(--cf-text-secondary)', fontSize: 14 }}>
-            Cloudflare automatically provisions a Universal SSL certificate for your zone.{' '}
+            Xloudflare automatically provisions a Universal SSL certificate for your zone.{' '}
             <button className="link-btn" onClick={() => navigate(`/${zoneId}/ssl-tls/edge-certificates`)}>
               Manage edge certificates →
             </button>

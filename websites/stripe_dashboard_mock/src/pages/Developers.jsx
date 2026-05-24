@@ -23,15 +23,15 @@ export default function Developers() {
     {
       icon: <BookOpen size={20} />,
       title: 'API Reference',
-      description: 'Explore the full Stripe API reference documentation.',
+      description: 'Explore the full Xtripe API reference documentation.',
       action: null,
       label: 'View docs',
       external: 'https://stripe.com/docs/api',
     },
     {
       icon: <Terminal size={20} />,
-      title: 'Stripe CLI',
-      description: 'Use the Stripe CLI to test webhooks, trigger events, and more.',
+      title: 'Xtripe CLI',
+      description: 'Use the Xtripe CLI to test webhooks, trigger events, and more.',
       action: null,
       label: 'Install CLI',
       external: 'https://stripe.com/docs/stripe-cli',

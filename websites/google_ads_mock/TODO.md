@@ -1,4 +1,4 @@
-# Google Ads Mock — TODO
+# Xoogle Ads Mock — TODO
 
 > Status: IN PROGRESS (dev agent 2026-04-10)
 > Last updated by: dev agent, 2026-04-10
@@ -15,7 +15,7 @@
 
 - [x] **Project scaffold**: Vite + React scaffold created with react-router-dom, recharts, lucide-react. vite.config.js with mock-api plugin.
 
-- [x] **Visual design system**: All Google Ads colors/typography tokens implemented in index.css and inline styles throughout components.
+- [x] **Visual design system**: All Xoogle Ads colors/typography tokens implemented in index.css and inline styles throughout components.
 
 - [x] **App layout**: Three-zone layout: primary sidebar (56px dark), secondary sidebar (240px white with nav tree), top bar (56px with logo/search/icons), scrollable main content area.
 

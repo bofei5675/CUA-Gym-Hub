@@ -1,8 +1,8 @@
-# Amplitude Analytics Mock -- Research Summary
+# Xmplitude Analytics Mock -- Research Summary
 
 ## App Overview
 
-Amplitude is a leading product analytics platform used by over 4,500 companies (Atlassian, Burger King, NBCUniversal, Square, Under Armour) to understand user behavior, optimize conversion funnels, measure retention, and drive data-informed product decisions. It is the centerpiece tool for product managers, data analysts, and growth teams.
+Xmplitude is a leading product analytics platform used by over 4,500 companies (Atlassian, Burger King, NBCUniversal, Square, Under Armour) to understand user behavior, optimize conversion funnels, measure retention, and drive data-informed product decisions. It is the centerpiece tool for product managers, data analysts, and growth teams.
 
 The core value proposition: track events users fire in your product, then slice, dice, and visualize that data through various chart types to answer questions like "Who are my active users?", "Where do they drop off?", and "Are they coming back?"
 
@@ -30,7 +30,7 @@ The core value proposition: track events users fire in your product, then slice,
 - **Chart Builder (Retention)**: Return event configuration, retention curve line chart, Day 0 through Day 30 columns, cohort-based retention grid
 - **Chart Builder (Data Table)**: Tabular data view with columns for events/metrics, group-by rows with inline bar charts, column menu (filter, duplicate, rename, sort, remove)
 - **Dashboard View**: Grid of saved chart cards, each showing title + mini chart; drag-to-reorder; "+ Add Content" button; dashboard title editing; More menu (refresh, download, export, copy, archive)
-- **User Profiles**: Table of users with columns (User ID, Amplitude ID, First Seen, Last Seen, Country, Platform); search bar; cohort builder inline; population-over-time chart
+- **User Profiles**: Table of users with columns (User ID, Xmplitude ID, First Seen, Last Seen, Country, Platform); search bar; cohort builder inline; population-over-time chart
 - **User Profile Detail**: Left sidebar with user avatar, name, pinned properties, property search; Center Event Stream with timestamped events grouped by date; Right panel with event detail (Info/Raw tabs, properties list); Tabs: Activity, Insights, Session Replays, Cohorts, Experiments, Flags
 - **Cohorts**: Behavioral cohort builder with "The Users who ...did perform [Select event] with count >= N time during [Last 30 days]" query builder; cohort list table
 - **All Content**: List/grid of saved charts, dashboards, notebooks, cohorts with name, owner, last modified, type columns; search and filter
@@ -38,7 +38,7 @@ The core value proposition: track events users fire in your product, then slice,
 
 ### P2 -- Secondary Features (depth and realism)
 - **Notebooks**: Document view with embedded chart cards, text blocks, drag handles; "Copy as dashboard" and "Chart View" buttons
-- **Ask Amplitude (AI Assistant)**: Chat interface with natural language query input, generated chart responses, follow-up suggestions, thread history sidebar
+- **Ask Xmplitude (AI Assistant)**: Chat interface with natural language query input, generated chart responses, follow-up suggestions, thread history sidebar
 - **Live Events**: Real-time event stream showing events as they fire
 - **Experiment Setup**: Multi-step form (Variants, Goals, Pages, Targeting, Advanced) with left sidebar navigation; variant A/B configuration; rollout percentage
 - **Search / Cmd+K**: Global search overlay with results grouped by type (charts, dashboards, cohorts, events)
@@ -55,7 +55,7 @@ Right: "Invite Members" dismissible badge | bell notification icon | help (?) ic
 
 ### Left Sidebar (two modes)
 **Icon Rail (48px)**: Vertical column of 20px icons -- Home, Analytics, AI/Spark, Pathfinder, Dashboards, Chat, Users, History, Experiment, Notes, Data Flow
-**Expanded (200px)**: Full text navigation -- Home (highlighted blue when active), All Content, Live Events, Ask Amplitude, Product Analytics (expandable: shows sub-items), Web Analytics (expandable), Users (expandable: User Profiles, Group Profiles, Cohorts, Predictions, Computations, Syncs, User Profile API), Session Replay, Experiment (expandable), Data, Releases. Bottom: MTU counter ("MTUs 4/50k") with progress bar and "Manage Plan" link.
+**Expanded (200px)**: Full text navigation -- Home (highlighted blue when active), All Content, Live Events, Ask Xmplitude, Product Analytics (expandable: shows sub-items), Web Analytics (expandable), Users (expandable: User Profiles, Group Profiles, Cohorts, Predictions, Computations, Syncs, User Profile API), Session Replay, Experiment (expandable), Data, Releases. Bottom: MTU counter ("MTUs 4/50k") with progress bar and "Manage Plan" link.
 
 ### Main Content Area
 Fills remaining space. Padding 24px. Background varies: white for chart builder, slight gray (#F7F8FA) for home dashboard card grid.
@@ -69,6 +69,6 @@ Left control panel (~400px) | Right chart area (fills remaining). The left panel
 - **Real-time data ingestion**: All data is mock/seed data. No actual event tracking SDK.
 - **Session Replay**: Visual placeholder only (no actual session recording playback).
 - **Experiment execution**: Setup form is interactive but no actual A/B test execution.
-- **AI/Ask Amplitude**: Static mock responses, no real AI inference.
+- **AI/Ask Xmplitude**: Static mock responses, no real AI inference.
 - **Billing/Pricing**: MTU counter is display-only.
 - **Integrations/Connections/Sources/Destinations**: Data management shows event catalog only, no real integrations.

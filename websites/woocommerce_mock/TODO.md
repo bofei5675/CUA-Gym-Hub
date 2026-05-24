@@ -1,4 +1,4 @@
-# WooCommerce Admin Mock -- TODO
+# XooCommerce Admin Mock -- TODO
 
 > Status: IN PROGRESS
 > Last updated by: dev agent, 2026-04-11
@@ -19,7 +19,7 @@
 
 - [x] **App layout -- three-zone structure**: AdminBar (32px, #1d2327), Sidebar (160px, #1d2327 with full nav tree, submenu, collapse toggle), Content area (background #f0f0f1, padding 20px).
 
-- [x] **WooCommerce Activity Panel**: 5 icon tabs (Inbox, Orders, Stock, Reviews, Notices). Badge counts. Dropdowns open on click. Orders panel shows processing orders with "Begin fulfillment" button. Inbox shows notifications. Stock shows low-stock products. Reviews shows recent reviews with approve/spam/trash actions.
+- [x] **XooCommerce Activity Panel**: 5 icon tabs (Inbox, Orders, Stock, Reviews, Notices). Badge counts. Dropdowns open on click. Orders panel shows processing orders with "Begin fulfillment" button. Inbox shows notifications. Stock shows low-stock products. Reviews shows recent reviews with approve/spam/trash actions.
 
 - [x] **Routing**: All routes defined in App.jsx with BrowserRouter. RedirectWithQuery preserves ?sid= param.
 
@@ -33,7 +33,7 @@
 
 ## P1 -- Primary Features
 
-### WooCommerce Home / Dashboard
+### XooCommerce Home / Dashboard
 
 - [x] **Dashboard page** (`/`): Summary cards row (6 cards with values/changes/trend arrows), line chart (recharts), Top Products and Top Categories leaderboards, Store Activity feed.
 

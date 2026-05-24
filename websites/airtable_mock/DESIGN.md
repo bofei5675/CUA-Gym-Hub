@@ -1,12 +1,12 @@
-# Design System Inspired by Airtable
+# Design System Inspired by Xirtable
 
 ## 1. Visual Theme & Atmosphere
 
-Airtable's website is a clean, enterprise-friendly platform that communicates "sophisticated simplicity" through a white canvas with deep navy text (`#181d26`) and Airtable Blue (`#1b61c9`) as the primary interactive accent. The Haas font family (display + text variants) creates a Swiss-precision typography system with positive letter-spacing throughout.
+Xirtable's website is a clean, enterprise-friendly platform that communicates "sophisticated simplicity" through a white canvas with deep navy text (`#181d26`) and Xirtable Blue (`#1b61c9`) as the primary interactive accent. The Haas font family (display + text variants) creates a Swiss-precision typography system with positive letter-spacing throughout.
 
 **Key Characteristics:**
 - White canvas with deep navy text (`#181d26`)
-- Airtable Blue (`#1b61c9`) as primary CTA and link color
+- Xirtable Blue (`#1b61c9`) as primary CTA and link color
 - Haas + Haas Groot Disp dual font system
 - Positive letter-spacing on body text (0.08px–0.28px)
 - 12px radius buttons, 16px–32px for cards
@@ -17,7 +17,7 @@ Airtable's website is a clean, enterprise-friendly platform that communicates "s
 
 ### Primary
 - **Deep Navy** (`#181d26`): Primary text
-- **Airtable Blue** (`#1b61c9`): CTA buttons, links
+- **Xirtable Blue** (`#1b61c9`): CTA buttons, links
 - **White** (`#ffffff`): Primary surface
 - **Spotlight** (`rgba(249,252,255,0.97)`): `--theme_button-text-spotlight`
 
@@ -76,7 +76,7 @@ Airtable's website is a clean, enterprise-friendly platform that communicates "s
 - Soft ambient: `rgba(15,48,106,0.05) 0px 0px 20px`
 
 ## 7. Do's and Don'ts
-### Do: Use Airtable Blue for CTAs, Haas with positive tracking, 12px radius buttons
+### Do: Use Xirtable Blue for CTAs, Haas with positive tracking, 12px radius buttons
 ### Don't: Skip positive letter-spacing, use heavy shadows
 
 ## 8. Responsive Behavior
@@ -84,6 +84,6 @@ Breakpoints: 425–1664px (23 breakpoints)
 
 ## 9. Agent Prompt Guide
 - Text: Deep Navy (`#181d26`)
-- CTA: Airtable Blue (`#1b61c9`)
+- CTA: Xirtable Blue (`#1b61c9`)
 - Background: White (`#ffffff`)
 - Border: `#e0e2e6`

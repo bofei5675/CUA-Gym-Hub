@@ -20,8 +20,8 @@ const PAGE_SIZE_OPTIONS = [10, 25, 50, 100];
 function SortIcon({ col, sortCol, sortDir }) {
   if (sortCol !== col) return <ChevronDown size={13} className="ml-1 text-gray-300 opacity-50" />;
   return sortDir === 'asc'
-    ? <ChevronUp size={13} className="ml-1 text-hubspot" />
-    : <ChevronDown size={13} className="ml-1 text-hubspot" />;
+    ? <ChevronUp size={13} className="ml-1 text-xubspot" />
+    : <ChevronDown size={13} className="ml-1 text-xubspot" />;
 }
 
 function FilterDropdown({ label, options, selected, onChange }) {
@@ -41,10 +41,10 @@ function FilterDropdown({ label, options, selected, onChange }) {
       <button
         onClick={() => setOpen(o => !o)}
         className={`px-3 py-1.5 rounded-full border text-xs font-medium flex items-center gap-1 transition-colors
-          ${active ? 'bg-orange-50 border-hubspot text-hubspot' : 'bg-white border-gray-300 text-gray-600 hover:border-gray-400'}`}
+          ${active ? 'bg-orange-50 border-xubspot text-xubspot' : 'bg-white border-gray-300 text-gray-600 hover:border-gray-400'}`}
       >
         {label}
-        {active && <span className="bg-hubspot text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px]">{selected.length}</span>}
+        {active && <span className="bg-xubspot text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px]">{selected.length}</span>}
         <ChevronDown size={12} />
       </button>
       {open && (
@@ -59,14 +59,14 @@ function FilterDropdown({ label, options, selected, onChange }) {
                     ? selected.filter(v => v !== opt.value)
                     : [...selected, opt.value]);
                 }}
-                className="rounded border-gray-300 text-hubspot focus:ring-hubspot"
+                className="rounded border-gray-300 text-xubspot focus:ring-xubspot"
               />
               <span className="text-sm text-gray-700 capitalize">{opt.label}</span>
             </label>
           ))}
           {selected.length > 0 && (
             <div className="border-t border-gray-100 mt-1 pt-1 px-3 pb-1">
-              <button onClick={() => onChange([])} className="text-xs text-hubspot hover:underline">Clear</button>
+              <button onClick={() => onChange([])} className="text-xs text-xubspot hover:underline">Clear</button>
             </div>
           )}
         </div>
@@ -203,7 +203,7 @@ export default function Contacts() {
   };
 
   const handleExport = () => {
-    downloadCsv('hubspot-contacts.csv', filtered, [
+    downloadCsv('xubspot-contacts.csv', filtered, [
       { label: 'First Name', value: c => c.firstName },
       { label: 'Last Name', value: c => c.lastName },
       { label: 'Email', value: c => c.email },
@@ -350,7 +350,7 @@ export default function Contacts() {
           </button>
           <button
             onClick={openCreate}
-            className="px-4 py-2 bg-hubspot text-white rounded-md text-sm font-medium hover:bg-hubspot-hover flex items-center gap-2"
+            className="px-4 py-2 bg-xubspot text-white rounded-md text-sm font-medium hover:bg-xubspot-hover flex items-center gap-2"
           >
             <Plus size={16} /> Create Contact
           </button>
@@ -362,7 +362,7 @@ export default function Contacts() {
         <input
           type="text"
           placeholder="Search name, phone, email..."
-          className="pl-9 pr-4 py-2 w-full border border-gray-300 rounded-md text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+          className="pl-9 pr-4 py-2 w-full border border-gray-300 rounded-md text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
           value={search}
           onChange={e => { setSearch(e.target.value); setPage(1); }}
         />
@@ -471,12 +471,12 @@ export default function Contacts() {
                   </td>
                   <td className="px-6 py-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-full bg-hubspot flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
+                      <div className="w-8 h-8 rounded-full bg-xubspot flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
                         {initials}
                       </div>
                       <button
                         onClick={() => openEdit(contact)}
-                        className="font-medium text-hubspot-text hover:text-hubspot cursor-pointer text-left"
+                        className="font-medium text-xubspot-text hover:text-xubspot cursor-pointer text-left"
                       >
                         {contact.firstName} {contact.lastName}
                       </button>
@@ -497,12 +497,12 @@ export default function Contacts() {
                     <div className="invisible group-hover:visible flex justify-end gap-2">
                       <button
                         onClick={() => openCompose(contact)}
-                        className="p-1 text-gray-400 hover:text-hubspot"
+                        className="p-1 text-gray-400 hover:text-xubspot"
                         title="Send email"
                       ><Mail size={16} /></button>
                       <button
                         onClick={() => openEdit(contact)}
-                        className="p-1 text-gray-400 hover:text-hubspot"
+                        className="p-1 text-gray-400 hover:text-xubspot"
                       >
                         <Edit2 size={16} />
                       </button>
@@ -544,7 +544,7 @@ export default function Contacts() {
                   <button
                     key={p}
                     onClick={() => setPage(p)}
-                    className={`w-7 h-7 rounded text-xs font-medium ${page === p ? 'bg-hubspot text-white' : 'border border-gray-300 hover:bg-gray-100'}`}
+                    className={`w-7 h-7 rounded text-xs font-medium ${page === p ? 'bg-xubspot text-white' : 'border border-gray-300 hover:bg-gray-100'}`}
                   >
                     {p}
                   </button>
@@ -560,7 +560,7 @@ export default function Contacts() {
               <select
                 value={pageSize}
                 onChange={e => { setPageSize(Number(e.target.value)); setPage(1); }}
-                className="ml-2 border border-gray-300 rounded px-2 py-1 text-xs focus:ring-1 focus:ring-hubspot"
+                className="ml-2 border border-gray-300 rounded px-2 py-1 text-xs focus:ring-1 focus:ring-xubspot"
               >
                 {PAGE_SIZE_OPTIONS.map(s => <option key={s} value={s}>{s} / page</option>)}
               </select>
@@ -582,7 +582,7 @@ export default function Contacts() {
                   <label className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
                   <input
                     type="text"
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.firstName}
                     onChange={e => setForm({ ...form, firstName: e.target.value })}
                   />
@@ -591,7 +591,7 @@ export default function Contacts() {
                   <label className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
                   <input
                     type="text"
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.lastName}
                     onChange={e => setForm({ ...form, lastName: e.target.value })}
                   />
@@ -602,7 +602,7 @@ export default function Contacts() {
                 <input
                   required
                   type="email"
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.email}
                   onChange={e => setForm({ ...form, email: e.target.value })}
                 />
@@ -611,7 +611,7 @@ export default function Contacts() {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
                 <input
                   type="text"
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.phone}
                   onChange={e => setForm({ ...form, phone: e.target.value })}
                 />
@@ -620,7 +620,7 @@ export default function Contacts() {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Job Title</label>
                 <input
                   type="text"
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.jobTitle}
                   onChange={e => setForm({ ...form, jobTitle: e.target.value })}
                 />
@@ -628,7 +628,7 @@ export default function Contacts() {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Company</label>
                 <select
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.companyId}
                   onChange={e => setForm({ ...form, companyId: e.target.value })}
                 >
@@ -642,7 +642,7 @@ export default function Contacts() {
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Lifecycle Stage</label>
                   <select
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.lifecycleStage}
                     onChange={e => setForm({ ...form, lifecycleStage: e.target.value })}
                   >
@@ -654,7 +654,7 @@ export default function Contacts() {
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Lead Status</label>
                   <select
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.leadStatus}
                     onChange={e => setForm({ ...form, leadStatus: e.target.value })}
                   >
@@ -669,7 +669,7 @@ export default function Contacts() {
                   <label className="block text-sm font-medium text-gray-700 mb-1">City</label>
                   <input
                     type="text"
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.city}
                     onChange={e => setForm({ ...form, city: e.target.value })}
                   />
@@ -678,7 +678,7 @@ export default function Contacts() {
                   <label className="block text-sm font-medium text-gray-700 mb-1">State</label>
                   <input
                     type="text"
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.state}
                     onChange={e => setForm({ ...form, state: e.target.value })}
                   />
@@ -694,7 +694,7 @@ export default function Contacts() {
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-hubspot text-white rounded text-sm hover:bg-hubspot-hover"
+                  className="px-4 py-2 bg-xubspot text-white rounded text-sm hover:bg-xubspot-hover"
                 >
                   {editContact ? 'Save Changes' : 'Create Contact'}
                 </button>
@@ -756,7 +756,7 @@ export default function Contacts() {
                 <label className="block text-xs font-medium text-gray-500 mb-1 uppercase tracking-wide">Subject</label>
                 <input
                   type="text"
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   placeholder="Email subject"
                   value={composeForm.subject}
                   onChange={e => setComposeForm({ ...composeForm, subject: e.target.value })}
@@ -766,7 +766,7 @@ export default function Contacts() {
                 <label className="block text-xs font-medium text-gray-500 mb-1 uppercase tracking-wide">Message</label>
                 <textarea
                   rows={5}
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot resize-none"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot resize-none"
                   placeholder="Type your message..."
                   value={composeForm.body}
                   onChange={e => setComposeForm({ ...composeForm, body: e.target.value })}
@@ -777,7 +777,7 @@ export default function Contacts() {
               <button onClick={() => setComposeTarget(null)} className="px-4 py-2 border border-gray-300 rounded text-gray-700 text-sm hover:bg-gray-50">Discard</button>
               <button
                 onClick={saveEmailDraft}
-                className="px-4 py-2 bg-hubspot text-white rounded text-sm hover:bg-hubspot-hover"
+                className="px-4 py-2 bg-xubspot text-white rounded text-sm hover:bg-xubspot-hover"
               >
                 Save Draft
               </button>

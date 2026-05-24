@@ -19,7 +19,7 @@ export default function ProductDetail() {
   const [editMode, setEditMode] = useState(false)
   const [editData, setEditData] = useState({})
 
-  if (!mat) return <div style={{ padding: '24px', color: 'var(--sap-text-secondary)' }}>Material not found.</div>
+  if (!mat) return <div style={{ padding: '24px', color: 'var(--xap-text-secondary)' }}>Material not found.</div>
 
   function startEdit() { setEditData({ ...mat }); setEditMode(true) }
   function cancelEdit() { setEditData({}); setEditMode(false) }
@@ -54,7 +54,7 @@ export default function ProductDetail() {
     return (
       <div className="form-field">
         <label>{label}</label>
-        <div style={{ fontSize: '14px', padding: '6px 0', color: 'var(--sap-text-primary)', borderBottom: '1px solid var(--sap-border)', minHeight: '32px' }}>
+        <div style={{ fontSize: '14px', padding: '6px 0', color: 'var(--xap-text-primary)', borderBottom: '1px solid var(--xap-border)', minHeight: '32px' }}>
           {value !== undefined && value !== null && value !== '' ? String(value) : '—'}
         </div>
       </div>
@@ -68,15 +68,15 @@ export default function ProductDetail() {
   return (
     <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
       {/* Header */}
-      <div style={{ background: '#fff', borderBottom: '1px solid var(--sap-border)', padding: '12px 24px' }}>
-        <div style={{ fontSize: '12px', color: 'var(--sap-blue)', marginBottom: '4px', cursor: 'pointer' }}
+      <div style={{ background: '#fff', borderBottom: '1px solid var(--xap-border)', padding: '12px 24px' }}>
+        <div style={{ fontSize: '12px', color: 'var(--xap-blue)', marginBottom: '4px', cursor: 'pointer' }}
           onClick={() => navigate('/app/manage-products')}>
           Materials /
         </div>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div>
-            <h1 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--sap-text-primary)' }}>{mat.materialNumber}</h1>
-            <div style={{ fontSize: '13px', color: 'var(--sap-text-secondary)' }}>
+            <h1 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--xap-text-primary)' }}>{mat.materialNumber}</h1>
+            <div style={{ fontSize: '13px', color: 'var(--xap-text-secondary)' }}>
               {mat.materialType} — {MATERIAL_TYPE_LABELS[mat.materialType] || mat.materialType} · {mat.description}
             </div>
           </div>
@@ -193,7 +193,7 @@ export default function ProductDetail() {
       {/* Sticky footer edit bar */}
       {editMode && (
         <div className="sticky-footer">
-          <span style={{ fontSize: '13px', color: 'var(--sap-text-secondary)', marginRight: 'auto' }}>
+          <span style={{ fontSize: '13px', color: 'var(--xap-text-secondary)', marginRight: 'auto' }}>
             Editing Material {mat.materialNumber}
           </span>
           <button className="btn-secondary" onClick={cancelEdit}>Cancel</button>

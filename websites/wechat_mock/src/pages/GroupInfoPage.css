@@ -1,7 +1,7 @@
 
 .group-info-page {
   min-height: 100vh;
-  background-color: var(--wechat-bg, #ededed);
+  background-color: var(--xechat-bg, #ededed);
 }
 
 .group-not-found {
@@ -9,20 +9,20 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  color: var(--wechat-text-secondary);
+  color: var(--xechat-text-secondary);
 }
 
 .group-info-header {
   display: flex;
   align-items: center;
   padding: 12px 16px;
-  background-color: var(--wechat-header-bg, #ededed);
-  border-bottom: 0.5px solid var(--wechat-divider);
+  background-color: var(--xechat-header-bg, #ededed);
+  border-bottom: 0.5px solid var(--xechat-divider);
 }
 
 .group-info-header .back-btn {
   font-size: 28px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
   padding: 0 8px;
   margin-right: 8px;
 }
@@ -30,7 +30,7 @@
 .group-info-header h1 {
   font-size: 17px;
   font-weight: 600;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
 }
 
 .group-info-content {
@@ -118,14 +118,14 @@
 
 .info-label {
   font-size: 16px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
 }
 
 .info-value {
   display: flex;
   align-items: center;
   gap: 6px;
-  color: var(--wechat-text-secondary);
+  color: var(--xechat-text-secondary);
   font-size: 15px;
 }
 
@@ -154,7 +154,7 @@
 
 .edit-announcement-btn {
   font-size: 14px;
-  color: var(--wechat-text-link, #576b95);
+  color: var(--xechat-text-link, #576b95);
   background: none;
   border: none;
   cursor: pointer;
@@ -167,7 +167,7 @@
 
 .announcement-text {
   font-size: 14px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
   line-height: 1.6;
   margin: 0;
 }
@@ -181,7 +181,7 @@
 
 .view-all {
   font-size: 13px;
-  color: var(--wechat-text-link, #576b95);
+  color: var(--xechat-text-link, #576b95);
   margin-top: 4px;
   display: inline-block;
 }
@@ -192,7 +192,7 @@
 
 .no-announcement-text {
   font-size: 14px;
-  color: var(--wechat-text-secondary);
+  color: var(--xechat-text-secondary);
 }
 
 /* Toggle Switch */
@@ -235,7 +235,7 @@
 }
 
 .toggle-switch input:checked + .toggle-slider {
-  background-color: var(--wechat-green, #07c160);
+  background-color: var(--xechat-green, #07c160);
 }
 
 .toggle-switch input:checked + .toggle-slider:before {
@@ -283,7 +283,7 @@
   padding: 28px 20px 20px;
   text-align: center;
   font-size: 16px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
 }
 
 .confirm-actions {
@@ -302,7 +302,7 @@
 }
 
 .confirm-cancel {
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
   border-right: 0.5px solid #e5e5e5;
 }
 
@@ -311,7 +311,7 @@
 }
 
 .confirm-ok {
-  color: var(--wechat-green, #07c160);
+  color: var(--xechat-green, #07c160);
   font-weight: 500;
 }
 
@@ -339,12 +339,12 @@
 .editor-title {
   font-size: 17px;
   font-weight: 500;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
 }
 
 .editor-cancel {
   font-size: 15px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
   background: none;
   border: none;
   cursor: pointer;
@@ -352,7 +352,7 @@
 
 .editor-save {
   font-size: 15px;
-  color: var(--wechat-green, #07c160);
+  color: var(--xechat-green, #07c160);
   font-weight: 500;
   background: none;
   border: none;
@@ -360,7 +360,7 @@
 }
 
 .editor-save:disabled {
-  color: var(--wechat-text-secondary);
+  color: var(--xechat-text-secondary);
 }
 
 .announcement-textarea {
@@ -434,18 +434,18 @@
 }
 
 .member-checkbox.checked {
-  background-color: var(--wechat-green, #07c160);
-  border-color: var(--wechat-green, #07c160);
+  background-color: var(--xechat-green, #07c160);
+  border-color: var(--xechat-green, #07c160);
 }
 
 .member-select-name {
   font-size: 16px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
 }
 
 .no-contacts-msg {
   padding: 40px 20px;
   text-align: center;
   font-size: 14px;
-  color: var(--wechat-text-secondary);
+  color: var(--xechat-text-secondary);
 }

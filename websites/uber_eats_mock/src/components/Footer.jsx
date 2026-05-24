@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const FOOTER_CONTENT = {
-  help: { title: 'Uber Eats Help', body: 'Choose an order from Your Orders to get order-specific help, refunds, delivery updates, or contact options.' },
+  help: { title: 'Xber Eats Help', body: 'Choose an order from Your Orders to get order-specific help, refunds, delivery updates, or contact options.' },
   gift: { title: 'Gift cards', body: 'Sandbox gift cards can be added at checkout with promo code SAVE5. No external purchase is required.' },
   restaurant: { title: 'Add your restaurant', body: 'Restaurant onboarding is simulated locally. Your draft is saved in this browser session for training tasks.' },
   deliver: { title: 'Sign up to deliver', body: 'Delivery partner signup opens a local information flow in this sandbox and never contacts external services.' },
@@ -11,7 +11,7 @@ const FOOTER_CONTENT = {
   cities: { title: 'Cities', body: 'This sandbox currently serves San Francisco neighborhoods with stable local fixtures.' },
   countries: { title: 'Countries', body: 'Country selection is fixed to the United States so prices, addresses, and taxes remain deterministic.' },
   pickup: { title: 'Pickup near me', body: 'Use the Delivery/Pickup toggle in the header to switch the catalog and cart to pickup mode.' },
-  about: { title: 'About Uber Eats', body: 'This is a self-contained Uber Eats training mock with local restaurants, orders, account settings, and file endpoints.' },
+  about: { title: 'About Xber Eats', body: 'This is a self-contained Xber Eats training mock with local restaurants, orders, account settings, and file endpoints.' },
   appStore: { title: 'App Store', body: 'App installation is represented locally. Continue using this browser sandbox for all training workflows.' },
   playStore: { title: 'Google Play', body: 'App installation is represented locally. Continue using this browser sandbox for all training workflows.' },
   privacy: { title: 'Privacy Policy', body: 'Sandbox data stays local to this mock server and browser storage for the active session id.' },
@@ -47,7 +47,7 @@ export default function Footer() {
             <button className="ue-footer__link" onClick={() => setModalKey('pickup')}>Pickup near me</button>
           </div>
           <div className="ue-footer__col">
-            <button className="ue-footer__link" onClick={() => setModalKey('about')}>About Uber Eats</button>
+            <button className="ue-footer__link" onClick={() => setModalKey('about')}>About Xber Eats</button>
             <Link to="/" className="ue-footer__link">English</Link>
           </div>
         </div>

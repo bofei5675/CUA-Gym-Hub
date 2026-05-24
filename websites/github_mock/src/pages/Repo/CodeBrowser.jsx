@@ -107,7 +107,7 @@
               <div className="relative">
                 <button
                   onClick={() => setIsBranchMenuOpen(!isBranchMenuOpen)}
-                  className="bg-[#21262d] border border-github-border text-github-text px-3 py-1.5 rounded-md text-sm font-semibold flex items-center gap-2 hover:bg-[#30363d]"
+                  className="bg-[#21262d] border border-xithub-border text-xithub-text px-3 py-1.5 rounded-md text-sm font-semibold flex items-center gap-2 hover:bg-[#30363d]"
                 >
                   <GitBranch size={16} />
                   {currentBranch}
@@ -115,14 +115,14 @@
                 </button>
 
                 {isBranchMenuOpen && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-[#161b22] border border-github-border rounded-md shadow-xl z-50 overflow-hidden">
-                    <div className="p-2 border-b border-github-border">
+                  <div className="absolute top-full left-0 mt-1 w-64 bg-[#161b22] border border-xithub-border rounded-md shadow-xl z-50 overflow-hidden">
+                    <div className="p-2 border-b border-xithub-border">
                        <input
                          type="text"
                          placeholder="Find a branch..."
                          value={branchSearch}
                          onChange={e => setBranchSearch(e.target.value)}
-                         className="w-full bg-[#0d1117] border border-github-border rounded-md px-2 py-1 text-sm text-github-text focus:ring-1 focus:ring-github-accent outline-none"
+                         className="w-full bg-[#0d1117] border border-xithub-border rounded-md px-2 py-1 text-sm text-xithub-text focus:ring-1 focus:ring-xithub-accent outline-none"
                        />
                     </div>
                     <div className="max-h-64 overflow-y-auto">
@@ -141,21 +141,21 @@
                         </button>
                       ))}
                       {filteredBranches.length === 0 && (
-                        <div className="px-4 py-2 text-sm text-github-muted">No branches found</div>
+                        <div className="px-4 py-2 text-sm text-xithub-muted">No branches found</div>
                       )}
                     </div>
                   </div>
                 )}
               </div>
 
-              <div className="flex items-center gap-2 text-github-text text-sm">
+              <div className="flex items-center gap-2 text-xithub-text text-sm">
                 <span className="font-bold">{owner?.username}</span>
-                <span className="text-github-muted">/</span>
+                <span className="text-xithub-muted">/</span>
                 <Link to={`/${owner?.username}/${repo.name}`} className="font-bold hover:underline">{repo.name}</Link>
                 {currentPath && (
                   <>
-                    <span className="text-github-muted">/</span>
-                    <span className="text-github-muted">{currentPath}</span>
+                    <span className="text-xithub-muted">/</span>
+                    <span className="text-xithub-muted">{currentPath}</span>
                   </>
                 )}
               </div>
@@ -164,28 +164,28 @@
             <div className="flex items-center gap-2 relative">
               <button
                 onClick={() => setShowCodeDropdown(!showCodeDropdown)}
-                className="bg-github-success text-white px-3 py-1.5 rounded-md text-sm font-semibold hover:bg-opacity-90 flex items-center gap-2"
+                className="bg-xithub-success text-white px-3 py-1.5 rounded-md text-sm font-semibold hover:bg-opacity-90 flex items-center gap-2"
               >
                 Code <span className="text-xs">▼</span>
               </button>
               {showCodeDropdown && (
-                <div className="absolute right-0 top-full mt-1 w-80 bg-[#161b22] border border-github-border rounded-md shadow-xl z-50">
-                  <div className="p-3 border-b border-github-border">
-                    <div className="text-xs font-semibold text-github-muted mb-2">Clone</div>
+                <div className="absolute right-0 top-full mt-1 w-80 bg-[#161b22] border border-xithub-border rounded-md shadow-xl z-50">
+                  <div className="p-3 border-b border-xithub-border">
+                    <div className="text-xs font-semibold text-xithub-muted mb-2">Clone</div>
                     <div className="flex items-center gap-2 mb-2">
                       <span className="text-xs font-semibold text-white">HTTPS</span>
-                      <span className="text-xs text-github-muted">SSH</span>
+                      <span className="text-xs text-xithub-muted">SSH</span>
                     </div>
                     <div className="flex items-center">
                       <input
                         type="text"
                         value={cloneUrl}
                         readOnly
-                        className="flex-1 bg-[#0d1117] border border-github-border rounded-l-md px-2 py-1 text-xs text-github-text font-mono"
+                        className="flex-1 bg-[#0d1117] border border-xithub-border rounded-l-md px-2 py-1 text-xs text-xithub-text font-mono"
                       />
                       <button
                         onClick={() => navigator.clipboard.writeText(cloneUrl)}
-                        className="bg-[#21262d] border border-l-0 border-github-border rounded-r-md px-2 py-1 text-xs hover:bg-[#30363d]"
+                        className="bg-[#21262d] border border-l-0 border-xithub-border rounded-r-md px-2 py-1 text-xs hover:bg-[#30363d]"
                       >
                         Copy
                       </button>
@@ -205,7 +205,7 @@
           {/* Code Search */}
           <div className="relative mb-4">
             <div className="relative">
-              <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-github-muted" />
+              <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-xithub-muted" />
               <input
                 type="text"
                 placeholder="Search code in this repository..."
@@ -217,19 +217,19 @@
                 onFocus={() => {
                   if (codeSearchQuery.trim()) setShowSearchResults(true);
                 }}
-                className="w-full bg-[#0d1117] border border-github-border rounded-md pl-9 pr-3 py-1.5 text-sm text-white placeholder-github-muted focus:outline-none focus:border-github-accent"
+                className="w-full bg-[#0d1117] border border-xithub-border rounded-md pl-9 pr-3 py-1.5 text-sm text-white placeholder-xithub-muted focus:outline-none focus:border-xithub-accent"
               />
               {codeSearchQuery && (
                 <button
                   onClick={() => { setCodeSearchQuery(''); setShowSearchResults(false); }}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 text-github-muted hover:text-white text-xs"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 text-xithub-muted hover:text-white text-xs"
                 >
                   Clear
                 </button>
               )}
             </div>
             {showSearchResults && codeSearchQuery.trim() && (
-              <div className="mt-2 bg-github-card border border-github-border rounded-md overflow-hidden max-h-96 overflow-y-auto">
+              <div className="mt-2 bg-xithub-card border border-xithub-border rounded-md overflow-hidden max-h-96 overflow-y-auto">
                 {(() => {
                   const query = codeSearchQuery.toLowerCase();
                   const results = [];
@@ -250,13 +250,13 @@
                   });
                   if (results.length === 0) {
                     return (
-                      <div className="p-6 text-center text-github-muted text-sm">
+                      <div className="p-6 text-center text-xithub-muted text-sm">
                         No results found for "{codeSearchQuery}"
                       </div>
                     );
                   }
                   return results.slice(0, 10).map(result => (
-                    <div key={result.file.id} className="border-b border-github-border last:border-b-0">
+                    <div key={result.file.id} className="border-b border-xithub-border last:border-b-0">
                       <div
                         onClick={() => {
                           navigate(`/${owner?.username}/${repo.name}/blob/${result.file.path}`);
@@ -265,10 +265,10 @@
                         }}
                         className="px-4 py-2 bg-[#161b22] flex items-center gap-2 cursor-pointer hover:bg-[#21262d]"
                       >
-                        <FileCode size={14} className="text-github-muted shrink-0" />
-                        <span className="text-sm text-github-accent font-mono">{result.file.path}</span>
+                        <FileCode size={14} className="text-xithub-muted shrink-0" />
+                        <span className="text-sm text-xithub-accent font-mono">{result.file.path}</span>
                         {result.matchingLines.length > 0 && (
-                          <span className="text-xs text-github-muted ml-auto">
+                          <span className="text-xs text-xithub-muted ml-auto">
                             {result.matchingLines.length} match{result.matchingLines.length > 1 ? 'es' : ''}
                           </span>
                         )}
@@ -283,8 +283,8 @@
                           }}
                           className="px-4 py-1.5 hover:bg-[#21262d] cursor-pointer flex items-start gap-3 text-xs font-mono"
                         >
-                          <span className="text-github-muted w-8 text-right shrink-0">L{ml.lineNum}</span>
-                          <span className="text-github-text truncate">
+                          <span className="text-xithub-muted w-8 text-right shrink-0">L{ml.lineNum}</span>
+                          <span className="text-xithub-text truncate">
                             {highlightMatch(ml.content, codeSearchQuery)}
                           </span>
                         </div>
@@ -296,27 +296,27 @@
             )}
           </div>
 
-          <div className="bg-github-card border border-github-border rounded-md overflow-hidden">
-            <div className="bg-[#161b22] border-b border-github-border p-3 flex items-center justify-between text-sm">
+          <div className="bg-xithub-card border border-xithub-border rounded-md overflow-hidden">
+            <div className="bg-[#161b22] border-b border-xithub-border p-3 flex items-center justify-between text-sm">
               <div className="flex items-center gap-2">
                 <img src={owner?.avatar} alt={owner?.username} className="w-5 h-5 rounded-full" />
-                <span className="font-semibold text-github-text">{owner?.username}</span>
-                <span className="text-github-muted truncate">{lastCommit?.message || "Initial commit"}</span>
+                <span className="font-semibold text-xithub-text">{owner?.username}</span>
+                <span className="text-xithub-muted truncate">{lastCommit?.message || "Initial commit"}</span>
               </div>
-              <div className="flex items-center gap-4 text-github-muted text-xs">
+              <div className="flex items-center gap-4 text-xithub-muted text-xs">
                 <span>{lastCommit?.id?.substring(0, 7)}</span>
                 <span>{lastCommit ? new Date(lastCommit.date).toLocaleDateString() : 'Just now'}</span>
-                <Link to="commits" className="flex items-center gap-1 font-semibold text-github-text hover:text-github-accent">
+                <Link to="commits" className="flex items-center gap-1 font-semibold text-xithub-text hover:text-xithub-accent">
                    <History size={14} />
                    <span>{commits.length} commits</span>
                 </Link>
               </div>
             </div>
 
-            <div className="divide-y divide-github-border">
+            <div className="divide-y divide-xithub-border">
               {currentPath && (
                 <div className="p-3 hover:bg-[#161b22] flex items-center gap-3 text-sm">
-                   <Link to={`/${owner?.username}/${repo.name}${currentPath.includes('/') ? '/blob/' + currentPath.split('/').slice(0, -1).join('/') : ''}`} className="text-github-accent font-bold">..</Link>
+                   <Link to={`/${owner?.username}/${repo.name}${currentPath.includes('/') ? '/blob/' + currentPath.split('/').slice(0, -1).join('/') : ''}`} className="text-xithub-accent font-bold">..</Link>
                 </div>
               )}
 
@@ -324,15 +324,15 @@
               {derivedFolders.map(folder => (
                  <div key={folder.path} className="p-3 hover:bg-[#161b22] flex items-center justify-between text-sm group">
                     <div className="flex items-center gap-3">
-                      <Folder size={16} className="text-github-accent fill-github-accent/20" />
-                      <Link to={`/${owner?.username}/${repo.name}/blob/${folder.path}`} className="text-github-text hover:text-github-accent hover:underline">
+                      <Folder size={16} className="text-xithub-accent fill-xithub-accent/20" />
+                      <Link to={`/${owner?.username}/${repo.name}/blob/${folder.path}`} className="text-xithub-text hover:text-xithub-accent hover:underline">
                         {folder.name}
                       </Link>
                     </div>
-                    <span className="text-github-muted text-xs group-hover:text-github-text">
+                    <span className="text-xithub-muted text-xs group-hover:text-xithub-text">
                       Folder update
                     </span>
-                    <span className="text-github-muted text-xs">
+                    <span className="text-xithub-muted text-xs">
                       2 days ago
                     </span>
                  </div>
@@ -342,22 +342,22 @@
               {dirFiles.map(file => (
                 <div key={file.id} className="p-3 hover:bg-[#161b22] flex items-center justify-between text-sm group">
                   <div className="flex items-center gap-3">
-                    <FileCode size={16} className="text-github-muted" />
-                    <Link to={`/${owner?.username}/${repo.name}/blob/${file.path}`} className="text-github-text hover:text-github-accent hover:underline">
+                    <FileCode size={16} className="text-xithub-muted" />
+                    <Link to={`/${owner?.username}/${repo.name}/blob/${file.path}`} className="text-xithub-text hover:text-xithub-accent hover:underline">
                       {file.path.split('/').pop()}
                     </Link>
                   </div>
-                  <span className="text-github-muted text-xs group-hover:text-github-text">
+                  <span className="text-xithub-muted text-xs group-hover:text-xithub-text">
                     {commits.find(c => c.branch === currentBranch)?.message || "Update"}
                   </span>
-                  <span className="text-github-muted text-xs">
+                  <span className="text-xithub-muted text-xs">
                     {commits.find(c => c.branch === currentBranch) ? new Date(commits.find(c => c.branch === currentBranch).date).toLocaleDateString() : 'Recently'}
                   </span>
                 </div>
               ))}
 
               {dirFiles.length === 0 && derivedFolders.length === 0 && (
-                 <div className="p-8 text-center text-github-muted text-sm">
+                 <div className="p-8 text-center text-xithub-muted text-sm">
                     No files found in this directory.
                  </div>
               )}
@@ -366,11 +366,11 @@
 
           {/* README Preview */}
           {files.find(f => f.path === 'README.md') && !currentPath && (
-            <div className="mt-8 border border-github-border rounded-md">
-               <div className="bg-[#161b22] border-b border-github-border p-2 px-4 text-sm font-semibold flex items-center gap-2">
+            <div className="mt-8 border border-xithub-border rounded-md">
+               <div className="bg-[#161b22] border-b border-xithub-border p-2 px-4 text-sm font-semibold flex items-center gap-2">
                  <BookOpen size={16} /> README.md
                </div>
-               <div className="p-8 prose prose-invert max-w-none bg-github-bg">
+               <div className="p-8 prose prose-invert max-w-none bg-xithub-bg">
                  <Markdown>{files.find(f => f.path === 'README.md').content}</Markdown>
                </div>
             </div>
@@ -394,10 +394,10 @@
               <div className="mb-6">
                 <h3 className="text-base font-semibold text-white mb-2">About</h3>
                 {repo.description && (
-                  <p className="text-sm text-github-text mb-3">{repo.description}</p>
+                  <p className="text-sm text-xithub-text mb-3">{repo.description}</p>
                 )}
                 {repo.homepage && (
-                  <a href={repo.homepage} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-sm text-github-accent hover:underline mb-3">
+                  <a href={repo.homepage} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-sm text-xithub-accent hover:underline mb-3">
                     <ExternalLink size={14} />
                     {repo.homepage}
                   </a>
@@ -414,39 +414,39 @@
               </div>
 
               {/* Links */}
-              <div className="border-t border-github-border pt-4 mb-4 space-y-2">
-                <Link to={`/${owner.username}/${repo.name}/releases`} className="flex items-center gap-2 text-sm text-github-text hover:text-github-accent">
-                  <Tag size={14} className="text-github-muted" />
+              <div className="border-t border-xithub-border pt-4 mb-4 space-y-2">
+                <Link to={`/${owner.username}/${repo.name}/releases`} className="flex items-center gap-2 text-sm text-xithub-text hover:text-xithub-accent">
+                  <Tag size={14} className="text-xithub-muted" />
                   <span>Releases</span>
                 </Link>
-                <Link to={`/${owner.username}/${repo.name}/actions`} className="flex items-center gap-2 text-sm text-github-text hover:text-github-accent">
-                  <Package size={14} className="text-github-muted" />
+                <Link to={`/${owner.username}/${repo.name}/actions`} className="flex items-center gap-2 text-sm text-xithub-text hover:text-xithub-accent">
+                  <Package size={14} className="text-xithub-muted" />
                   <span>Packages</span>
                 </Link>
                 {repo.license && (
-                  <div className="flex items-center gap-2 text-sm text-github-text">
-                    <Scale size={14} className="text-github-muted" />
+                  <div className="flex items-center gap-2 text-sm text-xithub-text">
+                    <Scale size={14} className="text-xithub-muted" />
                     <span>{repo.license} License</span>
                   </div>
                 )}
               </div>
 
               {/* Stars / Forks / Watchers */}
-              <div className="border-t border-github-border pt-4 mb-4 flex items-center gap-4 text-sm text-github-muted">
+              <div className="border-t border-xithub-border pt-4 mb-4 flex items-center gap-4 text-sm text-xithub-muted">
                 <span className="flex items-center gap-1">
-                  <Star size={14} /> <span className="font-semibold text-github-text">{repo.stars}</span> stars
+                  <Star size={14} /> <span className="font-semibold text-xithub-text">{repo.stars}</span> stars
                 </span>
                 <span className="flex items-center gap-1">
-                  <GitFork size={14} /> <span className="font-semibold text-github-text">{repo.forks}</span> forks
+                  <GitFork size={14} /> <span className="font-semibold text-xithub-text">{repo.forks}</span> forks
                 </span>
                 <span className="flex items-center gap-1">
-                  <Eye size={14} /> <span className="font-semibold text-github-text">{repo.watchers || 0}</span> watching
+                  <Eye size={14} /> <span className="font-semibold text-xithub-text">{repo.watchers || 0}</span> watching
                 </span>
               </div>
 
               {/* Languages */}
               {langEntries.length > 0 && (
-                <div className="border-t border-github-border pt-4">
+                <div className="border-t border-xithub-border pt-4">
                   <h3 className="text-sm font-semibold text-white mb-3">Languages</h3>
                   <div className="flex h-2 rounded-full overflow-hidden mb-3">
                     {langEntries.map(([lang, pct]) => (
@@ -466,8 +466,8 @@
                           className="w-2.5 h-2.5 rounded-full inline-block"
                           style={{ backgroundColor: languageColors[lang] || '#8b949e' }}
                         />
-                        <span className="text-github-text font-semibold">{lang}</span>
-                        <span className="text-github-muted">{pct}%</span>
+                        <span className="text-xithub-text font-semibold">{lang}</span>
+                        <span className="text-xithub-muted">{pct}%</span>
                       </div>
                     ))}
                   </div>
@@ -540,12 +540,12 @@
             <div className="mb-4">
               <button
                 onClick={() => setIsRaw(false)}
-                className="flex items-center gap-2 text-sm text-github-accent hover:underline"
+                className="flex items-center gap-2 text-sm text-xithub-accent hover:underline"
               >
                 <ArrowLeft size={16} /> Back to file view
               </button>
             </div>
-            <div className="bg-white text-black p-4 font-mono whitespace-pre-wrap rounded-md border border-github-border">
+            <div className="bg-white text-black p-4 font-mono whitespace-pre-wrap rounded-md border border-xithub-border">
               {file.content}
             </div>
           </div>
@@ -555,22 +555,22 @@
       if (isEditing) {
         return (
           <div className="max-w-6xl mx-auto">
-            <div className="mb-4 text-sm text-github-muted">
-              <Link to={`/${owner?.username}/${repo.name}`} className="text-github-accent hover:underline font-bold">{repo.name}</Link>
+            <div className="mb-4 text-sm text-xithub-muted">
+              <Link to={`/${owner?.username}/${repo.name}`} className="text-xithub-accent hover:underline font-bold">{repo.name}</Link>
               <span className="mx-1">/</span>
-              <span className="font-bold text-github-text">{file.path}</span>
+              <span className="font-bold text-xithub-text">{file.path}</span>
               <span className="ml-2 text-yellow-400">(editing)</span>
             </div>
 
-            <div className="border border-github-border rounded-md overflow-hidden">
-              <div className="bg-[#161b22] border-b border-github-border p-3 flex items-center justify-between text-sm">
-                <div className="flex items-center gap-2 text-github-text">
+            <div className="border border-xithub-border rounded-md overflow-hidden">
+              <div className="bg-[#161b22] border-b border-xithub-border p-3 flex items-center justify-between text-sm">
+                <div className="flex items-center gap-2 text-xithub-text">
                   <Pencil size={14} />
                   <span>Editing <span className="font-semibold">{file.path.split('/').pop()}</span></span>
                 </div>
                 <button
                   onClick={() => setIsEditing(false)}
-                  className="px-3 py-1 text-github-muted hover:text-white text-sm"
+                  className="px-3 py-1 text-xithub-muted hover:text-white text-sm"
                 >
                   Cancel
                 </button>
@@ -579,7 +579,7 @@
               <textarea
                 value={editContent}
                 onChange={e => setEditContent(e.target.value)}
-                className="w-full min-h-[400px] bg-[#0d1117] text-github-text font-mono text-sm p-4 outline-none resize-y border-b border-github-border"
+                className="w-full min-h-[400px] bg-[#0d1117] text-xithub-text font-mono text-sm p-4 outline-none resize-y border-b border-xithub-border"
                 spellCheck={false}
               />
 
@@ -590,18 +590,18 @@
                   value={commitMessage}
                   onChange={e => setCommitMessage(e.target.value)}
                   placeholder="Update filename"
-                  className="w-full bg-[#0d1117] border border-github-border rounded-md px-3 py-2 text-sm text-github-text focus:ring-1 focus:ring-github-accent outline-none mb-3"
+                  className="w-full bg-[#0d1117] border border-xithub-border rounded-md px-3 py-2 text-sm text-xithub-text focus:ring-1 focus:ring-xithub-accent outline-none mb-3"
                 />
                 <div className="flex gap-2">
                   <button
                     onClick={handleCommitChanges}
-                    className="bg-github-success text-white px-4 py-1.5 rounded-md font-semibold text-sm hover:bg-opacity-90"
+                    className="bg-xithub-success text-white px-4 py-1.5 rounded-md font-semibold text-sm hover:bg-opacity-90"
                   >
                     Commit changes
                   </button>
                   <button
                     onClick={() => setIsEditing(false)}
-                    className="px-4 py-1.5 text-github-muted hover:text-white text-sm border border-github-border rounded-md"
+                    className="px-4 py-1.5 text-xithub-muted hover:text-white text-sm border border-xithub-border rounded-md"
                   >
                     Cancel
                   </button>
@@ -614,36 +614,36 @@
 
       return (
         <div className="max-w-6xl mx-auto">
-           <div className="mb-4 text-sm text-github-muted">
-             <Link to={`/${owner?.username}/${repo.name}`} className="text-github-accent hover:underline font-bold">{repo.name}</Link>
+           <div className="mb-4 text-sm text-xithub-muted">
+             <Link to={`/${owner?.username}/${repo.name}`} className="text-xithub-accent hover:underline font-bold">{repo.name}</Link>
              <span className="mx-1">/</span>
-             <span className="font-bold text-github-text">{file.path}</span>
+             <span className="font-bold text-xithub-text">{file.path}</span>
            </div>
 
-           <div className="border border-github-border rounded-md overflow-hidden">
-             <div className="bg-[#161b22] border-b border-github-border p-3 flex items-center justify-between text-sm">
-               <div className="flex items-center gap-2 text-github-text">
-                 <span className="font-mono text-xs px-2 py-0.5 bg-github-border rounded-md">{file.content.split('\n').length} lines</span>
-                 <span className="text-github-muted">|</span>
+           <div className="border border-xithub-border rounded-md overflow-hidden">
+             <div className="bg-[#161b22] border-b border-xithub-border p-3 flex items-center justify-between text-sm">
+               <div className="flex items-center gap-2 text-xithub-text">
+                 <span className="font-mono text-xs px-2 py-0.5 bg-xithub-border rounded-md">{file.content.split('\n').length} lines</span>
+                 <span className="text-xithub-muted">|</span>
                  <span>{(new Blob([file.content]).size / 1024).toFixed(1)} KB</span>
                </div>
                <div className="flex items-center gap-2">
                  <button
                     onClick={handleStartEdit}
-                    className="p-1.5 hover:bg-github-border rounded-md text-github-muted hover:text-github-text"
+                    className="p-1.5 hover:bg-xithub-border rounded-md text-xithub-muted hover:text-xithub-text"
                     title="Edit this file"
                  >
                     <Pencil size={16} />
                  </button>
                  <button
                     onClick={() => setIsRaw(true)}
-                    className="px-3 py-1 bg-[#21262d] border border-github-border rounded-md text-xs font-semibold hover:bg-[#30363d] transition-colors"
+                    className="px-3 py-1 bg-[#21262d] border border-xithub-border rounded-md text-xs font-semibold hover:bg-[#30363d] transition-colors"
                  >
                     Raw
                  </button>
                  <button
                    onClick={handleDownload}
-                   className="p-1.5 hover:bg-github-border rounded-md text-github-muted hover:text-github-text"
+                   className="p-1.5 hover:bg-xithub-border rounded-md text-xithub-muted hover:text-xithub-text"
                    title="Download file"
                  >
                    <Download size={16} />

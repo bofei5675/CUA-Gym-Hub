@@ -28,7 +28,7 @@ export default function NetworkSecurityGroups() {
       </div>
 
       <div className="card" style={{ padding: 0 }}>
-        <table className="azure-table">
+        <table className="xzure-table">
           <thead>
             <tr>
               <th>Name</th>
@@ -40,7 +40,7 @@ export default function NetworkSecurityGroups() {
           </thead>
           <tbody>
             {filtered.length === 0 && (
-              <tr><td colSpan={5} style={{ textAlign: 'center', padding: '24px', color: 'var(--azure-text-secondary)' }}>No network security groups found</td></tr>
+              <tr><td colSpan={5} style={{ textAlign: 'center', padding: '24px', color: 'var(--xzure-text-secondary)' }}>No network security groups found</td></tr>
             )}
             {filtered.map(nsg => (
               <tr key={nsg.id}>

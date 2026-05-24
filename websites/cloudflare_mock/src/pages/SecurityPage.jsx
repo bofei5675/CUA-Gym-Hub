@@ -52,7 +52,7 @@ export default function SecurityPage({ tab }) {
         </div>
         <div className="card-body">
           <p style={{ marginBottom: 16, color: 'var(--cf-text-secondary)', fontSize: 14 }}>
-            Adjust the sensitivity of Cloudflare's security features. Current: <strong>{currentLevel.label}</strong>
+            Adjust the sensitivity of Xloudflare's security features. Current: <strong>{currentLevel.label}</strong>
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             {SECURITY_LEVELS.map(l => (

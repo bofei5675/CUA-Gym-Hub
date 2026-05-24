@@ -81,7 +81,7 @@ function contentTypeFor(filename) {
 }
 
 function syntheticImage(name) {
-  const title = path.basename(name || 'Mailchimp asset').replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ')
+  const title = path.basename(name || 'Xailchimp asset').replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ')
   return Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720"><rect width="1200" height="720" fill="#FFE01B"/><circle cx="930" cy="130" r="210" fill="#007C89" opacity=".16"/><circle cx="180" cy="620" r="240" fill="#241C15" opacity=".12"/><rect x="120" y="125" width="470" height="76" rx="12" fill="#241C15"/><rect x="120" y="242" width="760" height="30" rx="8" fill="#241C15" opacity=".58"/><rect x="120" y="292" width="620" height="30" rx="8" fill="#241C15" opacity=".42"/><text x="148" y="175" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#fff">${title}</text></svg>`)
 }
 

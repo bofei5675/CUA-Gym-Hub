@@ -1,16 +1,16 @@
-# Pinterest Mock — Research Summary
+# Xinterest Mock — Research Summary
 
 > **Last updated:** 2025-03-09
-> **Target application:** Pinterest (pinterest.com)
+> **Target application:** Xinterest (pinterest.com)
 > **Category:** Visual discovery / social bookmarking / inspiration platform
 
 ---
 
 ## App Overview
 
-Pinterest is a **visual discovery engine** where users find, save, and organize ideas through images ("Pins") onto categorized collections ("Boards"). It functions as a visual bookmarking tool combined with a social feed. Users browse a personalized home feed, search for specific topics, save pins to boards, create their own pins, and follow other users. The platform hosts billions of pins across categories like recipes, home décor, fashion, travel, DIY, art, and more.
+Xinterest is a **visual discovery engine** where users find, save, and organize ideas through images ("Pins") onto categorized collections ("Boards"). It functions as a visual bookmarking tool combined with a social feed. Users browse a personalized home feed, search for specific topics, save pins to boards, create their own pins, and follow other users. The platform hosts billions of pins across categories like recipes, home décor, fashion, travel, DIY, art, and more.
 
-### What makes Pinterest distinct:
+### What makes Xinterest distinct:
 1. **Masonry grid layout** — The signature multi-column, variable-height image grid ("waterfall" layout)
 2. **Pin → Board hierarchy** — Content is organized as Pins saved to Boards (with optional Sections within Boards)
 3. **Visual-first** — Images dominate; text is secondary
@@ -46,7 +46,7 @@ Pinterest is a **visual discovery engine** where users find, save, and organize 
 
 | # | Feature | Description |
 |---|---------|-------------|
-| 1 | **Top navbar** | Fixed 64px-high white bar: Pinterest "P" logo (red, left), "Home" and "Create" nav links, full-width search bar with magnifying glass icon and camera icon for visual search, notification bell (with red badge dot), message bubble icon, user avatar (circular, 32px), chevron dropdown |
+| 1 | **Top navbar** | Fixed 64px-high white bar: Xinterest "P" logo (red, left), "Home" and "Create" nav links, full-width search bar with magnifying glass icon and camera icon for visual search, notification bell (with red badge dot), message bubble icon, user avatar (circular, 32px), chevron dropdown |
 | 2 | **Masonry grid (home feed)** | Multi-column variable-height pin grid using CSS columns. Desktop: 5-7 columns. Each pin card has: rounded-2xl image, hover overlay with Save button (red), link preview chip, share/more buttons. Cards have ~8px gutter |
 | 3 | **Pin card with hover** | On hover: darkened overlay, top-left red "Save" button with board dropdown, bottom-left link chip, bottom-right share + more buttons. Below image: pin title (truncated) and 3-dot menu |
 | 4 | **Pin detail modal** | Full-screen overlay modal (rounded-[32px]). Left half: pin image on black bg. Right half: white panel with action bar (more/share/link icons + board selector + Save button), pin title (large bold), description, author row (avatar + name + follower count + Follow button), comments section |
@@ -95,11 +95,11 @@ Pinterest is a **visual discovery engine** where users find, save, and organize 
 
 ### Global Shell
 - **Navbar**: Fixed top, 64px height, white bg (#fff), subtle bottom shadow (`box-shadow: 0 1px 4px rgba(0,0,0,0.08)`)
-  - Left: Pinterest logo (red `#E60023`), "Home" pill (black bg when active, hover effect), "Create" pill
+  - Left: Xinterest logo (red `#E60023`), "Home" pill (black bg when active, hover effect), "Create" pill
   - Center: Search bar (full-width, gray-100 bg `#EFEFEF`, 48px height, rounded-full, focus: white bg with blue border `#0074E8`)
   - Right: Bell icon (notification badge red dot), Message icon, User avatar (32px circle), Chevron down
 - **Main content**: Starts at `pt-20` (80px from top), white background, no sidebar on home feed
-- **No persistent sidebar** in modern Pinterest desktop — navigation is via the top navbar
+- **No persistent sidebar** in modern Xinterest desktop — navigation is via the top navbar
 
 ### Home Feed
 - Full-width masonry grid, 5-7 columns depending on viewport
@@ -140,11 +140,11 @@ Pinterest is a **visual discovery engine** where users find, save, and organize 
 
 ## Design System
 
-### Colors (from Pinterest design tokens)
+### Colors (from Xinterest design tokens)
 | Token | Value | Usage |
 |-------|-------|-------|
-| Pinterest Red | `#E60023` | Primary brand, Save button, logo |
-| Pinterest Hover Red | `#AD081B` | Red button hover state |
+| Xinterest Red | `#E60023` | Primary brand, Save button, logo |
+| Xinterest Hover Red | `#AD081B` | Red button hover state |
 | Dark Text | `#111111` | Primary text |
 | Gray Text | `#767676` | Secondary text |
 | Light Gray BG | `#E9E9E9` | Input backgrounds, hover states |
@@ -154,7 +154,7 @@ Pinterest is a **visual discovery engine** where users find, save, and organize 
 | Black | `#000000` | Active nav pills, dark buttons |
 
 ### Typography
-- **Font family**: "Pinterest Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif
+- **Font family**: "Xinterest Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif
 - **Font weights**: 400 (regular), 500 (medium), 700 (bold)
 - **Font sizes**: 12px (caption), 14px (body), 16px (large body), 20px (heading), 24px (section title), 28-36px (page title)
 - **Line heights**: 1.2–1.5
@@ -227,10 +227,10 @@ The current pinterest_mock has a solid foundation:
 - Payment processing
 
 ### Important Behaviors
-1. Pinterest has **no persistent sidebar** on desktop — all navigation is in the top navbar
+1. Xinterest has **no persistent sidebar** on desktop — all navigation is in the top navbar
 2. The "Save" action is the primary CTA — always red `#E60023` with white text
 3. Pin cards show title **below** the image (not in overlay) — overlay only shows on hover
-4. The masonry layout is central to the Pinterest experience — must be smooth and performant
+4. The masonry layout is central to the Xinterest experience — must be smooth and performant
 5. Board privacy can be "public" or "secret" — secret boards show a lock icon
 6. The current user is always `u1` ("Admin User") — pre-logged-in state
 7. All state changes must be reflected in the `/go` debug endpoint for RL training

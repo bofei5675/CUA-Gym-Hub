@@ -171,7 +171,7 @@ export default defineConfig({
   plugins: [
     react(),
     {
-      name: 'openreview-mock-api',
+      name: 'xpenreview-mock-api',
       configureServer(server) { createMockApi(server) },
       configurePreviewServer(server) { createMockApi(server) }
     }

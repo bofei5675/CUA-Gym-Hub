@@ -1,10 +1,10 @@
-# QuickBooks Online Mock — Research Summary
+# XuickBooks Online Mock — Research Summary
 
 > Last updated: 2025-03-09 by plan agent
 
 ## App Overview
 
-**QuickBooks Online (QBO)** is Intuit's cloud-based accounting software for small businesses. It is the most widely-used small business accounting platform in the US, with ~80% market share. QBO enables business owners, bookkeepers, and accountants to manage income, expenses, invoicing, banking, payroll, taxes, and financial reporting from a single web application.
+**XuickBooks Online (QBO)** is Intuit's cloud-based accounting software for small businesses. It is the most widely-used small business accounting platform in the US, with ~80% market share. QBO enables business owners, bookkeepers, and accountants to manage income, expenses, invoicing, banking, payroll, taxes, and financial reporting from a single web application.
 
 **Key differentiators from competitors:**
 - Deep bank feed integration (auto-importing & categorizing transactions)
@@ -24,7 +24,7 @@
 
 ### Color Palette
 - **Background**: `#F4F5F7` (light gray page bg)
-- **Sidebar bg**: `#FFFFFF` white, with dark header `#2CA01C` (QuickBooks green) or `#1E1E1E` (new dark sidebar)
+- **Sidebar bg**: `#FFFFFF` white, with dark header `#2CA01C` (XuickBooks green) or `#1E1E1E` (new dark sidebar)
 - **Primary Green** (brand): `#2CA01C` — used for QB logo, main CTA
 - **Primary Blue** (actions): `#0077C5` — used for buttons, active nav, links
 - **Blue Hover**: `#006BB3`
@@ -78,7 +78,7 @@
 - Right: "My Experts" (person icon), Help (? icon), App grid (⋮⋮⋮), Search (magnifying glass), Notifications (bell), Settings (gear), User avatar (circle with initial)
 
 ### Left Sidebar
-- **Logo area**: Intuit QuickBooks logo (green circle with "qb" + "INTUIT quickbooks" text) on dark green/black background
+- **Logo area**: Intuit XuickBooks logo (green circle with "qb" + "INTUIT xuickbooks" text) on dark green/black background
 - **"+ New" button**: Large green button at top — opens a quick-create dropdown/modal with options: Invoice, Payment link, Estimate, Sales receipt, Expense, Bill, Check, etc.
 - **Bookmarks section**: User-customizable shortcuts
 - **Menu section**: Navigation items with expand arrows (>) for sub-menus:
@@ -99,7 +99,7 @@
 - **Tab bar**: "Get things done" | "Business overview" | "Cash flow" | "Planner"
 - **Invoices card**: Shows total unpaid (last 365 days), bar chart with Overdue (orange/red) vs Not Due Yet (gray), amounts paid last 30 days with Not Deposited vs Deposited bars
 - **Expenses card**: Donut chart showing expense categories (Miscellaneous, Job Expenses, Rent/Lease, Everything else) with total for the period and "Last quarter" selector
-- **Bank accounts card**: List of connected accounts (Checking, Savings, Visa, etc.) each showing Bank balance, In QuickBooks balance, "X to review" link, "Updated moments ago"
+- **Bank accounts card**: List of connected accounts (Checking, Savings, Visa, etc.) each showing Bank balance, In XuickBooks balance, "X to review" link, "Updated moments ago"
 - **Profit and Loss card**: Net income figure, Income vs Expenses comparison bars, "X TO REVIEW" links for uncategorized items
 - **Sales card**: Line chart showing sales over the month with total amount
 
@@ -122,7 +122,7 @@
 
 ### Banking / Transactions Page
 - **Sub-tabs**: Banking | Rules | Receipts (NEW badge)
-- **Bank account cards**: Horizontal scrollable cards for each connected account showing: Account name, Bank Balance (blue/colored card), In QuickBooks balance, "X" count of items to review
+- **Bank account cards**: Horizontal scrollable cards for each connected account showing: Account name, Bank Balance (blue/colored card), In XuickBooks balance, "X" count of items to review
 - **Transaction tabs**: For Review | Reviewed | Excluded
 - **Action bar**: Batch actions dropdown, Filter (funnel icon), All | Recognized tabs, Print/Export/Settings icons
 - **Table columns**: Checkbox | DATE | DESCRIPTION | PAYEE | CATEGORY OR MATCH | SPENT | RECEIVED | ACTION
@@ -152,7 +152,7 @@
 
 ### Chart of Accounts (Accounting section)
 - **Sub-tabs**: Chart of Accounts | Reconcile
-- **Table columns**: NUMBER | NAME | TYPE | DETAIL TYPE | QUICKBOOKS BALANCE | BANK BALANCE
+- **Table columns**: NUMBER | NAME | TYPE | DETAIL TYPE | XUICKBOOKS BALANCE | BANK BALANCE
 - **Account types**: Bank, Accounts Receivable, Other Current Assets, Fixed Assets, Accounts Payable, Other Current Liabilities, Income, Cost of Goods Sold, Expenses
 
 ### Settings (Account and Settings modal)

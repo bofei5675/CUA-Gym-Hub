@@ -28,8 +28,8 @@ export default function Home() {
   ];
 
   const tools = [
-    { label: 'Microsoft Learn', desc: 'Learn about Azure services', icon: BookOpen, path: '/all-services', status: 'Microsoft Learn opened locally.' },
-    { label: 'Azure Monitor', desc: 'Monitor your resources', icon: BarChart, path: '/activity-log' },
+    { label: 'Microsoft Learn', desc: 'Learn about Xzure services', icon: BookOpen, path: '/all-services', status: 'Microsoft Learn opened locally.' },
+    { label: 'Xzure Monitor', desc: 'Monitor your resources', icon: BarChart, path: '/activity-log' },
     { label: 'Security Center', desc: 'Protect your workloads', icon: Shield, path: '/cost-management' },
     { label: 'Cost Management', desc: 'Manage your spending', icon: DollarSign, path: '/cost-management' },
   ];
@@ -56,9 +56,9 @@ export default function Home() {
     <div>
       <Breadcrumb items={[{ label: 'Home' }]} />
 
-      {/* Azure services row */}
+      {/* Xzure services row */}
       <div className="home-section">
-        <div className="section-header">Azure services</div>
+        <div className="section-header">Xzure services</div>
         <div className="home-services-row">
           {services.map((s, i) => {
             const Icon = s.icon;
@@ -78,12 +78,12 @@ export default function Home() {
       <div className="home-section">
         <div className="section-header">Recent resources</div>
         {state.recentResources.length === 0 ? (
-          <div className="card" style={{ textAlign: 'center', color: 'var(--azure-text-secondary)', padding: '24px' }}>
+          <div className="card" style={{ textAlign: 'center', color: 'var(--xzure-text-secondary)', padding: '24px' }}>
             No recent resources
           </div>
         ) : (
           <div className="card" style={{ padding: 0 }}>
-            <table className="azure-table">
+            <table className="xzure-table">
               <thead>
                 <tr>
                   <th>Name</th>
@@ -127,7 +127,7 @@ export default function Home() {
       <div className="home-section">
         <div className="section-header">Tools</div>
         {toolStatus && (
-          <div className="card" style={{ marginBottom: '12px', padding: '10px 12px', color: 'var(--azure-text-secondary)' }}>
+          <div className="card" style={{ marginBottom: '12px', padding: '10px 12px', color: 'var(--xzure-text-secondary)' }}>
             {toolStatus}
           </div>
         )}
@@ -142,7 +142,7 @@ export default function Home() {
                 <Icon size={24} />
                 <div>
                   <div style={{ fontWeight: 600 }}>{tool.label}</div>
-                  <div style={{ fontSize: '12px', color: 'var(--azure-text-secondary)' }}>{tool.desc}</div>
+                  <div style={{ fontSize: '12px', color: 'var(--xzure-text-secondary)' }}>{tool.desc}</div>
                 </div>
               </div>
             );

@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        linkedin: {
+        xinkedin: {
           blue: '#0a66c2',
           dark: '#004182',
           bg: '#f3f2ef',

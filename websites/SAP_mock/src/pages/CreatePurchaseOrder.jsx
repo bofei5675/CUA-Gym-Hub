@@ -75,8 +75,8 @@ export default function CreatePurchaseOrder() {
   return (
     <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
       {/* Header */}
-      <div style={{ background: '#fff', borderBottom: '1px solid var(--sap-border)', padding: '12px 24px' }}>
-        <div style={{ fontSize: '12px', color: 'var(--sap-blue)', marginBottom: '4px', cursor: 'pointer' }}
+      <div style={{ background: '#fff', borderBottom: '1px solid var(--xap-border)', padding: '12px 24px' }}>
+        <div style={{ fontSize: '12px', color: 'var(--xap-blue)', marginBottom: '4px', cursor: 'pointer' }}
           onClick={() => navigate('/app/manage-purchase-orders')}>
           Purchase Orders /
         </div>
@@ -99,11 +99,11 @@ export default function CreatePurchaseOrder() {
                 {/* Supplier with value help */}
                 <div className="form-field">
                   <label>Supplier *</label>
-                  <div className="value-help-input" style={errors.supplierName ? { borderColor: 'var(--sap-status-error)' } : {}}>
+                  <div className="value-help-input" style={errors.supplierName ? { borderColor: 'var(--xap-status-error)' } : {}}>
                     <input value={general.supplierName} onChange={e => setGeneral(g => ({ ...g, supplierName: e.target.value, supplierId: '' }))} placeholder="Supplier name" />
                     <button className="value-help-btn" onClick={() => setShowSupplierHelp(true)} title="Browse">⊞</button>
                   </div>
-                  {errors.supplierName && <span style={{ fontSize: '11px', color: 'var(--sap-status-error)' }}>{errors.supplierName}</span>}
+                  {errors.supplierName && <span style={{ fontSize: '11px', color: 'var(--xap-status-error)' }}>{errors.supplierName}</span>}
                 </div>
                 <div className="form-field">
                   <label>Purchase Order Type</label>
@@ -163,7 +163,7 @@ export default function CreatePurchaseOrder() {
               <button className="btn-secondary" onClick={addItem}>Add Item</button>
             </div>
             <div style={{ overflowX: 'auto' }}>
-              <table className="sap-table">
+              <table className="xap-table">
                 <thead>
                   <tr>
                     <th>Item #</th>
@@ -179,32 +179,32 @@ export default function CreatePurchaseOrder() {
                 </thead>
                 <tbody>
                   {items.length === 0 ? (
-                    <tr><td colSpan={9} style={{ textAlign: 'center', padding: '24px', color: 'var(--sap-text-secondary)' }}>
+                    <tr><td colSpan={9} style={{ textAlign: 'center', padding: '24px', color: 'var(--xap-text-secondary)' }}>
                       No items. Click "Add Item" to add line items.
                     </td></tr>
                   ) : items.map((item, idx) => {
                     const netVal = (parseFloat(item.quantity) || 0) * (parseFloat(item.netPrice) || 0)
                     return (
                       <tr key={idx}>
-                        <td style={{ color: 'var(--sap-text-secondary)', fontSize: '13px' }}>{(idx + 1) * 10}</td>
+                        <td style={{ color: 'var(--xap-text-secondary)', fontSize: '13px' }}>{(idx + 1) * 10}</td>
                         <td>
                           <div className="value-help-input" style={{ minWidth: '150px' }}>
                             <input value={item.materialName} onChange={e => updateItem(idx, 'materialName', e.target.value)} placeholder="Material" style={{ minWidth: 0 }} />
                             <button className="value-help-btn" onClick={() => setShowMaterialHelp(idx)} title="Browse">⊞</button>
                           </div>
                         </td>
-                        <td><input style={{ width: '100px', border: '1px solid var(--sap-border)', borderRadius: '4px', padding: '4px 8px', fontSize: '13px', outline: 'none' }} value={item.materialNumber} onChange={e => updateItem(idx, 'materialNumber', e.target.value)} placeholder="MAT-XXXX" /></td>
-                        <td><input type="number" min="0" style={{ width: '70px', border: '1px solid var(--sap-border)', borderRadius: '4px', padding: '4px 8px', fontSize: '13px', outline: 'none' }} value={item.quantity} onChange={e => updateItem(idx, 'quantity', e.target.value)} /></td>
+                        <td><input style={{ width: '100px', border: '1px solid var(--xap-border)', borderRadius: '4px', padding: '4px 8px', fontSize: '13px', outline: 'none' }} value={item.materialNumber} onChange={e => updateItem(idx, 'materialNumber', e.target.value)} placeholder="MAT-XXXX" /></td>
+                        <td><input type="number" min="0" style={{ width: '70px', border: '1px solid var(--xap-border)', borderRadius: '4px', padding: '4px 8px', fontSize: '13px', outline: 'none' }} value={item.quantity} onChange={e => updateItem(idx, 'quantity', e.target.value)} /></td>
                         <td>
                           <select value={item.unit} onChange={e => updateItem(idx, 'unit', e.target.value)}
-                            style={{ border: '1px solid var(--sap-border)', borderRadius: '4px', padding: '4px 8px', fontSize: '13px' }}>
+                            style={{ border: '1px solid var(--xap-border)', borderRadius: '4px', padding: '4px 8px', fontSize: '13px' }}>
                             {['PC','KG','EA','L','M'].map(u => <option key={u}>{u}</option>)}
                           </select>
                         </td>
-                        <td><input type="number" min="0" step="0.01" style={{ width: '90px', border: '1px solid var(--sap-border)', borderRadius: '4px', padding: '4px 8px', fontSize: '13px', outline: 'none' }} value={item.netPrice} onChange={e => updateItem(idx, 'netPrice', e.target.value)} /></td>
+                        <td><input type="number" min="0" step="0.01" style={{ width: '90px', border: '1px solid var(--xap-border)', borderRadius: '4px', padding: '4px 8px', fontSize: '13px', outline: 'none' }} value={item.netPrice} onChange={e => updateItem(idx, 'netPrice', e.target.value)} /></td>
                         <td style={{ textAlign: 'right', fontVariantNumeric: 'tabular-nums' }}>{new Intl.NumberFormat('en-US', { minimumFractionDigits: 2 }).format(netVal)}</td>
-                        <td><input type="date" style={{ border: '1px solid var(--sap-border)', borderRadius: '4px', padding: '4px 8px', fontSize: '13px', outline: 'none' }} value={item.deliveryDate} onChange={e => updateItem(idx, 'deliveryDate', e.target.value)} /></td>
-                        <td><button style={{ background: 'none', border: 'none', color: 'var(--sap-status-error)', fontSize: '18px', cursor: 'pointer' }} onClick={() => removeItem(idx)}>×</button></td>
+                        <td><input type="date" style={{ border: '1px solid var(--xap-border)', borderRadius: '4px', padding: '4px 8px', fontSize: '13px', outline: 'none' }} value={item.deliveryDate} onChange={e => updateItem(idx, 'deliveryDate', e.target.value)} /></td>
+                        <td><button style={{ background: 'none', border: 'none', color: 'var(--xap-status-error)', fontSize: '18px', cursor: 'pointer' }} onClick={() => removeItem(idx)}>×</button></td>
                       </tr>
                     )
                   })}

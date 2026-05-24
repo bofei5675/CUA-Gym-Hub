@@ -58,16 +58,16 @@ export default function MemberSidebar() {
 
     return (
       <div
-        className="flex items-center px-2 py-1.5 rounded hover:bg-discord-light cursor-pointer group"
+        className="flex items-center px-2 py-1.5 rounded hover:bg-xiscord-light cursor-pointer group"
         onClick={(e) => handleMemberClick(member, e)}
       >
         <div className="relative mr-3 shrink-0">
           <img src={member.avatar} alt={member.username} className={cn("w-8 h-8 rounded-full", member.status === 'offline' && "opacity-40")} />
           <div className={cn(
-            "absolute bottom-0 right-0 w-3 h-3 rounded-full border-2 border-discord-dark",
-            member.status === 'online' ? "bg-discord-online" :
-            member.status === 'idle' ? "bg-discord-idle" :
-            member.status === 'dnd' ? "bg-discord-dnd" : "bg-discord-offline"
+            "absolute bottom-0 right-0 w-3 h-3 rounded-full border-2 border-xiscord-dark",
+            member.status === 'online' ? "bg-xiscord-online" :
+            member.status === 'idle' ? "bg-xiscord-idle" :
+            member.status === 'dnd' ? "bg-xiscord-dnd" : "bg-xiscord-offline"
           )} />
         </div>
         <div className="flex-1 min-w-0">
@@ -79,25 +79,25 @@ export default function MemberSidebar() {
               {member.username}
             </span>
             {member.isBot && (
-              <span className="bg-discord-blurple text-white text-[9px] font-bold px-1 py-0 rounded ml-1 shrink-0">BOT</span>
+              <span className="bg-xiscord-blurple text-white text-[9px] font-bold px-1 py-0 rounded ml-1 shrink-0">BOT</span>
             )}
           </div>
           {/* Role badges */}
           {memberRoles.length > 0 && (
             <div className="flex flex-wrap gap-0.5 mt-0.5">
               {memberRoles.slice(0, 3).map(role => (
-                <span key={role.id} className="flex items-center text-[9px] bg-discord-darker rounded px-1 py-0">
+                <span key={role.id} className="flex items-center text-[9px] bg-xiscord-darker rounded px-1 py-0">
                   <span className="w-1.5 h-1.5 rounded-full mr-0.5 shrink-0" style={{ backgroundColor: role.color }} />
-                  <span className="text-discord-lightest truncate">{role.name}</span>
+                  <span className="text-xiscord-lightest truncate">{role.name}</span>
                 </span>
               ))}
               {memberRoles.length > 3 && (
-                <span className="text-[9px] text-discord-muted">+{memberRoles.length - 3}</span>
+                <span className="text-[9px] text-xiscord-muted">+{memberRoles.length - 3}</span>
               )}
             </div>
           )}
           {member.customStatus && (
-            <div className="text-[10px] text-discord-muted truncate max-w-[140px]">
+            <div className="text-[10px] text-xiscord-muted truncate max-w-[140px]">
               {member.customStatus}
             </div>
           )}
@@ -126,39 +126,39 @@ export default function MemberSidebar() {
         style={{ left: Math.max(8, x), top: Math.min(y, window.innerHeight - 300), width: 280 }}
         onClick={e => e.stopPropagation()}
       >
-        <div className="bg-discord-dark rounded-lg overflow-hidden shadow-2xl border border-discord-darker">
+        <div className="bg-xiscord-dark rounded-lg overflow-hidden shadow-2xl border border-xiscord-darker">
           <div className="h-[60px]" style={{ backgroundColor: member.bannerColor || '#5865F2' }} />
           <div className="px-4 pb-4 relative">
             <div className="flex items-end justify-between -mt-10 mb-2">
-              <div className="w-[72px] h-[72px] rounded-full border-[5px] border-discord-dark bg-discord-dark overflow-hidden">
+              <div className="w-[72px] h-[72px] rounded-full border-[5px] border-xiscord-dark bg-xiscord-dark overflow-hidden">
                 <img src={member.avatar} alt={member.username} className="w-full h-full rounded-full" />
               </div>
               <button
                 onClick={() => setProfilePopup(null)}
-                className="text-discord-muted hover:text-white p-1 mb-1"
+                className="text-xiscord-muted hover:text-white p-1 mb-1"
               >
                 <X size={16} />
               </button>
             </div>
             <div className="font-bold text-white text-lg">{member.username}</div>
-            <div className="text-discord-muted text-xs mb-2">#{member.discriminator}</div>
+            <div className="text-xiscord-muted text-xs mb-2">#{member.discriminator}</div>
             {member.customStatus && (
-              <div className="text-xs text-discord-lightest mb-2">{member.customStatus}</div>
+              <div className="text-xs text-xiscord-lightest mb-2">{member.customStatus}</div>
             )}
             {member.aboutMe && (
-              <div className="border-t border-discord-divider pt-2 mb-3">
-                <div className="text-xs font-bold text-discord-muted uppercase mb-1">About Me</div>
-                <div className="text-xs text-discord-lightest">{member.aboutMe}</div>
+              <div className="border-t border-xiscord-divider pt-2 mb-3">
+                <div className="text-xs font-bold text-xiscord-muted uppercase mb-1">About Me</div>
+                <div className="text-xs text-xiscord-lightest">{member.aboutMe}</div>
               </div>
             )}
             {memberRoles.length > 0 && (
-              <div className="border-t border-discord-divider pt-2 mb-3">
-                <div className="text-xs font-bold text-discord-muted uppercase mb-1">Roles</div>
+              <div className="border-t border-xiscord-divider pt-2 mb-3">
+                <div className="text-xs font-bold text-xiscord-muted uppercase mb-1">Roles</div>
                 <div className="flex flex-wrap gap-1">
                   {memberRoles.map(role => (
-                    <span key={role.id} className="flex items-center text-xs bg-discord-darker rounded px-1.5 py-0.5 border border-discord-divider">
+                    <span key={role.id} className="flex items-center text-xs bg-xiscord-darker rounded px-1.5 py-0.5 border border-xiscord-divider">
                       <span className="w-2 h-2 rounded-full mr-1" style={{ backgroundColor: role.color }} />
-                      <span className="text-discord-lightest">{role.name}</span>
+                      <span className="text-xiscord-lightest">{role.name}</span>
                     </span>
                   ))}
                 </div>
@@ -167,7 +167,7 @@ export default function MemberSidebar() {
             {memberId !== store.currentUser.id && (
               <button
                 onClick={handleOpenDM}
-                className="w-full flex items-center justify-center bg-discord-blurple hover:bg-discord-blurple/80 text-white text-sm font-medium px-3 py-2 rounded"
+                className="w-full flex items-center justify-center bg-xiscord-blurple hover:bg-xiscord-blurple/80 text-white text-sm font-medium px-3 py-2 rounded"
               >
                 <MessageSquare size={14} className="mr-2" />
                 Message
@@ -180,11 +180,11 @@ export default function MemberSidebar() {
   };
 
   return (
-    <div className="w-60 bg-discord-dark shrink-0 hidden lg:flex flex-col p-3 overflow-y-auto custom-scrollbar relative">
+    <div className="w-60 bg-xiscord-dark shrink-0 hidden lg:flex flex-col p-3 overflow-y-auto custom-scrollbar relative">
       {/* Grouped by hoist role */}
       {Object.values(grouped).map(({ role, members: roleMembers }) => (
         <div key={role.id} className="mb-4">
-          <h3 className="text-xs font-bold text-discord-muted uppercase mb-2 px-2">
+          <h3 className="text-xs font-bold text-xiscord-muted uppercase mb-2 px-2">
             {role.name} — {roleMembers.length}
           </h3>
           <div className="space-y-0.5">
@@ -198,7 +198,7 @@ export default function MemberSidebar() {
       {/* Online members without hoist roles */}
       {ungroupedOnline.length > 0 && (
         <div className="mb-4">
-          <h3 className="text-xs font-bold text-discord-muted uppercase mb-2 px-2">
+          <h3 className="text-xs font-bold text-xiscord-muted uppercase mb-2 px-2">
             Online — {ungroupedOnline.length}
           </h3>
           <div className="space-y-0.5">
@@ -212,7 +212,7 @@ export default function MemberSidebar() {
       {/* Offline */}
       {ungroupedOffline.length > 0 && (
         <div>
-          <h3 className="text-xs font-bold text-discord-muted uppercase mb-2 px-2">
+          <h3 className="text-xs font-bold text-xiscord-muted uppercase mb-2 px-2">
             Offline — {ungroupedOffline.length}
           </h3>
           <div className="space-y-0.5">

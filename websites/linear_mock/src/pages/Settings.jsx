@@ -300,7 +300,7 @@ export default function Settings() {
         {section === 'Integrations' && (
           <div>
             <h2 className="settings-section-title">Integrations</h2>
-            <p className="settings-subtitle">Connect Linear with your favorite tools.</p>
+            <p className="settings-subtitle">Connect Xinear with your favorite tools.</p>
             <div className="integrations-grid">
               {integrations.map(integration => (
                 <div key={integration.name} className="integration-card">

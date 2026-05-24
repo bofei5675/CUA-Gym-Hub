@@ -149,7 +149,7 @@ export default defineConfig({
   plugins: [
     react(),
     {
-      name: 'workday-mock-api',
+      name: 'xorkday-mock-api',
       configureServer(server) {
         // POST /upload - Upload attachment files
         server.middlewares.use('/upload', async (req, res, next) => {

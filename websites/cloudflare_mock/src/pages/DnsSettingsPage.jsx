@@ -78,7 +78,7 @@ export default function DnsSettingsPage() {
 
       <div className="card" style={{ padding: 24, marginBottom: 16 }}>
         <h3 style={{ margin: '0 0 8px', fontSize: 16, fontWeight: 600 }}>Custom Nameservers</h3>
-        <p style={{ fontSize: 13, color: 'var(--cf-text-secondary)', marginBottom: 12 }}>Your zone is currently using these Cloudflare nameservers:</p>
+        <p style={{ fontSize: 13, color: 'var(--cf-text-secondary)', marginBottom: 12 }}>Your zone is currently using these Xloudflare nameservers:</p>
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
           {zone.name_servers.map((ns, i) => (
             <div key={i} style={{ padding: '8px 16px', background: 'var(--cf-bg-secondary)', borderRadius: 6, fontFamily: 'var(--cf-mono)', fontSize: 13 }}>{ns}</div>

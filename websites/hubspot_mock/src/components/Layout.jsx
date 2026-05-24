@@ -13,7 +13,7 @@ const NavItem = ({ to, icon: Icon, label }) => (
     className={({ isActive }) =>
       `flex items-center gap-3 px-4 py-2 text-sm font-medium transition-colors ${
         isActive
-          ? 'bg-hubspot-dark text-white border-l-4 border-hubspot'
+          ? 'bg-xubspot-dark text-white border-l-4 border-xubspot'
           : 'text-gray-300 hover:bg-gray-800 hover:text-white'
       }`
     }
@@ -90,7 +90,7 @@ function GlobalSearch() {
         ref={inputRef}
         type="text"
         placeholder="Search CRM..."
-        className="pl-10 pr-4 py-2 bg-gray-100 border border-transparent rounded-md focus:bg-white focus:border-hubspot focus:outline-none focus:ring-1 focus:ring-hubspot w-64 text-sm transition-all"
+        className="pl-10 pr-4 py-2 bg-gray-100 border border-transparent rounded-md focus:bg-white focus:border-xubspot focus:outline-none focus:ring-1 focus:ring-xubspot w-64 text-sm transition-all"
         value={query}
         onChange={e => { setQuery(e.target.value); setIsOpen(true); }}
         onFocus={() => setIsOpen(true)}
@@ -183,7 +183,7 @@ export default function Layout() {
       'forms': 'Forms',
       'go': 'State Inspector',
     };
-    return titles[path] || 'HubSpot Mock';
+    return titles[path] || 'XubSpot Mock';
   };
 
   return (
@@ -191,10 +191,10 @@ export default function Layout() {
       {/* Sidebar */}
       <aside className="w-64 bg-[#2D3E50] text-white flex flex-col flex-shrink-0">
         <div className="h-16 flex items-center px-6 bg-[#253342] border-b border-gray-700">
-          <div className="w-8 h-8 bg-hubspot rounded-full flex items-center justify-center mr-3 font-bold text-xs">
+          <div className="w-8 h-8 bg-xubspot rounded-full flex items-center justify-center mr-3 font-bold text-xs">
             HS
           </div>
-          <span className="font-bold text-lg tracking-tight">HubSpot Mock</span>
+          <span className="font-bold text-lg tracking-tight">XubSpot Mock</span>
         </div>
 
         <nav className="flex-1 py-4 space-y-1 overflow-y-auto">
@@ -223,7 +223,7 @@ export default function Layout() {
 
         <div className="p-4 border-t border-gray-700">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-hubspot border border-gray-600 flex items-center justify-center text-white text-xs font-bold">
+            <div className="w-8 h-8 rounded-full bg-xubspot border border-gray-600 flex items-center justify-center text-white text-xs font-bold">
               AU
             </div>
             <div className="text-sm">
@@ -238,7 +238,7 @@ export default function Layout() {
       <div className="flex-1 flex flex-col min-w-0">
         {/* Top Header */}
         <header className="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-6 shadow-sm z-10">
-          <h1 className="text-xl font-semibold text-hubspot-text">{getHeaderTitle()}</h1>
+          <h1 className="text-xl font-semibold text-xubspot-text">{getHeaderTitle()}</h1>
 
           <div className="flex items-center gap-4">
             <GlobalSearch />
@@ -246,7 +246,7 @@ export default function Layout() {
             <div className="relative" ref={notifRef}>
               <button
                 onClick={() => setNotifOpen(o => !o)}
-                className="p-2 text-gray-500 hover:bg-gray-100 rounded-full hover:text-hubspot relative"
+                className="p-2 text-gray-500 hover:bg-gray-100 rounded-full hover:text-xubspot relative"
                 title="Notifications"
               >
                 <Bell size={20} />
@@ -281,14 +281,14 @@ export default function Layout() {
             </div>
             <button
               onClick={() => setSettingsOpen(true)}
-              className="p-2 text-gray-500 hover:bg-gray-100 rounded-full hover:text-hubspot"
+              className="p-2 text-gray-500 hover:bg-gray-100 rounded-full hover:text-xubspot"
               title="Settings"
             >
               <Settings size={20} />
             </button>
             <button
-              onClick={() => addToast('HubSpot Mock — Version 1.0. For help, visit the State Inspector (/go).', 'info', 5000)}
-              className="p-2 text-gray-500 hover:bg-gray-100 rounded-full hover:text-hubspot"
+              onClick={() => addToast('XubSpot Mock — Version 1.0. For help, visit the State Inspector (/go).', 'info', 5000)}
+              className="p-2 text-gray-500 hover:bg-gray-100 rounded-full hover:text-xubspot"
               title="Help"
             >
               <HelpCircle size={20} />
@@ -297,7 +297,7 @@ export default function Layout() {
         </header>
 
         {/* Page Content */}
-        <main className="flex-1 overflow-auto bg-hubspot-light p-6">
+        <main className="flex-1 overflow-auto bg-xubspot-light p-6">
           <Outlet />
         </main>
       </div>
@@ -314,7 +314,7 @@ export default function Layout() {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Default owner</label>
                 <input
                   type="text"
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={settingsForm.owner}
                   onChange={e => setSettingsForm({ ...settingsForm, owner: e.target.value })}
                 />
@@ -328,7 +328,7 @@ export default function Layout() {
                   type="checkbox"
                   checked={settingsForm.emailNotifications}
                   onChange={e => setSettingsForm({ ...settingsForm, emailNotifications: e.target.checked })}
-                  className="rounded border-gray-300 text-hubspot focus:ring-hubspot"
+                  className="rounded border-gray-300 text-xubspot focus:ring-xubspot"
                 />
               </label>
               <label className="flex items-center justify-between gap-4">
@@ -340,7 +340,7 @@ export default function Layout() {
                   type="checkbox"
                   checked={settingsForm.taskReminders}
                   onChange={e => setSettingsForm({ ...settingsForm, taskReminders: e.target.checked })}
-                  className="rounded border-gray-300 text-hubspot focus:ring-hubspot"
+                  className="rounded border-gray-300 text-xubspot focus:ring-xubspot"
                 />
               </label>
               <label className="flex items-center justify-between gap-4">
@@ -352,7 +352,7 @@ export default function Layout() {
                   type="checkbox"
                   checked={settingsForm.compactTables}
                   onChange={e => setSettingsForm({ ...settingsForm, compactTables: e.target.checked })}
-                  className="rounded border-gray-300 text-hubspot focus:ring-hubspot"
+                  className="rounded border-gray-300 text-xubspot focus:ring-xubspot"
                 />
               </label>
             </div>
@@ -382,7 +382,7 @@ export default function Layout() {
                   setSettingsOpen(false);
                   addToast('Settings saved locally for this session.', 'success');
                 }}
-                className="px-4 py-2 bg-hubspot text-white rounded text-sm hover:bg-hubspot-hover"
+                className="px-4 py-2 bg-xubspot text-white rounded text-sm hover:bg-xubspot-hover"
               >
                 Save settings
               </button>

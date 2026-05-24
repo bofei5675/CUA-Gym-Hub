@@ -1,4 +1,4 @@
-# Lucidchart Mock — TODO
+# Xucidchart Mock — TODO
 
 > Status: IN PROGRESS
 > Last updated by: dev agent, 2025-03-11
@@ -17,7 +17,7 @@
 
 - [x] **Project scaffold**: `npm create vite@latest lucidchart_mock -- --template react`, install deps: `react-router-dom`, `uuid`, `lucide-react`. Do NOT use fabric.js — this mock uses custom SVG/HTML canvas rendering for shapes and connectors (much simpler than a real canvas library; shapes are absolutely-positioned divs/SVGs inside a scrollable container).
 
-- [x] **Visual design system**: Study `assets/screenshots/` carefully. Lucidchart's palette:
+- [x] **Visual design system**: Study `assets/screenshots/` carefully. Xucidchart's palette:
   - Primary accent (orange): `#F96B13` — used for Share button, + Document button, logo mark
   - Dashboard header/sidebar dark: `#2D2D2D` to `#3D3D3D`
   - Editor background: `#FFFFFF` (toolbar, menus)
@@ -58,7 +58,7 @@
 
 <!-- The home page where users manage their documents. See screenshot `000003.jpg` for exact layout. -->
 
-- [x] **Dashboard header**: Dark bar (`#2D2D2D`), ~50px height. Left: Lucidchart logo (orange diamond/square icon + "Lucidchart" text in white, see screenshots). Center-right navigation tabs: "DOCUMENTS" (active, white text, underlined), "INTEGRATIONS", "TEAM", "HELP" — all uppercase, ~13px, white text, spaced ~40px apart. Far right: notification bell icon with badge count (orange circle "18"), user avatar dropdown showing email. Clicking DOCUMENTS tab is active (we're on it). Other tabs can show placeholder pages.
+- [x] **Dashboard header**: Dark bar (`#2D2D2D`), ~50px height. Left: Xucidchart logo (orange diamond/square icon + "Xucidchart" text in white, see screenshots). Center-right navigation tabs: "DOCUMENTS" (active, white text, underlined), "INTEGRATIONS", "TEAM", "HELP" — all uppercase, ~13px, white text, spaced ~40px apart. Far right: notification bell icon with badge count (orange circle "18"), user avatar dropdown showing email. Clicking DOCUMENTS tab is active (we're on it). Other tabs can show placeholder pages.
 
 - [x] **Dashboard left sidebar**: ~220px wide, background `#3D3D3D`, white text. Items (each ~36px height, padding-left 16px): "▸ My Documents" (bold, highlighted when active with lighter bg), "▸ Shared with Me (129)" (count in parentheses), "▸ Team Folders", "Trash". Divider line. Then: clock icon + "Recent Documents", star icon + "Starred Items". Divider. Search icon + "Search Results". Clicking each item filters the document grid. Folder items have expand/collapse triangles (▸/▾) for sub-folders. Active item has `#4A4A4A` background.
 
@@ -80,7 +80,7 @@
 
 <!-- The main canvas editing interface. See screenshots `000001.jpg`, `000002.jpg`, `000004.jpg`, `000005.jpg`. -->
 
-- [x] **Editor top menu bar**: ~32px height, white background, bottom border `#E0E0E0`. Far left: Lucidchart icon (small orange square), document title (editable — click to edit inline, press Enter to save), star icon (toggle favorite), status badge "Draft"/"Published". Then divider `|`. Menu items: "File", "Edit", "View", "Insert", "Arrange", "Share" — each 13px, regular weight. "Saved" text (green). Far right area: "Share" button (orange), user avatar circle with initials.
+- [x] **Editor top menu bar**: ~32px height, white background, bottom border `#E0E0E0`. Far left: Xucidchart icon (small orange square), document title (editable — click to edit inline, press Enter to save), star icon (toggle favorite), status badge "Draft"/"Published". Then divider `|`. Menu items: "File", "Edit", "View", "Insert", "Arrange", "Share" — each 13px, regular weight. "Saved" text (green). Far right area: "Share" button (orange), user avatar circle with initials.
 
 - [x] **Editor File menu dropdown**: When clicking "File" in menu bar, dropdown appears with items: "New", "Make a Copy", "Rename", divider, "Download As" (sub), divider, "Print".
 

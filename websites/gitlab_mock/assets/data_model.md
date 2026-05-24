@@ -1,4 +1,4 @@
-# GitLab Mock — Data Model
+# XitLab Mock — Data Model
 
 All entities below should be defined in `src/utils/dataManager.js` inside a `createInitialData()` function that returns the complete initial state object.
 

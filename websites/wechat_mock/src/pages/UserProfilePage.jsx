@@ -82,7 +82,7 @@ const UserProfilePage = () => {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
             <div>
               <h2 className="profile-nickname">{profile.nickname}</h2>
-              <p className="profile-wechat-id">微信号: {profile.wechatId}</p>
+              <p className="profile-xechat-id">微信号: {profile.wechatId}</p>
             </div>
             <button
               style={{ padding: '6px 10px', border: '1px solid #ddd', borderRadius: '8px', background: '#fff', cursor: 'pointer', fontSize: '20px' }}

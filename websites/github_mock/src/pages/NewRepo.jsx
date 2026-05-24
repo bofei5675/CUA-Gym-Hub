@@ -128,7 +128,7 @@
       return (
         <div className="max-w-2xl mx-auto py-8 px-4">
           <h1 className="text-2xl font-semibold text-white mb-1">Create a new repository</h1>
-          <p className="text-sm text-github-muted mb-8">
+          <p className="text-sm text-xithub-muted mb-8">
             A repository contains all project files, including the revision history.
           </p>
 
@@ -137,45 +137,45 @@
             <div className="mb-6">
               <label htmlFor="new-repo-name" className="block text-sm font-semibold text-white mb-2">Repository name *</label>
               <div className="flex items-center gap-2">
-                <div className="flex items-center gap-2 bg-[#21262d] border border-github-border rounded-md px-3 py-1.5 text-sm">
+                <div className="flex items-center gap-2 bg-[#21262d] border border-xithub-border rounded-md px-3 py-1.5 text-sm">
                   <img src={state.currentUser.avatar} alt="" className="w-5 h-5 rounded-full" />
-                  <span className="text-github-text">{state.currentUser.username}</span>
-                  <span className="text-github-muted">/</span>
+                  <span className="text-xithub-text">{state.currentUser.username}</span>
+                  <span className="text-xithub-muted">/</span>
                 </div>
                 <input
                   type="text"
                   id="new-repo-name"
                   value={name}
                   onChange={e => handleNameChange(e.target.value)}
-                  className={`flex-1 bg-[#0d1117] border ${nameError ? 'border-red-500' : 'border-github-border'} rounded-md px-3 py-1.5 text-sm text-github-text focus:ring-2 focus:ring-github-accent outline-none`}
+                  className={`flex-1 bg-[#0d1117] border ${nameError ? 'border-red-500' : 'border-xithub-border'} rounded-md px-3 py-1.5 text-sm text-xithub-text focus:ring-2 focus:ring-xithub-accent outline-none`}
                   placeholder="my-awesome-project"
                   required
                 />
               </div>
               {nameError && <p className="text-red-400 text-xs mt-1">{nameError}</p>}
-              <p className="text-xs text-github-muted mt-1">
+              <p className="text-xs text-xithub-muted mt-1">
                 Great repository names are short and memorable.
               </p>
             </div>
 
             {/* Description */}
             <div className="mb-6">
-              <label htmlFor="new-repo-description" className="block text-sm font-semibold text-white mb-2">Description <span className="text-github-muted font-normal">(optional)</span></label>
+              <label htmlFor="new-repo-description" className="block text-sm font-semibold text-white mb-2">Description <span className="text-xithub-muted font-normal">(optional)</span></label>
               <input
                 type="text"
                 id="new-repo-description"
                 value={description}
                 onChange={e => setDescription(e.target.value)}
                 placeholder="Short description of this repository"
-                className="w-full bg-[#0d1117] border border-github-border rounded-md px-3 py-1.5 text-sm text-github-text focus:ring-2 focus:ring-github-accent outline-none"
+                className="w-full bg-[#0d1117] border border-xithub-border rounded-md px-3 py-1.5 text-sm text-xithub-text focus:ring-2 focus:ring-xithub-accent outline-none"
               />
             </div>
 
-            <div className="border-t border-github-border pt-6 mb-6">
+            <div className="border-t border-xithub-border pt-6 mb-6">
               {/* Public / Private */}
               <div className="space-y-3">
                 <label
-                  className={`flex items-start gap-3 p-3 rounded-md border cursor-pointer ${visibility === 'public' ? 'border-github-accent bg-[#161b22]' : 'border-github-border hover:bg-[#161b22]'}`}
+                  className={`flex items-start gap-3 p-3 rounded-md border cursor-pointer ${visibility === 'public' ? 'border-xithub-accent bg-[#161b22]' : 'border-xithub-border hover:bg-[#161b22]'}`}
                   onClick={() => setVisibility('public')}
                 >
                   <input
@@ -187,15 +187,15 @@
                   />
                   <div>
                     <div className="flex items-center gap-2">
-                      <Globe size={18} className="text-github-text" />
+                      <Globe size={18} className="text-xithub-text" />
                       <span className="font-semibold text-white text-sm">Public</span>
                     </div>
-                    <p className="text-xs text-github-muted mt-0.5">Anyone on the internet can see this repository.</p>
+                    <p className="text-xs text-xithub-muted mt-0.5">Anyone on the internet can see this repository.</p>
                   </div>
                 </label>
 
                 <label
-                  className={`flex items-start gap-3 p-3 rounded-md border cursor-pointer ${visibility === 'private' ? 'border-github-accent bg-[#161b22]' : 'border-github-border hover:bg-[#161b22]'}`}
+                  className={`flex items-start gap-3 p-3 rounded-md border cursor-pointer ${visibility === 'private' ? 'border-xithub-accent bg-[#161b22]' : 'border-xithub-border hover:bg-[#161b22]'}`}
                   onClick={() => setVisibility('private')}
                 >
                   <input
@@ -207,16 +207,16 @@
                   />
                   <div>
                     <div className="flex items-center gap-2">
-                      <Lock size={18} className="text-github-text" />
+                      <Lock size={18} className="text-xithub-text" />
                       <span className="font-semibold text-white text-sm">Private</span>
                     </div>
-                    <p className="text-xs text-github-muted mt-0.5">You choose who can see and commit to this repository.</p>
+                    <p className="text-xs text-xithub-muted mt-0.5">You choose who can see and commit to this repository.</p>
                   </div>
                 </label>
               </div>
             </div>
 
-            <div className="border-t border-github-border pt-6 mb-6">
+            <div className="border-t border-xithub-border pt-6 mb-6">
               <h3 className="text-sm font-semibold text-white mb-4">Initialize this repository with:</h3>
 
               {/* README checkbox */}
@@ -225,11 +225,11 @@
                   type="checkbox"
                   checked={initReadme}
                   onChange={e => setInitReadme(e.target.checked)}
-                  className="w-4 h-4 rounded border-github-border bg-[#0d1117] accent-green-500"
+                  className="w-4 h-4 rounded border-xithub-border bg-[#0d1117] accent-green-500"
                 />
                 <div>
                   <span className="text-sm text-white font-semibold">Add a README file</span>
-                  <p className="text-xs text-github-muted">This is where you can write a long description for your project.</p>
+                  <p className="text-xs text-xithub-muted">This is where you can write a long description for your project.</p>
                 </div>
               </label>
 
@@ -239,7 +239,7 @@
                 <select
                   value={gitignore}
                   onChange={e => setGitignore(e.target.value)}
-                  className="bg-[#21262d] border border-github-border rounded-md px-3 py-1.5 text-sm text-github-text w-64"
+                  className="bg-[#21262d] border border-xithub-border rounded-md px-3 py-1.5 text-sm text-xithub-text w-64"
                 >
                   <option value="None">None</option>
                   <option value="Node">Node</option>
@@ -254,7 +254,7 @@
                 <select
                   value={license}
                   onChange={e => setLicense(e.target.value)}
-                  className="bg-[#21262d] border border-github-border rounded-md px-3 py-1.5 text-sm text-github-text w-64"
+                  className="bg-[#21262d] border border-xithub-border rounded-md px-3 py-1.5 text-sm text-xithub-text w-64"
                 >
                   <option value="None">None</option>
                   <option value="MIT">MIT License</option>
@@ -264,11 +264,11 @@
               </div>
             </div>
 
-            <div className="border-t border-github-border pt-6">
+            <div className="border-t border-xithub-border pt-6">
               <button
                 type="submit"
                 disabled={!name.trim() || !!nameError}
-                className="bg-github-success text-white px-5 py-2 rounded-md font-semibold text-sm hover:bg-opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-xithub-success text-white px-5 py-2 rounded-md font-semibold text-sm hover:bg-opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Create repository
               </button>

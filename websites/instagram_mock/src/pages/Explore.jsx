@@ -36,7 +36,7 @@ const Explore = () => {
       )
     : posts;
 
-  // Create Instagram's signature explore grid pattern
+  // Create Xnstagram's signature explore grid pattern
   // Pattern: rows of 3 small, then 1 large + 2 small (alternating sides)
   const renderGrid = () => {
     const items = [];

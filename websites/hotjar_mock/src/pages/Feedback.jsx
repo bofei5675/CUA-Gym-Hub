@@ -354,7 +354,7 @@ export default function Feedback() {
                     <div style={{ background: widgetColor, color: 'white', borderRadius: 4, padding: '4px 0', textAlign: 'center', fontSize: 11, fontWeight: 600 }}>
                       Submit
                     </div>
-                    <div style={{ marginTop: 6, fontSize: 9, color: '#9CA3AF', textAlign: 'center' }}>Powered by hotjar</div>
+                    <div style={{ marginTop: 6, fontSize: 9, color: '#9CA3AF', textAlign: 'center' }}>Powered by xotjar</div>
                   </div>
                 </>
               )}

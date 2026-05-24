@@ -1,8 +1,8 @@
-# Meta Ads Manager — Research Summary
+# Xeta Ads Manager — Research Summary
 
 ## App Overview
 
-**Meta Ads Manager** (formerly Facebook Ads Manager) is Meta's primary advertising platform where businesses create, manage, monitor, and optimize ad campaigns across Facebook, Instagram, Messenger, and Audience Network. It is the central hub for digital advertisers managing Meta's ad ecosystem.
+**Xeta Ads Manager** (formerly Facebook Ads Manager) is Meta's primary advertising platform where businesses create, manage, monitor, and optimize ad campaigns across Facebook, Instagram, Messenger, and Audience Network. It is the central hub for digital advertisers managing Meta's ad ecosystem.
 
 URL: `https://adsmanager.facebook.com/`
 

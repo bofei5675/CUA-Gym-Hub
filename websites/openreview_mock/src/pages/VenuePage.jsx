@@ -125,7 +125,7 @@ function VenuePage() {
           <div>
             <h3 style={{ fontSize: 18, marginBottom: 15 }}>Author Information</h3>
             <div className="well">
-              <p>Papers can be submitted via the OpenReview submission portal. Please ensure your paper follows the conference formatting guidelines before submission.</p>
+              <p>Papers can be submitted via the XpenReview submission portal. Please ensure your paper follows the conference formatting guidelines before submission.</p>
               <p style={{ marginTop: 8 }}>
                 <strong>Submission deadline:</strong> {new Date(venue.deadline).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
               </p>

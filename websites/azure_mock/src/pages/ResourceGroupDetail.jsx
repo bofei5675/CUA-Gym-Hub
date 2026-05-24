@@ -47,7 +47,7 @@ export default function ResourceGroupDetail() {
       {/* Resources */}
       <div className="section-header">Resources ({resources.length})</div>
       <div className="card" style={{ padding: 0 }}>
-        <table className="azure-table">
+        <table className="xzure-table">
           <thead>
             <tr>
               <th>Name</th>
@@ -64,7 +64,7 @@ export default function ResourceGroupDetail() {
               </tr>
             ))}
             {resources.length === 0 && (
-              <tr><td colSpan={3} style={{ textAlign: 'center', padding: '24px', color: 'var(--azure-text-secondary)' }}>No resources in this group</td></tr>
+              <tr><td colSpan={3} style={{ textAlign: 'center', padding: '24px', color: 'var(--xzure-text-secondary)' }}>No resources in this group</td></tr>
             )}
           </tbody>
         </table>
@@ -75,7 +75,7 @@ export default function ResourceGroupDetail() {
         <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 500 }}>
           <div className="card" style={{ width: '450px', padding: '24px' }}>
             <h2 style={{ fontSize: '18px', marginBottom: '16px' }}>Delete resource group "{name}"?</h2>
-            <p style={{ marginBottom: '16px', color: 'var(--azure-text-secondary)' }}>
+            <p style={{ marginBottom: '16px', color: 'var(--xzure-text-secondary)' }}>
               This will permanently delete the resource group and all its resources. Type the resource group name to confirm:
             </p>
             <input

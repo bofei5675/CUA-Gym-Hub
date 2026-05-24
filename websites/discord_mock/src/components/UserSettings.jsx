@@ -57,13 +57,13 @@ export default function UserSettings({ onClose }) {
   const phone = userSettings.phone || currentUser.phone || null;
 
   return (
-    <div className="fixed inset-0 z-50 flex bg-discord-bg">
+    <div className="fixed inset-0 z-50 flex bg-xiscord-bg">
       {/* Settings Sidebar */}
-      <div className="w-[218px] bg-discord-dark flex flex-col items-end overflow-y-auto custom-scrollbar pt-16 pb-8 shrink-0">
+      <div className="w-[218px] bg-xiscord-dark flex flex-col items-end overflow-y-auto custom-scrollbar pt-16 pb-8 shrink-0">
         <div className="w-[190px] pr-2">
           {SECTIONS.map(section => (
             <div key={section.category} className="mb-2">
-              <div className="text-xs font-bold text-discord-muted uppercase px-2.5 py-1.5">{section.category}</div>
+              <div className="text-xs font-bold text-xiscord-muted uppercase px-2.5 py-1.5">{section.category}</div>
               {section.items.map(item => (
                 <button
                   key={item}
@@ -71,14 +71,14 @@ export default function UserSettings({ onClose }) {
                   className={cn(
                     "w-full text-left px-2.5 py-1.5 rounded text-sm mb-0.5",
                     activeSection === item
-                      ? "bg-discord-selected text-white"
-                      : "text-discord-modifier hover:bg-discord-light/50 hover:text-discord-lightest"
+                      ? "bg-xiscord-selected text-white"
+                      : "text-xiscord-modifier hover:bg-xiscord-light/50 hover:text-xiscord-lightest"
                   )}
                 >
                   {item}
                 </button>
               ))}
-              <div className="h-px bg-discord-divider my-2 mx-2.5" />
+              <div className="h-px bg-xiscord-divider my-2 mx-2.5" />
             </div>
           ))}
           <button
@@ -86,7 +86,7 @@ export default function UserSettings({ onClose }) {
               store.updateUserStatus('offline');
               onClose();
             }}
-            className="w-full text-left px-2.5 py-1.5 rounded text-sm text-discord-red hover:bg-discord-light/50"
+            className="w-full text-left px-2.5 py-1.5 rounded text-sm text-xiscord-red hover:bg-xiscord-light/50"
           >
             Log Out
           </button>
@@ -98,31 +98,31 @@ export default function UserSettings({ onClose }) {
         {activeSection === 'My Account' && (
           <div>
             <h2 className="text-xl font-bold text-white mb-5">My Account</h2>
-            <div className="bg-discord-dark rounded-lg overflow-hidden">
+            <div className="bg-xiscord-dark rounded-lg overflow-hidden">
               <div className="h-[100px]" style={{ backgroundColor: currentUser.bannerColor || '#5865F2' }} />
               <div className="px-4 pb-4 relative">
                 <div className="flex items-end justify-between -mt-[40px] mb-4">
                   <div className="flex items-end">
-                    <div className="w-[80px] h-[80px] rounded-full border-[6px] border-discord-dark bg-discord-dark overflow-hidden">
+                    <div className="w-[80px] h-[80px] rounded-full border-[6px] border-xiscord-dark bg-xiscord-dark overflow-hidden">
                       <img src={currentUser.avatar} alt="" className="w-full h-full rounded-full" />
                     </div>
                     <div className="ml-4 mb-2">
                       <span className="text-xl font-bold text-white">{currentUser.username}</span>
-                      <span className="text-xl text-discord-muted">#{currentUser.discriminator}</span>
+                      <span className="text-xl text-xiscord-muted">#{currentUser.discriminator}</span>
                     </div>
                   </div>
                   <button
                     onClick={() => startEdit('displayName', currentUser.username)}
-                    className="bg-discord-blurple hover:bg-discord-blurple/80 text-white text-sm font-medium px-4 py-1.5 rounded mb-2"
+                    className="bg-xiscord-blurple hover:bg-xiscord-blurple/80 text-white text-sm font-medium px-4 py-1.5 rounded mb-2"
                   >
                     Edit User Profile
                   </button>
                 </div>
-                <div className="bg-discord-bg rounded-lg p-4 space-y-4">
+                <div className="bg-xiscord-bg rounded-lg p-4 space-y-4">
                   {/* Display Name */}
                   <div className="flex justify-between items-center">
                     <div className="flex-1 mr-4">
-                      <div className="text-xs font-bold text-discord-muted uppercase mb-1">Display Name</div>
+                      <div className="text-xs font-bold text-xiscord-muted uppercase mb-1">Display Name</div>
                       {editingField === 'displayName' ? (
                         <div className="flex items-center gap-2">
                           <input
@@ -130,20 +130,20 @@ export default function UserSettings({ onClose }) {
                             value={editFieldValue}
                             onChange={(e) => setEditFieldValue(e.target.value)}
                             onKeyDown={handleEditKeyDown}
-                            className="bg-discord-darker text-discord-lightest px-2 py-1 rounded outline-none border border-discord-blurple text-sm flex-1"
+                            className="bg-xiscord-darker text-xiscord-lightest px-2 py-1 rounded outline-none border border-xiscord-blurple text-sm flex-1"
                             autoFocus
                           />
-                          <button onClick={saveEdit} className="text-xs bg-discord-blurple text-white px-2 py-1 rounded hover:bg-discord-blurple/80">Save</button>
-                          <button onClick={cancelEdit} className="text-xs text-discord-muted hover:text-white px-2 py-1">Cancel</button>
+                          <button onClick={saveEdit} className="text-xs bg-xiscord-blurple text-white px-2 py-1 rounded hover:bg-xiscord-blurple/80">Save</button>
+                          <button onClick={cancelEdit} className="text-xs text-xiscord-muted hover:text-white px-2 py-1">Cancel</button>
                         </div>
                       ) : (
-                        <div className="text-sm text-discord-lightest">{currentUser.username}</div>
+                        <div className="text-sm text-xiscord-lightest">{currentUser.username}</div>
                       )}
                     </div>
                     {editingField !== 'displayName' && (
                       <button
                         onClick={() => startEdit('displayName', currentUser.username)}
-                        className="bg-discord-muted/20 hover:bg-discord-muted/30 text-white text-sm px-4 py-1.5 rounded shrink-0"
+                        className="bg-xiscord-muted/20 hover:bg-xiscord-muted/30 text-white text-sm px-4 py-1.5 rounded shrink-0"
                       >
                         Edit
                       </button>
@@ -152,7 +152,7 @@ export default function UserSettings({ onClose }) {
                   {/* Username */}
                   <div className="flex justify-between items-center">
                     <div className="flex-1 mr-4">
-                      <div className="text-xs font-bold text-discord-muted uppercase mb-1">Username</div>
+                      <div className="text-xs font-bold text-xiscord-muted uppercase mb-1">Username</div>
                       {editingField === 'username' ? (
                         <div className="flex items-center gap-2">
                           <input
@@ -160,20 +160,20 @@ export default function UserSettings({ onClose }) {
                             value={editFieldValue}
                             onChange={(e) => setEditFieldValue(e.target.value)}
                             onKeyDown={handleEditKeyDown}
-                            className="bg-discord-darker text-discord-lightest px-2 py-1 rounded outline-none border border-discord-blurple text-sm flex-1"
+                            className="bg-xiscord-darker text-xiscord-lightest px-2 py-1 rounded outline-none border border-xiscord-blurple text-sm flex-1"
                             autoFocus
                           />
-                          <button onClick={saveEdit} className="text-xs bg-discord-blurple text-white px-2 py-1 rounded hover:bg-discord-blurple/80">Save</button>
-                          <button onClick={cancelEdit} className="text-xs text-discord-muted hover:text-white px-2 py-1">Cancel</button>
+                          <button onClick={saveEdit} className="text-xs bg-xiscord-blurple text-white px-2 py-1 rounded hover:bg-xiscord-blurple/80">Save</button>
+                          <button onClick={cancelEdit} className="text-xs text-xiscord-muted hover:text-white px-2 py-1">Cancel</button>
                         </div>
                       ) : (
-                        <div className="text-sm text-discord-lightest">{currentUser.username}#{currentUser.discriminator}</div>
+                        <div className="text-sm text-xiscord-lightest">{currentUser.username}#{currentUser.discriminator}</div>
                       )}
                     </div>
                     {editingField !== 'username' && (
                       <button
                         onClick={() => startEdit('username', currentUser.username)}
-                        className="bg-discord-muted/20 hover:bg-discord-muted/30 text-white text-sm px-4 py-1.5 rounded shrink-0"
+                        className="bg-xiscord-muted/20 hover:bg-xiscord-muted/30 text-white text-sm px-4 py-1.5 rounded shrink-0"
                       >
                         Edit
                       </button>
@@ -182,7 +182,7 @@ export default function UserSettings({ onClose }) {
                   {/* Email */}
                   <div className="flex justify-between items-center">
                     <div className="flex-1 mr-4">
-                      <div className="text-xs font-bold text-discord-muted uppercase mb-1">Email</div>
+                      <div className="text-xs font-bold text-xiscord-muted uppercase mb-1">Email</div>
                       {editingField === 'email' ? (
                         <div className="flex items-center gap-2">
                           <input
@@ -190,20 +190,20 @@ export default function UserSettings({ onClose }) {
                             value={editFieldValue}
                             onChange={(e) => setEditFieldValue(e.target.value)}
                             onKeyDown={handleEditKeyDown}
-                            className="bg-discord-darker text-discord-lightest px-2 py-1 rounded outline-none border border-discord-blurple text-sm flex-1"
+                            className="bg-xiscord-darker text-xiscord-lightest px-2 py-1 rounded outline-none border border-xiscord-blurple text-sm flex-1"
                             autoFocus
                           />
-                          <button onClick={saveEdit} className="text-xs bg-discord-blurple text-white px-2 py-1 rounded hover:bg-discord-blurple/80">Save</button>
-                          <button onClick={cancelEdit} className="text-xs text-discord-muted hover:text-white px-2 py-1">Cancel</button>
+                          <button onClick={saveEdit} className="text-xs bg-xiscord-blurple text-white px-2 py-1 rounded hover:bg-xiscord-blurple/80">Save</button>
+                          <button onClick={cancelEdit} className="text-xs text-xiscord-muted hover:text-white px-2 py-1">Cancel</button>
                         </div>
                       ) : (
-                        <div className="text-sm text-discord-lightest">{email}</div>
+                        <div className="text-sm text-xiscord-lightest">{email}</div>
                       )}
                     </div>
                     {editingField !== 'email' && (
                       <button
                         onClick={() => startEdit('email', email)}
-                        className="bg-discord-muted/20 hover:bg-discord-muted/30 text-white text-sm px-4 py-1.5 rounded shrink-0"
+                        className="bg-xiscord-muted/20 hover:bg-xiscord-muted/30 text-white text-sm px-4 py-1.5 rounded shrink-0"
                       >
                         Edit
                       </button>
@@ -212,7 +212,7 @@ export default function UserSettings({ onClose }) {
                   {/* Phone Number */}
                   <div className="flex justify-between items-center">
                     <div className="flex-1 mr-4">
-                      <div className="text-xs font-bold text-discord-muted uppercase mb-1">Phone Number</div>
+                      <div className="text-xs font-bold text-xiscord-muted uppercase mb-1">Phone Number</div>
                       {editingField === 'phone' ? (
                         <div className="flex items-center gap-2">
                           <input
@@ -220,21 +220,21 @@ export default function UserSettings({ onClose }) {
                             value={editFieldValue}
                             onChange={(e) => setEditFieldValue(e.target.value)}
                             onKeyDown={handleEditKeyDown}
-                            className="bg-discord-darker text-discord-lightest px-2 py-1 rounded outline-none border border-discord-blurple text-sm flex-1"
+                            className="bg-xiscord-darker text-xiscord-lightest px-2 py-1 rounded outline-none border border-xiscord-blurple text-sm flex-1"
                             autoFocus
                             placeholder="+1 (555) 000-0000"
                           />
-                          <button onClick={saveEdit} className="text-xs bg-discord-blurple text-white px-2 py-1 rounded hover:bg-discord-blurple/80">Save</button>
-                          <button onClick={cancelEdit} className="text-xs text-discord-muted hover:text-white px-2 py-1">Cancel</button>
+                          <button onClick={saveEdit} className="text-xs bg-xiscord-blurple text-white px-2 py-1 rounded hover:bg-xiscord-blurple/80">Save</button>
+                          <button onClick={cancelEdit} className="text-xs text-xiscord-muted hover:text-white px-2 py-1">Cancel</button>
                         </div>
                       ) : (
-                        <div className="text-sm text-discord-lightest">{phone || 'Not set'}</div>
+                        <div className="text-sm text-xiscord-lightest">{phone || 'Not set'}</div>
                       )}
                     </div>
                     {editingField !== 'phone' && (
                       <button
                         onClick={() => startEdit('phone', phone || '')}
-                        className="bg-discord-muted/20 hover:bg-discord-muted/30 text-white text-sm px-4 py-1.5 rounded shrink-0"
+                        className="bg-xiscord-muted/20 hover:bg-xiscord-muted/30 text-white text-sm px-4 py-1.5 rounded shrink-0"
                       >
                         {phone ? 'Edit' : 'Add'}
                       </button>
@@ -250,8 +250,8 @@ export default function UserSettings({ onClose }) {
           <div>
             <h2 className="text-xl font-bold text-white mb-5">Profiles</h2>
             <div className="space-y-4">
-              <div className="bg-discord-dark rounded-lg p-4">
-                <h3 className="text-xs font-bold text-discord-muted uppercase mb-3">About Me</h3>
+              <div className="bg-xiscord-dark rounded-lg p-4">
+                <h3 className="text-xs font-bold text-xiscord-muted uppercase mb-3">About Me</h3>
                 <EditableTextField
                   value={currentUser.aboutMe || ''}
                   placeholder="Tell everyone a little about yourself!"
@@ -259,8 +259,8 @@ export default function UserSettings({ onClose }) {
                   multiline
                 />
               </div>
-              <div className="bg-discord-dark rounded-lg p-4">
-                <h3 className="text-xs font-bold text-discord-muted uppercase mb-3">Banner Color</h3>
+              <div className="bg-xiscord-dark rounded-lg p-4">
+                <h3 className="text-xs font-bold text-xiscord-muted uppercase mb-3">Banner Color</h3>
                 <div className="flex items-center gap-3">
                   <input
                     type="color"
@@ -268,7 +268,7 @@ export default function UserSettings({ onClose }) {
                     onChange={(e) => store.updateUserProfile({ bannerColor: e.target.value })}
                     className="w-10 h-10 rounded cursor-pointer bg-transparent border-0 p-0"
                   />
-                  <span className="text-sm text-discord-lightest">{currentUser.bannerColor || '#5865F2'}</span>
+                  <span className="text-sm text-xiscord-lightest">{currentUser.bannerColor || '#5865F2'}</span>
                 </div>
               </div>
             </div>
@@ -280,7 +280,7 @@ export default function UserSettings({ onClose }) {
             <h2 className="text-xl font-bold text-white mb-5">Appearance</h2>
 
             <div className="mb-6">
-              <h3 className="text-xs font-bold text-discord-muted uppercase mb-3">Theme</h3>
+              <h3 className="text-xs font-bold text-xiscord-muted uppercase mb-3">Theme</h3>
               <div className="space-y-2">
                 {['Dark', 'Light', 'Onyx', 'Ash'].map(t => (
                   <label
@@ -290,18 +290,18 @@ export default function UserSettings({ onClose }) {
                   >
                     <div className={cn(
                       "w-5 h-5 rounded-full border-2 mr-3 flex items-center justify-center",
-                      theme === t.toLowerCase() ? "border-discord-blurple" : "border-discord-muted"
+                      theme === t.toLowerCase() ? "border-xiscord-blurple" : "border-xiscord-muted"
                     )}>
-                      {theme === t.toLowerCase() && <div className="w-2.5 h-2.5 rounded-full bg-discord-blurple" />}
+                      {theme === t.toLowerCase() && <div className="w-2.5 h-2.5 rounded-full bg-xiscord-blurple" />}
                     </div>
-                    <span className="text-discord-lightest group-hover:text-white">{t}</span>
+                    <span className="text-xiscord-lightest group-hover:text-white">{t}</span>
                   </label>
                 ))}
               </div>
             </div>
 
             <div className="mb-6">
-              <h3 className="text-xs font-bold text-discord-muted uppercase mb-3">Message Display</h3>
+              <h3 className="text-xs font-bold text-xiscord-muted uppercase mb-3">Message Display</h3>
               <div className="space-y-2">
                 {[{ label: 'Cozy', value: 'cozy', desc: 'Show avatar next to messages' }, { label: 'Compact', value: 'compact', desc: 'Fit more messages on screen' }].map(opt => (
                   <label
@@ -311,13 +311,13 @@ export default function UserSettings({ onClose }) {
                   >
                     <div className={cn(
                       "w-5 h-5 rounded-full border-2 mr-3 flex items-center justify-center",
-                      messageDisplay === opt.value ? "border-discord-blurple" : "border-discord-muted"
+                      messageDisplay === opt.value ? "border-xiscord-blurple" : "border-xiscord-muted"
                     )}>
-                      {messageDisplay === opt.value && <div className="w-2.5 h-2.5 rounded-full bg-discord-blurple" />}
+                      {messageDisplay === opt.value && <div className="w-2.5 h-2.5 rounded-full bg-xiscord-blurple" />}
                     </div>
                     <div>
-                      <span className="text-discord-lightest group-hover:text-white">{opt.label}</span>
-                      <span className="text-xs text-discord-muted ml-2">— {opt.desc}</span>
+                      <span className="text-xiscord-lightest group-hover:text-white">{opt.label}</span>
+                      <span className="text-xs text-xiscord-muted ml-2">— {opt.desc}</span>
                     </div>
                   </label>
                 ))}
@@ -325,19 +325,19 @@ export default function UserSettings({ onClose }) {
             </div>
 
             <div className="mb-6">
-              <h3 className="text-xs font-bold text-discord-muted uppercase mb-3">Chat Font Scaling</h3>
+              <h3 className="text-xs font-bold text-xiscord-muted uppercase mb-3">Chat Font Scaling</h3>
               <div className="flex items-center">
-                <span className="text-xs text-discord-muted mr-3">12px</span>
+                <span className="text-xs text-xiscord-muted mr-3">12px</span>
                 <input
                   type="range"
                   min="12"
                   max="24"
                   value={fontSize}
                   onChange={(e) => store.updateUserSettings({ fontSize: Number(e.target.value) })}
-                  className="flex-1 accent-discord-blurple"
+                  className="flex-1 accent-xiscord-blurple"
                 />
-                <span className="text-xs text-discord-muted ml-3">24px</span>
-                <span className="text-sm text-discord-lightest ml-4 min-w-[40px]">{fontSize}px</span>
+                <span className="text-xs text-xiscord-muted ml-3">24px</span>
+                <span className="text-sm text-xiscord-lightest ml-4 min-w-[40px]">{fontSize}px</span>
               </div>
             </div>
           </div>
@@ -373,7 +373,7 @@ export default function UserSettings({ onClose }) {
           <div>
             <h2 className="text-xl font-bold text-white mb-5">Voice & Video</h2>
             <div className="mb-6">
-              <h3 className="text-xs font-bold text-discord-muted uppercase mb-3">Voice Settings</h3>
+              <h3 className="text-xs font-bold text-xiscord-muted uppercase mb-3">Voice Settings</h3>
               <div className="space-y-4">
                 <PersistedToggle
                   label="Echo Cancellation"
@@ -396,28 +396,28 @@ export default function UserSettings({ onClose }) {
               </div>
             </div>
             <div className="mb-6">
-              <h3 className="text-xs font-bold text-discord-muted uppercase mb-3">Input Volume</h3>
+              <h3 className="text-xs font-bold text-xiscord-muted uppercase mb-3">Input Volume</h3>
               <input
                 type="range"
                 min="0"
                 max="200"
                 value={userSettings.inputVolume ?? 100}
                 onChange={(e) => store.updateUserSettings({ inputVolume: Number(e.target.value) })}
-                className="w-full accent-discord-blurple"
+                className="w-full accent-xiscord-blurple"
               />
-              <div className="text-xs text-discord-muted mt-1">{userSettings.inputVolume ?? 100}%</div>
+              <div className="text-xs text-xiscord-muted mt-1">{userSettings.inputVolume ?? 100}%</div>
             </div>
             <div className="mb-6">
-              <h3 className="text-xs font-bold text-discord-muted uppercase mb-3">Output Volume</h3>
+              <h3 className="text-xs font-bold text-xiscord-muted uppercase mb-3">Output Volume</h3>
               <input
                 type="range"
                 min="0"
                 max="200"
                 value={userSettings.outputVolume ?? 100}
                 onChange={(e) => store.updateUserSettings({ outputVolume: Number(e.target.value) })}
-                className="w-full accent-discord-blurple"
+                className="w-full accent-xiscord-blurple"
               />
-              <div className="text-xs text-discord-muted mt-1">{userSettings.outputVolume ?? 100}%</div>
+              <div className="text-xs text-xiscord-muted mt-1">{userSettings.outputVolume ?? 100}%</div>
             </div>
           </div>
         )}
@@ -427,7 +427,7 @@ export default function UserSettings({ onClose }) {
             <h2 className="text-xl font-bold text-white mb-5">Notifications</h2>
             <div className="space-y-4">
               {[
-                { label: 'Enable Desktop Notifications', desc: 'Show notifications on your desktop when Discord is in the background', key: 'desktopNotifications', default: true },
+                { label: 'Enable Desktop Notifications', desc: 'Show notifications on your desktop when Xiscord is in the background', key: 'desktopNotifications', default: true },
                 { label: 'Enable Unread Message Badge', desc: 'Show a red badge on the taskbar icon when you have unread messages', key: 'unreadBadge', default: true },
                 { label: 'Enable Message Notification Sound', desc: 'Play a sound when you receive a message', key: 'notificationSound', default: true },
               ].map((setting) => (
@@ -476,15 +476,15 @@ export default function UserSettings({ onClose }) {
                 { action: 'Keyboard Shortcuts', keys: 'Ctrl+/' },
                 { action: 'Edit Last Message', keys: '↑ (empty input)' },
               ].map((kb, i) => (
-                <div key={i} className="flex items-center justify-between bg-discord-dark rounded-lg p-3">
-                  <span className="text-discord-lightest text-sm">{kb.action}</span>
-                  <kbd className="bg-discord-darker text-discord-lightest text-xs px-2 py-1 rounded border border-discord-divider font-mono">
+                <div key={i} className="flex items-center justify-between bg-xiscord-dark rounded-lg p-3">
+                  <span className="text-xiscord-lightest text-sm">{kb.action}</span>
+                  <kbd className="bg-xiscord-darker text-xiscord-lightest text-xs px-2 py-1 rounded border border-xiscord-divider font-mono">
                     {kb.keys}
                   </kbd>
                 </div>
               ))}
             </div>
-            <p className="text-xs text-discord-muted mt-4">Custom keybinds are not configurable in this mock.</p>
+            <p className="text-xs text-xiscord-muted mt-4">Custom keybinds are not configurable in this mock.</p>
           </div>
         )}
 
@@ -492,11 +492,11 @@ export default function UserSettings({ onClose }) {
           <div>
             <h2 className="text-xl font-bold text-white mb-5">Language</h2>
             <div className="mb-4">
-              <label className="text-xs font-bold text-discord-muted uppercase block mb-2">Discord Language</label>
+              <label className="text-xs font-bold text-xiscord-muted uppercase block mb-2">Xiscord Language</label>
               <select
                 value={userSettings.language || 'en-US'}
                 onChange={(e) => store.updateUserSettings({ language: e.target.value })}
-                className="w-full bg-discord-darker text-discord-lightest px-3 py-2 rounded outline-none border border-discord-darker focus:border-discord-blurple text-sm"
+                className="w-full bg-xiscord-darker text-xiscord-lightest px-3 py-2 rounded outline-none border border-xiscord-darker focus:border-xiscord-blurple text-sm"
               >
                 <option value="en-US">English (United States)</option>
                 <option value="en-GB">English (United Kingdom)</option>
@@ -518,11 +518,11 @@ export default function UserSettings({ onClose }) {
       <div className="flex flex-col items-center pt-16 px-4 shrink-0">
         <button
           onClick={onClose}
-          className="w-9 h-9 rounded-full border-2 border-discord-muted text-discord-muted hover:border-white hover:text-white flex items-center justify-center"
+          className="w-9 h-9 rounded-full border-2 border-xiscord-muted text-xiscord-muted hover:border-white hover:text-white flex items-center justify-center"
         >
           <X size={18} />
         </button>
-        <span className="text-xs text-discord-muted mt-1.5 font-bold">ESC</span>
+        <span className="text-xs text-xiscord-muted mt-1.5 font-bold">ESC</span>
       </div>
     </div>
   );
@@ -537,14 +537,14 @@ function PersistedToggle({ label, desc, settingKey, defaultVal }) {
   return (
     <div className="flex items-center justify-between py-2">
       <div>
-        <div className="text-discord-lightest font-medium">{label}</div>
-        {desc && <div className="text-xs text-discord-muted mt-0.5">{desc}</div>}
+        <div className="text-xiscord-lightest font-medium">{label}</div>
+        {desc && <div className="text-xs text-xiscord-muted mt-0.5">{desc}</div>}
       </div>
       <button
         onClick={() => store.updateUserSettings({ [settingKey]: !enabled })}
         className={cn(
           "w-10 h-6 rounded-full transition-colors relative shrink-0 ml-4",
-          enabled ? "bg-discord-green" : "bg-discord-muted/40"
+          enabled ? "bg-xiscord-green" : "bg-xiscord-muted/40"
         )}
       >
         <div className={cn(
@@ -579,7 +579,7 @@ function EditableTextField({ value, placeholder, onSave, multiline = false }) {
             value={editValue}
             onChange={(e) => setEditValue(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="w-full bg-discord-darker text-discord-lightest px-3 py-2 rounded outline-none border border-discord-blurple text-sm resize-none"
+            className="w-full bg-xiscord-darker text-xiscord-lightest px-3 py-2 rounded outline-none border border-xiscord-blurple text-sm resize-none"
             rows={3}
             autoFocus
             maxLength={190}
@@ -590,13 +590,13 @@ function EditableTextField({ value, placeholder, onSave, multiline = false }) {
             value={editValue}
             onChange={(e) => setEditValue(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="w-full bg-discord-darker text-discord-lightest px-3 py-2 rounded outline-none border border-discord-blurple text-sm"
+            className="w-full bg-xiscord-darker text-xiscord-lightest px-3 py-2 rounded outline-none border border-xiscord-blurple text-sm"
             autoFocus
           />
         )}
         <div className="flex gap-2 mt-2">
-          <button onClick={handleSave} className="text-xs bg-discord-blurple text-white px-3 py-1.5 rounded hover:bg-discord-blurple/80">Save</button>
-          <button onClick={() => { setEditValue(value); setIsEditing(false); }} className="text-xs text-discord-muted hover:text-white px-3 py-1.5">Cancel</button>
+          <button onClick={handleSave} className="text-xs bg-xiscord-blurple text-white px-3 py-1.5 rounded hover:bg-xiscord-blurple/80">Save</button>
+          <button onClick={() => { setEditValue(value); setIsEditing(false); }} className="text-xs text-xiscord-muted hover:text-white px-3 py-1.5">Cancel</button>
         </div>
       </div>
     );
@@ -604,12 +604,12 @@ function EditableTextField({ value, placeholder, onSave, multiline = false }) {
 
   return (
     <div className="flex items-start justify-between">
-      <div className="text-sm text-discord-lightest flex-1 min-w-0">
-        {value || <span className="text-discord-muted italic">{placeholder}</span>}
+      <div className="text-sm text-xiscord-lightest flex-1 min-w-0">
+        {value || <span className="text-xiscord-muted italic">{placeholder}</span>}
       </div>
       <button
         onClick={() => setIsEditing(true)}
-        className="ml-3 shrink-0 bg-discord-muted/20 hover:bg-discord-muted/30 text-white text-xs px-3 py-1 rounded"
+        className="ml-3 shrink-0 bg-xiscord-muted/20 hover:bg-xiscord-muted/30 text-white text-xs px-3 py-1 rounded"
       >
         Edit
       </button>

@@ -751,8 +751,8 @@ export function createInitialData() {
       { id: 'int-3', name: 'QuickBooks Online', icon: 'dollar', status: 'Disconnected', connectedAt: null, description: 'Sync invoices and payments with QuickBooks', category: 'Accounting' },
       { id: 'int-4', name: 'Microsoft 365', icon: 'mail', status: 'Connected', connectedAt: '2024-03-01T10:00:00Z', description: 'Email and document integration with Microsoft 365', category: 'Productivity' },
       { id: 'int-5', name: 'LawPay', icon: 'credit-card', status: 'Disconnected', connectedAt: null, description: 'Accept online payments through LawPay', category: 'Payments' },
-      { id: 'int-6', name: 'Zoom', icon: 'video', status: 'Connected', connectedAt: '2024-05-10T10:00:00Z', description: 'Schedule and join Zoom meetings from Clio', category: 'Communication' },
-      { id: 'int-7', name: 'Slack', icon: 'message', status: 'Disconnected', connectedAt: null, description: 'Receive Clio notifications in Slack channels', category: 'Communication' },
+      { id: 'int-6', name: 'Zoom', icon: 'video', status: 'Connected', connectedAt: '2024-05-10T10:00:00Z', description: 'Schedule and join Zoom meetings from Xlio', category: 'Communication' },
+      { id: 'int-7', name: 'Slack', icon: 'message', status: 'Disconnected', connectedAt: null, description: 'Receive Xlio notifications in Slack channels', category: 'Communication' },
       { id: 'int-8', name: 'NetDocuments', icon: 'file', status: 'Disconnected', connectedAt: null, description: 'Enterprise document management integration', category: 'Document Management' }
     ],
     recentMatters: ['matter-1', 'matter-2', 'matter-3'],

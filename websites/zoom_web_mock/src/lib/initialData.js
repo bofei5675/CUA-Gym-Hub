@@ -60,7 +60,7 @@ export const initialRecordings = [
     recordingId: 'rec_001',
     meetingId: '111 222 3333',
     title: 'Client Review - Recording',
-    url: 'zoom-mock-recording://rec_001',
+    url: 'xoom-mock-recording://rec_001',
     duration: '28:45',
     created: setMinutes(setHours(subDays(now, 1), 16), 0).toISOString(),
     size: '145 MB',

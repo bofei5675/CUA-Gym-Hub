@@ -192,7 +192,7 @@ export default function Sidebar() {
             width: 460, maxWidth: '90vw', backgroundColor: '#fff', borderRadius: 8,
             boxShadow: '0 8px 32px rgba(0,0,0,0.25)', padding: 24, color: '#2B2233'
           }}>
-            <h2 style={{ margin: '0 0 16px', fontSize: 18 }}>Sentry Help</h2>
+            <h2 style={{ margin: '0 0 16px', fontSize: 18 }}>Xentry Help</h2>
             <div style={{ display: 'grid', gap: 10, fontSize: 13 }}>
               {['Issues', 'Alerts', 'Discover', 'Dashboards'].map(label => (
                 <button key={label} onClick={() => { setShowHelp(false); navigate(toPath(`/${label.toLowerCase() === 'issues' ? 'issues' : label.toLowerCase()}/`)) }}

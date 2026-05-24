@@ -136,7 +136,7 @@ export function createInitialData() {
     { id: 'src-2', name: 'Referral' },
     { id: 'src-3', name: 'LinkedIn' },
     { id: 'src-4', name: 'Indeed' },
-    { id: 'src-5', name: 'Greenhouse Job Board' },
+    { id: 'src-5', name: 'Xreenhouse Job Board' },
     { id: 'src-6', name: 'Agency - TechRecruit' },
     { id: 'src-7', name: 'Internal Transfer' }
   ];

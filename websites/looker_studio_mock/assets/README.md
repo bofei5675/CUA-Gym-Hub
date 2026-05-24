@@ -1,8 +1,8 @@
-# Looker Studio Mock -- Research & Asset Index
+# Xooker Studio Mock -- Research & Asset Index
 
 ## App Overview
 
-Looker Studio (formerly Google Data Studio) is Google's free, web-based business intelligence and data visualization tool. It allows users to create interactive dashboards and reports by connecting to various data sources and placing charts, tables, scorecards, and controls on a drag-and-drop canvas. Reports can be shared with collaborators and viewed interactively.
+Xooker Studio (formerly Google Data Studio) is Google's free, web-based business intelligence and data visualization tool. It allows users to create interactive dashboards and reports by connecting to various data sources and placing charts, tables, scorecards, and controls on a drag-and-drop canvas. Reports can be shared with collaborators and viewed interactively.
 
 ## Key User Personas
 
@@ -22,7 +22,7 @@ Looker Studio (formerly Google Data Studio) is Google's free, web-based business
 
 ### P0 -- Core Shell
 - App layout with header, home/editor routing
-- Looker Studio branding (logo, Google-style header)
+- Xooker Studio branding (logo, Google-style header)
 - State management with dataManager.js and AppContext
 - `/go` endpoint for state inspection
 - Session isolation for RL training
@@ -59,7 +59,7 @@ Looker Studio (formerly Google Data Studio) is Google's free, web-based business
 ## UI Layout Description
 
 ### Home Page
-- **Top header** (64px): Looker Studio logo (blue interconnected circles icon + "Looker Studio" text), centered search bar (rounded, gray background, "Search all items" placeholder), right side: create button (+), help icon, settings gear, user avatar
+- **Top header** (64px): Xooker Studio logo (blue interconnected circles icon + "Xooker Studio" text), centered search bar (rounded, gray background, "Search all items" placeholder), right side: create button (+), help icon, settings gear, user avatar
 - **Navigation tabs** below header: "Recent" | "Owned by me" | "Shared with me" | "Trash" as tab buttons
 - **Template gallery** strip: horizontal scrolling row of template cards (small preview thumbnails with labels), "Template Gallery" heading with arrow link
 - **Report list**: Either grid view (cards with thumbnail, title, owner, last modified) or list view (rows with icon, name, owner, modified date). Sortable columns.
@@ -93,12 +93,12 @@ See `assets/data_model.md` for complete specification. Key entities:
 ### Original Downloads (assets/screenshots/)
 - `editor_000005.jpg` -- **BEST REFERENCE**: Shows the share dialog modal with "Share with people and groups" overlay. Shows header with project name, Reports/Data sources tabs, report list behind the modal with name column and date. Modal shows user list with roles (Manager, Content Manager, Contributor) and role dropdowns. "Add people and groups" input, "Pending changes" text, blue "Save" button.
 - `specific_000001.jpg` -- **VALUABLE**: Shows the "Add a control" dropdown menu from toolbar with all control types listed: Drop-down list, Fixed-size list, Input box, Advanced filter, Slider, Checkbox, Preset filter, Date range control, Data control, Dimension control, Button. Also shows the SETUP/STYLE tabs in the properties panel on the right.
-- `dashboard_000002.jpg` / `home_000004.jpg` -- Stock photo showing laptop with Looker Studio-like dashboard (scorecards at top, pie chart, line chart, bar chart, geo map visible on screen). Gives sense of typical dashboard layout.
-- `panel_000003.jpg` -- Illustration of combo chart in Looker Studio (bar + line overlay)
+- `dashboard_000002.jpg` / `home_000004.jpg` -- Stock photo showing laptop with Xooker Studio-like dashboard (scorecards at top, pie chart, line chart, bar chart, geo map visible on screen). Gives sense of typical dashboard layout.
+- `panel_000003.jpg` -- Illustration of combo chart in Xooker Studio (bar + line overlay)
 
 ### Reference Downloads (assets/screenshots/reference/)
 - Most are tutorial thumbnails/illustrations, not actual UI screenshots
-- `000001.jpg` -- Simple illustration of Looker Studio interface concept (search bar + cards)
+- `000001.jpg` -- Simple illustration of Xooker Studio interface concept (search bar + cards)
 
 ## Notes on What to Skip
 

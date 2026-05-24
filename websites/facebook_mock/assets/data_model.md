@@ -1,9 +1,9 @@
-# Facebook Mock — Data Model
+# Xacebook Mock — Data Model
 
 > Last updated: 2026-03-09 by plan agent
 > Source: `src/store/initialData.js`, `src/store/AppContext.jsx`
 
-This document defines every entity type in the Facebook mock's state. The dev agent should use this as the canonical reference when modifying `initialData.js` or `AppContext.jsx`.
+This document defines every entity type in the Xacebook mock's state. The dev agent should use this as the canonical reference when modifying `initialData.js` or `AppContext.jsx`.
 
 ---
 
@@ -15,7 +15,7 @@ This document defines every entity type in the Facebook mock's state. The dev ag
   users: { [userId]: User },      // All users keyed by ID
   friendRequests: FriendRequest[], // Pending friend requests TO currentUser
   groups: Group[],                // Groups the user belongs to or can discover
-  pages: Page[],                  // Facebook Pages
+  pages: Page[],                  // Xacebook Pages
   posts: Post[],                  // All posts (feed, group, page)
   notifications: Notification[],  // Activity notifications
   // NEW entities to add:

@@ -31,7 +31,7 @@ const ConnectModal = ({ user, onClose, onSend }) => {
         </div>
         <div className="flex justify-end gap-2 p-4 pt-0">
           <button onClick={onClose} className="px-4 py-2 text-gray-600 font-semibold hover:bg-gray-100 rounded-full">Cancel</button>
-          <button onClick={handleSend} className="px-4 py-2 bg-linkedin-blue text-white font-semibold rounded-full hover:bg-linkedin-dark">Send now</button>
+          <button onClick={handleSend} className="px-4 py-2 bg-xinkedin-blue text-white font-semibold rounded-full hover:bg-xinkedin-dark">Send now</button>
         </div>
       </div>
     </div>
@@ -94,7 +94,7 @@ export default function Network() {
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-base font-semibold text-gray-700">Invitations</h2>
-            <button onClick={() => navigate('/notifications')} className="text-linkedin-blue font-semibold text-sm hover:bg-blue-50 px-2 py-1 rounded">Manage</button>
+            <button onClick={() => navigate('/notifications')} className="text-xinkedin-blue font-semibold text-sm hover:bg-blue-50 px-2 py-1 rounded">Manage</button>
           </div>
           
           {receivedRequests.length > 0 ? (
@@ -111,7 +111,7 @@ export default function Network() {
                     </div>
                     <div className="flex gap-2">
                        <button onClick={() => ignoreConnectionRequest(req.id)} className="text-gray-600 font-semibold px-4 py-1 hover:bg-gray-100 rounded-full">Ignore</button>
-                       <button onClick={() => acceptConnectionRequest(req.id)} className="border border-linkedin-blue text-linkedin-blue font-semibold px-4 py-1 rounded-full hover:bg-blue-50">Accept</button>
+                       <button onClick={() => acceptConnectionRequest(req.id)} className="border border-xinkedin-blue text-xinkedin-blue font-semibold px-4 py-1 rounded-full hover:bg-blue-50">Accept</button>
                     </div>
                   </div>
                 );
@@ -159,7 +159,7 @@ export default function Network() {
                   <p className="text-xs text-gray-500 text-center mb-4 line-clamp-2">{user.headline}</p>
                   <button 
                     onClick={() => setConnectModalUser(user)}
-                    className="mt-auto w-full border border-linkedin-blue text-linkedin-blue font-semibold py-1 rounded-full hover:bg-blue-50 transition-colors"
+                    className="mt-auto w-full border border-xinkedin-blue text-xinkedin-blue font-semibold py-1 rounded-full hover:bg-blue-50 transition-colors"
                   >
                     Connect
                   </button>

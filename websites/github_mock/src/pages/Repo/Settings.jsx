@@ -55,7 +55,7 @@
                  <button
                    key={section.id}
                    onClick={() => setActiveSection(section.id)}
-                   className={`text-left pl-3 py-1 ${activeSection === section.id ? 'font-semibold border-l-2 border-github-accent text-white' : 'text-github-muted hover:text-github-text'}`}
+                   className={`text-left pl-3 py-1 ${activeSection === section.id ? 'font-semibold border-l-2 border-xithub-accent text-white' : 'text-xithub-muted hover:text-xithub-text'}`}
                  >
                    {section.label}
                  </button>
@@ -66,7 +66,7 @@
           <div className="w-3/4">
             {activeSection === 'general' && (
               <>
-                <h2 className="text-2xl font-semibold mb-6 border-b border-github-border pb-2">General</h2>
+                <h2 className="text-2xl font-semibold mb-6 border-b border-xithub-border pb-2">General</h2>
 
                 <div className="mb-6">
                   <label className="block text-sm font-semibold mb-2">Repository Name</label>
@@ -74,7 +74,7 @@
                     type="text"
                     value={repoName}
                     onChange={e => setRepoName(e.target.value)}
-                    className="bg-[#0d1117] border border-github-border rounded-md px-3 py-1.5 w-1/2 text-sm text-github-text focus:ring-2 focus:ring-github-accent outline-none"
+                    className="bg-[#0d1117] border border-xithub-border rounded-md px-3 py-1.5 w-1/2 text-sm text-xithub-text focus:ring-2 focus:ring-xithub-accent outline-none"
                   />
                 </div>
 
@@ -83,7 +83,7 @@
                   <textarea
                     value={repoDescription}
                     onChange={e => setRepoDescription(e.target.value)}
-                    className="bg-[#0d1117] border border-github-border rounded-md px-3 py-1.5 w-full text-sm text-github-text focus:ring-2 focus:ring-github-accent outline-none resize-y h-20"
+                    className="bg-[#0d1117] border border-xithub-border rounded-md px-3 py-1.5 w-full text-sm text-xithub-text focus:ring-2 focus:ring-xithub-accent outline-none resize-y h-20"
                     placeholder="Short description of this repository"
                   ></textarea>
                 </div>
@@ -94,17 +94,17 @@
                       type="checkbox"
                       checked={isPrivate}
                       onChange={e => setIsPrivate(e.target.checked)}
-                      className="rounded border-github-border bg-[#0d1117]"
+                      className="rounded border-xithub-border bg-[#0d1117]"
                     />
                     <span className="font-semibold">Private repository</span>
                   </label>
-                  <p className="text-xs text-github-muted mt-1 ml-6">Only you and collaborators can see this repository.</p>
+                  <p className="text-xs text-xithub-muted mt-1 ml-6">Only you and collaborators can see this repository.</p>
                 </div>
 
                 <div className="mb-8">
                   <button
                     onClick={handleSave}
-                    className="bg-github-success text-white px-4 py-1.5 rounded-md font-semibold text-sm hover:bg-opacity-90"
+                    className="bg-xithub-success text-white px-4 py-1.5 rounded-md font-semibold text-sm hover:bg-opacity-90"
                   >
                     {saved ? 'Saved!' : 'Save changes'}
                   </button>
@@ -116,25 +116,25 @@
                     <div className="p-4 flex items-center justify-between">
                        <div>
                           <h4 className="font-semibold text-sm">Delete this repository</h4>
-                          <p className="text-xs text-github-muted">Once you delete a repository, there is no going back. Please be certain.</p>
+                          <p className="text-xs text-xithub-muted">Once you delete a repository, there is no going back. Please be certain.</p>
                        </div>
                        <button
                          onClick={() => setShowDeleteConfirm(!showDeleteConfirm)}
-                         className="text-red-500 border border-github-border bg-[#21262d] hover:bg-red-900/20 hover:border-red-800 px-4 py-1.5 rounded-md text-sm font-semibold transition-colors"
+                         className="text-red-500 border border-xithub-border bg-[#21262d] hover:bg-red-900/20 hover:border-red-800 px-4 py-1.5 rounded-md text-sm font-semibold transition-colors"
                        >
                           Delete this repository
                        </button>
                     </div>
                     {showDeleteConfirm && (
                       <div className="border-t border-red-800 p-4 bg-red-900/10">
-                        <p className="text-sm text-github-muted mb-2">
+                        <p className="text-sm text-xithub-muted mb-2">
                           Please type <span className="font-semibold text-white">{owner?.username}/{repo.name}</span> to confirm.
                         </p>
                         <input
                           type="text"
                           value={deleteConfirmText}
                           onChange={e => setDeleteConfirmText(e.target.value)}
-                          className="bg-[#0d1117] border border-red-800 rounded-md px-3 py-1.5 w-full text-sm text-github-text focus:ring-2 focus:ring-red-500 outline-none mb-2"
+                          className="bg-[#0d1117] border border-red-800 rounded-md px-3 py-1.5 w-full text-sm text-xithub-text focus:ring-2 focus:ring-red-500 outline-none mb-2"
                           placeholder={`${owner?.username}/${repo.name}`}
                         />
                         <button
@@ -153,18 +153,18 @@
 
             {activeSection === 'collaborators' && (
               <>
-                <h2 className="text-2xl font-semibold mb-6 border-b border-github-border pb-2">Manage Access</h2>
-                <div className="bg-github-card border border-github-border rounded-md p-6 text-center">
-                  <p className="text-github-muted mb-4">People with access to this repository</p>
+                <h2 className="text-2xl font-semibold mb-6 border-b border-xithub-border pb-2">Manage Access</h2>
+                <div className="bg-xithub-card border border-xithub-border rounded-md p-6 text-center">
+                  <p className="text-xithub-muted mb-4">People with access to this repository</p>
                   <div className="space-y-2">
                     {state.users.slice(0, 3).map(u => (
                       <div key={u.id} className="flex items-center gap-3 px-4 py-2 bg-[#161b22] rounded-md">
                         <img src={u.avatar} alt={u.username} className="w-8 h-8 rounded-full" />
                         <div className="text-sm">
                           <div className="font-semibold text-white">{u.name}</div>
-                          <div className="text-github-muted">{u.username}</div>
+                          <div className="text-xithub-muted">{u.username}</div>
                         </div>
-                        <span className="ml-auto text-xs text-github-muted border border-github-border px-2 py-0.5 rounded-full">
+                        <span className="ml-auto text-xs text-xithub-muted border border-xithub-border px-2 py-0.5 rounded-full">
                           {u.id === repo.ownerId ? 'Owner' : 'Collaborator'}
                         </span>
                       </div>
@@ -176,10 +176,10 @@
 
             {activeSection === 'webhooks' && (
               <>
-                <h2 className="text-2xl font-semibold mb-6 border-b border-github-border pb-2">Webhooks</h2>
-                <div className="bg-github-card border border-github-border rounded-md p-8 text-center">
-                  <p className="text-github-muted">No webhooks configured for this repository.</p>
-                  <button className="mt-4 bg-github-success text-white px-4 py-1.5 rounded-md font-semibold text-sm hover:bg-opacity-90">
+                <h2 className="text-2xl font-semibold mb-6 border-b border-xithub-border pb-2">Webhooks</h2>
+                <div className="bg-xithub-card border border-xithub-border rounded-md p-8 text-center">
+                  <p className="text-xithub-muted">No webhooks configured for this repository.</p>
+                  <button className="mt-4 bg-xithub-success text-white px-4 py-1.5 rounded-md font-semibold text-sm hover:bg-opacity-90">
                     Add webhook
                   </button>
                 </div>
@@ -188,9 +188,9 @@
 
             {activeSection === 'pages' && (
               <>
-                <h2 className="text-2xl font-semibold mb-6 border-b border-github-border pb-2">Pages</h2>
-                <div className="bg-github-card border border-github-border rounded-md p-8 text-center">
-                  <p className="text-github-muted">GitHub Pages is not configured for this repository.</p>
+                <h2 className="text-2xl font-semibold mb-6 border-b border-xithub-border pb-2">Pages</h2>
+                <div className="bg-xithub-card border border-xithub-border rounded-md p-8 text-center">
+                  <p className="text-xithub-muted">XitHub Pages is not configured for this repository.</p>
                 </div>
               </>
             )}

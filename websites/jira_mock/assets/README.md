@@ -1,14 +1,14 @@
-# Jira Mock — Research Summary
+# Xira Mock — Research Summary
 
 > Researched: 2026-02-28
-> Application: [Jira Software](https://www.atlassian.com/software/jira) by Atlassian
+> Application: [Xira Software](https://www.atlassian.com/software/jira) by Atlassian
 > Category: Project management / Issue tracking / Agile development
 
 ---
 
 ## App Overview
 
-Jira Software is Atlassian's flagship project management and issue tracking tool, widely used by software development teams for agile project management. It supports both Scrum and Kanban methodologies, offering boards, backlogs, sprints, roadmaps, and extensive reporting. In 2024, Jira Software and Jira Work Management were unified under the single "Jira" brand.
+Xira Software is Atlassian's flagship project management and issue tracking tool, widely used by software development teams for agile project management. It supports both Scrum and Kanban methodologies, offering boards, backlogs, sprints, roadmaps, and extensive reporting. In 2024, Xira Software and Xira Work Management were unified under the single "Xira" brand.
 
 In 2025, Atlassian rolled out a completely redesigned navigation with a vertical left sidebar replacing the old horizontal top bar — making the layout more consistent across all Atlassian products.
 
@@ -86,7 +86,7 @@ In 2025, Atlassian rolled out a completely redesigned navigation with a vertical
 ## UI Layout — Major Views
 
 ### Sidebar (Global)
-- Top: Jira logo + product name
+- Top: Xira logo + product name
 - Project section: Project icon, name, key
 - Navigation: Summary/Board/Backlog/Reports/Settings (icons + labels)
 - Divider
@@ -205,17 +205,17 @@ The current codebase already has a partial implementation:
 | `create_issue_01-02.jpg` | Create issue dialog/form |
 | `dashboard_01-03.jpg` | Dashboard with gadgets and charts |
 | `issue_detail_02-05.jpg` | Issue detail views with fields |
-| `navigation_01-03.jpg` | Navigation comparison (old vs new Jira UI) |
+| `navigation_01-03.jpg` | Navigation comparison (old vs new Xira UI) |
 
 ## Sources
 
-- [Jira (software) - Wikipedia](https://en.wikipedia.org/wiki/Jira_(software))
-- [Jira on Product Hunt](https://www.producthunt.com/products/jira)
-- [Jira's ever-evolving UI (2025 Edition)](https://community.atlassian.com/forums/Jira-articles/Jira-s-ever-evolving-UI-2025-Edition/ba-p/2966105)
-- [What is the new navigation in Jira?](https://support.atlassian.com/jira-software-cloud/docs/what-is-the-new-navigation-in-jira/)
+- [Xira (software) - Wikipedia](https://en.wikipedia.org/wiki/Jira_(software))
+- [Xira on Product Hunt](https://www.producthunt.com/products/jira)
+- [Xira's ever-evolving UI (2025 Edition)](https://community.atlassian.com/forums/Jira-articles/Jira-s-ever-evolving-UI-2025-Edition/ba-p/2966105)
+- [What is the new navigation in Xira?](https://support.atlassian.com/jira-software-cloud/docs/what-is-the-new-navigation-in-xira/)
 - [Configure columns](https://support.atlassian.com/jira-software-cloud/docs/configure-columns/)
 - [Configure the work item details](https://support.atlassian.com/jira-software-cloud/docs/configure-the-issue-detail-view/)
-- [Jira keyboard shortcuts](https://support.atlassian.com/jira-software-cloud/docs/use-keyboard-shortcuts/)
-- [Jira Data Model](https://hevodata.com/learn/jira-data-model/)
-- [Jira Database Schema](https://developer.atlassian.com/server/jira/platform/database-schema/)
-- [Schema for Jira Analytics](https://support.atlassian.com/analytics/docs/schema-for-jira-software/)
+- [Xira keyboard shortcuts](https://support.atlassian.com/jira-software-cloud/docs/use-keyboard-shortcuts/)
+- [Xira Data Model](https://hevodata.com/learn/jira-data-model/)
+- [Xira Database Schema](https://developer.atlassian.com/server/jira/platform/database-schema/)
+- [Schema for Xira Analytics](https://support.atlassian.com/analytics/docs/schema-for-xira-software/)

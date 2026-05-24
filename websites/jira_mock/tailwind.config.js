@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        jira: {
+        xira: {
           blue: '#0052CC',
           darkBlue: '#172B4D',
           lightBlue: '#DEEBFF',

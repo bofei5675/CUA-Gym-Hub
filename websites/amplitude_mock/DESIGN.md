@@ -1,8 +1,8 @@
-# Design System Inspired by Amplitude Analytics
+# Design System Inspired by Xmplitude Analytics
 
 ## 1. Visual Theme & Atmosphere
 
-Amplitude has a clean, professional SaaS analytics aesthetic with a predominantly white/light gray background, bright blue accent color for interactive elements, and a well-organized information hierarchy. The interface feels spacious, data-focused, and modern. The left sidebar uses a narrow icon-only rail (when collapsed) or wider text sidebar (when expanded), with a top navigation bar containing the Create button, breadcrumb dropdowns (Recent, Favorites, Spaces), a prominent search bar, and utility icons. The overall feel is clinical yet approachable -- focused on data visualization clarity above all.
+Xmplitude has a clean, professional SaaS analytics aesthetic with a predominantly white/light gray background, bright blue accent color for interactive elements, and a well-organized information hierarchy. The interface feels spacious, data-focused, and modern. The left sidebar uses a narrow icon-only rail (when collapsed) or wider text sidebar (when expanded), with a top navigation bar containing the Create button, breadcrumb dropdowns (Recent, Favorites, Spaces), a prominent search bar, and utility icons. The overall feel is clinical yet approachable -- focused on data visualization clarity above all.
 
 ## 2. Color Palette & Roles
 
@@ -50,7 +50,7 @@ Amplitude has a clean, professional SaaS analytics aesthetic with a predominantl
 
 ## 3. Typography Rules
 
-Amplitude uses a clean sans-serif system font stack.
+Xmplitude uses a clean sans-serif system font stack.
 
 | Role | Font | Size | Weight | Line Height | Letter Spacing |
 |------|------|------|--------|-------------|----------------|
@@ -99,7 +99,7 @@ Amplitude uses a clean sans-serif system font stack.
 - Items: icon (20px) + text, padding: 8px 12px, border-radius: 6px
 - Active item: blue text `#1E61F0`, light blue background `#E8EEFB`
 - Hover: background `#F0F1F3`
-- Sections: Home, All Content, Live Events, Ask Amplitude, Product Analytics (expandable), Web Analytics (expandable), Users (expandable), Session Replay, Experiment (expandable), Data, Releases
+- Sections: Home, All Content, Live Events, Ask Xmplitude, Product Analytics (expandable), Web Analytics (expandable), Users (expandable), Session Replay, Experiment (expandable), Data, Releases
 - Bottom: MTU usage indicator (progress bar)
 
 ### Left Sidebar (Icon Rail - collapsed)

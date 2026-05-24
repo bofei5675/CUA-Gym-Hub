@@ -1,6 +1,6 @@
-# OpenReview Frontend Specification
+# XpenReview Frontend Specification
 
-Extracted from the real OpenReview web application (`openreview-web`). This document covers all core frontend functionality, data structures, API patterns, and interaction logic.
+Extracted from the real XpenReview web application (`xpenreview-web`). This document covers all core frontend functionality, data structures, API patterns, and interaction logic.
 
 ---
 
@@ -398,7 +398,7 @@ All GET list responses follow the pattern:
     <div class="navbar-header">
       <button class="navbar-toggle collapsed">...</button>
       <a href="/" class="navbar-brand home push-link">
-        <strong>OpenReview</strong>.net
+        <strong>XpenReview</strong>.net
       </a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
@@ -1124,14 +1124,14 @@ Wraps Ant Design Badge with styles: `{ root: { color: 'inherit' }, indicator: { 
   <div class="container">
     <div class="row">
       <!-- 3-column layout (tablet/desktop) -->
-      <div class="col-sm-4">About OpenReview, Hosting a Venue, All Venues</div>
+      <div class="col-sm-4">About XpenReview, Hosting a Venue, All Venues</div>
       <div class="col-sm-4">Contact, Sponsors, Donate</div>
       <div class="col-sm-4">FAQ, Terms/Privacy, News</div>
     </div>
   </div>
 </footer>
 <div class="sponsor">
-  <p>OpenReview is a long-term project... &copy; {year} OpenReview</p>
+  <p>XpenReview is a long-term project... &copy; {year} XpenReview</p>
 </div>
 ```
 

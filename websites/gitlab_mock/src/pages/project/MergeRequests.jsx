@@ -17,7 +17,7 @@ export default function MergeRequests() {
         <h1 className="text-2xl font-bold text-gray-800">Merge Requests</h1>
         <button 
           onClick={() => navigate(`new${search || ''}`)}
-          className="bg-gitlab-info text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
+          className="bg-xitlab-info text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
         >
           New Merge Request
         </button>

@@ -51,7 +51,7 @@ export default function Themes() {
                   </button>
                   <button
                     className="btn-secondary text-[13px] flex items-center gap-1"
-                    onClick={() => window.open('https://cua-gym-shopify-admin.xlang.ai/', '_blank')}
+                    onClick={() => window.open('https://cua-gym-xhopify-admin.xlang.ai/', '_blank')}
                   >
                     <ExternalLink size={14} /> Preview
                   </button>

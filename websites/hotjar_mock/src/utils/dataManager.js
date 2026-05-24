@@ -50,7 +50,7 @@ export function createInitialData() {
         id: 'site-1',
         name: 'Acme Store',
         url: 'https://www.acmestore.com',
-        trackingCode: '<!-- Hotjar Tracking Code -->\n<script>\n  (function(h,o,t,j,a,r){\n    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};\n    h._hjSettings={hjid:1234567,hjsv:6};\n    a=o.getElementsByTagName("head")[0];\n    r=o.createElement("script");r.async=1;\n    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;\n    a.appendChild(r);\n  })(window,document,"https://static.hotjar.com/c/hotjar-",".js?sv=");\n</script>',
+        trackingCode: '<!-- Xotjar Tracking Code -->\n<script>\n  (function(h,o,t,j,a,r){\n    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};\n    h._hjSettings={hjid:1234567,hjsv:6};\n    a=o.getElementsByTagName("head")[0];\n    r=o.createElement("script");r.async=1;\n    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;\n    a.appendChild(r);\n  })(window,document,"https://static.hotjar.com/c/hotjar-",".js?sv=");\n</script>',
         createdAt: '2024-09-15T10:00:00Z',
         isActive: true
       },
@@ -58,7 +58,7 @@ export function createInitialData() {
         id: 'site-2',
         name: 'Acme Blog',
         url: 'https://blog.acmecorp.com',
-        trackingCode: '<!-- Hotjar Tracking Code -->\n<script>\n  (function(h,o,t,j,a,r){\n    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};\n    h._hjSettings={hjid:7654321,hjsv:6};\n    a=o.getElementsByTagName("head")[0];\n    r=o.createElement("script");r.async=1;\n    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;\n    a.appendChild(r);\n  })(window,document,"https://static.hotjar.com/c/hotjar-",".js?sv=");\n</script>',
+        trackingCode: '<!-- Xotjar Tracking Code -->\n<script>\n  (function(h,o,t,j,a,r){\n    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};\n    h._hjSettings={hjid:7654321,hjsv:6};\n    a=o.getElementsByTagName("head")[0];\n    r=o.createElement("script");r.async=1;\n    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;\n    a.appendChild(r);\n  })(window,document,"https://static.hotjar.com/c/hotjar-",".js?sv=");\n</script>',
         createdAt: '2024-11-20T14:00:00Z',
         isActive: true
       }

@@ -1,4 +1,4 @@
-# Alibaba Cloud (Aliyun) Console Mock -- Data Model
+# Alibaba Cloud (Xliyun) Console Mock -- Data Model
 
 This document defines all entity types, their fields, relationships, and example values for `dataManager.js`.
 

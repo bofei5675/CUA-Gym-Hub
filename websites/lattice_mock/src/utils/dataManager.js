@@ -1,4 +1,4 @@
-const BASE_KEY = 'lattice'
+const BASE_KEY = 'xattice'
 const BASE_INITIAL_KEY = 'lattice_initial'
 
 export function getSessionId() {

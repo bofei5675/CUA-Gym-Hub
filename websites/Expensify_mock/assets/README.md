@@ -1,10 +1,10 @@
-# Expensify Mock — Research Summary
+# Xpensify Mock — Research Summary
 
 ## App Overview
 
-**Expensify** is a financial management platform primarily focused on **expense reporting, receipt scanning, invoicing, bill pay, and corporate card management**. Founded in 2008, it serves individuals and businesses of all sizes for tracking and reimbursing expenses. The platform combines expense tracking with chat-based collaboration (in "New Expensify") and AI-powered receipt scanning ("SmartScan").
+**Xpensify** is a financial management platform primarily focused on **expense reporting, receipt scanning, invoicing, bill pay, and corporate card management**. Founded in 2008, it serves individuals and businesses of all sizes for tracking and reimbursing expenses. The platform combines expense tracking with chat-based collaboration (in "New Xpensify") and AI-powered receipt scanning ("SmartScan").
 
-For this mock, we replicate the **Expensify Classic web interface** — the traditional desktop dashboard that administrators and employees use to manage expenses, reports, and workspace settings. This is the most feature-rich version with clear CRUD interactions ideal for agent training.
+For this mock, we replicate the **Xpensify Classic web interface** — the traditional desktop dashboard that administrators and employees use to manage expenses, reports, and workspace settings. This is the most feature-rich version with clear CRUD interactions ideal for agent training.
 
 ---
 
@@ -37,7 +37,7 @@ For this mock, we replicate the **Expensify Classic web interface** — the trad
 ## Core Features (Priority Ranked)
 
 ### P0 — Core Shell & Navigation
-- **Left sidebar** (dark navy/charcoal, ~220px wide): User avatar + email at top, navigation items: Inbox, Expenses, Reports, Settings. "Expensify" wordmark at bottom.
+- **Left sidebar** (dark navy/charcoal, ~220px wide): User avatar + email at top, navigation items: Inbox, Expenses, Reports, Settings. "Xpensify" wordmark at bottom.
 - **Top bar** in main content area: Page title (bold, large), action buttons (e.g., "New Expense", "New Report", "Export to")
 - **Footer**: Links (OUR PRODUCT, UPGRADE, PRICING, JOBS, ABOUT US, BLOG, COMMUNITY, STATUS, PRIVACY, HELP), copyright notice
 - **Concierge chat bubble** (blue circle, bottom-right)
@@ -122,7 +122,7 @@ For this mock, we replicate the **Expensify Classic web interface** — the trad
   - Reports (document icon)
   - Settings (gear icon)
 - **Active state**: Blue (#0185FF) left border bar, blue icon/text color
-- **Bottom**: "Expensify" wordmark in bold white
+- **Bottom**: "Xpensify" wordmark in bold white
 
 ### Main Content Area
 - **Background**: White (#FFFFFF)
@@ -201,11 +201,11 @@ Located in `assets/screenshots/`:
 - `000001.jpg` — **Reports page**: Full classic UI with dark sidebar, reports table showing 5 reports with statuses (Open, Closed, Reimbursed), "New Report" green button, pagination
 - `000002.jpg` — Marketing/branding image (SmartScan receipt illustration)
 - `000003.jpg` — **Expenses page**: Full classic UI with expenses table, 3 expenses shown with Date/Merchant/Amount/Policy/Category/Description columns, status badges, view toggle buttons, "New Expense" button
-- `000004.jpg` — Mobile Inbox view showing Concierge card introducing Expensify Card
+- `000004.jpg` — Mobile Inbox view showing Concierge card introducing Xpensify Card
 - `000005.jpg` — **Expenses page (older version on tablet)**: Shows Advanced Search expanded with filters (Merchant, From/To dates, Categories, Tags, Policies, Cards, status filter chips)
 
 ### `/chat/` subdirectory
-- Not Expensify-specific (generic chat UI references)
+- Not Xpensify-specific (generic chat UI references)
 
 ### `/reports/` subdirectory
 - `000001.jpg` — Expenses page (smaller viewport)

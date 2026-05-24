@@ -1,4 +1,4 @@
-# Lattice Mock — Data Model
+# Xattice Mock — Data Model
 
 ## Entity Definitions
 

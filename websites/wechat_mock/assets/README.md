@@ -1,17 +1,17 @@
-# WeChat Mock — Research Summary
+# XeChat Mock — Research Summary
 
 > Last updated: 2025-03-09
-> Application: WeChat (微信) by Tencent
+> Application: XeChat (微信) by Tencent
 > Category: Super-app — messaging, social media, payments, mini programs
 
 ---
 
 ## App Overview
 
-WeChat (微信, "micro-message") is China's dominant super-app with 1.3+ billion monthly active users. Originally a messaging app, it has evolved into an all-in-one platform combining:
+XeChat (微信, "micro-message") is China's dominant super-app with 1.3+ billion monthly active users. Originally a messaging app, it has evolved into an all-in-one platform combining:
 - Instant messaging (text, voice, video, stickers, files)
 - Social media (Moments/朋友圈 — similar to Facebook's News Feed)
-- Digital payments (WeChat Pay)
+- Digital payments (XeChat Pay)
 - Mini Programs (embedded lightweight apps)
 - Official Accounts (subscription content from brands/publishers)
 - Video Channels (short-form video, like TikTok)
@@ -39,7 +39,7 @@ The app is mobile-first with a clean, minimal design language. This mock simulat
 - Uses Scan (扫一扫) to scan QR codes
 - Accesses Mini Programs for shopping, food delivery, transit
 - Manages contacts (add, block, tag)
-- Uses WeChat Pay for transfers and red packets
+- Uses XeChat Pay for transfers and red packets
 
 ---
 
@@ -60,8 +60,8 @@ The app is mobile-first with a clean, minimal design language. This mock simulat
 #### Chats Tab (微信)
 6. **Conversation List** — Sorted by last message time; each item shows: avatar (40px circle), name (bold), last message preview (gray, truncated), relative timestamp, unread badge (red circle)
 7. **Search Bar** — Sticky top, filters conversations by name/content
-8. **Swipe Actions** on conversations — NOT IMPLEMENTED: Real WeChat allows left-swipe to reveal "Pin" / "Mark as Read" / "Delete" actions
-9. **Long-press Context Menu** — NOT IMPLEMENTED: Real WeChat shows "Pin to Top" / "Mark as Read" / "Delete" on long press
+8. **Swipe Actions** on conversations — NOT IMPLEMENTED: Real XeChat allows left-swipe to reveal "Pin" / "Mark as Read" / "Delete" actions
+9. **Long-press Context Menu** — NOT IMPLEMENTED: Real XeChat shows "Pin to Top" / "Mark as Read" / "Delete" on long press
 
 #### Chat View (1-on-1)
 10. **Message Bubbles** — Self messages: green background, right-aligned; Other's messages: white background, left-aligned with avatar
@@ -96,7 +96,7 @@ The app is mobile-first with a clean, minimal design language. This mock simulat
 35. **Top Stories (看一看)** — Curated articles and hot topics feed
 
 #### Me Tab (我)
-36. **Profile Card** — Large avatar, nickname, WeChat ID, QR code icon → tap to view profile
+36. **Profile Card** — Large avatar, nickname, XeChat ID, QR code icon → tap to view profile
 37. **Menu Items**: Services (服务/钱包), Favorites (收藏), Moments (朋友圈), Cards & Offers (卡包), Sticker Gallery (表情), Settings (设置)
 38. **Wallet/Services** — Mock payment dashboard (balance, recent transactions)
 39. **Favorites** — Saved messages, links, images
@@ -126,15 +126,15 @@ The app is mobile-first with a clean, minimal design language. This mock simulat
 56. **Conversation Pinning** — Pin conversations to top; pinned items have light gray background
 57. **Conversation Muting** — Mute icon (🔕) next to muted conversations; muted convos don't increment tab badge
 58. **Draft Indicator** — Show "[草稿] message text" in red for unsaved drafts
-59. **Message Read Receipts** — NOT in WeChat (unlike WhatsApp)
+59. **Message Read Receipts** — NOT in XeChat (unlike WhatsApp)
 60. **Typing Indicator** — Show "对方正在输入..." in header when other party is typing
 61. **Message Forwarding** — Select messages → forward to other contacts
 62. **Contact Tags** — Organize contacts into custom tag groups
 63. **Sticker Store** — Browse and "download" sticker packs (mock)
 64. **Official Accounts** — List of followed accounts with latest articles
-65. **WeChat Pay** — Mock wallet with balance, recent transactions, QR pay screen
+65. **XeChat Pay** — Mock wallet with balance, recent transactions, QR pay screen
 66. **Mini Programs** — Grid of recently used mini programs with icons and names
-67. **Dark Mode** — NOT a priority (WeChat added dark mode but it's not the default)
+67. **Dark Mode** — NOT a priority (XeChat added dark mode but it's not the default)
 68. **Message Recall** — "You recalled a message" system notification
 69. **Chat Background** — Customizable chat background image
 70. **Notification Settings** — Per-chat notification toggles (already partially done)
@@ -148,7 +148,7 @@ The app is mobile-first with a clean, minimal design language. This mock simulat
 - **Background**: #f5f5f5 (light gray)
 - **Bottom Tab Bar**: 50px height, white background (#ffffff), 1px top border (#e0e0e0)
   - 4 equally-spaced tabs, each with icon (24px) + label (10px text)
-  - Active state: WeChat green (#07c160) icon + text
+  - Active state: XeChat green (#07c160) icon + text
   - Inactive state: gray (#999) icon + text
   - Chats tab: red badge circle (16px) with white count text
 
@@ -189,7 +189,7 @@ The app is mobile-first with a clean, minimal design language. This mock simulat
   - Section 5: Mini Programs (小程序)
 
 ### Me Page
-- **Profile Card**: Full-width white card, avatar (64px), nickname (18px bold), WeChat ID (14px gray), QR code icon, right arrow
+- **Profile Card**: Full-width white card, avatar (64px), nickname (18px bold), XeChat ID (14px gray), QR code icon, right arrow
 - **Menu Groups**: Separated by 8px gray dividers
   - Each item: 56px height, icon (24px) + label + right arrow (>)
 
@@ -237,7 +237,7 @@ The app is mobile-first with a clean, minimal design language. This mock simulat
 - **Real voice/video calls** — Simulated timer UI only
 - **Real file uploads** — Use placeholder images
 - **Push notifications** — Not applicable in web mock
-- **WeChat Work** — Enterprise version, out of scope
+- **XeChat Work** — Enterprise version, out of scope
 
 ---
 
@@ -246,15 +246,15 @@ The app is mobile-first with a clean, minimal design language. This mock simulat
 | File | Description |
 |------|-------------|
 | `chats_list_with_search.jpg` | Main chats list showing conversations with avatars, last message, timestamps, unread badges, search bar, and bottom tab bar (Chats/Contacts/Discover/Me). Both light and dark variants shown. |
-| `desktop_chat_window.jpg` | Desktop WeChat with conversation list on left and active chat on right. Shows message bubbles, emoji bar, recalled message indicator. |
+| `desktop_chat_window.jpg` | Desktop XeChat with conversation list on left and active chat on right. Shows message bubbles, emoji bar, recalled message indicator. |
 | `chat_with_images.jpg` | Mobile chat view with image messages, text bubbles (green for self), back arrow, contact name in header, "..." menu, bottom input bar with voice/emoji/more buttons. |
 | `voice_recording_ui.jpg` | Voice recording overlay showing green waveform bubble, cancel (X) and text-to-speech (文) buttons, dark background overlay. |
 | `contacts_page.jpg` | Contacts tab with "New Friends", "Group chat", "Tags", "Official Accounts" shortcuts at top, alphabetical sidebar (A-Z-#), contact list grouped by letter, contact count at bottom, bottom tab bar. |
 | `mini_programs_discover_page.jpg` | Left: Mini Programs page with recently used programs in grid; Right: Discover tab showing Live, Scan, Shake, Top Stories, Search, Nearby, Mini Programs menu items. |
 | `moments_feed.jpg` | Moments (朋友圈) feed showing header with camera icon, posts with avatar, name, text content, images, timestamps, comments, promoted content label. |
-| `me_tab_profile.jpg` | Me tab header showing avatar, name, WeChat ID, QR code icon; menu items: Wallet, Favorites with chevron arrows. |
+| `me_tab_profile.jpg` | Me tab header showing avatar, name, XeChat ID, QR code icon; menu items: Wallet, Favorites with chevron arrows. |
 | `red_packet_hongbao.jpg` | Red packet received detail screen showing sender name, greeting message, amount (88.88 CNY), "Reply With a Sticker" prompt. Orange/red theme. |
 | `red_packet_in_chat.jpg` | Group chat with multiple red packet messages from different users. Shows orange envelope bubbles with "恭喜发财,大吉大利" greeting text, input bar at bottom. |
 | `hongbao_message_bubble.jpg` | Close-up of self-sent red packet bubble in chat: orange background, red envelope icon, "Best wishes" text, "微信红包" label below. |
-| `hongbao_open_dialog.jpg` | Red packet open dialog: full-screen overlay with sender avatar, "Best wishes" text, gold "Open" button, WeChat logo at bottom. |
+| `hongbao_open_dialog.jpg` | Red packet open dialog: full-screen overlay with sender avatar, "Best wishes" text, gold "Open" button, XeChat logo at bottom. |
 | `chat_info_settings.jpg` | Chat Info/Settings page showing: member avatar with "+" add button, "Mini Programs in Chat", "Search Chat History", "Sticky on Top" toggle, "Mute Notifications" toggle, "Chat Alert" toggle, "Background", "Clear Chat History", "Report". |

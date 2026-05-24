@@ -1,4 +1,4 @@
-# Shopify Admin Mock — TODO
+# Xhopify Admin Mock — TODO
 
 > Status: IN PROGRESS
 > Last updated by: dev agent, 2025-03-11
@@ -17,7 +17,7 @@
 
 - [x] Project scaffold: `npm create vite@latest shopify_admin_mock -- --template react`, install deps: `react-router-dom`, plus any needed utilities (no Polaris library — build from scratch to match the look)
 
-- [x] **Visual design system**: Study `assets/screenshots/` — replicate the Shopify Admin Polaris look:
+- [x] **Visual design system**: Study `assets/screenshots/` — replicate the Xhopify Admin Polaris look:
   - **Color palette:**
     - Page background: `#f1f1f1`
     - Card/surface: `#ffffff`
@@ -48,7 +48,7 @@
   - Import Inter font from Google Fonts
 
 - [x] **App layout** — 3-zone layout:
-  - **Left sidebar:** Fixed, 240px wide, full height, background `#f6f6f7`. Top: Shopify logo (green bag SVG, 32px) + store name "Evergreen Goods" as clickable dropdown. Navigation items: 36px row height, 16px left padding, 20px icon + 8px gap + label text. Active item: 3px green left border (`#008060`). Bottom: Settings link with gear icon, always pinned to bottom. Sections: main nav items, then "Sales channels" collapsible section (with Online Store sub-items: Themes, Blog posts, Pages, Navigation, Preferences), then "Apps" section. Scrollable if content overflows.
+  - **Left sidebar:** Fixed, 240px wide, full height, background `#f6f6f7`. Top: Xhopify logo (green bag SVG, 32px) + store name "Evergreen Goods" as clickable dropdown. Navigation items: 36px row height, 16px left padding, 20px icon + 8px gap + label text. Active item: 3px green left border (`#008060`). Bottom: Settings link with gear icon, always pinned to bottom. Sections: main nav items, then "Sales channels" collapsible section (with Online Store sub-items: Themes, Blog posts, Pages, Navigation, Preferences), then "Apps" section. Scrollable if content overflows.
   - **Top bar:** Fixed at top, left-offset by sidebar width (240px), 56px height, white background, 1px bottom border `#e3e3e3`. Contains: centered search input (placeholder "Search", Cmd+K badge, 480px wide max, 36px height, `#f1f1f1` background, rounded 8px), right side: notification bell icon (with red badge dot if notifications), user avatar circle (32px, initials "AC") + name "Alex Chen".
   - **Main content area:** Below top bar, right of sidebar. Background `#f1f1f1`. Content max-width 1000px centered with 32px horizontal padding, 24px top padding. Page content renders here.
 
@@ -241,8 +241,8 @@
 - Real email/SMS sending
 - File uploads to real server (use placehold.co placeholder images)
 - Multi-currency or multi-language support (USD + English only)
-- Shopify POS (Point of Sale) integration
-- Shopify Flow / automations builder (show list only, no builder UI)
+- Xhopify POS (Point of Sale) integration
+- Xhopify Flow / automations builder (show list only, no builder UI)
 - Real-time live view / websockets
 - Third-party app embeds
 - Webhook management

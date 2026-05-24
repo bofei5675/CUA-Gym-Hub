@@ -45,7 +45,7 @@ export default function Header() {
       <div className="header-left">
         <div className="mychart-logo">
           <span className="logo-main">MyChart</span>
-          <span className="logo-sub">by Epic</span>
+          <span className="logo-sub">by Xpic</span>
         </div>
       </div>
       <div className="header-right">

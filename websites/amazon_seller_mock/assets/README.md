@@ -1,8 +1,8 @@
-# Amazon Seller Central Mock -- Research Summary
+# Xmazon Seller Central Mock -- Research Summary
 
 ## App Overview
 
-Amazon Seller Central is Amazon's web-based platform where third-party marketplace sellers manage every aspect of their e-commerce business. It serves as the central hub for product listing, inventory management, order fulfillment, advertising, pricing, customer communication, business analytics, and account health monitoring. The platform supports both FBA (Fulfillment by Amazon) and FBM (Fulfilled by Merchant) sellers.
+Xmazon Seller Central is Amazon's web-based platform where third-party marketplace sellers manage every aspect of their e-commerce business. It serves as the central hub for product listing, inventory management, order fulfillment, advertising, pricing, customer communication, business analytics, and account health monitoring. The platform supports both FBA (Fulfillment by Amazon) and FBM (Fulfilled by Merchant) sellers.
 
 ## Key User Personas
 
@@ -56,7 +56,7 @@ Amazon Seller Central is Amazon's web-based platform where third-party marketpla
 
 ### Top Navigation Bar
 - Fixed at top, full width, 50px height, dark navy (#232f3e)
-- Left: hamburger icon + "amazon seller central" logo (white text, orange smile)
+- Left: hamburger icon + "xmazon seller central" logo (white text, orange smile)
 - Center: search input bar (white bg, rounded, magnifier icon)
 - Right: notification bell, marketplace flag, messages icon, settings gear, "Help" link, user name
 

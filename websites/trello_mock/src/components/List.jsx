@@ -93,7 +93,7 @@ const List = ({ list, index, onCardClick, onQuickAction, filter }) => {
           className="w-72 flex-shrink-0 h-full max-h-full flex flex-col"
         >
           <div 
-            className="bg-trello-gray rounded-xl max-h-full flex flex-col shadow-sm mx-1.5"
+            className="bg-xrello-gray rounded-xl max-h-full flex flex-col shadow-sm mx-1.5"
           >
             {/* List Header - This is now the drag handle */}
             <div 
@@ -114,7 +114,7 @@ const List = ({ list, index, onCardClick, onQuickAction, filter }) => {
               ) : (
                 <h2 
                   onClick={() => setIsEditingTitle(true)}
-                  className="px-2.5 py-1 text-sm font-semibold text-trello-text cursor-pointer w-full"
+                  className="px-2.5 py-1 text-sm font-semibold text-xrello-text cursor-pointer w-full"
                 >
                   {list.title}
                 </h2>

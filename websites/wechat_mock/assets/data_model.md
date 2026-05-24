@@ -1,4 +1,4 @@
-# WeChat Mock — Data Model
+# XeChat Mock — Data Model
 
 > For `src/utils/storage.js` `getInitialData()` and `src/store.js`
 > Last updated: 2025-03-09
@@ -16,7 +16,7 @@ The logged-in user. Only one instance.
 | userId | string | Unique ID | `"user_1"` |
 | nickname | string | Display name (Chinese) | `"张三"` |
 | avatar | string | URL to avatar image | `"https://picsum.photos/100/100?random=1"` |
-| wechatId | string | WeChat ID (unique handle) | `"zhangsan_2024"` |
+| wechatId | string | XeChat ID (unique handle) | `"zhangsan_2024"` |
 | signature | string | Personal signature/bio | `"每天进步一点点"` |
 | region | string | Location | `"北京 海淀"` |
 | gender | string | Gender | `"男"` / `"女"` |
@@ -32,7 +32,7 @@ People in the user's address book.
 | userId | string | Unique ID | `"user_2"` |
 | nickname | string | Display name | `"李四"` |
 | avatar | string | Avatar URL | `"https://picsum.photos/100/100?random=2"` |
-| wechatId | string | WeChat ID | `"lisi_wx"` |
+| wechatId | string | XeChat ID | `"lisi_wx"` |
 | phone | string | Phone number | `"139****5678"` |
 | signature | string | Bio | `"简单生活"` |
 | region | string | Location | `"上海 浦东"` |

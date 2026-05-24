@@ -75,12 +75,12 @@ export default function Inbox() {
               <button className="btn btn-outline" style={{ fontSize: 13 }} onClick={() => { window.open('tel:+18882899750', '_self'); }}><Phone size={14} /> Call</button>
             </div>
           </div>
-          <p style={{ fontSize: 15, marginBottom: 12 }}>Are you here to setup Expensify for your business, or just yourself?</p>
+          <p style={{ fontSize: 15, marginBottom: 12 }}>Are you here to setup Xpensify for your business, or just yourself?</p>
           <div className="setup-cards">
             <div className="setup-card" onClick={() => dispatch({ type: 'UPDATE_INBOX_ITEM', payload: { id: conciergeItem.id, hidden: true } })}>
               <div className="setup-card-icon"><Briefcase size={40} color="#F5A623" /></div>
               <div className="setup-card-title">Business</div>
-              <div className="setup-card-desc">Send invoices, pay bills, book travel, and manage employee expenses. Get the Expensify Card and say goodbye to receipts.</div>
+              <div className="setup-card-desc">Send invoices, pay bills, book travel, and manage employee expenses. Get the Xpensify Card and say goodbye to receipts.</div>
             </div>
             <div className="setup-card" onClick={() => dispatch({ type: 'UPDATE_INBOX_ITEM', payload: { id: conciergeItem.id, hidden: true } })}>
               <div className="setup-card-icon"><PiggyBank size={40} color="#03D47C" /></div>

@@ -73,19 +73,19 @@
         <div className="max-w-6xl mx-auto">
           <div className="flex justify-between items-center mb-4">
              <div className="relative flex-1 max-w-md">
-                <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-github-muted" />
+                <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-xithub-muted" />
                 <input
                   type="text"
                   placeholder="Search issues..."
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
-                  className="w-full bg-[#0d1117] border border-github-border rounded-md pl-9 pr-3 py-1.5 text-sm text-white placeholder-github-muted focus:outline-none focus:border-github-accent"
+                  className="w-full bg-[#0d1117] border border-xithub-border rounded-md pl-9 pr-3 py-1.5 text-sm text-white placeholder-xithub-muted focus:outline-none focus:border-xithub-accent"
                 />
              </div>
              <div className="flex items-center gap-2 ml-4">
                <Link
                  to={`/${owner.username}/${repo.name}/milestones`}
-                 className="flex items-center gap-1 px-3 py-1.5 border border-github-border rounded-md text-sm text-github-text hover:bg-[#30363d]"
+                 className="flex items-center gap-1 px-3 py-1.5 border border-xithub-border rounded-md text-sm text-xithub-text hover:bg-[#30363d]"
                >
                  <MilestoneIcon size={14} />
                  Milestones
@@ -93,7 +93,7 @@
                    {repoMilestones.filter(m => m.state === 'open').length}
                  </span>
                </Link>
-               <Link to="new" className="bg-github-success text-white px-4 py-1.5 rounded-md font-semibold text-sm hover:bg-opacity-90">
+               <Link to="new" className="bg-xithub-success text-white px-4 py-1.5 rounded-md font-semibold text-sm hover:bg-opacity-90">
                   New Issue
                </Link>
              </div>
@@ -102,34 +102,34 @@
           {/* Active milestone filter indicator */}
           {milestoneFilter && (
             <div className="mb-3 flex items-center gap-2 text-sm">
-              <span className="text-github-muted">Milestone:</span>
-              <span className="bg-[#21262d] text-github-text px-2 py-0.5 rounded-md text-xs font-medium">{milestoneFilter}</span>
+              <span className="text-xithub-muted">Milestone:</span>
+              <span className="bg-[#21262d] text-xithub-text px-2 py-0.5 rounded-md text-xs font-medium">{milestoneFilter}</span>
               <button
                 onClick={() => setMilestoneFilter(null)}
-                className="text-github-muted hover:text-white text-xs"
+                className="text-xithub-muted hover:text-white text-xs"
               >
                 Clear
               </button>
             </div>
           )}
 
-          <div className="bg-github-card border border-github-border rounded-md overflow-hidden">
-            <div className="bg-[#161b22] border-b border-github-border p-3 flex items-center justify-between">
+          <div className="bg-xithub-card border border-xithub-border rounded-md overflow-hidden">
+            <div className="bg-[#161b22] border-b border-xithub-border p-3 flex items-center justify-between">
               <div className="flex items-center gap-4 text-sm">
                 <button
                   onClick={() => setFilter('open')}
-                  className={`flex items-center gap-1 ${filter === 'open' ? 'font-semibold text-white' : 'text-github-muted hover:text-white'}`}
+                  className={`flex items-center gap-1 ${filter === 'open' ? 'font-semibold text-white' : 'text-xithub-muted hover:text-white'}`}
                 >
                   <AlertCircle size={16} /> {openCount} Open
                 </button>
                 <button
                   onClick={() => setFilter('closed')}
-                  className={`flex items-center gap-1 ${filter === 'closed' ? 'font-semibold text-white' : 'text-github-muted hover:text-white'}`}
+                  className={`flex items-center gap-1 ${filter === 'closed' ? 'font-semibold text-white' : 'text-xithub-muted hover:text-white'}`}
                 >
                   <CheckCircle size={16} /> {closedCount} Closed
                 </button>
               </div>
-              <div className="flex gap-4 text-sm text-github-muted">
+              <div className="flex gap-4 text-sm text-xithub-muted">
                  {/* Label filter */}
                  <div className="relative">
                    <button
@@ -139,7 +139,7 @@
                      Label &#x25BE;
                    </button>
                    {showLabelMenu && (
-                     <div className="absolute right-0 top-full mt-1 w-48 bg-[#161b22] border border-github-border rounded-md shadow-lg z-40 py-1">
+                     <div className="absolute right-0 top-full mt-1 w-48 bg-[#161b22] border border-xithub-border rounded-md shadow-lg z-40 py-1">
                        <button
                          onClick={() => { setLabelFilter(null); setShowLabelMenu(false); }}
                          className={`w-full text-left px-3 py-1.5 text-xs hover:bg-[#21262d] ${!labelFilter ? 'text-white font-semibold' : ''}`}
@@ -155,7 +155,7 @@
                            {label}
                          </button>
                        ))}
-                       {allLabels.length === 0 && <div className="px-3 py-1.5 text-xs text-github-muted">No labels</div>}
+                       {allLabels.length === 0 && <div className="px-3 py-1.5 text-xs text-xithub-muted">No labels</div>}
                      </div>
                    )}
                  </div>
@@ -169,7 +169,7 @@
                      Milestone &#x25BE;
                    </button>
                    {showMilestoneMenu && (
-                     <div className="absolute right-0 top-full mt-1 w-48 bg-[#161b22] border border-github-border rounded-md shadow-lg z-40 py-1">
+                     <div className="absolute right-0 top-full mt-1 w-48 bg-[#161b22] border border-xithub-border rounded-md shadow-lg z-40 py-1">
                        <button
                          onClick={() => { setMilestoneFilter(null); setShowMilestoneMenu(false); }}
                          className={`w-full text-left px-3 py-1.5 text-xs hover:bg-[#21262d] ${!milestoneFilter ? 'text-white font-semibold' : ''}`}
@@ -185,7 +185,7 @@
                            {ms.title}
                          </button>
                        ))}
-                       {repoMilestones.length === 0 && <div className="px-3 py-1.5 text-xs text-github-muted">No milestones</div>}
+                       {repoMilestones.length === 0 && <div className="px-3 py-1.5 text-xs text-xithub-muted">No milestones</div>}
                      </div>
                    )}
                  </div>
@@ -199,7 +199,7 @@
                      Sort &#x25BE;
                    </button>
                    {showSortMenu && (
-                     <div className="absolute right-0 top-full mt-1 w-48 bg-[#161b22] border border-github-border rounded-md shadow-lg z-40 py-1">
+                     <div className="absolute right-0 top-full mt-1 w-48 bg-[#161b22] border border-xithub-border rounded-md shadow-lg z-40 py-1">
                        {[
                          { id: 'newest', label: 'Newest' },
                          { id: 'oldest', label: 'Oldest' },
@@ -220,14 +220,14 @@
               </div>
             </div>
 
-            <div className="divide-y divide-github-border">
+            <div className="divide-y divide-xithub-border">
               {sortedIssues.map(issue => {
                 const author = state.users.find(u => u.id === issue.authorId);
                 return (
                   <div key={issue.id} className="p-3 hover:bg-[#161b22] flex items-start gap-2 group">
                     <div className="pt-1">
                       {issue.isPinned ? (
-                        <Pin size={16} className="text-github-accent" />
+                        <Pin size={16} className="text-xithub-accent" />
                       ) : issue.status === 'open' ? (
                         <AlertCircle size={16} className="text-green-500" />
                       ) : (
@@ -236,14 +236,14 @@
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
-                        <Link to={`${issue.number}`} className="font-semibold text-white hover:text-github-accent hover:underline">
+                        <Link to={`${issue.number}`} className="font-semibold text-white hover:text-xithub-accent hover:underline">
                           {issue.title}
                         </Link>
                         {(issue.labels || []).map(label => (
                           <LabelBadge key={label} name={label} repoId={issue.repoId} />
                         ))}
                       </div>
-                      <div className="text-xs text-github-muted">
+                      <div className="text-xs text-xithub-muted">
                         #{issue.number} opened on {new Date(issue.createdAt).toLocaleDateString()} by {author?.username}
                         {issue.milestone && (
                           <span className="ml-2">
@@ -254,7 +254,7 @@
                       </div>
                     </div>
                     {(issue.comments?.length || 0) > 0 && (
-                      <div className="flex items-center gap-1 text-github-muted text-xs">
+                      <div className="flex items-center gap-1 text-xithub-muted text-xs">
                         <MessageSquare size={14} /> {issue.comments.length}
                       </div>
                     )}
@@ -263,7 +263,7 @@
               })}
 
               {sortedIssues.length === 0 && (
-                 <div className="p-12 text-center text-github-muted">
+                 <div className="p-12 text-center text-xithub-muted">
                     <AlertCircle size={48} className="mx-auto mb-4 opacity-50" />
                     <h3 className="text-lg font-semibold text-white">Welcome to issues!</h3>
                     <p>Issues are used to track todos, bugs, feature requests, and more.</p>

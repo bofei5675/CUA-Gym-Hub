@@ -1,10 +1,10 @@
-# PACS Viewer Mock — Research Summary
+# XACS Viewer Mock — Research Summary
 
 ## App Overview
 
-**PACS** (Picture Archiving and Communication System) is a medical imaging technology used in healthcare organizations to store, retrieve, manage, distribute, and display medical images. A **PACS Viewer** is the radiologist's primary workstation software for viewing and interpreting medical images such as X-rays, CT scans, MRIs, ultrasounds, and nuclear medicine studies.
+**PACS** (Picture Archiving and Communication System) is a medical imaging technology used in healthcare organizations to store, retrieve, manage, distribute, and display medical images. A **XACS Viewer** is the radiologist's primary workstation software for viewing and interpreting medical images such as X-rays, CT scans, MRIs, ultrasounds, and nuclear medicine studies.
 
-This mock is modeled primarily on the **OHIF (Open Health Imaging Foundation) DICOM Viewer** — the most widely-used open-source web-based PACS viewer — with visual elements inspired by commercial viewers like SonicDICOM and RadiAnt. The interface uses a **dark theme** (near-black backgrounds) which is standard in radiology to reduce eye strain during long reading sessions.
+This mock is modeled primarily on the **OHIF (Open Health Imaging Foundation) DICOM Viewer** — the most widely-used open-source web-based XACS Viewer — with visual elements inspired by commercial viewers like SonicDICOM and RadiAnt. The interface uses a **dark theme** (near-black backgrounds) which is standard in radiology to reduce eye strain during long reading sessions.
 
 **Key Reference**: OHIF Viewer v3.x — https://docs.ohif.org/
 

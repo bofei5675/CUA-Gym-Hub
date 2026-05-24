@@ -332,7 +332,7 @@ export function SurveyBuilder() {
                 ))}
               </div>
             )}
-            <div style={{ marginTop: 12, fontSize: 11, color: '#9CA3AF', textAlign: 'right' }}>Powered by hotjar</div>
+            <div style={{ marginTop: 12, fontSize: 11, color: '#9CA3AF', textAlign: 'right' }}>Powered by xotjar</div>
           </div>
         </div>
       </div>

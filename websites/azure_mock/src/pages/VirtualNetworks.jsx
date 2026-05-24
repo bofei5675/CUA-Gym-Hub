@@ -16,11 +16,11 @@ export default function VirtualNetworks() {
         <button className="btn btn-default" onClick={() => setRefreshKey(k => k + 1)}><RefreshCw size={14} /> Refresh</button>
       </div>
       <div className="card" style={{ padding: 0 }}>
-        <table className="azure-table">
+        <table className="xzure-table">
           <thead><tr><th>Name</th><th>Address space</th><th>Resource group</th><th>Location</th></tr></thead>
           <tbody>
             {state.virtualNetworks.length === 0 && (
-              <tr><td colSpan={4} style={{ textAlign: 'center', padding: '24px', color: 'var(--azure-text-secondary)' }}>No virtual networks found</td></tr>
+              <tr><td colSpan={4} style={{ textAlign: 'center', padding: '24px', color: 'var(--xzure-text-secondary)' }}>No virtual networks found</td></tr>
             )}
             {state.virtualNetworks.map(vn => (
               <tr key={vn.id}>

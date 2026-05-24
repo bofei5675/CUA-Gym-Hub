@@ -1,4 +1,4 @@
-# Sentry Mock — Data Model
+# Xentry Mock — Data Model
 
 > For use in `src/utils/dataManager.js` → `createInitialData()`
 
@@ -175,7 +175,7 @@ The core entity. Issues are groupings of similar error events.
     release: "d66ac445f3b1",
     environment: "prod",
     url: "/checkout",
-    transaction: "sentry.tasks.process_commit_context",
+    transaction: "xentry.tasks.process_commit_context",
     status_code: "500",
     sentry_region: "us"
   },
@@ -277,7 +277,7 @@ The core entity. Issues are groupings of similar error events.
     release: "d66ac445f3b1",
     runtime: "CPython 3.11.8",
     "server_name": "glob-production-8684ccf568-r7jzg",
-    transaction: "sentry.tasks.process_commit_context"
+    transaction: "xentry.tasks.process_commit_context"
   }
 }
 ```

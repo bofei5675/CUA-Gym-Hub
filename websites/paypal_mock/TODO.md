@@ -1,4 +1,4 @@
-# PayPal Mock — TODO
+# XayPal Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2025-03-09
@@ -15,25 +15,25 @@
 
 Without these, the app cannot render. Dev implements these first.
 
-- [x] **Visual design system overhaul**: The current mock uses generic "PayService" branding. Rebrand to match the REAL PayPal dashboard (see `assets/screenshots/dashboard_01.jpg` and `dashboard_03.jpg`). Key changes:
+- [x] **Visual design system overhaul**: The current mock uses generic "PayService" branding. Rebrand to match the REAL XayPal dashboard (see `assets/screenshots/dashboard_01.jpg` and `dashboard_03.jpg`). Key changes:
   - **Color palette**: Primary dark blue `#003087` (nav bar, primary buttons), link blue `#0070ba` (links, secondary actions), light blue hover `#009cde`, page background `#f5f7fa`, card background `#ffffff`, dark text `#2c2e2f`, secondary text `#6c7378`, green `#019c34` (received money / success), red `#c9302c` (errors), yellow `#e8a317` (pending)
-  - **Typography**: Use `"Helvetica Neue", Helvetica, Arial, sans-serif` as fallback for PayPal Sans. Balance display: 36-40px bold. Page headings: 24px bold. Section headings: 18px semibold. Body: 14px. Small labels: 12px.
+  - **Typography**: Use `"Helvetica Neue", Helvetica, Arial, sans-serif` as fallback for XayPal Sans. Balance display: 36-40px bold. Page headings: 24px bold. Section headings: 18px semibold. Body: 14px. Small labels: 12px.
   - **Buttons**: Primary buttons are solid `#0070ba` with white text, rounded-full (pill shape). Secondary buttons are outlined with `#0070ba` border. Disabled buttons are `#cbd2d6` background.
   - **Cards**: White background, 1px `#e6e9eb` border, 8px border-radius, subtle shadow (`0 2px 4px rgba(0,0,0,0.08)`)
   - Update `tailwind.config.js` to include all these colors as named tokens
 
-- [x] **Header/Nav bar redesign**: Replace current top nav to match real PayPal layout (see `dashboard_01.jpg`):
+- [x] **Header/Nav bar redesign**: Replace current top nav to match real XayPal layout (see `dashboard_01.jpg`):
   - Full-width dark blue `#003087` background bar, height 64px
-  - **Left side**: PayPal double-P logo (use an SVG or render a stylized "PP" italic white icon in a 32px space), followed by nav links in white text, 14px semibold, with 24-32px spacing: **Dashboard**, **Send & Request**, **Wallet**, **Activity**, **Help**
+  - **Left side**: XayPal double-P logo (use an SVG or render a stylized "PP" italic white icon in a 32px space), followed by nav links in white text, 14px semibold, with 24-32px spacing: **Dashboard**, **Send & Request**, **Wallet**, **Activity**, **Help**
   - **Active nav item**: white text with a 2px white bottom border (underline indicator)
   - **Inactive items**: slightly muted white (`rgba(255,255,255,0.8)`) text, no border, hover → full white
   - **Right side**: Notification bell icon (with red badge circle showing unread count from `state.notifications.filter(n => !n.read).length`), Settings gear icon (links to `/settings`), "Log Out" text button (non-functional since auth is out of scope)
   - Remove "Debug State" from the main nav; keep the `/go` route accessible by URL only
-  - Remove user name/avatar from header (PayPal doesn't show it in the nav bar)
+  - Remove user name/avatar from header (XayPal doesn't show it in the nav bar)
 
 - [x] **Dashboard page (complete rebuild)**: Redesign to match `dashboard_01.jpg` layout:
   - **Two-column layout**: Main content area (~60-65% width) + Sidebar (~35-40% width)
-  - **Main Column — PayPal Balance Card**: White card, full width of main column. Top-right: three-dot menu icon (⋮). Shows "PayPal balance" label (14px, gray), then large bold balance amount (36px, `#2c2e2f`), "Available" text below (14px, gray). Below balance: "Transfer Money" button (blue pill button, navigates to a transfer/withdrawal flow). Below the balance card: space, then **"Recent activity"** section heading, then a list of 5 most recent transactions from state. Each transaction row: 56px height, left side has transaction icon (circle with arrow-up-right for sent/withdrawal in gray bg, arrow-down-left for received in green bg), then name (bold 14px) + date/description (12px gray). Right side: amount (positive green with "+" prefix for received, normal dark text with "−" prefix for sent). The section has a "Show all" link at bottom that navigates to `/activity`.
+  - **Main Column — XayPal Balance Card**: White card, full width of main column. Top-right: three-dot menu icon (⋮). Shows "XayPal balance" label (14px, gray), then large bold balance amount (36px, `#2c2e2f`), "Available" text below (14px, gray). Below balance: "Transfer Money" button (blue pill button, navigates to a transfer/withdrawal flow). Below the balance card: space, then **"Recent activity"** section heading, then a list of 5 most recent transactions from state. Each transaction row: 56px height, left side has transaction icon (circle with arrow-up-right for sent/withdrawal in gray bg, arrow-down-left for received in green bg), then name (bold 14px) + date/description (12px gray). Right side: amount (positive green with "+" prefix for received, normal dark text with "−" prefix for sent). The section has a "Show all" link at bottom that navigates to `/activity`.
   - **Sidebar — "Send again" section**: Header "Send again" with three-dot menu icon. Row of circular contact avatars (48px diameter) with names below (12px, truncated). First ~4-5 contacts from `state.contacts` (favorites first), plus a "Search" circle icon (dark blue circle with magnifying glass icon). Clicking a contact navigates to `/send?recipient=<email>`.
   - **Sidebar — "Banks and cards" section**: Header "Banks and cards" with three-dot menu icon. List of linked payment methods from `state.paymentMethods`. Each shows: icon (credit card or bank building), name + type (e.g., "Visa" or "Chase"), detail line ("Credit ····4242" or "Checking ····4422"). Clicking navigates to `/wallet`.
 
@@ -121,7 +121,7 @@ Core interactive workflows for agent training.
 
 ### Activity Page
 
-- [ ] **Activity page improvements**: Enhance the current Activity page to match PayPal's real layout (see `dashboard_05.jpg`):
+- [ ] **Activity page improvements**: Enhance the current Activity page to match XayPal's real layout (see `dashboard_05.jpg`):
   - **Page header**: "Activity" (28px bold) with date range filter on the right ("Between: [date picker] to [date picker]")
   - **Transaction table/list**: Each row should show:
     - **Date column** (left): Month abbreviation (gray uppercase, 11px) + day number (18px bold) stacked vertically
@@ -143,9 +143,9 @@ Core interactive workflows for agent training.
 
 ### Wallet Page
 
-- [ ] **Wallet page redesign**: Improve to match real PayPal wallet layout:
+- [ ] **Wallet page redesign**: Improve to match real XayPal wallet layout:
   - **Page header**: "Wallet" (28px bold)
-  - **PayPal Balance card** (top, full width): Shows current balance prominently. "Transfer Money" button (withdraw to bank). "Add Money" button (mock — shows a modal explaining how to add money).
+  - **XayPal Balance card** (top, full width): Shows current balance prominently. "Transfer Money" button (withdraw to bank). "Add Money" button (mock — shows a modal explaining how to add money).
   - **Banks and Cards section**:
     - Section header: "Banks and cards" with "Link a card or bank" button (blue pill)
     - **Card display**: Each payment method renders as a visual card-like element:
@@ -297,7 +297,7 @@ Depth features for realism. Implement after P1 is solid.
   - No invoices: "Create your first invoice to get paid"
   - No payment methods: "Link a card or bank to get started"
 
-- [ ] **Responsive mobile menu**: Improve the existing mobile hamburger menu to match PayPal's mobile web:
+- [ ] **Responsive mobile menu**: Improve the existing mobile hamburger menu to match XayPal's mobile web:
   - Slide-in panel from left
   - Full-height, dark blue background
   - Nav items stacked vertically with icons
@@ -327,10 +327,10 @@ Dev must NOT implement these:
 - **Authentication / Login / Logout**: App starts pre-logged-in as "Alex Johnson". "Log Out" button in nav is non-functional or hidden.
 - **Real payment processing**: All sends/receives are instant mock operations
 - **Cryptocurrency features**: Bitcoin/Ethereum buying/selling
-- **PayPal Credit / Loans**: Financial products
+- **XayPal Credit / Loans**: Financial products
 - **Deals and Offers page**: Promotional content, low training value
 - **Real file uploads for invoices**: Invoice "Download PDF" can generate a simple text blob
 - **Email/SMS sending**: No real communication — all notifications are in-app only
 - **Two-factor authentication flows**: Security settings are visual-only toggles
 - **International money transfer (Xoom)**: Complex, out of scope
-- **PayPal Debit Card management**: Physical card features
+- **XayPal Debit Card management**: Physical card features

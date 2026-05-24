@@ -230,7 +230,7 @@ const PinModal = ({ pin: initialPin, onClose, onDeleted }) => {
                 <button
                   className={cn(
                     "p-2 hover:bg-gray-100 rounded-full flex items-center gap-1 transition-colors",
-                    isLiked ? 'text-pinterest-red' : ''
+                    isLiked ? 'text-xinterest-red' : ''
                   )}
                   onClick={() => likePin(pin.id)}
                 >
@@ -300,7 +300,7 @@ const PinModal = ({ pin: initialPin, onClose, onDeleted }) => {
                               onKeyDown={e => { if (e.key === 'Enter') handleCreateBoardInline(); }}
                             />
                             <button
-                              className="w-full py-2 bg-pinterest-red text-white rounded-lg text-sm font-semibold"
+                              className="w-full py-2 bg-xinterest-red text-white rounded-lg text-sm font-semibold"
                               disabled={!newBoardName.trim()}
                               onClick={handleCreateBoardInline}
                             >
@@ -315,7 +315,7 @@ const PinModal = ({ pin: initialPin, onClose, onDeleted }) => {
                 <button
                   className={cn(
                     "px-5 py-2.5 rounded-full font-bold text-white transition-colors",
-                    isSaved ? 'bg-black' : 'bg-pinterest-red hover:bg-pinterest-hover'
+                    isSaved ? 'bg-black' : 'bg-xinterest-red hover:bg-xinterest-hover'
                   )}
                   onClick={handleQuickSave}
                 >
@@ -382,7 +382,7 @@ const PinModal = ({ pin: initialPin, onClose, onDeleted }) => {
                           <div className="flex items-center gap-3 mt-1">
                             <span className="text-xs text-gray-400">{relativeTime(comment.createdAt)}</span>
                             <button
-                              className={`flex items-center gap-0.5 text-xs ${isCommentLiked ? 'text-pinterest-red' : 'text-gray-400 hover:text-gray-600'}`}
+                              className={`flex items-center gap-0.5 text-xs ${isCommentLiked ? 'text-xinterest-red' : 'text-gray-400 hover:text-gray-600'}`}
                               onClick={() => likeComment(comment.id)}
                             >
                               <Heart size={12} fill={isCommentLiked ? 'currentColor' : 'none'} />
@@ -417,7 +417,7 @@ const PinModal = ({ pin: initialPin, onClose, onDeleted }) => {
                 />
                 {commentText.trim() && (
                   <button
-                    className="px-4 py-2 rounded-full bg-pinterest-red text-white font-semibold text-sm"
+                    className="px-4 py-2 rounded-full bg-xinterest-red text-white font-semibold text-sm"
                     onClick={handlePostComment}
                   >
                     Post

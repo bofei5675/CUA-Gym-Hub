@@ -60,7 +60,7 @@ export const OrderConfirmation = () => {
                 <div key={item.productId} className="flex gap-3 border-b last:border-0 pb-3 last:pb-0">
                   <img src={product.image} alt={product.title} className="w-16 h-16 object-contain flex-shrink-0" />
                   <div className="text-sm">
-                    <Link to={`/product/${product.id}`} className="font-medium text-amazon-blue hover:underline line-clamp-2">{product.title}</Link>
+                    <Link to={`/product/${product.id}`} className="font-medium text-xmazon-blue hover:underline line-clamp-2">{product.title}</Link>
                     <div className="text-gray-500 mt-1">Qty: {item.quantity}</div>
                     <div className="font-bold text-red-700">${product.price.toFixed(2)}</div>
                   </div>

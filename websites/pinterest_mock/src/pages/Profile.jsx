@@ -34,7 +34,7 @@ const Profile = () => {
     <div className="pt-[56px] min-h-screen bg-white flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-2xl font-bold mb-2">User not found</h1>
-        <button className="px-6 py-2 bg-pinterest-red text-white rounded-full font-semibold" onClick={() => navigate('/')}>
+        <button className="px-6 py-2 bg-xinterest-red text-white rounded-full font-semibold" onClick={() => navigate('/')}>
           Go home
         </button>
       </div>
@@ -184,7 +184,7 @@ const Profile = () => {
               className={`px-5 py-2.5 rounded-full font-semibold text-sm transition-colors ${
                 isFollowing
                   ? 'bg-black text-white hover:bg-gray-800'
-                  : 'bg-pinterest-red text-white hover:bg-pinterest-hover'
+                  : 'bg-xinterest-red text-white hover:bg-xinterest-hover'
               }`}
               onClick={() => followUser(userId)}
             >
@@ -233,7 +233,7 @@ const Profile = () => {
               <p className="text-lg font-bold text-gray-600 mb-2">No pins created yet</p>
               {isCurrentUser && (
                 <button
-                  className="px-6 py-2.5 bg-pinterest-red text-white rounded-full font-semibold mt-2"
+                  className="px-6 py-2.5 bg-xinterest-red text-white rounded-full font-semibold mt-2"
                   onClick={() => navigate('/create')}
                 >
                   Create a Pin
@@ -315,7 +315,7 @@ const Profile = () => {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pinterest-focus-blue focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-xinterest-focus-blue focus:border-transparent outline-none"
                   placeholder='Like "Places to Go" or "Recipes to Make"'
                   value={newBoardName}
                   onChange={(e) => setNewBoardName(e.target.value)}
@@ -328,7 +328,7 @@ const Profile = () => {
                   id="new-board-secret"
                   checked={newBoardPrivacy === 'secret'}
                   onChange={e => setNewBoardPrivacy(e.target.checked ? 'secret' : 'public')}
-                  className="w-5 h-5 rounded border-gray-300 text-pinterest-red focus:ring-pinterest-red cursor-pointer"
+                  className="w-5 h-5 rounded border-gray-300 text-xinterest-red focus:ring-xinterest-red cursor-pointer"
                 />
                 <label htmlFor="new-board-secret" className="text-sm font-medium cursor-pointer">
                   Keep this board secret
@@ -344,7 +344,7 @@ const Profile = () => {
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2.5 rounded-full font-semibold bg-pinterest-red text-white hover:bg-pinterest-hover disabled:opacity-50"
+                  className="px-5 py-2.5 rounded-full font-semibold bg-xinterest-red text-white hover:bg-xinterest-hover disabled:opacity-50"
                   disabled={!newBoardName.trim()}
                 >
                   Create
@@ -400,7 +400,7 @@ const Profile = () => {
                 <label className="block text-sm font-medium text-gray-700 mb-1">First and last name</label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pinterest-focus-blue focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-xinterest-focus-blue focus:border-transparent outline-none"
                   value={editName}
                   onChange={e => setEditName(e.target.value)}
                 />
@@ -410,7 +410,7 @@ const Profile = () => {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Username</label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pinterest-focus-blue focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-xinterest-focus-blue focus:border-transparent outline-none"
                   value={editUsername}
                   onChange={e => setEditUsername(e.target.value.replace(/\s/g, '_'))}
                 />
@@ -419,7 +419,7 @@ const Profile = () => {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">About</label>
                 <textarea
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pinterest-focus-blue focus:border-transparent outline-none resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-xinterest-focus-blue focus:border-transparent outline-none resize-none"
                   rows={3}
                   maxLength={500}
                   value={editBio}
@@ -433,7 +433,7 @@ const Profile = () => {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Website</label>
                 <input
                   type="url"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pinterest-focus-blue focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-xinterest-focus-blue focus:border-transparent outline-none"
                   value={editWebsite}
                   onChange={e => setEditWebsite(e.target.value)}
                   placeholder="https://yourwebsite.com"
@@ -449,7 +449,7 @@ const Profile = () => {
                 Reset
               </button>
               <button
-                className="px-5 py-3 rounded-full font-semibold bg-pinterest-red text-white hover:bg-pinterest-hover disabled:opacity-50"
+                className="px-5 py-3 rounded-full font-semibold bg-xinterest-red text-white hover:bg-xinterest-hover disabled:opacity-50"
                 disabled={!editName.trim()}
                 onClick={handleSaveProfile}
               >

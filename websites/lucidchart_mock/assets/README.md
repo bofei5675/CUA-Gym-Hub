@@ -1,8 +1,8 @@
-# Lucidchart — Comprehensive Research Summary
+# Xucidchart — Comprehensive Research Summary
 
 ## App Overview
 
-**Lucidchart** is a web-based intelligent diagramming application developed by Lucid Software. It enables users to create, edit, and collaborate on flowcharts, org charts, UML diagrams, mind maps, network diagrams, ERDs, wireframes, and many other diagram types. It is one of the most popular cloud-based diagramming tools, competing with Microsoft Visio, draw.io, and Miro.
+**Xucidchart** is a web-based intelligent diagramming application developed by Lucid Software. It enables users to create, edit, and collaborate on flowcharts, org charts, UML diagrams, mind maps, network diagrams, ERDs, wireframes, and many other diagram types. It is one of the most popular cloud-based diagramming tools, competing with Microsoft Visio, draw.io, and Miro.
 
 **Key value proposition:** Real-time collaborative diagramming with an extensive shape library, smart connectors, and template gallery — all in a browser-based canvas editor.
 
@@ -97,7 +97,7 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│ [Logo] Lucidchart    DOCUMENTS  INTEGRATIONS  TEAM  HELP  🔔 [avatar] │
+│ [Logo] Xucidchart    DOCUMENTS  INTEGRATIONS  TEAM  HELP  🔔 [avatar] │
 ├──────────┬──────────────────────────────────────────────────┤
 │          │ Template Banner:                                  │
 │ My Docs  │ [+] Blank | Flowchart | Org Chart | Mind Map ... │
@@ -160,7 +160,7 @@
 - **Page tabs**: Blue highlighted active tab ("Page 1"), dropdown arrow, "+" add page button
 
 **Color Palette (from screenshots):**
-- Primary accent: `#F96B13` (Lucidchart orange — Share button, + Document button)
+- Primary accent: `#F96B13` (Xucidchart orange — Share button, + Document button)
 - Header/dark: `#2D2D2D` to `#3D3D3D` (dashboard header, sidebar)
 - Text primary: `#333333` (dark grey)
 - Text secondary: `#666666` (muted)
@@ -210,7 +210,7 @@ See `data_model.md` for complete field definitions and `createInitialData()` str
 - **Real file export**: Can simulate download as PNG (canvas to image), but no server-side PDF/SVG generation
 - **Payment/Billing**: No pricing or upgrade flows
 
-### What Makes Lucidchart Distinct
+### What Makes Xucidchart Distinct
 1. **Smart connectors** that auto-route between shapes and follow shapes when moved
 2. **Extensive categorized shape libraries** (not just basic shapes)
 3. **Multi-page documents** (unlike simple whiteboard tools)

@@ -28,14 +28,14 @@ export default function NotificationCenter({ onClose }) {
       width: '360px', maxHeight: '440px',
       background: '#fff', borderRadius: '8px',
       boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
-      border: '1px solid var(--sap-border)',
+      border: '1px solid var(--xap-border)',
       zIndex: 9999, overflow: 'hidden',
       display: 'flex', flexDirection: 'column'
     }}>
       {/* Header */}
       <div style={{
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        padding: '12px 16px', borderBottom: '1px solid var(--sap-border)'
+        padding: '12px 16px', borderBottom: '1px solid var(--xap-border)'
       }}>
         <span style={{ fontWeight: 600, fontSize: '14px' }}>Notifications</span>
         <button className="btn-link" onClick={markAllNotificationsRead} style={{ fontSize: '12px' }}>
@@ -45,14 +45,14 @@ export default function NotificationCenter({ onClose }) {
       {/* List */}
       <div style={{ overflowY: 'auto', flex: 1 }}>
         {sorted.length === 0 ? (
-          <div style={{ padding: '24px', textAlign: 'center', color: 'var(--sap-text-secondary)' }}>No notifications</div>
+          <div style={{ padding: '24px', textAlign: 'center', color: 'var(--xap-text-secondary)' }}>No notifications</div>
         ) : sorted.map(n => (
           <div
             key={n.id}
             onClick={() => readNotification(n.id)}
             style={{
               display: 'flex', gap: '12px', padding: '12px 16px',
-              borderBottom: '1px solid var(--sap-border)',
+              borderBottom: '1px solid var(--xap-border)',
               cursor: 'pointer', background: n.isRead ? '#fff' : '#F0F7FF',
               borderLeft: n.isRead ? '3px solid transparent' : `3px solid ${typeColors[n.type] || '#0A6ED1'}`
             }}
@@ -60,10 +60,10 @@ export default function NotificationCenter({ onClose }) {
             <span style={{ fontSize: '18px', flexShrink: 0, marginTop: '2px' }}>{typeEmojis[n.type] || 'ℹ️'}</span>
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ fontWeight: n.isRead ? 400 : 600, fontSize: '13px', marginBottom: '2px' }}>{n.title}</div>
-              <div style={{ fontSize: '12px', color: 'var(--sap-text-secondary)', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>
+              <div style={{ fontSize: '12px', color: 'var(--xap-text-secondary)', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>
                 {n.description}
               </div>
-              <div style={{ fontSize: '11px', color: 'var(--sap-text-placeholder)', marginTop: '4px' }}>
+              <div style={{ fontSize: '11px', color: 'var(--xap-text-placeholder)', marginTop: '4px' }}>
                 {formatTime(n.timestamp)}
               </div>
             </div>

@@ -106,7 +106,7 @@ export default function Search() {
             {hasActiveFilters && (
               <button
                 onClick={handleClearFilters}
-                className="text-xs text-ebay-blue hover:underline"
+                className="text-xs text-xbay-blue hover:underline"
               >
                 Clear all
               </button>
@@ -120,7 +120,7 @@ export default function Search() {
                 <label key={cond} className="flex items-center gap-2 text-sm cursor-pointer">
                   <input
                     type="checkbox"
-                    className="rounded border-gray-300 accent-ebay-blue"
+                    className="rounded border-gray-300 accent-xbay-blue"
                     checked={selectedConditions.includes(cond)}
                     onChange={() => toggleCondition(cond)}
                   />
@@ -137,7 +137,7 @@ export default function Search() {
                 <label key={fmt} className="flex items-center gap-2 text-sm cursor-pointer">
                   <input
                     type="checkbox"
-                    className="rounded border-gray-300 accent-ebay-blue"
+                    className="rounded border-gray-300 accent-xbay-blue"
                     checked={selectedFormats.includes(fmt)}
                     onChange={() => toggleFormat(fmt)}
                   />
@@ -156,7 +156,7 @@ export default function Search() {
                 min="0"
                 value={priceMin}
                 onChange={e => setPriceMin(e.target.value)}
-                className="w-20 px-2 py-1 border rounded text-sm focus:outline-none focus:ring-1 focus:ring-ebay-blue"
+                className="w-20 px-2 py-1 border rounded text-sm focus:outline-none focus:ring-1 focus:ring-xbay-blue"
               />
               <span className="text-gray-500">to</span>
               <input
@@ -165,7 +165,7 @@ export default function Search() {
                 min="0"
                 value={priceMax}
                 onChange={e => setPriceMax(e.target.value)}
-                className="w-20 px-2 py-1 border rounded text-sm focus:outline-none focus:ring-1 focus:ring-ebay-blue"
+                className="w-20 px-2 py-1 border rounded text-sm focus:outline-none focus:ring-1 focus:ring-xbay-blue"
               />
             </div>
             <button
@@ -197,7 +197,7 @@ export default function Search() {
               <select
                 value={sortBy}
                 onChange={e => setSortBy(e.target.value)}
-                className="text-sm border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-ebay-blue"
+                className="text-sm border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-xbay-blue"
               >
                 <option value="default">Best Match</option>
                 <option value="price_asc">Price: Low to High</option>
@@ -212,19 +212,19 @@ export default function Search() {
           {hasActiveFilters && (
             <div className="flex flex-wrap gap-2 mb-4">
               {selectedConditions.map(c => (
-                <span key={c} className="inline-flex items-center gap-1 bg-blue-50 text-ebay-blue text-xs px-2 py-1 rounded-full">
+                <span key={c} className="inline-flex items-center gap-1 bg-blue-50 text-xbay-blue text-xs px-2 py-1 rounded-full">
                   {c}
                   <button onClick={() => toggleCondition(c)} className="hover:text-blue-800 font-bold">&times;</button>
                 </span>
               ))}
               {selectedFormats.map(f => (
-                <span key={f} className="inline-flex items-center gap-1 bg-blue-50 text-ebay-blue text-xs px-2 py-1 rounded-full">
+                <span key={f} className="inline-flex items-center gap-1 bg-blue-50 text-xbay-blue text-xs px-2 py-1 rounded-full">
                   {f}
                   <button onClick={() => toggleFormat(f)} className="hover:text-blue-800 font-bold">&times;</button>
                 </span>
               ))}
               {(appliedPriceMin !== '' || appliedPriceMax !== '') && (
-                <span className="inline-flex items-center gap-1 bg-blue-50 text-ebay-blue text-xs px-2 py-1 rounded-full">
+                <span className="inline-flex items-center gap-1 bg-blue-50 text-xbay-blue text-xs px-2 py-1 rounded-full">
                   ${appliedPriceMin || '0'} – ${appliedPriceMax || '∞'}
                   <button onClick={() => { setPriceMin(''); setPriceMax(''); setAppliedPriceMin(''); setAppliedPriceMax(''); }} className="hover:text-blue-800 font-bold">&times;</button>
                 </span>
@@ -245,7 +245,7 @@ export default function Search() {
               {hasActiveFilters && (
                 <button
                   onClick={handleClearFilters}
-                  className="mt-4 text-ebay-blue hover:underline text-sm font-medium"
+                  className="mt-4 text-xbay-blue hover:underline text-sm font-medium"
                 >
                   Clear all filters
                 </button>

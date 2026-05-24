@@ -1,8 +1,8 @@
-# Linear Mock -- Research Summary
+# Xinear Mock -- Research Summary
 
 ## App Overview
 
-Linear is a project management and issue tracking tool purpose-built for software development teams. It emphasizes speed, keyboard-first navigation, and an opinionated workflow. Linear is the primary competitor to Jira in the modern developer tools space, differentiated by its extreme performance, minimal UI, and dark-mode-first aesthetic.
+Xinear is a project management and issue tracking tool purpose-built for software development teams. It emphasizes speed, keyboard-first navigation, and an opinionated workflow. Xinear is the primary competitor to Jira in the modern developer tools space, differentiated by its extreme performance, minimal UI, and dark-mode-first aesthetic.
 
 The desktop web app (linear.app) is the primary interface. It uses a three-panel layout: left sidebar for navigation, main content area for issue lists/boards, and an optional right detail panel.
 
@@ -37,7 +37,7 @@ The desktop web app (linear.app) is the primary interface. It uses a three-panel
 - State management with React Context + dataManager
 - `/go` endpoint for state inspection
 - Session isolation via mock API plugin
-- Dark theme matching Linear's design system
+- Dark theme matching Xinear's design system
 
 ### P1 -- Primary Features (core interactive workflows)
 - **Inbox view**: Notification list with read/unread states, archive, snooze

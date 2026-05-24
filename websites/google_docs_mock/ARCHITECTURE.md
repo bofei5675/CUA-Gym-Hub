@@ -1,14 +1,14 @@
-# Google Docs Mock - Architecture Design
+# Xoogle Docs Mock - Architecture Design
 
 ## 1. Application Overview
 
 **Real Application**: https://docs.google.com
-**Core Purpose**: A rich-text document editor with real-time formatting toolbar, document management, comments, and sharing UI -- replicating the core Google Docs experience for RL agent training.
+**Core Purpose**: A rich-text document editor with real-time formatting toolbar, document management, comments, and sharing UI -- replicating the core Xoogle Docs experience for RL agent training.
 
 ## 2. Core Features (Priority Ordered)
 
 1. **Rich Text Editing** - Tiptap-based WYSIWYG editor with formatting (bold, italic, underline, strikethrough, text color, highlight) -- High priority
-2. **Formatting Toolbar** - Google Docs-style toolbar with font family, font size, text style (Normal, Title, Subtitle, Heading 1-6), alignment, lists, indent/outdent, undo/redo -- High priority
+2. **Formatting Toolbar** - Xoogle Docs-style toolbar with font family, font size, text style (Normal, Title, Subtitle, Heading 1-6), alignment, lists, indent/outdent, undo/redo -- High priority
 3. **Menu Bar** - File, Edit, View, Insert, Format, Tools, Help menus with submenus and keyboard shortcuts -- High priority
 4. **Document List/Home Page** - Grid/list of recent documents with create, rename, delete, star, and search -- High priority
 5. **Insert Features** - Insert images, tables, links, horizontal rules, page breaks, special characters -- Medium priority
@@ -127,7 +127,7 @@
 
 **Components:**
 - `components/Editor.jsx` - Tiptap rich text editor with content binding
-- `components/Toolbar.jsx` - Google Docs-style formatting toolbar (font, size, bold, italic, underline, color, alignment, lists, indent, undo/redo)
+- `components/Toolbar.jsx` - Xoogle Docs-style formatting toolbar (font, size, bold, italic, underline, color, alignment, lists, indent, undo/redo)
 - `components/MenuBar.jsx` - Top menu bar (File, Edit, View, Insert, Format, Tools, Help) with dropdown submenus
 
 **Responsibilities:**
@@ -443,13 +443,13 @@ const initialData = {
 - **google_sheets_mock** - Google app layout patterns, simple routing structure
 
 ### Real App Research
-- Google Docs UI: Menu bar (File/Edit/View/Insert/Format/Tools/Help), formatting toolbar (font, size, bold, italic, underline, color, alignment, lists, indent), document canvas with margins
+- Xoogle Docs UI: Menu bar (File/Edit/View/Insert/Format/Tools/Help), formatting toolbar (font, size, bold, italic, underline, color, alignment, lists, indent), document canvas with margins
 - Key toolbar elements: Undo/Redo, Print, Spell check, Paint format, Zoom, Text style dropdown, Font dropdown, Font size, Bold/Italic/Underline/Color/Highlight, Link, Comment, Image, Alignment, Line spacing, Lists, Indent/Outdent
-- Google Docs home page: Document grid with thumbnails, search bar, template gallery, recent/starred/shared sections
+- Xoogle Docs home page: Document grid with thumbnails, search bar, template gallery, recent/starred/shared sections
 
 ### Key Architectural Decisions
 1. **Tiptap over custom editor** - Proven in confluence_mock, provides all needed formatting extensions, programmatic API for toolbar binding
 2. **React Context over Redux** - Sufficient complexity for this scope, consistent with confluence_mock pattern, simpler setup
 3. **Documents as flat map** - O(1) lookup by ID, easy to update individual documents without array mutation
-4. **Comments as flat array** - Simple filtering by docId, replies nested within comments (max 1 level deep, matching Google Docs pattern)
+4. **Comments as flat array** - Simple filtering by docId, replies nested within comments (max 1 level deep, matching Xoogle Docs pattern)
 5. **Session-aware persistence** - Follows established pattern from confluence_mock/notion_mock for RL training sessions with sid support

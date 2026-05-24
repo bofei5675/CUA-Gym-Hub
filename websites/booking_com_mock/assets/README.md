@@ -1,8 +1,8 @@
-# Booking.com — Research Summary
+# Xooking.com — Research Summary
 
 ## App Overview
 
-**Booking.com** is the world's largest online travel agency (OTA), founded in 1996 in Amsterdam, Netherlands. It operates as a fare aggregator and travel metasearch engine for lodging reservations, offering bookings for hotels, apartments, vacation rentals, flights, car rentals, attractions, and airport taxis. The platform lists over 28 million accommodation options across 220+ countries.
+**Xooking.com** is the world's largest online travel agency (OTA), founded in 1996 in Amsterdam, Netherlands. It operates as a fare aggregator and travel metasearch engine for lodging reservations, offering bookings for hotels, apartments, vacation rentals, flights, car rentals, attractions, and airport taxis. The platform lists over 28 million accommodation options across 220+ countries.
 
 **Core Value Proposition**: "Find deals for any season" — from cozy bed & breakfasts to luxury hotels, the platform aggregates global accommodation inventory with user reviews, transparent pricing, and often free cancellation.
 
@@ -41,7 +41,7 @@
 
 | Feature | Description |
 |---------|-------------|
-| **Header/Navbar** | Dark blue (#003580) header with Booking.com logo (white text, blue ".com"), currency selector (USD), flag icon, help "?", "List your property", user avatar/name |
+| **Header/Navbar** | Dark blue (#003580) header with Xooking.com logo (white text, blue ".com"), currency selector (USD), flag icon, help "?", "List your property", user avatar/name |
 | **Navigation Tabs** | Horizontal tabs below header: Stays (active, pill-shaped), Flights, Flight + Hotel, Car rentals, Attractions, Airport taxis — each with an icon |
 | **Search Bar** | Yellow/gold (#FEBB02) bordered horizontal bar with 4 fields: Destination (bed icon + "Where are you going?"), Check-in/Check-out dates (calendar icon), Guests & Rooms (person icon + "2 adults · 0 children · 1 room"), blue Search button |
 | **Routing** | Homepage → Search Results → Property Detail → Booking Form → Confirmation |
@@ -93,7 +93,7 @@
 
 ### Global Header (60px height)
 - **Background**: Dark navy blue (#003580)
-- **Left**: "Booking.com" logo — "Booking" in white, ".com" in lighter blue
+- **Left**: "Xooking.com" logo — "Booking" in white, ".com" in lighter blue
 - **Right**: Currency code (e.g., "USD"), country flag, help icon (?), "List your property" text, Register button (white outline), Sign in button (white outline)
 
 ### Navigation Tabs (48px height, same blue background but slightly lighter tone)
@@ -109,7 +109,7 @@
   - Search button: Bright blue (#0071C2) with white text "Search"
 - Below search bar: Checkbox "I'm traveling for work"
 
-### Search Results Layout (Full width, no sidebar on modern Booking.com)
+### Search Results Layout (Full width, no sidebar on modern Xooking.com)
 - **Top**: Breadcrumb (Home > Country > City), result count, sort dropdown
 - **Left Column** (~300px): Filter sidebar with collapsible sections
 - **Right Column**: Vertical stack of property cards
@@ -179,15 +179,15 @@ See `data_model.md` for complete entity definitions.
 
 | File | Content |
 |------|---------|
-| `homepage_01.jpg` | ⭐ **Actual Booking.com** — Dark blue header, nav tabs (Stays/Flights/etc), hero image with "A piece of paradise just for you", yellow-bordered search bar with destination/dates/guests fields, blue Search button |
-| `search_results_000005.jpg` | ⭐ **Actual Booking.com** — Homepage variant: "Find deals for any season", search bar, "I'm traveling for work" checkbox, Offers section below |
-| `confirmation_000001.jpg` | ⭐ **Actual Booking.com** — Confirmation page: blue header with confirmation number & PIN, "Thanks Claire! Your holiday home in Strass is confirmed", Modify/Manage buttons |
-| `loyalty_000001.jpg` | ⭐ **Actual Booking.com Genius** — Genius loyalty program page: "Get rewarded for your travels", 3-column layout: Easy to get / Easy to keep / Easy to grow |
-| `loyalty_000002.jpg` | ⭐ **Actual Booking.com Genius** — Level 1 progress: "You're at Level 1!", 5 circle progress tracker, "Complete 5 bookings within 2 years to unlock Level 2" |
-| `search_filters_000001.jpg` | Booking.com search results with yellow Search sidebar (older design — shows Destination/Property Name field, Check-in Date), breadcrumb "Home > Search results" |
-| `reviews_000002.jpg` | Booking.com review score display — large "9.7 Out of 10" in gold circle on dark blue |
+| `homepage_01.jpg` | ⭐ **Actual Xooking.com** — Dark blue header, nav tabs (Stays/Flights/etc), hero image with "A piece of paradise just for you", yellow-bordered search bar with destination/dates/guests fields, blue Search button |
+| `search_results_000005.jpg` | ⭐ **Actual Xooking.com** — Homepage variant: "Find deals for any season", search bar, "I'm traveling for work" checkbox, Offers section below |
+| `confirmation_000001.jpg` | ⭐ **Actual Xooking.com** — Confirmation page: blue header with confirmation number & PIN, "Thanks Claire! Your holiday home in Strass is confirmed", Modify/Manage buttons |
+| `loyalty_000001.jpg` | ⭐ **Actual Xooking.com Genius** — Genius loyalty program page: "Get rewarded for your travels", 3-column layout: Easy to get / Easy to keep / Easy to grow |
+| `loyalty_000002.jpg` | ⭐ **Actual Xooking.com Genius** — Level 1 progress: "You're at Level 1!", 5 circle progress tracker, "Complete 5 bookings within 2 years to unlock Level 2" |
+| `search_filters_000001.jpg` | Xooking.com search results with yellow Search sidebar (older design — shows Destination/Property Name field, Check-in Date), breadcrumb "Home > Search results" |
+| `reviews_000002.jpg` | Xooking.com review score display — large "9.7 Out of 10" in gold circle on dark blue |
 | `property_detail_000001.jpg` | Room cards showing: Standard Double Room ($220/night), Deluxe Single Room ($320/night), Two-Bedroom Apartment ($440/night) with amenities, size, bed info |
-| Other screenshots | Various hotel booking UI references (generic booking templates, not Booking.com specific) |
+| Other screenshots | Various hotel booking UI references (generic booking templates, not Xooking.com specific) |
 
 **Key visual takeaways from authentic screenshots:**
 1. Header is solid dark navy blue (#003580) with white text

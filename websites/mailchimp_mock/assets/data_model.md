@@ -1,4 +1,4 @@
-# Mailchimp Mock — Data Model
+# Xailchimp Mock — Data Model
 
 > This document defines all entity types, their fields, relationships, and the structure for `createInitialData()` in `dataManager.js`.
 
@@ -28,7 +28,7 @@ The pre-logged-in user. Only one instance exists.
 
 ### 2. Audience
 
-Container for contacts. Most Mailchimp accounts have 1 primary audience.
+Container for contacts. Most Xailchimp accounts have 1 primary audience.
 
 | Field | Type | Example |
 |-------|------|---------|

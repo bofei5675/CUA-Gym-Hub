@@ -73,7 +73,7 @@ export default function Homepage() {
   const promoBanners = [
     { id: 'pb1', title: '$0 Delivery Fee', subtitle: 'Spend $15+ on select restaurants', bg: '#06C167', accent: 'rgba(255,255,255,0.15)' },
     { id: 'pb2', title: '$5 off $25+', subtitle: 'Use code SAVE5 at checkout', bg: '#000000', accent: 'rgba(255,255,255,0.08)' },
-    { id: 'pb3', title: '20% off first order', subtitle: 'New to Uber Eats? Use code FIRST20', bg: '#276E50', accent: 'rgba(255,255,255,0.12)' },
+    { id: 'pb3', title: '20% off first order', subtitle: 'New to Xber Eats? Use code FIRST20', bg: '#276E50', accent: 'rgba(255,255,255,0.12)' },
   ];
 
   const handlePrevBanner = () => {
@@ -159,7 +159,7 @@ export default function Homepage() {
       {featured.length > 0 && (
         <section className="homepage__section">
           <div className="homepage__section-header">
-            <h2 className="homepage__section-title">Featured on Uber Eats</h2>
+            <h2 className="homepage__section-title">Featured on Xber Eats</h2>
             <Link to="/search?q=popular" className="homepage__see-all">See all</Link>
           </div>
           <div className="homepage__grid">
@@ -197,11 +197,11 @@ export default function Homepage() {
         </div>
       </section>
 
-      {/* New on Uber Eats */}
+      {/* New on Xber Eats */}
       {newRestaurants.length > 0 && (
         <section className="homepage__section">
           <div className="homepage__section-header">
-            <h2 className="homepage__section-title">New on Uber Eats</h2>
+            <h2 className="homepage__section-title">New on Xber Eats</h2>
           </div>
           <div className="homepage__grid">
             {newRestaurants.map(r => (

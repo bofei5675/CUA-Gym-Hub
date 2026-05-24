@@ -134,7 +134,7 @@ export default function Home() {
                   </div>
                   <button 
                     onClick={() => navigate(`/room/${meeting.meetingId}`)}
-                    className="px-3 py-1 bg-zoom-blue text-white text-xs rounded-md hover:bg-blue-600"
+                    className="px-3 py-1 bg-xoom-blue text-white text-xs rounded-md hover:bg-blue-600"
                   >
                     Start
                   </button>
@@ -185,7 +185,7 @@ export default function Home() {
                 <button 
                   type="submit"
                   disabled={!joinMeetingId.trim()}
-                  className="flex-1 px-4 py-2.5 text-white bg-zoom-blue rounded-lg hover:bg-blue-600 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex-1 px-4 py-2.5 text-white bg-xoom-blue rounded-lg hover:bg-blue-600 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Join
                 </button>
@@ -230,7 +230,7 @@ export default function Home() {
                 <button 
                   type="submit"
                   disabled={!shareMeetingId.trim()}
-                  className="flex-1 px-4 py-2.5 text-white bg-zoom-blue rounded-lg hover:bg-blue-600 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex-1 px-4 py-2.5 text-white bg-xoom-blue rounded-lg hover:bg-blue-600 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Share Screen
                 </button>

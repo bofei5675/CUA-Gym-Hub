@@ -1,8 +1,8 @@
-# DingTalk (钉钉) — Research Summary
+# XingTalk (钉钉) — Research Summary
 
 ## App Overview
 
-DingTalk (钉钉) is an enterprise communication and collaboration platform developed by Alibaba Group, launched in 2014. It serves 700+ million users across 26+ million organizations. It is the #1 enterprise collaboration platform in China and Asia, comparable to Slack/Microsoft Teams but with a strong focus on OA (Office Automation) workflows, attendance management, and organizational hierarchy.
+XingTalk (钉钉) is an enterprise communication and collaboration platform developed by Alibaba Group, launched in 2014. It serves 700+ million users across 26+ million organizations. It is the #1 enterprise collaboration platform in China and Asia, comparable to Slack/Microsoft Teams but with a strong focus on OA (Office Automation) workflows, attendance management, and organizational hierarchy.
 
 The platform consolidates messaging, video conferencing, calendaring, document collaboration, task management, approval workflows, and cloud storage into a single digital workspace.
 
@@ -114,7 +114,7 @@ The platform consolidates messaging, video conferencing, calendaring, document c
 
 ## Color Palette (from screenshots)
 
-- **Primary Blue**: #2A83F0 (DingTalk brand blue — sidebar active, buttons, links)
+- **Primary Blue**: #2A83F0 (XingTalk brand blue — sidebar active, buttons, links)
 - **Header/Sidebar Background**: #2A2D35 or #FFFFFF (newer versions use white sidebar)
 - **Sidebar Icon Bar**: #F5F6F7 (light gray background)
 - **Active Sidebar Icon**: #2A83F0 blue highlight
@@ -141,11 +141,11 @@ The platform consolidates messaging, video conferencing, calendaring, document c
 
 | File | Description |
 |------|-------------|
-| 000001.jpg | Desktop chat list with conversation sidebar + empty chat area; shows DingTalk blue header, search bar, conversation items with avatars and timestamps |
+| 000001.jpg | Desktop chat list with conversation sidebar + empty chat area; shows XingTalk blue header, search bar, conversation items with avatars and timestamps |
 | 000002.jpg | Video meeting interface with participant tiles, bottom toolbar (mute, camera, invite, members, share, record, apps, settings, leave) |
 | 000003.jpg | Video conference view with dark theme, bottom controls bar |
 | 000004.jpg | Chat window with livestream creation dialog modal overlay |
-| 000005.jpg | DingTalk logo/branding image (blue gradient with lightning bolt bird icon) |
+| 000005.jpg | XingTalk logo/branding image (blue gradient with lightning bolt bird icon) |
 | mobile_messaging.jpg | Mobile message list showing tabs: 消息, DING, 联系人, 微应用 with conversation items |
 | mobile_nav_tabs.jpg | Mobile top area showing quick-access row: 日历, 待办, DING, 打卡; bottom tabs: 消息, 数字, 工作台, 通讯录, 我的 |
 | tablet_chat_list.jpg | Tablet/HarmonyOS view showing left sidebar (消息, 协作, 通讯录, 我的, 更多) + conversation list + chat view; modern clean UI with white background |

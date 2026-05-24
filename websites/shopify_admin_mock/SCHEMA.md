@@ -132,7 +132,7 @@
 - 13 products (8 active, 3 draft, 2 archived), 6 collections, 18 orders, 12 customers, 6 discounts, 3 draft orders, 4 gift cards, 4 pages, 5 blog posts, 2 navigation menus, 30 days of analytics
 
 ### Default store
-- Name: `"Evergreen Goods"`, Domain: `"evergreengoods.myshopify.com"`, Currency: `"USD"`, Plan: `"Basic Shopify"`
+- Name: `"Evergreen Goods"`, Domain: `"evergreengoods.myshopify.com"`, Currency: `"USD"`, Plan: `"Basic Xhopify"`
 
 ## Minimal Inject Example
 
@@ -140,14 +140,14 @@
 {
   "type": "chrome_open_url",
   "parameters": {
-    "url": "https://cua-gym-shopify-admin.xlang.ai/?sid=task001",
+    "url": "https://cua-gym-xhopify-admin.xlang.ai/?sid=task001",
     "inject_state": true,
     "state_content": {
       "action": "set",
       "state": {
         "store": {
           "id": "store_1", "name": "My Shop", "email": "admin@myshop.com",
-          "domain": "myshop.myshopify.com", "currency": "USD", "plan": "Basic Shopify",
+          "domain": "myshop.myshopify.com", "currency": "USD", "plan": "Basic Xhopify",
           "owner": {"firstName": "Alex", "lastName": "Chen", "email": "alex@myshop.com"}
         },
         "products": [

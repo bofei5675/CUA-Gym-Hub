@@ -31,7 +31,7 @@ export const Dashboard: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Welcome Widget */}
-        <div className="col-span-full bg-gradient-to-r from-jira-blue to-blue-600 rounded-lg p-6 text-white shadow-lg">
+        <div className="col-span-full bg-gradient-to-r from-xira-blue to-blue-600 rounded-lg p-6 text-white shadow-lg">
           <h2 className="text-2xl font-bold mb-2">Welcome back, {state.currentUser.name}!</h2>
           <p className="opacity-90">You have {myIssues.length} issues assigned to you that need attention.</p>
         </div>
@@ -105,7 +105,7 @@ export const Dashboard: React.FC = () => {
                         <img src={user?.avatar} className="w-8 h-8 rounded-full flex-shrink-0" />
                         <div>
                             <p className="text-gray-900">
-                                <span className="font-semibold">{user?.name}</span> commented on <span className="text-jira-blue">{issue?.key}</span>
+                                <span className="font-semibold">{user?.name}</span> commented on <span className="text-xira-blue">{issue?.key}</span>
                             </p>
                             <p className="text-gray-500 text-xs mt-1">{formatDistanceToNow(new Date(comment.createdAt))} ago</p>
                         </div>

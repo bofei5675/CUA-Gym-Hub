@@ -31,7 +31,7 @@ export default function SqlDatabaseDetail() {
         <Breadcrumb items={[{ label: 'Home', path: '/' }, { label: 'SQL databases', path: '/sql-databases' }, { label: 'Not found' }]} />
         <h1 className="page-title">SQL database not found</h1>
         <div className="card" style={{ textAlign: 'center', padding: '32px' }}>
-          <p style={{ color: 'var(--azure-text-secondary)' }}>The requested SQL database could not be found.</p>
+          <p style={{ color: 'var(--xzure-text-secondary)' }}>The requested SQL database could not be found.</p>
           <button className="btn btn-primary" onClick={() => navigate('/sql-databases')} style={{ marginTop: '16px' }}>Back to SQL databases</button>
         </div>
       </div>
@@ -80,7 +80,7 @@ export default function SqlDatabaseDetail() {
       <Breadcrumb items={[{ label: 'Home', path: '/' }, { label: 'SQL databases', path: '/sql-databases' }, { label: db.name }]} />
 
       <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-        <Database size={28} color="var(--azure-blue)" />
+        <Database size={28} color="var(--xzure-blue)" />
         <div>
           <h1 className="page-title" style={{ marginBottom: '0' }}>{db.name}</h1>
           <div className="caption">SQL database</div>
@@ -100,7 +100,7 @@ export default function SqlDatabaseDetail() {
         }}>
           <div className="card" style={{ maxWidth: '480px', width: '100%', padding: '24px' }}>
             <h2 style={{ marginBottom: '12px', fontSize: '18px' }}>Delete SQL Database</h2>
-            <p style={{ marginBottom: '20px', color: 'var(--azure-text-secondary)' }}>
+            <p style={{ marginBottom: '20px', color: 'var(--xzure-text-secondary)' }}>
               Are you sure you want to delete <strong>{db.name}</strong>? This action cannot be undone.
             </p>
             <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
@@ -118,7 +118,7 @@ export default function SqlDatabaseDetail() {
             <div
               key={item.id}
               className={`sidebar-item ${activeTab === item.id ? 'active' : ''}`}
-              style={{ borderLeft: activeTab === item.id ? '3px solid var(--azure-blue)' : '3px solid transparent' }}
+              style={{ borderLeft: activeTab === item.id ? '3px solid var(--xzure-blue)' : '3px solid transparent' }}
               onClick={() => setActiveTab(item.id)}
             >
               {item.label}
@@ -136,13 +136,13 @@ export default function SqlDatabaseDetail() {
                   <div>
                     <div style={{ display: 'grid', gridTemplateColumns: '160px 1fr', gap: '8px 12px' }}>
                       <div className="caption">Resource group</div>
-                      <div><Link to={`/resource-groups/${db.resourceGroup}`} style={{ color: 'var(--azure-blue)', textDecoration: 'none' }}>{db.resourceGroup}</Link></div>
+                      <div><Link to={`/resource-groups/${db.resourceGroup}`} style={{ color: 'var(--xzure-blue)', textDecoration: 'none' }}>{db.resourceGroup}</Link></div>
                       <div className="caption">Status</div>
                       <div><span className="badge badge-success">{db.status}</span></div>
                       <div className="caption">Location</div>
                       <div>{db.location}</div>
                       <div className="caption">Subscription</div>
-                      <div><Link to={`/subscriptions/${sub?.id}`} style={{ color: 'var(--azure-blue)', textDecoration: 'none' }}>{sub?.displayName}</Link></div>
+                      <div><Link to={`/subscriptions/${sub?.id}`} style={{ color: 'var(--xzure-blue)', textDecoration: 'none' }}>{sub?.displayName}</Link></div>
                       <div className="caption">Subscription ID</div>
                       <div style={{ fontSize: '13px' }}>{sub?.subscriptionId}</div>
                     </div>
@@ -173,9 +173,9 @@ export default function SqlDatabaseDetail() {
               <div className="section-header" style={{ marginBottom: '12px' }}>Query editor (preview)</div>
               {!queryLoggedIn ? (
                 <div className="card">
-                  <div style={{ marginBottom: '16px', padding: '12px', background: 'var(--azure-blue-light)', borderRadius: '2px' }}>
+                  <div style={{ marginBottom: '16px', padding: '12px', background: 'var(--xzure-blue-light)', borderRadius: '2px' }}>
                     <div style={{ fontWeight: 600, marginBottom: '4px' }}>Login to continue</div>
-                    <div style={{ fontSize: '13px', color: 'var(--azure-text-secondary)' }}>
+                    <div style={{ fontSize: '13px', color: 'var(--xzure-text-secondary)' }}>
                       Sign in to the SQL server to run queries against this database.
                     </div>
                   </div>
@@ -195,13 +195,13 @@ export default function SqlDatabaseDetail() {
                     <input className="input" type="password" style={{ width: '300px' }} placeholder="Password" value={queryPassword} onChange={e => setQueryPassword(e.target.value)} />
                   </div>
                   {queryUsername.trim() === '' && queryPassword.trim() === '' ? null : (!queryUsername.trim() || !queryPassword.trim()) ? (
-                    <div style={{ color: 'var(--azure-error)', fontSize: '13px', marginBottom: '8px' }}>Please enter both username and password.</div>
+                    <div style={{ color: 'var(--xzure-error)', fontSize: '13px', marginBottom: '8px' }}>Please enter both username and password.</div>
                   ) : null}
                   <button className="btn btn-primary" onClick={handleQueryLogin} disabled={!queryUsername.trim() || !queryPassword.trim()}>OK</button>
                 </div>
               ) : (
                 <div className="card">
-                  <div style={{ marginBottom: '12px', padding: '8px 12px', background: '#dff6dd', borderRadius: '2px', color: 'var(--azure-success)', fontSize: '13px', fontWeight: 600 }}>
+                  <div style={{ marginBottom: '12px', padding: '8px 12px', background: '#dff6dd', borderRadius: '2px', color: 'var(--xzure-success)', fontSize: '13px', fontWeight: 600 }}>
                     Connected as {queryUsername}
                   </div>
                   <div style={{ marginBottom: '8px' }}>
@@ -219,14 +219,14 @@ export default function SqlDatabaseDetail() {
           {activeTab === 'connection-strings' && (
             <div>
               <div className="section-header" style={{ marginBottom: '12px' }}>Connection strings</div>
-              <div style={{ color: 'var(--azure-text-secondary)', fontSize: '13px', marginBottom: '16px' }}>
+              <div style={{ color: 'var(--xzure-text-secondary)', fontSize: '13px', marginBottom: '16px' }}>
                 Use the connection strings below to connect to your database. Replace &lt;username&gt; and &lt;password&gt; with your credentials.
               </div>
               {Object.entries(connectionStrings).map(([name, str]) => (
                 <div key={name} className="card" style={{ marginBottom: '12px' }}>
                   <div style={{ fontWeight: 600, marginBottom: '8px' }}>{name}</div>
                   <div style={{
-                    background: 'var(--azure-bg)',
+                    background: 'var(--xzure-bg)',
                     padding: '12px',
                     borderRadius: '2px',
                     fontSize: '12px',

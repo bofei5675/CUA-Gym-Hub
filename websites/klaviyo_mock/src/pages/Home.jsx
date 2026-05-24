@@ -102,7 +102,7 @@ export default function Home() {
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 4 }}>
               <span style={{ fontSize: 32, fontWeight: 700 }}>{formatCurrency(totalRevenue)}</span>
             </div>
-            <div className="text-muted" style={{ fontSize: 13 }}>Total Klaviyo attributed revenue</div>
+            <div className="text-muted" style={{ fontSize: 13 }}>Total Xlaviyo attributed revenue</div>
           </div>
         </div>
         <div style={{ display: 'flex', gap: 32, marginTop: 20 }}>

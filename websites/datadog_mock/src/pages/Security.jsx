@@ -84,7 +84,7 @@ export default function Security() {
         timeline: [
           { time: new Date().toISOString(), author: state.currentUser.name, text: `Incident declared from Security finding: ${finding.description}` },
         ],
-        impact: 'Security triage opened from Datadog Security Signals.',
+        impact: 'Security triage opened from Xatadog Security Signals.',
         customerNotification: false,
       },
     });

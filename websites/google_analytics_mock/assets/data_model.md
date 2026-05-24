@@ -1,4 +1,4 @@
-# Google Analytics 4 Mock — Data Model
+# Xoogle Analytics 4 Mock — Data Model
 
 This document defines all entity types, their fields, relationships, and the structure of `createInitialData()` in `dataManager.js`.
 

@@ -1,4 +1,4 @@
-# Google Calendar Mock — TODO
+# Xoogle Calendar Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-03-08
@@ -14,14 +14,14 @@
 
 ## P0 — Core Shell (Already Exists — Needs Fixes)
 
-The app scaffold, routing, state management, session isolation, and `/go` endpoint already exist. These items focus on fixing and aligning what's there with the real Google Calendar design.
+The app scaffold, routing, state management, session isolation, and `/go` endpoint already exist. These items focus on fixing and aligning what's there with the real Xoogle Calendar design.
 
 - [x] Project scaffold: Vite + React + Tailwind already set up
 - [x] Routing: `/` (calendar) and `/go` (state inspector) via manual path-based router in App.jsx
 - [x] State management: StoreContext with useReducer + dataManager.js with session isolation
 - [x] Session isolation: vite.config.js mock-api plugin with POST/GET endpoints, sid support
 - [x] `/go` endpoint: GoEndpoint.jsx component + server-side /go handler in vite.config.js
-- [x] **Migrate event colors from Tailwind classes to hex values**: Migrated ALL color references to hex strings. Updated: `helpers.js` EVENT_COLORS palette, DEFAULT_CALENDARS, `generateMockEvents()`, `EventModal.jsx` color picker with 11 Google Calendar colors, all views use `style={{ backgroundColor: color }}` inline.
+- [x] **Migrate event colors from Tailwind classes to hex values**: Migrated ALL color references to hex strings. Updated: `helpers.js` EVENT_COLORS palette, DEFAULT_CALENDARS, `generateMockEvents()`, `EventModal.jsx` color picker with 11 Xoogle Calendar colors, all views use `style={{ backgroundColor: color }}` inline.
 - [x] **Visual design system alignment**: Google Fonts imported, header 64px with `#DADCE0` border, sidebar 256px, dynamic date logo showing today's actual day number in blue rounded square, "Calendar" text in `#5F6368`.
 - [x] **Improve seed data**: 23 events across Personal/Work/Family/Holidays/Birthdays calendars spanning last week, current week, next week. Mix of timed/all-day/multi-day/recurring events with guests, locations, meetLinks.
 - [x] **Default view should be "week"**: Both `defaultState.view` and `createDefaultData()` now default to `'week'`.
@@ -32,12 +32,12 @@ The app scaffold, routing, state management, session isolation, and `/go` endpoi
 ## P1 — Primary Features (Core Interactive Workflows)
 
 ### P1.1 — Header Bar Improvements
-- [x] **Google Calendar branding**: Dynamic date logo showing today's actual date in blue square, "Calendar" in `#5F6368` text.
+- [x] **Xoogle Calendar branding**: Dynamic date logo showing today's actual date in blue square, "Calendar" in `#5F6368` text.
 - [x] **View switcher as segmented pill/dropdown**: View dropdown with keyboard shortcuts D/W/M/A shown in menu. Keyboard shortcuts `d`, `w`, `m`, `a`, `t`, `c`, `Escape` all implemented.
 - [x] **Search bar**: Collapsed search icon, expands to full search bar. Typing filters events by title/description/location. Results appear in dropdown below, clicking navigates to event date and opens modal.
 
 ### P1.2 — Sidebar Improvements
-- [x] **Create button styling**: Pill shape with shadow, colorful SVG plus icon, hover shadow elevation, matches Google Calendar design.
+- [x] **Create button styling**: Pill shape with shadow, colorful SVG plus icon, hover shadow elevation, matches Xoogle Calendar design.
 - [x] **Mini calendar prev/next month**: ChevronLeft/ChevronRight arrows navigate mini calendar independently from main view. Clicking dates updates main view's currentDate.
 - [x] **"My calendars" section**: Colored checkbox squares with checkmark when visible, hover shows 3-dot context menu with "Display this only" and "Hide from list" options.
 - [x] **"Other calendars" section**: "Holidays in United States" and "Birthdays" section with same checkbox behavior, "+" button to subscribe.
@@ -60,11 +60,11 @@ The app scaffold, routing, state management, session isolation, and `/go` endpoi
 - [x] **Day View uses WeekView with 1 column**: Works correctly with all features (all-day section, current time red line, overlapping events, date header).
 
 ### P1.6 — Event Popover Improvements
-- [x] **Match Google Calendar popover design**: 8px colored strip at top, edit/delete/close icons, large title with color square, date/time, location, meet link, guests count, calendar name, description block.
+- [x] **Match Xoogle Calendar popover design**: 8px colored strip at top, edit/delete/close icons, large title with color square, date/time, location, meet link, guests count, calendar name, description block.
 - [x] **Guest count in popover**: Shows "N guests" when event has guests.
 
 ### P1.7 — Event Modal Improvements
-- [x] **Event color picker**: 11 Google Calendar color swatches with name display. Selected color shows blue border. Color updates event header and form accents.
+- [x] **Event color picker**: 11 Xoogle Calendar color swatches with name display. Selected color shows blue border. Color updates event header and form accents.
 - [x] **Google Meet mock link**: "Add Google Meet link" field with Video icon, persists as `meetLink`.
 - [x] **All-day toggle**: Smooth toggle switch hides/shows time inputs.
 - [x] **Guest autocomplete**: Typing in guest field shows suggestions from MOCK_USERS. Enter/comma adds guest. Tags shown as removable chips.

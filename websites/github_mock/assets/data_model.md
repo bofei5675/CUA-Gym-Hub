@@ -1,4 +1,4 @@
-# GitHub Mock — Data Model
+# XitHub Mock — Data Model
 
 > Defines all entity types, their fields, relationships, and the `createInitialData()` structure for `dataManager.js` (currently `src/lib/mockData.js`).
 
@@ -14,7 +14,7 @@
   avatar: "https://...",       // String, avatar image URL
   bio: "I love coding!",       // String, short bio (optional, used on profile)
   location: "San Francisco",   // String, location (optional)
-  company: "GitHub",           // String, company (optional)
+  company: "XitHub",           // String, company (optional)
   website: "https://github.com/octocat", // String, website URL (optional)
   joinedAt: "2020-01-15T..."   // ISO date, when user joined
 }
@@ -274,14 +274,14 @@ export const INITIAL_STATE = {
     avatar: "https://avatars.githubusercontent.com/u/583231?v=4",
     bio: "I love coding and open source!",
     location: "San Francisco, CA",
-    company: "GitHub",
+    company: "XitHub",
     website: "https://github.com/octocat",
     joinedAt: "2020-01-15T00:00:00Z"
   },
 
   users: [
     { id: "u1", username: "octocat", name: "The Octocat", avatar: "https://avatars.githubusercontent.com/u/583231?v=4", bio: "I love coding!" },
-    { id: "u2", username: "mojombo", name: "Tom Preston-Werner", avatar: "https://avatars.githubusercontent.com/u/1?v=4", bio: "GitHub co-founder" },
+    { id: "u2", username: "mojombo", name: "Tom Preston-Werner", avatar: "https://avatars.githubusercontent.com/u/1?v=4", bio: "XitHub co-founder" },
     { id: "u3", username: "defunkt", name: "Chris Wanstrath", avatar: "https://avatars.githubusercontent.com/u/2?v=4", bio: "Another co-founder" },
     { id: "u4", username: "pjhyett", name: "PJ Hyett", avatar: "https://avatars.githubusercontent.com/u/3?v=4", bio: "Developer" },
     { id: "u5", username: "wycats", name: "Yehuda Katz", avatar: "https://avatars.githubusercontent.com/u/4?v=4", bio: "Open source contributor" }
@@ -290,7 +290,7 @@ export const INITIAL_STATE = {
   repos: [
     {
       id: "r1", ownerId: "u1", name: "hello-world",
-      description: "A sample repository for testing GitHub features. Contains a basic web app.",
+      description: "A sample repository for testing XitHub features. Contains a basic web app.",
       language: "JavaScript",
       languages: { "JavaScript": 55.2, "TypeScript": 28.1, "CSS": 10.3, "HTML": 6.4 },
       stars: 342, forks: 87, watchers: 56, isPrivate: false,
@@ -388,7 +388,7 @@ export const INITIAL_STATE = {
     {
       id: "i2", repoId: "r1", number: 2,
       title: "Add dark mode support",
-      description: "It would be great to have a dark mode toggle in the settings.\n\nReference: [GitHub dark mode](https://github.com/settings/appearance)",
+      description: "It would be great to have a dark mode toggle in the settings.\n\nReference: [XitHub dark mode](https://github.com/settings/appearance)",
       status: "open", authorId: "u3", assignees: [],
       labels: ["enhancement", "good first issue"],
       milestone: "v2.0",

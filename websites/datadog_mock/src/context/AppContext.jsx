@@ -142,7 +142,7 @@ export function AppProvider({ children }) {
           <div style={{ width: 40, height: 40, background: '#632CA6', borderRadius: 8, margin: '0 auto 16px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-6h2v6zm0-8H9V7h6v2z"/></svg>
           </div>
-          <div>Loading Datadog...</div>
+          <div>Loading Xatadog...</div>
         </div>
       </div>
     );

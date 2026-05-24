@@ -39,7 +39,7 @@ export default function Sidebar({ mobileOpen, onClose }) {
           </NavLink>
         ))}
       </div>
-      <div className="sidebar-wordmark">Expensify</div>
+      <div className="sidebar-wordmark">Xpensify</div>
     </nav>
   );
 }

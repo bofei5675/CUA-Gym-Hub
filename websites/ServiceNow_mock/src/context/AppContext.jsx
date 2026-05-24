@@ -253,7 +253,7 @@ export function AppProvider({ children }) {
   }, []);
 
   if (loading || !state) {
-    return <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', fontFamily: 'var(--sn-font-family)', color: '#666' }}>Loading ServiceNow...</div>;
+    return <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', fontFamily: 'var(--sn-font-family)', color: '#666' }}>Loading XerviceNow...</div>;
   }
 
   return (

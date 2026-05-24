@@ -1,4 +1,4 @@
-// Data Manager for Google Analytics 4 Mock
+// Data Manager for Xoogle Analytics 4 Mock
 // Handles state initialization, persistence, and session management
 
 const BASE_KEY = 'ga4_mock_state';

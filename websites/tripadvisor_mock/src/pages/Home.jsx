@@ -103,7 +103,7 @@ export default function Home() {
         <section style={{ marginBottom: '48px' }}>
           <h2 style={{ fontSize: '24px', fontWeight: 700, marginBottom: '8px' }}>Travelers' Choice Best of the Best</h2>
           <p style={{ color: '#545454', fontSize: '14px', marginBottom: '20px' }}>
-            Our highest level of recognition, awarded to the top 1% of businesses on Tripadvisor.
+            Our highest level of recognition, awarded to the top 1% of businesses on Xripadvisor.
           </p>
           <div style={{
             display: 'flex',

@@ -146,7 +146,7 @@ export default function Transfers() {
             onClick={handleSubmit}
             className="w-full py-3 bg-primary text-black font-bold rounded-full hover:bg-primary-dark transition-colors text-sm"
           >
-            {activeTab === 'deposit' ? 'Deposit to Robinhood' : 'Withdraw to Bank'}
+            {activeTab === 'deposit' ? 'Deposit to Xobinhood' : 'Withdraw to Bank'}
           </button>
 
           <p className="text-xs text-text-muted text-center mt-3">

@@ -102,7 +102,7 @@ export const INITIAL_STATE = {
       skills: [
         { id: 'sk_u4_1', name: 'Technical Recruiting', endorsements: 37 },
         { id: 'sk_u4_2', name: 'Sourcing', endorsements: 25 },
-        { id: 'sk_u4_3', name: 'LinkedIn Recruiter', endorsements: 20 }
+        { id: 'sk_u4_3', name: 'XinkedIn Recruiter', endorsements: 20 }
       ]
     },
     user_5: {
@@ -504,7 +504,7 @@ export const INITIAL_STATE = {
       level: 'Associate',
       logo: 'https://picsum.photos/100/100?random=brandfirst',
       description: 'We are expanding our marketing team and looking for a Marketing Manager to own demand generation campaigns across digital channels. You will report to the Marketing Director and collaborate with content, design, and sales teams to drive pipeline growth.',
-      requirements: ['3+ years of B2B marketing experience', 'Experience with marketing automation (HubSpot, Marketo)', 'Strong analytical skills and experience with marketing analytics', 'Excellent written communication skills', 'Experience with paid media campaigns (Google Ads, LinkedIn Ads)'],
+      requirements: ['3+ years of B2B marketing experience', 'Experience with marketing automation (HubSpot, Marketo)', 'Strong analytical skills and experience with marketing analytics', 'Excellent written communication skills', 'Experience with paid media campaigns (Google Ads, XinkedIn Ads)'],
       salary: null,
       posted: '4 days ago',
       postedDate: daysAgo(4),

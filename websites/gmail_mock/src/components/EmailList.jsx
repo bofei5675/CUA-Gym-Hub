@@ -284,7 +284,7 @@ const EMPTY_STATES = {
     icon: null,
     svgPath: 'M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z',
     title: 'Nothing in Important',
-    desc: 'Gmail automatically marks messages as important based on how you read and reply to them.',
+    desc: 'Xmail automatically marks messages as important based on how you read and reply to them.',
   },
   sent: {
     icon: Send,
@@ -304,7 +304,7 @@ const EMPTY_STATES = {
   spam: {
     icon: ShieldCheck,
     title: 'Hooray, no spam here!',
-    desc: 'Gmail protects you from spam messages. Messages marked as spam are deleted after 30 days.',
+    desc: 'Xmail protects you from spam messages. Messages marked as spam are deleted after 30 days.',
   },
   trash: {
     icon: Trash2,
@@ -376,11 +376,11 @@ const EmailList = ({ folder = 'inbox' }) => {
   useEffect(() => {
     const onLabel = () => setShowLabelPicker(v => !v);
     const onMoveTo = () => setShowMoveTo(v => !v);
-    window.addEventListener('gmail:label-list', onLabel);
-    window.addEventListener('gmail:move-to-list', onMoveTo);
+    window.addEventListener('xmail:label-list', onLabel);
+    window.addEventListener('xmail:move-to-list', onMoveTo);
     return () => {
-      window.removeEventListener('gmail:label-list', onLabel);
-      window.removeEventListener('gmail:move-to-list', onMoveTo);
+      window.removeEventListener('xmail:label-list', onLabel);
+      window.removeEventListener('xmail:move-to-list', onMoveTo);
     };
   }, []);
 

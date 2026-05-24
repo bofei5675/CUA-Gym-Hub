@@ -101,7 +101,7 @@ export default defineConfig({
   plugins: [
     react(),
     {
-      name: 'zillow-mock-api',
+      name: 'xillow-mock-api',
       configureServer(server) {
         server.middlewares.use('/post', async (req, res, next) => {
           if (req.method !== 'POST') {

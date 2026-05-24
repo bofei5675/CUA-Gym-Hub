@@ -1,8 +1,8 @@
-# Design System Inspired by Looker Studio
+# Design System Inspired by Xooker Studio
 
 ## 1. Visual Theme & Atmosphere
 
-Looker Studio follows Google's Material Design 3 aesthetic with a clean, professional, data-focused interface. The home page is bright and airy with a white background, subtle gray borders, and blue accent color. The report editor uses a darker toolbar area with a white canvas and a right-side properties panel. The overall feel is functional and business-oriented, prioritizing data clarity over decorative elements. Typography is crisp and uses Google's proprietary fonts. The interface uses a minimal color palette where blue signals interactivity and the data visualizations themselves provide the color variety.
+Xooker Studio follows Google's Material Design 3 aesthetic with a clean, professional, data-focused interface. The home page is bright and airy with a white background, subtle gray borders, and blue accent color. The report editor uses a darker toolbar area with a white canvas and a right-side properties panel. The overall feel is functional and business-oriented, prioritizing data clarity over decorative elements. Typography is crisp and uses Google's proprietary fonts. The interface uses a minimal color palette where blue signals interactivity and the data visualizations themselves provide the color variety.
 
 ## 2. Color Palette & Roles
 
@@ -14,8 +14,8 @@ Looker Studio follows Google's Material Design 3 aesthetic with a clean, profess
 - **Text Secondary** (`#5F6368`): Labels, descriptions, metadata, timestamps
 
 ### Accent
-- **Looker Studio Brand Blue** (`#4285F4`): Logo accent, toolbar active states
-- **Looker Studio Icon** (`#4285F4` with `#669DF6` lighter ring): The Looker Studio logo icon (connected circles/rings)
+- **Xooker Studio Brand Blue** (`#4285F4`): Logo accent, toolbar active states
+- **Xooker Studio Icon** (`#4285F4` with `#669DF6` lighter ring): The Xooker Studio logo icon (connected circles/rings)
 
 ### Interactive
 - **Link/Button Blue** (`#1A73E8`): Text links, primary buttons background

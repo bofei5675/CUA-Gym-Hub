@@ -15,7 +15,7 @@ function FilterDropdown({ label, options, value, onChange }) {
       <button
         onClick={() => setOpen(!open)}
         className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold border transition-colors ${
-          isActive ? 'bg-linkedin-blue text-white border-linkedin-blue' : 'border-gray-400 text-gray-600 hover:bg-gray-100'
+          isActive ? 'bg-xinkedin-blue text-white border-xinkedin-blue' : 'border-gray-400 text-gray-600 hover:bg-gray-100'
         }`}
       >
         {label}{isActive ? `: ${value}` : ''}
@@ -27,7 +27,7 @@ function FilterDropdown({ label, options, value, onChange }) {
             <button
               key={opt}
               onClick={() => { onChange(opt); setOpen(false); }}
-              className={`block w-full text-left px-4 py-2 text-sm hover:bg-gray-100 ${value === opt ? 'text-linkedin-blue font-semibold' : 'text-gray-700'}`}
+              className={`block w-full text-left px-4 py-2 text-sm hover:bg-gray-100 ${value === opt ? 'text-xinkedin-blue font-semibold' : 'text-gray-700'}`}
             >
               {opt}
             </button>
@@ -128,20 +128,20 @@ export default function Jobs() {
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 py-2">
           <button
             onClick={() => { setSidebarView('all'); setSelectedJobId(null); }}
-            className={`w-full flex items-center justify-between px-4 py-2.5 hover:bg-gray-100 cursor-pointer text-sm font-semibold ${sidebarView === 'all' ? 'text-linkedin-blue bg-blue-50' : 'text-gray-600'}`}
+            className={`w-full flex items-center justify-between px-4 py-2.5 hover:bg-gray-100 cursor-pointer text-sm font-semibold ${sidebarView === 'all' ? 'text-xinkedin-blue bg-blue-50' : 'text-gray-600'}`}
           >
             <span className="flex items-center gap-3"><Briefcase size={20} /> Recommended</span>
           </button>
           <button
             onClick={() => { setSidebarView('saved'); setSelectedJobId(null); }}
-            className={`w-full flex items-center justify-between px-4 py-2.5 hover:bg-gray-100 cursor-pointer text-sm font-semibold ${sidebarView === 'saved' ? 'text-linkedin-blue bg-blue-50' : 'text-gray-600'}`}
+            className={`w-full flex items-center justify-between px-4 py-2.5 hover:bg-gray-100 cursor-pointer text-sm font-semibold ${sidebarView === 'saved' ? 'text-xinkedin-blue bg-blue-50' : 'text-gray-600'}`}
           >
             <span className="flex items-center gap-3"><Bookmark size={20} /> Saved Jobs</span>
             {savedCount > 0 && <span className="text-xs text-gray-500">{savedCount}</span>}
           </button>
           <button
             onClick={() => { setSidebarView('applied'); setSelectedJobId(null); }}
-            className={`w-full flex items-center justify-between px-4 py-2.5 hover:bg-gray-100 cursor-pointer text-sm font-semibold ${sidebarView === 'applied' ? 'text-linkedin-blue bg-blue-50' : 'text-gray-600'}`}
+            className={`w-full flex items-center justify-between px-4 py-2.5 hover:bg-gray-100 cursor-pointer text-sm font-semibold ${sidebarView === 'applied' ? 'text-xinkedin-blue bg-blue-50' : 'text-gray-600'}`}
           >
             <span className="flex items-center gap-3"><CheckCircle2 size={20} /> Applied Jobs</span>
             {appliedCount > 0 && <span className="text-xs text-gray-500">{appliedCount}</span>}
@@ -161,7 +161,7 @@ export default function Jobs() {
                 value={searchKeyword}
                 onChange={(e) => setSearchKeyword(e.target.value)}
                 placeholder="Search by title, skill, or company"
-                className="w-full pl-9 pr-4 py-2 border border-gray-300 rounded text-sm focus:outline-none focus:border-linkedin-blue"
+                className="w-full pl-9 pr-4 py-2 border border-gray-300 rounded text-sm focus:outline-none focus:border-xinkedin-blue"
               />
             </div>
             <div className="relative flex-1">
@@ -171,12 +171,12 @@ export default function Jobs() {
                 value={searchLocation}
                 onChange={(e) => setSearchLocation(e.target.value)}
                 placeholder="Location"
-                className="w-full pl-9 pr-4 py-2 border border-gray-300 rounded text-sm focus:outline-none focus:border-linkedin-blue"
+                className="w-full pl-9 pr-4 py-2 border border-gray-300 rounded text-sm focus:outline-none focus:border-xinkedin-blue"
               />
             </div>
             <button
               onClick={() => { /* Filters are reactive, this button is visual consistency; we can force re-render */ setSearchKeyword(searchKeyword.trimEnd()); }}
-              className="bg-linkedin-blue text-white px-6 py-2 rounded font-semibold text-sm hover:bg-linkedin-dark"
+              className="bg-xinkedin-blue text-white px-6 py-2 rounded font-semibold text-sm hover:bg-xinkedin-dark"
             >
               Search
             </button>
@@ -190,7 +190,7 @@ export default function Jobs() {
             <button
               onClick={() => setRemoteOnly(!remoteOnly)}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold border transition-colors ${
-                remoteOnly ? 'bg-linkedin-blue text-white border-linkedin-blue' : 'border-gray-400 text-gray-600 hover:bg-gray-100'
+                remoteOnly ? 'bg-xinkedin-blue text-white border-xinkedin-blue' : 'border-gray-400 text-gray-600 hover:bg-gray-100'
               }`}
             >
               Remote
@@ -198,7 +198,7 @@ export default function Jobs() {
             {activeFilterCount > 0 && (
               <button
                 onClick={() => { setDateFilter('Any time'); setLevelFilter('Any level'); setTypeFilter('Any type'); setRemoteOnly(false); }}
-                className="text-linkedin-blue text-sm font-semibold hover:underline ml-2"
+                className="text-xinkedin-blue text-sm font-semibold hover:underline ml-2"
               >
                 Clear all ({activeFilterCount})
               </button>
@@ -229,12 +229,12 @@ export default function Jobs() {
                       key={job.id}
                       onClick={() => setSelectedJobId(job.id)}
                       className={`flex gap-3 p-3 rounded-lg cursor-pointer transition-colors border-l-2 ${
-                        selectedJobId === job.id ? 'bg-blue-50 border-l-linkedin-blue' : 'hover:bg-gray-50 border-l-transparent'
+                        selectedJobId === job.id ? 'bg-blue-50 border-l-xinkedin-blue' : 'hover:bg-gray-50 border-l-transparent'
                       }`}
                     >
                       <img src={job.logo} alt={job.company} className="w-12 h-12 object-contain flex-shrink-0 rounded" />
                       <div className="flex-1 min-w-0">
-                        <h3 className="text-linkedin-blue font-semibold text-sm hover:underline">{job.title}</h3>
+                        <h3 className="text-xinkedin-blue font-semibold text-sm hover:underline">{job.title}</h3>
                         <p className="text-sm text-gray-800">{job.company}</p>
                         <p className="text-xs text-gray-500 flex items-center gap-1 mt-0.5">
                           <MapPin size={12} /> {job.location}
@@ -292,7 +292,7 @@ export default function Jobs() {
                   ) : (
                     <button
                       onClick={() => applyToJob(selectedJob.id)}
-                      className="bg-linkedin-blue text-white px-6 py-2 rounded-full font-semibold hover:bg-linkedin-dark"
+                      className="bg-xinkedin-blue text-white px-6 py-2 rounded-full font-semibold hover:bg-xinkedin-dark"
                     >
                       Apply
                     </button>
@@ -302,7 +302,7 @@ export default function Jobs() {
                     className={`border px-4 py-2 rounded-full font-semibold flex items-center gap-2 ${
                       selectedJob.saved
                         ? 'border-gray-400 text-gray-600 bg-gray-50'
-                        : 'border-linkedin-blue text-linkedin-blue hover:bg-blue-50'
+                        : 'border-xinkedin-blue text-xinkedin-blue hover:bg-blue-50'
                     }`}
                   >
                     {selectedJob.saved ? <BookmarkCheck size={16} /> : <Bookmark size={16} />}

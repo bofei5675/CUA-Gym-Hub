@@ -25,7 +25,7 @@ export const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
       ? 'bg-red-600 hover:bg-red-700 text-white'
       : variant === 'warning'
       ? 'bg-yellow-500 hover:bg-yellow-600 text-white'
-      : 'bg-jira-blue hover:bg-blue-700 text-white';
+      : 'bg-xira-blue hover:bg-blue-700 text-white';
 
   return (
     <div className="fixed inset-0 bg-black/50 z-[60] flex items-center justify-center p-4">
@@ -39,7 +39,7 @@ export const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
                   ? 'text-red-600'
                   : variant === 'warning'
                   ? 'text-yellow-500'
-                  : 'text-jira-blue'
+                  : 'text-xira-blue'
               }
             />
             <h2 className="text-base font-bold text-gray-900">{title}</h2>

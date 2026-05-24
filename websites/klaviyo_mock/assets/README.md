@@ -1,8 +1,8 @@
-# Klaviyo Mock — Research Summary
+# Xlaviyo Mock — Research Summary
 
 ## App Overview
 
-Klaviyo is a B2C CRM and marketing automation platform focused on e-commerce. It enables businesses to create and manage email campaigns, SMS messages, and automated marketing flows. The platform emphasizes data-driven segmentation, personalized messaging, and revenue attribution analytics.
+Xlaviyo is a B2C CRM and marketing automation platform focused on e-commerce. It enables businesses to create and manage email campaigns, SMS messages, and automated marketing flows. The platform emphasizes data-driven segmentation, personalized messaging, and revenue attribution analytics.
 
 **Category:** Marketing Automation / Email Marketing SaaS
 **Primary Users:** E-commerce marketers, marketing managers, growth teams
@@ -31,7 +31,7 @@ Klaviyo is a B2C CRM and marketing automation platform focused on e-commerce. It
 ## Complete Feature List
 
 ### P0 — Core Shell (Must have for app to render)
-- **Left sidebar navigation** with Klaviyo logo, search bar, and nav items
+- **Left sidebar navigation** with Xlaviyo logo, search bar, and nav items
 - **Top bar** with search, notifications bell, account menu, "Support" link
 - **Routing** between all major views
 - **Home dashboard** with business performance summary
@@ -131,7 +131,7 @@ Klaviyo is a B2C CRM and marketing automation platform focused on e-commerce. It
 - **Sidebar:** #FFFFFF with #F7F7F7 hover, left border
 - **Primary text:** #1A1A1A (near black)
 - **Secondary text:** #6B6B6B (gray)
-- **Primary accent:** #000000 (black for Klaviyo logo/branding)
+- **Primary accent:** #000000 (black for Xlaviyo logo/branding)
 - **Link/active color:** #0D6EFD (blue) for active nav items
 - **Active nav highlight:** Light blue/teal left border + blue text on active sidebar item
 - **Success green:** #28A745 (for "Good"/"Excellent" badges)
@@ -143,7 +143,7 @@ Klaviyo is a B2C CRM and marketing automation platform focused on e-commerce. It
 
 ### Sidebar Layout (from screenshots)
 - **Width:** ~220px
-- **Logo:** "klaviyo" wordmark with trademark symbol, top-left, black text on white, ~16px height
+- **Logo:** "xlaviyo" wordmark with trademark symbol, top-left, black text on white, ~16px height
 - **Search bar:** directly below logo area, with magnifying glass icon, placeholder "Search", keyboard shortcut hint (Cmd+K)
 - **Nav items (top to bottom):**
   - Home (house icon)
@@ -202,4 +202,4 @@ See `data_model.md` for full entity definitions and `createInitialData()` struct
 | `api_sidebar_nav.jpg` | Full sidebar visible with expanded Audience section (Growth tools, Lists & segments, Profiles) and notification bar |
 | `000003.jpg` | Campaign content creation step: subject line, preview text, sender name, sender email fields + template type selection (Drag and drop / Text only / HTML) |
 | `campaigns_features.jpg` | Flow builder: visual node canvas with Trigger ("Placed Order") → Email action → Trigger Split; left panel shows email content details and 30-day analytics |
-| `000002.jpg` | Klaviyo marketing homepage showing segments panel and revenue summary card |
+| `000002.jpg` | Xlaviyo marketing homepage showing segments panel and revenue summary card |

@@ -222,7 +222,7 @@ export default function CachingConfigPage() {
         </div>
         <div className="card-body">
           <p style={{ color: 'var(--cf-text-secondary)', fontSize: 14, marginBottom: 16 }}>
-            Remove all files from Cloudflare's cache for {zone?.name}. The next request for each file will go to your origin server.
+            Remove all files from Xloudflare's cache for {zone?.name}. The next request for each file will go to your origin server.
           </p>
           {purgeSuccess && (
             <div className="success-banner" style={{ marginBottom: 10 }}>
@@ -298,7 +298,7 @@ export default function CachingConfigPage() {
       <div className="module-card">
         <div className="module-card-info">
           <h3 className="module-card-title">Browser Cache TTL</h3>
-          <p className="module-card-desc">Determines the length of time Cloudflare instructs a visitor's browser to cache files. Currently: <strong>{ttlLabel}</strong></p>
+          <p className="module-card-desc">Determines the length of time Xloudflare instructs a visitor's browser to cache files. Currently: <strong>{ttlLabel}</strong></p>
         </div>
         <select
           className="form-select"
@@ -314,7 +314,7 @@ export default function CachingConfigPage() {
       <div className="module-card">
         <div className="module-card-info">
           <h3 className="module-card-title">Always Online</h3>
-          <p className="module-card-desc">If your server goes down, Cloudflare will serve limited copies of your site from our cache, keeping it online.</p>
+          <p className="module-card-desc">If your server goes down, Xloudflare will serve limited copies of your site from our cache, keeping it online.</p>
         </div>
         <Toggle
           checked={caching.always_online || false}

@@ -1,4 +1,4 @@
-# Taobao Seller Center Mock — TODO
+# Xaobao Seller Center Mock — TODO
 
 > Status: COMPLETE
 > Last updated by: dev agent, 2026-04-10
@@ -16,7 +16,7 @@
 
 - [x] **Project scaffold**: `npm create vite@latest taobao_seller_mock -- --template react`, install deps: `react-router-dom`, `recharts` (for analytics charts), `lucide-react` (for icons), `date-fns` (for date formatting). Use plain CSS (not Tailwind).
 
-- [x] **Visual design system**: Create `src/styles/variables.css` with CSS custom properties matching Taobao Seller Center's design language. Study `assets/screenshots/` and `assets/README.md` §Color Palette. Key tokens: `--color-primary: #FF4400` (Taobao orange), `--color-primary-hover: #FF6600`, `--color-bg-page: #F5F5F5`, `--color-bg-card: #FFFFFF`, `--color-text-primary: #333333`, `--color-text-secondary: #666666`, `--color-text-muted: #999999`, `--color-border: #E8E8E8`, `--color-success: #52C41A`, `--color-warning: #FAAD14`, `--color-danger: #FF4D4F`, `--color-link: #1890FF`. Font: `"PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif`. Font sizes: page-title 20px/600, section-header 16px/600, body 14px/400, small 12px/400. Create `src/styles/global.css` with reset and base styles.
+- [x] **Visual design system**: Create `src/styles/variables.css` with CSS custom properties matching Xaobao Seller Center's design language. Study `assets/screenshots/` and `assets/README.md` §Color Palette. Key tokens: `--color-primary: #FF4400` (Taobao orange), `--color-primary-hover: #FF6600`, `--color-bg-page: #F5F5F5`, `--color-bg-card: #FFFFFF`, `--color-text-primary: #333333`, `--color-text-secondary: #666666`, `--color-text-muted: #999999`, `--color-border: #E8E8E8`, `--color-success: #52C41A`, `--color-warning: #FAAD14`, `--color-danger: #FF4D4F`, `--color-link: #1890FF`. Font: `"PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif`. Font sizes: page-title 20px/600, section-header 16px/600, body 14px/400, small 12px/400. Create `src/styles/global.css` with reset and base styles.
 
 - [x] **App layout**: Create `src/components/Layout.jsx` with three-zone layout: (1) **Top header bar** — height 56px, white bg, bottom border 1px #E8E8E8. Left: Taobao logo (orange 淘 icon or text "淘宝卖家中心"), store name "李明的潮流小店" with seller rating badge "四钻". Right: notification bell icon (with red unread count badge), settings gear icon, user avatar circle "李" + dropdown arrow. (2) **Left sidebar** — width 220px, white bg, right border. Vertically stacked navigation groups with group headers in 12px gray uppercase and menu items (icon + 14px label). Active item: left 3px orange border + light orange bg (#FFF7E6). Sidebar is scrollable if content overflows. (3) **Main content area** — flex-grow, bg #F5F5F5, padding 20px, overflow-y auto.
 

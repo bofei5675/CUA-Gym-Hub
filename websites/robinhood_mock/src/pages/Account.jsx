@@ -41,7 +41,7 @@ export default function Account() {
             <span className="font-medium">{new Date(state.user.joinDate).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</span>
           </div>
           <div className="px-6 py-4 flex justify-between">
-            <span className="text-text-muted">Robinhood Gold</span>
+            <span className="text-text-muted">Xobinhood Gold</span>
             <span className="font-medium">{state.user.goldMember ? 'Active' : 'Not subscribed'}</span>
           </div>
         </div>

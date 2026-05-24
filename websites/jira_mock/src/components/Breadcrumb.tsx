@@ -12,13 +12,13 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ pageName }) => {
 
   return (
     <div className="flex items-center gap-1 text-sm text-gray-500 mb-4">
-      <Link to="/" className="text-jira-blue hover:underline">
+      <Link to="/" className="text-xira-blue hover:underline">
         Projects
       </Link>
       <span>/</span>
       <Link
         to={`/project/${project.key}/board`}
-        className="text-jira-blue hover:underline"
+        className="text-xira-blue hover:underline"
       >
         {project.name}
       </Link>

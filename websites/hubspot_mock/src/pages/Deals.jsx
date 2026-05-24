@@ -36,8 +36,8 @@ const stageBadgeColor = {
 function SortIcon({ col, sortCol, sortDir }) {
   if (sortCol !== col) return <ChevronDown size={13} className="ml-1 text-gray-300 opacity-50" />;
   return sortDir === 'asc'
-    ? <ChevronUp size={13} className="ml-1 text-hubspot" />
-    : <ChevronDown size={13} className="ml-1 text-hubspot" />;
+    ? <ChevronUp size={13} className="ml-1 text-xubspot" />
+    : <ChevronDown size={13} className="ml-1 text-xubspot" />;
 }
 
 export default function Deals() {
@@ -140,7 +140,7 @@ export default function Deals() {
   };
 
   const handleExport = () => {
-    downloadCsv('hubspot-deals.csv', sortedDeals, [
+    downloadCsv('xubspot-deals.csv', sortedDeals, [
       { label: 'Deal Name', value: d => d.name },
       { label: 'Stage', value: d => d.stage },
       { label: 'Amount', value: d => d.amount },
@@ -246,14 +246,14 @@ export default function Deals() {
           <div className="flex border border-gray-300 rounded-md overflow-hidden">
             <button
               onClick={() => setViewMode('board')}
-              className={`px-3 py-2 flex items-center gap-1.5 text-sm transition-colors ${viewMode === 'board' ? 'bg-hubspot text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
+              className={`px-3 py-2 flex items-center gap-1.5 text-sm transition-colors ${viewMode === 'board' ? 'bg-xubspot text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
               title="Board view"
             >
               <LayoutGrid size={15} />
             </button>
             <button
               onClick={() => setViewMode('list')}
-              className={`px-3 py-2 flex items-center gap-1.5 text-sm border-l border-gray-300 transition-colors ${viewMode === 'list' ? 'bg-hubspot text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
+              className={`px-3 py-2 flex items-center gap-1.5 text-sm border-l border-gray-300 transition-colors ${viewMode === 'list' ? 'bg-xubspot text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
               title="List view"
             >
               <List size={15} />
@@ -274,7 +274,7 @@ export default function Deals() {
           </button>
           <button
             onClick={() => openCreate()}
-            className="px-4 py-2 bg-hubspot text-white rounded-md text-sm font-medium hover:bg-hubspot-hover flex items-center gap-2"
+            className="px-4 py-2 bg-xubspot text-white rounded-md text-sm font-medium hover:bg-xubspot-hover flex items-center gap-2"
           >
             <Plus size={16} /> Create Deal
           </button>
@@ -287,7 +287,7 @@ export default function Deals() {
         <input
           type="text"
           placeholder="Search deals by name or company..."
-          className="pl-9 pr-4 py-2 w-full border border-gray-300 rounded-md text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+          className="pl-9 pr-4 py-2 w-full border border-gray-300 rounded-md text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
           value={search}
           onChange={e => setSearch(e.target.value)}
         />
@@ -336,12 +336,12 @@ export default function Deals() {
                                   ref={provided.innerRef}
                                   {...provided.draggableProps}
                                   {...provided.dragHandleProps}
-                                  className={`bg-white p-3 rounded border border-gray-200 shadow-sm hover:shadow-md transition-shadow cursor-grab group ${snapshot.isDragging ? 'shadow-lg ring-2 ring-hubspot rotate-1 opacity-90' : ''}`}
+                                  className={`bg-white p-3 rounded border border-gray-200 shadow-sm hover:shadow-md transition-shadow cursor-grab group ${snapshot.isDragging ? 'shadow-lg ring-2 ring-xubspot rotate-1 opacity-90' : ''}`}
                                 >
                                   <div className="flex justify-between items-start">
                                     <button
                                       onClick={() => openEdit(deal)}
-                                      className="font-medium text-hubspot-text hover:text-hubspot text-sm text-left leading-tight flex-1 mr-2"
+                                      className="font-medium text-xubspot-text hover:text-xubspot text-sm text-left leading-tight flex-1 mr-2"
                                     >
                                       {deal.name}
                                     </button>
@@ -373,7 +373,7 @@ export default function Deals() {
                           {provided.placeholder}
                           <button
                             onClick={() => openCreate(stage.id)}
-                            className="w-full py-1.5 text-xs text-gray-400 hover:text-hubspot hover:bg-white rounded border border-dashed border-gray-200 hover:border-hubspot transition-colors mt-1"
+                            className="w-full py-1.5 text-xs text-gray-400 hover:text-xubspot hover:bg-white rounded border border-dashed border-gray-200 hover:border-xubspot transition-colors mt-1"
                           >
                             + Add deal
                           </button>
@@ -432,7 +432,7 @@ export default function Deals() {
                       <td className="px-4 py-3">
                         <button
                           onClick={() => openEdit(deal)}
-                          className="font-medium text-hubspot-text hover:text-hubspot text-sm text-left"
+                          className="font-medium text-xubspot-text hover:text-xubspot text-sm text-left"
                         >
                           {deal.name}
                         </button>
@@ -450,7 +450,7 @@ export default function Deals() {
                       <td className="px-4 py-3 text-sm text-gray-600">{company?.name || '—'}</td>
                       <td className="px-4 py-3 text-right">
                         <div className="invisible group-hover:visible flex justify-end gap-2">
-                          <button onClick={() => openEdit(deal)} className="p-1 text-gray-400 hover:text-hubspot"><Edit2 size={14} /></button>
+                          <button onClick={() => openEdit(deal)} className="p-1 text-gray-400 hover:text-xubspot"><Edit2 size={14} /></button>
                           <button onClick={() => handleDelete(deal.id)} className="p-1 text-gray-400 hover:text-red-500"><Trash2 size={14} /></button>
                         </div>
                       </td>
@@ -468,12 +468,12 @@ export default function Deals() {
                   {Array.from({ length: Math.min(totalPages, 5) }, (_, i) => {
                     const p = totalPages <= 5 ? i + 1 : page <= 3 ? i + 1 : page >= totalPages - 2 ? totalPages - 4 + i : page - 2 + i;
                     return <button key={p} onClick={() => setPage(p)}
-                      className={`w-7 h-7 rounded text-xs font-medium ${page === p ? 'bg-hubspot text-white' : 'border border-gray-300 hover:bg-gray-100'}`}>{p}</button>;
+                      className={`w-7 h-7 rounded text-xs font-medium ${page === p ? 'bg-xubspot text-white' : 'border border-gray-300 hover:bg-gray-100'}`}>{p}</button>;
                   })}
                   <button disabled={page === totalPages || totalPages === 0} onClick={() => setPage(p => p + 1)}
                     className="px-3 py-1 border border-gray-300 rounded text-xs hover:bg-gray-100 disabled:opacity-40 disabled:cursor-not-allowed">Next &gt;</button>
                   <select value={pageSize} onChange={e => { setPageSize(Number(e.target.value)); setPage(1); }}
-                    className="ml-2 border border-gray-300 rounded px-2 py-1 text-xs focus:ring-1 focus:ring-hubspot">
+                    className="ml-2 border border-gray-300 rounded px-2 py-1 text-xs focus:ring-1 focus:ring-xubspot">
                     {[10, 25, 50].map(s => <option key={s} value={s}>{s} / page</option>)}
                   </select>
                 </div>
@@ -496,7 +496,7 @@ export default function Deals() {
                 <input
                   required
                   type="text"
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.name}
                   onChange={e => setForm({ ...form, name: e.target.value })}
                   placeholder="Deal name"
@@ -505,7 +505,7 @@ export default function Deals() {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Deal Stage</label>
                 <select
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.stage}
                   onChange={e => setForm({ ...form, stage: e.target.value })}
                 >
@@ -520,7 +520,7 @@ export default function Deals() {
                   <input
                     type="number"
                     min="0"
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.amount}
                     onChange={e => setForm({ ...form, amount: e.target.value })}
                     placeholder="0"
@@ -530,7 +530,7 @@ export default function Deals() {
                   <label className="block text-sm font-medium text-gray-700 mb-1">Close Date</label>
                   <input
                     type="date"
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.closeDate}
                     onChange={e => setForm({ ...form, closeDate: e.target.value })}
                   />
@@ -540,7 +540,7 @@ export default function Deals() {
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Deal Type</label>
                   <select
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.dealType}
                     onChange={e => setForm({ ...form, dealType: e.target.value })}
                   >
@@ -551,7 +551,7 @@ export default function Deals() {
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Priority</label>
                   <select
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.priority}
                     onChange={e => setForm({ ...form, priority: e.target.value })}
                   >
@@ -564,7 +564,7 @@ export default function Deals() {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Associated Company</label>
                 <select
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.companyId}
                   onChange={e => setForm({ ...form, companyId: e.target.value })}
                 >
@@ -577,7 +577,7 @@ export default function Deals() {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Associated Contact</label>
                 <select
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.contactId || ''}
                   onChange={e => setForm({ ...form, contactId: e.target.value })}
                 >
@@ -594,7 +594,7 @@ export default function Deals() {
                     type="number"
                     min="0"
                     max="100"
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.probability}
                     onChange={e => setForm({ ...form, probability: e.target.value })}
                     placeholder="0–100"
@@ -604,7 +604,7 @@ export default function Deals() {
                   <label className="block text-sm font-medium text-gray-700 mb-1">Assigned To</label>
                   <input
                     type="text"
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.owner}
                     onChange={e => setForm({ ...form, owner: e.target.value })}
                   />
@@ -614,7 +614,7 @@ export default function Deals() {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
                 <textarea
                   rows={3}
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot resize-none"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot resize-none"
                   value={form.description}
                   onChange={e => setForm({ ...form, description: e.target.value })}
                   placeholder="Deal description..."
@@ -630,7 +630,7 @@ export default function Deals() {
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-hubspot text-white rounded text-sm hover:bg-hubspot-hover"
+                  className="px-4 py-2 bg-xubspot text-white rounded text-sm hover:bg-xubspot-hover"
                 >
                   {editDeal ? 'Save Changes' : 'Create Deal'}
                 </button>

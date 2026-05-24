@@ -77,7 +77,7 @@ export default function Header() {
   }, [])
 
   const helpArticles = [
-    { title: 'Getting Started with Hotjar', desc: 'Learn how to install the tracking code and set up your first heatmap.' },
+    { title: 'Getting Started with Xotjar', desc: 'Learn how to install the tracking code and set up your first heatmap.' },
     { title: 'Understanding Recordings', desc: 'Watch real user sessions to identify UX issues and conversion blockers.' },
     { title: 'Creating Effective Surveys', desc: 'Best practices for designing surveys that capture actionable feedback.' },
     { title: 'Interpreting Heatmaps', desc: 'Learn to read click, move, and scroll heatmaps to optimize your pages.' },
@@ -88,7 +88,7 @@ export default function Header() {
     <header className="header">
       <Link to={withCurrentSearch('/', location.search)} className="header-logo">
         <HotjarFlame />
-        <span className="header-logo-text">hotjar</span>
+        <span className="header-logo-text">xotjar</span>
       </Link>
 
       <div className="site-selector" onClick={() => setSiteDropdownOpen(!siteDropdownOpen)}>

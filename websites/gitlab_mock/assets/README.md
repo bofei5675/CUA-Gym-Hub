@@ -1,8 +1,8 @@
-# GitLab Mock — Research Summary
+# XitLab Mock — Research Summary
 
 ## Application Overview
 
-**GitLab** is a comprehensive DevOps platform that provides source code management, CI/CD pipelines, issue tracking, code review, and project management — all in a single web application. It is the primary competitor to GitHub and is used by millions of developers worldwide.
+**XitLab** is a comprehensive DevOps platform that provides source code management, CI/CD pipelines, issue tracking, code review, and project management — all in a single web application. It is the primary competitor to GitHub and is used by millions of developers worldwide.
 
 **Real Website**: https://gitlab.com
 
@@ -29,7 +29,7 @@
 ## UI Layout Structure
 
 ### Global Shell
-- **Top bar** (height ~48px): GitLab logo (tanuki) on far left, global "Search or go to..." bar centered, quick-action buttons on right (create new "+", to-dos counter, user avatar dropdown)
+- **Top bar** (height ~48px): XitLab logo (tanuki) on far left, global "Search or go to..." bar centered, quick-action buttons on right (create new "+", to-dos counter, user avatar dropdown)
 - **Left sidebar** (~220px wide, collapsible): Context-sensitive navigation. Changes based on whether viewing project, group, or personal dashboard. Has a "pinned" section at top for favorites.
 - **Main content area**: Takes remaining space, scrollable
 
@@ -58,8 +58,8 @@
 - **Info blue**: `#1F75CB`
 
 ### Typography
-- **Primary font**: `'GitLab Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', sans-serif`
-- **Mono font**: `'GitLab Mono', 'JetBrains Mono', 'Menlo', 'DejaVu Sans Mono', 'Liberation Mono', 'Consolas', monospace`
+- **Primary font**: `'XitLab Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', sans-serif`
+- **Mono font**: `'XitLab Mono', 'JetBrains Mono', 'Menlo', 'DejaVu Sans Mono', 'Liberation Mono', 'Consolas', monospace`
 - **Body text**: 14px, weight 400
 - **H1**: 24-30px, weight 600
 - **H2**: 21-25px, weight 600
@@ -115,7 +115,7 @@
 
 ### Screenshot 000003.jpg (New Merge Request page)
 - **Left sidebar**: Dark purple/gray (#292261 area), showing: Project name "Predefined Variables" at top, then sections: Pinned, Issues (count badge "0"), Merge requests (count badge "0"), then expandable sections: Manage, Plan, Code, Build, Secure, Deploy, Operate, Monitor, Analyze, Settings. Each section has a ">" chevron for sub-menu.
-- **Top bar**: GitLab tanuki logo (orange/red), quick action buttons, user avatar, "Search or go to..." bar
+- **Top bar**: XitLab tanuki logo (orange/red), quick action buttons, user avatar, "Search or go to..." bar
 - **Breadcrumb**: "demos-group / Predefined Variables / Merge requests / New"
 - **Main content**: New MR form with: Assignee dropdown, Approval rules, Milestone selector, Labels multi-select (showing colored pill badges like "predefined-variables" in green, "testing-rules" in red), Merge options checkboxes, "Create merge request" primary button (purple), "Cancel" secondary button
 - **Bottom tabs**: Commits (1), Pipelines (1), Changes (1) — showing commit list with avatar, message, date, and short SHA hash

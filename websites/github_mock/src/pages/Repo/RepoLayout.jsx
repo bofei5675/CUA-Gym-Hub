@@ -68,15 +68,15 @@
       };
 
       return (
-        <div className="bg-github-bg min-h-screen">
-          <div className="bg-github-bg border-b border-github-border pt-4 px-6">
+        <div className="bg-xithub-bg min-h-screen">
+          <div className="bg-xithub-bg border-b border-xithub-border pt-4 px-6">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2 text-lg">
-                <BookOpen size={18} className="text-github-muted" />
-                <Link to="/" className="text-github-accent hover:underline">{owner?.username}</Link>
-                <span className="text-github-muted">/</span>
-                <Link to={`/${owner?.username}/${repo.name}`} className="text-github-accent font-semibold hover:underline">{repo.name}</Link>
-                <span className="text-xs border border-github-border rounded-full px-2 py-0.5 text-github-muted ml-2">
+                <BookOpen size={18} className="text-xithub-muted" />
+                <Link to="/" className="text-xithub-accent hover:underline">{owner?.username}</Link>
+                <span className="text-xithub-muted">/</span>
+                <Link to={`/${owner?.username}/${repo.name}`} className="text-xithub-accent font-semibold hover:underline">{repo.name}</Link>
+                <span className="text-xs border border-xithub-border rounded-full px-2 py-0.5 text-xithub-muted ml-2">
                   {repo.isPrivate ? 'Private' : 'Public'}
                 </span>
               </div>
@@ -86,28 +86,28 @@
                   <button
                     onClick={handleWatch}
                     className={cn(
-                      "flex items-center gap-2 px-3 py-1 border border-github-border rounded-l-md text-github-text transition-colors",
+                      "flex items-center gap-2 px-3 py-1 border border-xithub-border rounded-l-md text-xithub-text transition-colors",
                       isWatching ? "bg-[#30363d] hover:bg-[#21262d]" : "bg-[#21262d] hover:bg-[#30363d]"
                     )}
                   >
                     <Eye size={16} /> {isWatching ? 'Unwatch' : 'Watch'}
                   </button>
-                  <div className="bg-[#21262d] border-y border-r border-github-border px-2 py-1 rounded-r-md text-github-text font-semibold">{repo.watchers || 12}</div>
+                  <div className="bg-[#21262d] border-y border-r border-xithub-border px-2 py-1 rounded-r-md text-xithub-text font-semibold">{repo.watchers || 12}</div>
                 </div>
                 <div className="flex rounded-md shadow-sm">
                   <button
                     onClick={handleFork}
-                    className="flex items-center gap-2 px-3 py-1 bg-[#21262d] border border-github-border rounded-l-md hover:bg-[#30363d] text-github-text"
+                    className="flex items-center gap-2 px-3 py-1 bg-[#21262d] border border-xithub-border rounded-l-md hover:bg-[#30363d] text-xithub-text"
                   >
                     <GitFork size={16} /> Fork
                   </button>
-                  <div className="bg-[#21262d] border-y border-r border-github-border px-2 py-1 rounded-r-md text-github-text font-semibold">{repo.forks}</div>
+                  <div className="bg-[#21262d] border-y border-r border-xithub-border px-2 py-1 rounded-r-md text-xithub-text font-semibold">{repo.forks}</div>
                 </div>
                 <div className="flex rounded-md shadow-sm">
                   <button
                     onClick={handleStar}
                     className={cn(
-                      "flex items-center gap-2 px-3 py-1 border border-github-border rounded-l-md text-github-text transition-colors",
+                      "flex items-center gap-2 px-3 py-1 border border-xithub-border rounded-l-md text-xithub-text transition-colors",
                       isStarred
                         ? "bg-[#2d1f00] hover:bg-[#3d2a00] border-yellow-700"
                         : "bg-[#21262d] hover:bg-[#30363d]"
@@ -116,7 +116,7 @@
                     <Star size={16} className={isStarred ? "fill-yellow-400 text-yellow-400" : ""} />
                     {isStarred ? 'Starred' : 'Star'}
                   </button>
-                  <div className="bg-[#21262d] border-y border-r border-github-border px-2 py-1 rounded-r-md text-github-text font-semibold">{repo.stars}</div>
+                  <div className="bg-[#21262d] border-y border-r border-xithub-border px-2 py-1 rounded-r-md text-xithub-text font-semibold">{repo.stars}</div>
                 </div>
               </div>
             </div>
@@ -130,7 +130,7 @@
                     "flex items-center gap-2 px-4 py-3 text-sm border-b-2 transition-colors whitespace-nowrap",
                     isCurrentTab(tab.path)
                       ? "border-[#fd8c73] text-white font-semibold"
-                      : "border-transparent text-github-text hover:border-github-border hover:text-github-muted"
+                      : "border-transparent text-xithub-text hover:border-xithub-border hover:text-xithub-muted"
                   )}
                 >
                   <tab.icon size={16} />

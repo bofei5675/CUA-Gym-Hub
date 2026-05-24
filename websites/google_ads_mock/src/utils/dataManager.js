@@ -1,4 +1,4 @@
-// dataManager.js - Google Ads Mock seed data and state management
+// dataManager.js - Xoogle Ads Mock seed data and state management
 
 function generateDailyMetrics() {
   const metrics = []
@@ -328,7 +328,7 @@ export function createInitialData() {
   const notifications = [
     { id: 'notif-1', type: 'ALERT', title: "Campaign 'Brand Search' limited by budget", message: "Your daily budget of $50 is limiting impressions. Consider raising to $75.", timestamp: '2025-03-28T14:30:00Z', read: false, campaignId: 'camp-1' },
     { id: 'notif-2', type: 'ALERT', title: 'Policy review: 2 ads need attention', message: 'Two ads in the Generic Search campaign are under review for policy compliance.', timestamp: '2025-03-27T09:15:00Z', read: false, campaignId: 'camp-2' },
-    { id: 'notif-3', type: 'INFO', title: 'New feature: Performance Max campaigns', message: "Google Ads introduces Performance Max campaigns. Upgrade to access AI-powered placements.", timestamp: '2025-03-25T10:00:00Z', read: true, campaignId: null },
+    { id: 'notif-3', type: 'INFO', title: 'New feature: Performance Max campaigns', message: "Xoogle Ads introduces Performance Max campaigns. Upgrade to access AI-powered placements.", timestamp: '2025-03-25T10:00:00Z', read: true, campaignId: null },
     { id: 'notif-4', type: 'INFO', title: 'Billing reminder: Invoice due March 31', message: 'Your monthly invoice of $12,136 is due on March 31, 2025.', timestamp: '2025-03-24T08:00:00Z', read: true, campaignId: null },
     { id: 'notif-5', type: 'RECOMMENDATION', title: 'Optimization opportunity detected', message: "Applying 3 recommendations could raise your optimization score from 72% to 85%.", timestamp: '2025-03-22T16:45:00Z', read: true, campaignId: null },
     { id: 'notif-6', type: 'RECOMMENDATION', title: "Competitor 'Trail Running' ad group underperforming", message: 'Trail Running ad group has a conversion rate 40% below account average. Consider pausing or restructuring.', timestamp: '2025-03-20T11:00:00Z', read: true, campaignId: 'camp-2' },

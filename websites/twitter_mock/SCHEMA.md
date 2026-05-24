@@ -17,7 +17,7 @@
 | `notifications` | `Notification[]` | Notifications for current user (u1). 10 seed items (n1–n10). |
 | `conversations` | `Conversation[]` | DM conversation metadata. 4 seed convs (conv1–conv4). |
 | `directMessages` | `DirectMessage[]` | DM message bodies. 15 seed messages (dm1–dm15). |
-| `lists` | `List[]` | Twitter lists owned by u1. 2 seed lists (list1–list2). |
+| `lists` | `List[]` | Xwitter lists owned by u1. 2 seed lists (list1–list2). |
 | `trends` | `Trend[]` | Trending topics sidebar. 10 seed trends (t1–t10). |
 | `bookmarkedPostIds` | `string[]` | Post IDs bookmarked by u1. Default: `["p3","p2","p8"]`. |
 | `mutedUsers` | `string[]` | User IDs muted by u1. Default: `[]`. |
@@ -127,7 +127,7 @@
 | `/notifications` | `Notifications` | All/Mentions tabs; marks all as read on mount |
 | `/messages` | `Messages` | DM inbox + conversation view + new message modal |
 | `/bookmarks` | `Bookmarks` | Bookmarked posts |
-| `/lists` | `Lists` | User's Twitter lists + create list modal |
+| `/lists` | `Lists` | User's Xwitter lists + create list modal |
 | `/profile/:handle` | `Profile` | User profile (Posts/Replies/Media/Likes tabs) |
 | `/profile/:handle/following` | `FollowingList` | Following list with follow/unfollow buttons |
 | `/profile/:handle/followers` | `FollowingList` | Followers list with follow/unfollow buttons |

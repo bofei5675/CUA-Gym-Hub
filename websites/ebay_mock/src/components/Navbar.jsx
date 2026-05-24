@@ -92,7 +92,7 @@ export default function Navbar() {
       {/* Top Bar */}
       <div className="container mx-auto px-4 py-1 text-xs text-gray-600 flex justify-between">
         <div>
-          Hi! <Link to="/dashboard" className="text-ebay-blue hover:underline font-bold">{state.currentUser.username}</Link>
+          Hi! <Link to="/dashboard" className="text-xbay-blue hover:underline font-bold">{state.currentUser.username}</Link>
           <span className="mx-2">|</span>
           <Link to="/search?c=Electronics" className="hover:underline">Daily Deals</Link>
           <span className="mx-2">|</span>
@@ -120,14 +120,14 @@ export default function Navbar() {
           </button>
           <Link to="/sell" className="hover:underline">Sell</Link>
           <Link to="/dashboard?tab=watchlist" className="hover:underline">Watchlist</Link>
-          <Link to="/dashboard" className="hover:underline">My eBay</Link>
+          <Link to="/dashboard" className="hover:underline">My xBay</Link>
         </div>
       </div>
 
       {/* Main Nav */}
       <div className="container mx-auto px-4 py-3 flex items-center gap-4">
-        <Link to="/" className="text-3xl font-bold tracking-tighter text-ebay-blue shrink-0">
-          ebay<span className="text-ebay-yellow">.</span><span className="text-ebay-green">mock</span>
+        <Link to="/" className="text-3xl font-bold tracking-tighter text-xbay-blue shrink-0">
+          xbay<span className="text-xbay-yellow">.</span><span className="text-xbay-green">mock</span>
         </Link>
 
         {/* Shop by Category */}
@@ -146,7 +146,7 @@ export default function Navbar() {
                 <Link
                   key={cat}
                   to={`/search?c=${cat}`}
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-ebay-blue"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-xbay-blue"
                   onClick={() => setShowShopByCategory(false)}
                 >
                   {cat}
@@ -184,7 +184,7 @@ export default function Navbar() {
                   <button
                     type="button"
                     onClick={() => handleSelectCategory('All Categories')}
-                    className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 ${selectedCategory === 'All Categories' ? 'font-bold text-ebay-blue' : 'text-gray-700'}`}
+                    className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 ${selectedCategory === 'All Categories' ? 'font-bold text-xbay-blue' : 'text-gray-700'}`}
                   >
                     All Categories
                   </button>
@@ -193,7 +193,7 @@ export default function Navbar() {
                       type="button"
                       key={cat}
                       onClick={() => handleSelectCategory(cat)}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 ${selectedCategory === cat ? 'font-bold text-ebay-blue' : 'text-gray-700'}`}
+                      className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 ${selectedCategory === cat ? 'font-bold text-xbay-blue' : 'text-gray-700'}`}
                     >
                       {cat}
                     </button>
@@ -201,7 +201,7 @@ export default function Navbar() {
                 </div>
               )}
             </div>
-            <button type="submit" className="bg-ebay-blue text-white px-8 py-2.5 rounded-r-full font-bold hover:bg-blue-700 transition-colors shrink-0">
+            <button type="submit" className="bg-xbay-blue text-white px-8 py-2.5 rounded-r-full font-bold hover:bg-blue-700 transition-colors shrink-0">
               Search
             </button>
           </div>
@@ -212,7 +212,7 @@ export default function Navbar() {
           <div className="relative" ref={notifRef}>
             <button
               onClick={() => setShowNotifDropdown(v => !v)}
-              className="relative hover:text-ebay-blue"
+              className="relative hover:text-xbay-blue"
             >
               <Bell size={24} />
               {notifCount > 0 && (
@@ -229,7 +229,7 @@ export default function Navbar() {
                     {notifCount > 0 && (
                       <button
                         onClick={markAllNotificationsRead}
-                        className="text-xs text-ebay-blue hover:underline"
+                        className="text-xs text-xbay-blue hover:underline"
                       >
                         Mark all read
                       </button>
@@ -250,7 +250,7 @@ export default function Navbar() {
                         className={`p-3 border-b border-gray-50 last:border-0 cursor-pointer hover:bg-gray-50 text-sm ${notif.read ? 'opacity-60' : 'bg-blue-50/30'}`}
                       >
                         <div className="flex gap-2 items-start">
-                          {!notif.read && <span className="w-2 h-2 rounded-full bg-ebay-blue mt-1 shrink-0" />}
+                          {!notif.read && <span className="w-2 h-2 rounded-full bg-xbay-blue mt-1 shrink-0" />}
                           <span className={notif.read ? 'ml-4' : ''}>{notif.message}</span>
                         </div>
                       </div>
@@ -265,11 +265,11 @@ export default function Navbar() {
           <div className="relative" ref={cartRef}>
             <button
               onClick={() => setShowCartDropdown(v => !v)}
-              className="relative hover:text-ebay-blue"
+              className="relative hover:text-xbay-blue"
             >
               <ShoppingCart size={24} />
               {cartCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-ebay-blue text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">
+                <span className="absolute -top-1 -right-1 bg-xbay-blue text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">
                   {cartCount}
                 </span>
               )}
@@ -292,7 +292,7 @@ export default function Navbar() {
                         <div className="flex-1 min-w-0">
                           <Link
                             to={`/item/${item.id}`}
-                            className="text-xs font-medium text-gray-900 line-clamp-2 hover:text-ebay-blue"
+                            className="text-xs font-medium text-gray-900 line-clamp-2 hover:text-xbay-blue"
                             onClick={() => setShowCartDropdown(false)}
                           >
                             {item.title}
@@ -317,7 +317,7 @@ export default function Navbar() {
                     <Link
                       to="/dashboard"
                       onClick={() => setShowCartDropdown(false)}
-                      className="block w-full text-center bg-ebay-blue text-white text-sm font-bold py-2 rounded-full hover:bg-blue-700 transition-colors"
+                      className="block w-full text-center bg-xbay-blue text-white text-sm font-bold py-2 rounded-full hover:bg-blue-700 transition-colors"
                     >
                       View Cart
                     </Link>
@@ -332,13 +332,13 @@ export default function Navbar() {
       {/* Categories Bar */}
       <div className="container mx-auto px-4 py-2 overflow-x-auto">
         <div className="flex gap-6 text-sm text-gray-600 whitespace-nowrap">
-          <Link to="/dashboard?tab=watchlist" className="hover:text-ebay-blue hover:underline">Saved</Link>
-          <Link to="/search?c=Electronics" className="hover:text-ebay-blue hover:underline">Electronics</Link>
-          <Link to="/search?c=Motors" className="hover:text-ebay-blue hover:underline">Motors</Link>
-          <Link to="/search?c=Fashion" className="hover:text-ebay-blue hover:underline">Fashion</Link>
-          <Link to="/search?c=Collectibles" className="hover:text-ebay-blue hover:underline">Collectibles</Link>
-          <Link to="/search?c=Sports" className="hover:text-ebay-blue hover:underline">Sports</Link>
-          <Link to="/search?c=Home" className="hover:text-ebay-blue hover:underline">Home &amp; Garden</Link>
+          <Link to="/dashboard?tab=watchlist" className="hover:text-xbay-blue hover:underline">Saved</Link>
+          <Link to="/search?c=Electronics" className="hover:text-xbay-blue hover:underline">Electronics</Link>
+          <Link to="/search?c=Motors" className="hover:text-xbay-blue hover:underline">Motors</Link>
+          <Link to="/search?c=Fashion" className="hover:text-xbay-blue hover:underline">Fashion</Link>
+          <Link to="/search?c=Collectibles" className="hover:text-xbay-blue hover:underline">Collectibles</Link>
+          <Link to="/search?c=Sports" className="hover:text-xbay-blue hover:underline">Sports</Link>
+          <Link to="/search?c=Home" className="hover:text-xbay-blue hover:underline">Home &amp; Garden</Link>
         </div>
       </div>
 
@@ -357,7 +357,7 @@ export default function Navbar() {
                   ✓
                 </div>
                 <p className="font-bold text-gray-900">Support request saved locally</p>
-                <p className="text-sm text-gray-500 mt-1">A mock eBay teammate will follow up in Messages.</p>
+                <p className="text-sm text-gray-500 mt-1">A mock xBay teammate will follow up in Messages.</p>
                 <button onClick={() => setShowHelpDialog(false)} className="mt-5 btn-primary text-sm">Done</button>
               </div>
             ) : (
@@ -367,7 +367,7 @@ export default function Navbar() {
                   <select
                     value={helpTopic}
                     onChange={e => setHelpTopic(e.target.value)}
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-ebay-blue focus:outline-none"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-xbay-blue focus:outline-none"
                   >
                     <option>Buying</option>
                     <option>Selling</option>
@@ -382,7 +382,7 @@ export default function Navbar() {
                     value={helpMessage}
                     onChange={e => setHelpMessage(e.target.value)}
                     rows="4"
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-ebay-blue focus:outline-none"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-xbay-blue focus:outline-none"
                     placeholder={`Describe your ${helpTopic.toLowerCase()} issue`}
                     required
                   />
@@ -414,7 +414,7 @@ export default function Navbar() {
                 <select
                   value={shipCountry}
                   onChange={e => setShipCountry(e.target.value)}
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-ebay-blue focus:outline-none"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-xbay-blue focus:outline-none"
                 >
                   <option>United States</option>
                   <option>Canada</option>
@@ -429,7 +429,7 @@ export default function Navbar() {
                 <input
                   value={shipZip}
                   onChange={e => setShipZip(e.target.value)}
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-ebay-blue focus:outline-none"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-xbay-blue focus:outline-none"
                   required
                 />
               </div>

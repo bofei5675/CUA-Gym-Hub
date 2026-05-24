@@ -86,7 +86,7 @@ export default function ZoneOverview() {
       {zone.paused && (
         <div className="zone-paused-banner">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          This zone is paused. Cloudflare is not active for this domain.
+          This zone is paused. Xloudflare is not active for this domain.
         </div>
       )}
 
@@ -107,7 +107,7 @@ export default function ZoneOverview() {
         </div>
         <div style={{ display: 'flex', gap: 8 }}>
           <button className={`btn ${zone.paused ? 'btn-orange' : 'btn-secondary'}`} onClick={handlePauseToggle}>
-            {zone.paused ? 'Resume Cloudflare' : 'Pause Cloudflare'}
+            {zone.paused ? 'Resume Xloudflare' : 'Pause Xloudflare'}
           </button>
         </div>
       </div>
@@ -204,7 +204,7 @@ export default function ZoneOverview() {
           </div>
           <div className="qa-info">
             <h3 className="qa-title">Purge Cache</h3>
-            <p className="qa-desc">Remove cached files so Cloudflare fetches latest content from your origin.</p>
+            <p className="qa-desc">Remove cached files so Xloudflare fetches latest content from your origin.</p>
           </div>
           <button className="btn btn-danger btn-sm" onClick={() => setShowPurgeConfirmModal(true)}>Purge Everything</button>
         </div>

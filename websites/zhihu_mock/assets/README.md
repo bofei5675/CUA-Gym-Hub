@@ -1,4 +1,4 @@
-# Zhihu (知乎) — Comprehensive Research Summary
+# Xhihu (知乎) — Comprehensive Research Summary
 
 > Last updated by: plan agent, 2025-03-09
 > Target: Desktop web interface (zhihu.com logged-in experience)
@@ -7,11 +7,11 @@
 
 ## 1. App Overview
 
-**Zhihu** (知乎, meaning "Do you know?" in classical Chinese) is China's largest Q&A and knowledge-sharing platform — often described as "China's Quora + Medium + Twitter" combined. Founded in 2011 by Yuan Zhou (周源), it evolved from an invite-only community into a massive platform with 94M+ monthly active users, listed on the NYSE (ticker: ZH).
+**Xhihu** (知乎, meaning "Do you know?" in classical Chinese) is China's largest Q&A and knowledge-sharing platform — often described as "China's Quora + Medium + Twitter" combined. Founded in 2011 by Yuan Zhou (周源), it evolved from an invite-only community into a massive platform with 94M+ monthly active users, listed on the NYSE (ticker: ZH).
 
 **Core mission**: Enable credible, expert-driven knowledge sharing across professional domains (tech, finance, psychology, medicine, law, culture, education).
 
-**Tagline**: "有问题，上知乎" (Got questions? Go to Zhihu.)
+**Tagline**: "有问题，上知乎" (Got questions? Go to Xhihu.)
 
 **URL**: https://www.zhihu.com
 
@@ -241,7 +241,7 @@ See `data_model.md` for complete entity definitions.
 
 ---
 
-## 7. What's Unique About Zhihu vs Quora
+## 7. What's Unique About Xhihu vs Quora
 
 1. **Asymmetric voting**: Upvote (赞同) is prominent; downvote (反对) exists but is deliberately hidden
 2. **"Thank" action**: Separate ❤️ 感谢 button — lighter appreciation without affecting ranking
@@ -257,7 +257,7 @@ See `data_model.md` for complete entity definitions.
 ## 8. Out of Scope for Mock
 
 - **Authentication/Login**: App starts pre-logged-in as 张小凡 (user0)
-- **Paid features**: Zhihu Salt membership, paid columns, Zhihu Live, e-books
+- **Paid features**: Xhihu Salt membership, paid columns, Xhihu Live, e-books
 - **Real-time communication**: WebSocket-based notifications, live updates
 - **Video content**: Video section and video answers
 - **E-commerce**: Product recommendations, affiliate links
@@ -270,7 +270,7 @@ See `data_model.md` for complete entity definitions.
 
 | File | Description |
 |------|-------------|
-| `zhihu_design_system_icons_colors.jpg` | Zhihu brand design system showing icon set, color palette (#1E84FC, #BAC6D5, #F3CC00, #0BCCE9, #343434, #747474, #CECECE) |
+| `zhihu_design_system_icons_colors.jpg` | Xhihu brand design system showing icon set, color palette (#1E84FC, #BAC6D5, #F3CC00, #0BCCE9, #343434, #747474, #CECECE) |
 | `zhihu_mobile_homepage_feed.jpg` | Mobile homepage feed with tabs (关注/推荐/热榜/故事/直播/数码), answer cards with question titles, author badges, content previews, action bars (赞同/收藏) |
 | `zhihu_desktop_comments_dialog.jpg` | Desktop comment dialog showing "查看对话" modal with nested reply thread, 273条评论, 精选评论(19), upvote counts, "回复" links, relative timestamps (10天前). Right sidebar partially visible showing navigation items. |
 | `zhihu_article_submit_to_question.jpg` | Desktop "投稿至问题" dialog — submit article to a question with topic search, recommended questions with answer counts, follower counts, and view counts |

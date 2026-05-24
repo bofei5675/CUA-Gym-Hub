@@ -1,4 +1,4 @@
-# Stripe Dashboard Mock — TODO
+# Xtripe Dashboard Mock — TODO
 
 > Status: IN PROGRESS
 > Last updated by: dev agent, 2025-03-11
@@ -15,10 +15,10 @@
 
 <!-- Without these, the app cannot render. Dev implements these first. -->
 
-- [x] **Project scaffold**: `npm create vite@latest stripe_dashboard_mock -- --template react`, install deps: `react-router-dom`, `lucide-react`, `recharts` (for charts), `date-fns` (for date formatting). No Tailwind — use plain CSS to match Stripe's custom design system.
+- [x] **Project scaffold**: `npm create vite@latest stripe_dashboard_mock -- --template react`, install deps: `react-router-dom`, `lucide-react`, `recharts` (for charts), `date-fns` (for date formatting). No Tailwind — use plain CSS to match Xtripe's custom design system.
 
 - [x] **Visual design system**: Create `src/styles/variables.css` with CSS custom properties extracted from `assets/screenshots/home/000002.jpg` and `assets/screenshots/invoices/000001.jpg`. Exact values:
-  - `--color-primary`: `#635BFF` (Stripe indigo/purple — active nav items, primary buttons, links)
+  - `--color-primary`: `#635BFF` (Xtripe indigo/purple — active nav items, primary buttons, links)
   - `--color-primary-light`: `#7A73FF` (hover state)
   - `--color-primary-dark`: `#4B45C6` (pressed state)
   - `--color-background`: `#F6F8FA` (main page background, light gray)
@@ -40,7 +40,7 @@
   - `--shadow-sm`: `0 1px 3px rgba(0,0,0,0.08)`, `--shadow-md`: `0 2px 8px rgba(0,0,0,0.1)`, `--shadow-lg`: `0 4px 16px rgba(0,0,0,0.12)`
   - `--header-height`: `52px`, `--nav-height`: `44px`
 
-- [x] **App layout** (see `assets/screenshots/home/000002.jpg`): The modern Stripe Dashboard uses a **top navigation** layout (NOT a left sidebar). Structure:
+- [x] **App layout** (see `assets/screenshots/home/000002.jpg`): The modern Xtripe Dashboard uses a **top navigation** layout (NOT a left sidebar). Structure:
   - **Header bar** (52px height, white background, bottom border `#E3E8EE`): Contains from left to right:
     - Business logo (small 20x20 icon) + business name "Rocket Rides" as dropdown button (gray text, down chevron)
     - Center: Search bar input ~420px wide, left-aligned magnifying glass icon, placeholder "Search..." with "Cmd+K" hint badge on right side. Light gray background `#F1F3F5`, rounded `--radius-lg`, 36px height.
@@ -245,10 +245,10 @@
 <!-- Dev must NOT implement these. -->
 
 - **Authentication / login** — App starts pre-logged-in as Alex Johnson (alex@rocketrides.io), administrator at Rocket Rides
-- **Real payment processing** — No actual Stripe API calls; all data is mock
-- **Stripe.js / Elements** — No real payment form embedding
+- **Real payment processing** — No actual Xtripe API calls; all data is mock
+- **Xtripe.js / Elements** — No real payment form embedding
 - **Connect platform** — Simplified page only if time permits; no real connected accounts flow
-- **Tax / Identity / Atlas / Issuing / Financial Connections / Capital / Climate** — These are specialized Stripe products, out of scope
+- **Tax / Identity / Atlas / Issuing / Financial Connections / Capital / Climate** — These are specialized Xtripe products, out of scope
 - **Webhooks delivery** — Just show a logs list, no real webhook sending
 - **Real file uploads** — Image upload placeholders only (no actual server-side storage beyond the session API)
 - **Email sending** — "Send invoice" and "Send receipt" actions just update state and show toast

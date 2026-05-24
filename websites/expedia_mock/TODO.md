@@ -1,4 +1,4 @@
-# Expedia Mock -- TODO
+# Xpedia Mock -- TODO
 
 > Status: IN PROGRESS
 > Last updated by: dev agent, 2026-04-11
@@ -17,7 +17,7 @@
 Without these, the app cannot render. Dev implements these first.
 
 - [x] **Project scaffold**: `npm create vite@latest expedia_mock -- --template react`, install deps: `react-router-dom`, `lucide-react`, `date-fns`. Configure vite.config.js with mock-api plugin for session isolation.
-- [x] **App layout**: Full-width page, no sidebar. Top header bar (64px height, white bg, shadow on scroll) with Expedia logo on left, nav links center ("Stays", "Flights", "Cars", "Packages", "Things to Do", "Cruises" -- only Stays/Flights/Cars functional), right side: "One Key" loyalty badge, "Your trips" link, account avatar circle with initials "SJ". Max content width: 1160px centered. See DESIGN.md section 4 for all spacing values.
+- [x] **App layout**: Full-width page, no sidebar. Top header bar (64px height, white bg, shadow on scroll) with Xpedia logo on left, nav links center ("Stays", "Flights", "Cars", "Packages", "Things to Do", "Cruises" -- only Stays/Flights/Cars functional), right side: "One Key" loyalty badge, "Your trips" link, account avatar circle with initials "SJ". Max content width: 1160px centered. See DESIGN.md section 4 for all spacing values.
 - [x] **Routing**: BrowserRouter in App.jsx with these routes:
   - `/` -- Homepage with hero search
   - `/hotels` -- Hotel search results
@@ -47,7 +47,7 @@ Without these, the app cannot render. Dev implements these first.
   - 4 bookings (2 upcoming, 1 completed, 1 cancelled)
   - Default search filters pre-filled for NYC, May 15-19
   - 6 trending destination objects for homepage (NYC, Cancun, Maui, Paris, Tokyo, London) with placeholder image URLs (use `https://picsum.photos/seed/<city>/400/250`)
-- [x] **Global CSS reset and base styles**: Apply DESIGN.md typography (font stack: `"Expedia Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`), color variables as CSS custom properties (--color-navy: #1E243A, --color-action-blue: #1668E3, etc.), body background #F5F5F5, smooth scrolling.
+- [x] **Global CSS reset and base styles**: Apply DESIGN.md typography (font stack: `"Xpedia Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`), color variables as CSS custom properties (--color-navy: #1E243A, --color-action-blue: #1668E3, etc.), body background #F5F5F5, smooth scrolling.
 
 ---
 

@@ -1,8 +1,8 @@
-# Trello Mock — Research Summary
+# Xrello Mock — Research Summary
 
 ## App Overview
 
-Trello is an Atlassian-owned visual project management tool based on the Kanban methodology. Users organize work into **Boards** (projects), which contain **Lists** (workflow stages like "To Do", "In Progress", "Done"), which contain **Cards** (individual tasks). Cards move between lists as work progresses. The entire experience is built around drag-and-drop interaction.
+Xrello is an Atlassian-owned visual project management tool based on the Kanban methodology. Users organize work into **Boards** (projects), which contain **Lists** (workflow stages like "To Do", "In Progress", "Done"), which contain **Cards** (individual tasks). Cards move between lists as work progresses. The entire experience is built around drag-and-drop interaction.
 
 **Category:** Productivity / Project Management
 **Distinct from competitors:** Extreme visual simplicity — everything is a card on a board. No complex Gantt charts or resource planning by default. Power-Ups add optional complexity.
@@ -11,7 +11,7 @@ Trello is an Atlassian-owned visual project management tool based on the Kanban 
 
 1. **Project Manager (Alice)** — Creates boards, assigns tasks, monitors progress, uses filters and labels to track status across many cards.
 2. **Team Member (Bob)** — Opens assigned cards, checks off items, adds comments, moves cards between lists, uploads attachments.
-3. **Casual User (Charlie)** — Uses Trello for personal task management, creates simple boards, stars favorites, uses checklists.
+3. **Casual User (Charlie)** — Uses Xrello for personal task management, creates simple boards, stars favorites, uses checklists.
 
 ## Primary Workflows (Agent Training Focus)
 
@@ -80,7 +80,7 @@ Trello is an Atlassian-owned visual project management tool based on the Kanban 
 ## UI Layout Description
 
 ### Global Header (Navbar) — 48px height
-- Left: Trello logo + "TrelloClone" text → links to home
+- Left: Xrello logo + "TrelloClone" text → links to home
 - Left nav buttons: Workspaces, Recent, Starred, Templates (currently non-functional dropdowns)
 - Debug State link (dev tool)
 - Right: Search input, Notification bell, Help icon, User avatar

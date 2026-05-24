@@ -59,7 +59,7 @@ export default function VirtualMachines() {
       </div>
 
       <div className="card" style={{ padding: 0 }}>
-        <table className="azure-table">
+        <table className="xzure-table">
           <thead>
             <tr>
               <th style={{ width: '32px' }}><input type="checkbox" checked={selected.length === filtered.length && filtered.length > 0} onChange={toggleAll} /></th>
@@ -82,7 +82,7 @@ export default function VirtualMachines() {
               </tr>
             ))}
             {filtered.length === 0 && (
-              <tr><td colSpan={6} style={{ textAlign: 'center', padding: '24px', color: 'var(--azure-text-secondary)' }}>No virtual machines found</td></tr>
+              <tr><td colSpan={6} style={{ textAlign: 'center', padding: '24px', color: 'var(--xzure-text-secondary)' }}>No virtual machines found</td></tr>
             )}
           </tbody>
         </table>

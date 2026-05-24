@@ -1,4 +1,4 @@
-# Trello Mock — TODO
+# Xrello Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-02-27
@@ -98,7 +98,7 @@
 
 - [ ] **Table view** — Add a `/board/:boardId/table` route that displays all cards on the board in a spreadsheet-like table with columns: Card Title, List, Labels, Members, Due Date, Status (complete/incomplete). Rows are sortable by clicking column headers. Inline editing: clicking a cell opens an editor for that field (text input for title, dropdown for list, label picker for labels, date picker for due date, checkbox for status). Add a "Table" view tab button in the Board header.
 
-- [ ] **Keyboard shortcuts** — Implement common Trello keyboard shortcuts. Show a help modal when pressing `Shift + ?` listing all shortcuts. Key bindings: `b` = focus board search in navbar, `f` = toggle filter panel, `n` = start adding a new card (when hovering a list), `e` = quick edit card (when hovering a card), `c` = archive card (when hovering), `l` = open label picker (when card modal is open), `d` = open date picker (when card modal is open), `m` = open member picker (when card modal is open), `Escape` = close modal/popover, `j`/`k` = navigate cards up/down, arrow keys for list navigation. Track which card/list is "focused" visually with a blue outline.
+- [ ] **Keyboard shortcuts** — Implement common Xrello keyboard shortcuts. Show a help modal when pressing `Shift + ?` listing all shortcuts. Key bindings: `b` = focus board search in navbar, `f` = toggle filter panel, `n` = start adding a new card (when hovering a list), `e` = quick edit card (when hovering a card), `c` = archive card (when hovering), `l` = open label picker (when card modal is open), `d` = open date picker (when card modal is open), `m` = open member picker (when card modal is open), `Escape` = close modal/popover, `j`/`k` = navigate cards up/down, arrow keys for list navigation. Track which card/list is "focused" visually with a blue outline.
 
 - [ ] **Undo/Redo** — Implement undo (`Ctrl+Z` / `Cmd+Z`) and redo (`Ctrl+Shift+Z` / `Cmd+Shift+Z`) by maintaining a state history stack in the context. Limit to last 20 actions. Show a brief toast notification "Action undone" when undo is triggered.
 

@@ -84,7 +84,7 @@
             <Link
               key={i}
               to={part.path}
-              className="text-github-accent hover:underline"
+              className="text-xithub-accent hover:underline"
               title={part.title}
             >
               {part.content}
@@ -96,7 +96,7 @@
             <Link
               key={i}
               to={part.path}
-              className="text-github-accent hover:underline"
+              className="text-xithub-accent hover:underline"
               title={part.title}
             >
               {part.content}
@@ -108,7 +108,7 @@
             <Link
               key={i}
               to={part.path}
-              className="text-github-accent font-semibold hover:underline"
+              className="text-xithub-accent font-semibold hover:underline"
             >
               {part.content}
             </Link>

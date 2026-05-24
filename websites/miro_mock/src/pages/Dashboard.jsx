@@ -163,7 +163,7 @@ export default function Dashboard() {
     <div className="dashboard">
       {/* Top area with logo and search */}
       <div className="dashboard-header">
-        <div className="dashboard-logo">miro</div>
+        <div className="dashboard-logo">xiro</div>
         <div className="dashboard-search">
           <Search size={20} color="#b3b3b3" />
           <input

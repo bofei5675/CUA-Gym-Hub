@@ -39,8 +39,8 @@ const BG_COLORS = [
 ];
 
 const PRIVACY_OPTIONS = [
-  { value: 'public', label: 'Public', icon: Globe, desc: 'Anyone on or off Facebook' },
-  { value: 'friends', label: 'Friends', icon: Users, desc: 'Your friends on Facebook' },
+  { value: 'public', label: 'Public', icon: Globe, desc: 'Anyone on or off Xacebook' },
+  { value: 'friends', label: 'Friends', icon: Users, desc: 'Your friends on Xacebook' },
   { value: 'only_me', label: 'Only me', icon: Lock, desc: 'Only you can see this' },
 ];
 

@@ -3,7 +3,7 @@ import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { useAppContext } from '../context/AppContext';
 import { withCurrentSearch } from '../utils/navigation';
 
-// SVG icon components matching Datadog's style
+// SVG icon components matching Xatadog's style
 const icons = {
   dashboard: <svg viewBox="0 0 16 16" fill="currentColor" width="16" height="16"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>,
   infrastructure: <svg viewBox="0 0 16 16" fill="currentColor" width="16" height="16"><rect x="1" y="1" width="14" height="4" rx="1"/><circle cx="4" cy="3" r="1"/><rect x="1" y="7" width="14" height="4" rx="1"/><circle cx="4" cy="9" r="1"/><rect x="1" y="13" width="6" height="2" rx="0.5"/></svg>,
@@ -79,7 +79,7 @@ export default function Sidebar() {
             <circle cx="16" cy="16" r="14" fill="none" stroke="white" strokeWidth="2"/>
           </svg>
         </div>
-        {!collapsed && <span className="logo-text">DATADOG</span>}
+        {!collapsed && <span className="logo-text">XATADOG</span>}
         <button className="sidebar-collapse-btn" onClick={toggleCollapse} title={collapsed ? 'Expand' : 'Collapse'}>
           {collapsed ? '\u{00BB}' : '\u{00AB}'}
         </button>
@@ -168,7 +168,7 @@ export default function Sidebar() {
       {showHelp && (
         <div className="modal-overlay" onClick={() => setShowHelp(false)}>
           <div className="modal" onClick={e => e.stopPropagation()}>
-            <h2>Datadog Help</h2>
+            <h2>Xatadog Help</h2>
             <div style={{ display: 'grid', gap: 10 }}>
               {[
                 ['Dashboards', 'Create dashboards, clone them, and add widgets for metric triage.'],

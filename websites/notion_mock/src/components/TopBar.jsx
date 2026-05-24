@@ -193,17 +193,17 @@ export const TopBar = ({ pageId }) => {
               {crumb.isEllipsis ? (
                 <span className="text-gray-400 flex-shrink-0">...</span>
               ) : crumb.isWorkspace ? (
-                <Link to="/" className="flex items-center px-1 hover:bg-notion-hover rounded cursor-pointer transition-colors flex-shrink-0">
+                <Link to="/" className="flex items-center px-1 hover:bg-xotion-hover rounded cursor-pointer transition-colors flex-shrink-0">
                   <span className="mr-1 text-sm">{crumb.icon}</span>
                   <span className="truncate max-w-[150px] text-gray-500">{crumb.title}</span>
                 </Link>
               ) : crumb.id === pageId ? (
-                <div className="flex items-center px-1 hover:bg-notion-hover rounded cursor-pointer transition-colors min-w-0">
+                <div className="flex items-center px-1 hover:bg-xotion-hover rounded cursor-pointer transition-colors min-w-0">
                   <span className="mr-1 text-lg flex-shrink-0">{crumb.icon || '\u{1F4C4}'}</span>
                   <span className="truncate font-medium max-w-[200px]">{crumb.title}</span>
                 </div>
               ) : (
-                <Link to={`/page/${crumb.id}`} className="flex items-center px-1 hover:bg-notion-hover rounded cursor-pointer transition-colors flex-shrink-0">
+                <Link to={`/page/${crumb.id}`} className="flex items-center px-1 hover:bg-xotion-hover rounded cursor-pointer transition-colors flex-shrink-0">
                   <span className="mr-1 text-lg">{crumb.icon || '\u{1F4C4}'}</span>
                   <span className="truncate max-w-[150px] text-gray-500">{crumb.title}</span>
                 </Link>
@@ -213,18 +213,18 @@ export const TopBar = ({ pageId }) => {
         </div>
 
         {/* Actions */}
-        <div className="flex items-center space-x-1 text-notion-textGray flex-shrink-0">
+        <div className="flex items-center space-x-1 text-xotion-textGray flex-shrink-0">
           <span className="text-xs mr-2">Edited {new Date(page.lastEditedDate || page.createdDate).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
 
           <button
-            className="p-1 hover:bg-notion-hover rounded transition-colors"
+            className="p-1 hover:bg-xotion-hover rounded transition-colors"
             onClick={() => setShowShareDialog(true)}
             title="Share"
           >
             <Share size={18} />
           </button>
           <button
-            className="p-1 hover:bg-notion-hover rounded transition-colors relative"
+            className="p-1 hover:bg-xotion-hover rounded transition-colors relative"
             onClick={() => setShowComments(!showComments)}
             title="Comments"
           >
@@ -236,14 +236,14 @@ export const TopBar = ({ pageId }) => {
             )}
           </button>
           <button
-            className="p-1 hover:bg-notion-hover rounded transition-colors"
+            className="p-1 hover:bg-xotion-hover rounded transition-colors"
             onClick={() => setShowHistory(!showHistory)}
             title="Page history"
           >
             <Clock size={18} />
           </button>
           <button
-            className="p-1 hover:bg-notion-hover rounded transition-colors"
+            className="p-1 hover:bg-xotion-hover rounded transition-colors"
             onClick={() => updatePage(pageId, { favorite: !page.favorite })}
             title={page.favorite ? 'Remove from favorites' : 'Add to favorites'}
           >
@@ -251,7 +251,7 @@ export const TopBar = ({ pageId }) => {
           </button>
           <div className="relative" ref={moreButtonRef}>
             <button
-              className="p-1 hover:bg-notion-hover rounded transition-colors"
+              className="p-1 hover:bg-xotion-hover rounded transition-colors"
               onClick={() => setShowMoreMenu(!showMoreMenu)}
             >
               <MoreHorizontal size={18} />

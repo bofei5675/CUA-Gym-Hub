@@ -60,7 +60,7 @@ export default function AllResources() {
       </div>
 
       <div className="card" style={{ padding: 0 }}>
-        <table className="azure-table">
+        <table className="xzure-table">
           <thead>
             <tr>
               <th className="sortable" onClick={() => handleSort('name')}>Name {sortCol === 'name' ? (sortDir === 'asc' ? '\u2191' : '\u2193') : ''}</th>
@@ -81,7 +81,7 @@ export default function AllResources() {
               </tr>
             ))}
             {filtered.length === 0 && (
-              <tr><td colSpan={5} style={{ textAlign: 'center', color: 'var(--azure-text-secondary)', padding: '24px' }}>No resources found</td></tr>
+              <tr><td colSpan={5} style={{ textAlign: 'center', color: 'var(--xzure-text-secondary)', padding: '24px' }}>No resources found</td></tr>
             )}
           </tbody>
         </table>

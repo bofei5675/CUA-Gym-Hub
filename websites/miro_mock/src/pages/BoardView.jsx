@@ -529,7 +529,7 @@ export default function BoardView() {
                 value={window.location.href}
                 onFocus={e => e.target.select()}
               />
-              <button className="modal-btn" style={{ background: 'var(--miro-primary)', color: 'white' }}
+              <button className="modal-btn" style={{ background: 'var(--xiro-primary)', color: 'white' }}
                 onClick={() => {
                   navigator.clipboard?.writeText(window.location.href).catch(() => {});
                 }}>

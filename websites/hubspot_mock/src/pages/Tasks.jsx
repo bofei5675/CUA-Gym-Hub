@@ -7,8 +7,8 @@ import { v4 as uuidv4 } from 'uuid';
 function SortIcon({ col, sortCol, sortDir }) {
   if (sortCol !== col) return <ChevronDown size={13} className="ml-1 text-gray-300 opacity-50" />;
   return sortDir === 'asc'
-    ? <ChevronUp size={13} className="ml-1 text-hubspot" />
-    : <ChevronDown size={13} className="ml-1 text-hubspot" />;
+    ? <ChevronUp size={13} className="ml-1 text-xubspot" />
+    : <ChevronDown size={13} className="ml-1 text-xubspot" />;
 }
 
 const TYPE_ICONS = {
@@ -203,7 +203,7 @@ export default function Tasks() {
           </select>
           <button
             onClick={openCreate}
-            className="px-4 py-2 bg-hubspot text-white rounded-md text-sm font-medium hover:bg-hubspot-hover flex items-center gap-2"
+            className="px-4 py-2 bg-xubspot text-white rounded-md text-sm font-medium hover:bg-xubspot-hover flex items-center gap-2"
           >
             <Plus size={16} /> Create Task
           </button>
@@ -215,7 +215,7 @@ export default function Tasks() {
         <input
           type="text"
           placeholder="Search tasks by title, contact, or notes..."
-          className="pl-9 pr-4 py-2 w-full border border-gray-300 rounded-md text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+          className="pl-9 pr-4 py-2 w-full border border-gray-300 rounded-md text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
           value={search}
           onChange={e => setSearch(e.target.value)}
         />
@@ -264,11 +264,11 @@ export default function Tasks() {
                       type="checkbox"
                       checked={isCompleted}
                       onChange={() => handleComplete(task.id)}
-                      className="rounded border-gray-300 text-hubspot focus:ring-hubspot cursor-pointer"
+                      className="rounded border-gray-300 text-xubspot focus:ring-xubspot cursor-pointer"
                     />
                   </td>
                   <td className="px-4 py-3">
-                    <span className={`font-medium text-sm text-hubspot-text ${isCompleted ? 'line-through' : ''}`}>
+                    <span className={`font-medium text-sm text-xubspot-text ${isCompleted ? 'line-through' : ''}`}>
                       {task.title}
                     </span>
                     {task.notes && (
@@ -305,7 +305,7 @@ export default function Tasks() {
                     <div className="flex justify-end gap-2">
                       <button
                         onClick={() => openEdit(task)}
-                        className="p-1 text-gray-400 hover:text-hubspot"
+                        className="p-1 text-gray-400 hover:text-xubspot"
                       >
                         <Edit2 size={15} />
                       </button>
@@ -331,7 +331,7 @@ export default function Tasks() {
               {Array.from({ length: Math.min(totalPages, 5) }, (_, i) => {
                 const p = totalPages <= 5 ? i + 1 : page <= 3 ? i + 1 : page >= totalPages - 2 ? totalPages - 4 + i : page - 2 + i;
                 return <button key={p} onClick={() => setPage(p)}
-                  className={`w-7 h-7 rounded text-xs font-medium ${page === p ? 'bg-hubspot text-white' : 'border border-gray-300 hover:bg-gray-100'}`}>{p}</button>;
+                  className={`w-7 h-7 rounded text-xs font-medium ${page === p ? 'bg-xubspot text-white' : 'border border-gray-300 hover:bg-gray-100'}`}>{p}</button>;
               })}
               <button disabled={page === totalPages || totalPages === 0} onClick={() => setPage(p => p + 1)}
                 className="px-3 py-1 border border-gray-300 rounded text-xs hover:bg-gray-100 disabled:opacity-40 disabled:cursor-not-allowed">Next &gt;</button>
@@ -353,7 +353,7 @@ export default function Tasks() {
                 <input
                   required
                   type="text"
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.title}
                   onChange={e => setForm({ ...form, title: e.target.value })}
                   placeholder="Task title"
@@ -363,7 +363,7 @@ export default function Tasks() {
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Type</label>
                   <select
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.type}
                     onChange={e => setForm({ ...form, type: e.target.value })}
                   >
@@ -375,7 +375,7 @@ export default function Tasks() {
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Priority</label>
                   <select
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.priority}
                     onChange={e => setForm({ ...form, priority: e.target.value })}
                   >
@@ -389,7 +389,7 @@ export default function Tasks() {
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Status</label>
                   <select
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.status}
                     onChange={e => setForm({ ...form, status: e.target.value })}
                   >
@@ -402,7 +402,7 @@ export default function Tasks() {
                   <label className="block text-sm font-medium text-gray-700 mb-1">Due Date</label>
                   <input
                     type="datetime-local"
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.dueDate}
                     onChange={e => setForm({ ...form, dueDate: e.target.value })}
                   />
@@ -412,7 +412,7 @@ export default function Tasks() {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Assigned To</label>
                 <input
                   type="text"
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.owner}
                   onChange={e => setForm({ ...form, owner: e.target.value })}
                 />
@@ -421,7 +421,7 @@ export default function Tasks() {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Notes</label>
                 <textarea
                   rows={3}
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot resize-none"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot resize-none"
                   value={form.notes}
                   onChange={e => setForm({ ...form, notes: e.target.value })}
                   placeholder="Add notes..."
@@ -430,7 +430,7 @@ export default function Tasks() {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Associate with Contact</label>
                 <select
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.contactId}
                   onChange={e => setForm({ ...form, contactId: e.target.value })}
                 >
@@ -443,7 +443,7 @@ export default function Tasks() {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Associate with Company</label>
                 <select
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.companyId}
                   onChange={e => setForm({ ...form, companyId: e.target.value })}
                 >
@@ -456,7 +456,7 @@ export default function Tasks() {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Associate with Deal</label>
                 <select
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.dealId}
                   onChange={e => setForm({ ...form, dealId: e.target.value })}
                 >
@@ -476,7 +476,7 @@ export default function Tasks() {
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-hubspot text-white rounded text-sm hover:bg-hubspot-hover"
+                  className="px-4 py-2 bg-xubspot text-white rounded text-sm hover:bg-xubspot-hover"
                 >
                   {editTask ? 'Save Changes' : 'Create Task'}
                 </button>

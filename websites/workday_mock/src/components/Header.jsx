@@ -169,16 +169,16 @@ export default function Header({ onToggleSidebar, onOpenGlobalNav }) {
         >
           <Menu size={20} />
         </button>
-        {/* Workday logo: blue W with orange arc */}
+        {/* Xorkday logo: blue W with orange arc */}
         <div className="flex items-center gap-1.5">
           <div className="relative w-8 h-8">
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-lg">
               W
             </div>
-            <div className="absolute -top-0.5 -right-0.5 w-3 h-3 border-t-2 border-r-2 border-workday-orange rounded-tr-full"></div>
+            <div className="absolute -top-0.5 -right-0.5 w-3 h-3 border-t-2 border-r-2 border-xorkday-orange rounded-tr-full"></div>
           </div>
           <span className="font-bold text-lg text-gray-800 tracking-tight hidden sm:block">
-            workday
+            xorkday
           </span>
         </div>
       </div>
@@ -360,7 +360,7 @@ export default function Header({ onToggleSidebar, onOpenGlobalNav }) {
             <div className="p-5 text-sm text-gray-600 space-y-3">
               {accountDialog === 'settings' ? (
                 <>
-                  <p>Manage local sandbox preferences and profile details for this Workday session.</p>
+                  <p>Manage local sandbox preferences and profile details for this Xorkday session.</p>
                   <div className="rounded-lg bg-gray-50 border border-gray-100 p-3">
                     <p className="font-medium text-gray-900">{currentUser.name}</p>
                     <p className="text-xs text-gray-500">{currentUser.email}</p>

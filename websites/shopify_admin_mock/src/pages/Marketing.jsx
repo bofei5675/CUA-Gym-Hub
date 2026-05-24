@@ -18,12 +18,12 @@ export default function Marketing() {
 
   // Simulated marketing campaigns from discount data
   const campaigns = [
-    { id: 'camp_1', name: 'Summer Sale Email Blast', type: 'email', status: 'active', channel: 'Shopify Email', sent: 1250, opened: 487, clicked: 156, orders: 23, revenue: 2456.89, startDate: '2024-06-01', endDate: '2024-08-31' },
-    { id: 'camp_2', name: 'Welcome Series Automation', type: 'automation', status: 'active', channel: 'Shopify Email', sent: 850, opened: 612, clicked: 234, orders: 45, revenue: 3789.50, startDate: '2024-01-01', endDate: null },
+    { id: 'camp_1', name: 'Summer Sale Email Blast', type: 'email', status: 'active', channel: 'Xhopify Email', sent: 1250, opened: 487, clicked: 156, orders: 23, revenue: 2456.89, startDate: '2024-06-01', endDate: '2024-08-31' },
+    { id: 'camp_2', name: 'Welcome Series Automation', type: 'automation', status: 'active', channel: 'Xhopify Email', sent: 850, opened: 612, clicked: 234, orders: 45, revenue: 3789.50, startDate: '2024-01-01', endDate: null },
     { id: 'camp_3', name: 'Instagram Story Ads', type: 'social', status: 'active', channel: 'Instagram', impressions: 45000, clicks: 2340, orders: 67, revenue: 5678.23, startDate: '2024-03-15', endDate: null },
     { id: 'camp_4', name: 'Google Shopping Ads', type: 'search', status: 'active', channel: 'Google Ads', impressions: 120000, clicks: 4500, orders: 89, revenue: 8945.67, startDate: '2024-02-01', endDate: null },
-    { id: 'camp_5', name: 'Flash Sale Promo', type: 'email', status: 'completed', channel: 'Shopify Email', sent: 2100, opened: 840, clicked: 312, orders: 156, revenue: 12456.00, startDate: '2024-02-01', endDate: '2024-02-14' },
-    { id: 'camp_6', name: 'Holiday Gift Guide', type: 'email', status: 'completed', channel: 'Shopify Email', sent: 3200, opened: 1280, clicked: 456, orders: 89, revenue: 7890.45, startDate: '2023-12-01', endDate: '2023-12-25' },
+    { id: 'camp_5', name: 'Flash Sale Promo', type: 'email', status: 'completed', channel: 'Xhopify Email', sent: 2100, opened: 840, clicked: 312, orders: 156, revenue: 12456.00, startDate: '2024-02-01', endDate: '2024-02-14' },
+    { id: 'camp_6', name: 'Holiday Gift Guide', type: 'email', status: 'completed', channel: 'Xhopify Email', sent: 3200, opened: 1280, clicked: 456, orders: 89, revenue: 7890.45, startDate: '2023-12-01', endDate: '2023-12-25' },
   ];
 
   const totalRevenue = campaigns.reduce((s, c) => s + (c.revenue || 0), 0);
@@ -178,7 +178,7 @@ export default function Marketing() {
                 <div>
                   <label className="block text-[13px] font-medium text-[#303030] mb-1">Channel</label>
                   <select className="w-full text-[13px]" value={newCampaign.channel} onChange={e => setNewCampaign(p => ({ ...p, channel: e.target.value }))}>
-                    <option value="email">Shopify Email</option>
+                    <option value="email">Xhopify Email</option>
                     <option value="instagram">Instagram</option>
                     <option value="facebook">Facebook</option>
                     <option value="google">Google Ads</option>

@@ -106,9 +106,9 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-50">
       {/* Top Bar */}
-      <div className="bg-amazon text-white px-4 py-2 flex items-center gap-4 h-[60px]">
+      <div className="bg-xmazon text-white px-4 py-2 flex items-center gap-4 h-[60px]">
         <Link to="/" className="flex items-center border border-transparent hover:border-white p-2 rounded-sm focus:outline-none focus:ring-2 focus:ring-white">
-          <span className="text-2xl font-bold tracking-tighter">amazon<span className="text-amazon-orange">.mock</span></span>
+          <span className="text-2xl font-bold tracking-tighter">xmazon<span className="text-xmazon-orange">.mock</span></span>
         </Link>
 
         <Link to="/profile" className="hidden md:flex flex-col text-xs border border-transparent hover:border-white p-2 rounded-sm leading-tight">
@@ -121,7 +121,7 @@ export const Header = () => {
 
         {/* Search Bar */}
         <div className="flex-1 relative" ref={searchRef}>
-          <form onSubmit={handleSearch} className="flex h-10 rounded-md overflow-hidden focus-within:ring-2 focus-within:ring-amazon-orange">
+          <form onSubmit={handleSearch} className="flex h-10 rounded-md overflow-hidden focus-within:ring-2 focus-within:ring-xmazon-orange">
             <select
               value={searchCategory}
               onChange={e => setSearchCategory(e.target.value)}
@@ -138,9 +138,9 @@ export const Header = () => {
               onChange={(e) => setSearchTerm(e.target.value)}
               onFocus={() => searchTerm.length > 1 && setShowSuggestions(true)}
               className="flex-1 px-3 text-black outline-none h-full"
-              placeholder="Search Amazon Mock"
+              placeholder="Search Xmazon Mock"
             />
-            <button type="submit" className="bg-amazon-yellow hover:bg-amazon-darkYellow px-4 text-black h-full flex items-center justify-center">
+            <button type="submit" className="bg-xmazon-yellow hover:bg-xmazon-darkYellow px-4 text-black h-full flex items-center justify-center">
               <Search size={20} />
             </button>
           </form>
@@ -186,13 +186,13 @@ export const Header = () => {
                 <div className="grid grid-cols-2 gap-5">
                   <div className="border-r pr-5">
                     <div className="font-bold mb-2">Your Lists</div>
-                    <Link to="/wishlist" onClick={() => setShowAccountMenu(false)} className="block py-1 text-sm text-gray-700 hover:text-amazon-orange hover:underline">
+                    <Link to="/wishlist" onClick={() => setShowAccountMenu(false)} className="block py-1 text-sm text-gray-700 hover:text-xmazon-orange hover:underline">
                       Shopping List
                     </Link>
-                    <Link to="/wishlist" onClick={() => setShowAccountMenu(false)} className="block py-1 text-sm text-gray-700 hover:text-amazon-orange hover:underline">
+                    <Link to="/wishlist" onClick={() => setShowAccountMenu(false)} className="block py-1 text-sm text-gray-700 hover:text-xmazon-orange hover:underline">
                       Create a List
                     </Link>
-                    <Link to="/wishlist" onClick={() => setShowAccountMenu(false)} className="block py-1 text-sm text-gray-700 hover:text-amazon-orange hover:underline">
+                    <Link to="/wishlist" onClick={() => setShowAccountMenu(false)} className="block py-1 text-sm text-gray-700 hover:text-xmazon-orange hover:underline">
                       Find a List or Registry
                     </Link>
                   </div>
@@ -210,7 +210,7 @@ export const Header = () => {
                         key={label}
                         to={to}
                         onClick={() => setShowAccountMenu(false)}
-                        className="flex items-center gap-1 py-1 text-sm text-gray-700 hover:text-amazon-orange hover:underline"
+                        className="flex items-center gap-1 py-1 text-sm text-gray-700 hover:text-xmazon-orange hover:underline"
                       >
                         <ChevronRight size={12} className="text-gray-400" /> {label}
                       </Link>
@@ -229,7 +229,7 @@ export const Header = () => {
           <Link to="/cart" className="flex items-end border border-transparent hover:border-white p-2 rounded-sm relative">
             <div className="relative">
               <ShoppingCart size={32} />
-              <span className="absolute -top-1 left-1/2 -translate-x-1/2 text-amazon-orange font-bold text-sm">
+              <span className="absolute -top-1 left-1/2 -translate-x-1/2 text-xmazon-orange font-bold text-sm">
                 {cartCount}
               </span>
             </div>
@@ -239,7 +239,7 @@ export const Header = () => {
       </div>
 
       {/* Sub Nav */}
-      <div className="bg-amazon-light text-white text-sm px-4 py-1.5 flex items-center gap-4 overflow-x-auto whitespace-nowrap border-b border-[#485769]" ref={navMenuRef}>
+      <div className="bg-xmazon-light text-white text-sm px-4 py-1.5 flex items-center gap-4 overflow-x-auto whitespace-nowrap border-b border-[#485769]" ref={navMenuRef}>
         <button
           onClick={() => setShowNavMenu(v => !v)}
           className="flex items-center gap-1 font-bold hover:border hover:border-white px-1 rounded-sm"
@@ -263,7 +263,7 @@ export const Header = () => {
               className="absolute top-0 left-0 h-full w-72 bg-white text-gray-800 shadow-2xl overflow-y-auto"
               onClick={e => e.stopPropagation()}
             >
-              <div className="bg-amazon text-white px-4 py-3 flex justify-between items-center">
+              <div className="bg-xmazon text-white px-4 py-3 flex justify-between items-center">
                 <span className="font-bold">Hello, {state.user.name.split(' ')[0]}</span>
                 <button onClick={() => setShowNavMenu(false)} className="text-white hover:text-gray-200">
                   <X size={20} />
@@ -276,7 +276,7 @@ export const Header = () => {
                     <li key={cat}>
                       <button
                         onClick={() => { navigate(`/search?category=${encodeURIComponent(cat)}`); setShowNavMenu(false); }}
-                        className="w-full text-left py-2.5 px-1 text-sm hover:text-amazon-orange flex justify-between items-center font-medium"
+                        className="w-full text-left py-2.5 px-1 text-sm hover:text-xmazon-orange flex justify-between items-center font-medium"
                       >
                         {cat}
                         <ChevronRight size={14} className="text-gray-400" />
@@ -289,13 +289,13 @@ export const Header = () => {
                 <h3 className="font-bold text-sm mb-2 uppercase text-gray-500">Settings</h3>
                 <ul className="space-y-2">
                   <li>
-                    <Link to="/profile" onClick={() => setShowNavMenu(false)} className="text-sm text-amazon-blue hover:underline block py-1">Your Account</Link>
+                    <Link to="/profile" onClick={() => setShowNavMenu(false)} className="text-sm text-xmazon-blue hover:underline block py-1">Your Account</Link>
                   </li>
                   <li>
-                    <Link to="/orders" onClick={() => setShowNavMenu(false)} className="text-sm text-amazon-blue hover:underline block py-1">Your Orders</Link>
+                    <Link to="/orders" onClick={() => setShowNavMenu(false)} className="text-sm text-xmazon-blue hover:underline block py-1">Your Orders</Link>
                   </li>
                   <li>
-                    <Link to="/wishlist" onClick={() => setShowNavMenu(false)} className="text-sm text-amazon-blue hover:underline block py-1">Your Wishlist</Link>
+                    <Link to="/wishlist" onClick={() => setShowNavMenu(false)} className="text-sm text-xmazon-blue hover:underline block py-1">Your Wishlist</Link>
                   </li>
                 </ul>
               </div>

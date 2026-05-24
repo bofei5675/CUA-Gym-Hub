@@ -3,12 +3,19 @@
 <div align="center">
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
-[![Mocks](https://img.shields.io/badge/Mock%20Apps-101-blue)](https://github.com/xlang-ai/CUA-Gym-Hub)
+[![Mocks](https://img.shields.io/badge/Mock%20Apps-98-blue)](https://github.com/xlang-ai/CUA-Gym-Hub)
 [![Part of CUA-Gym](https://img.shields.io/badge/Part%20of-CUA--Gym-orange)](https://github.com/xlang-ai/CUA-Gym)
 
 </div>
 
-CUA-Gym-Hub is a suite of **101 self-contained mock web applications** built as RL training environments for computer-use agents, and is included as a submodule of [CUA-Gym](https://github.com/xlang-ai/CUA-Gym).
+> **Research use only.** All third-party product names, logos, and trade
+> dress referenced in this repository remain the property of their
+> respective owners. Mocks display deliberately altered brand names in
+> their UI (e.g., "Xmail" rather than "Gmail"). See
+> [TRADEMARKS.md](TRADEMARKS.md) for the full notice and our 7-day
+> takedown policy.
+
+CUA-Gym-Hub is a suite of **98 self-contained mock web applications** built as RL training environments for computer-use agents, and is included as a submodule of [CUA-Gym](https://github.com/xlang-ai/CUA-Gym).
 
 Each mock is a production-quality React SPA that faithfully replicates the UI and interactive behavior of a real commercial product — without authentication, network calls, or external dependencies. All state is local, inspectable, and resettable via a unified HTTP API, making every mock a deterministic, reproducible sandbox for agent training.
 
@@ -92,7 +99,7 @@ curl -X POST "http://localhost:5173/post?sid=task_042" -d '{"action":"reset"}'
 
 Each mock's `SCHEMA.md` documents the full state schema and an **Observable State Changes** table that maps user actions to the state fields they affect — the primary reference for writing reward functions.
 
-## Mock Applications (101)
+## Mock Applications (98)
 
 **Communication & Social (18)**
 `discord` · `dingtalk` · `facebook` · `feishu` · `gmail` · `instagram` · `linkedin` · `microsoft_teams` · `outlook_web` · `pinterest` · `reddit` · `slack` · `twitter` · `wechat` · `weibo` · `xiaohongshu` · `zhihu` · `zoom_web`
@@ -106,14 +113,14 @@ Each mock's `SCHEMA.md` documents the full state schema and an **Observable Stat
 **E-commerce & Travel (11)**
 `amazon` · `amazon_seller` · `booking_com` · `ebay` · `expedia` · `instacart` · `shopify_admin` · `taobao_seller` · `tripadvisor` · `uber_eats` · `woocommerce`
 
-**Finance & Enterprise (22)**
-`adp` · `bamboohr` · `california_tax` · `clio` · `coinbase` · `contractbook` · `docusign` · `Expensify` · `greenhouse` · `gusto` · `hubspot` · `hubspot_marketing` · `paypal` · `quickbooks` · `robinhood` · `salesforce` · `SAP` · `ServiceNow` · `stripe_dashboard` · `TradingView` · `visa_portal_ds160` · `workday`
+**Finance & Enterprise (20)**
+`adp` · `bamboohr` · `clio` · `coinbase` · `contractbook` · `docusign` · `Expensify` · `greenhouse` · `gusto` · `hubspot` · `hubspot_marketing` · `paypal` · `quickbooks` · `robinhood` · `salesforce` · `SAP` · `ServiceNow` · `stripe_dashboard` · `TradingView` · `workday`
 
 **Analytics & Marketing (10)**
 `amplitude` · `google_ads` · `google_analytics` · `hotjar` · `klaviyo` · `looker_studio` · `mailchimp` · `meta_ads` · `mixpanel` · `tableau`
 
-**Other (12)**
-`12306` · `epic-health` · `google_flights` · `PACS-viewer` · `usa-gov` · `westlaw` · `youtube` · `Zendesk` · `zillow` · `adp` · `tripadvisor`
+**Other (9)**
+`12306` · `epic-health` · `google_flights` · `PACS-viewer` · `westlaw` · `youtube` · `Zendesk` · `zillow` · `tripadvisor`
 
 ## Quick Start
 
@@ -130,7 +137,7 @@ npm run build
 npm run preview    # → http://localhost:4173
 ```
 
-**Deploy all 101 mocks on one server** (requires Node.js ≥ 18, tmux):
+**Deploy all 98 mocks on one server** (requires Node.js ≥ 18, tmux):
 ```bash
 ./deploy-all.sh                            # install + build + start all
 ./deploy-all.sh --skip-install             # skip npm install

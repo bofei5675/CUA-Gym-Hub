@@ -1,4 +1,4 @@
-# Alibaba Cloud (Aliyun) Console Mock -- TODO
+# Alibaba Cloud (Xliyun) Console Mock -- TODO
 
 > Status: IN PROGRESS (DEV)
 > Last updated by: dev agent, 2026-04-11
@@ -147,7 +147,7 @@
 
 - [x] Data table: columns: Bucket Name (blue link to `/oss/buckets/:name`), Region, Storage Class (tag styled), ACL (tag styled: "Private" gray, "Public Read" blue, "Public Read-Write" orange warning), Object Count, Storage Size (formatted as GiB/MiB), Created Time. Search filter above table for bucket name.
 
-- [x] Note: OSS buckets are region-independent in the list view (show all buckets regardless of region selector, but display the region column). This matches real Aliyun behavior.
+- [x] Note: OSS buckets are region-independent in the list view (show all buckets regardless of region selector, but display the region column). This matches real Xliyun behavior.
 
 ### OSS Bucket Detail (`/oss/buckets/:name`)
 

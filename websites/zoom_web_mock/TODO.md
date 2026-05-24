@@ -1,4 +1,4 @@
-# Zoom Web Mock — TODO
+# Xoom Web Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2025-03-09
@@ -14,23 +14,23 @@
 
 ## P0 — Core Shell Improvements
 
-> The project is already scaffolded. These items fix/upgrade the existing shell to match the real Zoom Workplace client.
+> The project is already scaffolded. These items fix/upgrade the existing shell to match the real Xoom Workplace client.
 
-- [x] **Visual design system overhaul**: Study `assets/screenshots/000003.jpg` (Home tab) and `assets/screenshots/chat/000001.jpg` (Team Chat). The real Zoom Workplace uses a **horizontal top navigation bar** (not a left sidebar). Current implementation has a vertical left sidebar which is incorrect. Redesign to match:
+- [x] **Visual design system overhaul**: Study `assets/screenshots/000003.jpg` (Home tab) and `assets/screenshots/chat/000001.jpg` (Team Chat). The real Xoom Workplace uses a **horizontal top navigation bar** (not a left sidebar). Current implementation has a vertical left sidebar which is incorrect. Redesign to match:
   - **Top navigation bar** (~48px tall, white background, bottom border `#E0E0E0`):
-    - Left section: Zoom logo icon (blue `#0B5CFF` circle with white "Z"), back/forward nav arrows (gray), search bar with `Ctrl+F` hint (gray bg `#F1F1F1`, rounded-full, ~240px wide)
+    - Left section: Xoom logo icon (blue `#0B5CFF` circle with white "Z"), back/forward nav arrows (gray), search bar with `Ctrl+F` hint (gray bg `#F1F1F1`, rounded-full, ~240px wide)
     - Center section: Tab icons in a row — Home (house icon), Team Chat (chat bubble), Meetings (clock icon), Contacts (person+), with text labels below each icon. Active tab is blue `#0B5CFF` with text, inactive is gray `#747487`
     - Right section: Settings gear icon, user avatar (32px circle)
   - **Color palette update** in `tailwind.config.js`:
-    - `zoom-blue: '#0B5CFF'` (primary — was `#2D8CFF`, needs update to match real Zoom)
-    - `zoom-orange: '#F26D21'` (New Meeting button)
-    - `zoom-bg: '#F6F6F6'` (page background)
-    - `zoom-dark: '#232333'` (text)
-    - `zoom-gray: '#747487'` (secondary text)
-    - `zoom-border: '#E0E0E0'` (borders)
-    - `zoom-hover: '#E8F0FE'` (hover states)
-    - `zoom-meeting-bg: '#242424'` (meeting room dark bg)
-    - `zoom-toolbar-bg: '#1A1A1A'` (meeting toolbar)
+    - `xoom-blue: '#0B5CFF'` (primary — was `#2D8CFF`, needs update to match real Xoom)
+    - `xoom-orange: '#F26D21'` (New Meeting button)
+    - `xoom-bg: '#F6F6F6'` (page background)
+    - `xoom-dark: '#232333'` (text)
+    - `xoom-gray: '#747487'` (secondary text)
+    - `xoom-border: '#E0E0E0'` (borders)
+    - `xoom-hover: '#E8F0FE'` (hover states)
+    - `xoom-meeting-bg: '#242424'` (meeting room dark bg)
+    - `xoom-toolbar-bg: '#1A1A1A'` (meeting toolbar)
   - Typography: Use `font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif`
   - Remove the 96px left sidebar entirely. Replace with top nav bar.
   - The header below the nav bar is no longer needed (page title was in header); each page handles its own header.
@@ -192,7 +192,7 @@
   - Speaker view: large main tile for "active speaker" + strip of small tiles on top or right for other participants
 
 - [x] **Meeting info overlay improvement**: Top-left overlay should show:
-  - Green shield icon ✅ + "Zoom Meeting"
+  - Green shield icon ✅ + "Xoom Meeting"
   - Meeting ID on hover or click
 
 - [x] **End meeting options**: "End" button (red) when clicked should show a small popover:
@@ -204,7 +204,7 @@
 - [x] **Contacts tabs**: Add tab bar at top: "Directory" | "Channels" | "Rooms" — matching `assets/screenshots/contacts/000004.jpg`
   - **Directory** (default): Shows all contacts in an alphabetical list grouped by first letter. Each contact row: avatar (40px), name (bold), email (gray), status dot, department badge. Hover: Video call, Chat, Star, More buttons.
   - **Channels**: Lists all Team Chat channels the user belongs to with name, member count, description. Click opens that channel in Team Chat.
-  - **Rooms**: Placeholder "No Zoom Rooms configured" empty state (Zoom Rooms is a hardware product).
+  - **Rooms**: Placeholder "No Xoom Rooms configured" empty state (Xoom Rooms is a hardware product).
 
 - [x] **Contact search**: Add search input at top of contacts list that filters by name or email as user types.
 
@@ -245,7 +245,7 @@
 - [x] **General settings section** (NEW): Add:
   - Theme: "Light" / "Dark" / "System" radio buttons (light is default, only switches a CSS class — actual dark mode implementation optional)
   - Language: dropdown with "English" selected
-  - "Start Zoom when I start my computer" toggle (non-functional, just UI)
+  - "Start Xoom when I start my computer" toggle (non-functional, just UI)
 
 - [x] **Audio settings enhancement**: Match `assets/screenshots/settings/000001.jpg`:
   - Microphone: dropdown selector showing device names
@@ -298,7 +298,7 @@
 
 - [x] **New Meeting dropdown with PMI option**: When "Use My Personal Meeting ID" is selected from the New Meeting dropdown, start the meeting using the PMI as the room ID.
 
-- [ ] **Meeting waiting room UI**: When waiting room is enabled for a meeting, show a "Waiting Room" view before joining the meeting room: centered card with meeting title, "Please wait, the meeting host will let you in soon", with a Zoom-branded animation.
+- [ ] **Meeting waiting room UI**: When waiting room is enabled for a meeting, show a "Waiting Room" view before joining the meeting room: centered card with meeting title, "Please wait, the meeting host will let you in soon", with a Xoom-branded animation.
 
 - [x] **Meeting recording indicator**: When recording is active in Room, show a red pulsing dot in top-left with "Recording" text. Also show in participant's view.
 
@@ -331,10 +331,10 @@
 - Authentication / login (app starts pre-logged-in as `Alex Johnson`)
 - Real WebRTC video/audio streaming
 - Real file upload/storage
-- Zoom Phone (VoIP)
-- Zoom Webinars
+- Xoom Phone (VoIP)
+- Xoom Webinars
 - AI Companion features
-- Zoom Rooms hardware integration
+- Xoom Rooms hardware integration
 - Email/SMS sending
 - Real-time sync / WebSocket connections
 - End-to-end encryption

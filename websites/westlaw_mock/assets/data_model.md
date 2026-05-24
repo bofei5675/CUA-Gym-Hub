@@ -1,4 +1,4 @@
-# Westlaw Mock -- Data Model
+# Xestlaw Mock -- Data Model
 
 This document defines all entity types, their fields, relationships, and example values for `dataManager.js`.
 

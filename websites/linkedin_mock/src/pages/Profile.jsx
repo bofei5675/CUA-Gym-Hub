@@ -86,7 +86,7 @@ const ExperienceForm = ({ onClose, onSave, initialData = null }) => {
       </div>
       <div className="flex justify-end gap-2 pt-4">
         <button type="button" onClick={onClose} className="px-4 py-2 text-gray-600 font-semibold hover:bg-gray-100 rounded-full">Cancel</button>
-        <button type="submit" className="px-4 py-2 bg-linkedin-blue text-white font-semibold rounded-full hover:bg-linkedin-dark">Save</button>
+        <button type="submit" className="px-4 py-2 bg-xinkedin-blue text-white font-semibold rounded-full hover:bg-xinkedin-dark">Save</button>
       </div>
     </form>
   );
@@ -121,7 +121,7 @@ const EducationForm = ({ onClose, onSave, initialData = null }) => {
       </div>
       <div className="flex justify-end gap-2 pt-4">
         <button type="button" onClick={onClose} className="px-4 py-2 text-gray-600 font-semibold hover:bg-gray-100 rounded-full">Cancel</button>
-        <button type="submit" className="px-4 py-2 bg-linkedin-blue text-white font-semibold rounded-full hover:bg-linkedin-dark">Save</button>
+        <button type="submit" className="px-4 py-2 bg-xinkedin-blue text-white font-semibold rounded-full hover:bg-xinkedin-dark">Save</button>
       </div>
     </form>
   );
@@ -146,7 +146,7 @@ const SkillForm = ({ onClose, onSave }) => {
       </div>
       <div className="flex justify-end gap-2 pt-4">
         <button type="button" onClick={onClose} className="px-4 py-2 text-gray-600 font-semibold hover:bg-gray-100 rounded-full">Cancel</button>
-        <button type="submit" className="px-4 py-2 bg-linkedin-blue text-white font-semibold rounded-full hover:bg-linkedin-dark">Save</button>
+        <button type="submit" className="px-4 py-2 bg-xinkedin-blue text-white font-semibold rounded-full hover:bg-xinkedin-dark">Save</button>
       </div>
     </form>
   );
@@ -254,7 +254,7 @@ export default function Profile() {
                   const newBanner = `https://picsum.photos/1200/400?random=${Date.now()}`;
                   updateProfile({ banner: newBanner });
                 }}
-                className="absolute top-4 right-4 bg-white p-2 rounded-full text-linkedin-blue hover:text-linkedin-dark"
+                className="absolute top-4 right-4 bg-white p-2 rounded-full text-xinkedin-blue hover:text-xinkedin-dark"
                 title="Change banner photo"
               >
                 <Pencil size={18} />
@@ -277,7 +277,7 @@ export default function Profile() {
                         className="text-2xl font-bold text-gray-900 border border-gray-300 rounded px-2 py-1"
                         autoFocus
                       />
-                      <button onClick={() => { updateProfile({ name: nameText }); setIsEditingName(false); }} className="text-sm bg-linkedin-blue text-white px-3 py-1 rounded-full font-semibold">Save</button>
+                      <button onClick={() => { updateProfile({ name: nameText }); setIsEditingName(false); }} className="text-sm bg-xinkedin-blue text-white px-3 py-1 rounded-full font-semibold">Save</button>
                       <button onClick={() => { setNameText(user.name); setIsEditingName(false); }} className="text-sm text-gray-600 px-3 py-1 rounded-full font-semibold hover:bg-gray-100">Cancel</button>
                     </div>
                   ) : (
@@ -294,14 +294,14 @@ export default function Profile() {
                       className="text-base text-gray-900 border border-gray-300 rounded px-2 py-1 w-full"
                       autoFocus
                     />
-                    <button onClick={() => { updateProfile({ headline: headlineText }); setIsEditingHeadline(false); }} className="text-sm bg-linkedin-blue text-white px-3 py-1 rounded-full font-semibold whitespace-nowrap">Save</button>
+                    <button onClick={() => { updateProfile({ headline: headlineText }); setIsEditingHeadline(false); }} className="text-sm bg-xinkedin-blue text-white px-3 py-1 rounded-full font-semibold whitespace-nowrap">Save</button>
                     <button onClick={() => { setHeadlineText(user.headline); setIsEditingHeadline(false); }} className="text-sm text-gray-600 px-3 py-1 rounded-full font-semibold hover:bg-gray-100 whitespace-nowrap">Cancel</button>
                   </div>
                 ) : (
                   <p className="text-base text-gray-900 mt-1" onClick={() => isOwnProfile && setIsEditingHeadline(true)} style={isOwnProfile ? { cursor: 'pointer' } : {}}>{user.headline}</p>
                 )}
-                {user.location && <p className="text-sm text-gray-500 mt-1">{user.location} &#183; <span className="text-linkedin-blue font-semibold cursor-pointer hover:underline" onClick={() => setShowContactInfo(true)}>Contact info</span></p>}
-                <p className="text-sm text-linkedin-blue font-semibold mt-3 hover:underline cursor-pointer" onClick={() => navigate('/mynetwork')}>{user.connections?.length || 0} connections</p>
+                {user.location && <p className="text-sm text-gray-500 mt-1">{user.location} &#183; <span className="text-xinkedin-blue font-semibold cursor-pointer hover:underline" onClick={() => setShowContactInfo(true)}>Contact info</span></p>}
+                <p className="text-sm text-xinkedin-blue font-semibold mt-3 hover:underline cursor-pointer" onClick={() => navigate('/mynetwork')}>{user.connections?.length || 0} connections</p>
               </div>
               {isOwnProfile && user.experience && user.experience[0] && (
                 <div className="hidden md:block">
@@ -316,7 +316,7 @@ export default function Profile() {
               {isOwnProfile ? (
                 <div className="flex gap-2 relative">
                   <div className="relative">
-                    <button onClick={() => setShowOpenTo(!showOpenTo)} className="bg-linkedin-blue text-white px-6 py-1.5 rounded-full font-semibold hover:bg-linkedin-dark">Open to</button>
+                    <button onClick={() => setShowOpenTo(!showOpenTo)} className="bg-xinkedin-blue text-white px-6 py-1.5 rounded-full font-semibold hover:bg-xinkedin-dark">Open to</button>
                     {showOpenTo && (
                       <div className="absolute left-0 top-full mt-1 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-20 w-64">
                         <button onClick={() => { updateProfile({ openTo: 'hiring' }); setShowOpenTo(false); }} className="block w-full text-left px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100">Finding a new job</button>
@@ -326,7 +326,7 @@ export default function Profile() {
                     )}
                   </div>
                   <div className="relative">
-                    <button onClick={() => setShowAddSection(!showAddSection)} className="border border-linkedin-blue text-linkedin-blue px-6 py-1.5 rounded-full font-semibold hover:bg-blue-50">Add profile section</button>
+                    <button onClick={() => setShowAddSection(!showAddSection)} className="border border-xinkedin-blue text-xinkedin-blue px-6 py-1.5 rounded-full font-semibold hover:bg-blue-50">Add profile section</button>
                     {showAddSection && (
                       <div className="absolute left-0 top-full mt-1 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-20 w-64">
                         <button onClick={() => { setShowAddSection(false); setEditingExp(null); setShowExpModal(true); }} className="block w-full text-left px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100">Add experience</button>
@@ -349,13 +349,13 @@ export default function Profile() {
               ) : (
                 <>
                   {isConnected ? (
-                    <button onClick={handleMessage} className="bg-linkedin-blue text-white px-6 py-1.5 rounded-full font-semibold hover:bg-linkedin-dark flex items-center gap-2">
+                    <button onClick={handleMessage} className="bg-xinkedin-blue text-white px-6 py-1.5 rounded-full font-semibold hover:bg-xinkedin-dark flex items-center gap-2">
                       <MessageSquare size={16} /> Message
                     </button>
                   ) : hasPendingRequest ? (
                     <button disabled className="border border-gray-400 text-gray-500 px-6 py-1.5 rounded-full font-semibold cursor-not-allowed">Pending</button>
                   ) : (
-                    <button onClick={handleConnect} className="bg-linkedin-blue text-white px-6 py-1.5 rounded-full font-semibold hover:bg-linkedin-dark flex items-center gap-2">
+                    <button onClick={handleConnect} className="bg-xinkedin-blue text-white px-6 py-1.5 rounded-full font-semibold hover:bg-xinkedin-dark flex items-center gap-2">
                       <UserPlus size={16} /> Connect
                     </button>
                   )}
@@ -394,7 +394,7 @@ export default function Profile() {
                 />
                 <div className="flex justify-end gap-2 mt-2">
                   <button onClick={() => setIsEditingAbout(false)} className="px-4 py-1 rounded-full hover:bg-gray-100 font-semibold text-gray-600">Cancel</button>
-                  <button onClick={saveAbout} className="px-4 py-1 bg-linkedin-blue text-white rounded-full font-semibold">Save</button>
+                  <button onClick={saveAbout} className="px-4 py-1 bg-xinkedin-blue text-white rounded-full font-semibold">Save</button>
                 </div>
               </div>
             ) : (
@@ -409,7 +409,7 @@ export default function Profile() {
             <div className="flex justify-between items-center mb-4">
               <div>
                 <h2 className="text-xl font-semibold">Activity</h2>
-                <p className="text-sm text-linkedin-blue font-semibold">{state.currentUser.connections.length} followers</p>
+                <p className="text-sm text-xinkedin-blue font-semibold">{state.currentUser.connections.length} followers</p>
               </div>
             </div>
             <div className="space-y-4">
@@ -456,7 +456,7 @@ export default function Profile() {
                   </div>
                   {isOwnProfile && (
                     <div className="absolute top-0 right-0 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <button onClick={() => { setEditingExp(exp); setShowExpModal(true); }} className="p-2 text-gray-400 hover:text-linkedin-blue">
+                      <button onClick={() => { setEditingExp(exp); setShowExpModal(true); }} className="p-2 text-gray-400 hover:text-xinkedin-blue">
                         <Pencil size={16} />
                       </button>
                       <button onClick={() => deleteExperience(exp.id)} className="p-2 text-gray-400 hover:text-red-500">
@@ -492,7 +492,7 @@ export default function Profile() {
                   </div>
                   {isOwnProfile && (
                     <div className="absolute top-0 right-0 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <button onClick={() => { setEditingEdu(edu); setShowEduModal(true); }} className="p-2 text-gray-400 hover:text-linkedin-blue">
+                      <button onClick={() => { setEditingEdu(edu); setShowEduModal(true); }} className="p-2 text-gray-400 hover:text-xinkedin-blue">
                         <Pencil size={16} />
                       </button>
                       <button onClick={() => deleteEducation(edu.id)} className="p-2 text-gray-400 hover:text-red-500">
@@ -561,7 +561,7 @@ export default function Profile() {
           {isOwnProfile && (
             <button
               onClick={() => { navigator.clipboard.writeText(`www.linkedin.com/in/${user.id}`); }}
-              className="text-xs text-linkedin-blue font-semibold mt-1 hover:underline cursor-pointer"
+              className="text-xs text-xinkedin-blue font-semibold mt-1 hover:underline cursor-pointer"
             >
               Copy link
             </button>
@@ -624,7 +624,7 @@ export default function Profile() {
           <div className="space-y-4">
             <div>
               <h4 className="text-sm font-semibold text-gray-700">Profile URL</h4>
-              <p className="text-sm text-linkedin-blue hover:underline cursor-pointer">www.linkedin.com/in/{user.id}</p>
+              <p className="text-sm text-xinkedin-blue hover:underline cursor-pointer">www.linkedin.com/in/{user.id}</p>
             </div>
             <div>
               <h4 className="text-sm font-semibold text-gray-700">Location</h4>

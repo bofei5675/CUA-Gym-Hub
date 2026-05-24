@@ -55,15 +55,15 @@ const ThreadView = () => {
     const onReplyAll = () => { setIsReplying(true); setIsReplyAll(true); };
     const onMoveTo = () => setShowMoveTo(v => !v);
     const onSnooze = () => setShowSnooze(v => !v);
-    window.addEventListener('gmail:reply', onReply);
-    window.addEventListener('gmail:reply-all', onReplyAll);
-    window.addEventListener('gmail:move-to', onMoveTo);
-    window.addEventListener('gmail:snooze', onSnooze);
+    window.addEventListener('xmail:reply', onReply);
+    window.addEventListener('xmail:reply-all', onReplyAll);
+    window.addEventListener('xmail:move-to', onMoveTo);
+    window.addEventListener('xmail:snooze', onSnooze);
     return () => {
-      window.removeEventListener('gmail:reply', onReply);
-      window.removeEventListener('gmail:reply-all', onReplyAll);
-      window.removeEventListener('gmail:move-to', onMoveTo);
-      window.removeEventListener('gmail:snooze', onSnooze);
+      window.removeEventListener('xmail:reply', onReply);
+      window.removeEventListener('xmail:reply-all', onReplyAll);
+      window.removeEventListener('xmail:move-to', onMoveTo);
+      window.removeEventListener('xmail:snooze', onSnooze);
     };
   }, []);
 

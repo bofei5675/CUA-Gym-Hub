@@ -58,7 +58,7 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* Main grid - matches real AWS Console Home layout */}
+      {/* Main grid - matches real XWS Console Home layout */}
       <div className="grid grid-cols-2 gap-6">
         {/* Recently visited */}
         {!hiddenWidgets.includes('recent') && <div className="aws-card">

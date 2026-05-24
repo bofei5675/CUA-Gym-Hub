@@ -1,4 +1,4 @@
-# Zhihu (知乎) Mock — TODO
+# Xhihu (知乎) Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2025-03-09
@@ -19,7 +19,7 @@ These items fix fundamental issues in the existing shell that affect all pages.
 
 - [x] **Expand seed data in `src/data/initialData.ts`**: The mock currently has only 3 questions, 7 answers, 3 topics, 1 article, 1 idea, 1 notification, and 1 collection — far too little for a realistic experience. Expand to the counts specified in `data_model.md`: 10 users, 8 questions, 18 answers, 5 articles, 10 topics, 15+ comments with nested replies, 3 collections, 8 notifications (3-4 unread), 5 ideas. Each answer should be 300-800 Chinese characters with multiple paragraphs separated by `\n\n`. Pre-set interaction states: 3 answers upvoted, 2 favorited, 2 users followed, 3 topics followed, 2 questions followed. Use `https://api.dicebear.com/7.x/avataaars/svg?seed=<name>` for user avatars and `https://picsum.photos/48/48?random=topic<N>` for topic icons.
 
-- [x] **Visual design system — match real Zhihu more closely**: Study `assets/screenshots/` and update `src/index.css`. The current `--primary-color: #0084ff` is correct. Ensure these exact tokens: `--primary-color: #0084ff`, `--primary-hover: #056de8`, `--bg-color: #ffffff`, `--bg-secondary: #f6f6f6`, `--text-primary: #1a1a1a`, `--text-secondary: #8590a6`, `--border-color: #ebebeb`, `--danger-color: #ec5e28`, `--tag-bg: #e8f3ff`. Add a `.btn-follow` class: blue border, blue text, 20px border-radius (pill shape), toggles to filled blue background when active. Add `.btn-danger` for delete/destructive actions. Add focus-visible outlines for accessibility.
+- [x] **Visual design system — match real Xhihu more closely**: Study `assets/screenshots/` and update `src/index.css`. The current `--primary-color: #0084ff` is correct. Ensure these exact tokens: `--primary-color: #0084ff`, `--primary-hover: #056de8`, `--bg-color: #ffffff`, `--bg-secondary: #f6f6f6`, `--text-primary: #1a1a1a`, `--text-secondary: #8590a6`, `--border-color: #ebebeb`, `--danger-color: #ec5e28`, `--tag-bg: #e8f3ff`. Add a `.btn-follow` class: blue border, blue text, 20px border-radius (pill shape), toggles to filled blue background when active. Add `.btn-danger` for delete/destructive actions. Add focus-visible outlines for accessibility.
 
 - [x] **Fix Header nav links**: Currently "会员", "发现", and "等你来答" all link to `/hot`. Fix: "首页" → `/`, "会员" → remains non-functional (just visual), "发现" → `/discover` (new route), "等你来答" → `/waiting` (new route). Also add hover underline effect on active nav link.
 
@@ -142,7 +142,7 @@ Implement after P1 is solid. These add depth and realism.
 
 - [ ] **Thank action (感谢)**: On answer cards and the answer detail page, the "❤️ 感谢" button should toggle a thank state. Add `userThanks: { [answerId: string]: boolean }` to AppState and `toggleThank(answerId)` to store. Update the answer's `thankCount`. Style: heart turns red when thanked.
 
-- [ ] **Downvote (反对)**: Add a subtle downvote button after the upvote button on answers. Small, gray, de-emphasized (Zhihu style: downvote exists but is not prominent). Toggle `userDownvotes` state. Downvoting removes any existing upvote and vice versa.
+- [ ] **Downvote (反对)**: Add a subtle downvote button after the upvote button on answers. Small, gray, de-emphasized (Xhihu style: downvote exists but is not prominent). Toggle `userDownvotes` state. Downvoting removes any existing upvote and vice versa.
 
 - [ ] **Answer sorting on Question page**: The "默认排序" and "按时间" buttons are currently non-functional. Implement: "默认排序" sorts by `voteupCount` descending (Wilson score simulation), "按时间" sorts by `createdTime` descending. Add visual active state (blue text + bottom border) to the selected sort option.
 
@@ -201,7 +201,7 @@ See `assets/data_model.md` for complete specifications.
 Dev must NOT implement these:
 
 - **Authentication / login** — App starts pre-logged-in as `张小凡` (user0)
-- **Paid features** — Zhihu Salt membership, paid columns, Zhihu Live, e-books, paid consultations
+- **Paid features** — Xhihu Salt membership, paid columns, Xhihu Live, e-books, paid consultations
 - **Real API calls** — All data is local state via Zustand + localStorage
 - **Video content** — Video section and video answers
 - **Real-time features** — WebSocket notifications, live updates

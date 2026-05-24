@@ -1,4 +1,4 @@
-# Salesforce CRM Mock — Data Model
+# Xalesforce CRM Mock — Data Model
 
 > This document defines the data structures used in `src/data/initialData.ts` and `src/types/index.ts`.
 > The dev agent should reference this for `createInitialData()` structure.

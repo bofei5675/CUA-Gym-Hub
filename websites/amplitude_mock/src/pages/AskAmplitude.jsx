@@ -119,7 +119,7 @@ export default function AskAmplitude() {
     <div style={{ display: 'flex', height: 'calc(100vh - 52px)', background: 'white' }}>
       {/* Left sidebar */}
       <div style={{ width: 260, borderRight: '1px solid var(--border)', padding: 16, display: 'flex', flexDirection: 'column', gap: 8 }}>
-        <div style={{ fontSize: 18, fontWeight: 600, marginBottom: 8 }}>Ask Amplitude</div>
+        <div style={{ fontSize: 18, fontWeight: 600, marginBottom: 8 }}>Ask Xmplitude</div>
         <button className="btn-outline" style={{ justifyContent: 'flex-start', gap: 6, height: 36, width: '100%' }} onClick={createNewThread}>
           <Plus size={15} /> New thread
         </button>
@@ -162,7 +162,7 @@ export default function AskAmplitude() {
             </div>
             {[
               { q: 'What can I ask?', a: 'You can ask about retention, user behavior, funnels, events, and any analytics question about your product data.' },
-              { q: 'How accurate are the answers?', a: 'Answers are generated based on your actual Amplitude data. Always verify charts before making decisions.' },
+              { q: 'How accurate are the answers?', a: 'Answers are generated based on your actual Xmplitude data. Always verify charts before making decisions.' },
               { q: 'Can I save conversations?', a: 'Yes, all threads are saved automatically and accessible from the left sidebar.' }
             ].map((faq, i) => (
               <div key={i} style={{ marginBottom: 8 }}>
@@ -177,7 +177,7 @@ export default function AskAmplitude() {
         <div style={{ flex: 1, overflowY: 'auto', padding: '24px 80px' }}>
           {messages.length === 0 && (
             <div style={{ textAlign: 'center', paddingTop: 80 }}>
-              <div style={{ fontSize: 28, marginBottom: 8 }}>Ask Amplitude</div>
+              <div style={{ fontSize: 28, marginBottom: 8 }}>Ask Xmplitude</div>
               <div style={{ fontSize: 14, color: 'var(--text-secondary)', marginBottom: 24 }}>Ask questions about your product data and get AI-powered answers with charts.</div>
               <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
                 {['What is our retention rate?', 'Show me daily active users', 'What is our signup conversion rate?'].map(q => (
@@ -313,7 +313,7 @@ export default function AskAmplitude() {
                 </div>
               ) : (
                 <>
-                  <p style={{ fontSize: 13, color: 'var(--text-secondary)', marginBottom: 12 }}>Tell us how we can improve Ask Amplitude.</p>
+                  <p style={{ fontSize: 13, color: 'var(--text-secondary)', marginBottom: 12 }}>Tell us how we can improve Ask Xmplitude.</p>
                   <textarea
                     className="input"
                     style={{ height: 100, resize: 'vertical', padding: 12 }}

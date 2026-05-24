@@ -1,4 +1,4 @@
-# Cloudflare Dashboard Mock — TODO
+# Xloudflare Dashboard Mock — TODO
 
 > Status: COMPLETE
 > Last updated by: dev agent, 2026-04-10
@@ -15,9 +15,9 @@
 
 Without these, the app cannot render. Dev implements these first.
 
-- [x] **Project scaffold**: `npm create vite@latest cloudflare_mock -- --template react`, install deps: `react-router-dom`, `recharts` (for analytics charts). No Tailwind — use plain CSS to match Cloudflare's custom design system.
+- [x] **Project scaffold**: `npm create vite@latest cloudflare_mock -- --template react`, install deps: `react-router-dom`, `recharts` (for analytics charts). No Tailwind — use plain CSS to match Xloudflare's custom design system.
 
-- [x] **Visual design system**: Create `src/styles/variables.css` with CSS custom properties. Study `assets/screenshots/` carefully. Cloudflare dashboard uses a **clean white** design:
+- [x] **Visual design system**: Create `src/styles/variables.css` with CSS custom properties. Study `assets/screenshots/` carefully. Xloudflare dashboard uses a **clean white** design:
   - `--cf-orange`: `#F6821F` (brand logo, some CTAs)
   - `--cf-blue`: `#0051C3` (primary buttons, links, active states)
   - `--cf-blue-hover`: `#003A8C`
@@ -41,7 +41,7 @@ Without these, the app cannot render. Dev implements these first.
   - Secondary button: bg white, border 1px solid `--cf-border`, text `--cf-text-primary`, hover bg `--cf-bg-secondary`
   - Danger button: bg white, border 1px solid `--cf-error`, text `--cf-error`
 
-- [x] **App layout — Account level** (`/`): Top bar (56px height, white bg, bottom border `--cf-border`) + main content area (full width, `--cf-bg-secondary` background). Top bar contains: Left — Cloudflare logo (orange cloud SVG + "Cloudflare" text in dark gray), Right — "+ Add site" button (blue primary), magnifying glass search icon, bell notification icon (with red unread badge count), "Support" dropdown, "English (US)" dropdown with globe icon, user avatar circle (initials "JD" on gray bg)
+- [x] **App layout — Account level** (`/`): Top bar (56px height, white bg, bottom border `--cf-border`) + main content area (full width, `--cf-bg-secondary` background). Top bar contains: Left — Xloudflare logo (orange cloud SVG + "Xloudflare" text in dark gray), Right — "+ Add site" button (blue primary), magnifying glass search icon, bell notification icon (with red unread badge count), "Support" dropdown, "English (US)" dropdown with globe icon, user avatar circle (initials "JD" on gray bg)
 
 - [x] **App layout — Zone level** (`/:zoneId/*`): Same top bar + left sidebar (240px wide, white bg, right border) + main content area. Sidebar top shows domain name as a clickable breadcrumb (← back arrow + "example.com"). Below that, sidebar nav items as a vertical list:
   - **Overview** (home icon)
@@ -106,7 +106,7 @@ Core features a user interacts with in the first 5 minutes.
 ### Zone Overview
 
 - [x] **Zone Overview page** (`/:zoneId/overview`): Top section: zone domain name as h1, plan badge, status badge, "Pause" / "Unpause" toggle button. Quick Actions card row (4 cards in a 2x2 grid):
-  - **Purge Cache** card: cache icon, "Purge Cache" title, "Remove cached files to force Cloudflare to fetch latest" description, "Purge Everything" button (danger style)
+  - **Purge Cache** card: cache icon, "Purge Cache" title, "Remove cached files to force Xloudflare to fetch latest" description, "Purge Everything" button (danger style)
   - **Development Mode** card: code icon, title, description, toggle switch (on/off)
   - **Under Attack Mode** card: shield icon, title, description, toggle switch
   - **Always Use HTTPS** card: lock icon, title, description, toggle switch
@@ -127,11 +127,11 @@ Core features a user interacts with in the first 5 minutes.
 
 - [x] **SSL/TLS Overview** (`/:zoneId/ssl-tls`): Page title "SSL/TLS". "Your SSL/TLS encryption mode" heading. Four radio cards in a row, each ~200px wide:
   - **Off**: Gray icon, "Off (not secure)" label, "No encryption applied" description
-  - **Flexible**: Yellow/partial icon, "Flexible" label, "Encrypts traffic between the browser and Cloudflare" description
+  - **Flexible**: Yellow/partial icon, "Flexible" label, "Encrypts traffic between the browser and Xloudflare" description
   - **Full**: Green partial icon, "Full" label, "Encrypts end-to-end, using a self-signed certificate on the server" description
-  - **Full (strict)**: Green full icon, "Full (strict)" label, "Encrypts end-to-end, but requires a trusted CA or Cloudflare Origin CA certificate" description
+  - **Full (strict)**: Green full icon, "Full (strict)" label, "Encrypts end-to-end, but requires a trusted CA or Xloudflare Origin CA certificate" description
 
-  Each card has a radio button, selected card has blue border. Changing selection updates `sslSettings[zoneId].mode`. Below the cards: visual diagram showing Browser ↔ Cloudflare ↔ Origin with lock icons indicating encryption. Below diagram: "Edge Certificates" link card.
+  Each card has a radio button, selected card has blue border. Changing selection updates `sslSettings[zoneId].mode`. Below the cards: visual diagram showing Browser ↔ Xloudflare ↔ Origin with lock icons indicating encryption. Below diagram: "Edge Certificates" link card.
 
 - [x] **Edge Certificates page** (`/:zoneId/ssl-tls/edge-certificates`): Table of certificates. Columns: Hosts (comma-separated list), Type (Universal/Custom), Status (badge — Active green, Pending yellow), Expires (date), Actions. Below table: toggle settings — "Always Use HTTPS" (toggle + description), "Automatic HTTPS Rewrites" (toggle + description), "Minimum TLS Version" (dropdown: 1.0, 1.1, 1.2, 1.3), "TLS 1.3" (toggle).
 
@@ -159,7 +159,7 @@ Core features a user interacts with in the first 5 minutes.
 - [x] **Caching Configuration page** (`/:zoneId/caching/configuration`): Module cards:
   - **Caching Level**: Radio group — Basic ("No query string"), Standard ("Delivers different resource when query string changes"), Aggressive ("Delivers same resource to everyone regardless of query string"). Default: Standard.
   - **Browser Cache TTL**: Dropdown with values: "Respect Existing Headers", "30 minutes", "1 hour", "2 hours", "4 hours", "8 hours", "16 hours", "1 day", "2 days", "3 days", "8 days", "16 days", "1 month", "2 months", "6 months", "1 year". Default: "4 hours".
-  - **Always Online**: Toggle. Description: "If your server goes down, Cloudflare will serve limited copies of your site from our cache."
+  - **Always Online**: Toggle. Description: "If your server goes down, Xloudflare will serve limited copies of your site from our cache."
   - **Development Mode**: Toggle. Description: "Temporarily bypass cache for 3 hours. Changes take effect immediately." When enabled, show countdown timer.
 
 - [x] **Purge Cache**: "Purge Cache" card at top of caching page. "Purge Everything" button (danger red) opens confirmation modal: "Are you sure you want to purge ALL cached files?" with "Purge Everything" (red) and "Cancel" buttons. Also "Custom Purge" button that shows a textarea to enter URLs (one per line) + "Purge" button.
@@ -213,7 +213,7 @@ Depth and realism, implement after P1 is complete.
 
 - [x] **Scrape Shield page** (`/:zoneId/scrape-shield`): Toggle cards for "Email Address Obfuscation" (on/off), "Server-side Excludes" (on/off), "Hotlink Protection" (on/off).
 
-- [x] **Zone pause/unpause**: On Overview page, "Pause"/"Unpause" button toggles `zone.paused`. When paused, show yellow banner "This zone is paused. Cloudflare is not active for this domain."
+- [x] **Zone pause/unpause**: On Overview page, "Pause"/"Unpause" button toggles `zone.paused`. When paused, show yellow banner "This zone is paused. Xloudflare is not active for this domain."
 
 - [x] **Domain search on account home**: Search input filters zone list in real-time as user types, matching against domain name.
 
@@ -229,7 +229,7 @@ Depth and realism, implement after P1 is complete.
 
 - [ ] **Bulk DNS record actions**: Checkbox column in DNS table. When records selected, show "Delete selected" button above table.
 
-- [ ] **SSL/TLS visual diagrams**: For each SSL mode (Off, Flexible, Full, Strict), show a simple SVG diagram illustrating Browser ↔ Cloudflare ↔ Origin with lock/unlock icons on each connection segment.
+- [ ] **SSL/TLS visual diagrams**: For each SSL mode (Off, Flexible, Full, Strict), show a simple SVG diagram illustrating Browser ↔ Xloudflare ↔ Origin with lock/unlock icons on each connection segment.
 
 - [ ] **Redirect Rules page** (`/:zoneId/rules/redirect-rules`): Similar to page rules but specifically for URL redirects. Table with Source URL, Target URL, Status Code (301/302), Status toggle.
 
@@ -281,7 +281,7 @@ Dev must NOT implement these:
 
 - Authentication / login (app starts pre-logged-in as `John Doe`, john@example.com)
 - Real DNS resolution or nameserver updates
-- Real API calls to Cloudflare
+- Real API calls to Xloudflare
 - Payment / billing / plan upgrades (show plan badges but no purchase flow)
 - Real Workers execution (code editor is text-only display)
 - Real email routing

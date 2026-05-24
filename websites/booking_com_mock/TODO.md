@@ -1,4 +1,4 @@
-# Booking.com Mock — TODO
+# Xooking.com Mock — TODO
 
 > Status: IN PROGRESS
 > Last updated by: dev agent, 2025-03-10
@@ -15,13 +15,13 @@
 
 Without these, the app cannot render. Dev implements these first.
 
-- [x] **Project scaffold**: `npm create vite@latest booking_com_mock -- --template react`, install deps: `react-router-dom`, `lucide-react`, `date-fns`. No Tailwind — use plain CSS to match Booking.com's pixel-precise style.
+- [x] **Project scaffold**: `npm create vite@latest booking_com_mock -- --template react`, install deps: `react-router-dom`, `lucide-react`, `date-fns`. No Tailwind — use plain CSS to match Xooking.com's pixel-precise style.
 
-- [x] **Visual design system**: Study `assets/screenshots/homepage_01.jpg` and `assets/screenshots/search_results_000005.jpg` — these are the authoritative Booking.com screenshots. Implement a global CSS file (`src/styles/global.css`) with:
+- [x] **Visual design system**: Study `assets/screenshots/homepage_01.jpg` and `assets/screenshots/search_results_000005.jpg` — these are the authoritative Xooking.com screenshots. Implement a global CSS file (`src/styles/global.css`) with:
   - **Color palette**: Primary dark blue `#003580` (header, review badges), Primary blue `#0071C2` (links, buttons), Search bar yellow `#FEBB02` (search bar border, star rating), Success green `#008009` (free cancellation, deals), Price strikethrough red `#CC0000`, Background `#F5F5F5`, Card white `#FFFFFF`, Text primary `#262626`, Text secondary `#6B6B6B`, Border `#E0E0E0`, Genius blue `#004CB8`
   - **Typography**: Font family: `BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`. Hero heading 32px bold white, Section heading 24px bold `#262626`, Property name 16px bold `#0071C2` (link style), Body 14px `#262626`, Small/muted 12px `#6B6B6B`, Price 20px bold
   - **Spacing scale**: 4px base — 4, 8, 12, 16, 20, 24, 32, 48px
-  - **Border radius**: Buttons 4px, Cards 8px, Search bar inputs 4px, Review score badge 6px 6px 6px 0 (top-left sharp on Booking.com)
+  - **Border radius**: Buttons 4px, Cards 8px, Search bar inputs 4px, Review score badge 6px 6px 6px 0 (top-left sharp on Xooking.com)
   - **Shadows**: Cards `0 2px 8px rgba(0,0,0,0.1)`, Dropdowns `0 2px 16px rgba(0,0,0,0.15)`
 
 - [x] **App layout**: Full-width layout, no sidebar. Structure:
@@ -59,7 +59,7 @@ Core features a user interacts with in the first 5 minutes. These constitute the
 
 ### Header & Navigation
 
-- [x] **Global header**: 60px tall, `#003580` background, full-width. Left: "Booking.com" logo text (white "Booking" + light-blue ".com" in bold 24px, clickable → `/`). Right section: currency code text "USD", country flag emoji 🇺🇸 (16px), help icon "?" in circle, "List your property" text link, user display name "Sarah" with small avatar circle showing initials "SJ" in a colored circle. All text white, 14px. See `assets/screenshots/homepage_01.jpg` for exact layout.
+- [x] **Global header**: 60px tall, `#003580` background, full-width. Left: "Xooking.com" logo text (white "Booking" + light-blue ".com" in bold 24px, clickable → `/`). Right section: currency code text "USD", country flag emoji 🇺🇸 (16px), help icon "?" in circle, "List your property" text link, user display name "Sarah" with small avatar circle showing initials "SJ" in a colored circle. All text white, 14px. See `assets/screenshots/homepage_01.jpg` for exact layout.
 
 - [x] **Navigation tabs**: Row below header, `#003580` background (same blue, but visually separated). Six tabs in a horizontal row with icons + text: `🏨 Stays` (active by default), `✈️ Flights`, `🏨✈️ Flight + Hotel`, `🚗 Car rentals`, `🎫 Attractions`, `🚕 Airport taxis`. Active tab has white pill background (rounded, semi-transparent white). Inactive tabs are white text only. Only "Stays" is functional — clicking other tabs shows a toast "Coming soon" or does nothing. See `assets/screenshots/homepage_01.jpg`.
 
@@ -289,10 +289,10 @@ Depth and realism, implement after P1 is complete.
 
 - [x] **Footer**: Full-width dark section (`#1a1a2e` or `#262626` background). Multi-column layout:
   - Column 1: "Support" — Customer Service Help, Coronavirus (COVID-19) FAQs, Safety Resource Center
-  - Column 2: "Discover" — Genius loyalty program, Seasonal and holiday deals, Travel articles, Booking.com for Business
+  - Column 2: "Discover" — Genius loyalty program, Seasonal and holiday deals, Travel articles, Xooking.com for Business
   - Column 3: "Terms and settings" — Privacy & cookies, Terms & conditions, Dispute resolution
   - Column 4: "Partners" — Extranet login, Partner help, List your property
-  - Bottom row: Copyright text "Copyright © 1996–2025 Booking.com. All rights reserved."
+  - Bottom row: Copyright text "Copyright © 1996–2025 Xooking.com. All rights reserved."
 
 - [ ] **"No dates selected" state**: When search bar dates are empty, property cards show "Check prices" instead of a specific price, and the date picker should auto-open when user navigates to search results without dates.
 

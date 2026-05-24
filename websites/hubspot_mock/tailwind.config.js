@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        hubspot: {
+        xubspot: {
           DEFAULT: '#FF7A59', // Primary Orange
           hover: '#D95E40',
           dark: '#2D3E50', // Obsidian sidebar

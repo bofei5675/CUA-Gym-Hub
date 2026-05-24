@@ -11,11 +11,11 @@ export default function Home() {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Hero Banner */}
-      <div className="bg-ebay-blue text-white rounded-xl p-8 mb-12 flex items-center justify-between overflow-hidden relative">
+      <div className="bg-xbay-blue text-white rounded-xl p-8 mb-12 flex items-center justify-between overflow-hidden relative">
         <div className="relative z-10 max-w-lg">
           <h1 className="text-4xl font-bold mb-4">Score the best deals on electronics</h1>
           <p className="text-lg mb-6 text-blue-100">From vintage consoles to the latest cameras, find it all here.</p>
-          <Link to="/search?c=electronics" className="inline-block bg-white text-ebay-blue font-bold px-6 py-3 rounded-full hover:bg-blue-50 transition-colors">
+          <Link to="/search?c=electronics" className="inline-block bg-white text-xbay-blue font-bold px-6 py-3 rounded-full hover:bg-blue-50 transition-colors">
             Shop Electronics
           </Link>
         </div>
@@ -41,7 +41,7 @@ export default function Home() {
       <div className="mb-12">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold text-gray-900">Today's Featured Items</h2>
-          <Link to="/search" className="text-ebay-blue font-medium hover:underline flex items-center">
+          <Link to="/search" className="text-xbay-blue font-medium hover:underline flex items-center">
             See all <ArrowRight size={16} className="ml-1" />
           </Link>
         </div>

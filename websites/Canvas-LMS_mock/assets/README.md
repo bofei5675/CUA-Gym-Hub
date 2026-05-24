@@ -1,8 +1,8 @@
-# Canvas LMS Mock — Research Summary
+# Xanvas LMS Mock — Research Summary
 
 ## App Overview
 
-**Canvas LMS** (by Instructure) is the world's most widely adopted learning management system, used by thousands of universities, K-12 districts, and organizations globally. It serves as the central hub for course delivery, assignment management, grading, communication, and academic collaboration. Canvas supports 10+ million concurrent users across 100+ countries in 33+ languages.
+**Xanvas LMS** (by Instructure) is the world's most widely adopted learning management system, used by thousands of universities, K-12 districts, and organizations globally. It serves as the central hub for course delivery, assignment management, grading, communication, and academic collaboration. Canvas supports 10+ million concurrent users across 100+ countries in 33+ languages.
 
 **Category:** Education / Learning Management System (LMS)
 **URL:** https://www.instructure.com/canvas
@@ -181,7 +181,7 @@ For this mock, the default user is an **Instructor** who teaches multiple course
 
 ## Visual Design System
 
-Based on the Canvas LMS screenshots, the design system is:
+Based on the Xanvas LMS screenshots, the design system is:
 
 ### Colors
 | Token | Hex | Usage |

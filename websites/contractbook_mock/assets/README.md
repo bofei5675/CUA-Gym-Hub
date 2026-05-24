@@ -1,8 +1,8 @@
-# Contractbook Mock -- Assets README
+# Xontractbook Mock -- Assets README
 
 ## App Overview
 
-Contractbook is a cloud-based contract lifecycle management (CLM) platform that enables businesses to create, negotiate, sign, and store contracts in one centralized location. It targets legal teams, contract managers, and business professionals who need to streamline their contract workflows. The platform is headquartered in Copenhagen, Denmark, and serves SMB to enterprise customers.
+Xontractbook is a cloud-based contract lifecycle management (CLM) platform that enables businesses to create, negotiate, sign, and store contracts in one centralized location. It targets legal teams, contract managers, and business professionals who need to streamline their contract workflows. The platform is headquartered in Copenhagen, Denmark, and serves SMB to enterprise customers.
 
 Key value propositions:
 - Centralized contract repository with folder organization
@@ -96,7 +96,7 @@ Key value propositions:
 ## UI Layout Description
 
 ### Sidebar (Left, 240px)
-- Contractbook logo at top
+- Xontractbook logo at top
 - "New Contract" primary button
 - Navigation items: Contracts, Templates, Tasks, Contacts
 - Folder tree (collapsible, nested folders)
@@ -165,7 +165,7 @@ See `data_model.md` for full specification. Key entities:
 ## Screenshots
 
 ### Reference Screenshots
-- `reference/000004.jpg` -- Contractbook marketing page showing Documents table view with tabs (All documents, Drafts, Pending, Signed, Rejected), contract rows with title, tags, counterparty company, date, avatar stack, and status badges. Shows a clean white interface with blue primary accent. Header shows Contractbook logo and "Create new document" button.
+- `reference/000004.jpg` -- Xontractbook marketing page showing Documents table view with tabs (All documents, Drafts, Pending, Signed, Rejected), contract rows with title, tags, counterparty company, date, avatar stack, and status badges. Shows a clean white interface with blue primary accent. Header shows Xontractbook logo and "Create new document" button.
 
 Note: Most screenshots in the reference/ directory are from unrelated applications and should be ignored. The dev agent should rely on the DESIGN.md design tokens and the layout descriptions in this document for visual guidance.
 

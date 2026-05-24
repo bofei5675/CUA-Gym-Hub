@@ -1,4 +1,4 @@
-# Google Sheets Mock — TODO
+# Xoogle Sheets Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2025-03-09
@@ -12,16 +12,16 @@
 
 ## Current Implementation Status
 
-The project already has a working scaffold with basic spreadsheet grid, cell editing, simple formula engine (SUM/AVERAGE/COUNT/MAX/MIN), range selection, toolbar with some formatting, formula bar, sheet tabs, and the /go state endpoint. The items below focus on **fixing, completing, and extending** the existing implementation to match real Google Sheets behavior.
+The project already has a working scaffold with basic spreadsheet grid, cell editing, simple formula engine (SUM/AVERAGE/COUNT/MAX/MIN), range selection, toolbar with some formatting, formula bar, sheet tabs, and the /go state endpoint. The items below focus on **fixing, completing, and extending** the existing implementation to match real Xoogle Sheets behavior.
 
 ---
 
 ## P0 — Core Shell Fixes & Completion
 
-These items fix critical issues in the existing scaffold that prevent it from feeling like a real Google Sheets document.
+These items fix critical issues in the existing scaffold that prevent it from feeling like a real Xoogle Sheets document.
 
-- [x] **Visual design system overhaul**: Study `assets/screenshots/main_ui_03.jpg` and `assets/screenshots/sort_filter_01.jpg` closely. The current mock uses generic colors. Match the real Google Sheets color system exactly:
-  - Title bar: white background, Google Sheets icon (green doc with grid) 28px, document title 18px regular weight `#202124`, star icon ☆, folder icon, cloud save icon
+- [x] **Visual design system overhaul**: Study `assets/screenshots/main_ui_03.jpg` and `assets/screenshots/sort_filter_01.jpg` closely. The current mock uses generic colors. Match the real Xoogle Sheets color system exactly:
+  - Title bar: white background, Xoogle Sheets icon (green doc with grid) 28px, document title 18px regular weight `#202124`, star icon ☆, folder icon, cloud save icon
   - Menu bar: background `#EDF2FA` (slightly blue-tinted), items `File Edit View Insert Format Data Tools Extensions Help` in 14px `#202124`, ~8px padding between items, hover background `#D3E3FD` rounded 4px
   - Toolbar: background `#F9FBFD`, icons 18px, grouped by thin 1px `#DADCE0` vertical separators, button hover shows `#E8EAED` rounded rectangle, active/toggled state uses `#D3E3FD` background
   - Formula bar: 1px `#DADCE0` top/bottom borders, cell name box ~60px with `#F1F3F4` background, "fx" label in `#5F6368` 14px, input area plain white
@@ -42,7 +42,7 @@ These items fix critical issues in the existing scaffold that prevent it from fe
   - **Extensions**: Add-ons (non-functional placeholder)
   - **Help**: Search the menus, Keyboard shortcuts
 
-- [x] **Toolbar completion — add missing buttons and make all buttons functional**: The current toolbar is missing several Google Sheets toolbar buttons. Match the exact toolbar layout from `assets/screenshots/sort_filter_01.jpg`:
+- [x] **Toolbar completion — add missing buttons and make all buttons functional**: The current toolbar is missing several Xoogle Sheets toolbar buttons. Match the exact toolbar layout from `assets/screenshots/sort_filter_01.jpg`:
   - Group 1: Undo (↶) Redo (↷) Print (🖨) Paint format (🖌) — undo/redo need actual action history
   - Group 2: Zoom dropdown (100% ▼) — opens list: 50%, 75%, 90%, 100%, 125%, 150%, 200%
   - Group 3: Currency ($), Percent (%), Decrease decimal (.0←), Increase decimal (.0→), Number format (123 ▼) dropdown

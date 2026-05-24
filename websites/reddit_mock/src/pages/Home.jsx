@@ -213,7 +213,7 @@ export default function Home() {
                 <span className="font-medium text-[#1C1C1C] mt-4">Home</span>
               </div>
               <p className="text-sm text-[#787C7E] mb-4">
-                Your personal Reddit frontpage. Come here to check in with your favorite communities.
+                Your personal Xeddit frontpage. Come here to check in with your favorite communities.
               </p>
               <div className="border-t border-[#EDEFF1] pt-3">
                 <Link to="/submit" className="block w-full text-center bg-[#0079D3] hover:bg-[#1484D6] text-white font-bold py-1.5 rounded-full transition-colors text-sm">

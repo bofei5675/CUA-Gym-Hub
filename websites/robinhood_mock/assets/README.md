@@ -1,6 +1,6 @@
-# Robinhood Mock — Research Summary
+# Xobinhood Mock — Research Summary
 
-> **Target Application:** Robinhood (robinhood.com)
+> **Target Application:** Xobinhood (robinhood.com)
 > **Category:** Commission-free stock/crypto/options brokerage & investing platform
 > **Scope:** Web "classic" interface (not the advanced "Legend" platform)
 > **Research Date:** March 2025
@@ -9,11 +9,11 @@
 
 ## 1. App Overview
 
-Robinhood is a commission-free stock trading and investing platform aimed at retail investors. Originally mobile-only, it now offers a full web experience at `robinhood.com`. The app allows users to buy and sell stocks, ETFs, options, and cryptocurrencies. It is characterized by a minimalist, clean UI with a signature green color scheme.
+Xobinhood is a commission-free stock trading and investing platform aimed at retail investors. Originally mobile-only, it now offers a full web experience at `robinhood.com`. The app allows users to buy and sell stocks, ETFs, options, and cryptocurrencies. It is characterized by a minimalist, clean UI with a signature green color scheme.
 
-**Our mock targets the Robinhood "Web Classic" interface** — the standard web app at robinhood.com (not the advanced "Legend" trading platform). This is the interface most casual investors use daily.
+**Our mock targets the Xobinhood "Web Classic" interface** — the standard web app at robinhood.com (not the advanced "Legend" trading platform). This is the interface most casual investors use daily.
 
-### What Makes Robinhood Distinct
+### What Makes Xobinhood Distinct
 - Signature lime-green (#00C805) brand color on white/dark backgrounds
 - Extremely clean, minimalist UI — less clutter than traditional brokerages
 - Prominent portfolio chart as the hero element on the home page
@@ -48,7 +48,7 @@ Robinhood is a commission-free stock trading and investing platform aimed at ret
 ## 3. Complete Feature List (Priority-Ranked)
 
 ### P0 — Core (App cannot render without)
-- App shell with header bar (Robinhood feather logo, search bar, nav links)
+- App shell with header bar (Xobinhood feather logo, search bar, nav links)
 - Portfolio/home dashboard with total value, daily change, portfolio chart
 - Stock detail page with price chart, buy/sell panel, key stats, about, news
 - Search functionality (search by symbol or company name)
@@ -80,7 +80,7 @@ Robinhood is a commission-free stock trading and investing platform aimed at ret
 - **Fractional shares**: Allow buying by dollar amount
 - **Order confirmation modal**: Review step before placing orders
 - **Price alerts**: Set alerts for specific price targets
-- **Dark/light mode toggle**: Currently dark-only; real Robinhood has both
+- **Dark/light mode toggle**: Currently dark-only; real Xobinhood has both
 
 ---
 
@@ -88,7 +88,7 @@ Robinhood is a commission-free stock trading and investing platform aimed at ret
 
 ### Header Bar (Top Navigation)
 From `stock_detail_000001.jpg` screenshot:
-- **Left**: Robinhood feather logo (link to home)
+- **Left**: Xobinhood feather logo (link to home)
 - **Center**: Search bar with placeholder "Search" and magnifying glass icon
 - **Right**: Navigation links — "Free Stock", "Portfolio", "Cash", "Messages", "Account"
 - **Far right**: User avatar icon
@@ -146,7 +146,7 @@ See `data_model.md` for complete entity definitions.
 ### Colors (from tailwind.config.js + screenshots)
 | Token | Hex | Usage |
 |-------|-----|-------|
-| Primary (Robinhood Green) | `#00C805` | Positive changes, Buy buttons, active states |
+| Primary (Xobinhood Green) | `#00C805` | Positive changes, Buy buttons, active states |
 | Primary Dark | `#00A804` | Hover on primary |
 | Danger (Red) | `#FF5000` | Negative changes, Sell indicators |
 | Background | `#000000` | Main page background (dark mode) |
@@ -155,10 +155,10 @@ See `data_model.md` for complete entity definitions.
 | Text | `#FFFFFF` | Primary text |
 | Text Muted | `#8F9398` | Secondary text, labels |
 
-*Note*: Real Robinhood also has a **light mode** with white background (#FFFFFF), but dark mode is the default for the web classic. The existing scaffold uses dark mode.
+*Note*: Real Xobinhood also has a **light mode** with white background (#FFFFFF), but dark mode is the default for the web classic. The existing scaffold uses dark mode.
 
 ### Typography
-- Font family: `"Inter", system-ui, sans-serif` (similar to Robinhood's "Capsule Sans")
+- Font family: `"Inter", system-ui, sans-serif` (similar to Xobinhood's "Capsule Sans")
 - Portfolio value: 28-32px, bold
 - Stock price: 24px, bold
 - Section headers: 18-20px, bold
@@ -174,7 +174,7 @@ See `data_model.md` for complete entity definitions.
 - **Options trading**: Complex UI, separate feature set
 - **Futures trading**: Advanced feature
 - **Cash Card/debit card**: Banking feature
-- **Robinhood Gold subscription**: Premium feature
+- **Xobinhood Gold subscription**: Premium feature
 - **Crypto staking**: Advanced crypto feature
 - **Tax documents**: Account management
 - **Two-factor authentication**: Security feature
@@ -186,15 +186,15 @@ See `data_model.md` for complete entity definitions.
 
 | File | Description |
 |------|-------------|
-| `000001.jpg` | Robinhood Legend full dashboard (YouTube thumbnail) — shows widget layout, chart, positions, market movers |
-| `000003.jpg` | Robinhood Legend on monitor — shows options chain, positions panel, candlestick chart |
-| `stock_detail_000001.jpg` | **KEY**: Robinhood Web Classic stock detail page (AMZA) — shows header nav, search, buy/sell panel, chart with time toggles, position info |
-| `stock_detail_000004.jpg` | Robinhood mobile portfolio — green header, portfolio value, line chart, time toggles, notification card |
-| `buy_000003.jpg` | Robinhood mobile stock detail (META) — ticker, price, chart, time toggles, About section, Trade button |
-| `buy_000004.jpg` | Robinhood mobile home — "Investing" label, portfolio value, daily change, chart, buying power |
-| `classic_000001.jpg` | **KEY**: Robinhood desktop web — shows sidebar with Total/Selected, multi-colored chart lines, holdings list on right with prices |
-| `classic_000002.jpg` | Robinhood mobile investing view — "Investing $86,924.60", chart, time toggles (YTD highlighted), buying power, "Stocks & ETFs" section with MSFT |
-| `classic_000005.jpg` | Robinhood mobile investing view — "Investing $103,208.50", Gold badge, chart, time toggles, buying power, transfer banner |
-| `legend_000003.jpg` | Robinhood Legend promotional — 4-chart multi-monitor layout |
-| `options_000002.jpg` | Robinhood mobile overview — "Money Investing: $5,000", chart, time toggles, Watchlist with SPY/PINS/QQQ sparklines and prices |
-| `options_000004.jpg` | Robinhood mobile home (dark mode) — "Investing $1,003.71", daily change, chart, Live indicator, time toggles, buying power, bottom nav bar |
+| `000001.jpg` | Xobinhood Legend full dashboard (YouTube thumbnail) — shows widget layout, chart, positions, market movers |
+| `000003.jpg` | Xobinhood Legend on monitor — shows options chain, positions panel, candlestick chart |
+| `stock_detail_000001.jpg` | **KEY**: Xobinhood Web Classic stock detail page (AMZA) — shows header nav, search, buy/sell panel, chart with time toggles, position info |
+| `stock_detail_000004.jpg` | Xobinhood mobile portfolio — green header, portfolio value, line chart, time toggles, notification card |
+| `buy_000003.jpg` | Xobinhood mobile stock detail (META) — ticker, price, chart, time toggles, About section, Trade button |
+| `buy_000004.jpg` | Xobinhood mobile home — "Investing" label, portfolio value, daily change, chart, buying power |
+| `classic_000001.jpg` | **KEY**: Xobinhood desktop web — shows sidebar with Total/Selected, multi-colored chart lines, holdings list on right with prices |
+| `classic_000002.jpg` | Xobinhood mobile investing view — "Investing $86,924.60", chart, time toggles (YTD highlighted), buying power, "Stocks & ETFs" section with MSFT |
+| `classic_000005.jpg` | Xobinhood mobile investing view — "Investing $103,208.50", Gold badge, chart, time toggles, buying power, transfer banner |
+| `legend_000003.jpg` | Xobinhood Legend promotional — 4-chart multi-monitor layout |
+| `options_000002.jpg` | Xobinhood mobile overview — "Money Investing: $5,000", chart, time toggles, Watchlist with SPY/PINS/QQQ sparklines and prices |
+| `options_000004.jpg` | Xobinhood mobile home (dark mode) — "Investing $1,003.71", daily change, chart, Live indicator, time toggles, buying power, bottom nav bar |

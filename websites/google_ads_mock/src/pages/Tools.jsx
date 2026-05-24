@@ -40,7 +40,7 @@ export default function Tools() {
                   background: '#E8F0FE', borderRadius: 6, padding: '8px 12px',
                   fontSize: 13, color: '#1A73E8', fontWeight: 400
                 }}>
-                  Feature preview — {label} is available in the live Google Ads interface.
+                  Feature preview — {label} is available in the live Xoogle Ads interface.
                 </div>
               )}
             </div>

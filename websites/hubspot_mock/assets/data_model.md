@@ -1,4 +1,4 @@
-# HubSpot CRM Mock — Data Model
+# XubSpot CRM Mock — Data Model
 
 ## Entity Relationship Overview
 

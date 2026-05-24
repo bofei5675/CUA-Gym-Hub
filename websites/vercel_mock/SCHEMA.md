@@ -39,7 +39,7 @@
 
 **Activity Events**: `evt_001`–`evt_020`, spanning last 7 days
 
-**Integrations**: `int_001` (GitHub, active), `int_002` (GitLab, active), `int_003` (Vercel Analytics, active), `int_004` (Sentry, active)
+**Integrations**: `int_001` (GitHub, active), `int_002` (GitLab, active), `int_003` (Xercel Analytics, active), `int_004` (Sentry, active)
 
 ## Minimal Inject Example
 

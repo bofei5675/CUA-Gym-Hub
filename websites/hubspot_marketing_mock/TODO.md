@@ -1,4 +1,4 @@
-# HubSpot Marketing Hub Mock — TODO
+# XubSpot Marketing Hub Mock — TODO
 
 > Status: COMPLETE (P0 + P1 + most P2)
 > Last updated by: dev agent, 2026-04-10

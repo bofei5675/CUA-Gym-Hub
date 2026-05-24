@@ -37,7 +37,7 @@ export default function Contacts() {
 
   const openComposer = (contact) => {
     setSelectedContact(contact);
-    setEmailDraft({ subject: `Zoom follow-up for ${contact.name}`, body: '' });
+    setEmailDraft({ subject: `Xoom follow-up for ${contact.name}`, body: '' });
     setShowEmailComposer(true);
   };
 
@@ -59,7 +59,7 @@ export default function Contacts() {
         <h2 className="text-2xl font-bold text-gray-800">Contacts</h2>
         <button 
           onClick={() => setShowModal(true)}
-          className="flex items-center space-x-2 bg-transparent text-zoom-blue px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors font-medium"
+          className="flex items-center space-x-2 bg-transparent text-xoom-blue px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors font-medium"
         >
           <UserPlus className="w-5 h-5" />
           <span>Add Contact</span>
@@ -84,7 +84,7 @@ export default function Contacts() {
                 </div>
               </div>
               <div className="flex items-center space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                <button onClick={() => openComposer(contact)} className="p-2 text-gray-500 hover:text-zoom-blue hover:bg-blue-50 rounded-full" title={`Email ${contact.name}`}>
+                <button onClick={() => openComposer(contact)} className="p-2 text-gray-500 hover:text-xoom-blue hover:bg-blue-50 rounded-full" title={`Email ${contact.name}`}>
                   <Mail className="w-4 h-4" />
                 </button>
                 <button onClick={() => toggleFavorite(contact)} className="p-2 text-gray-500 hover:text-yellow-500 hover:bg-yellow-50 rounded-full" title="Toggle favorite">
@@ -137,7 +137,7 @@ export default function Contacts() {
                 </button>
                 <button 
                   type="submit"
-                  className="px-4 py-2 text-white bg-zoom-blue rounded-lg hover:bg-blue-600"
+                  className="px-4 py-2 text-white bg-xoom-blue rounded-lg hover:bg-blue-600"
                 >
                   Add
                 </button>
@@ -164,7 +164,7 @@ export default function Contacts() {
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-3">
-                <button onClick={() => openComposer(selectedContact)} className="flex items-center justify-center gap-2 rounded-lg bg-zoom-blue text-white px-4 py-2">
+                <button onClick={() => openComposer(selectedContact)} className="flex items-center justify-center gap-2 rounded-lg bg-xoom-blue text-white px-4 py-2">
                   <Mail className="w-4 h-4" /> Email
                 </button>
                 <button onClick={() => setNotice(`Local instant meeting prepared for ${selectedContact.name}`)} className="flex items-center justify-center gap-2 rounded-lg border px-4 py-2">
@@ -198,7 +198,7 @@ export default function Contacts() {
               />
               <div className="flex justify-end gap-3">
                 <button type="button" onClick={() => setShowEmailComposer(false)} className="px-4 py-2 bg-gray-100 rounded-lg">Cancel</button>
-                <button type="submit" className="px-4 py-2 bg-zoom-blue text-white rounded-lg flex items-center gap-2"><Send className="w-4 h-4" /> Save Draft</button>
+                <button type="submit" className="px-4 py-2 bg-xoom-blue text-white rounded-lg flex items-center gap-2"><Send className="w-4 h-4" /> Save Draft</button>
               </div>
             </form>
           </div>

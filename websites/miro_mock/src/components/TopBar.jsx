@@ -54,7 +54,7 @@ export default function TopBar({ boardName, onBoardNameChange, onGoHome, userNam
       {/* Left section */}
       <div className="top-bar-left">
         <button className="top-bar-logo" onClick={onGoHome}>
-          miro
+          xiro
         </button>
         <div className="top-bar-divider" />
         {isEditing ? (

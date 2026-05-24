@@ -1,14 +1,14 @@
-# Google Sheets Mock — Research Summary
+# Xoogle Sheets Mock — Research Summary
 
 ## App Overview
 
-**Google Sheets** is Google's web-based spreadsheet application, part of the Google Workspace (formerly G Suite) productivity suite. It allows users to create, edit, format, and collaborate on spreadsheets directly in the browser. It competes primarily with Microsoft Excel and Apple Numbers.
+**Xoogle Sheets** is Google's web-based spreadsheet application, part of the Google Workspace (formerly G Suite) productivity suite. It allows users to create, edit, format, and collaborate on spreadsheets directly in the browser. It competes primarily with Microsoft Excel and Apple Numbers.
 
 **Category**: Productivity / Spreadsheet
 **Platform**: Web (primary), mobile apps (iOS/Android)
 **URL**: https://docs.google.com/spreadsheets
 
-Google Sheets is one of the most widely-used spreadsheet applications globally, with hundreds of millions of users. For agent training, it provides a rich, interaction-dense environment with cell editing, formula computation, formatting toolbars, menu systems, and multi-sheet management.
+Xoogle Sheets is one of the most widely-used spreadsheet applications globally, with hundreds of millions of users. For agent training, it provides a rich, interaction-dense environment with cell editing, formula computation, formatting toolbars, menu systems, and multi-sheet management.
 
 ---
 
@@ -53,7 +53,7 @@ Google Sheets is one of the most widely-used spreadsheet applications globally, 
 
 ### P0 — Core Shell (Required to Render)
 1. **App Layout**: Title bar + menu bar + toolbar + formula bar + grid + sheet tabs + status bar
-2. **Title Bar**: Google Sheets icon, editable document title, star (favorite), move to folder icon, cloud status icon, menu bar (File, Edit, View, Insert, Format, Data, Tools, Extensions, Help)
+2. **Title Bar**: Xoogle Sheets icon, editable document title, star (favorite), move to folder icon, cloud status icon, menu bar (File, Edit, View, Insert, Format, Data, Tools, Extensions, Help)
 3. **Toolbar**: Undo, Redo, Print, Paint format, Zoom, Currency, Percent, Decimal +/-, Number format (123), Font family, Font size, Bold, Italic, Strikethrough, Text color, Fill color, Borders, Merge cells, Alignment (left/center/right), Text wrapping, Text rotation, Link, Comment, Chart, Filter, Functions
 4. **Formula Bar**: Cell name box (shows "A1"), fx icon, formula/value input area
 5. **Grid**: Column headers (A, B, C...), row numbers (1, 2, 3...), cells with borders, scroll (horizontal + vertical)
@@ -94,7 +94,7 @@ Google Sheets is one of the most widely-used spreadsheet applications globally, 
 7. **Notes & Comments**: Insert note (hover to view), insert comment (thread with replies)
 8. **Status Bar**: Bottom bar showing SUM, AVERAGE, COUNT of selected range
 9. **Paint Format**: Click paint format button, then click cells to apply source formatting
-10. **Keyboard Shortcuts**: Comprehensive shortcut support matching real Google Sheets
+10. **Keyboard Shortcuts**: Comprehensive shortcut support matching real Xoogle Sheets
 11. **Cell Overflow**: Long text overflows into adjacent empty cells, wrapping when wrap is enabled
 12. **Clear Formatting**: Format > Clear formatting (Ctrl+\)
 13. **Column Auto-Resize**: Double-click column border to auto-fit content width
@@ -104,7 +104,7 @@ Google Sheets is one of the most widely-used spreadsheet applications globally, 
 ## UI Layout Description
 
 ### Overall Page Layout (from screenshots)
-The Google Sheets interface uses a **full-viewport layout** with no sidebar. Every pixel is devoted to the spreadsheet content.
+The Xoogle Sheets interface uses a **full-viewport layout** with no sidebar. Every pixel is devoted to the spreadsheet content.
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -126,7 +126,7 @@ The Google Sheets interface uses a **full-viewport layout** with no sidebar. Eve
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### Color Palette (Google Sheets Design System)
+### Color Palette (Xoogle Sheets Design System)
 - **Primary Green**: `#0F9D58` (Sheets brand, icon, active tab indicator)
 - **Primary Green Dark**: `#0B8043` (hover state for green elements)
 - **Header Background**: `#F8F9FA` (column/row headers, light gray)
@@ -176,17 +176,17 @@ The Google Sheets interface uses a **full-viewport layout** with no sidebar. Eve
 
 | File | Content |
 |------|---------|
-| `main_ui_01.jpg` | Google Sheets brand icon (green document icon with grid) |
+| `main_ui_01.jpg` | Xoogle Sheets brand icon (green document icon with grid) |
 | `main_ui_02.jpg` | YouTube thumbnail about creating new sheets |
-| `main_ui_03.jpg` | **BEST REFERENCE** — Real Google Sheets in browser with Stock Price Chart data, showing: title bar, menu bar (File/Edit/View/Insert/Format/Data/Tools/Extensions/Help), toolbar with all formatting buttons, formula bar, grid with data, sheet tabs at bottom |
+| `main_ui_03.jpg` | **BEST REFERENCE** — Real Xoogle Sheets in browser with Stock Price Chart data, showing: title bar, menu bar (File/Edit/View/Insert/Format/Data/Tools/Extensions/Help), toolbar with all formatting buttons, formula bar, grid with data, sheet tabs at bottom |
 | `main_ui_04.jpg` | Marketing promo image (not useful for UI) |
-| `main_ui_05.jpg` | Spreadsheet design concepts (not Google Sheets UI) |
+| `main_ui_05.jpg` | Spreadsheet design concepts (not Xoogle Sheets UI) |
 | `toolbar_01.jpg` | Windows desktop screenshot (not relevant) |
 | `toolbar_02.jpg` | Google Docs toolbar (similar but for Docs, not Sheets — still useful for menu pattern reference) |
-| `toolbar_03.jpg` | Google Sheets formatting tutorial showing bold/italic/underline options |
-| `toolbar_04.jpg` | Google Sheets tutorial showing strikethrough formatting |
-| `toolbar_05.jpg` | Google Sheets tutorial showing text formatting |
-| `sort_filter_01.jpg` | **EXCELLENT REFERENCE** — Real Google Sheets Sort tutorial showing: full toolbar with zoom, currency/percent/decimal buttons, font family (Default/Arial), font size (10), B/I/S/A̲/fill color/borders/merge/alignment, clear view of column headers and data grid |
+| `toolbar_03.jpg` | Xoogle Sheets formatting tutorial showing bold/italic/underline options |
+| `toolbar_04.jpg` | Xoogle Sheets tutorial showing strikethrough formatting |
+| `toolbar_05.jpg` | Xoogle Sheets tutorial showing text formatting |
+| `sort_filter_01.jpg` | **EXCELLENT REFERENCE** — Real Xoogle Sheets Sort tutorial showing: full toolbar with zoom, currency/percent/decimal buttons, font family (Default/Arial), font size (10), B/I/S/A̲/fill color/borders/merge/alignment, clear view of column headers and data grid |
 | `sort_filter_02.jpg` | Sort dropdown tutorial (less useful) |
 | `sort_filter_03.jpg` | Data filter tutorial |
 

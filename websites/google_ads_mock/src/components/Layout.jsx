@@ -209,7 +209,7 @@ export default function Layout() {
             <polygon points="14,2 2,24 14,18" fill="#4285F4"/>
             <polygon points="8,24 20,24 14,18" fill="#34A853"/>
           </svg>
-          <span style={styles.logoText}>Google Ads</span>
+          <span style={styles.logoText}>Xoogle Ads</span>
         </div>
 
         {/* Search */}

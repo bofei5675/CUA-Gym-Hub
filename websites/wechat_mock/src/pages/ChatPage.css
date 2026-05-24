@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: var(--wechat-bg-light, #f5f5f5);
+  background-color: var(--xechat-bg-light, #f5f5f5);
 }
 
 .chat-not-found {
@@ -11,20 +11,20 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  color: var(--wechat-text-secondary);
+  color: var(--xechat-text-secondary);
 }
 
 .chat-header {
   display: flex;
   align-items: center;
   padding: 10px 12px;
-  background-color: var(--wechat-header-bg, #ededed);
-  border-bottom: 0.5px solid var(--wechat-divider, #e0e0e0);
+  background-color: var(--xechat-header-bg, #ededed);
+  border-bottom: 0.5px solid var(--xechat-divider, #e0e0e0);
 }
 
 .back-btn {
   font-size: 28px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
   padding: 0 4px;
   margin-right: 4px;
 }
@@ -38,12 +38,12 @@
 .header-name {
   font-size: 17px;
   font-weight: 500;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
 }
 
 .more-btn {
   font-size: 22px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
   padding: 0 4px;
 }
 
@@ -104,13 +104,13 @@
 }
 
 .message.self .message-bubble {
-  background-color: var(--wechat-self-bubble, #95ec69);
-  color: var(--wechat-text-primary);
+  background-color: var(--xechat-self-bubble, #95ec69);
+  color: var(--xechat-text-primary);
 }
 
 .message.other .message-bubble {
-  background-color: var(--wechat-other-bubble, #fff);
-  color: var(--wechat-text-primary);
+  background-color: var(--xechat-other-bubble, #fff);
+  color: var(--xechat-text-primary);
 }
 
 .message-image {
@@ -129,8 +129,8 @@
 
 .file-icon { font-size: 28px; }
 .file-info { flex: 1; }
-.file-name { font-size: 14px; color: var(--wechat-text-primary); }
-.file-size { font-size: 12px; color: var(--wechat-text-secondary); margin-top: 2px; }
+.file-name { font-size: 14px; color: var(--xechat-text-primary); }
+.file-size { font-size: 12px; color: var(--xechat-text-secondary); margin-top: 2px; }
 
 /* Voice message */
 .voice-bubble {
@@ -149,13 +149,13 @@
 
 .voice-waves {
   font-size: 16px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
   letter-spacing: -2px;
 }
 
 .voice-duration {
   font-size: 13px;
-  color: var(--wechat-text-secondary);
+  color: var(--xechat-text-secondary);
 }
 
 /* Location message */
@@ -181,7 +181,7 @@
 
 .location-text {
   font-size: 13px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
 }
 
 /* Transfer message */
@@ -314,7 +314,7 @@
   gap: 6px;
   padding: 8px 10px;
   background-color: #f7f7f7;
-  border-top: 0.5px solid var(--wechat-divider);
+  border-top: 0.5px solid var(--xechat-divider);
 }
 
 .input-btn {
@@ -335,7 +335,7 @@
   border: 0.5px solid #e0e0e0;
   border-radius: 4px;
   font-size: 15px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
   text-align: center;
   cursor: pointer;
 }
@@ -355,7 +355,7 @@
 
 .send-btn {
   padding: 7px 14px;
-  background-color: var(--wechat-green, #07c160);
+  background-color: var(--xechat-green, #07c160);
   color: white;
   border-radius: 4px;
   font-size: 14px;
@@ -397,7 +397,7 @@
 
 .wave {
   width: 4px;
-  background: var(--wechat-green, #07c160);
+  background: var(--xechat-green, #07c160);
   border-radius: 2px;
   animation: waveAnim 0.6s ease-in-out infinite alternate;
 }
@@ -496,7 +496,7 @@
   font-size: 17px;
   font-weight: 500;
   margin: 0;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
 }
 
 .dialog-close-btn {
@@ -538,14 +538,14 @@
   font-size: 18px;
   width: 36px;
   height: 36px;
-  background-color: var(--wechat-green);
+  background-color: var(--xechat-green);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.location-item span { font-size: 14px; color: var(--wechat-text-primary); }
+.location-item span { font-size: 14px; color: var(--xechat-text-primary); }
 
 /* Transfer Dialog */
 .transfer-dialog {
@@ -575,13 +575,13 @@
 .currency-symbol {
   font-size: 28px;
   font-weight: 600;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
 }
 
 .transfer-amount-input {
   font-size: 40px;
   font-weight: 600;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
   background: none;
   width: 180px;
 }
@@ -591,12 +591,12 @@
 .transfer-receiver {
   text-align: center;
   font-size: 14px;
-  color: var(--wechat-text-secondary);
+  color: var(--xechat-text-secondary);
 }
 
 .transfer-confirm-btn {
   padding: 12px;
-  background-color: var(--wechat-green);
+  background-color: var(--xechat-green);
   color: white;
   border-radius: 8px;
   font-size: 16px;

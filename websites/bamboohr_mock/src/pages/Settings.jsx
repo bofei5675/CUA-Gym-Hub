@@ -460,7 +460,7 @@ function TimeOffPoliciesSection({ state, dispatch }) {
 
 function AccessLevelsSection({ state }) {
   const accessLevels = [
-    { name: 'Administrator', description: 'Full access to all BambooHR features including settings, reports, and employee data.', count: 1 },
+    { name: 'Administrator', description: 'Full access to all XambooHR features including settings, reports, and employee data.', count: 1 },
     { name: 'HR Manager', description: 'Access to manage employees, time off, hiring, and run reports.', count: 2 },
     { name: 'Manager', description: 'View and manage direct reports, approve time off, performance reviews.', count: 6 },
     { name: 'Employee', description: 'View own profile, request time off, update personal information.', count: (state.employees || []).filter(e => e.status === 'Active').length - 9 },

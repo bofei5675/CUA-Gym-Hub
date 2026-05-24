@@ -1,4 +1,4 @@
-# Notion Mock — TODO
+# Xotion Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-02-27
@@ -113,7 +113,7 @@
 <!-- Dev must NOT implement these. -->
 - Authentication / login (app starts pre-logged-in as "Sarah Chen")
 - Real-time collaboration / multiplayer
-- Notion AI features
+- Xotion AI features
 - File uploads (use URL references only)
 - Import/export functionality
 - Third-party integrations

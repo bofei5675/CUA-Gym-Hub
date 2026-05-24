@@ -119,13 +119,13 @@ export default function ServerSettings({ serverId, onClose }) {
   const isDirty = serverName !== server.name || serverDescription !== (server.description || '');
 
   return (
-    <div className="fixed inset-0 z-50 flex bg-discord-bg">
+    <div className="fixed inset-0 z-50 flex bg-xiscord-bg">
       {/* Settings Sidebar */}
-      <div className="w-[218px] bg-discord-dark flex flex-col items-end overflow-y-auto custom-scrollbar pt-16 pb-8 shrink-0">
+      <div className="w-[218px] bg-xiscord-dark flex flex-col items-end overflow-y-auto custom-scrollbar pt-16 pb-8 shrink-0">
         <div className="w-[190px] pr-2">
           {sections.map(section => (
             <div key={section.category} className="mb-2">
-              <div className="text-xs font-bold text-discord-muted uppercase px-2.5 py-1.5 truncate">{section.category}</div>
+              <div className="text-xs font-bold text-xiscord-muted uppercase px-2.5 py-1.5 truncate">{section.category}</div>
               {section.items.map(item => (
                 <button
                   key={item}
@@ -133,19 +133,19 @@ export default function ServerSettings({ serverId, onClose }) {
                   className={cn(
                     "w-full text-left px-2.5 py-1.5 rounded text-sm mb-0.5",
                     activeSection === item
-                      ? "bg-discord-selected text-white"
-                      : "text-discord-modifier hover:bg-discord-light/50 hover:text-discord-lightest"
+                      ? "bg-xiscord-selected text-white"
+                      : "text-xiscord-modifier hover:bg-xiscord-light/50 hover:text-xiscord-lightest"
                   )}
                 >
                   {item}
                 </button>
               ))}
-              <div className="h-px bg-discord-divider my-2 mx-2.5" />
+              <div className="h-px bg-xiscord-divider my-2 mx-2.5" />
             </div>
           ))}
           <button
             onClick={() => setShowDeleteConfirm(true)}
-            className="w-full text-left px-2.5 py-1.5 rounded text-sm text-discord-red hover:bg-discord-light/50"
+            className="w-full text-left px-2.5 py-1.5 rounded text-sm text-xiscord-red hover:bg-xiscord-light/50"
           >
             Delete Server
           </button>
@@ -159,27 +159,27 @@ export default function ServerSettings({ serverId, onClose }) {
             <h2 className="text-xl font-bold text-white mb-5">Server Overview</h2>
             <div className="flex gap-8">
               <div className="shrink-0">
-                <div className="w-24 h-24 rounded-full bg-discord-light flex items-center justify-center overflow-hidden">
+                <div className="w-24 h-24 rounded-full bg-xiscord-light flex items-center justify-center overflow-hidden">
                   <img src={server.icon} alt="" className="w-full h-full object-cover" />
                 </div>
-                <p className="text-xs text-discord-muted mt-2 text-center">Server Icon</p>
+                <p className="text-xs text-xiscord-muted mt-2 text-center">Server Icon</p>
               </div>
               <div className="flex-1">
                 <div className="mb-4">
-                  <label className="text-xs font-bold text-discord-muted uppercase block mb-2">Server Name</label>
+                  <label className="text-xs font-bold text-xiscord-muted uppercase block mb-2">Server Name</label>
                   <input
                     type="text"
                     value={serverName}
                     onChange={(e) => setServerName(e.target.value)}
-                    className="w-full bg-discord-darker text-discord-lightest px-3 py-2 rounded outline-none border border-discord-darker focus:border-discord-blurple"
+                    className="w-full bg-xiscord-darker text-xiscord-lightest px-3 py-2 rounded outline-none border border-xiscord-darker focus:border-xiscord-blurple"
                   />
                 </div>
                 <div className="mb-4">
-                  <label className="text-xs font-bold text-discord-muted uppercase block mb-2">Description</label>
+                  <label className="text-xs font-bold text-xiscord-muted uppercase block mb-2">Description</label>
                   <textarea
                     value={serverDescription}
                     onChange={(e) => setServerDescription(e.target.value)}
-                    className="w-full bg-discord-darker text-discord-lightest px-3 py-2 rounded outline-none border border-discord-darker focus:border-discord-blurple text-sm resize-none"
+                    className="w-full bg-xiscord-darker text-xiscord-lightest px-3 py-2 rounded outline-none border border-xiscord-darker focus:border-xiscord-blurple text-sm resize-none"
                     rows={3}
                     placeholder="Tell everyone what this server is about!"
                   />
@@ -194,22 +194,22 @@ export default function ServerSettings({ serverId, onClose }) {
                     </button>
                     <button
                       onClick={handleSaveChanges}
-                      className="px-4 py-1.5 text-sm font-medium bg-discord-green hover:bg-discord-green/80 text-white rounded"
+                      className="px-4 py-1.5 text-sm font-medium bg-xiscord-green hover:bg-xiscord-green/80 text-white rounded"
                     >
                       Save Changes
                     </button>
                   </div>
                 )}
-                <div className="flex gap-4 text-sm text-discord-muted">
+                <div className="flex gap-4 text-sm text-xiscord-muted">
                   <div>
-                    <span className="text-discord-lightest font-medium">{server.members.length}</span> Members
+                    <span className="text-xiscord-lightest font-medium">{server.members.length}</span> Members
                   </div>
                   <div>
-                    <span className="text-discord-lightest font-medium">{server.channels.length}</span> Channels
+                    <span className="text-xiscord-lightest font-medium">{server.channels.length}</span> Channels
                   </div>
                   {server.boostCount > 0 && (
                     <div>
-                      <span className="text-discord-lightest font-medium">{server.boostCount}</span> Boosts
+                      <span className="text-xiscord-lightest font-medium">{server.boostCount}</span> Boosts
                     </div>
                   )}
                 </div>
@@ -224,31 +224,31 @@ export default function ServerSettings({ serverId, onClose }) {
               <h2 className="text-xl font-bold text-white">Roles</h2>
               <button
                 onClick={() => setShowCreateRoleModal(true)}
-                className="flex items-center bg-discord-blurple hover:bg-discord-blurple/80 text-white text-sm font-medium px-3 py-1.5 rounded"
+                className="flex items-center bg-xiscord-blurple hover:bg-xiscord-blurple/80 text-white text-sm font-medium px-3 py-1.5 rounded"
               >
                 <Plus size={14} className="mr-1" /> Create Role
               </button>
             </div>
-            <p className="text-discord-muted text-sm mb-4">Use roles to group your server members and assign permissions.</p>
+            <p className="text-xiscord-muted text-sm mb-4">Use roles to group your server members and assign permissions.</p>
             <div className="space-y-2">
               {serverRoles.map(role => (
                 <div key={role.id} className={cn(
-                  "flex items-center bg-discord-dark rounded-lg p-3 hover:bg-discord-light/30 cursor-pointer",
-                  editingRoleId === role.id && "ring-1 ring-discord-blurple"
+                  "flex items-center bg-xiscord-dark rounded-lg p-3 hover:bg-xiscord-light/30 cursor-pointer",
+                  editingRoleId === role.id && "ring-1 ring-xiscord-blurple"
                 )} onClick={() => setEditingRoleId(editingRoleId === role.id ? null : role.id)}>
                   <div className="w-3 h-3 rounded-full mr-3 shrink-0" style={{ backgroundColor: role.color }} />
                   <div className="flex-1">
                     <div className="font-medium text-white">{role.name}</div>
-                    <div className="text-xs text-discord-muted">
+                    <div className="text-xs text-xiscord-muted">
                       {serverMembers.filter(m => (m.roles || []).includes(role.id)).length} member{serverMembers.filter(m => (m.roles || []).includes(role.id)).length !== 1 ? 's' : ''}
                       {role.hoist && ' • Displayed separately'}
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-xs text-discord-muted">Position: {role.position}</span>
+                    <span className="text-xs text-xiscord-muted">Position: {role.position}</span>
                     <button
                       onClick={(e) => { e.stopPropagation(); handleDeleteRole(role.id); }}
-                      className="p-1 rounded hover:bg-discord-red/20 text-discord-muted hover:text-discord-red"
+                      className="p-1 rounded hover:bg-xiscord-red/20 text-xiscord-muted hover:text-xiscord-red"
                       title="Delete role"
                     >
                       <Trash2 size={14} />
@@ -257,30 +257,30 @@ export default function ServerSettings({ serverId, onClose }) {
                 </div>
               ))}
               {serverRoles.length === 0 && (
-                <p className="text-discord-muted text-sm">No custom roles yet. Create one!</p>
+                <p className="text-xiscord-muted text-sm">No custom roles yet. Create one!</p>
               )}
             </div>
 
             {/* Create Role Modal */}
             {showCreateRoleModal && (
               <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70" onClick={() => setShowCreateRoleModal(false)}>
-                <div className="w-[440px] bg-discord-dark rounded-lg overflow-hidden shadow-2xl" onClick={e => e.stopPropagation()}>
+                <div className="w-[440px] bg-xiscord-dark rounded-lg overflow-hidden shadow-2xl" onClick={e => e.stopPropagation()}>
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-white mb-4">Create Role</h3>
                     <div className="mb-4">
-                      <label className="text-xs font-bold text-discord-muted uppercase block mb-2">Role Name</label>
+                      <label className="text-xs font-bold text-xiscord-muted uppercase block mb-2">Role Name</label>
                       <input
                         type="text"
                         value={newRoleName}
                         onChange={(e) => setNewRoleName(e.target.value)}
                         placeholder="new role"
-                        className="w-full bg-discord-darker text-discord-lightest px-3 py-2 rounded outline-none border border-discord-darker focus:border-discord-blurple text-sm"
+                        className="w-full bg-xiscord-darker text-xiscord-lightest px-3 py-2 rounded outline-none border border-xiscord-darker focus:border-xiscord-blurple text-sm"
                         autoFocus
                         onKeyDown={(e) => { if (e.key === 'Enter') handleCreateRole(); }}
                       />
                     </div>
                     <div className="mb-4">
-                      <label className="text-xs font-bold text-discord-muted uppercase block mb-2">Role Color</label>
+                      <label className="text-xs font-bold text-xiscord-muted uppercase block mb-2">Role Color</label>
                       <div className="flex items-center gap-3">
                         <input
                           type="color"
@@ -288,19 +288,19 @@ export default function ServerSettings({ serverId, onClose }) {
                           onChange={(e) => setNewRoleColor(e.target.value)}
                           className="w-10 h-10 rounded cursor-pointer bg-transparent border-0 p-0"
                         />
-                        <span className="text-sm text-discord-lightest">{newRoleColor}</span>
+                        <span className="text-sm text-xiscord-lightest">{newRoleColor}</span>
                       </div>
                     </div>
                     <div className="flex items-center justify-between py-2">
                       <div>
-                        <div className="text-discord-lightest text-sm font-medium">Display role separately from others</div>
-                        <div className="text-xs text-discord-muted">Roles toggled on will appear in the sidebar.</div>
+                        <div className="text-xiscord-lightest text-sm font-medium">Display role separately from others</div>
+                        <div className="text-xs text-xiscord-muted">Roles toggled on will appear in the sidebar.</div>
                       </div>
                       <button
                         onClick={() => setNewRoleHoist(!newRoleHoist)}
                         className={cn(
                           "w-10 h-6 rounded-full transition-colors relative shrink-0 ml-4",
-                          newRoleHoist ? "bg-discord-green" : "bg-discord-muted/40"
+                          newRoleHoist ? "bg-xiscord-green" : "bg-xiscord-muted/40"
                         )}
                       >
                         <div className={cn(
@@ -310,7 +310,7 @@ export default function ServerSettings({ serverId, onClose }) {
                       </button>
                     </div>
                   </div>
-                  <div className="bg-discord-darker p-4 flex justify-end gap-3">
+                  <div className="bg-xiscord-darker p-4 flex justify-end gap-3">
                     <button
                       onClick={() => setShowCreateRoleModal(false)}
                       className="px-4 py-2 text-sm text-white hover:underline"
@@ -322,7 +322,7 @@ export default function ServerSettings({ serverId, onClose }) {
                       disabled={!newRoleName.trim()}
                       className={cn(
                         "px-4 py-2 text-sm font-medium text-white rounded",
-                        newRoleName.trim() ? "bg-discord-blurple hover:bg-discord-blurple/80" : "bg-discord-blurple/50 cursor-not-allowed"
+                        newRoleName.trim() ? "bg-xiscord-blurple hover:bg-xiscord-blurple/80" : "bg-xiscord-blurple/50 cursor-not-allowed"
                       )}
                     >
                       Create Role
@@ -343,38 +343,38 @@ export default function ServerSettings({ serverId, onClose }) {
                 placeholder="Search members"
                 value={memberSearch}
                 onChange={(e) => setMemberSearch(e.target.value)}
-                className="w-full bg-discord-darker text-discord-lightest px-3 py-2 pl-9 rounded outline-none"
+                className="w-full bg-xiscord-darker text-xiscord-lightest px-3 py-2 pl-9 rounded outline-none"
               />
-              <Search size={16} className="absolute left-3 top-2.5 text-discord-muted" />
+              <Search size={16} className="absolute left-3 top-2.5 text-xiscord-muted" />
             </div>
-            <div className="text-xs text-discord-muted mb-3 font-bold uppercase">
+            <div className="text-xs text-xiscord-muted mb-3 font-bold uppercase">
               {filteredMembers.length} Member{filteredMembers.length !== 1 ? 's' : ''}
             </div>
             <div className="space-y-1">
               {filteredMembers.map(member => {
                 const memberRoles = (member.roles || []).map(id => store.roles[id]).filter(Boolean);
                 return (
-                  <div key={member.id} className="flex items-center p-2 rounded hover:bg-discord-light/30">
+                  <div key={member.id} className="flex items-center p-2 rounded hover:bg-xiscord-light/30">
                     <div className="relative mr-3">
                       <img src={member.avatar} alt="" className="w-8 h-8 rounded-full" />
                       <div className={cn(
-                        "absolute bottom-0 right-0 w-3 h-3 rounded-full border-2 border-discord-bg",
-                        member.status === 'online' ? "bg-discord-online" :
-                        member.status === 'idle' ? "bg-discord-idle" :
-                        member.status === 'dnd' ? "bg-discord-dnd" : "bg-discord-offline"
+                        "absolute bottom-0 right-0 w-3 h-3 rounded-full border-2 border-xiscord-bg",
+                        member.status === 'online' ? "bg-xiscord-online" :
+                        member.status === 'idle' ? "bg-xiscord-idle" :
+                        member.status === 'dnd' ? "bg-xiscord-dnd" : "bg-xiscord-offline"
                       )} />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center">
                         <span className="font-medium text-white text-sm">{member.username}</span>
-                        <span className="text-xs text-discord-muted ml-1">#{member.discriminator}</span>
+                        <span className="text-xs text-xiscord-muted ml-1">#{member.discriminator}</span>
                         {member.isBot && (
-                          <span className="bg-discord-blurple text-white text-[10px] font-bold px-1 py-0 rounded ml-1">BOT</span>
+                          <span className="bg-xiscord-blurple text-white text-[10px] font-bold px-1 py-0 rounded ml-1">BOT</span>
                         )}
                       </div>
                       <div className="flex gap-1 mt-0.5 flex-wrap">
                         {memberRoles.map(role => (
-                          <span key={role.id} className="flex items-center text-[10px] bg-discord-darker rounded px-1.5 py-0.5">
+                          <span key={role.id} className="flex items-center text-[10px] bg-xiscord-darker rounded px-1.5 py-0.5">
                             <span className="w-2 h-2 rounded-full mr-1" style={{ backgroundColor: role.color }} />
                             {role.name}
                           </span>
@@ -382,7 +382,7 @@ export default function ServerSettings({ serverId, onClose }) {
                       </div>
                     </div>
                     <div className="flex items-center gap-2 ml-2">
-                      {member.id === server.ownerId && <span className="text-xs text-discord-muted">👑 Owner</span>}
+                      {member.id === server.ownerId && <span className="text-xs text-xiscord-muted">👑 Owner</span>}
                     </div>
                   </div>
                 );
@@ -394,9 +394,9 @@ export default function ServerSettings({ serverId, onClose }) {
         {activeSection === 'Emoji' && (
           <div>
             <h2 className="text-xl font-bold text-white mb-5">Emoji</h2>
-            <p className="text-discord-muted text-sm mb-4">Upload custom emoji for members of this server to use. Server Emoji can also be used as reactions.</p>
-            <div className="bg-discord-dark rounded-lg p-4 text-center">
-              <p className="text-discord-muted text-sm">No custom emoji have been uploaded yet.</p>
+            <p className="text-xiscord-muted text-sm mb-4">Upload custom emoji for members of this server to use. Server Emoji can also be used as reactions.</p>
+            <div className="bg-xiscord-dark rounded-lg p-4 text-center">
+              <p className="text-xiscord-muted text-sm">No custom emoji have been uploaded yet.</p>
               <button
                 onClick={() => {
                   const fileInput = document.createElement('input');
@@ -410,7 +410,7 @@ export default function ServerSettings({ serverId, onClose }) {
                   };
                   fileInput.click();
                 }}
-                className="mt-3 bg-discord-blurple hover:bg-discord-blurple/80 text-white text-sm font-medium px-4 py-2 rounded"
+                className="mt-3 bg-xiscord-blurple hover:bg-xiscord-blurple/80 text-white text-sm font-medium px-4 py-2 rounded"
               >
                 Upload Emoji
               </button>
@@ -421,9 +421,9 @@ export default function ServerSettings({ serverId, onClose }) {
         {activeSection === 'Stickers' && (
           <div>
             <h2 className="text-xl font-bold text-white mb-5">Stickers</h2>
-            <p className="text-discord-muted text-sm mb-4">Upload custom stickers for members to use in this server.</p>
-            <div className="bg-discord-dark rounded-lg p-4 text-center">
-              <p className="text-discord-muted text-sm">No custom stickers have been uploaded yet.</p>
+            <p className="text-xiscord-muted text-sm mb-4">Upload custom stickers for members to use in this server.</p>
+            <div className="bg-xiscord-dark rounded-lg p-4 text-center">
+              <p className="text-xiscord-muted text-sm">No custom stickers have been uploaded yet.</p>
               <button
                 onClick={() => {
                   const fileInput = document.createElement('input');
@@ -437,7 +437,7 @@ export default function ServerSettings({ serverId, onClose }) {
                   };
                   fileInput.click();
                 }}
-                className="mt-3 bg-discord-blurple hover:bg-discord-blurple/80 text-white text-sm font-medium px-4 py-2 rounded"
+                className="mt-3 bg-xiscord-blurple hover:bg-xiscord-blurple/80 text-white text-sm font-medium px-4 py-2 rounded"
               >
                 Upload Sticker
               </button>
@@ -448,9 +448,9 @@ export default function ServerSettings({ serverId, onClose }) {
         {activeSection === 'Safety Setup' && (
           <div>
             <h2 className="text-xl font-bold text-white mb-5">Safety Setup</h2>
-            <p className="text-discord-muted text-sm mb-4">Set up safety features to help protect your server.</p>
+            <p className="text-xiscord-muted text-sm mb-4">Set up safety features to help protect your server.</p>
             <div className="space-y-3">
-              <PersistedSafetyToggle serverId={serverId} store={store} settingKey="verificationLevel" label="Verification Level" desc="Members must have a verified email on their Discord account." defaultVal={false} />
+              <PersistedSafetyToggle serverId={serverId} store={store} settingKey="verificationLevel" label="Verification Level" desc="Members must have a verified email on their Xiscord account." defaultVal={false} />
               <PersistedSafetyToggle serverId={serverId} store={store} settingKey="explicitMediaFilter" label="Explicit Media Content Filter" desc="Scan media content from all members." defaultVal={true} />
               <PersistedSafetyToggle serverId={serverId} store={store} settingKey="dmsFromStrangers" label="Block DMs from server members" desc="Automatically block DMs from members not in your friend list." defaultVal={false} />
             </div>
@@ -460,7 +460,7 @@ export default function ServerSettings({ serverId, onClose }) {
         {activeSection === 'AutoMod' && (
           <div>
             <h2 className="text-xl font-bold text-white mb-5">AutoMod</h2>
-            <p className="text-discord-muted text-sm mb-4">AutoMod automatically detects and takes action on harmful content in your server.</p>
+            <p className="text-xiscord-muted text-sm mb-4">AutoMod automatically detects and takes action on harmful content in your server.</p>
             <div className="space-y-3">
               <PersistedSafetyToggle serverId={serverId} store={store} settingKey="automodFlaggedWords" label="Block Commonly Flagged Words" desc="Block profanity, sexual content, and slurs." defaultVal={true} />
               <PersistedSafetyToggle serverId={serverId} store={store} settingKey="automodSpam" label="Block Spam Content" desc="Block messages suspected of being spam." defaultVal={true} />
@@ -472,14 +472,14 @@ export default function ServerSettings({ serverId, onClose }) {
         {activeSection === 'Audit Log' && (
           <div>
             <h2 className="text-xl font-bold text-white mb-5">Audit Log</h2>
-            <p className="text-discord-muted text-sm mb-4">Here you can view a list of all administrative actions taken in this server.</p>
+            <p className="text-xiscord-muted text-sm mb-4">Here you can view a list of all administrative actions taken in this server.</p>
             <div className="space-y-2">
               {auditLog.map(entry => (
-                <div key={entry.id} className="bg-discord-dark rounded-lg p-3 flex items-center justify-between text-sm">
+                <div key={entry.id} className="bg-xiscord-dark rounded-lg p-3 flex items-center justify-between text-sm">
                   <div>
                     <span className="text-white">{entry.action}</span>
                   </div>
-                  <span className="text-xs text-discord-muted ml-4 shrink-0">
+                  <span className="text-xs text-xiscord-muted ml-4 shrink-0">
                     {new Date(entry.timestamp).toLocaleDateString()}
                   </span>
                 </div>
@@ -491,9 +491,9 @@ export default function ServerSettings({ serverId, onClose }) {
         {activeSection === 'Bans' && (
           <div>
             <h2 className="text-xl font-bold text-white mb-5">Bans</h2>
-            <p className="text-discord-muted text-sm mb-4">Members who have been banned from this server.</p>
-            <div className="bg-discord-dark rounded-lg p-6 text-center">
-              <p className="text-discord-muted text-sm">No bans yet. Hopefully it stays that way!</p>
+            <p className="text-xiscord-muted text-sm mb-4">Members who have been banned from this server.</p>
+            <div className="bg-xiscord-dark rounded-lg p-6 text-center">
+              <p className="text-xiscord-muted text-sm">No bans yet. Hopefully it stays that way!</p>
             </div>
           </div>
         )}
@@ -503,24 +503,24 @@ export default function ServerSettings({ serverId, onClose }) {
       <div className="flex flex-col items-center pt-16 px-4 shrink-0">
         <button
           onClick={onClose}
-          className="w-9 h-9 rounded-full border-2 border-discord-muted text-discord-muted hover:border-white hover:text-white flex items-center justify-center"
+          className="w-9 h-9 rounded-full border-2 border-xiscord-muted text-xiscord-muted hover:border-white hover:text-white flex items-center justify-center"
         >
           <X size={18} />
         </button>
-        <span className="text-xs text-discord-muted mt-1.5 font-bold">ESC</span>
+        <span className="text-xs text-xiscord-muted mt-1.5 font-bold">ESC</span>
       </div>
 
       {/* Delete Server Confirmation Modal */}
       {showDeleteConfirm && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70" onClick={() => setShowDeleteConfirm(false)}>
-          <div className="w-[440px] bg-discord-dark rounded-lg overflow-hidden shadow-2xl" onClick={e => e.stopPropagation()}>
+          <div className="w-[440px] bg-xiscord-dark rounded-lg overflow-hidden shadow-2xl" onClick={e => e.stopPropagation()}>
             <div className="p-4">
               <h2 className="text-xl font-bold text-white mb-2">Delete '{server.name}'</h2>
-              <p className="text-discord-modifier mb-4">
+              <p className="text-xiscord-modifier mb-4">
                 Are you sure you want to delete <strong>{server.name}</strong>? This action cannot be undone.
               </p>
             </div>
-            <div className="bg-discord-darker p-4 flex justify-end gap-3">
+            <div className="bg-xiscord-darker p-4 flex justify-end gap-3">
               <button
                 onClick={() => setShowDeleteConfirm(false)}
                 className="px-4 py-2 text-sm font-medium text-white hover:underline"
@@ -529,7 +529,7 @@ export default function ServerSettings({ serverId, onClose }) {
               </button>
               <button
                 onClick={handleDeleteServer}
-                className="px-4 py-2 text-sm font-medium bg-discord-red hover:bg-discord-red/80 text-white rounded"
+                className="px-4 py-2 text-sm font-medium bg-xiscord-red hover:bg-xiscord-red/80 text-white rounded"
               >
                 Delete Server
               </button>
@@ -548,16 +548,16 @@ function PersistedSafetyToggle({ serverId, store, settingKey, label, desc, defau
   const enabled = fullKey in userSettings ? userSettings[fullKey] : defaultVal;
 
   return (
-    <div className="flex items-center justify-between bg-discord-dark rounded-lg p-3">
+    <div className="flex items-center justify-between bg-xiscord-dark rounded-lg p-3">
       <div>
         <div className="text-white font-medium text-sm">{label}</div>
-        {desc && <div className="text-xs text-discord-muted mt-0.5">{desc}</div>}
+        {desc && <div className="text-xs text-xiscord-muted mt-0.5">{desc}</div>}
       </div>
       <button
         onClick={() => store.updateUserSettings({ [fullKey]: !enabled })}
         className={cn(
           "w-10 h-6 rounded-full transition-colors relative shrink-0 ml-4",
-          enabled ? "bg-discord-green" : "bg-discord-muted/40"
+          enabled ? "bg-xiscord-green" : "bg-xiscord-muted/40"
         )}
       >
         <div className={cn(

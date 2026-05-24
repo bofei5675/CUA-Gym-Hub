@@ -1,8 +1,8 @@
-# Design System Inspired by Contractbook
+# Design System Inspired by Xontractbook
 
 ## 1. Visual Theme & Atmosphere
 
-Contractbook uses a clean, modern SaaS aesthetic with a predominantly white workspace, subtle gray borders, and a vivid blue accent color. The interface feels professional and document-centric, with generous whitespace and a clear information hierarchy. The overall look is minimal and business-focused, with rounded corners, soft shadows, and a light sidebar that keeps navigation unobtrusive. Typography is clean sans-serif, and the color palette is restrained -- blue for primary actions, colored status badges for contract states, and muted grays for secondary text.
+Xontractbook uses a clean, modern SaaS aesthetic with a predominantly white workspace, subtle gray borders, and a vivid blue accent color. The interface feels professional and document-centric, with generous whitespace and a clear information hierarchy. The overall look is minimal and business-focused, with rounded corners, soft shadows, and a light sidebar that keeps navigation unobtrusive. Typography is clean sans-serif, and the color palette is restrained -- blue for primary actions, colored status badges for contract states, and muted grays for secondary text.
 
 The layout follows a classic three-panel SaaS pattern: a narrow left sidebar for navigation, a top toolbar for context actions, and a wide main content area that displays either a table view (contracts list) or a document editor. The design prioritizes scannability and quick access to contract status.
 
@@ -52,7 +52,7 @@ The layout follows a classic three-panel SaaS pattern: a narrow left sidebar for
 
 ## 3. Typography Rules
 
-Contractbook uses Inter (or system sans-serif fallback) for all text.
+Xontractbook uses Inter (or system sans-serif fallback) for all text.
 
 | Role | Font | Size | Weight | Line Height | Letter Spacing |
 |------|------|------|--------|-------------|----------------|

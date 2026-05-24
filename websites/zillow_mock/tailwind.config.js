@@ -10,7 +10,7 @@ export default {
         brand: {
           50: '#e6f0ff',
           100: '#cce0ff',
-          500: '#006AFF', // Zillow Blue
+          500: '#006AFF', // Xillow Blue
           600: '#0055cc',
           700: '#004099',
         }

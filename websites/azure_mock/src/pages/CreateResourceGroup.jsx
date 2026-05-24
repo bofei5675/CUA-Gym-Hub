@@ -84,7 +84,7 @@ export default function CreateResourceGroup() {
 
           <div style={{ marginBottom: '16px' }}>
             <label style={{ display: 'block', fontWeight: 600, marginBottom: '4px', fontSize: '14px' }}>
-              Subscription <span style={{ color: 'var(--azure-error)' }}>*</span>
+              Subscription <span style={{ color: 'var(--xzure-error)' }}>*</span>
             </label>
             <select className="input" style={{ width: '100%' }} value={subscription} onChange={e => setSubscription(e.target.value)}>
               {state.subscriptions.map(sub => (
@@ -95,24 +95,24 @@ export default function CreateResourceGroup() {
 
           <div style={{ marginBottom: '16px' }}>
             <label style={{ display: 'block', fontWeight: 600, marginBottom: '4px', fontSize: '14px' }}>
-              Resource group <span style={{ color: 'var(--azure-error)' }}>*</span>
+              Resource group <span style={{ color: 'var(--xzure-error)' }}>*</span>
             </label>
             <input
               className="input"
-              style={{ width: '100%', borderColor: nameError ? 'var(--azure-error)' : undefined }}
+              style={{ width: '100%', borderColor: nameError ? 'var(--xzure-error)' : undefined }}
               placeholder="Enter a resource group name"
               value={name}
               onChange={e => { setName(e.target.value); if (nameError) validateName(e.target.value); }}
               onBlur={() => name && validateName(name)}
             />
             {nameError && (
-              <div style={{ color: 'var(--azure-error)', fontSize: '12px', marginTop: '4px' }}>{nameError}</div>
+              <div style={{ color: 'var(--xzure-error)', fontSize: '12px', marginTop: '4px' }}>{nameError}</div>
             )}
           </div>
 
           <div style={{ marginBottom: '24px' }}>
             <label style={{ display: 'block', fontWeight: 600, marginBottom: '4px', fontSize: '14px' }}>
-              Region <span style={{ color: 'var(--azure-error)' }}>*</span>
+              Region <span style={{ color: 'var(--xzure-error)' }}>*</span>
             </label>
             <select className="input" style={{ width: '100%' }} value={location} onChange={e => setLocation(e.target.value)}>
               {locations.map(loc => (
@@ -124,7 +124,7 @@ export default function CreateResourceGroup() {
           <div className="section-header" style={{ marginBottom: '12px' }}>Tags</div>
           <div style={{ marginBottom: '16px' }}>
             <div className="card" style={{ padding: 0 }}>
-              <table className="azure-table">
+              <table className="xzure-table">
                 <thead>
                   <tr><th>Name</th><th>Value</th><th></th></tr>
                 </thead>
@@ -153,22 +153,22 @@ export default function CreateResourceGroup() {
 
       {step === 'review' && (
         <div className="card" style={{ maxWidth: '680px' }}>
-          <div style={{ marginBottom: '16px', padding: '12px', background: '#dff6dd', borderRadius: '2px', color: 'var(--azure-success)', fontWeight: 600 }}>
+          <div style={{ marginBottom: '16px', padding: '12px', background: '#dff6dd', borderRadius: '2px', color: 'var(--xzure-success)', fontWeight: 600 }}>
             Validation passed
           </div>
 
           <div className="section-header" style={{ marginBottom: '12px' }}>Review + create</div>
 
           <div style={{ display: 'grid', gridTemplateColumns: '180px 1fr', gap: '8px 16px', marginBottom: '24px' }}>
-            <div style={{ fontWeight: 600, color: 'var(--azure-text-secondary)' }}>Subscription</div>
+            <div style={{ fontWeight: 600, color: 'var(--xzure-text-secondary)' }}>Subscription</div>
             <div>{subscription}</div>
-            <div style={{ fontWeight: 600, color: 'var(--azure-text-secondary)' }}>Resource group</div>
+            <div style={{ fontWeight: 600, color: 'var(--xzure-text-secondary)' }}>Resource group</div>
             <div>{name}</div>
-            <div style={{ fontWeight: 600, color: 'var(--azure-text-secondary)' }}>Region</div>
+            <div style={{ fontWeight: 600, color: 'var(--xzure-text-secondary)' }}>Region</div>
             <div>{location}</div>
             {tags.filter(t => t.key.trim()).length > 0 && (
               <>
-                <div style={{ fontWeight: 600, color: 'var(--azure-text-secondary)' }}>Tags</div>
+                <div style={{ fontWeight: 600, color: 'var(--xzure-text-secondary)' }}>Tags</div>
                 <div>
                   {tags.filter(t => t.key.trim()).map(t => (
                     <div key={t.id}>{t.key}: {t.value}</div>

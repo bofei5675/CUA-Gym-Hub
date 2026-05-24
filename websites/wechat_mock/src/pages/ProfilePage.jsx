@@ -61,7 +61,7 @@ const ProfilePage = () => {
     { key: 'notifications', label: '新消息通知', section: 3 },
     { key: 'privacy', label: '隐私', section: 3 },
     { key: 'general', label: '通用', section: 3 },
-    { key: 'about', label: '关于微信', desc: 'WeChat 8.0.44', section: 4 },
+    { key: 'about', label: '关于微信', desc: 'XeChat 8.0.44', section: 4 },
   ];
 
   const settingSections = [1, 2, 3, 4];

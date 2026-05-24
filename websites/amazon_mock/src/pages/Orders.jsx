@@ -105,7 +105,7 @@ export const Orders = () => {
   };
 
   return (
-    <div className="bg-amazon-bg min-h-screen">
+    <div className="bg-xmazon-bg min-h-screen">
       <div className="max-w-[1000px] mx-auto p-4">
         <h1 className="text-2xl font-medium mb-4">Your Orders</h1>
 
@@ -122,8 +122,8 @@ export const Orders = () => {
               onClick={() => setActiveTab(key)}
               className={`px-5 py-3 text-sm font-medium whitespace-nowrap border-b-2 transition-colors ${
                 activeTab === key
-                  ? 'border-amazon-orange text-amazon-dark'
-                  : 'border-transparent text-gray-600 hover:text-amazon-dark hover:bg-gray-50'
+                  ? 'border-xmazon-orange text-xmazon-dark'
+                  : 'border-transparent text-gray-600 hover:text-xmazon-dark hover:bg-gray-50'
               }`}
             >
               {label}
@@ -147,13 +147,13 @@ export const Orders = () => {
                     <Link to={`/product/${prod.id}`}>
                       <img src={prod.image} alt={prod.title} className="w-full h-32 object-contain" />
                     </Link>
-                    <Link to={`/product/${prod.id}`} className="text-xs text-amazon-blue hover:underline font-medium line-clamp-2">
+                    <Link to={`/product/${prod.id}`} className="text-xs text-xmazon-blue hover:underline font-medium line-clamp-2">
                       {prod.title}
                     </Link>
                     <div className="text-sm font-bold">${prod.price.toFixed(2)}</div>
                     <button
                       onClick={() => { addToCart(prod, 1); navigate('/cart'); }}
-                      className="bg-amazon-yellow hover:bg-yellow-400 text-amazon-dark text-xs font-medium py-1.5 px-3 rounded-full border border-yellow-500 transition-colors"
+                      className="bg-xmazon-yellow hover:bg-yellow-400 text-xmazon-dark text-xs font-medium py-1.5 px-3 rounded-full border border-yellow-500 transition-colors"
                     >
                       Add to Cart
                     </button>
@@ -178,7 +178,7 @@ export const Orders = () => {
                 onClick={() => setTimeFilter(key)}
                 className={`px-3 py-1.5 text-sm rounded border transition-colors ${
                   timeFilter === key
-                    ? 'bg-amazon text-white border-amazon'
+                    ? 'bg-xmazon text-white border-xmazon'
                     : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
                 }`}
               >
@@ -195,7 +195,7 @@ export const Orders = () => {
               value={orderSearch}
               onChange={e => setOrderSearch(e.target.value)}
               placeholder="Search your orders"
-              className="pl-7 pr-3 py-1.5 border rounded text-sm focus:outline-none focus:border-amazon-orange w-56"
+              className="pl-7 pr-3 py-1.5 border rounded text-sm focus:outline-none focus:border-xmazon-orange w-56"
             />
           </div>
         </div>
@@ -214,7 +214,7 @@ export const Orders = () => {
             ) : (
               <p className="text-gray-500 text-sm mb-4">You haven't placed any orders in this time period.</p>
             )}
-            <Link to="/" className="text-amazon-blue hover:underline">Start shopping</Link>
+            <Link to="/" className="text-xmazon-blue hover:underline">Start shopping</Link>
           </div>
         ) : (
           <div className="space-y-4">
@@ -234,7 +234,7 @@ export const Orders = () => {
                     <div>
                       <div className="uppercase text-xs font-bold text-gray-500 mb-0.5">SHIP TO</div>
                       <button
-                        className="text-amazon-blue hover:underline cursor-pointer"
+                        className="text-xmazon-blue hover:underline cursor-pointer"
                         onClick={() => setAddressModal(order.shippingAddress)}
                       >
                         {order.shippingAddress.fullName}
@@ -244,13 +244,13 @@ export const Orders = () => {
                   <div className="text-right">
                     <div className="uppercase text-xs font-bold text-gray-500 mb-0.5">ORDER # {order.id}</div>
                     <button
-                      className="text-amazon-blue hover:underline block text-xs"
+                      className="text-xmazon-blue hover:underline block text-xs"
                       onClick={() => setOrderDetailModal(order)}
                     >
                       View order details
                     </button>
                     <button
-                      className="text-amazon-blue hover:underline block text-xs"
+                      className="text-xmazon-blue hover:underline block text-xs"
                       onClick={() => setOrderDetailModal(order)}
                     >
                       Invoice
@@ -270,7 +270,7 @@ export const Orders = () => {
                     )}
                     {order.trackingNumber && order.status === 'Shipped' && (
                       <button
-                        className="ml-auto text-xs text-amazon-blue hover:underline cursor-pointer"
+                        className="ml-auto text-xs text-xmazon-blue hover:underline cursor-pointer"
                         onClick={() => setTrackingModal({ orderId: order.id, trackingNumber: order.trackingNumber })}
                       >
                         Track package
@@ -288,7 +288,7 @@ export const Orders = () => {
                           <img src={product.image} alt={product.title} className="w-20 h-20 object-contain flex-shrink-0" />
                         </Link>
                         <div className="flex-1">
-                          <Link to={`/product/${product.id}`} className="font-bold text-amazon-blue hover:underline text-sm line-clamp-2">
+                          <Link to={`/product/${product.id}`} className="font-bold text-xmazon-blue hover:underline text-sm line-clamp-2">
                             {product.title}
                           </Link>
                           <div className="text-xs text-gray-500 mt-1">Sold by: {product.brand}</div>
@@ -344,14 +344,14 @@ export const Orders = () => {
                             >
                               Confirm Cancel
                             </button>
-                            <button onClick={() => setCancelConfirm(null)} className="text-amazon-blue hover:underline text-xs">
+                            <button onClick={() => setCancelConfirm(null)} className="text-xmazon-blue hover:underline text-xs">
                               Keep Order
                             </button>
                           </div>
                         ) : (
                           <button
                             onClick={() => setCancelConfirm(order.id)}
-                            className="text-amazon-blue hover:underline text-xs"
+                            className="text-xmazon-blue hover:underline text-xs"
                           >
                             Cancel order
                           </button>
@@ -428,7 +428,7 @@ export const Orders = () => {
                 </div>
               </div>
             </div>
-            <button onClick={() => setTrackingModal(null)} className="mt-4 w-full bg-amazon-yellow hover:bg-amazon-darkYellow py-2 rounded font-bold text-sm">Close</button>
+            <button onClick={() => setTrackingModal(null)} className="mt-4 w-full bg-xmazon-yellow hover:bg-xmazon-darkYellow py-2 rounded font-bold text-sm">Close</button>
           </div>
         </div>
       )}
@@ -451,7 +451,7 @@ export const Orders = () => {
                 {addressModal.phone && <div className="text-gray-500 mt-1">{addressModal.phone}</div>}
               </div>
             </div>
-            <button onClick={() => setAddressModal(null)} className="mt-4 w-full bg-amazon-yellow hover:bg-amazon-darkYellow py-2 rounded font-bold text-sm">Close</button>
+            <button onClick={() => setAddressModal(null)} className="mt-4 w-full bg-xmazon-yellow hover:bg-xmazon-darkYellow py-2 rounded font-bold text-sm">Close</button>
           </div>
         </div>
       )}
@@ -508,7 +508,7 @@ export const Orders = () => {
                 <span>${orderDetailModal.total.toFixed(2)}</span>
               </div>
             </div>
-            <button onClick={() => setOrderDetailModal(null)} className="mt-4 w-full bg-amazon-yellow hover:bg-amazon-darkYellow py-2 rounded font-bold text-sm">Close</button>
+            <button onClick={() => setOrderDetailModal(null)} className="mt-4 w-full bg-xmazon-yellow hover:bg-xmazon-darkYellow py-2 rounded font-bold text-sm">Close</button>
           </div>
         </div>
       )}
@@ -531,7 +531,7 @@ export const Orders = () => {
             <form onSubmit={(e) => handleReturnSubmit(e, returnModal.order.id, returnModal.product.id)} className="space-y-3">
               <div>
                 <label className="block text-sm font-bold mb-1">Reason for return</label>
-                <select required className="w-full p-2 border rounded text-sm focus:outline-none focus:border-amazon-orange">
+                <select required className="w-full p-2 border rounded text-sm focus:outline-none focus:border-xmazon-orange">
                   <option value="">Select a reason</option>
                   <option value="defective">Defective/Doesn't work</option>
                   <option value="wrong-item">Wrong item received</option>
@@ -542,7 +542,7 @@ export const Orders = () => {
               </div>
               <div>
                 <label className="block text-sm font-bold mb-1">Comments (optional)</label>
-                <textarea className="w-full p-2 border rounded text-sm h-20 focus:outline-none focus:border-amazon-orange" placeholder="Tell us more about the issue..." />
+                <textarea className="w-full p-2 border rounded text-sm h-20 focus:outline-none focus:border-xmazon-orange" placeholder="Tell us more about the issue..." />
               </div>
               <div className="flex gap-2">
                 <Button type="submit" className="flex-1">Submit Return Request</Button>

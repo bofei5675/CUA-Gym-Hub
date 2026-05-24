@@ -1,4 +1,4 @@
-# Uber Eats Mock — Data Model
+# Xber Eats Mock — Data Model
 
 > For use in `src/utils/dataManager.js`
 > All IDs use string format: `"<type>_<number>"` (e.g., `"rest_1"`, `"item_14"`)

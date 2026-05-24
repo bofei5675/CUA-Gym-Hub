@@ -194,7 +194,7 @@ export default function Header({ onCartClick, onMenuClick }) {
           <Search size={18} className="ue-header__search-icon" />
           <input
             type="text"
-            placeholder="Search Uber Eats"
+            placeholder="Search Xber Eats"
             className="ue-header__search-input"
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}

@@ -1,7 +1,7 @@
 
     import React, { useState, useRef, useEffect } from 'react';
     import { Outlet, Link, useNavigate } from 'react-router-dom';
-    import { Github, Bell, Plus, Search, X, MessageSquare, GitPullRequest, AtSign, AlertCircle, CheckCircle } from 'lucide-react';
+    import { XitHub, Bell, Plus, Search, X, MessageSquare, GitPullRequest, AtSign, AlertCircle, CheckCircle } from 'lucide-react';
     import { useStore } from '../lib/store';
     import KeyboardNav from './KeyboardNav';
     import CommandPalette from './CommandPalette';
@@ -100,18 +100,18 @@
       const repoOwner = state.users.find(u => u.id === firstRepo?.ownerId)?.username || 'admin';
 
       return (
-        <div className="min-h-screen bg-github-bg text-github-text">
+        <div className="min-h-screen bg-xithub-bg text-xithub-text">
           {/* Header */}
-          <header className="bg-github-header border-b border-github-border py-3 px-6 flex items-center justify-between sticky top-0 z-50">
+          <header className="bg-xithub-header border-b border-xithub-border py-3 px-6 flex items-center justify-between sticky top-0 z-50">
             <div className="flex items-center gap-4">
               <Link to="/" className="text-white hover:text-gray-300">
-                <Github size={32} fill="white" />
+                <XitHub size={32} fill="white" />
               </Link>
 
               {/* Search Box */}
               <div className="relative" ref={searchRef}>
                 <div className="relative">
-                  <Search size={16} className="absolute left-3 top-2 text-github-muted" />
+                  <Search size={16} className="absolute left-3 top-2 text-xithub-muted" />
                   <input
                     ref={searchInputRef}
                     type="text"
@@ -122,31 +122,31 @@
                       setShowSearchResults(true);
                     }}
                     onFocus={() => setShowSearchResults(true)}
-                    className="bg-github-bg border border-github-border rounded-md py-1.5 pl-9 pr-8 text-sm w-72 focus:ring-2 focus:ring-github-accent focus:border-transparent outline-none transition-all"
+                    className="bg-xithub-bg border border-xithub-border rounded-md py-1.5 pl-9 pr-8 text-sm w-72 focus:ring-2 focus:ring-xithub-accent focus:border-transparent outline-none transition-all"
                   />
                   {searchQuery && (
                     <button
                       onClick={() => { setSearchQuery(''); setShowSearchResults(false); }}
-                      className="absolute right-8 top-2 text-github-muted hover:text-white"
+                      className="absolute right-8 top-2 text-xithub-muted hover:text-white"
                     >
                       <X size={14} />
                     </button>
                   )}
-                  <div className="absolute right-2 top-1.5 border border-github-border rounded px-1.5 text-xs text-github-muted">/</div>
+                  <div className="absolute right-2 top-1.5 border border-xithub-border rounded px-1.5 text-xs text-xithub-muted">/</div>
                 </div>
 
                 {/* Search Results Dropdown */}
                 {showSearchResults && searchQuery && (
-                  <div className="absolute top-full left-0 mt-1 w-96 bg-github-card border border-github-border rounded-md shadow-lg max-h-96 overflow-auto z-50">
+                  <div className="absolute top-full left-0 mt-1 w-96 bg-xithub-card border border-xithub-border rounded-md shadow-lg max-h-96 overflow-auto z-50">
                     {!hasResults ? (
-                      <div className="p-4 text-center text-github-muted text-sm">
+                      <div className="p-4 text-center text-xithub-muted text-sm">
                         No results found for "{searchQuery}"
                       </div>
                     ) : (
                       <>
                         {searchResults.repos.length > 0 && (
                           <div>
-                            <div className="px-3 py-2 text-xs font-semibold text-github-muted bg-[#161b22]">Repositories</div>
+                            <div className="px-3 py-2 text-xs font-semibold text-xithub-muted bg-[#161b22]">Repositories</div>
                             {searchResults.repos.map(repo => {
                               const owner = state.users.find(u => u.id === repo.ownerId);
                               return (
@@ -155,7 +155,7 @@
                                   onClick={() => handleSearchSelect(`/${owner?.username}/${repo.name}`)}
                                   className="w-full px-3 py-2 text-left hover:bg-[#161b22] flex items-center gap-2"
                                 >
-                                  <Github size={16} className="text-github-muted" />
+                                  <XitHub size={16} className="text-xithub-muted" />
                                   <span className="text-sm">{owner?.username}/{repo.name}</span>
                                 </button>
                               );
@@ -164,7 +164,7 @@
                         )}
                         {searchResults.issues.length > 0 && (
                           <div>
-                            <div className="px-3 py-2 text-xs font-semibold text-github-muted bg-[#161b22]">Issues</div>
+                            <div className="px-3 py-2 text-xs font-semibold text-xithub-muted bg-[#161b22]">Issues</div>
                             {searchResults.issues.map(issue => {
                               const repo = state.repos.find(r => r.id === issue.repoId);
                               const owner = state.users.find(u => u.id === repo?.ownerId);
@@ -175,7 +175,7 @@
                                   className="w-full px-3 py-2 text-left hover:bg-[#161b22]"
                                 >
                                   <div className="text-sm">{issue.title}</div>
-                                  <div className="text-xs text-github-muted">#{issue.number} in {owner?.username}/{repo?.name}</div>
+                                  <div className="text-xs text-xithub-muted">#{issue.number} in {owner?.username}/{repo?.name}</div>
                                 </button>
                               );
                             })}
@@ -189,15 +189,15 @@
 
               {/* Navigation */}
               <nav className="hidden md:flex gap-4 text-sm font-semibold text-white">
-                <Link to={firstRepo ? `/${repoOwner}/${firstRepo.name}/pulls` : '/'} className="hover:text-github-muted">
+                <Link to={firstRepo ? `/${repoOwner}/${firstRepo.name}/pulls` : '/'} className="hover:text-xithub-muted">
                   Pull requests
                 </Link>
-                <Link to={firstRepo ? `/${repoOwner}/${firstRepo.name}/issues` : '/'} className="hover:text-github-muted">
+                <Link to={firstRepo ? `/${repoOwner}/${firstRepo.name}/issues` : '/'} className="hover:text-xithub-muted">
                   Issues
                 </Link>
-                <button onClick={() => openUtilityPanel('codespaces')} className="hover:text-github-muted">Codespaces</button>
-                <button onClick={() => openUtilityPanel('marketplace')} className="hover:text-github-muted">Marketplace</button>
-                <button onClick={() => openUtilityPanel('explore')} className="hover:text-github-muted">Explore</button>
+                <button onClick={() => openUtilityPanel('codespaces')} className="hover:text-xithub-muted">Codespaces</button>
+                <button onClick={() => openUtilityPanel('marketplace')} className="hover:text-xithub-muted">Marketplace</button>
+                <button onClick={() => openUtilityPanel('explore')} className="hover:text-xithub-muted">Explore</button>
               </nav>
             </div>
 
@@ -210,11 +210,11 @@
 
                   const getNotifIcon = (type) => {
                     switch (type) {
-                      case 'issue_comment': return <MessageSquare size={14} className="text-github-muted" />;
-                      case 'pr_review': return <GitPullRequest size={14} className="text-github-muted" />;
-                      case 'mention': return <AtSign size={14} className="text-github-muted" />;
-                      case 'ci_status': return <AlertCircle size={14} className="text-github-muted" />;
-                      default: return <Bell size={14} className="text-github-muted" />;
+                      case 'issue_comment': return <MessageSquare size={14} className="text-xithub-muted" />;
+                      case 'pr_review': return <GitPullRequest size={14} className="text-xithub-muted" />;
+                      case 'mention': return <AtSign size={14} className="text-xithub-muted" />;
+                      case 'ci_status': return <AlertCircle size={14} className="text-xithub-muted" />;
+                      default: return <Bell size={14} className="text-xithub-muted" />;
                     }
                   };
 
@@ -247,30 +247,30 @@
                       >
                         <Bell size={18} />
                         {unreadCount > 0 && (
-                          <span className="absolute -top-1.5 -right-1.5 min-w-[16px] h-4 px-1 bg-github-accent rounded-full text-[10px] font-bold text-white flex items-center justify-center">
+                          <span className="absolute -top-1.5 -right-1.5 min-w-[16px] h-4 px-1 bg-xithub-accent rounded-full text-[10px] font-bold text-white flex items-center justify-center">
                             {unreadCount}
                           </span>
                         )}
                       </button>
                       {showNotifications && (
-                        <div className="absolute right-0 top-full mt-2 w-96 bg-github-card border border-github-border rounded-md shadow-lg z-50">
-                          <div className="px-4 py-3 border-b border-github-border flex items-center justify-between">
+                        <div className="absolute right-0 top-full mt-2 w-96 bg-xithub-card border border-xithub-border rounded-md shadow-lg z-50">
+                          <div className="px-4 py-3 border-b border-xithub-border flex items-center justify-between">
                             <span className="font-semibold">Notifications</span>
                             {unreadCount > 0 && (
                               <button
                                 onClick={() => dispatch({ type: actions.MARK_ALL_NOTIFICATIONS_READ })}
-                                className="text-xs text-github-accent hover:underline"
+                                className="text-xs text-xithub-accent hover:underline"
                               >
                                 Mark all as read
                               </button>
                             )}
                           </div>
                           {notifications.length === 0 ? (
-                            <div className="p-6 text-sm text-github-muted text-center">
+                            <div className="p-6 text-sm text-xithub-muted text-center">
                               No notifications
                             </div>
                           ) : (
-                            <div className="max-h-80 overflow-auto divide-y divide-github-border">
+                            <div className="max-h-80 overflow-auto divide-y divide-xithub-border">
                               {notifications.map(notif => {
                                 const nRepo = state.repos.find(r => r.id === notif.repoId);
                                 return (
@@ -285,12 +285,12 @@
                                   >
                                     <div className="pt-0.5">{getNotifIcon(notif.type)}</div>
                                     <div className="flex-1 min-w-0">
-                                      <div className="text-xs text-github-muted mb-0.5">{nRepo?.name || 'unknown'}</div>
-                                      <div className="text-sm text-github-text truncate">{notif.title}</div>
-                                      <div className="text-xs text-github-muted mt-0.5">{getRelativeTime(notif.date)}</div>
+                                      <div className="text-xs text-xithub-muted mb-0.5">{nRepo?.name || 'unknown'}</div>
+                                      <div className="text-sm text-xithub-text truncate">{notif.title}</div>
+                                      <div className="text-xs text-xithub-muted mt-0.5">{getRelativeTime(notif.date)}</div>
                                     </div>
                                     {!notif.isRead && (
-                                      <span className="w-2 h-2 mt-2 rounded-full bg-github-accent shrink-0"></span>
+                                      <span className="w-2 h-2 mt-2 rounded-full bg-xithub-accent shrink-0"></span>
                                     )}
                                   </button>
                                 );
@@ -317,7 +317,7 @@
                   <span className="text-xs">▼</span>
                 </button>
                 {showCreateMenu && (
-                  <div className="absolute right-0 top-full mt-2 w-48 bg-github-card border border-github-border rounded-md shadow-lg z-50">
+                  <div className="absolute right-0 top-full mt-2 w-48 bg-xithub-card border border-xithub-border rounded-md shadow-lg z-50">
                     <Link
                       to={firstRepo ? `/${repoOwner}/${firstRepo.name}/issues/new` : '/'}
                       className="block px-4 py-2 text-sm hover:bg-[#161b22]"
@@ -347,21 +347,21 @@
                   }}
                   className="flex items-center gap-2"
                 >
-                  <img src={user.avatar} alt="Profile" className="w-5 h-5 rounded-full border border-github-border" />
+                  <img src={user.avatar} alt="Profile" className="w-5 h-5 rounded-full border border-xithub-border" />
                   <span className="text-xs text-white">▼</span>
                 </button>
                 {showProfileMenu && (
-                  <div className="absolute right-0 top-full mt-2 w-56 bg-github-card border border-github-border rounded-md shadow-lg z-50">
-                    <div className="px-4 py-3 border-b border-github-border">
+                  <div className="absolute right-0 top-full mt-2 w-56 bg-xithub-card border border-xithub-border rounded-md shadow-lg z-50">
+                    <div className="px-4 py-3 border-b border-xithub-border">
                       <div className="font-semibold">{user.name}</div>
-                      <div className="text-sm text-github-muted">{user.username}</div>
+                      <div className="text-sm text-xithub-muted">{user.username}</div>
                     </div>
                     <div className="py-2">
                       <button onClick={() => { setShowProfileMenu(false); navigate(`/profile/${user.username}`); }} className="block w-full text-left px-4 py-2 text-sm hover:bg-[#161b22] cursor-pointer">Your profile</button>
                       <button onClick={() => { setShowProfileMenu(false); navigate('/'); }} className="block w-full text-left px-4 py-2 text-sm hover:bg-[#161b22] cursor-pointer">Your repositories</button>
                       <button onClick={() => { setShowProfileMenu(false); navigate('/'); }} className="block w-full text-left px-4 py-2 text-sm hover:bg-[#161b22] cursor-pointer">Your stars</button>
                     </div>
-                    <div className="border-t border-github-border py-2">
+                    <div className="border-t border-xithub-border py-2">
                       <button onClick={() => { setShowProfileMenu(false); setUtilityPanel('account-settings'); }} className="block w-full text-left px-4 py-2 text-sm hover:bg-[#161b22] cursor-pointer">Settings</button>
                       <button onClick={() => { setShowProfileMenu(false); setUtilityPanel('sign-out'); }} className="block w-full text-left px-4 py-2 text-sm hover:bg-[#161b22] cursor-pointer">Sign out</button>
                     </div>
@@ -373,8 +373,8 @@
 
           {utilityPanel && (
             <div className="fixed inset-0 z-[90] bg-black/60 flex items-start justify-center pt-24 px-4" onClick={() => setUtilityPanel(null)}>
-              <div className="w-full max-w-2xl bg-github-card border border-github-border rounded-lg shadow-2xl" onClick={e => e.stopPropagation()}>
-                <div className="flex items-center justify-between px-5 py-4 border-b border-github-border">
+              <div className="w-full max-w-2xl bg-xithub-card border border-xithub-border rounded-lg shadow-2xl" onClick={e => e.stopPropagation()}>
+                <div className="flex items-center justify-between px-5 py-4 border-b border-xithub-border">
                   <div>
                     <h2 className="text-lg font-semibold text-white">
                       {utilityPanel === 'codespaces' && 'Codespaces'}
@@ -383,15 +383,15 @@
                       {utilityPanel === 'account-settings' && 'Account settings'}
                       {utilityPanel === 'sign-out' && 'Sign out'}
                     </h2>
-                    <p className="text-sm text-github-muted">
+                    <p className="text-sm text-xithub-muted">
                       {utilityPanel === 'codespaces' && 'Local development environments for repositories in this sandbox.'}
-                      {utilityPanel === 'marketplace' && 'Sandbox GitHub Apps and Actions available for local workflows.'}
+                      {utilityPanel === 'marketplace' && 'Sandbox XitHub Apps and Actions available for local workflows.'}
                       {utilityPanel === 'explore' && 'Discover repositories and discussions from the local dataset.'}
                       {utilityPanel === 'account-settings' && 'Local account preferences for the current sandbox user.'}
                       {utilityPanel === 'sign-out' && 'This sandbox keeps the user local, so signing out records a local session state only.'}
                     </p>
                   </div>
-                  <button onClick={() => setUtilityPanel(null)} className="text-github-muted hover:text-white">
+                  <button onClick={() => setUtilityPanel(null)} className="text-xithub-muted hover:text-white">
                     <X size={18} />
                   </button>
                 </div>
@@ -399,12 +399,12 @@
                 {utilityPanel === 'codespaces' && (
                   <div className="p-5 space-y-3">
                     {state.repos.slice(0, 3).map(repo => (
-                      <div key={repo.id} className="flex items-center justify-between border border-github-border rounded-md p-3">
+                      <div key={repo.id} className="flex items-center justify-between border border-xithub-border rounded-md p-3">
                         <div>
                           <div className="font-semibold text-white">{repo.name}</div>
-                          <div className="text-xs text-github-muted">main branch · 2-core local sandbox</div>
+                          <div className="text-xs text-xithub-muted">main branch · 2-core local sandbox</div>
                         </div>
-                        <button onClick={() => navigate(`/${repoOwner}/${repo.name}`)} className="px-3 py-1.5 text-sm rounded-md bg-github-success text-white font-semibold">
+                        <button onClick={() => navigate(`/${repoOwner}/${repo.name}`)} className="px-3 py-1.5 text-sm rounded-md bg-xithub-success text-white font-semibold">
                           Open repo
                         </button>
                       </div>
@@ -415,10 +415,10 @@
                 {utilityPanel === 'marketplace' && (
                   <div className="p-5 grid sm:grid-cols-2 gap-3">
                     {['CI / Build', 'CodeQL Analysis', 'Issue Forms', 'Release Drafter'].map(app => (
-                      <div key={app} className="border border-github-border rounded-md p-3">
+                      <div key={app} className="border border-xithub-border rounded-md p-3">
                         <div className="font-semibold text-white">{app}</div>
-                        <div className="text-xs text-github-muted mt-1">Installed locally for sandbox tasks.</div>
-                        <button className="mt-3 px-3 py-1.5 text-sm rounded-md border border-github-border hover:bg-[#21262d]">
+                        <div className="text-xs text-xithub-muted mt-1">Installed locally for sandbox tasks.</div>
+                        <button className="mt-3 px-3 py-1.5 text-sm rounded-md border border-xithub-border hover:bg-[#21262d]">
                           Configure
                         </button>
                       </div>
@@ -431,9 +431,9 @@
                     {state.repos.map(repo => {
                       const owner = state.users.find(u => u.id === repo.ownerId);
                       return (
-                        <button key={repo.id} onClick={() => navigate(`/${owner?.username}/${repo.name}`)} className="w-full text-left border border-github-border rounded-md p-3 hover:bg-[#161b22]">
-                          <div className="font-semibold text-github-accent">{owner?.username}/{repo.name}</div>
-                          <div className="text-sm text-github-muted">{repo.description}</div>
+                        <button key={repo.id} onClick={() => navigate(`/${owner?.username}/${repo.name}`)} className="w-full text-left border border-xithub-border rounded-md p-3 hover:bg-[#161b22]">
+                          <div className="font-semibold text-xithub-accent">{owner?.username}/{repo.name}</div>
+                          <div className="text-sm text-xithub-muted">{repo.description}</div>
                         </button>
                       );
                     })}
@@ -444,13 +444,13 @@
                   <div className="p-5 space-y-4">
                     <label className="block">
                       <span className="text-sm font-semibold text-white">Display name</span>
-                      <input value={user.name} readOnly className="mt-1 w-full bg-[#0d1117] border border-github-border rounded-md px-3 py-2 text-sm text-github-text" />
+                      <input value={user.name} readOnly className="mt-1 w-full bg-[#0d1117] border border-xithub-border rounded-md px-3 py-2 text-sm text-xithub-text" />
                     </label>
                     <label className="flex items-center gap-2 text-sm">
-                      <input type="checkbox" defaultChecked className="accent-github-accent" />
+                      <input type="checkbox" defaultChecked className="accent-xithub-accent" />
                       Email me local notification summaries
                     </label>
-                    <button onClick={() => setUtilityPanel(null)} className="px-4 py-2 rounded-md bg-github-success text-white text-sm font-semibold">
+                    <button onClick={() => setUtilityPanel(null)} className="px-4 py-2 rounded-md bg-xithub-success text-white text-sm font-semibold">
                       Save preferences
                     </button>
                   </div>
@@ -458,10 +458,10 @@
 
                 {utilityPanel === 'sign-out' && (
                   <div className="p-5">
-                    <div className="border border-github-border rounded-md p-4 bg-[#0d1117]">
+                    <div className="border border-xithub-border rounded-md p-4 bg-[#0d1117]">
                       <div className="font-semibold text-white">Signed in as {user.username}</div>
-                      <div className="text-sm text-github-muted mt-1">Use reset state in task setup to switch users; this local action closes the menu without external account changes.</div>
-                      <button onClick={() => setUtilityPanel(null)} className="mt-4 px-4 py-2 rounded-md border border-github-border hover:bg-[#21262d] text-sm">
+                      <div className="text-sm text-xithub-muted mt-1">Use reset state in task setup to switch users; this local action closes the menu without external account changes.</div>
+                      <button onClick={() => setUtilityPanel(null)} className="mt-4 px-4 py-2 rounded-md border border-xithub-border hover:bg-[#21262d] text-sm">
                         Stay signed in
                       </button>
                     </div>

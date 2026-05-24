@@ -44,7 +44,7 @@ export default function Home() {
     <div className="content-body">
       <h1 className="page-title" style={{ marginBottom: 4 }}>Organization Home</h1>
       <p style={{ color: 'var(--text-secondary)', marginBottom: 24, fontSize: 13 }}>
-        Welcome to {state.organization.name}'s CircleCI dashboard.
+        Welcome to {state.organization.name}'s XircleCI dashboard.
       </p>
 
       {/* Summary row */}

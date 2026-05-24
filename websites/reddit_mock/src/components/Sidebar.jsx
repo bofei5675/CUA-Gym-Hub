@@ -24,9 +24,9 @@ export default function Sidebar({ mobileOpen = false, onMobileClose }) {
 
   const sidebarContent = (
     <div className="py-3 px-5">
-      {/* Reddit Feeds */}
+      {/* Xeddit Feeds */}
       <h3 className="text-[10px] font-bold uppercase text-[#787C7E] tracking-wide mb-2 px-1">
-        Reddit Feeds
+        Xeddit Feeds
       </h3>
       <ul className="space-y-0.5 mb-3">
         {FEED_ITEMS.map(item => {

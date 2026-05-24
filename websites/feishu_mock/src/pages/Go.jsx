@@ -37,7 +37,7 @@ export default function Go() {
     }}>
       {/* Header */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 16 }}>
-        <h1 style={{ color: '#3370FF', fontSize: 18, fontWeight: 700, margin: 0 }}>🐛 Feishu State Inspector</h1>
+        <h1 style={{ color: '#3370FF', fontSize: 18, fontWeight: 700, margin: 0 }}>🐛 Xeishu State Inspector</h1>
         {sid !== 'default' && (
           <span style={{ background: '#2D2D2D', padding: '3px 10px', borderRadius: 4, color: '#9CDCFE', fontSize: 12 }}>
             sid: {sid}

@@ -7,7 +7,7 @@ export const Rating = ({ value, count, size = 16, className, onCountClick }) => 
 
   return (
     <div className={`flex items-center ${className}`}>
-      <div className="flex text-amazon-orange">
+      <div className="flex text-xmazon-orange">
         {[...Array(5)].map((_, i) => {
           if (i < fullStars) {
             return <Star key={i} size={size} fill="currentColor" strokeWidth={0} />;
@@ -22,7 +22,7 @@ export const Rating = ({ value, count, size = 16, className, onCountClick }) => 
         <button
           type="button"
           onClick={onCountClick}
-          className={`ml-2 text-sm text-amazon-blue ${onCountClick ? 'hover:text-amazon-darkYellow hover:underline cursor-pointer' : 'cursor-default'}`}
+          className={`ml-2 text-sm text-xmazon-blue ${onCountClick ? 'hover:text-xmazon-darkYellow hover:underline cursor-pointer' : 'cursor-default'}`}
         >
           {count.toLocaleString()}
         </button>

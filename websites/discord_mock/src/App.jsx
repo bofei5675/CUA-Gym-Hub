@@ -21,7 +21,7 @@ function RedirectWithQuery({ to }) {
 
 function MainLayout() {
   return (
-    <div className="flex h-screen bg-discord-bg text-white overflow-hidden font-sans">
+    <div className="flex h-screen bg-xiscord-bg text-white overflow-hidden font-sans">
       <ServerList />
       <Outlet />
     </div>
@@ -87,17 +87,17 @@ function DMChatArea({ userId }) {
     }
   };
 
-  if (!user) return <div className="flex-1 flex items-center justify-center text-discord-muted">User not found</div>;
+  if (!user) return <div className="flex-1 flex items-center justify-center text-xiscord-muted">User not found</div>;
 
-  const statusColor = user.status === 'online' ? 'bg-discord-online' :
-    user.status === 'idle' ? 'bg-discord-idle' :
-    user.status === 'dnd' ? 'bg-discord-dnd' : 'bg-discord-offline';
+  const statusColor = user.status === 'online' ? 'bg-xiscord-online' :
+    user.status === 'idle' ? 'bg-xiscord-idle' :
+    user.status === 'dnd' ? 'bg-xiscord-dnd' : 'bg-xiscord-offline';
 
   return (
-    <div className="flex-1 flex flex-col bg-discord-bg min-w-0">
+    <div className="flex-1 flex flex-col bg-xiscord-bg min-w-0">
       {/* Header */}
-      <div className="h-12 px-4 flex items-center shadow-sm border-b border-discord-darker shrink-0">
-        <div className="flex items-center text-discord-muted mr-2">
+      <div className="h-12 px-4 flex items-center shadow-sm border-b border-xiscord-darker shrink-0">
+        <div className="flex items-center text-xiscord-muted mr-2">
           <span className="text-2xl mr-2">@</span>
         </div>
         <h3 className="font-bold text-white mr-4">{user.username}</h3>
@@ -112,11 +112,11 @@ function DMChatArea({ userId }) {
             <img src={user.avatar} alt={user.username} className="w-full h-full object-cover" />
           </div>
           <h1 className="text-3xl font-bold text-white mb-2">{user.username}</h1>
-          <p className="text-discord-muted">This is the beginning of your direct message history with <strong className="text-discord-modifier">@{user.username}</strong>.</p>
+          <p className="text-xiscord-muted">This is the beginning of your direct message history with <strong className="text-xiscord-modifier">@{user.username}</strong>.</p>
           <div className="flex gap-2 mt-4">
             <button
               onClick={() => setShowMutualServers(!showMutualServers)}
-              className="bg-discord-light hover:bg-discord-selected text-white px-3 py-1 rounded text-sm"
+              className="bg-xiscord-light hover:bg-xiscord-selected text-white px-3 py-1 rounded text-sm"
             >
               Mutual Servers
             </button>
@@ -125,7 +125,7 @@ function DMChatArea({ userId }) {
                 store.removeDM(userId);
                 navigate('/channels/@me');
               }}
-              className="bg-discord-light hover:bg-discord-selected text-white px-3 py-1 rounded text-sm"
+              className="bg-xiscord-light hover:bg-xiscord-selected text-white px-3 py-1 rounded text-sm"
             >
               Remove Friend
             </button>
@@ -134,19 +134,19 @@ function DMChatArea({ userId }) {
                 store.blockUser(userId);
                 navigate('/channels/@me');
               }}
-              className="bg-discord-light hover:bg-discord-selected text-white px-3 py-1 rounded text-sm"
+              className="bg-xiscord-light hover:bg-xiscord-selected text-white px-3 py-1 rounded text-sm"
             >
               Block
             </button>
           </div>
           {showMutualServers && (
-            <div className="mt-3 bg-discord-darker rounded-lg p-3">
-              <div className="text-xs font-bold text-discord-muted uppercase mb-2">Mutual Servers</div>
+            <div className="mt-3 bg-xiscord-darker rounded-lg p-3">
+              <div className="text-xs font-bold text-xiscord-muted uppercase mb-2">Mutual Servers</div>
               {Object.values(store.servers).filter(s => s.members.includes(userId)).length > 0 ? (
                 Object.values(store.servers).filter(s => s.members.includes(userId)).map(s => (
                   <div
                     key={s.id}
-                    className="flex items-center px-2 py-1.5 rounded hover:bg-discord-light cursor-pointer"
+                    className="flex items-center px-2 py-1.5 rounded hover:bg-xiscord-light cursor-pointer"
                     onClick={() => navigate(`/channels/${s.id}/${s.channels[0]}`)}
                   >
                     <img src={s.icon} alt="" className="w-6 h-6 rounded-full mr-2" />
@@ -154,7 +154,7 @@ function DMChatArea({ userId }) {
                   </div>
                 ))
               ) : (
-                <p className="text-xs text-discord-muted">No mutual servers.</p>
+                <p className="text-xs text-xiscord-muted">No mutual servers.</p>
               )}
             </div>
           )}
@@ -164,7 +164,7 @@ function DMChatArea({ userId }) {
         {dmMessages.map(msg => {
           const msgUser = store.users[msg.userId];
           return (
-            <div key={msg.id} className="flex px-0 py-1 hover:bg-discord-dark/30 mt-0.5">
+            <div key={msg.id} className="flex px-0 py-1 hover:bg-xiscord-dark/30 mt-0.5">
               <div className="w-10 h-10 mr-4 shrink-0 mt-0.5">
                 <img
                   src={msgUser?.avatar || 'https://picsum.photos/128/128'}
@@ -177,11 +177,11 @@ function DMChatArea({ userId }) {
                   <span className="font-medium mr-2 text-white">
                     {msgUser?.username || 'Unknown User'}
                   </span>
-                  <span className="text-xs text-discord-muted ml-1">
+                  <span className="text-xs text-xiscord-muted ml-1">
                     {format(new Date(msg.timestamp), 'MM/dd/yyyy h:mm aa')}
                   </span>
                 </div>
-                <div className="text-discord-lightest whitespace-pre-wrap break-words">
+                <div className="text-xiscord-lightest whitespace-pre-wrap break-words">
                   {msg.content}
                 </div>
               </div>
@@ -193,9 +193,9 @@ function DMChatArea({ userId }) {
 
       {/* Input Area */}
       <div className="px-4 pb-6 pt-2 shrink-0">
-        <div className="bg-discord-light rounded-lg px-4 py-2.5 flex items-center">
+        <div className="bg-xiscord-light rounded-lg px-4 py-2.5 flex items-center">
           <button
-            className="text-discord-muted hover:text-discord-lightest mr-3"
+            className="text-xiscord-muted hover:text-xiscord-lightest mr-3"
             onClick={() => {
               const fileInput = document.createElement('input');
               fileInput.type = 'file';
@@ -218,22 +218,22 @@ function DMChatArea({ userId }) {
             onChange={(e) => setInputValue(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder={`Message @${user.username}`}
-            className="bg-transparent flex-1 outline-none text-discord-lightest placeholder-discord-muted/70"
+            className="bg-transparent flex-1 outline-none text-xiscord-lightest placeholder-xiscord-muted/70"
           />
           <div className="relative">
             <Smile
               size={24}
-              className={cn("cursor-pointer hover:text-discord-lightest", showEmojiPicker ? "text-discord-blurple" : "text-discord-muted")}
+              className={cn("cursor-pointer hover:text-xiscord-lightest", showEmojiPicker ? "text-xiscord-blurple" : "text-xiscord-muted")}
               onClick={() => setShowEmojiPicker(!showEmojiPicker)}
             />
             {showEmojiPicker && (
-              <div className="absolute bottom-10 right-0 w-64 bg-discord-dark border border-discord-darker rounded-lg shadow-xl p-2 z-50">
+              <div className="absolute bottom-10 right-0 w-64 bg-xiscord-dark border border-xiscord-darker rounded-lg shadow-xl p-2 z-50">
                 <div className="grid grid-cols-7 gap-1 h-48 overflow-y-auto custom-scrollbar">
                   {['😀','😂','😍','🔥','👍','👎','🎉','❤️','😎','🤔','😭','👀','✨','🚀','💯','💩','🤡','👻','💀','👽','🤖','🎃','🎄','🎁','🎈','💪','🙏','🤝','👋','😤','🥳','😱','🫡','💜','🧡','💚','💙','🖤','🤍','⭐','🏆','💎','🫠','😮','🤯','🥺','😈','👑','🎵','🎮'].map(emoji => (
                     <button
                       key={emoji}
                       onClick={() => { setInputValue(prev => prev + emoji); setShowEmojiPicker(false); }}
-                      className="hover:bg-discord-light rounded p-1 text-xl flex items-center justify-center"
+                      className="hover:bg-xiscord-light rounded p-1 text-xl flex items-center justify-center"
                     >
                       {emoji}
                     </button>
@@ -326,10 +326,10 @@ function QuickSwitcher({ onClose }) {
 
   return (
     <div className="fixed inset-0 z-[100] flex items-start justify-center pt-[20vh] bg-black/70" onClick={onClose}>
-      <div className="w-[560px] bg-discord-dark rounded-lg shadow-2xl overflow-hidden" onClick={e => e.stopPropagation()}>
+      <div className="w-[560px] bg-xiscord-dark rounded-lg shadow-2xl overflow-hidden" onClick={e => e.stopPropagation()}>
         <div className="p-4">
-          <div className="flex items-center bg-discord-darker rounded-lg px-3 py-2">
-            <Search size={20} className="text-discord-muted mr-2 shrink-0" />
+          <div className="flex items-center bg-xiscord-darker rounded-lg px-3 py-2">
+            <Search size={20} className="text-xiscord-muted mr-2 shrink-0" />
             <input
               ref={inputRef}
               type="text"
@@ -337,62 +337,62 @@ function QuickSwitcher({ onClose }) {
               onChange={(e) => { setQuery(e.target.value); setSelectedIndex(0); }}
               onKeyDown={handleKeyDown}
               placeholder="Where would you like to go?"
-              className="bg-transparent flex-1 outline-none text-discord-lightest placeholder-discord-muted text-lg"
+              className="bg-transparent flex-1 outline-none text-xiscord-lightest placeholder-xiscord-muted text-lg"
             />
           </div>
         </div>
 
         {results.length > 0 ? (
           <div className="max-h-[400px] overflow-y-auto pb-2 px-2">
-            {!query && <div className="text-xs font-bold text-discord-muted uppercase px-3 py-1.5">Recent</div>}
+            {!query && <div className="text-xs font-bold text-xiscord-muted uppercase px-3 py-1.5">Recent</div>}
             {results.map((item, idx) => (
               <div
                 key={`${item.type}-${item.id}`}
                 onClick={() => { navigate(item.path); onClose(); }}
                 className={cn(
                   "flex items-center px-3 py-2 rounded cursor-pointer",
-                  idx === selectedIndex ? "bg-discord-light" : "hover:bg-discord-light/50"
+                  idx === selectedIndex ? "bg-xiscord-light" : "hover:bg-xiscord-light/50"
                 )}
               >
                 {item.type === 'server' && (
                   <>
                     <img src={item.icon} alt="" className="w-6 h-6 rounded-full mr-3" />
                     <span className="text-white font-medium">{item.name}</span>
-                    <span className="text-xs text-discord-muted ml-2">Server</span>
+                    <span className="text-xs text-xiscord-muted ml-2">Server</span>
                   </>
                 )}
                 {item.type === 'channel' && (
                   <>
                     {item.channelType === 'voice' ? (
-                      <Volume2 size={18} className="text-discord-muted mr-3 shrink-0" />
+                      <Volume2 size={18} className="text-xiscord-muted mr-3 shrink-0" />
                     ) : (
-                      <Hash size={18} className="text-discord-muted mr-3 shrink-0" />
+                      <Hash size={18} className="text-xiscord-muted mr-3 shrink-0" />
                     )}
                     <span className="text-white">{item.name}</span>
-                    <span className="text-xs text-discord-muted ml-2">{item.serverName}</span>
+                    <span className="text-xs text-xiscord-muted ml-2">{item.serverName}</span>
                   </>
                 )}
                 {item.type === 'dm' && (
                   <>
                     <img src={item.avatar} alt="" className="w-6 h-6 rounded-full mr-3" />
                     <span className="text-white">{item.name}</span>
-                    <span className="text-xs text-discord-muted ml-2">DM</span>
+                    <span className="text-xs text-xiscord-muted ml-2">DM</span>
                   </>
                 )}
               </div>
             ))}
           </div>
         ) : query ? (
-          <div className="p-8 text-center text-discord-muted">
+          <div className="p-8 text-center text-xiscord-muted">
             <p>No results found for "{query}"</p>
           </div>
         ) : null}
 
-        <div className="border-t border-discord-divider px-4 py-2 flex items-center text-xs text-discord-muted">
-          <span className="bg-discord-darker px-1.5 py-0.5 rounded text-[10px] mr-1 font-mono">TAB</span> or
-          <span className="bg-discord-darker px-1.5 py-0.5 rounded text-[10px] mx-1 font-mono">&uarr;&darr;</span> to navigate
-          <span className="bg-discord-darker px-1.5 py-0.5 rounded text-[10px] mx-1 font-mono">ENTER</span> to select
-          <span className="bg-discord-darker px-1.5 py-0.5 rounded text-[10px] mx-1 font-mono">ESC</span> to dismiss
+        <div className="border-t border-xiscord-divider px-4 py-2 flex items-center text-xs text-xiscord-muted">
+          <span className="bg-xiscord-darker px-1.5 py-0.5 rounded text-[10px] mr-1 font-mono">TAB</span> or
+          <span className="bg-xiscord-darker px-1.5 py-0.5 rounded text-[10px] mx-1 font-mono">&uarr;&darr;</span> to navigate
+          <span className="bg-xiscord-darker px-1.5 py-0.5 rounded text-[10px] mx-1 font-mono">ENTER</span> to select
+          <span className="bg-xiscord-darker px-1.5 py-0.5 rounded text-[10px] mx-1 font-mono">ESC</span> to dismiss
         </div>
       </div>
     </div>
@@ -421,69 +421,69 @@ function ChannelCreationModal({ serverId, onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70" onClick={onClose}>
-      <div className="w-[460px] bg-discord-dark rounded-lg overflow-hidden shadow-2xl" onClick={e => e.stopPropagation()}>
+      <div className="w-[460px] bg-xiscord-dark rounded-lg overflow-hidden shadow-2xl" onClick={e => e.stopPropagation()}>
         <div className="p-4">
           <h2 className="text-xl font-bold text-white mb-1">Create Channel</h2>
-          <p className="text-sm text-discord-muted mb-4">in {server?.name}</p>
+          <p className="text-sm text-xiscord-muted mb-4">in {server?.name}</p>
 
           <div className="mb-4">
-            <label className="text-xs font-bold text-discord-muted uppercase block mb-2">Channel Type</label>
+            <label className="text-xs font-bold text-xiscord-muted uppercase block mb-2">Channel Type</label>
             <div className="space-y-2">
               <label
                 className={cn(
                   "flex items-center p-3 rounded-lg cursor-pointer border",
-                  channelType === 'text' ? "border-discord-muted bg-discord-light/30" : "border-transparent bg-discord-darker hover:bg-discord-light/20"
+                  channelType === 'text' ? "border-xiscord-muted bg-xiscord-light/30" : "border-transparent bg-xiscord-darker hover:bg-xiscord-light/20"
                 )}
                 onClick={() => setChannelType('text')}
               >
                 <div className={cn(
                   "w-5 h-5 rounded-full border-2 mr-3 flex items-center justify-center shrink-0",
-                  channelType === 'text' ? "border-discord-blurple" : "border-discord-muted"
+                  channelType === 'text' ? "border-xiscord-blurple" : "border-xiscord-muted"
                 )}>
-                  {channelType === 'text' && <div className="w-2.5 h-2.5 rounded-full bg-discord-blurple" />}
+                  {channelType === 'text' && <div className="w-2.5 h-2.5 rounded-full bg-xiscord-blurple" />}
                 </div>
-                <Hash size={20} className="text-discord-muted mr-2 shrink-0" />
+                <Hash size={20} className="text-xiscord-muted mr-2 shrink-0" />
                 <div>
                   <div className="text-white font-medium text-sm">Text</div>
-                  <div className="text-xs text-discord-muted">Send messages, images, GIFs, emoji, opinions, and puns</div>
+                  <div className="text-xs text-xiscord-muted">Send messages, images, GIFs, emoji, opinions, and puns</div>
                 </div>
               </label>
               <label
                 className={cn(
                   "flex items-center p-3 rounded-lg cursor-pointer border",
-                  channelType === 'voice' ? "border-discord-muted bg-discord-light/30" : "border-transparent bg-discord-darker hover:bg-discord-light/20"
+                  channelType === 'voice' ? "border-xiscord-muted bg-xiscord-light/30" : "border-transparent bg-xiscord-darker hover:bg-xiscord-light/20"
                 )}
                 onClick={() => setChannelType('voice')}
               >
                 <div className={cn(
                   "w-5 h-5 rounded-full border-2 mr-3 flex items-center justify-center shrink-0",
-                  channelType === 'voice' ? "border-discord-blurple" : "border-discord-muted"
+                  channelType === 'voice' ? "border-xiscord-blurple" : "border-xiscord-muted"
                 )}>
-                  {channelType === 'voice' && <div className="w-2.5 h-2.5 rounded-full bg-discord-blurple" />}
+                  {channelType === 'voice' && <div className="w-2.5 h-2.5 rounded-full bg-xiscord-blurple" />}
                 </div>
-                <Volume2 size={20} className="text-discord-muted mr-2 shrink-0" />
+                <Volume2 size={20} className="text-xiscord-muted mr-2 shrink-0" />
                 <div>
                   <div className="text-white font-medium text-sm">Voice</div>
-                  <div className="text-xs text-discord-muted">Hang out together with voice, video, and screen share</div>
+                  <div className="text-xs text-xiscord-muted">Hang out together with voice, video, and screen share</div>
                 </div>
               </label>
             </div>
           </div>
 
           <div className="mb-4">
-            <label className="text-xs font-bold text-discord-muted uppercase block mb-2">Channel Name</label>
-            <div className="flex items-center bg-discord-darker rounded px-3 py-2">
+            <label className="text-xs font-bold text-xiscord-muted uppercase block mb-2">Channel Name</label>
+            <div className="flex items-center bg-xiscord-darker rounded px-3 py-2">
               {channelType === 'text' ? (
-                <Hash size={18} className="text-discord-muted mr-2 shrink-0" />
+                <Hash size={18} className="text-xiscord-muted mr-2 shrink-0" />
               ) : (
-                <Volume2 size={18} className="text-discord-muted mr-2 shrink-0" />
+                <Volume2 size={18} className="text-xiscord-muted mr-2 shrink-0" />
               )}
               <input
                 type="text"
                 value={channelName}
                 onChange={handleNameChange}
                 placeholder="new-channel"
-                className="bg-transparent flex-1 outline-none text-discord-lightest placeholder-discord-muted text-sm"
+                className="bg-transparent flex-1 outline-none text-xiscord-lightest placeholder-xiscord-muted text-sm"
                 autoFocus
               />
             </div>
@@ -491,17 +491,17 @@ function ChannelCreationModal({ serverId, onClose }) {
 
           <div className="flex items-center justify-between py-2">
             <div className="flex items-center">
-              <Lock size={16} className="text-discord-muted mr-2" />
+              <Lock size={16} className="text-xiscord-muted mr-2" />
               <div>
-                <div className="text-discord-lightest text-sm font-medium">Private Channel</div>
-                <div className="text-xs text-discord-muted">Only selected members and roles will be able to view this channel.</div>
+                <div className="text-xiscord-lightest text-sm font-medium">Private Channel</div>
+                <div className="text-xs text-xiscord-muted">Only selected members and roles will be able to view this channel.</div>
               </div>
             </div>
             <button
               onClick={() => setIsPrivate(!isPrivate)}
               className={cn(
                 "w-10 h-6 rounded-full transition-colors relative shrink-0 ml-2",
-                isPrivate ? "bg-discord-green" : "bg-discord-muted/40"
+                isPrivate ? "bg-xiscord-green" : "bg-xiscord-muted/40"
               )}
             >
               <div className={cn(
@@ -511,7 +511,7 @@ function ChannelCreationModal({ serverId, onClose }) {
             </button>
           </div>
         </div>
-        <div className="bg-discord-darker p-4 flex justify-end gap-3">
+        <div className="bg-xiscord-darker p-4 flex justify-end gap-3">
           <button
             onClick={onClose}
             className="px-4 py-2 text-sm font-medium text-white hover:underline"
@@ -523,7 +523,7 @@ function ChannelCreationModal({ serverId, onClose }) {
             disabled={!channelName.trim()}
             className={cn(
               "px-4 py-2 text-sm font-medium text-white rounded",
-              channelName.trim() ? "bg-discord-blurple hover:bg-discord-blurple/80" : "bg-discord-blurple/50 cursor-not-allowed"
+              channelName.trim() ? "bg-xiscord-blurple hover:bg-xiscord-blurple/80" : "bg-xiscord-blurple/50 cursor-not-allowed"
             )}
           >
             Create Channel
@@ -580,61 +580,61 @@ function ServerCreationModal({ onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70" onClick={onClose}>
-      <div className="w-[440px] bg-discord-dark rounded-lg overflow-hidden shadow-2xl" onClick={e => e.stopPropagation()}>
+      <div className="w-[440px] bg-xiscord-dark rounded-lg overflow-hidden shadow-2xl" onClick={e => e.stopPropagation()}>
         {step === 'choose' ? (
           <div className="p-6 text-center">
             <h2 className="text-2xl font-bold text-white mb-2">Create a server</h2>
-            <p className="text-discord-muted text-sm mb-6">Your server is where you and your friends hang out. Make yours and start talking.</p>
+            <p className="text-xiscord-muted text-sm mb-6">Your server is where you and your friends hang out. Make yours and start talking.</p>
             <button
               onClick={() => setStep('create')}
-              className="w-full text-left px-4 py-3 bg-discord-bg hover:bg-discord-light rounded-lg border border-discord-divider mb-3 flex items-center justify-between group"
+              className="w-full text-left px-4 py-3 bg-xiscord-bg hover:bg-xiscord-light rounded-lg border border-xiscord-divider mb-3 flex items-center justify-between group"
             >
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-discord-light rounded-full flex items-center justify-center mr-3 group-hover:bg-discord-selected">
+                <div className="w-12 h-12 bg-xiscord-light rounded-full flex items-center justify-center mr-3 group-hover:bg-xiscord-selected">
                   <span className="text-2xl">🎮</span>
                 </div>
                 <span className="text-white font-medium">Create My Own</span>
               </div>
-              <span className="text-discord-muted text-xl">&rarr;</span>
+              <span className="text-xiscord-muted text-xl">&rarr;</span>
             </button>
             <button
               onClick={() => setStep('join')}
-              className="w-full text-left px-4 py-3 bg-discord-bg hover:bg-discord-light rounded-lg border border-discord-divider flex items-center justify-between group"
+              className="w-full text-left px-4 py-3 bg-xiscord-bg hover:bg-xiscord-light rounded-lg border border-xiscord-divider flex items-center justify-between group"
             >
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-discord-light rounded-full flex items-center justify-center mr-3 group-hover:bg-discord-selected">
+                <div className="w-12 h-12 bg-xiscord-light rounded-full flex items-center justify-center mr-3 group-hover:bg-xiscord-selected">
                   <span className="text-2xl">🔗</span>
                 </div>
                 <span className="text-white font-medium">Join a Server</span>
               </div>
-              <span className="text-discord-muted text-xl">&rarr;</span>
+              <span className="text-xiscord-muted text-xl">&rarr;</span>
             </button>
           </div>
         ) : step === 'join' ? (
           <>
             <div className="p-6">
               <h2 className="text-2xl font-bold text-white mb-1 text-center">Join a Server</h2>
-              <p className="text-discord-muted text-sm mb-6 text-center">Enter an invite code to join an existing server.</p>
-              <label className="text-xs font-bold text-discord-muted uppercase block mb-2">Invite Link</label>
+              <p className="text-xiscord-muted text-sm mb-6 text-center">Enter an invite code to join an existing server.</p>
+              <label className="text-xs font-bold text-xiscord-muted uppercase block mb-2">Invite Link</label>
               <input
                 type="text"
                 value={inviteCode}
                 onChange={(e) => { setInviteCode(e.target.value); setJoinError(null); }}
                 onKeyDown={(e) => { if (e.key === 'Enter') handleJoinServer(); }}
-                placeholder="discord.gg/hTKzmak"
-                className="w-full bg-discord-darker text-discord-lightest px-3 py-2 rounded outline-none border border-discord-darker focus:border-discord-blurple text-sm"
+                placeholder="xiscord.gg/hTKzmak"
+                className="w-full bg-xiscord-darker text-xiscord-lightest px-3 py-2 rounded outline-none border border-xiscord-darker focus:border-xiscord-blurple text-sm"
                 autoFocus
               />
-              {joinError && <p className="text-discord-red text-xs mt-2">{joinError}</p>}
+              {joinError && <p className="text-xiscord-red text-xs mt-2">{joinError}</p>}
             </div>
-            <div className="bg-discord-darker p-4 flex justify-between">
+            <div className="bg-xiscord-darker p-4 flex justify-between">
               <button onClick={() => setStep('choose')} className="px-4 py-2 text-sm text-white hover:underline">Back</button>
               <button
                 onClick={handleJoinServer}
                 disabled={!inviteCode.trim()}
                 className={cn(
                   "px-4 py-2 text-sm font-medium text-white rounded",
-                  inviteCode.trim() ? "bg-discord-blurple hover:bg-discord-blurple/80" : "bg-discord-blurple/50 cursor-not-allowed"
+                  inviteCode.trim() ? "bg-xiscord-blurple hover:bg-xiscord-blurple/80" : "bg-xiscord-blurple/50 cursor-not-allowed"
                 )}
               >
                 Join Server
@@ -645,35 +645,35 @@ function ServerCreationModal({ onClose }) {
           <>
             <div className="p-6 text-center">
               <h2 className="text-2xl font-bold text-white mb-2">Customize your server</h2>
-              <p className="text-discord-muted text-sm mb-6">Give your new server a personality with a name and an icon. You can always change it later.</p>
+              <p className="text-xiscord-muted text-sm mb-6">Give your new server a personality with a name and an icon. You can always change it later.</p>
               <div className="flex justify-center mb-6">
                 <div
-                  className="w-20 h-20 rounded-full bg-discord-light border-2 border-dashed border-discord-muted flex items-center justify-center cursor-pointer hover:border-discord-lightest overflow-hidden"
+                  className="w-20 h-20 rounded-full bg-xiscord-light border-2 border-dashed border-xiscord-muted flex items-center justify-center cursor-pointer hover:border-xiscord-lightest overflow-hidden"
                   onClick={handleIconClick}
                 >
                   {serverIconPreview ? (
                     <img src={serverIconPreview} alt="" className="w-full h-full object-cover rounded-full" />
                   ) : (
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-discord-muted">{serverName.charAt(0).toUpperCase()}</div>
-                      <div className="text-[9px] text-discord-muted uppercase font-bold">Upload</div>
+                      <div className="text-2xl font-bold text-xiscord-muted">{serverName.charAt(0).toUpperCase()}</div>
+                      <div className="text-[9px] text-xiscord-muted uppercase font-bold">Upload</div>
                     </div>
                   )}
                 </div>
               </div>
               <div className="text-left">
-                <label className="text-xs font-bold text-discord-muted uppercase block mb-2">Server Name</label>
+                <label className="text-xs font-bold text-xiscord-muted uppercase block mb-2">Server Name</label>
                 <input
                   type="text"
                   value={serverName}
                   onChange={(e) => setServerName(e.target.value)}
-                  className="w-full bg-discord-darker text-discord-lightest px-3 py-2 rounded outline-none border border-discord-darker focus:border-discord-blurple"
+                  className="w-full bg-xiscord-darker text-xiscord-lightest px-3 py-2 rounded outline-none border border-xiscord-darker focus:border-xiscord-blurple"
                   autoFocus
                 />
               </div>
-              <p className="text-[10px] text-discord-muted mt-4 text-left">By creating a server, you agree to Discord's <span className="text-discord-blurple">Community Guidelines</span>.</p>
+              <p className="text-[10px] text-xiscord-muted mt-4 text-left">By creating a server, you agree to Xiscord's <span className="text-xiscord-blurple">Community Guidelines</span>.</p>
             </div>
-            <div className="bg-discord-darker p-4 flex justify-between">
+            <div className="bg-xiscord-darker p-4 flex justify-between">
               <button
                 onClick={() => setStep('choose')}
                 className="px-4 py-2 text-sm font-medium text-white hover:underline"
@@ -685,7 +685,7 @@ function ServerCreationModal({ onClose }) {
                 disabled={!serverName.trim()}
                 className={cn(
                   "px-4 py-2 text-sm font-medium text-white rounded",
-                  serverName.trim() ? "bg-discord-blurple hover:bg-discord-blurple/80" : "bg-discord-blurple/50 cursor-not-allowed"
+                  serverName.trim() ? "bg-xiscord-blurple hover:bg-xiscord-blurple/80" : "bg-xiscord-blurple/50 cursor-not-allowed"
                 )}
               >
                 Create
@@ -710,23 +710,23 @@ function KeyboardShortcutsModal({ onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70" onClick={onClose}>
-      <div className="w-[660px] bg-discord-dark rounded-lg overflow-hidden shadow-2xl" onClick={e => e.stopPropagation()}>
+      <div className="w-[660px] bg-xiscord-dark rounded-lg overflow-hidden shadow-2xl" onClick={e => e.stopPropagation()}>
         <div className="p-6">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl font-bold text-white">Keyboard Shortcuts</h2>
-            <button onClick={onClose} className="text-discord-muted hover:text-white">
+            <button onClick={onClose} className="text-xiscord-muted hover:text-white">
               <X size={20} />
             </button>
           </div>
           <div className="grid grid-cols-2 gap-x-8 gap-y-3">
             {shortcuts.map((sc, idx) => (
               <div key={idx} className="flex items-center justify-between">
-                <span className="text-sm text-discord-lightest">{sc.desc}</span>
+                <span className="text-sm text-xiscord-lightest">{sc.desc}</span>
                 <div className="flex items-center gap-1">
                   {sc.keys.map((key, ki) => (
                     <React.Fragment key={ki}>
-                      {ki > 0 && <span className="text-discord-muted text-xs">+</span>}
-                      <kbd className="bg-discord-darker text-discord-lightest text-xs px-2 py-1 rounded border border-discord-divider font-mono min-w-[28px] text-center">
+                      {ki > 0 && <span className="text-xiscord-muted text-xs">+</span>}
+                      <kbd className="bg-xiscord-darker text-xiscord-lightest text-xs px-2 py-1 rounded border border-xiscord-divider font-mono min-w-[28px] text-center">
                         {key}
                       </kbd>
                     </React.Fragment>
@@ -798,7 +798,7 @@ function AppWithModals() {
               .filter(m => m.channelId === chId && m.userId === store.currentUser.id)
               .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
             if (channelMessages.length > 0) {
-              window.dispatchEvent(new CustomEvent('discord-edit-last-message', { detail: { messageId: channelMessages[0].id } }));
+              window.dispatchEvent(new CustomEvent('xiscord-edit-last-message', { detail: { messageId: channelMessages[0].id } }));
             }
           }
         }
@@ -819,7 +819,7 @@ function AppWithModals() {
           <Route path="channels/@me" element={<DMLayout />} />
           <Route path="channels/@me/:channelId" element={<DMLayout />} />
 
-          <Route path="channels/:serverId" element={<div className="flex-1 flex"><ChannelList /><div className="flex-1 bg-discord-bg flex items-center justify-center text-discord-modifier">Select a channel</div></div>} />
+          <Route path="channels/:serverId" element={<div className="flex-1 flex"><ChannelList /><div className="flex-1 bg-xiscord-bg flex items-center justify-center text-xiscord-modifier">Select a channel</div></div>} />
 
           <Route path="channels/:serverId/:channelId" element={<ServerLayout />} />
         </Route>
@@ -850,7 +850,7 @@ export default function App() {
   }, []);
 
   if (isLoading) {
-    return <div className="flex h-screen items-center justify-center bg-discord-bg text-white">Loading...</div>;
+    return <div className="flex h-screen items-center justify-center bg-xiscord-bg text-white">Loading...</div>;
   }
 
   return (

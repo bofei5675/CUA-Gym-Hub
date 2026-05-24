@@ -1,10 +1,10 @@
-# Zoom Web Mock — Research Summary
+# Xoom Web Mock — Research Summary
 
 ## Application Overview
 
-**Zoom** (now branded as **Zoom Workplace**) is the world's leading video conferencing and unified communications platform. Founded in 2011 by Eric Yuan, it provides video meetings, team chat, VoIP phone, webinars, whiteboards, and more. The desktop/web client is the primary interface for scheduling, joining, and managing meetings.
+**Xoom** (now branded as **Xoom Workplace**) is the world's leading video conferencing and unified communications platform. Founded in 2011 by Eric Yuan, it provides video meetings, team chat, VoIP phone, webinars, whiteboards, and more. The desktop/web client is the primary interface for scheduling, joining, and managing meetings.
 
-**Target interface**: Zoom Workplace desktop/web client (not the admin web portal at zoom.us). This mock simulates the client application accessible at `app.zoom.us/wc/home` or the desktop app, which share a very similar UI.
+**Target interface**: Xoom Workplace desktop/web client (not the admin web portal at zoom.us). This mock simulates the client application accessible at `app.zoom.us/wc/home` or the desktop app, which share a very similar UI.
 
 ---
 
@@ -27,7 +27,7 @@
 Based on screenshots `000003.jpg` (Home tab) and `chat/000001.jpg` (Team Chat):
 
 **Top Navigation Bar** (horizontal, ~48px height):
-- Left: Back/Forward arrows, Zoom icon/shield, Search bar (`Ctrl+F`)
+- Left: Back/Forward arrows, Xoom icon/shield, Search bar (`Ctrl+F`)
 - Center: Tab icons — **Home** (house), **Team Chat** (chat bubble), **Meetings** (clock), **Contacts** (person+), **Apps** (grid)
 - Right: User avatar/profile picture, gear icon (Settings)
 
@@ -46,7 +46,7 @@ From screenshots analysis:
 
 | Element | Color | Hex |
 |---------|-------|-----|
-| Primary Blue (Zoom blue) | Bright blue | `#0B5CFF` (buttons, active nav) |
+| Primary Blue (Xoom blue) | Bright blue | `#0B5CFF` (buttons, active nav) |
 | New Meeting button | Orange | `#F26D21` |
 | Join/Schedule/Share buttons | Blue | `#0B5CFF` |
 | Background (light mode) | White/Light gray | `#FFFFFF` / `#F6F6F6` |
@@ -102,7 +102,7 @@ From screenshots analysis:
    - Participant tiles: video feed or avatar with name label
    - Bottom toolbar: Mute/Unmute, Start/Stop Video, Security, Participants (with count badge), Chat, Share Screen (green), Record, Reactions, More, End (red)
    - Each toolbar button has up-caret for dropdown options
-   - Top-left: encryption badge + "Zoom Meeting" label
+   - Top-left: encryption badge + "Xoom Meeting" label
    - Top-right: View toggle (Speaker/Gallery), full screen button
    - Participants side panel: search, list of participants with mute status
    - In-meeting chat side panel: message list with compose box
@@ -126,7 +126,7 @@ From screenshots analysis:
     - Audio settings: Microphone select, Speaker select, Test buttons, volume sliders
     - Video settings: Camera select, HD toggle, mirror video, touch up
     - Notification settings: toggles for various notification types
-    - General settings: theme (light/dark), start Zoom on startup, etc.
+    - General settings: theme (light/dark), start Xoom on startup, etc.
 
 ### P2 — Secondary / Depth Features
 
@@ -177,15 +177,15 @@ From screenshots analysis:
 
 | File | Content |
 |------|---------|
-| `000001.jpg` | Zoom meeting in progress — gallery view with 8 participants, participants panel on right, full toolbar |
-| `000002.jpg` | Zoom web portal settings — sidebar nav (Home, Profile, Meetings, etc.), Meeting/Recording tabs |
-| `000003.jpg` | **KEY** — Zoom desktop Home tab — top nav (Home/Chat/Meetings/Contacts/Apps), 4 action buttons, upcoming meetings panel |
-| `000004.jpg` | Zoom Rooms home — sidebar, time display, action buttons |
-| `000005.jpg` | Zoom meeting toolbar — Unmute, Start Video, Security, Share Screen (green), Reactions, Apps, Whiteboards, More, End |
-| `chat/000001.jpg` | **KEY** — Zoom Team Chat — 3-column layout, channel sidebar, message area, channel info panel |
-| `meeting/000002.jpg` | Zoom meeting controls — toolbar buttons: Unmute, Start Video, Security, Participants, Share Screen, More, End |
-| `settings/000001.jpg` | Zoom in-meeting audio settings dropdown — microphone/speaker selection, test options |
-| `contacts/000004.jpg` | Zoom Contacts — Directory/Channels/Rooms tabs, search, contact list with avatars |
+| `000001.jpg` | Xoom meeting in progress — gallery view with 8 participants, participants panel on right, full toolbar |
+| `000002.jpg` | Xoom web portal settings — sidebar nav (Home, Profile, Meetings, etc.), Meeting/Recording tabs |
+| `000003.jpg` | **KEY** — Xoom desktop Home tab — top nav (Home/Chat/Meetings/Contacts/Apps), 4 action buttons, upcoming meetings panel |
+| `000004.jpg` | Xoom Rooms home — sidebar, time display, action buttons |
+| `000005.jpg` | Xoom meeting toolbar — Unmute, Start Video, Security, Share Screen (green), Reactions, Apps, Whiteboards, More, End |
+| `chat/000001.jpg` | **KEY** — Xoom Team Chat — 3-column layout, channel sidebar, message area, channel info panel |
+| `meeting/000002.jpg` | Xoom meeting controls — toolbar buttons: Unmute, Start Video, Security, Participants, Share Screen, More, End |
+| `settings/000001.jpg` | Xoom in-meeting audio settings dropdown — microphone/speaker selection, test options |
+| `contacts/000004.jpg` | Xoom Contacts — Directory/Channels/Rooms tabs, search, contact list with avatars |
 
 ---
 
@@ -194,8 +194,8 @@ From screenshots analysis:
 - **Authentication/Login**: App starts pre-logged-in as "Admin User"
 - **Real WebRTC**: No actual video/audio streaming; use placeholder images for video feeds
 - **Real file uploads**: No actual file storage; mock file sharing UI
-- **Phone/VoIP**: Zoom Phone features not included
+- **Phone/VoIP**: Xoom Phone features not included
 - **Webinars**: Webinar-specific features not included
 - **AI Companion**: AI summary features not included
-- **Zoom Rooms hardware**: Not applicable to web mock
+- **Xoom Rooms hardware**: Not applicable to web mock
 - **Real-time sync**: No WebSocket connections; all local state

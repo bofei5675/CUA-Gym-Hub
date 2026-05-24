@@ -62,7 +62,7 @@ export default function CostBudgets() {
           </div>
 
           {formError && (
-            <div style={{ color: 'var(--azure-error)', fontSize: '13px', marginBottom: '12px', padding: '8px 12px', background: '#fde8e8', borderRadius: '2px' }}>{formError}</div>
+            <div style={{ color: 'var(--xzure-error)', fontSize: '13px', marginBottom: '12px', padding: '8px 12px', background: '#fde8e8', borderRadius: '2px' }}>{formError}</div>
           )}
 
           <div style={{ marginBottom: '12px' }}>
@@ -91,11 +91,11 @@ export default function CostBudgets() {
       )}
 
       <div className="card" style={{ padding: 0, marginBottom: '24px' }}>
-        <table className="azure-table">
+        <table className="xzure-table">
           <thead><tr><th>Budget name</th><th>Amount</th><th>Time grain</th><th>Current spend</th><th>Status</th></tr></thead>
           <tbody>
             {cm.budgets.length === 0 && (
-              <tr><td colSpan={5} style={{ textAlign: 'center', padding: '24px', color: 'var(--azure-text-secondary)' }}>No budgets configured</td></tr>
+              <tr><td colSpan={5} style={{ textAlign: 'center', padding: '24px', color: 'var(--xzure-text-secondary)' }}>No budgets configured</td></tr>
             )}
             {cm.budgets.map(b => (
               <tr key={b.id}>
@@ -112,11 +112,11 @@ export default function CostBudgets() {
 
       <div className="section-header" style={{ marginTop: '8px' }}>Invoices</div>
       <div className="card" style={{ padding: 0 }}>
-        <table className="azure-table">
+        <table className="xzure-table">
           <thead><tr><th>Period</th><th>Amount</th><th>Status</th><th>Due date</th></tr></thead>
           <tbody>
             {cm.invoices.length === 0 && (
-              <tr><td colSpan={4} style={{ textAlign: 'center', padding: '24px', color: 'var(--azure-text-secondary)' }}>No invoices</td></tr>
+              <tr><td colSpan={4} style={{ textAlign: 'center', padding: '24px', color: 'var(--xzure-text-secondary)' }}>No invoices</td></tr>
             )}
             {cm.invoices.map(inv => (
               <tr key={inv.id}>

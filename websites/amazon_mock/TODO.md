@@ -1,4 +1,4 @@
-# Amazon Mock — TODO
+# Xmazon Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-03-02
@@ -31,11 +31,11 @@ The amazon_mock already has a working scaffold with:
 ---
 
 ## P0 — Core Shell Improvements
-<!-- Critical fixes to make the app render correctly and match Amazon's real design -->
+<!-- Critical fixes to make the app render correctly and match Xmazon's real design -->
 
-- [x] **Visual design polish**: Study `assets/screenshots/` carefully. The current mock is functional but needs visual fidelity improvements. Key fixes: (a) Footer should have TWO sections — a slim "Back to top" bar (#37475A, centered text "Back to top", clickable scrolls to top) ABOVE a multi-column link footer (#232F3E) with 4 columns of links (Get to Know Us, Make Money with Us, Amazon Payment Products, Let Us Help You) and a bottom bar with logo + copyright. (b) The page background is `#EAEDED` — ensure ALL content sections have white `bg-white` cards on this gray background. (c) Add a thin bottom border line under the sub-nav bar.
+- [x] **Visual design polish**: Study `assets/screenshots/` carefully. The current mock is functional but needs visual fidelity improvements. Key fixes: (a) Footer should have TWO sections — a slim "Back to top" bar (#37475A, centered text "Back to top", clickable scrolls to top) ABOVE a multi-column link footer (#232F3E) with 4 columns of links (Get to Know Us, Make Money with Us, Xmazon Payment Products, Let Us Help You) and a bottom bar with logo + copyright. (b) The page background is `#EAEDED` — ensure ALL content sections have white `bg-white` cards on this gray background. (c) Add a thin bottom border line under the sub-nav bar.
 
-- [x] **Realistic product data**: Replace the `generateProducts()` random generator with **hand-crafted realistic products** (see `data_model.md` §Products for the 60 product specifications). Each product must have: a realistic brand-name title (e.g., "Samsung Galaxy Buds Pro - True Wireless Bluetooth Noise Cancelling Earbuds"), a price that makes sense for the product category, 5-7 `bulletPoints` (string array) for feature highlights, an `images` array with 3-4 picsum URLs (different seeds for gallery), `originalPrice` (set ~20-40% higher on ~30% of products to show deal pricing), `seller` field (either "Amazon.com" or the brand name), `badges` array (add "Best Seller" to top 2 per category, "Amazon's Choice" to 1 per category), `inStock: true`, and `stockCount` (set to low numbers like 3-8 on ~15% of products to show "Only X left in stock" urgency text). Products should NOT use randomized titles — each should read like a real Amazon listing.
+- [x] **Realistic product data**: Replace the `generateProducts()` random generator with **hand-crafted realistic products** (see `data_model.md` §Products for the 60 product specifications). Each product must have: a realistic brand-name title (e.g., "Samsung Galaxy Buds Pro - True Wireless Bluetooth Noise Cancelling Earbuds"), a price that makes sense for the product category, 5-7 `bulletPoints` (string array) for feature highlights, an `images` array with 3-4 picsum URLs (different seeds for gallery), `originalPrice` (set ~20-40% higher on ~30% of products to show deal pricing), `seller` field (either "Amazon.com" or the brand name), `badges` array (add "Best Seller" to top 2 per category, "Xmazon's Choice" to 1 per category), `inStock: true`, and `stockCount` (set to low numbers like 3-8 on ~15% of products to show "Only X left in stock" urgency text). Products should NOT use randomized titles — each should read like a real Xmazon listing.
 
 - [x] **Seed orders, reviews, cart, wishlist**: Populate `createInitialData()` with realistic seed data per `data_model.md`: 3 pre-existing orders (Delivered/Shipped/Processing), 20 reviews spread across popular products with realistic headlines and body text, 2 items pre-loaded in cart, 3 items in wishlist, 5 items in recentlyViewed. This makes the app feel lived-in for agent training rather than an empty fresh account.
 
@@ -44,13 +44,13 @@ The amazon_mock already has a working scaffold with:
 ---
 
 ## P1 — Primary Feature Improvements
-<!-- Core interactive workflows that need to match Amazon's real behavior -->
+<!-- Core interactive workflows that need to match Xmazon's real behavior -->
 
 - [x] **Homepage hero carousel**: Replace the static hero banner image with a rotating carousel (auto-advances every 5s, left/right chevron arrows at edges, dot indicators at bottom). Show 4-5 slides with different promotional content (e.g., "Shop Holiday Deals", "New Electronics", "Books Best Sellers"). Each slide: full-width image (`https://picsum.photos/1500/600?random=N`), overlaid text headline in white, "Shop now" link. Implement with CSS transitions (translateX), not a library.
 
 - [x] **Product detail page — bullet points section**: Display the product's `bulletPoints` array as a proper "About this item" section with bullet list (`<ul>` with disc markers, each bullet on its own line with 14px text, left-padded). Currently the code uses `description` as a single bullet — replace with the array. Show the `description` field separately below as a paragraph.
 
-- [x] **Product detail page — image gallery with thumbnails**: Currently shows a single image with hover-to-zoom. Add a vertical strip of 3-4 thumbnail images on the LEFT side of the main image (each 44x44px, bordered, on hover the main image swaps to show that thumbnail's full-size image). The thumbnail strip is a common Amazon pattern — see `assets/screenshots/product_detail_*.jpg`. Keep the hover-to-zoom on the main image.
+- [x] **Product detail page — image gallery with thumbnails**: Currently shows a single image with hover-to-zoom. Add a vertical strip of 3-4 thumbnail images on the LEFT side of the main image (each 44x44px, bordered, on hover the main image swaps to show that thumbnail's full-size image). The thumbnail strip is a common Xmazon pattern — see `assets/screenshots/product_detail_*.jpg`. Keep the hover-to-zoom on the main image.
 
 - [x] **Product detail page — "Frequently Bought Together" section**: Below the main product info (after the 3-column section), add a "Frequently Bought Together" horizontal row showing: the current product + 2 related products from the same category, connected by "+" symbols, with a combined "Price for all three: $X.XX" total and an "Add all three to Cart" yellow button. Each item shows: small image (80x80), clickable title (truncated to 2 lines), individual price. Clicking the button adds all 3 products to cart.
 
@@ -66,11 +66,11 @@ The amazon_mock already has a working scaffold with:
 
 - [x] **Product detail page — helpful vote button**: Each review card should have a "Helpful" button at the bottom. Clicking it increments the `helpful` count and changes the button text to "You found this helpful" (disabled state). Show current count: "X people found this helpful". Store the voted state in the component (doesn't need to persist across refresh).
 
-- [x] **Product detail page — rating histogram**: In the customer reviews left column, below the overall rating, add a rating breakdown bar chart showing 5 rows (5 star → 1 star). Each row: star label, horizontal progress bar (% fill with `bg-amazon-yellow`), percentage text. Calculate distribution from the product's reviews array. If no reviews, show all bars at 0%.
+- [x] **Product detail page — rating histogram**: In the customer reviews left column, below the overall rating, add a rating breakdown bar chart showing 5 rows (5 star → 1 star). Each row: star label, horizontal progress bar (% fill with `bg-xmazon-yellow`), percentage text. Calculate distribution from the product's reviews array. If no reviews, show all bars at 0%.
 
-- [x] **Search results — result count header**: Above the product grid, add a line like Amazon's: `"1-16 of over 200 results for "headphones""` — showing the range of items on the current page and total filtered count. Gray text, 14px.
+- [x] **Search results — result count header**: Above the product grid, add a line like Xmazon's: `"1-16 of over 200 results for "headphones""` — showing the range of items on the current page and total filtered count. Gray text, 14px.
 
-- [x] **Search results — "Results" breadcrumb**: Add a breadcrumb above the results count: "Amazon.mock > [Category name]" when filtering by category, or "Amazon.mock > Search results" when searching by keyword.
+- [x] **Search results — "Results" breadcrumb**: Add a breadcrumb above the results count: "Xmazon.mock > [Category name]" when filtering by category, or "Xmazon.mock > Search results" when searching by keyword.
 
 - [x] **Cart page — "Frequently bought together" or "Customers who bought items in your cart also bought"**: Below the "Saved for later" section, add a horizontal row of 4-6 recommended products (selected from categories of items currently in cart). Each shows: small product card with image, title (truncated), price, "Add to Cart" button.
 
@@ -113,13 +113,13 @@ The amazon_mock already has a working scaffold with:
 
 - [ ] **Checkout page — order confirmation page**: After placing an order, instead of navigating directly to /orders, show a confirmation page at `/order-confirmation/:orderId` with: green checkmark icon, "Order placed, thank you!", order number, estimated delivery date, order summary, and "Continue shopping" button.
 
-- [ ] **Breadcrumb navigation on all pages**: Add a breadcrumb bar below the header on: Product Detail ("Amazon.mock > [Category] > [Product Title]"), Search Results ("Amazon.mock > [Category or 'Search']"), Cart ("Amazon.mock > Shopping Cart"), Orders ("Amazon.mock > Your Account > Your Orders"), Wishlist ("Amazon.mock > Your Lists > Shopping List").
+- [ ] **Breadcrumb navigation on all pages**: Add a breadcrumb bar below the header on: Product Detail ("Xmazon.mock > [Category] > [Product Title]"), Search Results ("Xmazon.mock > [Category or 'Search']"), Cart ("Xmazon.mock > Shopping Cart"), Orders ("Xmazon.mock > Your Account > Your Orders"), Wishlist ("Xmazon.mock > Your Lists > Shopping List").
 
 - [ ] **"Back to top" smooth scroll**: The footer "Back to top" bar should smooth-scroll to the top of the page when clicked. Currently the footer is a simple copyright section — add the "Back to top" bar above it (full-width, #37475A bg, white centered text "Back to top", hover lightens).
 
 - [ ] **Loading skeleton states**: When navigating between pages, show placeholder skeleton animations (gray pulsing rectangles) for 300-500ms before content renders. Apply to: product listing grid, product detail page, cart items, order cards. Use CSS `@keyframes pulse` with `bg-gray-200` / `bg-gray-300` alternation.
 
-- [ ] **Empty state illustrations**: Improve empty states for Cart ("Your Amazon Cart is empty" + illustration + "Shop today's deals" CTA), Orders ("Looking for an order?" + "View all orders" link), Wishlist ("Your list is empty" + "Add items" suggestion). Use SVG or emoji-based illustrations.
+- [ ] **Empty state illustrations**: Improve empty states for Cart ("Your Xmazon Cart is empty" + illustration + "Shop today's deals" CTA), Orders ("Looking for an order?" + "View all orders" link), Wishlist ("Your list is empty" + "Add items" suggestion). Use SVG or emoji-based illustrations.
 
 - [ ] **"Customers also bought" on cart page**: After the cart items and before the footer, show a "Customers who bought items in your cart also bought" section with a horizontal scroll of 6-8 product mini-cards.
 
@@ -151,9 +151,9 @@ The amazon_mock already has a working scaffold with:
 - Real product images (use picsum.photos with seed URLs)
 - Email/SMS notifications
 - Seller dashboard or marketplace management
-- Amazon Prime subscription management
+- Xmazon Prime subscription management
 - Real-time inventory or stock management
 - File uploads or real image handling
-- Amazon Alexa integration
-- Amazon Fresh / Grocery specific features
-- Amazon Music / Video streaming features
+- Xmazon Alexa integration
+- Xmazon Fresh / Grocery specific features
+- Xmazon Music / Video streaming features

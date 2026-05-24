@@ -1,10 +1,10 @@
-# Gmail Mock — Research Summary
+# Xmail Mock — Research Summary
 
 ## App Overview
 
-Gmail is Google's web-based email client, the world's most popular email service with over 1.8 billion users. The desktop web interface is a full-featured email management application with threaded conversations, rich composition, label-based organization, tabbed inbox categories, and deep keyboard-shortcut support.
+Xmail is Google's web-based email client, the world's most popular email service with over 1.8 billion users. The desktop web interface is a full-featured email management application with threaded conversations, rich composition, label-based organization, tabbed inbox categories, and deep keyboard-shortcut support.
 
-**Purpose of this mock**: Provide a realistic Gmail training sandbox for computer-use AI agents. The agent should be able to compose/reply/forward emails, manage labels, star/archive/delete, search, navigate folders, use keyboard shortcuts, and observe all state changes via `/go`.
+**Purpose of this mock**: Provide a realistic Xmail training sandbox for computer-use AI agents. The agent should be able to compose/reply/forward emails, manage labels, star/archive/delete, search, navigate folders, use keyboard shortcuts, and observe all state changes via `/go`.
 
 ---
 
@@ -63,7 +63,7 @@ Gmail is Google's web-based email client, the world's most popular email service
 | 23 | **Report as spam** — No spam button/handler | MISSING |
 | 24 | **"Not spam" in spam folder** — Missing button | MISSING |
 | 25 | **Undo toast notifications** — No feedback after destructive actions | MISSING |
-| 26 | **Right-click context menu** — Gmail has rich context menus on email rows | MISSING |
+| 26 | **Right-click context menu** — Xmail has rich context menus on email rows | MISSING |
 | 27 | **Snooze emails** — Not implemented | MISSING |
 
 ### P2 — Secondary / Depth Features
@@ -90,7 +90,7 @@ Gmail is Google's web-based email client, the world's most popular email service
 ## UI Layout Description
 
 ### Header (64px, sticky top)
-- **Left**: Hamburger menu (☰) → toggles sidebar | Gmail logo+wordmark
+- **Left**: Hamburger menu (☰) → toggles sidebar | Xmail logo+wordmark
 - **Center**: Search bar (rounded pill, `#eaf1fb` bg) → expands on focus with white bg + shadow | Advanced search toggle (sliders icon) opens dropdown
 - **Right**: Help (?) | Settings (⚙) | Apps grid (⊞) | Profile avatar (circular, 32px)
 

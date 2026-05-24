@@ -147,7 +147,7 @@ function SettingsContent({ section, item }) {
             </div>
             <div>
               <div className="text-sm font-semibold">{state.user.email}</div>
-              <div className="text-xs text-neutral-500">Outlook</div>
+              <div className="text-xs text-neutral-500">Xutlook</div>
             </div>
           </div>
           <button

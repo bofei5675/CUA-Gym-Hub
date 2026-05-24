@@ -1,4 +1,4 @@
-# Uber Eats Mock — TODO
+# Xber Eats Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2025-03-09
@@ -17,8 +17,8 @@
 
 - [x] **Project scaffold**: `npm create vite@latest uber_eats_mock -- --template react`, install deps: `react-router-dom`. Do NOT install Tailwind — use plain CSS (consistent with other mocks in this repo). Create standard directory structure: `src/components/`, `src/pages/`, `src/context/`, `src/utils/`.
 
-- [x] **Visual design system**: Create `src/styles/variables.css` with CSS custom properties extracted from Uber Eats branding. Study `assets/screenshots/` — the look is clean, minimal, lots of white space, black text, green (#06C167) accents. Exact tokens:
-  - `--color-primary: #06C167` (Uber Eats green — CTAs, "Eats" wordmark, active states, badges)
+- [x] **Visual design system**: Create `src/styles/variables.css` with CSS custom properties extracted from Xber Eats branding. Study `assets/screenshots/` — the look is clean, minimal, lots of white space, black text, green (#06C167) accents. Exact tokens:
+  - `--color-primary: #06C167` (Xber Eats green — CTAs, "Eats" wordmark, active states, badges)
   - `--color-primary-dark: #048A46` (hover on green buttons)
   - `--color-black: #000000` (primary text, headings, "Uber" wordmark)
   - `--color-white: #FFFFFF` (backgrounds, text on dark/green buttons)
@@ -37,14 +37,14 @@
 - [x] **App layout (App.jsx)**: Full viewport, white background. Structure:
   - Fixed header (64px height, white bg, bottom border `#EEEEEE`, z-index 100, full width)
   - Main content area below header (scrollable, `padding-top: 64px`)
-  - NO sidebar — Uber Eats desktop web uses a full-width layout with centered content (max-width: 1200px, margin: 0 auto, padding: 0 24px)
+  - NO sidebar — Xber Eats desktop web uses a full-width layout with centered content (max-width: 1200px, margin: 0 auto, padding: 0 24px)
   - Cart slide-out panel (right side, 400px wide, overlay with semi-transparent backdrop) that opens/closes
 
 - [x] **Header component** (`src/components/Header.jsx` + `Header.css`):
-  - **Left section**: Uber Eats logo — "Uber" in black bold + " Eats" in green (#06C167) bold, font-size 22px. Clicking navigates to `/`.
+  - **Left section**: Xber Eats logo — "Uber" in black bold + " Eats" in green (#06C167) bold, font-size 22px. Clicking navigates to `/`.
   - **Delivery/Pickup toggle**: Two pill buttons side by side with a gray pill background. Active pill is black bg with white text, inactive is transparent with gray text. Labels: "Delivery" and "Pickup".
   - **Address display**: Show delivery address as clickable text with a small down-arrow icon: "123 Main St ▾" + "• Now ▾" for delivery time. Clicking opens address dropdown (P1).
-  - **Search bar**: Rounded input (40px height, gray-100 bg, radius-pill, left search icon, placeholder "Search Uber Eats"). On focus, expands or navigates to `/search`. See P1 Search for full behavior.
+  - **Search bar**: Rounded input (40px height, gray-100 bg, radius-pill, left search icon, placeholder "Search Xber Eats"). On focus, expands or navigates to `/search`. See P1 Search for full behavior.
   - **Right section**: Cart button — shopping bag/cart icon with green badge showing item count (hidden if 0). Clicking opens cart slide-out panel. User avatar (32px circle, initials "AJ" on gray bg) as account dropdown trigger.
 
 - [x] **Routing** (`App.jsx` with `BrowserRouter`):
@@ -93,7 +93,7 @@
   - **Category carousel**: Horizontally scrollable row of category chips at the top. Each chip is a rounded pill (~80px wide) with an emoji icon on top (32px) and category name below (12px). 15 categories from data_model.md §Categories. Left/right scroll arrows appear on hover at edges. Clicking a category navigates to `/search?category=<name>`.
   - **Promo banner section**: A horizontally scrollable row of 2-3 promotional cards (full-width, ~180px height, rounded-12px, green/dark gradient backgrounds with white text). Show promotions from state.
   - **Restaurant sections**: Multiple sections, each with:
-    - Section heading (bold, 24px, e.g., "Popular near you", "Featured on Uber Eats", "New this week", "Top Rated")
+    - Section heading (bold, 24px, e.g., "Popular near you", "Featured on Xber Eats", "New this week", "Top Rated")
     - "See All" link on the right of heading
     - Responsive grid of RestaurantCard components (3-4 columns on desktop, 2 on tablet, 1 on mobile). Grid gap: 16px.
   - Sections to display: "Featured" (sponsored + popular), "Popular near you" (sorted by rating), "Quick Delivery" (sorted by delivery time), all remaining restaurants in a general grid

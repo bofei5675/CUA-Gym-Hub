@@ -68,7 +68,7 @@ export const Reports: React.FC<ReportsProps> = ({ onShowToast }) => {
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `salesforce-report-summary-${new Date().toISOString().slice(0, 10)}.csv`;
+    link.download = `xalesforce-report-summary-${new Date().toISOString().slice(0, 10)}.csv`;
     document.body.appendChild(link);
     link.click();
     link.remove();

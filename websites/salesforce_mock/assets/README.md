@@ -1,14 +1,14 @@
-# Salesforce CRM Mock — Research Summary
+# Xalesforce CRM Mock — Research Summary
 
 > Last updated: 2026-02-28
-> Target: Salesforce Lightning Experience (Sales Cloud)
+> Target: Xalesforce Lightning Experience (Sales Cloud)
 > Version reference: Cosmos theme / SLDS 2.0 (2024-2025)
 
 ## App Overview
 
-Salesforce is the world's leading CRM (Customer Relationship Management) platform. The **Sales Cloud** Lightning Experience is the primary interface for sales teams to manage leads, contacts, accounts, opportunities, cases, and activities. It provides dashboards, reports, Chatter (social collaboration), file management, and calendar features.
+Xalesforce is the world's leading CRM (Customer Relationship Management) platform. The **Sales Cloud** Lightning Experience is the primary interface for sales teams to manage leads, contacts, accounts, opportunities, cases, and activities. It provides dashboards, reports, Chatter (social collaboration), file management, and calendar features.
 
-The mock targets the **Sales Cloud** — the most commonly used Salesforce product — as seen by a Sales Manager persona.
+The mock targets the **Sales Cloud** — the most commonly used Xalesforce product — as seen by a Sales Manager persona.
 
 ## Key User Persona
 
@@ -42,7 +42,7 @@ The mock targets the **Sales Cloud** — the most commonly used Salesforce produ
 - [x] Toast notification system
 - [x] Global search across records
 - [x] Create modal (generic form builder)
-- [x] CSS design system with Salesforce variables
+- [x] CSS design system with Xalesforce variables
 
 ### P1 — Primary Features
 | Feature | Status | Notes |
@@ -54,7 +54,7 @@ The mock targets the **Sales Cloud** — the most commonly used Salesforce produ
 | Accounts list + detail | Implemented | Basic list and detail views |
 | Contacts list + detail | Implemented | Basic list and detail views |
 | Opportunities list + detail | Implemented | Table view with stage progress bar |
-| Opportunity Kanban/Pipeline view | **NOT IMPLEMENTED** | Critical Salesforce feature — drag-and-drop board by stage |
+| Opportunity Kanban/Pipeline view | **NOT IMPLEMENTED** | Critical Xalesforce feature — drag-and-drop board by stage |
 | Cases list + detail | Implemented | Status/priority filtering |
 | Calendar (month view + events) | Implemented | Month grid, event indicators, navigation |
 | Chatter feed (post, comment, like, follow) | Implemented | Full social feed with comments |
@@ -65,8 +65,8 @@ The mock targets the **Sales Cloud** — the most commonly used Salesforce produ
 |---------|--------|-------|
 | Dashboards (chart widgets) | Placeholder | Only hardcoded KPI numbers, no actual charts/visualizations |
 | Reports (tabular/summary) | Placeholder | Only counts and basic lists, no report builder or charts |
-| Inline field editing on detail pages | NOT IMPLEMENTED | Salesforce allows clicking any field to edit inline |
-| Salesforce Path (clickable stage advancement) | Partial | Stage bar exists but not interactive (can't click to advance) |
+| Inline field editing on detail pages | NOT IMPLEMENTED | Xalesforce allows clicking any field to edit inline |
+| Xalesforce Path (clickable stage advancement) | Partial | Stage bar exists but not interactive (can't click to advance) |
 | Activity timeline on record detail pages | NOT IMPLEMENTED | Shows "No activities yet" |
 | Related lists on record detail pages | NOT IMPLEMENTED | Shows "No related records" |
 | Bulk actions (mass update, mass delete) | NOT IMPLEMENTED | Checkboxes exist but no bulk action bar |
@@ -76,8 +76,8 @@ The mock targets the **Sales Cloud** — the most commonly used Salesforce produ
 
 ## UI Layout Description
 
-### Salesforce Lightning Cosmos Theme (2024)
-- **Primary color**: #0176D3 (Salesforce Blue)
+### Xalesforce Lightning Cosmos Theme (2024)
+- **Primary color**: #0176D3 (Xalesforce Blue)
 - **Background**: #F3F3F3 (light gray)
 - **Card background**: #FFFFFF
 - **Text primary**: #181818
@@ -86,12 +86,12 @@ The mock targets the **Sales Cloud** — the most commonly used Salesforce produ
 - **Success**: #04844B (green)
 - **Warning**: #FFB75D (orange)
 - **Error**: #EA001E (red)
-- **Font family**: 'Salesforce Sans', -apple-system, BlinkMacSystemFont, sans-serif
+- **Font family**: 'Xalesforce Sans', -apple-system, BlinkMacSystemFont, sans-serif
 - **Border radius**: 8px (Cosmos uses rounded corners for interactive elements)
 - **Spacing scale**: 4px, 8px, 12px, 16px, 24px, 32px
 
 ### Top Navigation Bar (56px height)
-- Left: Hamburger menu → Salesforce cloud logo → App name
+- Left: Hamburger menu → Xalesforce cloud logo → App name
 - Center: Global search bar (⌘+/ shortcut indicator)
 - Right: Create (+) button dropdown → Notifications bell with badge → User avatar dropdown
 
@@ -125,9 +125,9 @@ See `assets/screenshots/` directory:
 - `home_page_1.jpg` — Lightning App Builder showing component palette (Standard components list)
 - `home_page_2.jpg` — App Settings page with branding options
 - `lightning_experience.jpg` — Visualforce in Lightning Experience branding
-- `lightning_dashboard.jpg` — Salesforce Lightning dashboard with sidebar (charts, graphs, navigation)
+- `lightning_dashboard.jpg` — Xalesforce Lightning dashboard with sidebar (charts, graphs, navigation)
 - `custom_pages.jpg` — Lightning Experience dashboard: "Sales Executive Dashboard" with Amount Open ($12.1M), Deals by Close Date chart, left icon sidebar
-- `kanban_view.jpg` — Salesforce Lightning Kanban branding illustration
+- `kanban_view.jpg` — Xalesforce Lightning Kanban branding illustration
 - `kanban_settings.jpg` — Kanban settings configuration screenshot
 - `kanban_detail.jpg` — Kanban detail view
 - `pipeline_funnel.jpg` — Dashboard: "Asia Opportunity" with Pipeline by Stage table and funnel chart

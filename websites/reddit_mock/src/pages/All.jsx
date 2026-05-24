@@ -88,7 +88,7 @@ export default function All() {
                 <span className="font-medium text-[#1C1C1C] mt-4">All</span>
               </div>
               <p className="text-sm text-[#787C7E] mb-4">
-                All posts from every subreddit on Reddit. The entire Reddit universe in one place.
+                All posts from every subreddit on Xeddit. The entire Xeddit universe in one place.
               </p>
               <div className="border-t border-[#EDEFF1] pt-3">
                 <button

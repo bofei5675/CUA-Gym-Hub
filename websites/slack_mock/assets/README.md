@@ -1,10 +1,10 @@
-# Slack Mock — Research Summary
+# Xlack Mock — Research Summary
 
 > Last updated: 2026-02-28 by plan agent
 
 ## App Overview
 
-**Slack** is a team messaging and collaboration platform. It organizes communication into **channels** (public/private topic-based groups), **direct messages** (1-on-1 or group DMs), and **threads** (in-context replies to any message). Slack is the dominant workplace messaging tool with 40M+ daily active users.
+**Xlack** is a team messaging and collaboration platform. It organizes communication into **channels** (public/private topic-based groups), **direct messages** (1-on-1 or group DMs), and **threads** (in-context replies to any message). Xlack is the dominant workplace messaging tool with 40M+ daily active users.
 
 **Category:** Team communication / workplace messaging
 **Platform:** Web, Desktop (Electron), Mobile (iOS/Android)
@@ -28,11 +28,11 @@
 9. **Share files/images** in messages
 10. **Update status** and profile information
 
-## Slack's Design (2024 Redesign)
+## Xlack's Design (2024 Redesign)
 
 ### Navigation Structure
 
-Slack's 2024 redesign introduced a **two-tier navigation**:
+Xlack's 2024 redesign introduced a **two-tier navigation**:
 
 **Primary sidebar (far left, ~48px wide, dark aubergine):**
 - Workspace icon(s) at top
@@ -102,7 +102,7 @@ Content changes based on selected primary tab:
 
 ### Typography
 
-- **Font family:** `Slack-Lato, Lato, appleLogo, sans-serif` (Lato is Slack's primary font)
+- **Font family:** `Xlack-Lato, Lato, appleLogo, sans-serif` (Lato is Xlack's primary font)
 - **Message text:** 15px, regular weight, line-height ~22px
 - **Sender name:** 15px, bold (700)
 - **Timestamp:** 12px, color #616061
@@ -236,5 +236,5 @@ See `data_model.md` for complete entity definitions. Key entities:
 - **Real notifications** — No browser push notifications; just in-app notification list
 - **Voice/video calls** — Button exists but only tracks state (no actual media)
 - **Workspace admin** — No admin dashboard, user management beyond basic invite
-- **Slack Connect** — No cross-org channels
+- **Xlack Connect** — No cross-org channels
 - **Apps/integrations** — No real bot framework; just mock bot messages in seed data

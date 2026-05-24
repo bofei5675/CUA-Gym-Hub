@@ -132,7 +132,7 @@ export const Home = () => {
             }}>
               <div style={{ fontSize: 40 }}>💳</div>
               <div>
-                <div style={{ fontWeight: 700, fontSize: 15, marginBottom: 4 }}>Booking.com Wallet</div>
+                <div style={{ fontWeight: 700, fontSize: 15, marginBottom: 4 }}>Xooking.com Wallet</div>
                 <div style={{ fontSize: 13, color: 'var(--bc-text-medium)', marginBottom: 8 }}>
                   Earn cashback rewards on every booking you make.
                 </div>

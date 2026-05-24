@@ -1,8 +1,8 @@
-# Google Analytics 4 (GA4) — Research Summary
+# Xoogle Analytics 4 (GA4) — Research Summary
 
 ## App Overview
 
-Google Analytics 4 (GA4) is Google's web and app analytics platform. It is event-based (not session-based like its predecessor Universal Analytics). Users track website/app traffic, analyze user behavior, measure conversions, and generate reports. The platform is used by marketers, analysts, product managers, and business owners to understand how users interact with their digital properties.
+Xoogle Analytics 4 (GA4) is Google's web and app analytics platform. It is event-based (not session-based like its predecessor Universal Analytics). Users track website/app traffic, analyze user behavior, measure conversions, and generate reports. The platform is used by marketers, analysts, product managers, and business owners to understand how users interact with their digital properties.
 
 **URL**: `analytics.google.com`
 
@@ -37,7 +37,7 @@ The GA4 sidebar is a narrow icon rail (~56px) on the far left, with a secondary 
 - **Admin** (gear icon) — Property & account settings
 
 ### Header Bar
-- Google Analytics logo (orange bar chart icon) + "Analytics" text
+- Xoogle Analytics logo (orange bar chart icon) + "Analytics" text
 - Account/Property selector: "All accounts > [Account Name] > [Property Name]" with dropdown
 - Search bar: "Try searching 'add web stream'" placeholder
 - Grid icon (Google apps)

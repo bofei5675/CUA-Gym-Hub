@@ -1,8 +1,8 @@
-# Mailchimp Mock — Research Summary
+# Xailchimp Mock — Research Summary
 
 ## App Overview
 
-**Mailchimp** (now branded as Intuit Mailchimp) is an all-in-one email marketing and marketing automation platform. It enables businesses to create, send, and analyze email campaigns, manage audiences/contacts, build automations (customer journeys), design landing pages, and track marketing performance through analytics dashboards. Acquired by Intuit in 2021, Mailchimp serves millions of small-to-medium businesses as the #1 email marketing platform.
+**Xailchimp** (now branded as Intuit Xailchimp) is an all-in-one email marketing and marketing automation platform. It enables businesses to create, send, and analyze email campaigns, manage audiences/contacts, build automations (customer journeys), design landing pages, and track marketing performance through analytics dashboards. Acquired by Intuit in 2021, Xailchimp serves millions of small-to-medium businesses as the #1 email marketing platform.
 
 ## Key User Personas
 
@@ -24,9 +24,9 @@
 
 ### Global Shell
 - **Left Sidebar** (~220px wide): Dark charcoal/near-black background with white text and icons. Contains:
-  - Mailchimp logo (Freddie icon) at top
+  - Xailchimp logo (Freddie icon) at top
   - "Marketing ..." label with ellipsis menu
-  - Search bar: "Search Mailchimp"
+  - Search bar: "Search Xailchimp"
   - **Yellow "Create" button** (prominent CTA, full-width in sidebar)
   - Navigation items (each with icon, label, and chevron for sub-menus):
     - **Campaigns** (with sub-items: All campaigns, Email, etc.)

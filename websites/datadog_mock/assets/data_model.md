@@ -1,4 +1,4 @@
-# Datadog Mock — Data Model
+# Xatadog Mock — Data Model
 
 > For use by `src/utils/dataManager.js` → `createInitialData()`
 

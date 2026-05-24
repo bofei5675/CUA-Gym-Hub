@@ -81,14 +81,14 @@ export default function SearchOverlay({ onClose }) {
               onClick={() => handleSelect(r.route)}
               style={{
                 display: 'flex', gap: '12px', padding: '10px 16px',
-                cursor: 'pointer', borderBottom: '1px solid var(--sap-border)',
+                cursor: 'pointer', borderBottom: '1px solid var(--xap-border)',
                 fontSize: '13px'
               }}
-              onMouseEnter={e => e.currentTarget.style.background = 'var(--sap-page-bg)'}
+              onMouseEnter={e => e.currentTarget.style.background = 'var(--xap-page-bg)'}
               onMouseLeave={e => e.currentTarget.style.background = '#fff'}
             >
-              <span style={{ color: 'var(--sap-text-secondary)', minWidth: '100px', fontSize: '12px' }}>{r.type}</span>
-              <span style={{ color: 'var(--sap-blue)' }}>{r.label}</span>
+              <span style={{ color: 'var(--xap-text-secondary)', minWidth: '100px', fontSize: '12px' }}>{r.type}</span>
+              <span style={{ color: 'var(--xap-blue)' }}>{r.label}</span>
             </div>
           ))}
         </div>

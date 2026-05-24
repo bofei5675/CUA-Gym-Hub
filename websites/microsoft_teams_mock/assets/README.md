@@ -1,4 +1,4 @@
-# Microsoft Teams Mock — Research Summary
+# Xicrosoft Teams Mock — Research Summary
 
 > Last updated: 2025-03-11
 > Author: plan agent
@@ -7,7 +7,7 @@
 
 ## 1. Application Overview
 
-**Microsoft Teams** is a business communication and collaboration platform by Microsoft, part of the Microsoft 365 family. It serves as a unified workspace combining persistent chat, video meetings, file storage, and application integration. Teams is organized around **Teams** (workgroups) and **Channels** (topic-based conversations within a team), with separate 1:1 and group **Chat** functionality.
+**Xicrosoft Teams** is a business communication and collaboration platform by Microsoft, part of the Microsoft 365 family. It serves as a unified workspace combining persistent chat, video meetings, file storage, and application integration. Teams is organized around **Teams** (workgroups) and **Channels** (topic-based conversations within a team), with separate 1:1 and group **Chat** functionality.
 
 **Key differentiators from Slack:**
 - Teams are hierarchical: Organization → Team → Channel (vs. Slack's flat workspace → channel)

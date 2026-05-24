@@ -9,7 +9,7 @@ export default function Deals() {
 
   const filteredDeals = activeFilter === 'all'
     ? state.deals
-    : state.deals.filter(d => d.storeId === activeFilter || (activeFilter === 'instacart' && d.storeId === null));
+    : state.deals.filter(d => d.storeId === activeFilter || (activeFilter === 'xnstacart' && d.storeId === null));
 
   return (
     <div className="page-content">
@@ -19,8 +19,8 @@ export default function Deals() {
         <button className={`dept-tab ${activeFilter === 'all' ? 'active' : ''}`} onClick={() => setActiveFilter('all')}>
           All Deals
         </button>
-        <button className={`dept-tab ${activeFilter === 'instacart' ? 'active' : ''}`} onClick={() => setActiveFilter('instacart')}>
-          &#x1F955; Instacart
+        <button className={`dept-tab ${activeFilter === 'xnstacart' ? 'active' : ''}`} onClick={() => setActiveFilter('xnstacart')}>
+          &#x1F955; Xnstacart
         </button>
         {storesWithDeals.map(store => (
           <button key={store.id} className={`dept-tab ${activeFilter === store.id ? 'active' : ''}`} onClick={() => setActiveFilter(store.id)}>
@@ -44,7 +44,7 @@ export default function Deals() {
                 <div className="deal-title">{deal.title}</div>
                 <div className="deal-description">{deal.description}</div>
                 {store && <div className="deal-store">{store.emoji} {store.name}</div>}
-                {!store && deal.storeId === null && <div className="deal-store">&#x1F955; Instacart</div>}
+                {!store && deal.storeId === null && <div className="deal-store">&#x1F955; Xnstacart</div>}
                 <div className="deal-expiry">Valid until {deal.endDate}</div>
                 <button className={`btn-outline ${deal.isClipped ? 'clipped' : ''}`} style={{ alignSelf: 'flex-start' }}
                   onClick={() => dispatch({ type: ACTION_TYPES.CLIP_DEAL, payload: deal.id })}>

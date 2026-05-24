@@ -1,4 +1,4 @@
-# DocuSign Mock — Data Model
+# XocuSign Mock — Data Model
 
 ## Entity Overview
 
@@ -41,7 +41,7 @@ User (current logged-in user)
 ```
 
 ### Envelope
-The central entity in DocuSign. An envelope is a container for documents that get sent to recipients for signing.
+The central entity in XocuSign. An envelope is a container for documents that get sent to recipients for signing.
 
 ```js
 {

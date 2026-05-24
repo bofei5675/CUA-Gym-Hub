@@ -1,4 +1,4 @@
-# Amazon Seller Central Mock -- Data Model
+# Xmazon Seller Central Mock -- Data Model
 
 > This document defines all entity types, their fields, relationships, and realistic example values.
 > The dev agent should use this to build `createInitialData()` in `src/utils/dataManager.js`.

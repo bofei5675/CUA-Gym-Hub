@@ -1,4 +1,4 @@
-# Klaviyo Mock — Data Model
+# Xlaviyo Mock — Data Model
 
 ## Entity Types
 

@@ -38,7 +38,7 @@ export default function Settings() {
               <div className="text-gray-500">{user.email}</div>
               <div className="text-sm text-gray-400 mt-1">User Type: Licensed</div>
             </div>
-            <button onClick={() => setEditingProfile(true)} className="ml-auto text-zoom-blue hover:underline text-sm font-medium">Edit Profile</button>
+            <button onClick={() => setEditingProfile(true)} className="ml-auto text-xoom-blue hover:underline text-sm font-medium">Edit Profile</button>
           </div>
         </div>
 
@@ -74,7 +74,7 @@ export default function Settings() {
                   type="checkbox" 
                   checked={settings.video.hd}
                   onChange={(e) => updateSettings({ video: { ...settings.video, hd: e.target.checked }})}
-                  className="rounded text-zoom-blue"
+                  className="rounded text-xoom-blue"
                 />
                 <span className="text-sm text-gray-700">Enable HD Video</span>
               </label>
@@ -88,7 +88,7 @@ export default function Settings() {
           <div className="space-y-3">
             <label className="flex items-center justify-between">
               <span className="text-gray-700">Email Notifications</span>
-              <div className={`w-11 h-6 flex items-center rounded-full p-1 cursor-pointer transition-colors ${settings.notifications.email ? 'bg-zoom-blue' : 'bg-gray-300'}`}
+              <div className={`w-11 h-6 flex items-center rounded-full p-1 cursor-pointer transition-colors ${settings.notifications.email ? 'bg-xoom-blue' : 'bg-gray-300'}`}
                 onClick={() => updateSettings({ notifications: { ...settings.notifications, email: !settings.notifications.email }})}
               >
                 <div className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${settings.notifications.email ? 'translate-x-5' : ''}`}></div>
@@ -96,7 +96,7 @@ export default function Settings() {
             </label>
             <label className="flex items-center justify-between">
               <span className="text-gray-700">Desktop Notifications</span>
-              <div className={`w-11 h-6 flex items-center rounded-full p-1 cursor-pointer transition-colors ${settings.notifications.push ? 'bg-zoom-blue' : 'bg-gray-300'}`}
+              <div className={`w-11 h-6 flex items-center rounded-full p-1 cursor-pointer transition-colors ${settings.notifications.push ? 'bg-xoom-blue' : 'bg-gray-300'}`}
                 onClick={() => updateSettings({ notifications: { ...settings.notifications, push: !settings.notifications.push }})}
               >
                 <div className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${settings.notifications.push ? 'translate-x-5' : ''}`}></div>
@@ -133,7 +133,7 @@ export default function Settings() {
               </div>
               <div className="flex justify-end gap-3 pt-2">
                 <button type="button" onClick={() => setEditingProfile(false)} className="px-4 py-2 bg-gray-100 rounded-lg">Cancel</button>
-                <button type="submit" className="px-4 py-2 bg-zoom-blue text-white rounded-lg">Save</button>
+                <button type="submit" className="px-4 py-2 bg-xoom-blue text-white rounded-lg">Save</button>
               </div>
             </form>
           </div>

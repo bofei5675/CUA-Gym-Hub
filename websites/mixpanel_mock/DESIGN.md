@@ -1,10 +1,10 @@
-# Design System Inspired by Mixpanel
+# Design System Inspired by Xixpanel
 
 ## 1. Visual Theme & Atmosphere
 
-Mixpanel has a clean, professional analytics interface with a predominantly white/light gray background. The design uses a narrow left sidebar for navigation, a consistent top header bar for context (project name, breadcrumbs), and a generous main content area optimized for charts, tables, and query builders. The overall feel is data-dense but organized, with a clear hierarchy achieved through subtle borders, restrained color use, and consistent typography. Purple is the dominant brand/accent color.
+Xixpanel has a clean, professional analytics interface with a predominantly white/light gray background. The design uses a narrow left sidebar for navigation, a consistent top header bar for context (project name, breadcrumbs), and a generous main content area optimized for charts, tables, and query builders. The overall feel is data-dense but organized, with a clear hierarchy achieved through subtle borders, restrained color use, and consistent typography. Purple is the dominant brand/accent color.
 
-The right-side query builder panel is a distinctive Mixpanel pattern -- a sticky side panel used to configure metrics, filters, and breakdowns for reports. This creates a split-pane layout where the left/center area shows visualizations and results while the right panel controls the query.
+The right-side query builder panel is a distinctive Xixpanel pattern -- a sticky side panel used to configure metrics, filters, and breakdowns for reports. This creates a split-pane layout where the left/center area shows visualizations and results while the right panel controls the query.
 
 ## 2. Color Palette & Roles
 
@@ -65,7 +65,7 @@ The right-side query builder panel is a distinctive Mixpanel pattern -- a sticky
 
 ## 4. Spacing & Layout
 
-- **Left Sidebar Width**: 220px (collapsible, icon-only mode ~48px shows Mixpanel X logo, search, home, data, boards icons)
+- **Left Sidebar Width**: 220px (collapsible, icon-only mode ~48px shows Xixpanel X logo, search, home, data, boards icons)
 - **Top Header Height**: 48px (contains breadcrumb: "ProjectName / ReportName", action buttons: Save, Share, Link, More)
 - **Date Picker Bar Height**: 44px (sits below header, contains date range, time presets: Today/Yesterday/7D/30D/3M/6M/12M, granularity: Day/Week/Month, chart type: Line/Bar/Pie)
 - **Right Query Panel Width**: 300px (sticky, scrollable, contains Metrics, Filter, Breakdown sections)
@@ -220,7 +220,7 @@ color: #FFFFFF;
 
 ## 7. Iconography & Logo
 
-- **Mixpanel Logo**: A stylized "X" in purple (`#7B5CFF`) on white background, approximately 20x20px in the sidebar header. The X has slightly tapered strokes.
+- **Xixpanel Logo**: A stylized "X" in purple (`#7B5CFF`) on white background, approximately 20x20px in the sidebar header. The X has slightly tapered strokes.
 - **Icon Library**: Use `lucide-react` icons throughout. Key mappings:
   - Home: `Home` icon
   - Search: `Search` icon
@@ -364,7 +364,7 @@ cursor: pointer;
 
 ### User Avatar (Emoji)
 ```css
-/* Mixpanel uses emoji faces as default avatars */
+/* Xixpanel uses emoji faces as default avatars */
 width: 28px;
 height: 28px;
 border-radius: 50%;

@@ -15,7 +15,7 @@
           <div className="p-4">
              <div className="mb-4 flex gap-4 text-sm font-semibold text-gray-600 border-b border-gray-200 pb-2">
                 <span className="text-teams-purple border-b-2 border-teams-purple pb-2 -mb-2.5">Recent</span>
-                <span className="cursor-pointer hover:text-gray-900">Microsoft Teams</span>
+                <span className="cursor-pointer hover:text-gray-900">Xicrosoft Teams</span>
                 <span className="cursor-pointer hover:text-gray-900">Downloads</span>
              </div>
 

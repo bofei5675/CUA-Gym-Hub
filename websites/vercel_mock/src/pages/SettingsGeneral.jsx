@@ -58,7 +58,7 @@ export default function SettingsGeneral() {
 
       <div className="settings-section">
         <div className="settings-section-title">Project Name</div>
-        <div className="settings-section-desc">Used to identify your Project on the Dashboard, Vercel CLI, and in the URL of your Deployments.</div>
+        <div className="settings-section-desc">Used to identify your Project on the Dashboard, Xercel CLI, and in the URL of your Deployments.</div>
         <div className="settings-row">
           <input value={form.name} onChange={e => setForm(f => ({ ...f, name: e.target.value }))} />
           <button className="btn btn-primary btn-sm" onClick={handleSave}>Save</button>

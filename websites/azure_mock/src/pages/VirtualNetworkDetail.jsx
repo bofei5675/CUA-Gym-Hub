@@ -17,7 +17,7 @@ export default function VirtualNetworkDetail() {
         <Breadcrumb items={[{ label: 'Home', path: '/' }, { label: 'Virtual networks', path: '/virtual-networks' }, { label: 'Not found' }]} />
         <h1 className="page-title">Virtual network not found</h1>
         <div className="card" style={{ textAlign: 'center', padding: '32px' }}>
-          <p style={{ color: 'var(--azure-text-secondary)' }}>The requested virtual network could not be found.</p>
+          <p style={{ color: 'var(--xzure-text-secondary)' }}>The requested virtual network could not be found.</p>
           <button className="btn btn-primary" onClick={() => navigate('/virtual-networks')} style={{ marginTop: '16px' }}>Back to Virtual networks</button>
         </div>
       </div>
@@ -37,7 +37,7 @@ export default function VirtualNetworkDetail() {
     <div>
       <Breadcrumb items={[{ label: 'Home', path: '/' }, { label: 'Virtual networks', path: '/virtual-networks' }, { label: vnet.name }]} />
       <h1 className="page-title">{vnet.name}</h1>
-      <div style={{ fontSize: '13px', color: 'var(--azure-text-secondary)', marginBottom: '16px' }}>Virtual network</div>
+      <div style={{ fontSize: '13px', color: 'var(--xzure-text-secondary)', marginBottom: '16px' }}>Virtual network</div>
 
       <div className="command-bar">
         <button className="btn btn-default" onClick={() => setRefreshKey(k => k + 1)}><RefreshCw size={14} /> Refresh</button>
@@ -46,12 +46,12 @@ export default function VirtualNetworkDetail() {
       <div className="card" style={{ marginBottom: '16px' }}>
         <div className="section-header" style={{ marginBottom: '12px' }}>Essentials</div>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', fontSize: '14px' }}>
-          <div><strong>Resource group:</strong> <Link to={`/resource-groups/${vnet.resourceGroup}`} style={{ color: 'var(--azure-blue)', textDecoration: 'none' }}>{vnet.resourceGroup}</Link></div>
+          <div><strong>Resource group:</strong> <Link to={`/resource-groups/${vnet.resourceGroup}`} style={{ color: 'var(--xzure-blue)', textDecoration: 'none' }}>{vnet.resourceGroup}</Link></div>
           <div><strong>Location:</strong> {vnet.location}</div>
-          <div><strong>Subscription:</strong> <Link to={`/subscriptions/${sub?.id}`} style={{ color: 'var(--azure-blue)', textDecoration: 'none' }}>{sub?.displayName}</Link></div>
+          <div><strong>Subscription:</strong> <Link to={`/subscriptions/${sub?.id}`} style={{ color: 'var(--xzure-blue)', textDecoration: 'none' }}>{sub?.displayName}</Link></div>
           <div><strong>Address space:</strong> {vnet.addressSpace}</div>
           <div><strong>Status:</strong> <span className="badge badge-success">{vnet.status}</span></div>
-          <div><strong>DNS servers:</strong> Default (Azure-provided)</div>
+          <div><strong>DNS servers:</strong> Default (Xzure-provided)</div>
           {Object.keys(vnet.tags || {}).length > 0 && (
             <>
               <div><strong>Tags:</strong></div>
@@ -65,7 +65,7 @@ export default function VirtualNetworkDetail() {
 
       <div className="section-header" style={{ marginBottom: '12px' }}>Subnets ({vnet.subnets.length})</div>
       <div className="card" style={{ padding: 0 }}>
-        <table className="azure-table">
+        <table className="xzure-table">
           <thead>
             <tr>
               <th>Name</th>
@@ -76,7 +76,7 @@ export default function VirtualNetworkDetail() {
           </thead>
           <tbody>
             {vnet.subnets.length === 0 && (
-              <tr><td colSpan={4} style={{ textAlign: 'center', padding: '24px', color: 'var(--azure-text-secondary)' }}>No subnets</td></tr>
+              <tr><td colSpan={4} style={{ textAlign: 'center', padding: '24px', color: 'var(--xzure-text-secondary)' }}>No subnets</td></tr>
             )}
             {vnet.subnets.map(subnet => (
               <tr key={subnet.id}>
@@ -85,7 +85,7 @@ export default function VirtualNetworkDetail() {
                 <td>{subnet.connectedDevices}</td>
                 <td>
                   {state.networkSecurityGroups.find(n => n.name === subnet.networkSecurityGroup)
-                    ? <Link to={`/network-security-groups/${state.networkSecurityGroups.find(n => n.name === subnet.networkSecurityGroup).id}`} style={{ color: 'var(--azure-blue)', textDecoration: 'none' }}>{subnet.networkSecurityGroup}</Link>
+                    ? <Link to={`/network-security-groups/${state.networkSecurityGroups.find(n => n.name === subnet.networkSecurityGroup).id}`} style={{ color: 'var(--xzure-blue)', textDecoration: 'none' }}>{subnet.networkSecurityGroup}</Link>
                     : subnet.networkSecurityGroup || 'None'}
                 </td>
               </tr>

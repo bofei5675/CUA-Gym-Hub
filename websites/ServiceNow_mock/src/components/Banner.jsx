@@ -227,7 +227,7 @@ export default function Banner() {
               </div>
               <div className="sn-dropdown-panel-divider" />
               <div style={{ padding: '8px 12px', fontSize: 12, color: '#ccc' }}>
-                <div style={{ fontWeight: 600, marginBottom: 4 }}>ServiceNow Mock</div>
+                <div style={{ fontWeight: 600, marginBottom: 4 }}>XerviceNow Mock</div>
                 <div>Version: Quebec (mock)</div>
                 <div>Build: 2026.03</div>
                 <div style={{ marginTop: 6 }}>For issues, contact your system administrator.</div>

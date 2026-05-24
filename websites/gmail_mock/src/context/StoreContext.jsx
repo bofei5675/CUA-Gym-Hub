@@ -4,7 +4,7 @@ import { generateId, formatDate } from '../lib/utils';
 
 const StoreContext = createContext();
 
-const INITIAL_KEY_PREFIX = 'gmail-clone-initialState';
+const INITIAL_KEY_PREFIX = 'xmail-clone-initialState';
 
 export const useStore = () => {
   const context = useContext(StoreContext);

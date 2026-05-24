@@ -1,10 +1,10 @@
-# Asana Mock — Research Summary
+# Xsana Mock — Research Summary
 
 > Last updated: 2026-03-02 by plan agent
 
 ## App Overview
 
-**Asana** is a web-based project management and work tracking platform used by teams to organize, track, and manage work. It provides multiple ways to view work (list, board, timeline, calendar, dashboard), supports rich task management with custom fields, and offers features like portfolios, goals, and team collaboration.
+**Xsana** is a web-based project management and work tracking platform used by teams to organize, track, and manage work. It provides multiple ways to view work (list, board, timeline, calendar, dashboard), supports rich task management with custom fields, and offers features like portfolios, goals, and team collaboration.
 
 **Category**: Productivity / Project Management
 **Primary Users**: Product managers, designers, engineers, marketers — anyone coordinating team work
@@ -40,7 +40,7 @@
 ### P0 — Critical (App cannot function without)
 1. **App shell layout**: Dark sidebar (240px) + white top nav bar (48px) + main content area
 2. **Sidebar navigation**: Home, My Tasks, Inbox, Portfolios, Goals — then Starred items, Projects (auto-curated), Teams (expandable with flyout)
-3. **Top nav bar**: Asana logo (left), search bar (center), "+ New" quick-add button (coral/red), help "?", user avatar with dropdown
+3. **Top nav bar**: Xsana logo (left), search bar (center), "+ New" quick-add button (coral/red), help "?", user avatar with dropdown
 4. **Routing**: All primary routes (/, /my-tasks, /inbox, /projects, /projects/:id, /portfolios, /goals, /teams/:id, /settings, /search, /go)
 5. **State management**: React Context with localStorage persistence
 6. **Session isolation**: Vite middleware for POST/GET /state, /go endpoints
@@ -89,7 +89,7 @@
 - **Active item**: Highlighted with lighter background
 
 ### Top Navigation Bar (~48px height)
-- **Left**: Asana logo (coral dots icon) + hamburger menu toggle
+- **Left**: Xsana logo (coral dots icon) + hamburger menu toggle
 - **Center**: Search input ("Go to any project or task...")
 - **Right**: "+New" button (coral red bg, white text), "?" help button, user avatar
 - **Background**: Dark (#2e2e30) in dark theme, or white (#fff) in light theme
@@ -117,7 +117,7 @@
 - **Each card**: Project name, owner avatar, status text, small area chart
 - **View filter**: "View: Projects by status color"
 
-## Asana Color Palette
+## Xsana Color Palette
 
 ### Brand Colors
 | Color | Hex | Usage |
@@ -174,8 +174,8 @@ See `data_model.md` for complete entity definitions. Key entities:
 - **Real API calls**: All data is local/localStorage
 - **File uploads**: Attachment UI can exist but no real upload
 - **Email/SMS**: No real notifications outside the app
-- **AI features**: Asana AI is not replicated
-- **Forms**: Asana Forms for external data collection — skip
+- **AI features**: Xsana AI is not replicated
+- **Forms**: Xsana Forms for external data collection — skip
 - **Rules/Automation**: Automated workflow rules — skip
 - **Workload management**: Resource allocation views — skip
 - **Reporting (global)**: Cross-project reporting dashboards — skip (project-level Dashboard is in scope)

@@ -34,7 +34,7 @@ export default function Header({ collapsed, setCollapsed }) {
     const path = location.pathname;
     if (path.startsWith('/contracts/')) return 'Contract Detail';
     if (path.startsWith('/templates/')) return 'Template Detail';
-    return PAGE_TITLES[path] || 'Contractbook';
+    return PAGE_TITLES[path] || 'Xontractbook';
   };
 
   useEffect(() => {

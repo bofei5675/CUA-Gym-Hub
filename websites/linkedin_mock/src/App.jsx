@@ -30,7 +30,7 @@ function NotFound() {
         <p className="text-gray-500 mb-8">The page you are looking for does not exist or has been moved.</p>
         <Link
           to="/"
-          className="bg-linkedin-blue text-white px-6 py-2.5 rounded-full font-semibold hover:bg-linkedin-dark inline-block"
+          className="bg-xinkedin-blue text-white px-6 py-2.5 rounded-full font-semibold hover:bg-xinkedin-dark inline-block"
         >
           Go to Home Feed
         </Link>

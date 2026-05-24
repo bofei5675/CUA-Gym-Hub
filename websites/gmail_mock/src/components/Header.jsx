@@ -87,7 +87,7 @@ const GoogleAppsPanel = ({ onClose }) => {
     { name: 'YouTube', icon: '▶️' },
     { name: 'Play', icon: '🎮' },
     { name: 'News', icon: '📰' },
-    { name: 'Gmail', icon: '✉️' },
+    { name: 'Xmail', icon: '✉️' },
     { name: 'Meet', icon: '📹' },
     { name: 'Chat', icon: '💬' },
     { name: 'Drive', icon: '📁' },
@@ -176,7 +176,7 @@ const Header = () => {
           <Menu size={24} className="text-gray-600" />
         </button>
         <div className="flex items-center gap-2">
-          <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r2.png" alt="Gmail" className="h-10" />
+          <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r2.png" alt="Xmail" className="h-10" />
         </div>
       </div>
 
@@ -204,7 +204,7 @@ const Header = () => {
         <button
           className="p-2 hover:bg-gray-100 rounded-full"
           title="Support"
-          onClick={() => showToast('Gmail Help Center — not available in mock')}
+          onClick={() => showToast('Xmail Help Center — not available in mock')}
         >
           <HelpCircle size={24} className="text-gray-600" />
         </button>

@@ -486,7 +486,7 @@ export const getDefaultData = () => {
     'Take my like and subscribe!',
     'Every video just keeps getting better.',
     'Thanks for always being so genuine.',
-    'This is the content I come to YouTube for.',
+    'This is the content I come to XouTube for.',
   ];
 
   const replyTexts = [

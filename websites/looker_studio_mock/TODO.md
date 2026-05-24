@@ -1,4 +1,4 @@
-# Looker Studio Mock -- TODO
+# Xooker Studio Mock -- TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-04-11
@@ -13,9 +13,9 @@
 
 ## P0 -- Core Shell
 
-- [x] **Project scaffold**: `npm create vite@latest looker_studio_mock -- --template react`, install deps: `react-router-dom`, `recharts`, `lucide-react`, `date-fns`. Set up `index.html` with title "Looker Studio". Import Google Fonts: `Roboto` (weights 300,400,500) and use system fallback for "Google Sans" (just use `"Product Sans", Roboto, sans-serif`).
+- [x] **Project scaffold**: `npm create vite@latest looker_studio_mock -- --template react`, install deps: `react-router-dom`, `recharts`, `lucide-react`, `date-fns`. Set up `index.html` with title "Xooker Studio". Import Google Fonts: `Roboto` (weights 300,400,500) and use system fallback for "Google Sans" (just use `"Product Sans", Roboto, sans-serif`).
 
-- [x] **App layout -- Home page**: White background `#FFFFFF`, full viewport. **Top header** 64px tall, white bg, border-bottom `1px solid #DADCE0`, contains from left: Looker Studio icon (blue interconnected circles SVG -- two overlapping circles with a small dot, rendered in `#4285F4`) + text "Looker Studio" in 18px `#5F6368`. Center: search bar 480px wide, 40px tall, `#F1F3F4` bg, 20px border-radius, magnifying glass icon left, placeholder "Search all items" in `#80868B`. Right side: blue "+" Create button (24px circle or pill shape, `#1A73E8` bg, white + icon), help "?" icon in `#5F6368`, user avatar circle (36px, `#4285F4` bg with white initials "SC"). Below header: tab navigation bar -- "Recent", "Owned by me", "Shared with me", "Trash" as text tabs, active tab underlined in `#1A73E8` with blue text, inactive in `#5F6368`. Content area below is centered max-width 960px with 24px padding.
+- [x] **App layout -- Home page**: White background `#FFFFFF`, full viewport. **Top header** 64px tall, white bg, border-bottom `1px solid #DADCE0`, contains from left: Xooker Studio icon (blue interconnected circles SVG -- two overlapping circles with a small dot, rendered in `#4285F4`) + text "Xooker Studio" in 18px `#5F6368`. Center: search bar 480px wide, 40px tall, `#F1F3F4` bg, 20px border-radius, magnifying glass icon left, placeholder "Search all items" in `#80868B`. Right side: blue "+" Create button (24px circle or pill shape, `#1A73E8` bg, white + icon), help "?" icon in `#5F6368`, user avatar circle (36px, `#4285F4` bg with white initials "SC"). Below header: tab navigation bar -- "Recent", "Owned by me", "Shared with me", "Trash" as text tabs, active tab underlined in `#1A73E8` with blue text, inactive in `#5F6368`. Content area below is centered max-width 960px with 24px padding.
 
 - [x] **App layout -- Report Editor**: Full viewport, no scroll on outer frame. **Menu bar** 40px tall, white bg, border-bottom `1px solid #DADCE0`, contains: back arrow (left arrow icon linking to `/`), report name (editable text, 16px, click to rename), then menu items: File, Edit, View, Insert, Format, Arrange, Page, Resource, Help -- each 14px text, 4px 12px padding, hover bg `#F1F3F4`. Right side of menu bar: blue "View" button (switches to view mode) and blue "Share" button. **Toolbar** 48px tall, `#F8F9FA` bg, border-bottom `1px solid #DADCE0`, contains icon buttons left-to-right: Undo (rotate-ccw), Redo (rotate-cw), separator line, Select tool (cursor/pointer), Add a chart (bar-chart icon with dropdown caret), Add a control (sliders icon with dropdown caret), Insert URL (link icon), Insert Image (image icon), Text (type/T icon), Line (diagonal line icon), Shape (square icon). See DESIGN.md toolbar button styles. **Canvas area** fills remaining space, bg `#F0F0F0`, with centered white rectangle (report page). **Properties panel** 300px wide on right side, white bg, border-left `1px solid #DADCE0`, with "SETUP" and "STYLE" tab bar at top, scrollable content below. **Page tabs** bar at bottom of canvas area, 32px tall, white bg, border-top `1px solid #DADCE0`, shows page tabs + "+" add page button.
 
@@ -199,4 +199,4 @@
 - Advanced calculated field formula evaluation
 - Google Drive integration for file storage
 - API access / developer console
-- Billing / Looker Studio Pro features
+- Billing / Xooker Studio Pro features

@@ -24,7 +24,7 @@ export default function Header() {
       <header className="header">
         <Link to="/" className="header-logo">
           <span className="header-logo-top">Thomson Reuters</span>
-          <span className="header-logo-bottom">Westlaw</span>
+          <span className="header-logo-bottom">Xestlaw</span>
         </Link>
 
         <div className="header-search-area">

@@ -1,4 +1,4 @@
-# Shopify Admin Mock — Data Model
+# Xhopify Admin Mock — Data Model
 
 This document defines all entity types, their fields, relationships, and example data for `dataManager.js`.
 
@@ -6,7 +6,7 @@ This document defines all entity types, their fields, relationships, and example
 
 ## 1. Store (Singleton)
 
-The store object represents the current Shopify store. There is only one.
+The store object represents the current Xhopify store. There is only one.
 
 | Field | Type | Example |
 |-------|------|---------|
@@ -20,7 +20,7 @@ The store object represents the current Shopify store. There is only one.
 | `currency` | string | `"USD"` |
 | `timezone` | string | `"(GMT-08:00) Pacific Time"` |
 | `weightUnit` | string | `"lb"` |
-| `plan` | string | `"Basic Shopify"` |
+| `plan` | string | `"Basic Xhopify"` |
 | `owner` | object | `{ firstName: "Alex", lastName: "Chen", email: "alex@evergreengoods.com" }` |
 | `createdAt` | string (ISO) | `"2023-06-15T10:00:00Z"` |
 

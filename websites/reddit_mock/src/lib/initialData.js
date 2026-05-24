@@ -363,7 +363,7 @@ const createInitialData = () => {
       {
         id: "s2",
         name: "funny",
-        description: "Welcome to r/funny, Reddit's largest humour depository.",
+        description: "Welcome to r/funny, Xeddit's largest humour depository.",
         icon: "https://picsum.photos/64/64?random=s2",
         bannerColor: "#FF4500",
         members: 45000000,
@@ -441,7 +441,7 @@ const createInitialData = () => {
         created: "2008-06-10T00:00:00.000Z",
         rules: [
           "No spam, selling, or begging",
-          "Follow Reddit's rules of conduct",
+          "Follow Xeddit's rules of conduct",
           "Mark spoilers and NSFW content",
           "No giveaways or surveys",
           "No piracy or key reselling"

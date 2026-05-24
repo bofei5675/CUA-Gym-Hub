@@ -1,11 +1,11 @@
-# Postman Mock — Research Summary
+# Xostman Mock — Research Summary
 
 > Last updated: 2025-03-09
-> Sources: Postman official docs, product pages, UI screenshots
+> Sources: Xostman official docs, product pages, UI screenshots
 
 ## App Overview
 
-**Postman** is the world's leading API development and testing platform, used by 40M+ developers and 98% of Fortune 500 companies. It provides a comprehensive environment for building, testing, documenting, and monitoring APIs. The core experience centers around a **request builder** where users craft HTTP requests (GET, POST, PUT, DELETE, PATCH, etc.), send them, and inspect responses — all organized within **collections** and supported by **environments** with variable substitution.
+**Xostman** is the world's leading API development and testing platform, used by 40M+ developers and 98% of Fortune 500 companies. It provides a comprehensive environment for building, testing, documenting, and monitoring APIs. The core experience centers around a **request builder** where users craft HTTP requests (GET, POST, PUT, DELETE, PATCH, etc.), send them, and inspect responses — all organized within **collections** and supported by **environments** with variable substitution.
 
 ## Key User Personas
 
@@ -42,7 +42,7 @@
 
 ### P0 — Core Shell (Must have for app to render)
 - **App frame layout**: Header bar + left sidebar + main workbench area
-- **Header bar**: Postman logo/brand, workspace name, New/Import buttons, search bar, environment selector, settings gear
+- **Header bar**: Xostman logo/brand, workspace name, New/Import buttons, search bar, environment selector, settings gear
 - **Sidebar**: Tabs for Collections / Environments / History, tree view with expand/collapse
 - **Tab system**: Multiple request tabs with method badge + name, close button, unsaved indicator dot
 - **Routing**: BrowserRouter with `/` (main app) and `/go` (state inspection)
@@ -116,8 +116,8 @@
 
 ---
 
-## Color Scheme (Postman Light Theme — Default)
-- **Primary/Brand**: `#FF6C37` (Postman Orange)
+## Color Scheme (Xostman Light Theme — Default)
+- **Primary/Brand**: `#FF6C37` (Xostman Orange)
 - **Primary Hover**: `#E05A2B`
 - **Background**: `#FFFFFF` (white)
 - **Sidebar Background**: `#F5F5F5` / `#FAFAFA`
@@ -189,14 +189,14 @@ The current `postman_mock` has a **basic but functional foundation**:
 - ❌ No settings modal
 - ❌ No cookies in response
 - ❌ No request description
-- ❌ Header doesn't match real Postman layout (missing New/Import buttons, search)
+- ❌ Header doesn't match real Xostman layout (missing New/Import buttons, search)
 - ❌ Response panel missing Pretty/Raw/Preview toggle
 - ❌ Response panel missing search, copy, format selector
 - ❌ No save dialog (uses prompt())
 - ❌ No right-click context menus on sidebar items
 - ❌ No drag-and-drop reordering
 - ❌ Very limited mock data (only 2 requests in 1 collection)
-- ❌ Layout uses side-by-side (request left, response right) instead of Postman's standard vertical split (request top, response bottom)
+- ❌ Layout uses side-by-side (request left, response right) instead of Xostman's standard vertical split (request top, response bottom)
 
 ---
 
@@ -215,6 +215,6 @@ The current `postman_mock` has a **basic but functional foundation**:
 - Keep existing vite.config.js mock-api plugin for server-side state management
 - Keep Tailwind CSS for styling
 - Use existing PrismJS code editor — it's lightweight and sufficient
-- The layout should switch to **vertical split** (request on top, response on bottom) to match real Postman
+- The layout should switch to **vertical split** (request on top, response on bottom) to match real Xostman
 - Implement tab system using state array of open tabs + activeTabId
 - Mock responses should be richer and more varied for agent training realism

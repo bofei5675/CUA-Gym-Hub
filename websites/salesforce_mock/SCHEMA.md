@@ -189,7 +189,7 @@
 | Bulk delete records | respective array modified: all selected records removed |
 | Edit user profile (/profile) | `user` object: `firstName`, `lastName`, `email`, `phone`, `title`, `department` updated |
 | Edit user settings (/settings) | `user` object: `timezone`, `locale` (language), and/or `theme` fields updated |
-| Log out | All `salesforce`-prefixed localStorage keys cleared; page redirects to `/` |
+| Log out | All `xalesforce`-prefixed localStorage keys cleared; page redirects to `/` |
 
 ## Navigation Behavior
 

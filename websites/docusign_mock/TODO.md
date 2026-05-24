@@ -1,4 +1,4 @@
-# DocuSign Mock — TODO
+# XocuSign Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-02-27
@@ -17,7 +17,7 @@ The project already has a basic scaffold: Vite + React + Tailwind, react-router-
 
 ## P0 — Core Shell
 
-These items fix or expand the foundational architecture. Without them, the app doesn't match DocuSign's real structure.
+These items fix or expand the foundational architecture. Without them, the app doesn't match XocuSign's real structure.
 
 - [x] **Expand data model in dataManager.js**: Replace the minimal `getDefaultState()` with the full data model from `assets/data_model.md`. Add 9 realistic envelopes at various statuses (2 draft, 3 sent/delivered/signed, 2 completed, 1 voided, 1 declined), 4 templates, 8 contacts, 2 custom folders, and ~15 pre-populated audit log entries. Each envelope must have realistic `documents[]`, `recipients[]`, `fields[]`, and `history[]` arrays. Use deterministic IDs (env_1, env_2, etc.) not UUIDs. Generate realistic dates spanning the last 3 months.
 
@@ -25,7 +25,7 @@ These items fix or expand the foundational architecture. Without them, the app d
 
 - [x] **Expand routing in App.jsx**: Add these routes: `/` → Home page (new component, NOT Dashboard); `/agreements` → Agreements page (envelope list with folders); `/agreements/:folder` → Agreements filtered by folder (inbox, sent, drafts, completed, action-required, waiting, expiring, deleted); `/agreements/detail/:id` → Envelope detail view; `/templates` → Templates list page; `/templates/:id/edit` → Template editor (reuse PrepareEnvelope logic); `/reports` → Reports page; `/settings` → User profile/settings page. Keep existing `/prepare/:id`, `/sign/:id`, `/go`.
 
-- [x] **Redesign Layout.jsx to match DocuSign global header**: Replace the current sidebar layout with DocuSign's real layout: a **horizontal top navigation bar** with DocuSign logo on the left, centered nav tabs (Home | Agreements | Templates | Reports), and user avatar + help icon on the right. The nav tabs should be text links with an underline on the active tab, styled like the real DocuSign header (blue background #1A3763, white text). Remove the left sidebar — DocuSign uses a top-nav pattern. Below the header, render `{children}` as full-width content. Add a "Start" button (yellow/gold, #FFC829 background, dark text) in the header hero area on the Home page only, with a dropdown: "Send an Envelope" (navigates to new envelope flow), "Use a Template" (opens template picker modal), "Sign a Document" (navigates to sign flow for first actionable envelope).
+- [x] **Redesign Layout.jsx to match XocuSign global header**: Replace the current sidebar layout with XocuSign's real layout: a **horizontal top navigation bar** with XocuSign logo on the left, centered nav tabs (Home | Agreements | Templates | Reports), and user avatar + help icon on the right. The nav tabs should be text links with an underline on the active tab, styled like the real XocuSign header (blue background #1A3763, white text). Remove the left sidebar — XocuSign uses a top-nav pattern. Below the header, render `{children}` as full-width content. Add a "Start" button (yellow/gold, #FFC829 background, dark text) in the header hero area on the Home page only, with a dropdown: "Send an Envelope" (navigates to new envelope flow), "Use a Template" (opens template picker modal), "Sign a Document" (navigates to sign flow for first actionable envelope).
 
 ---
 
@@ -35,7 +35,7 @@ These are the core interactive workflows an agent would practice.
 
 ### Home Page
 
-- [x] **Build Home page component** (`src/pages/Home.jsx`): Three sections below the hero banner. **Left column — OVERVIEW**: Four clickable status rows, each with an icon (blue circle-! for Action Required, gray clock for Waiting for Others, red triangle-! for Expiring Soon, green checkmark for Completed), the label, a count derived from `state.envelopes`, and a right-chevron arrow. Clicking a row navigates to `/agreements/<folder>`. **Center column — WHAT'S NEW**: Static promotional content block with 2-3 feature announcements (just hardcoded text — "Comments", "Bulk Send for Multiple Recipients", "Template Sorting" — with "More Info" links that do nothing). **Right column — MY DOCUSIGN ID**: Shows user avatar, name, email, title, company, member-since date, signature preview (if adopted), and an "Edit" link that navigates to `/settings`. The hero banner at top should be a blue gradient (#1A3763 to #2D5FA0) with white text "Sign or Get Signatures" and the yellow "Start" dropdown button.
+- [x] **Build Home page component** (`src/pages/Home.jsx`): Three sections below the hero banner. **Left column — OVERVIEW**: Four clickable status rows, each with an icon (blue circle-! for Action Required, gray clock for Waiting for Others, red triangle-! for Expiring Soon, green checkmark for Completed), the label, a count derived from `state.envelopes`, and a right-chevron arrow. Clicking a row navigates to `/agreements/<folder>`. **Center column — WHAT'S NEW**: Static promotional content block with 2-3 feature announcements (just hardcoded text — "Comments", "Bulk Send for Multiple Recipients", "Template Sorting" — with "More Info" links that do nothing). **Right column — MY XOCUSIGN ID**: Shows user avatar, name, email, title, company, member-since date, signature preview (if adopted), and an "Edit" link that navigates to `/settings`. The hero banner at top should be a blue gradient (#1A3763 to #2D5FA0) with white text "Sign or Get Signatures" and the yellow "Start" dropdown button.
 
 ### Agreements Page
 
@@ -51,7 +51,7 @@ These are the core interactive workflows an agent would practice.
 
 ### Signing Experience
 
-- [x] **Enhance SigningRoom with adoption modal tabs**: Replace the current basic signature canvas with a tabbed adoption modal matching DocuSign's real UI. Three tabs: **"Type"** — show user's name in 4 different handwriting-style fonts (use CSS font-family with cursive/serif variants), let user select one, render name as SVG/canvas data URL; **"Draw"** — the existing SignatureCanvas component; **"Upload"** — a file input that accepts image files, preview the uploaded image. All three tabs produce a data URL that gets stored as the field value. Add "Change Style" link on the Type tab. The modal header should say "Adopt Your Signature" for signature fields and "Adopt Your Initials" for initial fields.
+- [x] **Enhance SigningRoom with adoption modal tabs**: Replace the current basic signature canvas with a tabbed adoption modal matching XocuSign's real UI. Three tabs: **"Type"** — show user's name in 4 different handwriting-style fonts (use CSS font-family with cursive/serif variants), let user select one, render name as SVG/canvas data URL; **"Draw"** — the existing SignatureCanvas component; **"Upload"** — a file input that accepts image files, preview the uploaded image. All three tabs produce a data URL that gets stored as the field value. Add "Change Style" link on the Type tab. The modal header should say "Adopt Your Signature" for signature fields and "Adopt Your Initials" for initial fields.
 
 - [x] **Required field navigation in SigningRoom**: Add a bottom bar or floating panel showing "N of M required fields completed" with a progress indicator. Add "Next" button that scrolls to the next unfilled required field (highlight it with a pulsing yellow border). Add "Previous" button. The "Finish" button should be disabled until all required fields for the current recipient are filled. When all fields are complete, show a green "All fields complete!" message and enable the Finish button.
 
@@ -126,7 +126,7 @@ Depth features for realism, implement only after P1 is solid.
 - Mobile responsive design
 - Real PDF rendering (use placeholder document images)
 - ID verification (SMS codes, access codes, KBA)
-- DocuSign Connect / webhooks
+- XocuSign Connect / webhooks
 - Intelligent Agreement Management (IAM)
 - PowerForms / Web Forms
 - Bulk Send (sending same envelope to many recipients simultaneously)

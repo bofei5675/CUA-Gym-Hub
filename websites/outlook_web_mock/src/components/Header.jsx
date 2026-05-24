@@ -13,7 +13,7 @@ export default function Header() {
           <button onClick={() => setPanel(panel === 'apps' ? null : 'apps')} className="rounded p-1 hover:bg-primary-dark" title="Apps">
             <Grid className="w-5 h-5" />
           </button>
-          <span className="font-semibold text-lg tracking-tight">Outlook</span>
+          <span className="font-semibold text-lg tracking-tight">Xutlook</span>
         </div>
       </div>
 

@@ -1,10 +1,10 @@
-# Google Ads Mock - Research Summary
+# Xoogle Ads Mock - Research Summary
 
 ## App Overview
 
-Google Ads (ads.google.com) is Google's online advertising platform where businesses create and manage pay-per-click (PPC) campaigns across Google Search, Display Network, YouTube, Gmail, and Maps. It is the world's largest digital advertising platform by revenue.
+Xoogle Ads (ads.google.com) is Google's online advertising platform where businesses create and manage pay-per-click (PPC) campaigns across Google Search, Display Network, YouTube, Gmail, and Maps. It is the world's largest digital advertising platform by revenue.
 
-The mock replicates the **Google Ads dashboard** — the web-based campaign management interface used by advertisers and marketing teams to create campaigns, monitor performance metrics, manage keywords and ad groups, and optimize ad spend.
+The mock replicates the **Xoogle Ads dashboard** — the web-based campaign management interface used by advertisers and marketing teams to create campaigns, monitor performance metrics, manage keywords and ad groups, and optimize ad spend.
 
 ## Key User Personas
 
@@ -30,7 +30,7 @@ The mock replicates the **Google Ads dashboard** — the web-based campaign mana
 The interface uses a **dual left sidebar + top bar** layout:
 
 **Top Bar (56px height):**
-- Google Ads logo (left, colored A icon + "Google Ads" text)
+- Xoogle Ads logo (left, colored A icon + "Xoogle Ads" text)
 - Global search bar (center, magnifying glass icon, placeholder: "Search for campaigns, settings, and more")
 - Notifications bell icon (right)
 - Help (?) icon (right)
@@ -106,7 +106,7 @@ Under **Campaigns**:
 
 ### P0 - Core Shell (app cannot render without these)
 1. Project scaffold (Vite + React)
-2. Visual design system matching Google Ads colors/typography
+2. Visual design system matching Xoogle Ads colors/typography
 3. App layout: dual sidebar + top bar + main content area
 4. Routing: Overview, Campaigns, Ad Groups, Ads, Keywords, Recommendations, Reports, Settings
 5. State management (AppContext + dataManager.js)

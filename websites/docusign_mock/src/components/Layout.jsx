@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
           {/* Left - Logo */}
           <Link to="/" className="flex items-center gap-2 flex-shrink-0">
             <FileCheck className="w-7 h-7" />
-            <span className="text-lg font-bold tracking-tight">DocuSign</span>
+            <span className="text-lg font-bold tracking-tight">XocuSign</span>
           </Link>
 
           {/* Center - Nav Tabs */}

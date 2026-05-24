@@ -247,7 +247,7 @@ export const Backlog: React.FC = () => {
                         type="checkbox"
                         checked={isSelected}
                         readOnly
-                        className="rounded border-gray-300 text-jira-blue focus:ring-jira-blue cursor-pointer"
+                        className="rounded border-gray-300 text-xira-blue focus:ring-xira-blue cursor-pointer"
                       />
                     </div>
                     <div className="flex-1 flex items-center gap-3 min-w-0">
@@ -265,7 +265,7 @@ export const Backlog: React.FC = () => {
                           }}
                           onBlur={() => saveSummary(issue)}
                           onClick={(e) => e.stopPropagation()}
-                          className="flex-1 border border-jira-blue rounded px-2 py-0.5 text-sm focus:ring-1 focus:ring-jira-blue outline-none"
+                          className="flex-1 border border-xira-blue rounded px-2 py-0.5 text-sm focus:ring-1 focus:ring-xira-blue outline-none"
                           autoFocus
                         />
                       ) : (
@@ -311,7 +311,7 @@ export const Backlog: React.FC = () => {
                           }}
                           onBlur={() => savePoints(issue)}
                           onClick={(e) => e.stopPropagation()}
-                          className="w-10 h-6 text-center border border-jira-blue rounded text-xs focus:ring-1 focus:ring-jira-blue outline-none"
+                          className="w-10 h-6 text-center border border-xira-blue rounded text-xs focus:ring-1 focus:ring-xira-blue outline-none"
                           autoFocus
                           min={0}
                         />
@@ -356,7 +356,7 @@ export const Backlog: React.FC = () => {
           <select
             value={epicFilter}
             onChange={(e) => setEpicFilter(e.target.value)}
-            className="bg-white border border-gray-300 rounded px-3 py-1.5 text-sm focus:ring-2 focus:ring-jira-blue focus:border-transparent outline-none"
+            className="bg-white border border-gray-300 rounded px-3 py-1.5 text-sm focus:ring-2 focus:ring-xira-blue focus:border-transparent outline-none"
           >
             <option value="all">All Epics</option>
             {epics.map((epic) => (
@@ -370,7 +370,7 @@ export const Backlog: React.FC = () => {
         {selectedIssueIds.size > 0 && (
           <button
             onClick={() => setShowBulkEdit(true)}
-            className="bg-jira-blue text-white px-4 py-2 rounded hover:bg-blue-700 font-medium text-sm flex items-center gap-2"
+            className="bg-xira-blue text-white px-4 py-2 rounded hover:bg-blue-700 font-medium text-sm flex items-center gap-2"
           >
             <Layers size={16} />
             Bulk Change ({selectedIssueIds.size})
@@ -418,7 +418,7 @@ export const Backlog: React.FC = () => {
                           }}
                           onBlur={() => saveSprintName(sprint)}
                           onClick={(e) => e.stopPropagation()}
-                          className="font-semibold text-sm border border-jira-blue rounded px-2 py-0.5 focus:ring-1 focus:ring-jira-blue outline-none"
+                          className="font-semibold text-sm border border-xira-blue rounded px-2 py-0.5 focus:ring-1 focus:ring-xira-blue outline-none"
                           autoFocus
                         />
                       ) : (
@@ -546,7 +546,7 @@ export const Backlog: React.FC = () => {
               <button onClick={() => setSprintToComplete(null)} className="px-4 py-2 text-sm rounded hover:bg-gray-100">
                 Cancel
               </button>
-              <button onClick={confirmCompleteSprint} className="px-4 py-2 text-sm rounded bg-jira-blue text-white hover:bg-blue-700">
+              <button onClick={confirmCompleteSprint} className="px-4 py-2 text-sm rounded bg-xira-blue text-white hover:bg-blue-700">
                 Complete sprint
               </button>
             </div>

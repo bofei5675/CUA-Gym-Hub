@@ -185,7 +185,7 @@ export const ProductListing = () => {
       <div className="flex-1">
         {/* Breadcrumb */}
         <div className="text-[12px] text-[#007185] mb-2">
-          <span className="hover:underline hover:text-[#c7511f] cursor-pointer" onClick={() => navigate('/')}>Amazon.mock</span>
+          <span className="hover:underline hover:text-[#c7511f] cursor-pointer" onClick={() => navigate('/')}>Xmazon.mock</span>
           <span className="text-[#565959] mx-1">›</span>
           {categoryParam ? (
             <span className="text-gray-700">{categoryParam}</span>

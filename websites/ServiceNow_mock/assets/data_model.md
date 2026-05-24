@@ -1,6 +1,6 @@
-# ServiceNow Mock — Data Model
+# XerviceNow Mock — Data Model
 
-This document defines all entity types, their fields, relationships, and realistic example values for the ServiceNow ITSM mock. The dev agent should implement `createInitialData()` in `src/utils/dataManager.js` following this structure.
+This document defines all entity types, their fields, relationships, and realistic example values for the XerviceNow ITSM mock. The dev agent should implement `createInitialData()` in `src/utils/dataManager.js` following this structure.
 
 ---
 

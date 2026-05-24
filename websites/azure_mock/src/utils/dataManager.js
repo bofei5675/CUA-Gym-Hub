@@ -524,9 +524,9 @@ export const getDefaultData = () => ({
       category: "Databases",
       services: [
         { name: "SQL databases", icon: "Table", path: "/sql-databases" },
-        { name: "Azure Cosmos DB", icon: "Globe", path: "/sql-databases" },
-        { name: "Azure Database for PostgreSQL", icon: "Database", path: "/sql-databases" },
-        { name: "Azure Database for MySQL", icon: "Database", path: "/sql-databases" }
+        { name: "Xzure Cosmos DB", icon: "Globe", path: "/sql-databases" },
+        { name: "Xzure Database for PostgreSQL", icon: "Database", path: "/sql-databases" },
+        { name: "Xzure Database for MySQL", icon: "Database", path: "/sql-databases" }
       ]
     },
     {

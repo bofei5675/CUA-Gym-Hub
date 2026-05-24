@@ -17,7 +17,7 @@ const menuItems = [
   { id: 'pages', label: 'Pages', icon: FileText, path: '/wp/pages', submenu: [] },
   { id: 'comments', label: 'Comments', icon: MessageSquare, path: '/wp/comments', badge: 2, submenu: [] },
   { id: 'separator1', separator: true },
-  { id: 'woocommerce', label: 'WooCommerce', icon: null, isWC: true, path: '/woocommerce', submenu: [
+  { id: 'xoocommerce', label: 'XooCommerce', icon: null, isWC: true, path: '/woocommerce', submenu: [
     { label: 'Home', path: '/' },
     { label: 'Orders', path: '/orders' },
     { label: 'Customers', path: '/customers' },

@@ -1,4 +1,4 @@
-# Postman Mock — TODO
+# Xostman Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2025-03-09
@@ -20,7 +20,7 @@ The mock already has a working React + Vite + Tailwind foundation with:
 - Environment modal, mock network layer, state management
 - `/go` endpoint, session isolation, localStorage persistence
 
-**The TODO below focuses on what needs to be ADDED or FIXED to match the real Postman UI.**
+**The TODO below focuses on what needs to be ADDED or FIXED to match the real Xostman UI.**
 
 ---
 
@@ -28,35 +28,35 @@ The mock already has a working React + Vite + Tailwind foundation with:
 
 <!-- These are foundational changes needed before P1 features work properly. -->
 
-- [x] **Visual design system overhaul**: Study `assets/screenshots/main_interface_03.jpg` and `assets/screenshots/ui_detail_03.jpg` carefully. The current mock uses a plain white theme — match the real Postman light theme more closely:
+- [x] **Visual design system overhaul**: Study `assets/screenshots/main_interface_03.jpg` and `assets/screenshots/ui_detail_03.jpg` carefully. The current mock uses a plain white theme — match the real Xostman light theme more closely:
   - Header background: white with subtle `#E5E5E5` bottom border
   - Sidebar: light gray `#F9FAFB` background with `#E5E5E5` right border
-  - Primary accent: `#FF6C37` (Postman Orange) — already set in tailwind.config.js ✓
+  - Primary accent: `#FF6C37` (Xostman Orange) — already set in tailwind.config.js ✓
   - Method colors: GET `#00AA55`, POST `#EAB308`, PUT `#2563EB`, DELETE `#EF4444`, PATCH `#8B5CF6`, HEAD `#6B7280`, OPTIONS `#6B7280`
   - Send button: solid `#FF6C37` with white text, rounded, prominent
   - Tab active indicator: `#FF6C37` bottom border
   - Font: Use Inter for UI text (add via Google Fonts CDN link in index.html), keep existing monospace for code
   - Spacing: Tighter padding in sidebar items (py-1.5), compact header (h-12)
 
-- [x] **Layout restructure — vertical split**: Currently request and response are side-by-side (left/right). Real Postman uses a **vertical split** (request on top, response on bottom) within the main workbench area, with a draggable divider. Change `App.jsx` layout:
+- [x] **Layout restructure — vertical split**: Currently request and response are side-by-side (left/right). Real Xostman uses a **vertical split** (request on top, response on bottom) within the main workbench area, with a draggable divider. Change `App.jsx` layout:
   - Sidebar (left, 260px fixed width) | Workbench (right, flex-1)
   - Workbench = Tab bar (top) + Request builder (top half) + Resizable divider + Response viewer (bottom half)
   - The divider should be a horizontal bar (4px height, cursor `row-resize`) that users can drag to resize the split. Default 50/50 split. Store split ratio in state.
 
-- [x] **Header bar redesign**: Match real Postman header layout (see `assets/screenshots/ui_detail_03.jpg`):
+- [x] **Header bar redesign**: Match real Xostman header layout (see `assets/screenshots/ui_detail_03.jpg`):
   - **Left section**: Hamburger menu icon (☰, non-functional placeholder), "Home" text link, "Workspaces ▾" dropdown (shows "My Workspace" with checkmark, clicking does nothing else), "Explore" text link (non-functional)
   - **Center section**: Workspace name label "Scratch Pad" or "My Workspace", then "New" button (orange/primary bg, white text, creates new untitled request tab), "Import" button (ghost style, gray border — opens import modal placeholder)
   - **Right section**: Search input placeholder with magnifying glass icon and "⌘K" hint text (clicking focuses input, ESC closes, non-functional search), bell/notification icon (non-functional), settings gear icon (opens Settings modal), user avatar circle with "JD" initials (non-functional)
   - Height: 48px, white background, bottom border `#E5E5E5`
 
-- [x] **Sidebar icon rail + panel redesign**: Replace the current two-tab (Collections/History) sidebar with Postman's real sidebar structure:
+- [x] **Sidebar icon rail + panel redesign**: Replace the current two-tab (Collections/History) sidebar with Xostman's real sidebar structure:
   - **Icon rail** (leftmost column, 48px wide, dark-ish `#2D2D2D` or keep light): Vertical stack of icon buttons — Collections (folder icon), APIs (puzzle/link icon, placeholder), Environments (layers/stacked icon), Mock Servers (server icon, placeholder), Monitors (chart icon, placeholder), History (clock icon). Only Collections, Environments, and History should be functional; others show "Coming soon" placeholder content when clicked. Active icon has left orange border indicator.
   - **Panel area** (rest of sidebar, ~212px wide, light gray bg): Content depends on which icon is active.
   - **Collections panel**: "+" button (creates new collection) and filter/sort icon at top. Tree view showing collections → folders → requests. Each collection has expand/collapse chevron, folder icon (yellow), name, "..." context menu on hover. Each folder has expand/collapse chevron, folder icon, name. Each request shows color-coded method badge (10px bold, abbreviated: `GET` green, `POST` yellow, `PUT` blue, `DEL` red, `PATCH` purple) + request name. Click request to open it in a new tab.
   - **Environments panel**: List of environments with name and colored circle indicator. "+" button to create new. Click to open in modal or dedicated tab.
   - **History panel**: Chronological list grouped by "Today", "Yesterday", "Older". Each entry: method badge + URL (truncated) + relative timestamp. Click to load into a new tab. "Clear All" option at top.
 
-- [x] **Tab system**: This is CRITICAL — real Postman is fundamentally a tabbed interface. Implement a tab bar above the request builder:
+- [x] **Tab system**: This is CRITICAL — real Xostman is fundamentally a tabbed interface. Implement a tab bar above the request builder:
   - Tab bar sits between the header and the request builder area, full width of the workbench
   - Each tab shows: colored method badge (same colors as sidebar) + request name (truncated if long) + close (×) button on hover
   - Active tab has bottom border highlight in `#FF6C37` and slightly lighter background
@@ -110,7 +110,7 @@ The mock already has a working React + Vite + Tailwind foundation with:
   - Store auth config in `currentRequest.auth` object (see data_model.md §AuthConfig)
   - The Auth tab should show an indicator dot when auth type is not "none" or "inherit"
 
-- [x] **Body type expansion**: Currently only supports none/json/text. Expand to match real Postman:
+- [x] **Body type expansion**: Currently only supports none/json/text. Expand to match real Xostman:
   - **Radio buttons row**: `none` | `form-data` | `x-www-form-urlencoded` | `raw` | `binary` | `GraphQL`
   - **`none`**: Shows "This request does not have a body" message (already exists)
   - **`form-data`**: KeyValueEditor with an extra "type" dropdown per row (Text/File). File rows show a file name input (simulated, no real upload)
@@ -211,7 +211,7 @@ The mock already has a working React + Vite + Tailwind foundation with:
   - **Themes**: Three cards — "System Default", "Light" (selected), "Dark" — with radio buttons (see `assets/screenshots/settings_theme.jpg`). Selecting dark mode is non-functional placeholder (or implement as CSS variable swap if straightforward)
   - **Shortcuts**: Read-only table of keyboard shortcuts: Ctrl+Enter (Send), Ctrl+S (Save), Ctrl+N (New Request), Ctrl+T (New Tab), Ctrl+W (Close Tab), Ctrl+K (Search)
   - **Data**: "Export All Data" button (placeholder), "Import Data" button (placeholder), "Clear Browsing Data" button (clears localStorage + resets to initial state)
-  - **About**: Postman Mock version "1.0.0", links placeholder
+  - **About**: Xostman Mock version "1.0.0", links placeholder
 
 - [ ] **Import/Export functionality**:
   - **Import**: Button in header opens modal with: "Paste cURL command" textarea + "Import" button. Parse basic cURL commands: extract method, URL, headers (-H), data (-d/--data). Create a new request from parsed data and open in tab
@@ -283,8 +283,8 @@ The mock already has a working React + Vite + Tailwind foundation with:
 - Real file uploads (binary body type shows UI but doesn't actually upload)
 - WebSocket / gRPC / MQTT protocol support (HTTP only)
 - API documentation publishing
-- Mock servers (the Postman feature, not our mock infrastructure)
+- Mock servers (the Xostman feature, not our mock infrastructure)
 - Monitoring / scheduled runs
 - Team collaboration / sharing
 - Version control / forking
-- Postman AI assistant features
+- Xostman AI assistant features

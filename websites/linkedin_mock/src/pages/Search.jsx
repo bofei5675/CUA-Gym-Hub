@@ -90,13 +90,13 @@ export default function Search() {
                   onClick={() => setActiveTab(tab)}
                   className={`flex items-center gap-1.5 px-5 py-3 text-sm font-semibold border-b-2 transition-colors ${
                     activeTab === tab
-                      ? 'border-linkedin-blue text-linkedin-blue'
+                      ? 'border-xinkedin-blue text-xinkedin-blue'
                       : 'border-transparent text-gray-500 hover:text-black hover:bg-gray-50'
                   }`}
                 >
                   {tab}
                   {tabCounts[tab] > 0 && (
-                    <span className={`text-xs rounded-full px-1.5 py-0.5 ${activeTab === tab ? 'bg-linkedin-blue text-white' : 'bg-gray-100 text-gray-600'}`}>
+                    <span className={`text-xs rounded-full px-1.5 py-0.5 ${activeTab === tab ? 'bg-xinkedin-blue text-white' : 'bg-gray-100 text-gray-600'}`}>
                       {tabCounts[tab]}
                     </span>
                   )}
@@ -151,7 +151,7 @@ export default function Search() {
                               ) : (
                                 <button
                                   onClick={() => sendConnectionRequest(user.id)}
-                                  className="border border-linkedin-blue text-linkedin-blue px-4 py-1 rounded-full text-sm font-semibold hover:bg-blue-50 flex items-center gap-1"
+                                  className="border border-xinkedin-blue text-xinkedin-blue px-4 py-1 rounded-full text-sm font-semibold hover:bg-blue-50 flex items-center gap-1"
                                 >
                                   <UserPlus size={14} /> Connect
                                 </button>
@@ -217,7 +217,7 @@ export default function Search() {
                         >
                           <img src={job.logo} alt={job.company} className="w-12 h-12 object-contain rounded flex-shrink-0" />
                           <div className="flex-1 min-w-0">
-                            <h3 className="font-semibold text-sm text-linkedin-blue hover:underline">{job.title}</h3>
+                            <h3 className="font-semibold text-sm text-xinkedin-blue hover:underline">{job.title}</h3>
                             <p className="text-sm text-gray-800">{job.company}</p>
                             <p className="text-xs text-gray-500">{job.location} &#183; {job.type}</p>
                             <div className="flex gap-2 mt-1">

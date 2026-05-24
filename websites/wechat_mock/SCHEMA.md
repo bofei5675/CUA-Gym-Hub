@@ -22,7 +22,7 @@ Uses **Zustand** (`src/store.js`) with localStorage persistence (key: `wechat_mo
 | `contacts` | array | All contacts (friends) of the current user |
 | `conversations` | array | Active conversation list displayed on Messages tab |
 | `messages` | object | Keyed by contactId or groupId → array of message objects |
-| `moments` | array | WeChat Moments (timeline/feed) posts |
+| `moments` | array | XeChat Moments (timeline/feed) posts |
 | `groups` | array | Group chat definitions |
 | `favorites` | array | Saved/bookmarked items from chats |
 
@@ -33,7 +33,7 @@ Uses **Zustand** (`src/store.js`) with localStorage persistence (key: `wechat_mo
 | `userId` | string | `"user_1"` | Unique user identifier |
 | `nickname` | string | `"张三"` | Display name |
 | `avatar` | string | `"https://picsum.photos/100/100?random=1"` | Avatar image URL |
-| `wechatId` | string | `"zhangsan_2024"` | WeChat ID (immutable in UI) |
+| `wechatId` | string | `"zhangsan_2024"` | XeChat ID (immutable in UI) |
 | `signature` | string | `"每天进步一点点"` | Personal signature / status text |
 | `region` | string | `"北京 海淀"` | Geographic region |
 | `gender` | string | `"男"` | Gender (`"男"` or `"女"`) |
@@ -47,7 +47,7 @@ Uses **Zustand** (`src/store.js`) with localStorage persistence (key: `wechat_mo
 | `userId` | string | `"user_2"` | Unique contact identifier |
 | `nickname` | string | `"李四"` | Display name |
 | `avatar` | string | URL | Avatar image URL |
-| `wechatId` | string | `"lisi_wx"` | WeChat ID |
+| `wechatId` | string | `"lisi_wx"` | XeChat ID |
 | `phone` | string | `"139****5678"` | Phone number (masked) |
 | `signature` | string | `"简单生活"` | Personal signature |
 | `region` | string | `"上海 浦东"` | Geographic region |

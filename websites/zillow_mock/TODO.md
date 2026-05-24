@@ -1,4 +1,4 @@
-# Zillow Mock — TODO
+# Xillow Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2025-03-09
@@ -17,7 +17,7 @@ The app already has a functional implementation branded as "Estately" using Reac
 - ✅ Standalone mortgage calculator
 - ✅ 5 demo properties, 2 agents
 
-**What's needed**: Rebrand to Zillow, expand data, fix broken interactions, add missing pages/features, and improve visual fidelity to match real Zillow.
+**What's needed**: Rebrand to Xillow, expand data, fix broken interactions, add missing pages/features, and improve visual fidelity to match real Xillow.
 
 ## Status Legend
 - [ ] Not started
@@ -28,13 +28,13 @@ The app already has a functional implementation branded as "Estately" using Reac
 
 ## P0 — Critical Fixes & Rebranding
 
-These must be done first to make the app look and function like Zillow.
+These must be done first to make the app look and function like Xillow.
 
-- [x] **Rebrand from "Estately" to "Zillow"**: In `Navbar.jsx`, replace the MapPin icon + "Estately" text with a Zillow-style logo. Create an inline SVG component `ZillowLogo.jsx` — a blue roofline/chevron "Z" icon (stylized house roof shape with a "Z" inside) + "Zillow" text in `#006AFF` blue, font-weight 700. See screenshots `assets/screenshots/000001.jpg` (older branding) and `assets/screenshots/000003.jpg` (newer "Reimagine home" branding). The logo appears in: header (left side), footer, and home hero area. Update all references from "Estately" and "Real Estate" to "Zillow".
+- [x] **Rebrand from "Estately" to "Xillow"**: In `Navbar.jsx`, replace the MapPin icon + "Estately" text with a Xillow-style logo. Create an inline SVG component `ZillowLogo.jsx` — a blue roofline/chevron "Z" icon (stylized house roof shape with a "Z" inside) + "Xillow" text in `#006AFF` blue, font-weight 700. See screenshots `assets/screenshots/000001.jpg` (older branding) and `assets/screenshots/000003.jpg` (newer "Reimagine home" branding). The logo appears in: header (left side), footer, and home hero area. Update all references from "Estately" and "Real Estate" to "Xillow".
 
-- [x] **Update navigation links to match Zillow**: Current navbar has "Buy, Rent, Sell, Mortgage". Real Zillow has: `Buy`, `Rent`, `Sell`, `Home Loans`, `Agent Finder`. See screenshots `000003.jpg` and `000004.jpg`. Right side should show: `Manage Rentals`, `Advertise`, `Help` as text links. Replace the "Sign In" button with a user avatar circle (32px, blue bg, white initials "DU") with a dropdown menu containing: "Saved Homes" (links to `/saved`), "Saved Searches", "Account Settings", divider, "Sign Out" (non-functional). Keep the saved homes count badge but move it into the dropdown or onto the avatar.
+- [x] **Update navigation links to match Xillow**: Current navbar has "Buy, Rent, Sell, Mortgage". Real Xillow has: `Buy`, `Rent`, `Sell`, `Home Loans`, `Agent Finder`. See screenshots `000003.jpg` and `000004.jpg`. Right side should show: `Manage Rentals`, `Advertise`, `Help` as text links. Replace the "Sign In" button with a user avatar circle (32px, blue bg, white initials "DU") with a dropdown menu containing: "Saved Homes" (links to `/saved`), "Saved Searches", "Account Settings", divider, "Sign Out" (non-functional). Keep the saved homes count badge but move it into the dropdown or onto the avatar.
 
-- [x] **Add Home page hero section**: Current home page immediately shows the map + listing grid. Real Zillow home page has a full-viewport hero section FIRST (see screenshots `000001.jpg` and `000003.jpg`). Add a hero section above the current content:
+- [x] **Add Home page hero section**: Current home page immediately shows the map + listing grid. Real Xillow home page has a full-viewport hero section FIRST (see screenshots `000001.jpg` and `000003.jpg`). Add a hero section above the current content:
   - Full-viewport-height section with dark gradient background: `linear-gradient(135deg, #1a2332 0%, #2c3e50 50%, #34495e 100%)` (simulating dimmed house exterior photo).
   - Centered white text: **"Reimagine home"** (bold, 48px) and subtitle **"We'll help you find a place you'll love."** (20px, 400 weight).
   - Below text: a large search input bar (600px wide, 56px tall, white bg, border-radius 28px) with placeholder "Address, Neighborhood, City, Zip" and a blue circular search button (48px diameter) with white magnifying glass icon. Shadow: `0 2px 8px rgba(0,0,0,0.15)`.
@@ -43,7 +43,7 @@ These must be done first to make the app look and function like Zillow.
   - Below that: "Trending homes" section — horizontal scroll of 4-6 PropertyCards from the featured/newest properties.
   - The current map + filter + listing grid should still exist below the hero content, or be accessible via a "Search" navigation. Consider making `/` the hero landing page and `/homes` or scrolling down as the search results view. OR: keep it as a single scroll — hero at top, then the existing filter+map+grid below.
 
-- [x] **Expand mock data to 20+ properties**: Currently only 5 properties in `mockData.js`. Expand to **25 properties** in San Francisco Bay Area (to match Zillow's typical market). See `assets/data_model.md` for full field definitions. Distribution:
+- [x] **Expand mock data to 20+ properties**: Currently only 5 properties in `mockData.js`. Expand to **25 properties** in San Francisco Bay Area (to match Xillow's typical market). See `assets/data_model.md` for full field definitions. Distribution:
   - 8 For Sale Houses ($650K-$2.5M, 2-5 beds) — neighborhoods: Pacific Heights, Noe Valley, Sunset, Marina, Rockridge (Oakland), North Berkeley
   - 5 For Sale Condos ($450K-$1.2M, 1-3 beds) — SOMA, Mission District, Downtown Oakland
   - 3 For Sale Townhouses ($600K-$1.4M, 2-4 beds) — Castro, Temescal
@@ -68,13 +68,13 @@ Core features that are missing or non-functional. Implement after P0.
 
 - [x] **Fix Navbar search bar**: The search input in Navbar.jsx (visible on non-home pages) shows autocomplete dropdown but clicking a suggestion doesn't actually navigate or apply the filter. Wire it up: when user types, filter `searchSuggestions` by text match and show dropdown. Clicking a suggestion should navigate to `/` with the search filter applied (update `filters.search` in state).
 
-- [x] **Property card listing badges**: Real Zillow cards show badges like "New Listing" (green pill), "Price Cut: $25K" (red pill), "Open: Sat 1-4pm" (blue pill), "Hot Home" (coral pill) — see screenshot `assets/screenshots/detail/000001.jpg`. Add these to `PropertyCard.jsx` based on the property's `tags` and `openHouse` fields. Position: top-left of photo area.
+- [x] **Property card listing badges**: Real Xillow cards show badges like "New Listing" (green pill), "Price Cut: $25K" (red pill), "Open: Sat 1-4pm" (blue pill), "Hot Home" (coral pill) — see screenshot `assets/screenshots/detail/000001.jpg`. Add these to `PropertyCard.jsx` based on the property's `tags` and `openHouse` fields. Position: top-left of photo area.
 
-- [x] **For Sale / For Rent toggle filter**: Real Zillow has a prominent toggle between "For Sale" and "For Rent" at the top of the filter bar. Add a segmented control (pill-shaped, 2 options) as the first filter. Active option: blue bg + white text. This should filter properties by `listingStatus`. Also add sub-options when "For Sale" is selected: "All", "By Agent", "By Owner", "New Construction", "Foreclosure" (these filter by `listingType` if available).
+- [x] **For Sale / For Rent toggle filter**: Real Xillow has a prominent toggle between "For Sale" and "For Rent" at the top of the filter bar. Add a segmented control (pill-shaped, 2 options) as the first filter. Active option: blue bg + white text. This should filter properties by `listingStatus`. Also add sub-options when "For Sale" is selected: "All", "By Agent", "By Owner", "New Construction", "Foreclosure" (these filter by `listingType` if available).
 
 - [x] **Sort results dropdown**: Add a sort dropdown at the right end of the filter bar or next to the results count. Options: "Homes for You" (default), "Price (High to Low)", "Price (Low to High)", "Newest" (by daysOnZillow ascending), "Bedrooms", "Bathrooms", "Square Feet". Selecting an option re-sorts the property list.
 
-- [x] **Property detail — Zestimate display**: Add Zestimate section below price on property detail page. Show: "Zestimate: $XXX,XXX" in blue, with an info icon (tooltip: "The Zestimate is Zillow's estimated market value"). Below: a horizontal range bar showing the zestimate range (low-high from `zestimateRange`), with the Zestimate value marked as a dot on the bar. Color: gradient from green (low) to blue (center/value) to green (high).
+- [x] **Property detail — Zestimate display**: Add Zestimate section below price on property detail page. Show: "Zestimate: $XXX,XXX" in blue, with an info icon (tooltip: "The Zestimate is Xillow's estimated market value"). Below: a horizontal range bar showing the zestimate range (low-high from `zestimateRange`), with the Zestimate value marked as a dot on the bar. Color: gradient from green (low) to blue (center/value) to green (high).
 
 - [x] **Property detail — Price & Tax History**: Add two collapsible/tabbed sections below the overview:
   1. **Price History table**: Columns: Date (formatted "Mar 15, 2024"), Event (bold, e.g. "Listed for sale", "Price change", "Sold"), Price ($XXX,XXX). Alternating row colors.
@@ -101,7 +101,7 @@ Core features that are missing or non-functional. Implement after P0.
 
 - [x] **Saved Searches — View Results**: The "View Results" links on SavedHomes page are non-functional. Wire them up: clicking "View Results" should navigate to `/` and apply that saved search's filters (set `filters` state from the saved search's `filters` object).
 
-- [x] **Add missing routes**: Real Zillow has `/agent-finder` and `/sell` pages. Add:
+- [x] **Add missing routes**: Real Xillow has `/agent-finder` and `/sell` pages. Add:
   1. `/agent-finder` route → `AgentFinder.jsx`
   2. `/sell` route → `Sell.jsx`
   Update `App.jsx` routing and navbar links.
@@ -117,7 +117,7 @@ Core features that are missing or non-functional. Implement after P0.
 - [x] **Sell page** (`/sell`): New page. Layout:
   - Hero section: "What is your home worth?" heading + address search input bar.
   - On search: show a mock Zestimate card for any entered address — display a random price ($500K-$1.5M), range bar, Zestimate label.
-  - Below: "Selling options" — 3 cards: "Sell with a Zillow partner agent" (agent icon), "For Sale By Owner" (house icon). Each card: title, 2-sentence description, CTA button.
+  - Below: "Selling options" — 3 cards: "Sell with a Xillow partner agent" (agent icon), "For Sale By Owner" (house icon). Each card: title, 2-sentence description, CTA button.
 
 ---
 
@@ -125,7 +125,7 @@ Core features that are missing or non-functional. Implement after P0.
 
 Implement after P1 for added realism.
 
-- [ ] **Map-list interaction hover sync**: When hovering a PropertyCard in the list, highlight the corresponding map marker (change to blue/larger). When hovering a map price marker, highlight the corresponding card in the list (add blue left border). This creates the real Zillow feel of linked map+list browsing.
+- [ ] **Map-list interaction hover sync**: When hovering a PropertyCard in the list, highlight the corresponding map marker (change to blue/larger). When hovering a map price marker, highlight the corresponding card in the list (add blue left border). This creates the real Xillow feel of linked map+list browsing.
 
 - [ ] **Active filter chips**: When filters are applied, show removable chip pills below the filter bar row. Each chip: filter name + value + "✕" button (e.g., "2+ Beds ✕", "$500K-$900K ✕"). Clicking ✕ removes that specific filter and refreshes results.
 
@@ -138,19 +138,19 @@ Implement after P1 for added realism.
 
 - [ ] **Recently viewed tracking**: Track which properties the user views (add to `user.recentlyViewed` array on property detail page load, max 20, deduplicated). Display "Recently viewed" section on home page below the hero — horizontal scrollable row of PropertyCards.
 
-- [ ] **Monthly cost breakdown chart**: On property detail page, enhance the mortgage calculator area with a visual horizontal stacked bar chart showing payment breakdown segments (Principal & Interest = blue, Property Tax = teal, Insurance = green, HOA = orange). Below the bar: itemized list with matching color dots and dollar amounts. Make it visually match real Zillow's payment breakdown.
+- [ ] **Monthly cost breakdown chart**: On property detail page, enhance the mortgage calculator area with a visual horizontal stacked bar chart showing payment breakdown segments (Principal & Interest = blue, Property Tax = teal, Insurance = green, HOA = orange). Below the bar: itemized list with matching color dots and dollar amounts. Make it visually match real Xillow's payment breakdown.
 
 - [ ] **Footer**: Add a multi-column footer at the bottom of all pages. Light gray bg (`#F7F7F7`), top border `1px solid #E0E0E0`. Columns:
   - "Real Estate": "Homes For Sale", "Foreclosures", "For Sale by Owner", "Open Houses" links
   - "Rentals": "Apartments for Rent", "Houses for Rent" links
   - "Mortgage Rates": "Current Rates", "Mortgage Calculator" (link to `/mortgage`)
-  - "About": "About Zillow", "Careers", "Terms", "Privacy" links
-  - Bottom bar: Zillow logo (small) + "© 2024 Zillow Group, Inc."
+  - "About": "About Xillow", "Careers", "Terms", "Privacy" links
+  - Bottom bar: Xillow logo (small) + "© 2024 Xillow Group, Inc."
   - All external links are `href="#"` (non-functional). Internal links use router navigation.
 
 - [x] **Mortgage rates table on Mortgage page**: Add a "Today's Mortgage Rates" table below the calculator on `/mortgage`. Columns: Loan Type, Rate (%), APR (%). Data: 30-Year Fixed (6.89%), 20-Year Fixed (6.67%), 15-Year Fixed (6.12%), 5/1 ARM (6.45%), 7/1 ARM (6.55%). Static data stored in `mockData.js`.
 
-- [ ] **Home page "Why Zillow" section**: Below the explore cards, add a "Why Zillow?" section (see screenshot `000001.jpg` bottom area). 3 cards with icons: "The most listings" (description about inventory), "Powerful search" (description about filters), "Real-time updates" (description about alerts). Cards have icons and short paragraphs.
+- [ ] **Home page "Why Xillow" section**: Below the explore cards, add a "Why Xillow?" section (see screenshot `000001.jpg` bottom area). 3 cards with icons: "The most listings" (description about inventory), "Powerful search" (description about filters), "Real-time updates" (description about alerts). Cards have icons and short paragraphs.
 
 - [ ] **Property card photo carousel on hover**: Current PropertyCard already has prev/next arrows on hover for photo cycling. Ensure this works smoothly for all new properties. Show dots indicator for current photo position (up to 5 dots).
 
@@ -175,7 +175,7 @@ Dev must NOT implement these:
 - Authentication / login / sign up (app starts pre-logged-in as `DemoUser`)
 - Real map tiles replacement (keep Leaflet + OpenStreetMap — it works well)
 - Real geocoding or address autocomplete API — use mock suggestion data
-- Zillow Offers / iBuying program
+- Xillow Offers / iBuying program
 - Real email/SMS notifications or alerts
 - Third-party site links (Trulia, HotPads, StreetEasy)
 - Real mortgage rate API calls

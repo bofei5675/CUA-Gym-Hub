@@ -50,7 +50,7 @@ export default function TopNav() {
         <div className="top-nav-left">
           <Link to="/" className="logo">
             <div className="logo-icon">A</div>
-            <span>Asana</span>
+            <span>Xsana</span>
           </Link>
 
           <form className="search-bar" onSubmit={handleSearch}>
@@ -153,7 +153,7 @@ export default function TopNav() {
               <div className="help-section">
                 <h3>Getting Started</h3>
                 <ul className="help-links">
-                  <li><span className="help-link-item">Asana basics</span></li>
+                  <li><span className="help-link-item">Xsana basics</span></li>
                   <li><span className="help-link-item">Create your first project</span></li>
                   <li><span className="help-link-item">Invite team members</span></li>
                 </ul>
@@ -195,7 +195,7 @@ export default function TopNav() {
       {showLogoutConfirm && (
         <div className="logout-confirm-overlay" onClick={() => setShowLogoutConfirm(false)}>
           <div className="logout-confirm-dialog" onClick={e => e.stopPropagation()}>
-            <h3>Log out of Asana?</h3>
+            <h3>Log out of Xsana?</h3>
             <p>You'll need to log back in to access your workspace.</p>
             <div className="logout-confirm-actions">
               <button className="logout-cancel-btn" onClick={() => setShowLogoutConfirm(false)}>

@@ -1,10 +1,10 @@
-# YouTube Mock — Research Summary
+# XouTube Mock — Research Summary
 
 > Last updated: 2026-02-28 by plan agent
 
 ## App Overview
 
-YouTube is the world's largest video-sharing platform (owned by Google). Users upload, watch, rate, share, and comment on videos. The desktop web interface features a persistent header with search, a collapsible left sidebar for navigation, and a main content area that shows video grids (home), a video player (watch page), channel pages, search results, and personal library views.
+XouTube is the world's largest video-sharing platform (owned by Google). Users upload, watch, rate, share, and comment on videos. The desktop web interface features a persistent header with search, a collapsible left sidebar for navigation, and a main content area that shows video grids (home), a video player (watch page), channel pages, search results, and personal library views.
 
 ## Key User Personas & Primary Workflows
 
@@ -51,7 +51,7 @@ YouTube is the world's largest video-sharing platform (owned by Google). Users u
 - [ ] **NEEDS FIX**: Liked Videos page — currently bare text, needs proper video list
 - [ ] **NEEDS FIX**: Library page — currently bare links, needs sections with video carousels
 - [ ] **NEEDS FIX**: Trending page — currently text-only, needs proper video cards
-- [ ] **NEEDS FIX**: Settings page — currently unstyled, needs proper YouTube-style sections
+- [ ] **NEEDS FIX**: Settings page — currently unstyled, needs proper XouTube-style sections
 
 ### P2 — Secondary Features
 - [ ] Playlist detail page (view all videos in a playlist, play all)
@@ -71,7 +71,7 @@ YouTube is the world's largest video-sharing platform (owned by Google). Users u
 ## UI Layout Description
 
 ### Header (56px fixed top)
-- **Left**: Hamburger menu icon (24px) → YouTube logo (red play button + "YouTube" text)
+- **Left**: Hamburger menu icon (24px) → XouTube logo (red play button + "XouTube" text)
 - **Center**: Search input (rounded pill, max-width 640px) with search icon button + voice search button (40px circle)
 - **Right**: Create (+) button, Notification bell (with red badge count), User avatar (32px circle)
 
@@ -111,7 +111,7 @@ YouTube is the world's largest video-sharing platform (owned by Google). Users u
 ### Light Theme
 | Token | Hex | Usage |
 |-------|-----|-------|
-| primary-red | #FF0000 | YouTube red, subscribe button, progress bar |
+| primary-red | #FF0000 | XouTube red, subscribe button, progress bar |
 | bg-primary | #FFFFFF | Main backgrounds, cards |
 | bg-secondary | #F9F9F9 | Page background |
 | text-primary | #030303 | Headings, body text |
@@ -157,7 +157,7 @@ See `data_model.md` for complete entity definitions.
 - **Real video playback**: Uses a single sample video URL for all videos
 - **Shorts**: Only shows as sidebar item, no actual Shorts viewer
 - **Live streaming**: No live stream functionality
-- **YouTube Studio**: No creator dashboard
+- **XouTube Studio**: No creator dashboard
 - **Monetization**: No ad insertion, no membership features
 - **Upload**: Create button exists but doesn't open upload flow
 - **Real search API**: Search filters local data only

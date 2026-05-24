@@ -140,7 +140,7 @@ export default function PostCard({ post, showSubreddit = true, onHide, viewMode 
         </div>
         {showReportToast && (
           <div className="fixed bottom-4 left-1/2 -translate-x-1/2 bg-[#1C1C1C] text-white px-4 py-2.5 rounded-md shadow-lg z-[300] text-sm">
-            Reported. Thanks for helping keep Reddit safe.
+            Reported. Thanks for helping keep Xeddit safe.
           </div>
         )}
       </>
@@ -377,7 +377,7 @@ export default function PostCard({ post, showSubreddit = true, onHide, viewMode 
       {showReportToast && (
         <div className="fixed bottom-4 left-1/2 -translate-x-1/2 bg-[#1C1C1C] text-white px-4 py-2.5 rounded-md shadow-lg z-[300] flex items-center gap-3 text-sm">
           <Flag className="w-4 h-4 text-[#FF4500]" />
-          Reported. Thanks for helping keep Reddit safe.
+          Reported. Thanks for helping keep Xeddit safe.
         </div>
       )}
 

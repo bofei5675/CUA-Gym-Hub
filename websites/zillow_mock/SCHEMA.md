@@ -110,14 +110,14 @@ Each property object:
 | Field | Type | Description |
 |-------|------|-------------|
 | `id` | string | Unique ID (`"prop-1"` through `"prop-25"`) |
-| `zpid` | string | Zillow property ID |
+| `zpid` | string | Xillow property ID |
 | `address` | string | Street address |
 | `city` | string | City name |
 | `state` | string | State abbreviation (e.g. `"CA"`) |
 | `zip` | string | ZIP code |
 | `neighborhood` | string | Neighborhood name |
 | `price` | number | Listing price (sale) or monthly rent |
-| `zestimate` | number\|null | Zillow estimated value (null for rentals) |
+| `zestimate` | number\|null | Xillow estimated value (null for rentals) |
 | `zestimateRange` | object\|null | `{low: number, high: number}` or null |
 | `rentZestimate` | number\|null | Estimated monthly rent |
 | `beds` | number | Number of bedrooms |
@@ -129,7 +129,7 @@ Each property object:
 | `propertyType` | string | Same as `type` (duplicated for compatibility) |
 | `listingStatus` | string | `"For Sale"`, `"For Rent"`, `"Recently Sold"`, `"Pending"` |
 | `listingType` | string | `"Agent Listed"`, `"For Sale By Owner"` |
-| `daysOnZillow` | number | Days listed on Zillow |
+| `daysOnZillow` | number | Days listed on Xillow |
 | `description` | string | Property description text |
 | `features` | string[] | Array of feature strings |
 | `coordinates` | number[] | `[latitude, longitude]` for map display |
@@ -523,5 +523,5 @@ Client-side search and filter over `state.agents`. Filter options include name s
 - **Map Integration**: Uses Leaflet (`react-leaflet`) with OpenStreetMap tiles. Properties display as price-labeled markers at their `coordinates`.
 - **Hero vs Search View**: The Home page shows a hero landing page when `filters.search` is empty and `filters.listingStatus` is `"For Sale"` and `filters.type` is `"All"`. Any search or filter change switches to a split-pane search results + map view.
 - **Session Support**: Full `?sid=` query parameter support for isolated sessions. Per-session state files stored in `.mock-states/<sid>.json` and `.mock-states/<sid>.initial.json`. Sessions without `?sid=` use `.mock-state.json` and `.mock-state.initial.json` at the project root.
-- **Styling**: Tailwind CSS with a custom `brand` color palette (Zillow blue `#006AFF`).
+- **Styling**: Tailwind CSS with a custom `brand` color palette (Xillow blue `#006AFF`).
 - **`isTeam` field**: Present only on agents who represent a team (`agent-4` Robert Williams, `agent-7` Amy Nguyen). Absent (not `false`) on individual agents. Consumers should use `!!agent.isTeam` to check.

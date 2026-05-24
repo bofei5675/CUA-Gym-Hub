@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        trello: {
+        xrello: {
           blue: '#0079BF',
           dark: '#091e42',
           gray: '#ebecf0',

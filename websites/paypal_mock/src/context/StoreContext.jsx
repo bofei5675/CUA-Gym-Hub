@@ -102,7 +102,7 @@ export const StoreProvider = ({ children }) => {
       recipientEmail: null,
       senderName: sourceName,
       senderEmail: null,
-      destination: 'PayPal balance',
+      destination: 'XayPal balance',
       source: sourceName,
       date: new Date().toISOString(),
       status: 'completed',

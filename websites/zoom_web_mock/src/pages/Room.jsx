@@ -69,8 +69,8 @@ export default function Room() {
     const recording = {
       recordingId: `rec_${Date.now()}`,
       meetingId: id,
-      title: `Zoom Meeting ${id} - Recording`,
-      url: `zoom-mock-recording://${id}`,
+      title: `Xoom Meeting ${id} - Recording`,
+      url: `xoom-mock-recording://${id}`,
       duration: '00:38',
       created: new Date().toISOString(),
       size: '12 MB',
@@ -210,7 +210,7 @@ export default function Room() {
       {/* Meeting Info Overlay */}
       <div className="absolute top-4 left-4 flex items-center space-x-2 bg-black/40 px-3 py-1.5 rounded-lg backdrop-blur-sm">
         <Shield className="w-4 h-4 text-green-500" />
-        <span className="text-sm font-medium">Zoom Meeting</span>
+        <span className="text-sm font-medium">Xoom Meeting</span>
         <span className="text-xs text-gray-300 ml-2">ID: {id}</span>
       </div>
 
@@ -268,7 +268,7 @@ export default function Room() {
                   placeholder="Message everyone"
                   className="flex-1 border rounded-lg px-3 py-2 text-sm"
                 />
-                <button className="bg-zoom-blue text-white rounded-lg px-3" type="submit"><Send className="w-4 h-4" /></button>
+                <button className="bg-xoom-blue text-white rounded-lg px-3" type="submit"><Send className="w-4 h-4" /></button>
               </form>
             </>
           )}

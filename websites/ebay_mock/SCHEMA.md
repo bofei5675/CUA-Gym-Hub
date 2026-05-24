@@ -15,7 +15,7 @@
 - React 18 + Vite 5
 - React Router v6 (BrowserRouter)
 - React Context + useReducer for state management
-- Tailwind CSS 3 with custom eBay brand colors
+- Tailwind CSS 3 with custom xBay brand colors
 - lucide-react for icons
 - date-fns for date formatting
 - State persisted to localStorage per session
@@ -27,7 +27,7 @@
 | `/` | Home | Homepage with hero banner, category grid, featured active listings |
 | `/search` | Search | Search results with sidebar filters; query params `q` (text), `c` (category), `seller` (seller userId) |
 | `/item/:id` | ProductDetails | Individual listing detail: images (clickable gallery), bid form, buy-it-now modal, contact seller modal, bid history panel, seller info, watchlist toggle |
-| `/dashboard` | Dashboard | My eBay: tabs for Buying (active bids + purchase history), Selling (active + sold listings with edit/end controls), Watchlist, Messages (inbox + detail + reply); tab selectable via `?tab=` param |
+| `/dashboard` | Dashboard | My xBay: tabs for Buying (active bids + purchase history), Selling (active + sold listings with edit/end controls), Watchlist, Messages (inbox + detail + reply); tab selectable via `?tab=` param |
 | `/sell` | CreateListing | Create new listing form with real photo upload, full validation, auction or fixed price |
 | `/go` | Go | State inspection endpoint (JSON view of initial_state, current_state, state_diff) |
 
@@ -185,7 +185,7 @@ A flat array of listing IDs (`string[]`) representing items in the current user'
 
 | Action | Payload | Effect |
 |--------|---------|--------|
-| `PLACE_BID` | `{listingId, amount, userId}` | Implements eBay-style proxy bidding. Adds bid(s) to `listings[i].bids`, updates `listings[i].currentBid`. May add outbid notifications. Seller cannot bid on own listing (guard in UI). |
+| `PLACE_BID` | `{listingId, amount, userId}` | Implements xBay-style proxy bidding. Adds bid(s) to `listings[i].bids`, updates `listings[i].currentBid`. May add outbid notifications. Seller cannot bid on own listing (guard in UI). |
 | `BUY_NOW` | `{listingId, userId}` | Sets `listings[i].status` to `"sold"`, `listings[i].endTime` to now. Creates new order in `orders[]`. Triggered from Buy Now confirmation modal (no native `confirm()`). |
 | `ADD_WATCHLIST` | `{listingId, userId}` | Appends userId to `listings[i].watchers[]` |
 | `REMOVE_WATCHLIST` | `{listingId, userId}` | Removes userId from `listings[i].watchers[]` |
@@ -233,7 +233,7 @@ All functions are exposed via `useStore()` (React Context):
 
 ## Proxy Bidding Logic
 
-The `PLACE_BID` action implements eBay-style automatic bidding:
+The `PLACE_BID` action implements xBay-style automatic bidding:
 
 1. **No previous bids**: New bid placed at `startingBid`, `autoBidMax` = submitted amount
 2. **Bid lower than current leader's max**: Current leader auto-outbids; new bidder gets outbid notification

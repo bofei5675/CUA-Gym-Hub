@@ -1,10 +1,10 @@
-# SAP S/4HANA Fiori Launchpad — Research Summary
+# XAP S/4HANA Fiori Launchpad — Research Summary
 
 ## App Overview & Purpose
 
-**SAP S/4HANA** is the world's leading enterprise resource planning (ERP) system. Its modern web-based UI layer is called **SAP Fiori**, which replaced the legacy SAP GUI with a responsive, tile-based launchpad experience. The **Fiori Launchpad** is the single entry point — a role-based home page where users see categorized app tiles for every module they have access to.
+**XAP S/4HANA** is the world's leading enterprise resource planning (ERP) system. Its modern web-based UI layer is called **XAP Fiori**, which replaced the legacy XAP GUI with a responsive, tile-based launchpad experience. The **Fiori Launchpad** is the single entry point — a role-based home page where users see categorized app tiles for every module they have access to.
 
-This mock replicates the **SAP Fiori Launchpad** and its most common transactional/analytical apps across Finance, Procurement, Sales, and Material Management modules — the four core areas of any SAP S/4HANA system.
+This mock replicates the **XAP Fiori Launchpad** and its most common transactional/analytical apps across Finance, Procurement, Sales, and Material Management modules — the four core areas of any XAP S/4HANA system.
 
 ## Key User Personas & Workflows
 
@@ -41,7 +41,7 @@ This mock replicates the **SAP Fiori Launchpad** and its most common transaction
 
 ### P0 — Core Shell (Must Have)
 1. **Fiori Shell Bar** — Dark navy/black top bar (#354A5F or #1B2D3E) with:
-   - SAP logo (left corner, white text)
+   - XAP logo (left corner, white text)
    - App title with dropdown (center-left): "Home" with chevron
    - Search icon (magnifying glass)
    - Help icon (question mark circle)
@@ -150,7 +150,7 @@ This mock replicates the **SAP Fiori Launchpad** and its most common transaction
 ### Fiori Launchpad Home
 ```
 +------------------------------------------------------------------+
-| [SAP logo] Home v           [Search] [?] [Bell] [Avatar:MQ]      |  ← Shell Bar (~48px, dark #354A5F)
+| [XAP logo] Home v           [Search] [?] [Bell] [Avatar:MQ]      |  ← Shell Bar (~48px, dark #354A5F)
 +------------------------------------------------------------------+
 | My Home | Accts Payable | General Ledger | Procurement | Sales  > |  ← Tab Bar (~40px, white bg, blue underline)
 +------------------------------------------------------------------+
@@ -178,7 +178,7 @@ This mock replicates the **SAP Fiori Launchpad** and its most common transaction
 ### List Report App (e.g., Manage Purchase Orders)
 ```
 +------------------------------------------------------------------+
-| [<] [SAP] Monitor Production Orders v     [Q] [?] [Bell] [Avatar]|  ← Shell Bar
+| [<] [XAP] Monitor Production Orders v     [Q] [?] [Bell] [Avatar]|  ← Shell Bar
 +------------------------------------------------------------------+
 | Standard* v                                         [Share icon]  |  ← Variant Selector
 +------------------------------------------------------------------+
@@ -199,7 +199,7 @@ This mock replicates the **SAP Fiori Launchpad** and its most common transaction
 ### Object Page (e.g., Purchase Order Detail)
 ```
 +------------------------------------------------------------------+
-| [<] [SAP] Purchase Order Item v          [Q] [?] [Bell] [Avatar] |
+| [<] [XAP] Purchase Order Item v          [Q] [?] [Bell] [Avatar] |
 +------------------------------------------------------------------+
 | Purchase Order /                                          [^ v]  |
 | 10                                                                |
@@ -220,7 +220,7 @@ This mock replicates the **SAP Fiori Launchpad** and its most common transaction
 
 ---
 
-## Color Palette (SAP Fiori / Horizon Theme)
+## Color Palette (XAP Fiori / Horizon Theme)
 
 | Token | Hex | Usage |
 |-------|-----|-------|
@@ -243,7 +243,7 @@ This mock replicates the **SAP Fiori Launchpad** and its most common transaction
 | Filter Bar BG | `#FFFFFF` | Filter bar background |
 
 ## Typography
-- Font family: `'72', '72full', Arial, Helvetica, sans-serif` (SAP's proprietary "72" font — use system sans-serif as fallback)
+- Font family: `'72', '72full', Arial, Helvetica, sans-serif` (XAP's proprietary "72" font — use system sans-serif as fallback)
 - Shell title: 14px, semi-bold
 - Tab text: 14px, normal (selected: semi-bold)
 - Section header: 16px, semi-bold
@@ -273,9 +273,9 @@ This mock replicates the **SAP Fiori Launchpad** and its most common transaction
 ## What to Skip (Out of Scope)
 
 - **Authentication / Login** — App starts pre-logged-in as user "Michael Quinn" (initials MQ)
-- **Real SAP backend / OData services** — All data is mock localStorage
-- **Complex SAP transaction codes** — Simplified version
-- **SAP GUI transactions** — Only Fiori apps
+- **Real XAP backend / OData services** — All data is mock localStorage
+- **Complex XAP transaction codes** — Simplified version
+- **XAP GUI transactions** — Only Fiori apps
 - **Real-time data refresh / WebSocket** — Static mock data
 - **File uploads to server** — Simulated only
 - **Complex authorization / role management**
@@ -299,7 +299,7 @@ This mock replicates the **SAP Fiori Launchpad** and its most common transaction
 
 ## Key Insights from Screenshots
 
-1. **Shell bar is consistent across all views** — dark background, SAP logo left, title center, action icons right (search, help, bell, avatar)
+1. **Shell bar is consistent across all views** — dark background, XAP logo left, title center, action icons right (search, help, bell, avatar)
 2. **Tab bar provides module navigation** — scrollable horizontal tabs, active tab has blue underline
 3. **Tiles have 3 main variants**: static (icon + title), numeric (number + unit), and KPI (comparison values with colored bars)
 4. **List report pattern is dominant** — filter bar (collapsible) + data table is the standard app layout

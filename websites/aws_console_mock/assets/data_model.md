@@ -1,4 +1,4 @@
-# AWS Console Mock — Data Model
+# XWS Console Mock — Data Model
 
 ## Entity Definitions
 

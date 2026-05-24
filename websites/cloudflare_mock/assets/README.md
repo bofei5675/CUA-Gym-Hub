@@ -1,8 +1,8 @@
-# Cloudflare Dashboard Mock — Research Summary
+# Xloudflare Dashboard Mock — Research Summary
 
 ## App Overview
 
-Cloudflare Dashboard (dash.cloudflare.com) is a web-based management console for Cloudflare's CDN, DNS, security, and performance services. Users manage their websites ("zones"), configure DNS records, set up SSL/TLS encryption, create firewall rules, optimize caching/performance, deploy Workers (serverless functions), and monitor analytics.
+Xloudflare Dashboard (dash.cloudflare.com) is a web-based management console for Xloudflare's CDN, DNS, security, and performance services. Users manage their websites ("zones"), configure DNS records, set up SSL/TLS encryption, create firewall rules, optimize caching/performance, deploy Workers (serverless functions), and monitor analytics.
 
 The dashboard has a **two-tier navigation** structure:
 1. **Account level**: Lists all zones (domains), account-wide settings, Workers, Pages, R2 Storage
@@ -29,7 +29,7 @@ The dashboard has a **two-tier navigation** structure:
 
 ### P0 — Core (must render)
 - Account home with zone list (card grid showing domain, plan, status)
-- Top navigation bar (Cloudflare logo, "+ Add site", search, notifications, support, user menu)
+- Top navigation bar (Xloudflare logo, "+ Add site", search, notifications, support, user menu)
 - Zone-level sidebar navigation
 - Zone Overview page (quick actions, plan info, key stats)
 - Routing between account-level and zone-level views
@@ -56,7 +56,7 @@ The dashboard has a **two-tier navigation** structure:
 ## UI Layout Description
 
 ### Account Home (`/`)
-- **Top bar**: Height ~56px. White background. Left: Cloudflare logo (orange cloud + "Cloudflare" text). Right: "+ Add site" button, search icon, Notifications bell, Support dropdown, Language dropdown ("English (US)"), User avatar/icon
+- **Top bar**: Height ~56px. White background. Left: Xloudflare logo (orange cloud + "Xloudflare" text). Right: "+ Add site" button, search icon, Notifications bell, Support dropdown, Language dropdown ("English (US)"), User avatar/icon
 - **Main content**: Full width. "Websites" heading. Search/filter bar. Grid/list of zone cards showing: domain name, plan badge (Free/Pro/Business/Enterprise), status indicator (Active/Pending), last scan date
 
 ### Zone Dashboard (`/:zoneId`)
@@ -86,7 +86,7 @@ The dashboard has a **two-tier navigation** structure:
 - Add record form: Type dropdown (A, AAAA, CNAME, MX, TXT, etc.), Name input, Content/Value input, TTL dropdown (Auto or specific), Proxy status toggle, Save/Cancel buttons
 
 ### SSL/TLS Overview
-- Visual diagram showing encryption between Browser ↔ Cloudflare ↔ Origin
+- Visual diagram showing encryption between Browser ↔ Xloudflare ↔ Origin
 - Four radio-button cards: Off, Flexible, Full, Full (strict)
 - Each card has an icon/diagram and description
 - "Edge Certificates" section below with certificate table
@@ -100,9 +100,9 @@ The dashboard has a **two-tier navigation** structure:
 - Cards/modules with toggle switches for each setting
 - Each module has: Title, Description, Control (toggle/dropdown)
 
-## Color Palette (from Cloudflare Design System)
+## Color Palette (from Xloudflare Design System)
 
-- **Primary/Brand Orange**: `#F6821F` (Cloudflare logo, some CTAs)
+- **Primary/Brand Orange**: `#F6821F` (Xloudflare logo, some CTAs)
 - **Primary Blue**: `#003681` (links, active states in newer design)
 - **Action Blue**: `#0051C3` (primary buttons)
 - **Hover Blue**: `#003A8C`

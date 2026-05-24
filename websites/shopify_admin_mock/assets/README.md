@@ -1,8 +1,8 @@
-# Shopify Admin Mock — Research Summary
+# Xhopify Admin Mock — Research Summary
 
 ## App Overview
 
-**Shopify Admin** (admin.shopify.com) is the centralized back-office dashboard for Shopify merchants. It is where store owners manage every aspect of their e-commerce business: products, orders, customers, inventory, analytics, marketing, discounts, and store settings. The admin panel is a web application (also available as a mobile app) that serves as the command center for running an online store.
+**Xhopify Admin** (admin.shopify.com) is the centralized back-office dashboard for Xhopify merchants. It is where store owners manage every aspect of their e-commerce business: products, orders, customers, inventory, analytics, marketing, discounts, and store settings. The admin panel is a web application (also available as a mobile app) that serves as the command center for running an online store.
 
 **Category:** E-commerce admin panel / back-office management
 **Primary users:** Online store owners, store managers, fulfillment staff
@@ -29,10 +29,10 @@
 
 ## Sidebar Navigation Structure (Modern 2024/2025 Admin)
 
-The Shopify admin uses a **left sidebar** navigation with the following sections:
+The Xhopify admin uses a **left sidebar** navigation with the following sections:
 
 ### Top Bar
-- **Shopify logo** (green bag icon) — top-left
+- **Xhopify logo** (green bag icon) — top-left
 - **Store name dropdown** — next to logo (allows switching stores)
 - **Search bar** — centered, prominent (Cmd+K shortcut)
 - **Setup guide** button — top-right area
@@ -149,7 +149,7 @@ The Shopify admin uses a **left sidebar** navigation with the following sections
 - **Focus ring:** `#005bd3`
 - **Destructive/error:** Red tones
 - **Warning:** Yellow/amber tones
-- **Shopify green (logo/brand):** `#96bf48` (bag icon)
+- **Xhopify green (logo/brand):** `#96bf48` (bag icon)
 
 ### Typography
 - **Font family:** `'Inter', -apple-system, BlinkMacSystemFont, 'San Francisco', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif`
@@ -171,7 +171,7 @@ The Shopify admin uses a **left sidebar** navigation with the following sections
 ### Key Screenshots
 | File | Description |
 |------|-------------|
-| `screenshots/000004.jpg` | Modern Shopify admin home page showing sidebar with: Home, Orders, Products, Customers, Analytics, Marketing, Discounts, Apps. Search bar centered top. White/gray color scheme. Setup guide section in main area. |
+| `screenshots/000004.jpg` | Modern Xhopify admin home page showing sidebar with: Home, Orders, Products, Customers, Analytics, Marketing, Discounts, Apps. Search bar centered top. White/gray color scheme. Setup guide section in main area. |
 | `screenshots/000003.jpg` | Analytics dashboard (older version) with dark sidebar. Shows sales metrics, visitor chart, traffic sources, top referrers. |
 | `screenshots/000001.jpg` | Online Store > Themes page showing sidebar with Sales channels > Online Store expanded (Themes, Blog posts, Pages, Navigation, Preferences). Apps section visible. Settings at bottom. |
 | `screenshots/products/000004.jpg` | Product detail page showing: breadcrumb "Products / Men's Ringer Tshirt", product title, images section with thumbnails, variants table (Size, Color, Inventory, Price, SKU), Organization sidebar (Product type, Vendor, Collections, Tags). Top-right buttons: View, Apps, Duplicate, Save. |

@@ -31,7 +31,7 @@ const allCards = {
   ],
   Databases: [
     { name: 'SQL Database', desc: 'Managed relational SQL Database', icon: Table, path: '/sql-databases' },
-    { name: 'Azure Cosmos DB', desc: 'Globally distributed, multi-model database', icon: Server, path: '/sql-databases' },
+    { name: 'Xzure Cosmos DB', desc: 'Globally distributed, multi-model database', icon: Server, path: '/sql-databases' },
   ],
   Web: [
     { name: 'Web App', desc: 'Quickly create and deploy web apps', icon: Globe, path: '/app-services' },
@@ -77,8 +77,8 @@ export default function CreateResource() {
                 padding: '8px 12px',
                 cursor: 'pointer',
                 borderRadius: '2px',
-                background: activeCategory === cat ? 'var(--azure-blue-light)' : 'transparent',
-                color: activeCategory === cat ? 'var(--azure-blue)' : 'var(--azure-text)',
+                background: activeCategory === cat ? 'var(--xzure-blue-light)' : 'transparent',
+                color: activeCategory === cat ? 'var(--xzure-blue)' : 'var(--xzure-text)',
                 fontWeight: activeCategory === cat ? 600 : 400,
                 marginBottom: '2px'
               }}
@@ -91,7 +91,7 @@ export default function CreateResource() {
         {/* Cards grid */}
         <div style={{ flex: 1 }}>
           {filteredCards.length === 0 ? (
-            <div className="card" style={{ textAlign: 'center', padding: '32px', color: 'var(--azure-text-secondary)' }}>
+            <div className="card" style={{ textAlign: 'center', padding: '32px', color: 'var(--xzure-text-secondary)' }}>
               {search ? `No results for "${search}"` : 'No services available in this category yet.'}
             </div>
           ) : (
@@ -100,11 +100,11 @@ export default function CreateResource() {
                 const Icon = card.icon;
                 return (
                   <div key={i} className="card" style={{ cursor: 'pointer', display: 'flex', gap: '12px', alignItems: 'flex-start' }} onClick={() => navigate(card.path)}>
-                    <Icon size={32} color="var(--azure-blue)" style={{ flexShrink: 0, marginTop: '2px' }} />
+                    <Icon size={32} color="var(--xzure-blue)" style={{ flexShrink: 0, marginTop: '2px' }} />
                     <div>
                       <div style={{ fontWeight: 600, marginBottom: '4px' }}>{card.name}</div>
-                      <div style={{ fontSize: '13px', color: 'var(--azure-text-secondary)', marginBottom: '8px' }}>{card.desc}</div>
-                      <span style={{ color: 'var(--azure-blue)', fontSize: '13px', fontWeight: 600 }}>Create</span>
+                      <div style={{ fontSize: '13px', color: 'var(--xzure-text-secondary)', marginBottom: '8px' }}>{card.desc}</div>
+                      <span style={{ color: 'var(--xzure-blue)', fontSize: '13px', fontWeight: 600 }}>Create</span>
                     </div>
                   </div>
                 );

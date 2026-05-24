@@ -53,13 +53,13 @@ export default function Header() {
   return (
     <header className={`header ${scrolled ? 'header-scrolled' : ''} ${isTransparent ? 'header-transparent' : ''}`}>
       <div className="header-inner container">
-        {/* Logo - Expedia style with yellow dot */}
+        {/* Logo - Xpedia style with yellow dot */}
         <Link to="/" className="header-logo">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="logo-dot">
             <circle cx="12" cy="12" r="10" fill="#FFC72C" />
             <path d="M10 8 L16 12 L10 16Z" fill="#00355F" />
           </svg>
-          <span className="logo-text">expedia</span>
+          <span className="logo-text">xpedia</span>
         </Link>
 
         {/* Navigation */}

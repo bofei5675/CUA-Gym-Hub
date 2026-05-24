@@ -185,7 +185,7 @@ const BoardDetail = () => {
               <form onSubmit={handleCreateSection} className="flex gap-2">
                 <input
                   type="text"
-                  className="px-4 py-2 border rounded-full outline-none focus:ring-2 focus:ring-pinterest-red"
+                  className="px-4 py-2 border rounded-full outline-none focus:ring-2 focus:ring-xinterest-red"
                   placeholder="Section Name"
                   value={newSectionName}
                   onChange={e => setNewSectionName(e.target.value)}
@@ -270,7 +270,7 @@ const BoardDetail = () => {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pinterest-red focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-xinterest-red focus:border-transparent outline-none"
                   value={editName}
                   onChange={e => setEditName(e.target.value)}
                   placeholder="Board name"
@@ -280,7 +280,7 @@ const BoardDetail = () => {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
                 <textarea
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pinterest-red focus:border-transparent outline-none resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-xinterest-red focus:border-transparent outline-none resize-none"
                   rows={3}
                   value={editDescription}
                   onChange={e => setEditDescription(e.target.value)}
@@ -294,7 +294,7 @@ const BoardDetail = () => {
                   id="board-privacy-toggle"
                   checked={editPrivacy === 'secret'}
                   onChange={e => setEditPrivacy(e.target.checked ? 'secret' : 'public')}
-                  className="w-5 h-5 rounded border-gray-300 text-pinterest-red focus:ring-pinterest-red cursor-pointer"
+                  className="w-5 h-5 rounded border-gray-300 text-xinterest-red focus:ring-xinterest-red cursor-pointer"
                 />
                 <label htmlFor="board-privacy-toggle" className="text-sm font-medium cursor-pointer select-none">
                   Keep this board secret
@@ -310,7 +310,7 @@ const BoardDetail = () => {
                 Cancel
               </button>
               <button
-                className="px-5 py-3 rounded-full font-semibold bg-pinterest-red text-white hover:bg-pinterest-hover transition-colors disabled:opacity-50"
+                className="px-5 py-3 rounded-full font-semibold bg-xinterest-red text-white hover:bg-xinterest-hover transition-colors disabled:opacity-50"
                 disabled={!editName.trim()}
                 onClick={handleSaveEdit}
               >
@@ -336,7 +336,7 @@ const BoardDetail = () => {
             </p>
             <label className="block text-sm font-medium text-gray-700 mb-2">Destination board</label>
             <select
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pinterest-red focus:border-transparent outline-none bg-white"
+              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-xinterest-red focus:border-transparent outline-none bg-white"
               value={mergeTargetId}
               onChange={e => setMergeTargetId(e.target.value)}
             >
@@ -356,7 +356,7 @@ const BoardDetail = () => {
                 Cancel
               </button>
               <button
-                className="px-5 py-3 rounded-full font-semibold bg-pinterest-red text-white hover:bg-pinterest-hover transition-colors disabled:opacity-50"
+                className="px-5 py-3 rounded-full font-semibold bg-xinterest-red text-white hover:bg-xinterest-hover transition-colors disabled:opacity-50"
                 disabled={!mergeTargetId}
                 onClick={handleMergeBoard}
               >

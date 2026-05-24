@@ -1,4 +1,4 @@
-# Monday.com Mock — Data Model
+# xonday.com Mock — Data Model
 
 This document defines all entity types, their fields, relationships, and the structure for `createInitialData()` in `dataManager.js`.
 

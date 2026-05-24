@@ -1,4 +1,4 @@
-# Instacart Mock — TODO
+# Xnstacart Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2025-03-09
@@ -17,7 +17,7 @@
 
 - [x] **Project scaffold**: `npm create vite@latest instacart_mock -- --template react`, install deps: `react-router-dom`, no CSS framework (use plain CSS for pixel-accurate control). Project directory already exists at `instacart_mock/`.
 
-- [x] **Visual design system**: Study `assets/screenshots/` — the Instacart brand uses a clean, modern grocery aesthetic. Implement these exact values as CSS custom properties in `src/index.css`:
+- [x] **Visual design system**: Study `assets/screenshots/` — the Xnstacart brand uses a clean, modern grocery aesthetic. Implement these exact values as CSS custom properties in `src/index.css`:
   - Primary green: `#0AAD0A` (CTA buttons, links, active states, "Add" buttons)
   - Dark green: `#003D29` (header background for logged-in state, footer)
   - White: `#FFFFFF` (card backgrounds, modals, main content bg)
@@ -25,7 +25,7 @@
   - Primary text: `#343538` (dark, near-black)
   - Secondary text: `#72767E` (muted gray for prices-per-unit, timestamps, descriptions)
   - Border: `#E8E9EB` (card borders, dividers, input borders)
-  - Orange accent: `#FF7009` (Instacart carrot logo element, sale badges)
+  - Orange accent: `#FF7009` (Xnstacart carrot logo element, sale badges)
   - Red/Sale: `#DF1B41` (sale prices, error states, out-of-stock)
   - Font: `"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`
   - Border radius for cards: `12px`, for buttons/pills: `24px`, for inputs: `8px`
@@ -35,7 +35,7 @@
 - [x] **App layout**: Full-width header (fixed, 64px height, dark green `#003D29` background). Below header: main content area, full width, light gray background. No persistent sidebar — navigation is via header and in-page links. Cart is a right-side flyout panel (400px wide) triggered by cart icon click.
   ```
   ┌─────────────────────────────────────────────────┐
-  │  [🥕 instacart]  [📍 Address ▾]  [🔍 Search...     ]  [🛒 3]  [👤]  │  ← Header 64px
+  │  [🥕 xnstacart]  [📍 Address ▾]  [🔍 Search...     ]  [🛒 3]  [👤]  │  ← Header 64px
   ├─────────────────────────────────────────────────┤
   │                                           │     │
   │         Main Content Area                 │Cart │  ← Cart flyout
@@ -83,16 +83,16 @@
 <!-- Core features a user interacts with in the first 5 minutes. Implement in order. -->
 
 - [x] **Global header component** (`src/components/Header.jsx`): Fixed to top, 64px height, dark green (#003D29) background, flex layout.
-  - Left: Instacart logo — render as styled text "🥕 instacart" using the carrot emoji + green wordmark on dark bg. The carrot is orange (#FF7009), text is white. Clicking navigates to `/`.
+  - Left: Xnstacart logo — render as styled text "🥕 xnstacart" using the carrot emoji + green wordmark on dark bg. The carrot is orange (#FF7009), text is white. Clicking navigates to `/`.
   - Center-left: Delivery address pill — white rounded pill showing "📍 Deliver to [street]", truncated. Click opens address selector dropdown.
   - Center: Search bar — white rounded input (border-radius: 24px), placeholder "Search products...", search icon (🔍) on the left inside the input, full-width flex-grow between address and cart. On enter/submit, navigates to `/store/:currentStore/search?q=query`.
   - Right: Cart icon — green cart icon "🛒" with a small green badge showing total item count (sum of all cart quantities). Click toggles cart flyout sidebar. If count is 0, no badge shown.
-  - Far right: User menu — circular avatar showing initials "SJ" (Sarah Johnson) in green. Click opens dropdown with links: Your Orders, Buy It Again, Shopping Lists, Deals & Coupons, Recipes, ─── (divider), Account Settings, Addresses, ─── (divider), Instacart+ badge ("Instacart+ Member" in green).
+  - Far right: User menu — circular avatar showing initials "SJ" (Sarah Johnson) in green. Click opens dropdown with links: Your Orders, Buy It Again, Shopping Lists, Deals & Coupons, Recipes, ─── (divider), Account Settings, Addresses, ─── (divider), Xnstacart+ badge ("Xnstacart+ Member" in green).
 
 - [x] **Homepage** (`src/pages/Home.jsx`): The landing page after login. White/light-gray background.
-  - **Hero banner**: Full-width rounded card (border-radius: 12px) with green gradient background, text "Free delivery on orders $35+" and "with Instacart+" sub-text, decorative grocery illustration on right side. Height ~200px.
+  - **Hero banner**: Full-width rounded card (border-radius: 12px) with green gradient background, text "Free delivery on orders $35+" and "with Xnstacart+" sub-text, decorative grocery illustration on right side. Height ~200px.
   - **Category quick-links row**: Horizontal scrollable row of circular category bubbles (64px diameter circle, light-green/teal background, emoji icon, label below). Categories: "Groceries" 🛒, "Alcohol" 🍷, "Electronics" 📱, "Pharmacy" 💊, "Pets" 🐾, "Beauty" 💄, "Household" 🏠, "Baby" 🍼. Clicking filters stores.
-  - **"Your Stores" section**: Header text "Your Stores" with "See all" link. Grid of store cards (4 per row on desktop, responsive), each card is a white rounded rectangle (border-radius: 12px, border: 1px solid #E8E9EB, padding: 16px) containing: store logo area (centered, 80px placeholder with first letter + brand color), store name (bold, 16px), delivery info line ("Delivery by 2:00 PM" in muted text), delivery fee ("$3.99 delivery fee" or "Free delivery" in green if Instacart+), hover: subtle shadow elevation. Clicking navigates to `/store/:storeSlug`.
+  - **"Your Stores" section**: Header text "Your Stores" with "See all" link. Grid of store cards (4 per row on desktop, responsive), each card is a white rounded rectangle (border-radius: 12px, border: 1px solid #E8E9EB, padding: 16px) containing: store logo area (centered, 80px placeholder with first letter + brand color), store name (bold, 16px), delivery info line ("Delivery by 2:00 PM" in muted text), delivery fee ("$3.99 delivery fee" or "Free delivery" in green if Xnstacart+), hover: subtle shadow elevation. Clicking navigates to `/store/:storeSlug`.
   - **"Buy It Again" section**: Header "Buy It Again" with "See all →" link. Horizontal scrollable row of product cards (compact variant, 160px wide): product image placeholder (colored square with emoji), product name (2 lines, truncated), price in bold green, green "Add" pill button. Products sourced from items in past orders.
   - **"Deals" section**: Header "Deals" with "See all →" link. Grid of deal cards showing: deal badge (e.g., "20% OFF"), deal title, store name, "Clip Coupon" button (green outline, toggles to "Clipped ✓" green filled on click).
 
@@ -142,7 +142,7 @@
     - Subtotal: right-aligned dollar amount
     - Estimated taxes: right-aligned
     - Service fee: right-aligned (with info tooltip "ℹ️")
-    - Delivery fee: right-aligned ("Free" in green if Instacart+ member, otherwise "$X.XX")
+    - Delivery fee: right-aligned ("Free" in green if Xnstacart+ member, otherwise "$X.XX")
     - Divider line
     - **Total**: bold, right-aligned
     - "Go to Checkout" button: full-width green pill, 48px height, bold white text. Navigates to `/checkout`.
@@ -244,15 +244,15 @@
   - Map placeholder: gray box with "Map" text and a pin icon (no real map needed)
   - Item list showing what's been found/replaced
 
-- [ ] **Instacart+ membership banner**: On homepage and throughout the app, show a promotional banner:
-  - "Instacart+ Member" badge in account menu (green checkmark)
-  - On checkout, show "Free delivery" where fee would be, with "Instacart+" badge
-  - On store cards, show "Free delivery" in green text for Instacart+ stores
+- [ ] **Xnstacart+ membership banner**: On homepage and throughout the app, show a promotional banner:
+  - "Xnstacart+ Member" badge in account menu (green checkmark)
+  - On checkout, show "Free delivery" where fee would be, with "Xnstacart+" badge
+  - On store cards, show "Free delivery" in green text for Xnstacart+ stores
   - Non-functional "Manage Membership" link in account settings
 
 - [x] **Account settings page** (`src/pages/Account.jsx`): Route `/account`. Card-based layout with sections:
   - **Profile**: Name, email, phone — each with "Edit" button that toggles to inline input + Save/Cancel
-  - **Instacart+ Status**: Green badge "Active Member", renewal date, "Manage" link (non-functional)
+  - **Xnstacart+ Status**: Green badge "Active Member", renewal date, "Manage" link (non-functional)
   - **Notification Preferences**: Toggle switches for: Order updates, Deals & promotions, Weekly recommendations, Delivery notifications. Toggles update state.
   - **Payment Methods**: Card showing "Visa •••• 4242" with brand icon, "Add Payment Method" button (non-functional)
 
@@ -274,7 +274,7 @@
 
 <!-- Dev must create realistic seed data matching these specs. See data_model.md for field definitions. -->
 
-- [x] **User**: 1 pre-logged-in user — "Sarah Johnson", email: sarah.johnson@email.com, Instacart+ member, default address in San Francisco, CA
+- [x] **User**: 1 pre-logged-in user — "Sarah Johnson", email: sarah.johnson@email.com, Xnstacart+ member, default address in San Francisco, CA
 - [x] **Addresses**: 2 — "Home" (742 Evergreen Terrace, SF) and "Work" (200 Market Street, SF)
 - [x] **Stores**: 8 stores with realistic names, logos (use emoji + colored initial), delivery fees, delivery times. See data_model.md §Store for full list: Safeway, Costco, Whole Foods Market, Sprouts Farmers Market, CVS Pharmacy, Target, Petco, Total Wine & More
 - [x] **Departments**: 14 standard departments per grocery store (Produce, Dairy & Eggs, Meat & Seafood, Bakery, Deli, Frozen, Pantry, Snacks & Candy, Beverages, Breakfast, Household, Health & Beauty, Baby & Kids, Pet Care) each with 3-4 subcategories. See data_model.md §Department for full list.
@@ -302,5 +302,5 @@
 - Real product image assets (use emoji + colored placeholder squares)
 - Server-side rendering or SEO optimization
 - Accessibility (ARIA) beyond basic semantic HTML (not a priority for agent training)
-- Dark mode (Instacart doesn't have one on web)
+- Dark mode (Xnstacart doesn't have one on web)
 - Mobile app simulation (web only)

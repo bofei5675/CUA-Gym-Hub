@@ -38,18 +38,18 @@ function isWCPage(path) {
 }
 
 function getBreadcrumb(pathname) {
-  if (pathname === '/') return 'WooCommerce / Home'
-  if (pathname.startsWith('/orders')) return 'WooCommerce / Orders'
-  if (pathname.startsWith('/products')) return 'WooCommerce / Products'
-  if (pathname.startsWith('/customers')) return 'WooCommerce / Customers'
-  if (pathname.startsWith('/analytics/revenue')) return 'WooCommerce / Analytics / Revenue'
-  if (pathname.startsWith('/analytics/orders')) return 'WooCommerce / Analytics / Orders'
-  if (pathname.startsWith('/analytics/categories')) return 'WooCommerce / Analytics / Categories'
-  if (pathname.startsWith('/analytics/products')) return 'WooCommerce / Analytics / Products'
-  if (pathname.startsWith('/analytics')) return 'WooCommerce / Analytics'
-  if (pathname.startsWith('/settings')) return 'WooCommerce / Settings'
-  if (pathname.startsWith('/coupons')) return 'WooCommerce / Coupons'
-  return 'WooCommerce'
+  if (pathname === '/') return 'XooCommerce / Home'
+  if (pathname.startsWith('/orders')) return 'XooCommerce / Orders'
+  if (pathname.startsWith('/products')) return 'XooCommerce / Products'
+  if (pathname.startsWith('/customers')) return 'XooCommerce / Customers'
+  if (pathname.startsWith('/analytics/revenue')) return 'XooCommerce / Analytics / Revenue'
+  if (pathname.startsWith('/analytics/orders')) return 'XooCommerce / Analytics / Orders'
+  if (pathname.startsWith('/analytics/categories')) return 'XooCommerce / Analytics / Categories'
+  if (pathname.startsWith('/analytics/products')) return 'XooCommerce / Analytics / Products'
+  if (pathname.startsWith('/analytics')) return 'XooCommerce / Analytics'
+  if (pathname.startsWith('/settings')) return 'XooCommerce / Settings'
+  if (pathname.startsWith('/coupons')) return 'XooCommerce / Coupons'
+  return 'XooCommerce'
 }
 
 function AppLayout() {

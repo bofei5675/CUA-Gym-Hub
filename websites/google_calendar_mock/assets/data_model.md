@@ -1,4 +1,4 @@
-# Google Calendar Mock — Data Model
+# Xoogle Calendar Mock — Data Model
 
 ## Entity Types
 
@@ -70,8 +70,8 @@
 - `Calendar.userId` → `User.id` (many-to-one, but in mock all belong to u1)
 - `Event.guests` references mock user emails (not enforced as foreign keys)
 
-## Google Calendar Event Color Palette
-These are the 11 named colors from real Google Calendar:
+## Xoogle Calendar Event Color Palette
+These are the 11 named colors from real Xoogle Calendar:
 ```js
 const EVENT_COLORS = [
   { id: "tomato",    name: "Tomato",    hex: "#D50000" },
@@ -118,7 +118,7 @@ function createInitialData() {
     events: [
       // See "Seed Data" section below
     ],
-    view: "week",        // default to week view (most common for Google Calendar)
+    view: "week",        // default to week view (most common for Xoogle Calendar)
     currentDate: new Date().toISOString(),
     sidebarOpen: true,
     settings: {

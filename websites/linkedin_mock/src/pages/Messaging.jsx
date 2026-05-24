@@ -77,7 +77,7 @@ export default function Messaging() {
             <h2 className="font-semibold text-sm">Messaging</h2>
             <div className="flex gap-2 text-gray-600 relative">
               <div className="relative">
-                <MoreHorizontal size={20} className="cursor-pointer hover:text-linkedin-blue" onClick={() => setShowChatListMenu(!showChatListMenu)} />
+                <MoreHorizontal size={20} className="cursor-pointer hover:text-xinkedin-blue" onClick={() => setShowChatListMenu(!showChatListMenu)} />
                 {showChatListMenu && (
                   <div className="absolute right-0 top-full mt-1 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-20 w-48">
                     <button onClick={() => { setSearchQuery(''); setShowChatListMenu(false); }} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Clear search</button>
@@ -85,7 +85,7 @@ export default function Messaging() {
                   </div>
                 )}
               </div>
-              <Edit size={20} className="cursor-pointer hover:text-linkedin-blue" title="New message" onClick={() => setShowNewChat(true)} />
+              <Edit size={20} className="cursor-pointer hover:text-xinkedin-blue" title="New message" onClick={() => setShowNewChat(true)} />
             </div>
           </div>
           {showNewChat && (
@@ -141,7 +141,7 @@ export default function Messaging() {
                   <div
                     key={chat.id}
                     onClick={() => setActiveChatId(chat.id)}
-                    className={`flex gap-3 p-3 cursor-pointer hover:bg-gray-100 border-l-4 ${activeChatId === chat.id ? 'border-l-linkedin-dark bg-blue-50' : 'border-l-transparent'}`}
+                    className={`flex gap-3 p-3 cursor-pointer hover:bg-gray-100 border-l-4 ${activeChatId === chat.id ? 'border-l-xinkedin-dark bg-blue-50' : 'border-l-transparent'}`}
                   >
                     <img src={otherUser?.avatar} className="w-12 h-12 rounded-full object-cover" alt={otherUser?.name} />
                     <div className="flex-1 min-w-0">
@@ -169,7 +169,7 @@ export default function Messaging() {
                   <span className="text-xs text-gray-500">{otherParticipant.headline}</span>
                 </div>
                 <div className="relative">
-                  <MoreHorizontal size={20} className="text-gray-600 cursor-pointer hover:text-linkedin-blue" onClick={() => setShowChatMenu(!showChatMenu)} />
+                  <MoreHorizontal size={20} className="text-gray-600 cursor-pointer hover:text-xinkedin-blue" onClick={() => setShowChatMenu(!showChatMenu)} />
                   {showChatMenu && (
                     <div className="absolute right-0 top-full mt-1 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-20 w-48">
                       <button
@@ -203,7 +203,7 @@ export default function Messaging() {
                   const isMe = msg.senderId === state.currentUser.id;
                   return (
                     <div key={msg.id} className={`flex ${isMe ? 'justify-end' : 'justify-start'}`}>
-                      <div className={`max-w-[70%] p-3 rounded-lg text-sm ${isMe ? 'bg-linkedin-blue text-white rounded-tr-none' : 'bg-gray-100 text-gray-800 rounded-tl-none'}`}>
+                      <div className={`max-w-[70%] p-3 rounded-lg text-sm ${isMe ? 'bg-xinkedin-blue text-white rounded-tr-none' : 'bg-gray-100 text-gray-800 rounded-tl-none'}`}>
                         {msg.content}
                       </div>
                     </div>
@@ -218,7 +218,7 @@ export default function Messaging() {
                     value={messageText}
                     onChange={e => setMessageText(e.target.value)}
                     onKeyDown={handleKeyDown}
-                    className="w-full resize-none bg-gray-100 rounded-lg p-3 text-sm focus:outline-none focus:ring-1 focus:ring-linkedin-blue"
+                    className="w-full resize-none bg-gray-100 rounded-lg p-3 text-sm focus:outline-none focus:ring-1 focus:ring-xinkedin-blue"
                     rows={3}
                     placeholder="Write a message... (Enter to send, Shift+Enter for new line)"
                   />
@@ -236,7 +236,7 @@ export default function Messaging() {
                       <button
                         type="submit"
                         disabled={!messageText.trim()}
-                        className="bg-linkedin-blue text-white px-4 py-1.5 rounded-full text-sm font-semibold hover:bg-linkedin-dark disabled:opacity-50"
+                        className="bg-xinkedin-blue text-white px-4 py-1.5 rounded-full text-sm font-semibold hover:bg-xinkedin-dark disabled:opacity-50"
                       >
                         Send
                       </button>

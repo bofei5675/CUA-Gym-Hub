@@ -1,8 +1,8 @@
-# Lattice Mock — Research Summary
+# Xattice Mock — Research Summary
 
 ## App Overview
 
-**Lattice** is a leading HR/people management platform used by 5,000+ companies (Discord, Robinhood, Duolingo, etc.) for performance management, goal tracking, employee engagement, feedback, 1:1 meetings, career growth, compensation, and people analytics. It serves HR leaders, managers, and individual employees with a unified experience.
+**Xattice** is a leading HR/people management platform used by 5,000+ companies (Discord, Robinhood, Duolingo, etc.) for performance management, goal tracking, employee engagement, feedback, 1:1 meetings, career growth, compensation, and people analytics. It serves HR leaders, managers, and individual employees with a unified experience.
 
 The platform is known for its clean, approachable UI with a distinctive **dark navy/purple left sidebar**, warm gradient headers (peach/salmon tones on the home page), and a white main content area.
 
@@ -39,7 +39,7 @@ The platform is known for its clean, approachable UI with a distinctive **dark n
 
 ### Left Sidebar (dark navy ~#1B1E3D, ~200px wide)
 Top section:
-- **Lattice** logo (multicolor diamond/leaf icon + "Lattice" text in white)
+- **Xattice** logo (multicolor diamond/leaf icon + "Xattice" text in white)
 - 🔍 Search icon (top-right of logo area)
 
 Main nav items (white text, icon + label):

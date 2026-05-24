@@ -1,4 +1,4 @@
-// dataManager.js — Weibo Mock State Management Utilities
+// dataManager.js — Xeibo Mock State Management Utilities
 
 const STORAGE_KEY = 'weibo_mock_state';
 

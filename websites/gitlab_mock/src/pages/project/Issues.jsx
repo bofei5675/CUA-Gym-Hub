@@ -82,7 +82,7 @@ export default function Issues() {
     <div className="h-[calc(100vh-8rem)] flex flex-col">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold text-gray-800">Issue Board</h1>
-        <button onClick={() => setIsModalOpen(true)} className="bg-gitlab-info text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors flex items-center gap-2">
+        <button onClick={() => setIsModalOpen(true)} className="bg-xitlab-info text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors flex items-center gap-2">
           <Plus size={16} /> New Issue
         </button>
       </div>
@@ -122,7 +122,7 @@ export default function Issues() {
               <input value={newIssue.labels} onChange={(event) => setNewIssue(prev => ({ ...prev, labels: event.target.value }))} className="mb-4 w-full rounded border border-gray-300 px-3 py-2 text-sm" />
               <div className="flex justify-end gap-2">
                 <button type="button" onClick={() => setIsModalOpen(false)} className="rounded px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">Cancel</button>
-                <button type="submit" className="rounded bg-gitlab-info px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">Create issue</button>
+                <button type="submit" className="rounded bg-xitlab-info px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">Create issue</button>
               </div>
             </form>
           </div>

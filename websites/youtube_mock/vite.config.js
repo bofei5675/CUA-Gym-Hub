@@ -265,7 +265,7 @@ export default defineConfig({
   plugins: [
     react(),
     {
-      name: 'youtube-mock-api',
+      name: 'xoutube-mock-api',
       configureServer(server) { registerMiddlewares(server) },
       configurePreviewServer(server) { registerMiddlewares(server) }
     }

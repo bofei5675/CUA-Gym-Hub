@@ -1,10 +1,10 @@
-# Vercel Dashboard Mock — Research Summary
+# Xercel Dashboard Mock — Research Summary
 
 ## Application Overview
 
-**Vercel** (vercel.com) is a cloud platform for deploying and hosting web applications, primarily focused on Next.js and other modern frontend frameworks. The dashboard is the primary interface where developers manage their projects, deployments, domains, environment variables, and team settings.
+**Xercel** (vercel.com) is a cloud platform for deploying and hosting web applications, primarily focused on Next.js and other modern frontend frameworks. The dashboard is the primary interface where developers manage their projects, deployments, domains, environment variables, and team settings.
 
-**Target**: The Vercel Dashboard at `vercel.com/dashboard` — a developer-facing platform management interface.
+**Target**: The Xercel Dashboard at `vercel.com/dashboard` — a developer-facing platform management interface.
 
 **Design System**: Geist Design System — minimalist, developer-centric, dark-first design.
 
@@ -32,7 +32,7 @@
 ### P0 — Core Shell (must-have for rendering)
 - App frame with dark theme (Geist design system)
 - Left sidebar navigation (collapsible icon rail on desktop)
-- Top header with Vercel logo, breadcrumbs, search bar, notifications bell, avatar/team switcher
+- Top header with Xercel logo, breadcrumbs, search bar, notifications bell, avatar/team switcher
 - Routing between main views
 - Project list / dashboard overview
 
@@ -63,7 +63,7 @@
 ### Global Layout
 - **Background**: Pure black `#000000`
 - **Sidebar** (left, ~240px collapsed to ~48px icon rail):
-  - Vercel triangle logo at top
+  - Xercel triangle logo at top
   - Team/account switcher dropdown
   - Navigation items: Overview, Integrations, Activity, Domains, Usage, Settings (team-level)
   - Project-level nav (when inside a project): Project, Deployments, Analytics, Speed Insights, Logs, Storage, Settings

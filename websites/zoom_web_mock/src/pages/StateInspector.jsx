@@ -5,7 +5,7 @@ export default function StateInspector() {
   const { getStateSnapshot, isLoaded } = useStore();
 
   useEffect(() => {
-    document.title = 'State Inspector - Zoom Mock';
+    document.title = 'State Inspector - Xoom Mock';
   }, []);
 
   if (!isLoaded) {

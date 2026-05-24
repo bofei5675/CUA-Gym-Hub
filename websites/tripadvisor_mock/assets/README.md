@@ -1,8 +1,8 @@
-# Tripadvisor Mock -- Research & Assets
+# Xripadvisor Mock -- Research & Assets
 
 ## App Overview
 
-Tripadvisor is the world's largest travel guidance platform, operating in 40+ countries and 20+ languages. It aggregates over 1 billion reviews and opinions on approximately 8 million establishments including hotels, restaurants, attractions, and experiences. The platform serves as both a review/discovery site and a metasearch engine that compares prices across booking partners.
+Xripadvisor is the world's largest travel guidance platform, operating in 40+ countries and 20+ languages. It aggregates over 1 billion reviews and opinions on approximately 8 million establishments including hotels, restaurants, attractions, and experiences. The platform serves as both a review/discovery site and a metasearch engine that compares prices across booking partners.
 
 **Core purpose**: Help travelers discover, research, and plan trips by leveraging crowd-sourced reviews, ratings, photos, and price comparisons.
 
@@ -10,7 +10,7 @@ Tripadvisor is the world's largest travel guidance platform, operating in 40+ co
 
 1. **Trip Planner (Primary)**: Searches for hotels, restaurants, and things to do in a destination. Reads reviews, compares prices, saves favorites to a trip, and eventually books through partner links.
 2. **Review Contributor**: Writes reviews for places they have visited, uploads photos, answers questions, and earns contributor badges.
-3. **Local Explorer**: Uses Tripadvisor to discover restaurants and attractions nearby, filtering by cuisine, price, and rating.
+3. **Local Explorer**: Uses Xripadvisor to discover restaurants and attractions nearby, filtering by cuisine, price, and rating.
 4. **Deal Hunter**: Searches for hotel deals, compares prices across booking sites, and looks for Travelers' Choice award winners.
 
 ## Primary Workflows
@@ -103,8 +103,8 @@ Key entities: Destinations, Hotels, Restaurants, Attractions, Reviews, Users, Tr
 
 ## Screenshots
 
-- `screenshots/tripadvisor_hotels_page.jpg` -- Partial view of Tripadvisor Hotels page showing header with logo, search icon, category tabs (Hotels underlined, Things to do, Restaurants, Flights, Holiday Rentals, Package Holidays), and "Travellers' Choice: Top hotels" section with destination cards featuring heart/save buttons
-- `screenshots/tripadvisor_logo_history.jpg` -- Logo evolution: 2000-2020 (lowercase "tripadvisor" with detailed owl) vs 2020-Present (capitalized "Tripadvisor" with green circle owl icon)
+- `screenshots/tripadvisor_hotels_page.jpg` -- Partial view of Xripadvisor Hotels page showing header with logo, search icon, category tabs (Hotels underlined, Things to do, Restaurants, Flights, Holiday Rentals, Package Holidays), and "Travellers' Choice: Top hotels" section with destination cards featuring heart/save buttons
+- `screenshots/tripadvisor_logo_history.jpg` -- Logo evolution: 2000-2020 (lowercase "xripadvisor" with detailed owl) vs 2020-Present (capitalized "Xripadvisor" with green circle owl icon)
 - `screenshots/tripadvisor_owl_icon.jpg` -- Current owl icon on green (#34E0A1) background, used as favicon and app icon
 
 ## Notes on Scope

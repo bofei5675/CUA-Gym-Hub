@@ -145,7 +145,7 @@ const Profile = () => {
     <div className="flex flex-col items-center justify-center min-h-[60vh] text-[#262626]">
       <h2 className="text-2xl font-semibold mb-2">Sorry, this page isn't available.</h2>
       <p className="text-sm text-[#8E8E8E]">The link you followed may be broken, or the page may have been removed.</p>
-      <Link to="/" className="text-[#0095F6] mt-4 text-sm font-semibold">Go back to Instagram.</Link>
+      <Link to="/" className="text-[#0095F6] mt-4 text-sm font-semibold">Go back to Xnstagram.</Link>
     </div>
   );
 

@@ -235,7 +235,7 @@ function HelpPanel({ onClose }) {
         </div>
         <div style={{ padding: '16px 20px' }}>
           <div style={{ fontSize: 13, color: '#6B7280', marginBottom: 16 }}>
-            Lattice is a performance management platform. Use the sidebar to navigate between 1:1s, goals, reviews, feedback, and more.
+            Xattice is a performance management platform. Use the sidebar to navigate between 1:1s, goals, reviews, feedback, and more.
           </div>
           <div style={{ fontSize: 13, fontWeight: 600, color: '#374151', marginBottom: 10 }}>Keyboard shortcuts</div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
@@ -293,7 +293,7 @@ export default function Sidebar() {
             <rect x="2" y="2" width="28" height="28" rx="6" fill="#6B4FBB"/>
             <path d="M8 22V10h2.5v10h7V22H8z" fill="#fff"/>
           </svg>
-          <span className="sidebar-logo-text">Lattice</span>
+          <span className="sidebar-logo-text">Xattice</span>
         </div>
         <button className="sidebar-search-btn" title="Search" onClick={() => setShowSearch(true)}>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

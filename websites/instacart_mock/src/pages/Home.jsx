@@ -40,7 +40,7 @@ export default function Home() {
           <p>Shop your favorite stores with free delivery on orders $35+</p>
           {state.user.instacartPlus && (
             <div style={{ marginTop: 12, display: 'inline-flex', alignItems: 'center', gap: 6, background: 'rgba(255,255,255,0.2)', borderRadius: 'var(--radius-pill)', padding: '6px 14px', fontSize: 13, fontWeight: 600 }}>
-              Instacart+ Member
+              Xnstacart+ Member
             </div>
           )}
         </div>

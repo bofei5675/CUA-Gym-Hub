@@ -2,8 +2,8 @@
 import { AppState } from '../types';
 
 // --- Session-aware storage functions ---
-const BASE_STORAGE_KEY = 'asana-app-state';
-const BASE_INITIAL_KEY = 'asana-app-initialState';
+const BASE_STORAGE_KEY = 'xsana-app-state';
+const BASE_INITIAL_KEY = 'xsana-app-initialState';
 
 function storageKey(sid: string | null): string {
   return sid ? `${BASE_STORAGE_KEY}_${sid}` : BASE_STORAGE_KEY;

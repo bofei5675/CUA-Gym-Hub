@@ -67,24 +67,24 @@ export const Checkout = () => {
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-medium">Checkout</h1>
         <div className="text-gray-500">
-          <span className={step >= 1 ? "text-amazon-darkYellow font-bold" : ""}>Shipping</span>
+          <span className={step >= 1 ? "text-xmazon-darkYellow font-bold" : ""}>Shipping</span>
           <span className="mx-1">›</span>
-          <span className={step >= 2 ? "text-amazon-darkYellow font-bold" : ""}>Payment</span>
+          <span className={step >= 2 ? "text-xmazon-darkYellow font-bold" : ""}>Payment</span>
           <span className="mx-1">›</span>
-          <span className={step >= 3 ? "text-amazon-darkYellow font-bold" : ""}>Review</span>
+          <span className={step >= 3 ? "text-xmazon-darkYellow font-bold" : ""}>Review</span>
         </div>
       </div>
 
       <div className="flex gap-8 flex-col-reverse md:flex-row">
         <div className="flex-1 space-y-4">
           {/* Step 1: Shipping */}
-          <div className={`bg-white p-4 border rounded ${step === 1 ? 'border-amazon-orange shadow-md' : ''}`}>
+          <div className={`bg-white p-4 border rounded ${step === 1 ? 'border-xmazon-orange shadow-md' : ''}`}>
             <div className="flex justify-between mb-2">
               <h2 className="font-bold text-lg flex items-center gap-2">
                 {step > 1 && <Check size={16} className="text-green-600" />}
                 1. Shipping Address
               </h2>
-              {step > 1 && <button onClick={() => setStep(1)} className="text-amazon-blue text-sm hover:underline">Change</button>}
+              {step > 1 && <button onClick={() => setStep(1)} className="text-xmazon-blue text-sm hover:underline">Change</button>}
             </div>
             {step === 1 ? (
               <div>
@@ -92,7 +92,7 @@ export const Checkout = () => {
                   {addresses.map((addr, idx) => (
                     <label
                       key={addr.id || idx}
-                      className={`flex gap-3 p-3 border rounded cursor-pointer hover:border-amazon-orange transition-colors ${selectedAddressId === addr.id ? 'border-amazon-orange bg-orange-50' : ''}`}
+                      className={`flex gap-3 p-3 border rounded cursor-pointer hover:border-xmazon-orange transition-colors ${selectedAddressId === addr.id ? 'border-xmazon-orange bg-orange-50' : ''}`}
                     >
                       <input
                         type="radio"
@@ -100,7 +100,7 @@ export const Checkout = () => {
                         value={addr.id}
                         checked={selectedAddressId === addr.id}
                         onChange={() => setSelectedAddressId(addr.id)}
-                        className="mt-1 accent-amazon-orange flex-shrink-0"
+                        className="mt-1 accent-xmazon-orange flex-shrink-0"
                       />
                       <div className="text-sm">
                         <div className="flex items-center gap-2">
@@ -126,13 +126,13 @@ export const Checkout = () => {
           </div>
 
           {/* Step 2: Payment */}
-          <div className={`bg-white p-4 border rounded ${step === 2 ? 'border-amazon-orange shadow-md' : ''}`}>
+          <div className={`bg-white p-4 border rounded ${step === 2 ? 'border-xmazon-orange shadow-md' : ''}`}>
             <div className="flex justify-between mb-2">
               <h2 className="font-bold text-lg flex items-center gap-2">
                 {step > 2 && <Check size={16} className="text-green-600" />}
                 2. Payment Method
               </h2>
-              {step > 2 && <button onClick={() => setStep(2)} className="text-amazon-blue text-sm hover:underline">Change</button>}
+              {step > 2 && <button onClick={() => setStep(2)} className="text-xmazon-blue text-sm hover:underline">Change</button>}
             </div>
             {step === 2 ? (
               <div>
@@ -140,7 +140,7 @@ export const Checkout = () => {
                   {paymentMethods.map((pm, idx) => (
                     <label
                       key={pm.id || idx}
-                      className={`flex gap-3 p-3 border rounded cursor-pointer hover:border-amazon-orange transition-colors ${selectedPmId === pm.id ? 'border-amazon-orange bg-orange-50' : ''}`}
+                      className={`flex gap-3 p-3 border rounded cursor-pointer hover:border-xmazon-orange transition-colors ${selectedPmId === pm.id ? 'border-xmazon-orange bg-orange-50' : ''}`}
                     >
                       <input
                         type="radio"
@@ -148,7 +148,7 @@ export const Checkout = () => {
                         value={pm.id}
                         checked={selectedPmId === pm.id}
                         onChange={() => setSelectedPmId(pm.id)}
-                        className="mt-1 accent-amazon-orange flex-shrink-0"
+                        className="mt-1 accent-xmazon-orange flex-shrink-0"
                       />
                       <div className="text-sm">
                         <div className="flex items-center gap-2">
@@ -174,7 +174,7 @@ export const Checkout = () => {
           </div>
 
           {/* Step 3: Review */}
-          <div className={`bg-white p-4 border rounded ${step === 3 ? 'border-amazon-orange shadow-md' : ''}`}>
+          <div className={`bg-white p-4 border rounded ${step === 3 ? 'border-xmazon-orange shadow-md' : ''}`}>
             <h2 className="font-bold text-lg mb-4">3. Review items and shipping</h2>
             {step === 3 && (
               <div>
@@ -209,7 +209,7 @@ export const Checkout = () => {
               {loading ? 'Processing...' : 'Place your order'}
             </Button>
             <p className="text-xs text-gray-500 mb-4">
-              By placing your order, you agree to Amazon.mock's privacy notice and conditions of use.
+              By placing your order, you agree to Xmazon.mock's privacy notice and conditions of use.
             </p>
             <h3 className="font-bold text-lg mb-2">Order Summary</h3>
             <div className="text-sm space-y-1">

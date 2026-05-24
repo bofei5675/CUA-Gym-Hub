@@ -173,7 +173,7 @@ const CategoryCard = ({ title, category, productIds, allProducts }) => {
           </Link>
         ))}
       </div>
-      <Link to={`/search?category=${encodeURIComponent(category)}`} className="text-[13px] text-amazon-blue hover:text-amazon-orange hover:underline">
+      <Link to={`/search?category=${encodeURIComponent(category)}`} className="text-[13px] text-xmazon-blue hover:text-xmazon-orange hover:underline">
         See more
       </Link>
     </div>
@@ -195,7 +195,7 @@ const ScrollableProductRow = ({ title, products, seeMoreLink }) => {
       <div className="flex items-center justify-between mb-3">
         <h2 className="text-[18px] font-bold text-[#0F1111]">{title}</h2>
         {seeMoreLink && (
-          <Link to={seeMoreLink} className="text-[13px] text-amazon-blue hover:text-amazon-orange hover:underline">See more</Link>
+          <Link to={seeMoreLink} className="text-[13px] text-xmazon-blue hover:text-xmazon-orange hover:underline">See more</Link>
         )}
       </div>
       <div className="relative">
@@ -212,7 +212,7 @@ const ScrollableProductRow = ({ title, products, seeMoreLink }) => {
                 <div className="bg-gray-50 rounded p-2 h-[170px] flex items-center justify-center mb-2">
                   <img src={product.image} alt={product.title} className="max-h-full max-w-full object-contain group-hover:opacity-80 transition-opacity" />
                 </div>
-                <div className="text-[12px] text-[#111] line-clamp-2 mb-1 text-left group-hover:text-amazon-orange">{product.title}</div>
+                <div className="text-[12px] text-[#111] line-clamp-2 mb-1 text-left group-hover:text-xmazon-orange">{product.title}</div>
               </Link>
               <div className="text-[14px] font-bold text-red-700 text-left">${product.price.toFixed(2)}</div>
               {product.prime && (
@@ -276,7 +276,7 @@ export const Home = () => {
                 <h2 className="text-[18px] font-bold text-[#0F1111]">Today's Deals</h2>
                 <DealCountdown />
               </div>
-              <Link to="/search?deals=true" className="text-[13px] text-amazon-blue hover:text-amazon-orange hover:underline">See all deals</Link>
+              <Link to="/search?deals=true" className="text-[13px] text-xmazon-blue hover:text-xmazon-orange hover:underline">See all deals</Link>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
               {deals.slice(0, 4).map(product => (
@@ -299,7 +299,7 @@ export const Home = () => {
                   </div>
                   <div className="text-[14px] font-bold text-[#0F1111]">${product.price.toFixed(2)}</div>
                   <div className="text-[12px] text-gray-500 line-through">${product.originalPrice.toFixed(2)}</div>
-                  <Link to={`/product/${product.id}`} className="text-[12px] text-[#111] line-clamp-2 hover:text-amazon-orange mt-1 block">
+                  <Link to={`/product/${product.id}`} className="text-[12px] text-[#111] line-clamp-2 hover:text-xmazon-orange mt-1 block">
                     {product.title}
                   </Link>
                 </div>
@@ -322,21 +322,21 @@ export const Home = () => {
             <Link to="/search?category=Beauty">
               <img src={`https://picsum.photos/seed/beauty-banner/300/300`} alt="Beauty" className="w-full aspect-square object-cover rounded mb-3 hover:opacity-90 transition-opacity" />
             </Link>
-            <Link to="/search?category=Beauty" className="text-[13px] text-amazon-blue hover:text-amazon-orange hover:underline">Shop now</Link>
+            <Link to="/search?category=Beauty" className="text-[13px] text-xmazon-blue hover:text-xmazon-orange hover:underline">Shop now</Link>
           </div>
           <div className="bg-white p-5 shadow-sm">
             <h2 className="text-[16px] font-bold mb-3">Toys & Games for all ages</h2>
             <Link to="/search?category=Toys+%26+Games">
               <img src={`https://picsum.photos/seed/toys-banner/300/300`} alt="Toys" className="w-full aspect-square object-cover rounded mb-3 hover:opacity-90 transition-opacity" />
             </Link>
-            <Link to="/search?category=Toys+%26+Games" className="text-[13px] text-amazon-blue hover:text-amazon-orange hover:underline">Shop now</Link>
+            <Link to="/search?category=Toys+%26+Games" className="text-[13px] text-xmazon-blue hover:text-xmazon-orange hover:underline">Shop now</Link>
           </div>
           <div className="bg-white p-5 shadow-sm">
             <h2 className="text-[16px] font-bold mb-3">New home essentials</h2>
             <Link to="/search?category=Home+%26+Kitchen">
               <img src={`https://picsum.photos/seed/home-banner/300/300`} alt="Home" className="w-full aspect-square object-cover rounded mb-3 hover:opacity-90 transition-opacity" />
             </Link>
-            <Link to="/search?category=Home+%26+Kitchen" className="text-[13px] text-amazon-blue hover:text-amazon-orange hover:underline">Explore now</Link>
+            <Link to="/search?category=Home+%26+Kitchen" className="text-[13px] text-xmazon-blue hover:text-xmazon-orange hover:underline">Explore now</Link>
           </div>
           <div className="bg-white p-5 shadow-sm">
             <h2 className="text-[16px] font-bold mb-3">Sign in for the best experience</h2>
@@ -344,7 +344,7 @@ export const Home = () => {
             <Link to="/profile" className="block bg-[#ffd814] hover:bg-[#f7ca00] text-center text-[13px] py-1.5 rounded-lg border border-[#fcd200] font-medium text-[#0F1111] mb-3">
               Sign in securely
             </Link>
-            <p className="text-[12px] text-amazon-blue hover:text-amazon-orange hover:underline cursor-pointer">
+            <p className="text-[12px] text-xmazon-blue hover:text-xmazon-orange hover:underline cursor-pointer">
               <Link to="/profile">New customer? Start here</Link>
             </p>
           </div>

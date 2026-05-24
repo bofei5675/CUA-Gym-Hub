@@ -1,4 +1,4 @@
-# Design System Inspired by Alibaba Cloud (Aliyun) Console
+# Design System Inspired by Alibaba Cloud (Xliyun) Console
 
 ## 1. Visual Theme & Atmosphere
 
@@ -15,7 +15,7 @@ The Alibaba Cloud management console follows a professional, enterprise-grade cl
 - **Text Tertiary** (`#999999`): Placeholder text, disabled text
 
 ### Top Navigation Bar
-- **Nav Background** (`#232F3E`): Dark charcoal/navy top bar (matches Aliyun's dark header)
+- **Nav Background** (`#232F3E`): Dark charcoal/navy top bar (matches Xliyun's dark header)
 - **Nav Text** (`#FFFFFF`): White nav text
 - **Nav Text Muted** (`#B0B8C1`): Dimmed nav items
 - **Nav Hover** (`#37475A`): Hover background on nav items
@@ -340,7 +340,7 @@ Use simple line-style icons (similar to Alibaba's icon font). For the mock, use 
 
 ## 8. Responsive Notes
 
-The Aliyun console is desktop-only (min-width ~1200px). No mobile layout is needed. The sidebar can collapse to an icon-only rail (48px) to give more space to the main content area.
+The Xliyun console is desktop-only (min-width ~1200px). No mobile layout is needed. The sidebar can collapse to an icon-only rail (48px) to give more space to the main content area.
 
 ## 9. Product Catalog Drawer
 

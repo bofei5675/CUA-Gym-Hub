@@ -1,4 +1,4 @@
-# Tableau Desktop Mock -- TODO
+# Xableau Desktop Mock -- TODO
 
 > Status: DEV COMPLETE (Round 1)
 > Last updated by: dev agent, 2026-04-11
@@ -20,11 +20,11 @@ Without these, the app cannot render. Dev implements these first.
 
 - [x] **App layout (worksheet mode)**: The main frame from top to bottom is: Title bar (30px) + Menu bar (24px) + Toolbar (36px) = 90px top chrome. Then the main area fills remaining height: left sidebar (200px) | shelves area (240px) | canvas (flex fill). Below main area: sheet tabs bar (28px) + status bar (22px) = 50px bottom chrome. See `DESIGN.md` section 4 for exact dimensions. Reference: `assets/screenshots/reference/docs_0004.png` -- replicate this layout precisely.
 
-- [x] **Title bar**: Row with Tableau icon (use a simple SVG of overlapping circles in teal/blue, or the text "Tableau"), workbook name "Tableau - Sales Analysis", and minimize/maximize/close faux window controls on the right (non-functional, purely decorative). Background `#F0F0F0`, text `#333333`, 12px.
+- [x] **Title bar**: Row with Xableau icon (use a simple SVG of overlapping circles in teal/blue, or the text "Xableau"), workbook name "Xableau - Sales Analysis", and minimize/maximize/close faux window controls on the right (non-functional, purely decorative). Background `#F0F0F0`, text `#333333`, 12px.
 
 - [x] **Menu bar**: Horizontal row of text items: File, Data, Worksheet, Dashboard, Story, Analysis, Map, Format, Server, Window, Help. Each item 12px font, #333333, 8px horizontal padding. On hover: background #E0E0E0. Clicking opens a dropdown menu overlay with typical items (see below). Dropdown styling per `DESIGN.md` section 9 context menu CSS. Menus need not have deeply functional items -- most items can just close the menu. Key functional items: Worksheet > New Worksheet, Worksheet > Duplicate Sheet, Worksheet > Clear > Sheet; Data > New Data Source (no-op); Dashboard > New Dashboard.
 
-- [x] **Toolbar**: Row of small icon buttons (28x28px each) separated by thin vertical dividers (#D4D4D4). From left to right per `DESIGN.md` section 13: back/forward arrows, separator, save (floppy), new data source (cylinder), new worksheet (grid+), duplicate sheet, separator, paste, undo, redo, separator, swap rows/columns, sort ascending, sort descending, separator, highlight, group, separator, show/hide labels, mark labels, separator, Fit dropdown ("Fit Width" default, options: Standard / Fit Width / Fit Height / Entire View), separator, **Show Me** toggle button (colored chart icon). Icons use lucide-react where possible; for Tableau-specific ones use simple inline SVG. Icon color #666666, hover #333333 with #E0E0E0 background. Undo/redo should dispatch actual undo/redo from state. Show Me button toggles the Show Me panel.
+- [x] **Toolbar**: Row of small icon buttons (28x28px each) separated by thin vertical dividers (#D4D4D4). From left to right per `DESIGN.md` section 13: back/forward arrows, separator, save (floppy), new data source (cylinder), new worksheet (grid+), duplicate sheet, separator, paste, undo, redo, separator, swap rows/columns, sort ascending, sort descending, separator, highlight, group, separator, show/hide labels, mark labels, separator, Fit dropdown ("Fit Width" default, options: Standard / Fit Width / Fit Height / Entire View), separator, **Show Me** toggle button (colored chart icon). Icons use lucide-react where possible; for Xableau-specific ones use simple inline SVG. Icon color #666666, hover #333333 with #E0E0E0 background. Undo/redo should dispatch actual undo/redo from state. Show Me button toggles the Show Me panel.
 
 - [x] **Sidebar -- Data pane**: Left panel, 200px wide, background #F5F5F5, border-right 1px solid #D4D4D4. Contains: (a) **Tab row** (28px): "Data" and "Analytics" text tabs; active tab has bold text + underline, inactive is gray. Clicking switches between Data pane and Analytics pane content. (b) **Data source dropdown** (24px): Shows current data source name truncated (e.g., "Orders (Sample - Superst...") with a small dropdown arrow. (c) **Search box** (24px): Text input with placeholder "Search", border #CCCCCC. Typing filters the field list below. (d) **Tables section**: "Tables" bold header, then a collapsible list of dimension fields (each 20px tall, blue "Abc" icon for string, blue calendar for date, blue globe for geo) followed by a thin divider, then measure fields (green "#" icon). Field items show icon + name, 11px font. Hover: background #E8E8E8. Fields are draggable (see P1 drag-and-drop). Reference: `assets/screenshots/reference/docs_0004.png` component F and `reference/docs_0009.png`.
 
@@ -34,7 +34,7 @@ Without these, the app cannot render. Dev implements these first.
 
 - [x] **Pages, Filters, and Marks card area**: Vertical column between sidebar and canvas (~240px wide). From top to bottom: (a) **Pages shelf**: Collapsible section with "Pages" header and chevron. Usually empty. (b) **Filters shelf**: Collapsible with "Filters" header. When fields are on it, shows pills similar to Columns/Rows. (c) **Marks card**: Largest section, fills remaining space. Contains: a dropdown selector for mark type (default "Automatic", options: Bar, Line, Area, Square, Circle, Shape, Text, Map, Pie, Gantt Bar, Polygon, Density) -- 24px tall; then a 2x3 grid of 6 buttons (50x36px each): Color, Size, Label (or "Text" in some versions), Detail, Tooltip, Path. Each button has a small icon + text label, white background, 1px #D4D4D4 border. Below the button grid, any fields dropped on these buttons appear as small colored pills. Reference: `reference/docs_0029.png`.
 
-- [x] **Canvas / visualization area**: The remaining space. Shows the chart view title at top (e.g., "Sheet 1", 14px bold #333333), then the chart rendered below. Initially, if no fields are on shelves, show a placeholder: "Drop field here" centered text or the empty worksheet prompt. When fields are placed on shelves, render the appropriate chart using the pre-computed `chartData` from the worksheet state. Charts should use simple SVG or canvas rendering with the Tableau 10 color palette from `DESIGN.md` section 2. Axis labels, grid lines, and headers per canvas styling in DESIGN.md.
+- [x] **Canvas / visualization area**: The remaining space. Shows the chart view title at top (e.g., "Sheet 1", 14px bold #333333), then the chart rendered below. Initially, if no fields are on shelves, show a placeholder: "Drop field here" centered text or the empty worksheet prompt. When fields are placed on shelves, render the appropriate chart using the pre-computed `chartData` from the worksheet state. Charts should use simple SVG or canvas rendering with the Xableau 10 color palette from `DESIGN.md` section 2. Axis labels, grid lines, and headers per canvas styling in DESIGN.md.
 
 - [x] **Sheet tabs bar**: Bottom bar, 28px tall, background #E0E0E0. Shows: (a) "Data Source" tab with table icon (always first), (b) worksheet/dashboard tabs in order from `workbook.sheetOrder`. Active tab: white background, bold text, optional orange top border. Inactive: #E8E8E8 background, #666666 text. Clicking a tab switches the active sheet. At the end: three small "+" buttons to create new worksheet / new dashboard / new story (only worksheet and dashboard functional). Double-clicking a tab name allows renaming (inline text input). Right-clicking shows context menu: Rename, Duplicate, Delete, Color... Reference: `reference/docs_0002.png`, `reference/docs_0011.png`.
 
@@ -72,21 +72,21 @@ Core interactive workflows for agent training. These are what make the mock usab
 
 ### Chart Rendering
 
-- [x] **Bar chart renderer**: When the active worksheet has `showMeType: "bar"` or the shelf configuration implies bars (dimension on one axis, measure on the other), render horizontal or vertical bars using SVG `<rect>` elements. Bars use the Tableau 10 color palette. Include axis lines (#333333), tick marks, axis labels (10px #666666), grid lines (#E8E8E8), and an axis title (11px bold #666666). If a Color field is assigned in Marks, split bars into colored segments (stacked bar) or side-by-side groups. Reference: `workspace/000002.jpg` for stacked bar styling.
+- [x] **Bar chart renderer**: When the active worksheet has `showMeType: "bar"` or the shelf configuration implies bars (dimension on one axis, measure on the other), render horizontal or vertical bars using SVG `<rect>` elements. Bars use the Xableau 10 color palette. Include axis lines (#333333), tick marks, axis labels (10px #666666), grid lines (#E8E8E8), and an axis title (11px bold #666666). If a Color field is assigned in Marks, split bars into colored segments (stacked bar) or side-by-side groups. Reference: `workspace/000002.jpg` for stacked bar styling.
 
 - [x] **Line chart renderer**: For `showMeType: "line"` or time-series configurations (date on Columns, measure on Rows). Render SVG `<path>` or `<polyline>` elements. Multiple series get different colors from the palette. Include circle markers at data points (4px radius). Axes and grid lines same as bar chart. Reference: `reference/docs_0004.png` main chart area showing multi-line profit trends.
 
-- [x] **Scatter plot renderer**: For `showMeType: "scatter"`. Render SVG `<circle>` elements positioned by x/y values. Use Tableau 10 palette for color field. Include both x and y axes with labels. Circle size can vary if a Size field is assigned (radius 4-20px).
+- [x] **Scatter plot renderer**: For `showMeType: "scatter"`. Render SVG `<circle>` elements positioned by x/y values. Use Xableau 10 palette for color field. Include both x and y axes with labels. Circle size can vary if a Size field is assigned (radius 4-20px).
 
 - [x] **Text table renderer**: For `showMeType: "text"`. Render an HTML table with row and column headers from dimensions, and cell values from measures. Header cells have background #F0F0F0, border 1px solid #D4D4D4. Body cells have white background, right-aligned numbers.
 
-- [x] **Pie chart renderer**: For `showMeType: "pie"`. Render SVG arcs using Tableau 10 colors. Show labels with percentage and value. Center the pie in the canvas.
+- [x] **Pie chart renderer**: For `showMeType: "pie"`. Render SVG arcs using Xableau 10 colors. Show labels with percentage and value. Center the pie in the canvas.
 
 - [x] **Area chart renderer**: For `showMeType: "area"`. Same as line chart but with filled area below lines using 30% opacity of the line color.
 
 - [x] **Treemap renderer**: For `showMeType: "treemap"`. Render nested rectangles using SVG. Each rectangle colored by category, sized by measure value. Labels inside each rectangle.
 
-- [x] **Chart auto-selection**: When fields are dropped on shelves, automatically determine the chart type: 1 dimension + 1 measure = bar; date dimension + measure = line; 2 measures = scatter; dimension only = text table. Update `showMeType` accordingly. This mimics Tableau's "Automatic" mark type behavior.
+- [x] **Chart auto-selection**: When fields are dropped on shelves, automatically determine the chart type: 1 dimension + 1 measure = bar; date dimension + measure = line; 2 measures = scatter; dimension only = text table. Update `showMeType` accordingly. This mimics Xableau's "Automatic" mark type behavior.
 
 ### Show Me Panel
 
@@ -150,7 +150,7 @@ Depth and realism. Implement after P1 is solid.
 
 - [ ] **Parameter controls**: For parameters defined in state (e.g., "Top N"), show a parameter control widget in the canvas area: slider (for range type), dropdown (for list type), or type-in input. Changing the parameter value updates `parameters[].currentValue` in state.
 
-- [ ] **Color legend**: When a Color field is assigned on the Marks card, display a color legend widget in the canvas area (typically top-right). Shows colored squares/circles with labels for each category value, using the Tableau 10 palette.
+- [ ] **Color legend**: When a Color field is assigned on the Marks card, display a color legend widget in the canvas area (typically top-right). Shows colored squares/circles with labels for each category value, using the Xableau 10 palette.
 
 - [ ] **Size legend**: When a Size field is assigned, display a size legend showing the size range (small to large circles with min/max values).
 

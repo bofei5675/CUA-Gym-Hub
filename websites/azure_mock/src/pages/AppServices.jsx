@@ -29,7 +29,7 @@ export default function AppServices() {
       </div>
 
       <div className="card" style={{ padding: 0 }}>
-        <table className="azure-table">
+        <table className="xzure-table">
           <thead>
             <tr>
               <th>Name</th>
@@ -41,7 +41,7 @@ export default function AppServices() {
           </thead>
           <tbody>
             {filtered.length === 0 && (
-              <tr><td colSpan={5} style={{ textAlign: 'center', padding: '24px', color: 'var(--azure-text-secondary)' }}>No App Services found</td></tr>
+              <tr><td colSpan={5} style={{ textAlign: 'center', padding: '24px', color: 'var(--xzure-text-secondary)' }}>No App Services found</td></tr>
             )}
             {filtered.map(app => (
               <tr key={app.id}>

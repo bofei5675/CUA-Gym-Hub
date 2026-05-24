@@ -1,4 +1,4 @@
-# Asana Mock — Data Model
+# Xsana Mock — Data Model
 
 > Last updated: 2026-03-02 by plan agent
 > Source: `src/types/index.ts` + `src/data/initialData.ts`

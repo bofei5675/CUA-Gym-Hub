@@ -71,7 +71,7 @@ export default function ProjectOverview() {
                {branches.map(branch => <option key={branch} value={branch}>{branch}</option>)}
              </select>
            </label>
-           <button onClick={downloadProject} className="flex items-center gap-2 px-3 py-1.5 bg-gitlab-info text-white rounded text-sm font-medium hover:bg-blue-700">
+           <button onClick={downloadProject} className="flex items-center gap-2 px-3 py-1.5 bg-xitlab-info text-white rounded text-sm font-medium hover:bg-blue-700">
              <Download size={14} />
              <span>Code</span>
            </button>

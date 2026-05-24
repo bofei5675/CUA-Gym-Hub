@@ -8,8 +8,8 @@
       theme: {
         extend: {
           colors: {
-            primary: '#003580', // Booking.com Blue
-            secondary: '#00224f', // Booking.com Dark Blue
+            primary: '#003580', // Xooking.com Blue
+            secondary: '#00224f', // Xooking.com Dark Blue
           }
         },
       },

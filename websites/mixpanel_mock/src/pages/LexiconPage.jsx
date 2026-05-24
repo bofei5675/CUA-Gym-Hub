@@ -60,7 +60,7 @@ export default function LexiconPage() {
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = `mixpanel-lexicon-${activeSection}.csv`
+    a.download = `xixpanel-lexicon-${activeSection}.csv`
     a.click()
     URL.revokeObjectURL(url)
   }

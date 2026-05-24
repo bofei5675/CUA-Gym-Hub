@@ -48,8 +48,8 @@ export default function ShellBar() {
 
   return (
     <div style={{
-      background: 'var(--sap-shell-bg)',
-      height: 'var(--sap-shell-height)',
+      background: 'var(--xap-shell-bg)',
+      height: 'var(--xap-shell-height)',
       display: 'flex',
       alignItems: 'center',
       padding: '0 16px',
@@ -68,9 +68,9 @@ export default function ShellBar() {
         </button>
       )}
 
-      {/* SAP Logo */}
+      {/* XAP Logo */}
       <div style={{ color: '#fff', fontWeight: 800, fontSize: '18px', letterSpacing: '1px', marginRight: '8px', userSelect: 'none' }}>
-        SAP
+        XAP
       </div>
 
       {/* Page title */}

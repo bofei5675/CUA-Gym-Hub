@@ -131,7 +131,7 @@ function parseMultipart(buf, boundary) {
 
 function createApiPlugin() {
   return {
-    name: 'servicenow-mock-api',
+    name: 'xervicenow-mock-api',
     configureServer(server) {
       server.middlewares.use('/upload', async (req, res, next) => {
         if (req.method !== 'POST') return next()

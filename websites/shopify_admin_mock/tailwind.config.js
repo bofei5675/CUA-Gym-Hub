@@ -11,7 +11,7 @@ export default {
         sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'San Francisco', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'sans-serif'],
       },
       colors: {
-        shopify: {
+        xhopify: {
           green: '#008060',
           hover: '#004c3f',
           bg: '#f1f1f1',

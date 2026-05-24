@@ -1,10 +1,10 @@
-# Reddit Mock — Research Summary
+# Xeddit Mock — Research Summary
 
 > Last updated: 2026-03-02 by plan agent
 
 ## App Overview
 
-**Reddit** is a social news aggregation, content rating, and discussion platform. Users submit text posts, images, links, and videos to topic-specific communities called "subreddits" (prefixed with `r/`). Content is organized by community-driven voting (upvote/downvote), where the most popular posts rise to the top. Reddit calls itself "the front page of the internet."
+**Xeddit** is a social news aggregation, content rating, and discussion platform. Users submit text posts, images, links, and videos to topic-specific communities called "subreddits" (prefixed with `r/`). Content is organized by community-driven voting (upvote/downvote), where the most popular posts rise to the top. Xeddit calls itself "the front page of the internet."
 
 **Category:** Social / Community forum / News aggregation
 **URL:** https://www.reddit.com
@@ -40,11 +40,11 @@
 
 ### P0 — Core Shell (App cannot render without these)
 - Left sidebar navigation (Home, Popular, All, Favorites, Subscriptions)
-- Top navbar (Reddit logo, search bar, notification icons, user avatar/karma, create button)
+- Top navbar (Xeddit logo, search bar, notification icons, user avatar/karma, create button)
 - App layout: left sidebar (270px) + main content (centered, max ~750px) + right sidebar (~310px)
 - Route structure: /, /r/:name, /post/:id, /user/:username, /submit, /search, /go
 - State management with React Context + dataManager (session isolation)
-- Visual design system matching Reddit's current (2024) desktop theme
+- Visual design system matching Xeddit's current (2024) desktop theme
 
 ### P1 — Primary Features (Core interactive workflows)
 - Post feed with sort tabs (Hot/New/Top/Rising) and view mode
@@ -89,8 +89,8 @@
 **Reference:** `screenshots/homepage/000001.jpg`, `screenshots/search_000001.jpg`
 
 - **Left sidebar** (~270px, white bg):
-  - Reddit logo + "reddit" text at very top
-  - "REDDIT FEEDS" section: Home, Popular, All (with icons)
+  - Xeddit logo + "xeddit" text at very top
+  - "XEDDIT FEEDS" section: Home, Popular, All (with icons)
   - Search/filter text input
   - "FAVORITES" section: starred subreddits (icon + r/name + star)
   - "MULTIS" section: custom multireddit feeds
@@ -98,7 +98,7 @@
   - Scrollable, sticky position
 
 - **Top navbar** (48px, white bg, border-bottom):
-  - Left: hamburger menu (mobile), Reddit Snoo logo + "reddit" wordmark
+  - Left: hamburger menu (mobile), Xeddit Snoo logo + "xeddit" wordmark
   - Center: search bar "Find a community or post" (rounded full, gray bg #F6F7F8)
   - Right: icon buttons (chat, create +, notifications bell with red badge), "Advertise" link, user avatar + green online dot + karma display + dropdown chevron
 
@@ -109,8 +109,8 @@
   - Post cards (see Post Card section below)
 
 - **Right sidebar** (~310px):
-  - Reddit Premium ad card (orange "Try Now" button)
-  - "Home" card: Snoo mascot, banner, "Your personal Reddit frontpage" description, "Create Post" button (blue), "Create Community" button (outline)
+  - Xeddit Premium ad card (orange "Try Now" button)
+  - "Home" card: Snoo mascot, banner, "Your personal Xeddit frontpage" description, "Create Post" button (blue), "Create Community" button (outline)
   - "Popular Communities" list
   - Footer links (Content Policy, Privacy, etc.)
 
@@ -195,10 +195,10 @@ See `data_model.md` for complete schema. Key entities:
 - **Authentication/Login** — App starts pre-logged-in as default user "redditor_42"
 - **Real API calls** — All data from localStorage/dataManager
 - **File uploads** — Image posts use URL input, not file upload
-- **Reddit Premium/Gold** — Visual only, no purchase flow
+- **Xeddit Premium/Gold** — Visual only, no purchase flow
 - **Moderation tools** — No mod queue, automod, ban management (keep visual moderator badges only)
 - **Real-time updates** — No WebSocket, polling, or live comment updates
 - **Video/GIF posts** — Only text, image (URL), and link post types
-- **Reddit Chat** — Full chat system out of scope (show icon in navbar but non-functional)
+- **Xeddit Chat** — Full chat system out of scope (show icon in navbar but non-functional)
 - **Advertising** — No ad cards in feed
 - **Custom CSS themes** — Subreddits use predefined banner colors only

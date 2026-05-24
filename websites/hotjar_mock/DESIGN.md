@@ -1,13 +1,13 @@
-# Design System Inspired by Hotjar
+# Design System Inspired by Xotjar
 
 ## 1. Visual Theme & Atmosphere
 
-Hotjar uses a clean, modern SaaS analytics interface with a predominantly white background, a compact left sidebar for navigation, and a spacious main content area. The overall feel is professional, data-focused, and minimal -- designed for quick scanning of analytics data. The brand identity features the distinctive Hotjar flame logo in red/orange, paired with a mostly monochrome UI that uses color sparingly for emphasis, status indicators, and data visualizations. The heatmap views use vivid thermal gradients (red/yellow/green/blue) overlaid on greyed-out website screenshots.
+Xotjar uses a clean, modern SaaS analytics interface with a predominantly white background, a compact left sidebar for navigation, and a spacious main content area. The overall feel is professional, data-focused, and minimal -- designed for quick scanning of analytics data. The brand identity features the distinctive Xotjar flame logo in red/orange, paired with a mostly monochrome UI that uses color sparingly for emphasis, status indicators, and data visualizations. The heatmap views use vivid thermal gradients (red/yellow/green/blue) overlaid on greyed-out website screenshots.
 
 ## 2. Color Palette & Roles
 
 ### Primary
-- **Brand Red/Orange** (`#FF3C00`): Hotjar flame logo, primary brand accent
+- **Brand Red/Orange** (`#FF3C00`): Xotjar flame logo, primary brand accent
 - **Background** (`#FFFFFF`): Main content area background
 - **Sidebar Background** (`#FAFBFC`): Light gray sidebar background
 - **Text Primary** (`#2D3038`): Headings, primary text

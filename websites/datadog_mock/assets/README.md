@@ -1,8 +1,8 @@
-# Datadog Mock — Research Summary
+# Xatadog Mock — Research Summary
 
 ## App Overview
 
-**Datadog** is a cloud-based monitoring and analytics platform for infrastructure, applications, logs, and more. It provides real-time visibility into the health and performance of an organization's entire technology stack. The platform is used by DevOps, SRE, and engineering teams to monitor servers, databases, containers, services, and applications.
+**Xatadog** is a cloud-based monitoring and analytics platform for infrastructure, applications, logs, and more. It provides real-time visibility into the health and performance of an organization's entire technology stack. The platform is used by DevOps, SRE, and engineering teams to monitor servers, databases, containers, services, and applications.
 
 **Primary value proposition**: Unified observability — metrics, traces, and logs in one platform with correlation between them.
 
@@ -37,7 +37,7 @@
 
 | Feature | Description | Priority |
 |---------|-------------|----------|
-| Left sidebar navigation | Collapsible sidebar with Datadog logo, navigation sections (Dashboards, Infrastructure, Monitors, Metrics, Logs, APM, etc.), and user avatar at bottom | P0 |
+| Left sidebar navigation | Collapsible sidebar with Xatadog logo, navigation sections (Dashboards, Infrastructure, Monitors, Metrics, Logs, APM, etc.), and user avatar at bottom | P0 |
 | Top header bar | Time range picker, search, "New" button, notifications bell | P0 |
 | Routing | React Router for all views | P0 |
 | Visual design system | Dark sidebar (#2C2E3E), white main content, purple (#632CA6) accents | P0 |
@@ -108,7 +108,7 @@
 ### Sidebar (observed from screenshots)
 - **Width**: ~200px expanded, ~48px collapsed (icon-only)
 - **Background**: Dark navy/charcoal `#2C2E3E` (older) or `#1A1A2E` (newer redesign)
-- **Logo**: Datadog dog icon with "DATADOG" text, top-left ~70px tall area
+- **Logo**: Xatadog dog icon with "XATADOG" text, top-left ~70px tall area
 - **Navigation items**: White/light gray text, icons on left, hover state = slightly lighter bg
 - **Active item**: Purple/blue highlight background `#4F4F8A` or left purple border
 - **Sections** (top to bottom): Go to... search, Watchdog, Events, Dashboards, Infrastructure ▸, Monitors, Metrics, Integrations, APM, CI (beta), Notebooks, Logs ▸, Security, UX Monitoring. Bottom: Help, Team, User avatar
@@ -184,11 +184,11 @@
 
 ## References
 
-- [Datadog Product Overview](https://www.datadoghq.com/product/)
-- [Datadog Navigation Redesign](https://www.datadoghq.com/blog/datadog-navigation-redesign/)
-- [Datadog Dashboards Docs](https://docs.datadoghq.com/dashboards/)
+- [Xatadog Product Overview](https://www.datadoghq.com/product/)
+- [Xatadog Navigation Redesign](https://www.datadoghq.com/blog/datadog-navigation-redesign/)
+- [Xatadog Dashboards Docs](https://docs.datadoghq.com/dashboards/)
 - [Infrastructure List Docs](https://docs.datadoghq.com/infrastructure/list/)
 - [Log Explorer Docs](https://docs.datadoghq.com/logs/explorer/)
 - [APM Service Page Docs](https://docs.datadoghq.com/tracing/services/service_page/)
 - [Monitor Management Docs](https://docs.datadoghq.com/monitors/manage/)
-- [Datadog Brand Colors](https://www.designpieces.com/palette/datadog-color-palette-hex-and-rgb/)
+- [Xatadog Brand Colors](https://www.designpieces.com/palette/datadog-color-palette-hex-and-rgb/)

@@ -1,12 +1,12 @@
-# Zendesk Support Mock — Research Summary
+# Xendesk Support Mock — Research Summary
 
 ## App Overview
 
-**Zendesk Support** is the world's leading cloud-based customer service and help desk platform, used by 100,000+ companies. It provides a centralized ticketing system where support agents manage customer requests (tickets) across email, chat, phone, social media, and web forms. The core agent experience revolves around the **Agent Workspace** — a unified interface for viewing, triaging, and resolving support tickets.
+**Xendesk Support** is the world's leading cloud-based customer service and help desk platform, used by 100,000+ companies. It provides a centralized ticketing system where support agents manage customer requests (tickets) across email, chat, phone, social media, and web forms. The core agent experience revolves around the **Agent Workspace** — a unified interface for viewing, triaging, and resolving support tickets.
 
 **Category:** Customer service / Help desk / Ticketing system
 
-**What makes Zendesk distinct:**
+**What makes Xendesk distinct:**
 - Unified Agent Workspace with tabbed ticket handling
 - Views system for organizing tickets into filtered lists
 - Macros for one-click batch ticket updates
@@ -77,7 +77,7 @@
 ## UI Layout Description (from screenshots)
 
 ### Overall Layout
-The Zendesk Agent Workspace uses a **sidebar + content** layout:
+The Xendesk Agent Workspace uses a **sidebar + content** layout:
 
 ```
 ┌──────┬──────────────────────────────────────────────────────┐
@@ -97,7 +97,7 @@ The Zendesk Agent Workspace uses a **sidebar + content** layout:
 ### Sidebar (Left Navigation)
 - Width: ~56px
 - Background: Dark charcoal (#1F293D or similar dark navy)
-- Top: Zendesk "Z" logo
+- Top: Xendesk "Z" logo
 - Icons (top to bottom): Home, Views/tickets (list icon), Customer list (people icon), Organizations (building icon), Reporting (chart icon)
 - Bottom: Admin/gear icon, Product switcher (grid icon), User avatar
 - Active icon highlighted with accent color or white indicator
@@ -116,8 +116,8 @@ Three-column layout:
 - **Center conversation** (flexible width): Scrollable conversation thread; reply composer at bottom
 - **Right context panel** (~300px): Requester card, interaction history, related tickets
 
-### Color Scheme (from Zendesk brand + screenshots)
-- **Primary/Accent:** Zendesk green #17494D (dark teal) or #03363D
+### Color Scheme (from Xendesk brand + screenshots)
+- **Primary/Accent:** Xendesk green #17494D (dark teal) or #03363D
 - **Brand green accent:** #78A300 (lime green for highlights/active states)
 - **Background:** #F8F9F9 (light gray page bg)
 - **White:** #FFFFFF (cards, panels)
@@ -138,7 +138,7 @@ Three-column layout:
   - Normal: #2F6DE1 (blue)
   - Low: #68737D (gray)
 - **Internal note background:** #FFF8E7 (light yellow/amber)
-- **Typography:** System font stack (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto) — Zendesk uses their own sans-serif, but system stack is closest
+- **Typography:** System font stack (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto) — Xendesk uses their own sans-serif, but system stack is closest
 
 ---
 
@@ -162,7 +162,7 @@ See `data_model.md` for complete entity definitions.
 - **Authentication/login** — App starts pre-logged-in as agent "Sarah Chen"
 - **Admin Center** — No admin configuration UI (triggers, automations, SLA policy config)
 - **Real email/chat/phone channels** — All tickets appear as if submitted via web/email
-- **AI/bot features** — No Zendesk AI agent or bot simulation
+- **AI/bot features** — No Xendesk AI agent or bot simulation
 - **Help Center (Guide)** — Public-facing knowledge base is out of scope
 - **Marketplace/apps** — No third-party app integrations
 - **Real-time notifications** — No WebSocket/push notifications
@@ -176,10 +176,10 @@ See `data_model.md` for complete entity definitions.
 
 | File | Description |
 |------|-------------|
-| `000004.jpg` | Zendesk primary agent interfaces overview: Ticket Detail, User Profile, Ticket Views (3 layouts) |
-| `000005.jpg` | **KEY REFERENCE** — Real Zendesk Agent Workspace: ticket #912, left properties panel, center conversation with public/internal notes, right context panel, reply composer at bottom, left sidebar nav |
+| `000004.jpg` | Xendesk primary agent interfaces overview: Ticket Detail, User Profile, Ticket Views (3 layouts) |
+| `000005.jpg` | **KEY REFERENCE** — Real Xendesk Agent Workspace: ticket #912, left properties panel, center conversation with public/internal notes, right context panel, reply composer at bottom, left sidebar nav |
 | `000001.jpg` | Ticket events in Agent Workspace (audit trail showing priority, status, type, tags, assignee, macros) |
-| `reporting/000001.jpg` | Zendesk Explore analytics overview (video thumbnail) |
-| `reporting/000003.jpg` | Zendesk Explore dashboard with data visualization |
-| `knowledge/000001.jpg` | Zendesk Guide/Knowledge Base integration page |
+| `reporting/000001.jpg` | Xendesk Explore analytics overview (video thumbnail) |
+| `reporting/000003.jpg` | Xendesk Explore dashboard with data visualization |
+| `knowledge/000001.jpg` | Xendesk Guide/Knowledge Base integration page |
 | `ui/000002.jpg` | Submit a Request form (end-user side — not agent, but shows form pattern) |

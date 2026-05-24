@@ -144,7 +144,7 @@ export const Profile = () => {
                   <div className="text-sm text-gray-600">{state.user.name}</div>
                 </div>
                 <button
-                  className="text-amazon-blue hover:underline text-sm"
+                  className="text-xmazon-blue hover:underline text-sm"
                   onClick={() => { setEditName(state.user.name); setEditEmail(state.user.email); setIsEditingProfile(true); }}
                 >
                   Edit
@@ -167,7 +167,7 @@ export const Profile = () => {
                     required
                     value={editName}
                     onChange={e => setEditName(e.target.value)}
-                    className="w-full border rounded p-2 text-sm focus:outline-none focus:border-amazon-orange"
+                    className="w-full border rounded p-2 text-sm focus:outline-none focus:border-xmazon-orange"
                   />
                 </div>
                 <div>
@@ -177,7 +177,7 @@ export const Profile = () => {
                     required
                     value={editEmail}
                     onChange={e => setEditEmail(e.target.value)}
-                    className="w-full border rounded p-2 text-sm focus:outline-none focus:border-amazon-orange"
+                    className="w-full border rounded p-2 text-sm focus:outline-none focus:border-xmazon-orange"
                   />
                 </div>
                 <div className="flex gap-2">
@@ -196,7 +196,7 @@ export const Profile = () => {
               <h2 className="text-lg font-bold">Your Addresses</h2>
               <button
                 onClick={() => setShowNewAddress(!showNewAddress)}
-                className="text-amazon-blue hover:underline text-sm font-medium"
+                className="text-xmazon-blue hover:underline text-sm font-medium"
               >
                 + Add new address
               </button>
@@ -209,32 +209,32 @@ export const Profile = () => {
                   <div className="col-span-2">
                     <label className="block text-xs font-bold mb-1">Full name</label>
                     <input required type="text" value={newAddressForm.fullName} onChange={e => setNewAddressForm({...newAddressForm, fullName: e.target.value})}
-                      className="w-full border rounded p-2 text-sm focus:outline-none focus:border-amazon-orange" />
+                      className="w-full border rounded p-2 text-sm focus:outline-none focus:border-xmazon-orange" />
                   </div>
                   <div className="col-span-2">
                     <label className="block text-xs font-bold mb-1">Street address</label>
                     <input required type="text" value={newAddressForm.street} onChange={e => setNewAddressForm({...newAddressForm, street: e.target.value})}
-                      className="w-full border rounded p-2 text-sm focus:outline-none focus:border-amazon-orange" />
+                      className="w-full border rounded p-2 text-sm focus:outline-none focus:border-xmazon-orange" />
                   </div>
                   <div>
                     <label className="block text-xs font-bold mb-1">City</label>
                     <input required type="text" value={newAddressForm.city} onChange={e => setNewAddressForm({...newAddressForm, city: e.target.value})}
-                      className="w-full border rounded p-2 text-sm focus:outline-none focus:border-amazon-orange" />
+                      className="w-full border rounded p-2 text-sm focus:outline-none focus:border-xmazon-orange" />
                   </div>
                   <div>
                     <label className="block text-xs font-bold mb-1">State</label>
                     <input required type="text" value={newAddressForm.state} onChange={e => setNewAddressForm({...newAddressForm, state: e.target.value})}
-                      className="w-full border rounded p-2 text-sm focus:outline-none focus:border-amazon-orange" />
+                      className="w-full border rounded p-2 text-sm focus:outline-none focus:border-xmazon-orange" />
                   </div>
                   <div>
                     <label className="block text-xs font-bold mb-1">ZIP code</label>
                     <input required type="text" value={newAddressForm.zip} onChange={e => setNewAddressForm({...newAddressForm, zip: e.target.value})}
-                      className="w-full border rounded p-2 text-sm focus:outline-none focus:border-amazon-orange" />
+                      className="w-full border rounded p-2 text-sm focus:outline-none focus:border-xmazon-orange" />
                   </div>
                   <div>
                     <label className="block text-xs font-bold mb-1">Phone (optional)</label>
                     <input type="text" value={newAddressForm.phone} onChange={e => setNewAddressForm({...newAddressForm, phone: e.target.value})}
-                      className="w-full border rounded p-2 text-sm focus:outline-none focus:border-amazon-orange" />
+                      className="w-full border rounded p-2 text-sm focus:outline-none focus:border-xmazon-orange" />
                   </div>
                 </div>
                 <div className="flex gap-2">
@@ -246,9 +246,9 @@ export const Profile = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {addresses.map((addr, idx) => (
-                <div key={addr.id || idx} className={`border rounded p-4 text-sm relative ${addr.isDefault ? 'border-amazon-orange' : ''}`}>
+                <div key={addr.id || idx} className={`border rounded p-4 text-sm relative ${addr.isDefault ? 'border-xmazon-orange' : ''}`}>
                   {addr.isDefault && (
-                    <span className="absolute top-2 right-2 text-xs bg-amazon-orange text-white px-2 py-0.5 rounded">Default</span>
+                    <span className="absolute top-2 right-2 text-xs bg-xmazon-orange text-white px-2 py-0.5 rounded">Default</span>
                   )}
                   <div className="font-bold">{addr.fullName}</div>
                   <div>{addr.street}</div>
@@ -258,7 +258,7 @@ export const Profile = () => {
                   {!addr.isDefault && addr.id && (
                     <button
                       onClick={() => { setDefaultAddress(addr.id); setToast('Default address updated.'); }}
-                      className="mt-2 text-amazon-blue hover:underline text-xs"
+                      className="mt-2 text-xmazon-blue hover:underline text-xs"
                     >
                       Set as default
                     </button>
@@ -276,7 +276,7 @@ export const Profile = () => {
             <div className="flex items-center gap-4 mb-4 p-4 bg-gradient-to-r from-[#232f3e] to-[#37475a] rounded-lg">
               <span className="text-[#00a8e1] font-bold italic text-[28px]">prime</span>
               <div className="text-white">
-                <div className="font-bold text-[14px]">{state.user.isPrime ? 'You are a Prime member' : 'Join Amazon Prime'}</div>
+                <div className="font-bold text-[14px]">{state.user.isPrime ? 'You are a Prime member' : 'Join Xmazon Prime'}</div>
                 <div className="text-[12px] text-gray-300">
                   {state.user.isPrime
                     ? `Member since ${state.user.memberSince || '2019'} - Enjoy FREE same-day, one-day, and two-day delivery`
@@ -315,7 +315,7 @@ export const Profile = () => {
               <h2 className="text-lg font-bold">Payment methods</h2>
               <button
                 onClick={() => setShowNewPm(!showNewPm)}
-                className="text-amazon-blue hover:underline text-sm font-medium"
+                className="text-xmazon-blue hover:underline text-sm font-medium"
               >
                 + Add a card
               </button>
@@ -327,7 +327,7 @@ export const Profile = () => {
                 <div>
                   <label className="block text-xs font-bold mb-1">Card type</label>
                   <select value={newPmForm.brand} onChange={e => setNewPmForm({...newPmForm, brand: e.target.value})}
-                    className="w-full border rounded p-2 text-sm focus:outline-none focus:border-amazon-orange">
+                    className="w-full border rounded p-2 text-sm focus:outline-none focus:border-xmazon-orange">
                     <option>Visa</option>
                     <option>Mastercard</option>
                     <option>American Express</option>
@@ -339,13 +339,13 @@ export const Profile = () => {
                   <input required type="text" maxLength={4} minLength={4} pattern="\d{4}" value={newPmForm.last4}
                     onChange={e => setNewPmForm({...newPmForm, last4: e.target.value.replace(/\D/g, '').slice(0, 4)})}
                     placeholder="1234"
-                    className="w-full border rounded p-2 text-sm focus:outline-none focus:border-amazon-orange" />
+                    className="w-full border rounded p-2 text-sm focus:outline-none focus:border-xmazon-orange" />
                 </div>
                 <div>
                   <label className="block text-xs font-bold mb-1">Expiry (MM/YY)</label>
                   <input required type="text" placeholder="12/28" value={newPmForm.expiry}
                     onChange={e => setNewPmForm({...newPmForm, expiry: e.target.value})}
-                    className="w-full border rounded p-2 text-sm focus:outline-none focus:border-amazon-orange" />
+                    className="w-full border rounded p-2 text-sm focus:outline-none focus:border-xmazon-orange" />
                 </div>
                 <div className="flex gap-2">
                   <Button type="submit">Add card</Button>
@@ -356,9 +356,9 @@ export const Profile = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {paymentMethods.map((pm, idx) => (
-                <div key={pm.id || idx} className={`border rounded p-4 text-sm relative ${pm.isDefault ? 'border-amazon-orange' : ''}`}>
+                <div key={pm.id || idx} className={`border rounded p-4 text-sm relative ${pm.isDefault ? 'border-xmazon-orange' : ''}`}>
                   {pm.isDefault && (
-                    <span className="absolute top-2 right-2 text-xs bg-amazon-orange text-white px-2 py-0.5 rounded">Default</span>
+                    <span className="absolute top-2 right-2 text-xs bg-xmazon-orange text-white px-2 py-0.5 rounded">Default</span>
                   )}
                   <div className="flex items-center gap-2 font-bold">
                     <CreditCard size={16} className="text-gray-500" />
@@ -368,7 +368,7 @@ export const Profile = () => {
                   {!pm.isDefault && pm.id && (
                     <button
                       onClick={() => { setDefaultPaymentMethod(pm.id); setToast('Default payment method updated.'); }}
-                      className="mt-2 text-amazon-blue hover:underline text-xs"
+                      className="mt-2 text-xmazon-blue hover:underline text-xs"
                     >
                       Set as default
                     </button>

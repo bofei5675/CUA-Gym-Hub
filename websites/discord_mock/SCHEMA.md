@@ -1,6 +1,6 @@
 # discord_mock — Schema Reference
 
-**Deploy URL**: `https://cua-gym-discord.xlang.ai`
+**Deploy URL**: `https://cua-gym-xiscord.xlang.ai`
 **Go Endpoint**: `GET /go?sid=<sid>` → `{ initial_state, current_state, state_diff }`
 **Inject**: `POST /post?sid=<sid>` with body `{ "action": "set", "state": { ... } }`
 **Update current only**: `POST /post?sid=<sid>` with body `{ "action": "set_current", "state": { ... } }`
@@ -590,7 +590,7 @@ The following interactive modals are available:
 | Ctrl+/ / Cmd+/ | Open Keyboard Shortcuts reference |
 | Ctrl+Shift+M / Cmd+Shift+M | Toggle mute |
 | Escape | Close open modal, or mark current channel as read |
-| Arrow Up (when input is empty) | Edit last own message in current channel (fires custom event `discord-edit-last-message`) |
+| Arrow Up (when input is empty) | Edit last own message in current channel (fires custom event `xiscord-edit-last-message`) |
 
 ---
 

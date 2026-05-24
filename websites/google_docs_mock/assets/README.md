@@ -1,8 +1,8 @@
-# Google Docs Mock — Research Summary
+# Xoogle Docs Mock — Research Summary
 
 ## App Overview
 
-**Google Docs** is Google's web-based collaborative document editor, part of Google Workspace. It enables users to create, edit, format, and share rich-text documents in real-time. The app has two primary views: a **Document List home page** (docs.google.com) and a **Document Editor** page.
+**Xoogle Docs** is Google's web-based collaborative document editor, part of Google Workspace. It enables users to create, edit, format, and share rich-text documents in real-time. The app has two primary views: a **Document List home page** (docs.google.com) and a **Document Editor** page.
 
 **Real URL**: https://docs.google.com
 
@@ -190,5 +190,5 @@ From left to right:
 | `screenshots/000001.jpg` | Editor view: header with document title + star, menu bar (File/Edit/View/Insert/Format/Tools/Extensions/Help), formatting toolbar (search, undo/redo, print, spell check, paint format, zoom 100%, Normal text dropdown, Arial dropdown, font size 11 with ±, bold/italic/underline, text color, highlight), ruler, white document page on gray background |
 | `screenshots/000002.jpg` | Share dialog: "Share [doc name]" title, "Add people and groups" input, "People with access" section with avatar/name/email/role dropdown (Viewer ✓ / Commenter / Editor), "General access" with "Anyone with the link" and Viewer dropdown, "Copy link" and blue "Done" buttons |
 | `screenshots/000005.jpg` | Full editor view with Extensions menu open, showing complete toolbar with all formatting buttons visible (B/I/U, text color, link, comment, image, alignment, lists, indent), right sidebar panel |
-| `screenshots/home/000001.jpg` | Home page top: blue "Google Docs" header with search, "Start a new document" section with Blank (+) and Resume template cards |
+| `screenshots/home/000001.jpg` | Home page top: blue "Xoogle Docs" header with search, "Start a new document" section with Blank (+) and Resume template cards |
 | `screenshots/home/000004.jpg` | Home page header bar: hamburger ☰, blue Docs icon, "Docs" text, search bar with magnifying glass, Google Apps grid ⊞, user avatar with Google branding |

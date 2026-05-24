@@ -1,20 +1,20 @@
 :root {
-  --azure-blue: #0078d4;
-  --azure-blue-hover: #106ebe;
-  --azure-blue-dark: #005a9e;
-  --azure-blue-light: #e1efff;
-  --azure-bg: #f3f2f1;
-  --azure-surface: #ffffff;
-  --azure-text: #323130;
-  --azure-text-secondary: #605e5c;
-  --azure-text-disabled: #a19f9d;
-  --azure-border: #edebe9;
-  --azure-border-input: #8a8886;
-  --azure-success: #107c10;
-  --azure-error: #a4262c;
-  --azure-warning: #ffb900;
-  --azure-header-bg: #0078d4;
-  --azure-header-text: #ffffff;
+  --xzure-blue: #0078d4;
+  --xzure-blue-hover: #106ebe;
+  --xzure-blue-dark: #005a9e;
+  --xzure-blue-light: #e1efff;
+  --xzure-bg: #f3f2f1;
+  --xzure-surface: #ffffff;
+  --xzure-text: #323130;
+  --xzure-text-secondary: #605e5c;
+  --xzure-text-disabled: #a19f9d;
+  --xzure-border: #edebe9;
+  --xzure-border-input: #8a8886;
+  --xzure-success: #107c10;
+  --xzure-error: #a4262c;
+  --xzure-warning: #ffb900;
+  --xzure-header-bg: #0078d4;
+  --xzure-header-text: #ffffff;
 }
 
 *, *::before, *::after {
@@ -27,8 +27,8 @@ body {
   font-family: "Segoe UI", Inter, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.4;
-  color: var(--azure-text);
-  background: var(--azure-bg);
+  color: var(--xzure-text);
+  background: var(--xzure-bg);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -36,20 +36,20 @@ body {
 .page-title {
   font-size: 20px;
   font-weight: 600;
-  color: var(--azure-text);
+  color: var(--xzure-text);
   margin-bottom: 16px;
 }
 
 .section-header {
   font-size: 16px;
   font-weight: 600;
-  color: var(--azure-text);
+  color: var(--xzure-text);
   margin-bottom: 12px;
 }
 
 .caption {
   font-size: 12px;
-  color: var(--azure-text-secondary);
+  color: var(--xzure-text-secondary);
 }
 
 /* Buttons */
@@ -70,31 +70,31 @@ body {
 }
 
 .btn-primary {
-  background: var(--azure-blue);
+  background: var(--xzure-blue);
   color: #fff;
-  border-color: var(--azure-blue);
+  border-color: var(--xzure-blue);
 }
 .btn-primary:hover {
-  background: var(--azure-blue-hover);
-  border-color: var(--azure-blue-hover);
+  background: var(--xzure-blue-hover);
+  border-color: var(--xzure-blue-hover);
 }
 .btn-primary:active {
-  background: var(--azure-blue-dark);
+  background: var(--xzure-blue-dark);
 }
 
 .btn-default {
-  background: var(--azure-surface);
-  color: var(--azure-text);
-  border-color: var(--azure-border-input);
+  background: var(--xzure-surface);
+  color: var(--xzure-text);
+  border-color: var(--xzure-border-input);
 }
 .btn-default:hover {
-  background: var(--azure-bg);
+  background: var(--xzure-bg);
 }
 
 .btn-danger {
-  background: var(--azure-surface);
-  color: var(--azure-error);
-  border-color: var(--azure-error);
+  background: var(--xzure-surface);
+  color: var(--xzure-error);
+  border-color: var(--xzure-error);
 }
 .btn-danger:hover {
   background: #fde7e9;
@@ -103,7 +103,7 @@ body {
 .btn-link {
   background: none;
   border: none;
-  color: var(--azure-blue);
+  color: var(--xzure-blue);
   padding: 0;
   min-height: auto;
   font-weight: 400;
@@ -115,8 +115,8 @@ body {
 
 /* Cards */
 .card {
-  background: var(--azure-surface);
-  border: 1px solid var(--azure-border);
+  background: var(--xzure-surface);
+  border: 1px solid var(--xzure-border);
   border-radius: 2px;
   padding: 16px;
 }
@@ -127,19 +127,19 @@ body {
   padding: 4px 8px;
   font-size: 14px;
   font-family: inherit;
-  border: 1px solid var(--azure-border-input);
+  border: 1px solid var(--xzure-border-input);
   border-radius: 2px;
-  color: var(--azure-text);
-  background: var(--azure-surface);
+  color: var(--xzure-text);
+  background: var(--xzure-surface);
   outline: none;
   transition: border-color 0.1s;
 }
 .input:focus {
-  border-color: var(--azure-blue);
-  border-bottom: 2px solid var(--azure-blue);
+  border-color: var(--xzure-blue);
+  border-bottom: 2px solid var(--xzure-blue);
 }
 .input::placeholder {
-  color: var(--azure-text-disabled);
+  color: var(--xzure-text-disabled);
 }
 
 select.input {
@@ -155,11 +155,11 @@ select.input {
 .azure-table th {
   font-weight: 600;
   font-size: 12px;
-  color: var(--azure-text-secondary);
+  color: var(--xzure-text-secondary);
   text-align: left;
   padding: 8px 12px;
-  border-bottom: 1px solid var(--azure-border);
-  background: var(--azure-surface);
+  border-bottom: 1px solid var(--xzure-border);
+  background: var(--xzure-surface);
   white-space: nowrap;
   user-select: none;
 }
@@ -167,21 +167,21 @@ select.input {
   cursor: pointer;
 }
 .azure-table th.sortable:hover {
-  color: var(--azure-text);
+  color: var(--xzure-text);
 }
 .azure-table td {
   padding: 8px 12px;
-  border-bottom: 1px solid var(--azure-border);
+  border-bottom: 1px solid var(--xzure-border);
   vertical-align: middle;
 }
 .azure-table tr:hover td {
-  background: var(--azure-bg);
+  background: var(--xzure-bg);
 }
 .azure-table tr.selected td {
-  background: var(--azure-blue-light);
+  background: var(--xzure-blue-light);
 }
 .azure-table a {
-  color: var(--azure-blue);
+  color: var(--xzure-blue);
   text-decoration: none;
 }
 .azure-table a:hover {
@@ -201,23 +201,23 @@ select.input {
 }
 .badge-success {
   background: #dff6dd;
-  color: var(--azure-success);
+  color: var(--xzure-success);
 }
 .badge-error {
   background: #fde7e9;
-  color: var(--azure-error);
+  color: var(--xzure-error);
 }
 .badge-warning {
   background: #fff4ce;
   color: #835b00;
 }
 .badge-info {
-  background: var(--azure-blue-light);
-  color: var(--azure-blue);
+  background: var(--xzure-blue-light);
+  color: var(--xzure-blue);
 }
 .badge-gray {
   background: #eeeeee;
-  color: var(--azure-text-secondary);
+  color: var(--xzure-text-secondary);
 }
 
 /* Command bar */
@@ -226,7 +226,7 @@ select.input {
   align-items: center;
   gap: 8px;
   padding: 8px 0;
-  border-bottom: 1px solid var(--azure-border);
+  border-bottom: 1px solid var(--xzure-border);
   margin-bottom: 16px;
   flex-wrap: wrap;
 }
@@ -265,7 +265,7 @@ select.input {
 .main-content {
   flex: 1;
   padding: 24px;
-  background: var(--azure-bg);
+  background: var(--xzure-bg);
   min-height: calc(100vh - 48px);
   overflow-y: auto;
 }
@@ -281,8 +281,8 @@ select.input {
   left: 0;
   width: 250px;
   height: calc(100vh - 48px);
-  background: var(--azure-surface);
-  border-right: 1px solid var(--azure-border);
+  background: var(--xzure-surface);
+  border-right: 1px solid var(--xzure-border);
   overflow-y: auto;
   z-index: 100;
   display: flex;
@@ -299,14 +299,14 @@ select.input {
 
 .sidebar-divider {
   height: 1px;
-  background: var(--azure-border);
+  background: var(--xzure-border);
   margin: 12px 0;
 }
 
 .sidebar-section-label {
   font-size: 12px;
   font-weight: 600;
-  color: var(--azure-text-secondary);
+  color: var(--xzure-text-secondary);
   padding: 4px 12px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -319,19 +319,19 @@ select.input {
   padding: 0 12px;
   height: 36px;
   font-size: 14px;
-  color: var(--azure-text);
+  color: var(--xzure-text);
   cursor: pointer;
   text-decoration: none;
   border-left: 3px solid transparent;
   transition: background 0.1s;
 }
 .sidebar-item:hover {
-  background: var(--azure-bg);
+  background: var(--xzure-bg);
 }
 .sidebar-item.active {
-  background: var(--azure-blue-light);
-  border-left-color: var(--azure-blue);
-  color: var(--azure-blue);
+  background: var(--xzure-blue-light);
+  border-left-color: var(--xzure-blue);
+  color: var(--xzure-blue);
 }
 .sidebar-item svg {
   width: 20px;
@@ -342,7 +342,7 @@ select.input {
 .sidebar-footer {
   margin-top: auto;
   padding: 12px;
-  border-top: 1px solid var(--azure-border);
+  border-top: 1px solid var(--xzure-border);
 }
 
 /* Header */
@@ -352,7 +352,7 @@ select.input {
   left: 0;
   right: 0;
   height: 48px;
-  background: var(--azure-header-bg);
+  background: var(--xzure-header-bg);
   display: flex;
   align-items: center;
   padding: 0 16px;
@@ -369,7 +369,7 @@ select.input {
 .header-hamburger {
   background: none;
   border: none;
-  color: var(--azure-header-text);
+  color: var(--xzure-header-text);
   cursor: pointer;
   padding: 6px;
   border-radius: 2px;
@@ -381,7 +381,7 @@ select.input {
 }
 
 .header-brand {
-  color: var(--azure-header-text);
+  color: var(--xzure-header-text);
   font-size: 16px;
   font-weight: 600;
   white-space: nowrap;
@@ -412,11 +412,11 @@ select.input {
 }
 .header-search-input:focus {
   background: #fff;
-  color: var(--azure-text);
-  border-color: var(--azure-blue);
+  color: var(--xzure-text);
+  border-color: var(--xzure-blue);
 }
 .header-search-input:focus::placeholder {
-  color: var(--azure-text-disabled);
+  color: var(--xzure-text-disabled);
 }
 
 .header-search-icon {
@@ -428,7 +428,7 @@ select.input {
   pointer-events: none;
 }
 .header-search-input:focus ~ .header-search-icon {
-  color: var(--azure-text-secondary);
+  color: var(--xzure-text-secondary);
 }
 
 .header-right {
@@ -440,7 +440,7 @@ select.input {
 .header-icon-btn {
   background: none;
   border: none;
-  color: var(--azure-header-text);
+  color: var(--xzure-header-text);
   cursor: pointer;
   padding: 6px;
   border-radius: 2px;
@@ -456,7 +456,7 @@ select.input {
   position: absolute;
   top: 0;
   right: 0;
-  background: var(--azure-error);
+  background: var(--xzure-error);
   color: #fff;
   font-size: 10px;
   font-weight: 600;
@@ -485,7 +485,7 @@ select.input {
   border-radius: 2px;
   border: none;
   background: none;
-  color: var(--azure-header-text);
+  color: var(--xzure-header-text);
 }
 .header-user:hover {
   background: rgba(255,255,255,0.15);
@@ -528,18 +528,18 @@ select.input {
   min-height: 32px;
 }
 .breadcrumb a {
-  color: var(--azure-blue);
+  color: var(--xzure-blue);
   text-decoration: none;
 }
 .breadcrumb a:hover {
   text-decoration: underline;
 }
 .breadcrumb-separator {
-  color: var(--azure-text-secondary);
+  color: var(--xzure-text-secondary);
   margin: 0 2px;
 }
 .breadcrumb-current {
-  color: var(--azure-text);
+  color: var(--xzure-text);
 }
 
 /* Search dropdown */
@@ -548,8 +548,8 @@ select.input {
   top: 100%;
   left: 0;
   right: 0;
-  background: var(--azure-surface);
-  border: 1px solid var(--azure-border);
+  background: var(--xzure-surface);
+  border: 1px solid var(--xzure-border);
   border-radius: 4px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   max-height: 500px;
@@ -566,10 +566,10 @@ select.input {
   font-size: 14px;
 }
 .search-dropdown-item:hover, .search-dropdown-item.highlighted {
-  background: var(--azure-bg);
+  background: var(--xzure-bg);
 }
 .search-dropdown-item-label {
-  color: var(--azure-text-secondary);
+  color: var(--xzure-text-secondary);
   font-size: 12px;
   margin-left: auto;
 }
@@ -577,8 +577,8 @@ select.input {
   padding: 6px 16px;
   font-size: 12px;
   font-weight: 600;
-  color: var(--azure-text-secondary);
-  border-bottom: 1px solid var(--azure-border);
+  color: var(--xzure-text-secondary);
+  border-bottom: 1px solid var(--xzure-border);
 }
 
 /* Notification panel */
@@ -588,7 +588,7 @@ select.input {
   right: 0;
   width: 400px;
   height: calc(100vh - 48px);
-  background: var(--azure-surface);
+  background: var(--xzure-surface);
   box-shadow: -4px 0 12px rgba(0,0,0,0.15);
   z-index: 250;
   display: flex;
@@ -600,7 +600,7 @@ select.input {
   align-items: center;
   justify-content: space-between;
   padding: 16px;
-  border-bottom: 1px solid var(--azure-border);
+  border-bottom: 1px solid var(--xzure-border);
 }
 .notification-panel-header h2 {
   font-size: 18px;
@@ -615,11 +615,11 @@ select.input {
   display: flex;
   gap: 12px;
   padding: 12px 16px;
-  border-bottom: 1px solid var(--azure-border);
+  border-bottom: 1px solid var(--xzure-border);
   position: relative;
 }
 .notification-item.unread {
-  border-left: 3px solid var(--azure-blue);
+  border-left: 3px solid var(--xzure-blue);
 }
 .notification-item-icon {
   flex-shrink: 0;
@@ -640,12 +640,12 @@ select.input {
 }
 .notification-item-message {
   font-size: 13px;
-  color: var(--azure-text-secondary);
+  color: var(--xzure-text-secondary);
   margin-bottom: 4px;
 }
 .notification-item-time {
   font-size: 12px;
-  color: var(--azure-text-disabled);
+  color: var(--xzure-text-disabled);
 }
 .notification-item-dismiss {
   position: absolute;
@@ -654,11 +654,11 @@ select.input {
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--azure-text-secondary);
+  color: var(--xzure-text-secondary);
   padding: 2px;
 }
 .notification-item-dismiss:hover {
-  color: var(--azure-text);
+  color: var(--xzure-text);
 }
 
 /* Home page styles */
@@ -678,7 +678,7 @@ select.input {
   cursor: pointer;
   border-radius: 2px;
   text-decoration: none;
-  color: var(--azure-text);
+  color: var(--xzure-text);
   transition: box-shadow 0.15s, transform 0.15s;
 }
 .home-service-tile:hover {
@@ -713,12 +713,12 @@ select.input {
   align-items: center;
   gap: 12px;
   padding: 16px 20px;
-  background: var(--azure-surface);
-  border: 1px solid var(--azure-border);
+  background: var(--xzure-surface);
+  border: 1px solid var(--xzure-border);
   border-radius: 2px;
   cursor: pointer;
   text-decoration: none;
-  color: var(--azure-text);
+  color: var(--xzure-text);
   min-width: 200px;
   transition: box-shadow 0.15s;
 }
@@ -726,7 +726,7 @@ select.input {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 .navigate-card svg {
-  color: var(--azure-blue);
+  color: var(--xzure-blue);
 }
 
 /* Placeholder page */
@@ -737,11 +737,11 @@ select.input {
   margin-bottom: 8px;
 }
 .placeholder-message {
-  color: var(--azure-text-secondary);
+  color: var(--xzure-text-secondary);
   font-size: 14px;
   padding: 24px;
-  background: var(--azure-surface);
-  border: 1px solid var(--azure-border);
+  background: var(--xzure-surface);
+  border: 1px solid var(--xzure-border);
   border-radius: 2px;
   text-align: center;
 }

@@ -1,6 +1,6 @@
-# Twitter/X Mock — Research Summary
+# Xwitter/X Mock — Research Summary
 
-> **Application**: X (formerly Twitter) — [x.com](https://x.com)
+> **Application**: X (formerly Xwitter) — [x.com](https://x.com)
 > **Category**: Microblogging / Social Media Platform
 > **Researched**: 2026-02-28
 > **Current state**: Existing twitter_mock with ~85% core features; needs DM, bookmarks, lists, quote tweet, edit profile, and improved polish
@@ -9,7 +9,7 @@
 
 ## 1. Application Overview
 
-X (formerly Twitter) is a real-time microblogging and social media platform where users post short messages ("posts" / formerly "tweets") of up to 280 characters (25,000 for Premium subscribers). Users follow other accounts, engage via likes/reposts/replies, and discover content through algorithmic and chronological feeds.
+X (formerly Xwitter) is a real-time microblogging and social media platform where users post short messages ("posts" / formerly "tweets") of up to 280 characters (25,000 for Premium subscribers). Users follow other accounts, engage via likes/reposts/replies, and discover content through algorithmic and chronological feeds.
 
 ### Key Distinguishing Features
 - **Real-time feed** with two modes: "For you" (algorithmic) and "Following" (chronological)
@@ -47,7 +47,7 @@ Reference: `screenshots/profile_000002.jpg` (primary reference for full layout)
   - Premium (X logo) — *out of scope*
   - Profile (user avatar)
   - More (three dots ellipsis — opens dropdown)
-- **"Post" button** (large, rounded, Twitter-blue `#1DA1F2`) — opens compose modal
+- **"Post" button** (large, rounded, Xwitter-blue `#1DA1F2`) — opens compose modal
 - **User account pill** (bottom) — avatar + name + handle + ⋯ dropdown
 
 ### Main Content Area (max-width ~600px, centered)
@@ -158,7 +158,7 @@ From X's built-in shortcut panel (`?` key):
 ### Colors (from X/Twitter default theme — dark text on white)
 | Role | Color | Hex |
 |------|-------|-----|
-| Primary / Brand | Twitter Blue | `#1DA1F2` |
+| Primary / Brand | Xwitter Blue | `#1DA1F2` |
 | Text Primary | Near-black | `#0F1419` |
 | Text Secondary | Gray | `#536471` |
 | Text Tertiary / Muted | Light gray | `#8B98A5` |
@@ -281,12 +281,12 @@ From X's built-in shortcut panel (`?` key):
 
 | File | Description |
 |------|-------------|
-| `home_000001.jpg` | Twitter profile card embed showing user stats and post |
+| `home_000001.jpg` | Xwitter profile card embed showing user stats and post |
 | `home_000003.jpg` | Embedded tweet feed showing posts with engagement metrics |
 | `home_000004.jpg` | Tweet feed customization panel with live preview |
 | `profile_000001.jpg` | X profile page wireframe/mockup (X logo in top bar, banner, avatar, "You might like") |
 | `profile_000002.jpg` | **⭐ PRIMARY REFERENCE** — Full desktop 3-column layout: left sidebar (Home, Explore, Notifications, Messages, Bookmarks, Lists, Profile, More, Tweet button), main content (profile with banner, avatar, bio, stats, tabs: Tweets / Tweets & replies / Media / Likes, tweet cards), right sidebar (Search, photo grid, "You might like", "Trends for you") |
-| `profile_000004.jpg` | Multiple mobile Twitter screens showing: sidebar drawer menu, home feed, notifications (All/Mentions tabs), trending |
+| `profile_000004.jpg` | Multiple mobile Xwitter screens showing: sidebar drawer menu, home feed, notifications (All/Mentions tabs), trending |
 | `dm_000001.jpg` | Mobile DM conversation view (Japanese text, chat bubbles, compose bar) |
 | `dm_000004.jpg` | DM inbox with pinned chats feature announcement |
 | `dm_000005.jpg` | DM inbox showing conversation list with avatars, names, previews |

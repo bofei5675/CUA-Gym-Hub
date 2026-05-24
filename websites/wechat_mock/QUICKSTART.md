@@ -1,4 +1,4 @@
-# WeChat Mock 快速部署指南
+# XeChat Mock 快速部署指南
 
 ## 🚀 一键部署
 

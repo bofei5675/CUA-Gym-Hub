@@ -24,7 +24,7 @@ export default function PurchaseOrderDetail() {
   const [addingItem, setAddingItem] = useState(false)
   const [newItem, setNewItem] = useState({ materialName: '', materialNumber: '', quantity: '', unit: 'PC', netPrice: '', deliveryDate: '', plant: '1000', storageLocation: 'SL01' })
 
-  if (!po) return <div style={{ padding: '24px', color: 'var(--sap-text-secondary)' }}>Purchase Order not found.</div>
+  if (!po) return <div style={{ padding: '24px', color: 'var(--xap-text-secondary)' }}>Purchase Order not found.</div>
 
   function startEdit() {
     setEditData({ ...po })
@@ -90,7 +90,7 @@ export default function PurchaseOrderDetail() {
     return (
       <div className="form-field">
         <label>{label}</label>
-        <div style={{ fontSize: '14px', padding: '6px 0', color: 'var(--sap-text-primary)', borderBottom: '1px solid var(--sap-border)', minHeight: '32px' }}>
+        <div style={{ fontSize: '14px', padding: '6px 0', color: 'var(--xap-text-primary)', borderBottom: '1px solid var(--xap-border)', minHeight: '32px' }}>
           {value || '—'}
         </div>
       </div>
@@ -100,15 +100,15 @@ export default function PurchaseOrderDetail() {
   return (
     <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
       {/* Header */}
-      <div style={{ background: '#fff', borderBottom: '1px solid var(--sap-border)', padding: '12px 24px' }}>
-        <div style={{ fontSize: '12px', color: 'var(--sap-blue)', marginBottom: '4px', cursor: 'pointer' }}
+      <div style={{ background: '#fff', borderBottom: '1px solid var(--xap-border)', padding: '12px 24px' }}>
+        <div style={{ fontSize: '12px', color: 'var(--xap-blue)', marginBottom: '4px', cursor: 'pointer' }}
           onClick={() => navigate('/app/manage-purchase-orders')}>
           Purchase Orders /
         </div>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div>
-            <h1 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--sap-text-primary)' }}>{po.poNumber}</h1>
-            <div style={{ fontSize: '13px', color: 'var(--sap-text-secondary)' }}>{po.poTypeName} · {po.supplierName}</div>
+            <h1 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--xap-text-primary)' }}>{po.poNumber}</h1>
+            <div style={{ fontSize: '13px', color: 'var(--xap-text-secondary)' }}>{po.poTypeName} · {po.supplierName}</div>
           </div>
           <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
             <span className={`status-badge ${STATUS_CLASS[po.status] || ''}`}>{po.status}</span>
@@ -155,7 +155,7 @@ export default function PurchaseOrderDetail() {
                     <label>Notes</label>
                     {editMode
                       ? <textarea rows={3} value={editData.notes || ''} onChange={e => setEditData(d => ({ ...d, notes: e.target.value }))} style={{ resize: 'vertical' }} />
-                      : <div style={{ fontSize: '14px', padding: '6px 0', color: 'var(--sap-text-primary)', minHeight: '32px' }}>{po.notes || '—'}</div>
+                      : <div style={{ fontSize: '14px', padding: '6px 0', color: 'var(--xap-text-primary)', minHeight: '32px' }}>{po.notes || '—'}</div>
                     }
                   </div>
                 </div>
@@ -173,7 +173,7 @@ export default function PurchaseOrderDetail() {
               </div>
             </div>
             <div style={{ overflowX: 'auto' }}>
-              <table className="sap-table">
+              <table className="xap-table">
                 <thead>
                   <tr>
                     <th>Item #</th>
@@ -204,19 +204,19 @@ export default function PurchaseOrderDetail() {
                       <td>{item.deliveryDate}</td>
                       <td>{item.plant}</td>
                       {editMode && <td>
-                        <button className="btn-ghost" style={{ color: 'var(--sap-status-error)', fontSize: '16px', padding: '0 8px' }}
+                        <button className="btn-ghost" style={{ color: 'var(--xap-status-error)', fontSize: '16px', padding: '0 8px' }}
                           onClick={() => setConfirmDeleteItem(item)}>×</button>
                       </td>}
                     </tr>
                   ))}
                   {items.length === 0 && (
-                    <tr><td colSpan={editMode ? 10 : 9} style={{ textAlign: 'center', padding: '24px', color: 'var(--sap-text-secondary)' }}>No items</td></tr>
+                    <tr><td colSpan={editMode ? 10 : 9} style={{ textAlign: 'center', padding: '24px', color: 'var(--xap-text-secondary)' }}>No items</td></tr>
                   )}
                 </tbody>
               </table>
             </div>
             {addingItem && (
-              <div style={{ padding: '12px 16px', borderTop: '1px solid var(--sap-border)', background: 'var(--sap-page-bg)' }}>
+              <div style={{ padding: '12px 16px', borderTop: '1px solid var(--xap-border)', background: 'var(--xap-page-bg)' }}>
                 <div style={{ fontSize: '13px', fontWeight: 600, marginBottom: '8px' }}>Add New Item</div>
                 <div className="form-grid-3">
                   <div className="form-field">
@@ -287,8 +287,8 @@ export default function PurchaseOrderDetail() {
             <div className="section-header"><h3>Notes</h3></div>
             <div className="section-body">
               {editMode
-                ? <textarea rows={6} value={editData.notes || ''} onChange={e => setEditData(d => ({ ...d, notes: e.target.value }))} style={{ width: '100%', resize: 'vertical', border: '1px solid var(--sap-border)', borderRadius: '4px', padding: '8px', fontFamily: 'inherit', fontSize: '13px' }} />
-                : <p style={{ fontSize: '14px', color: po.notes ? 'var(--sap-text-primary)' : 'var(--sap-text-secondary)' }}>{po.notes || 'No notes'}</p>
+                ? <textarea rows={6} value={editData.notes || ''} onChange={e => setEditData(d => ({ ...d, notes: e.target.value }))} style={{ width: '100%', resize: 'vertical', border: '1px solid var(--xap-border)', borderRadius: '4px', padding: '8px', fontFamily: 'inherit', fontSize: '13px' }} />
+                : <p style={{ fontSize: '14px', color: po.notes ? 'var(--xap-text-primary)' : 'var(--xap-text-secondary)' }}>{po.notes || 'No notes'}</p>
               }
             </div>
           </div>
@@ -298,7 +298,7 @@ export default function PurchaseOrderDetail() {
       {/* Sticky footer edit bar */}
       {editMode && (
         <div className="sticky-footer">
-          <span style={{ fontSize: '13px', color: 'var(--sap-text-secondary)', marginRight: 'auto' }}>
+          <span style={{ fontSize: '13px', color: 'var(--xap-text-secondary)', marginRight: 'auto' }}>
             Editing Purchase Order {po.poNumber}
           </span>
           <button className="btn-secondary" onClick={cancelEdit}>Cancel</button>

@@ -16,8 +16,8 @@ export default function NavigationTabBar() {
   return (
     <div style={{
       background: '#fff',
-      borderBottom: '1px solid var(--sap-border)',
-      height: 'var(--sap-tab-height)',
+      borderBottom: '1px solid var(--xap-border)',
+      height: 'var(--xap-tab-height)',
       display: 'flex',
       alignItems: 'center',
       flexShrink: 0,
@@ -26,7 +26,7 @@ export default function NavigationTabBar() {
     }}>
       <button
         onClick={() => scroll(-1)}
-        style={{ background: 'none', border: 'none', padding: '0 8px', cursor: 'pointer', color: 'var(--sap-text-secondary)', flexShrink: 0, fontSize: '14px' }}
+        style={{ background: 'none', border: 'none', padding: '0 8px', cursor: 'pointer', color: 'var(--xap-text-secondary)', flexShrink: 0, fontSize: '14px' }}
       >
         &lt;
       </button>
@@ -50,8 +50,8 @@ export default function NavigationTabBar() {
                 padding: '0 16px',
                 background: 'none',
                 border: 'none',
-                borderBottom: isActive ? '2px solid var(--sap-blue)' : '2px solid transparent',
-                color: isActive ? 'var(--sap-blue)' : 'var(--sap-text-secondary)',
+                borderBottom: isActive ? '2px solid var(--xap-blue)' : '2px solid transparent',
+                color: isActive ? 'var(--xap-blue)' : 'var(--xap-text-secondary)',
                 fontWeight: isActive ? 600 : 400,
                 fontSize: '13px',
                 cursor: 'pointer',
@@ -67,7 +67,7 @@ export default function NavigationTabBar() {
       </div>
       <button
         onClick={() => scroll(1)}
-        style={{ background: 'none', border: 'none', padding: '0 8px', cursor: 'pointer', color: 'var(--sap-text-secondary)', flexShrink: 0, fontSize: '14px' }}
+        style={{ background: 'none', border: 'none', padding: '0 8px', cursor: 'pointer', color: 'var(--xap-text-secondary)', flexShrink: 0, fontSize: '14px' }}
       >
         &gt;
       </button>

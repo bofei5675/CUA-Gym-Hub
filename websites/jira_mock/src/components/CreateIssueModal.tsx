@@ -9,18 +9,18 @@ interface CreateIssueModalProps {
 }
 
 const typeIcons: Record<IssueType, React.ReactNode> = {
-  Story: <Bookmark className="text-jira-green" size={16} fill="currentColor" />,
-  Task: <CheckCircle2 className="text-jira-blue" size={16} />,
-  Bug: <AlertCircle className="text-jira-red" size={16} />,
+  Story: <Bookmark className="text-xira-green" size={16} fill="currentColor" />,
+  Task: <CheckCircle2 className="text-xira-blue" size={16} />,
+  Bug: <AlertCircle className="text-xira-red" size={16} />,
   Epic: <Zap className="text-purple-600" size={16} />,
 };
 
 const priorityIcons: Record<Priority, React.ReactNode> = {
-  Highest: <ArrowUp className="text-jira-red" size={16} />,
-  High: <ArrowUp className="text-jira-red" size={16} />,
-  Medium: <ArrowUp className="text-jira-yellow" size={16} />,
-  Low: <ArrowDown className="text-jira-green" size={16} />,
-  Lowest: <ArrowDown className="text-jira-blue" size={16} />,
+  Highest: <ArrowUp className="text-xira-red" size={16} />,
+  High: <ArrowUp className="text-xira-red" size={16} />,
+  Medium: <ArrowUp className="text-xira-yellow" size={16} />,
+  Low: <ArrowDown className="text-xira-green" size={16} />,
+  Lowest: <ArrowDown className="text-xira-blue" size={16} />,
 };
 
 export const CreateIssueModal: React.FC<CreateIssueModalProps> = ({ onClose }) => {
@@ -141,7 +141,7 @@ export const CreateIssueModal: React.FC<CreateIssueModalProps> = ({ onClose }) =
               Project
             </label>
             <div className="flex items-center gap-2 bg-gray-100 rounded px-3 py-2 text-sm text-gray-700">
-              <div className="w-5 h-5 bg-jira-blue rounded flex items-center justify-center text-white text-xs font-bold">
+              <div className="w-5 h-5 bg-xira-blue rounded flex items-center justify-center text-white text-xs font-bold">
                 {state.projects[0].key[0]}
               </div>
               {state.projects[0].name} ({state.projects[0].key})
@@ -157,7 +157,7 @@ export const CreateIssueModal: React.FC<CreateIssueModalProps> = ({ onClose }) =
               <select
                 value={issueType}
                 onChange={(e) => setIssueType(e.target.value as IssueType)}
-                className="w-full bg-white border border-gray-300 rounded px-3 py-2 text-sm appearance-none cursor-pointer focus:ring-2 focus:ring-jira-blue focus:border-transparent outline-none"
+                className="w-full bg-white border border-gray-300 rounded px-3 py-2 text-sm appearance-none cursor-pointer focus:ring-2 focus:ring-xira-blue focus:border-transparent outline-none"
               >
                 <option value="Story">Story</option>
                 <option value="Task">Task</option>
@@ -173,14 +173,14 @@ export const CreateIssueModal: React.FC<CreateIssueModalProps> = ({ onClose }) =
           {/* Summary */}
           <div>
             <label className="block text-xs font-semibold text-gray-500 uppercase mb-1">
-              Summary <span className="text-jira-red">*</span>
+              Summary <span className="text-xira-red">*</span>
             </label>
             <input
               ref={summaryRef}
               type="text"
               value={summary}
               onChange={(e) => setSummary(e.target.value)}
-              className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:border-jira-blue focus:ring-1 focus:ring-jira-blue outline-none"
+              className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:border-xira-blue focus:ring-1 focus:ring-xira-blue outline-none"
               placeholder="Enter a brief summary"
             />
           </div>
@@ -193,7 +193,7 @@ export const CreateIssueModal: React.FC<CreateIssueModalProps> = ({ onClose }) =
             <textarea
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:border-jira-blue focus:ring-1 focus:ring-jira-blue outline-none resize-y min-h-[80px]"
+              className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:border-xira-blue focus:ring-1 focus:ring-xira-blue outline-none resize-y min-h-[80px]"
               placeholder="Add a description..."
               rows={3}
             />
@@ -211,7 +211,7 @@ export const CreateIssueModal: React.FC<CreateIssueModalProps> = ({ onClose }) =
                 onChange={(e) =>
                   setAssigneeId(e.target.value || null)
                 }
-                className="w-full bg-white border border-gray-300 rounded px-3 py-2 text-sm cursor-pointer focus:ring-2 focus:ring-jira-blue focus:border-transparent outline-none"
+                className="w-full bg-white border border-gray-300 rounded px-3 py-2 text-sm cursor-pointer focus:ring-2 focus:ring-xira-blue focus:border-transparent outline-none"
               >
                 <option value="">Unassigned</option>
                 {state.users.map((u) => (
@@ -230,7 +230,7 @@ export const CreateIssueModal: React.FC<CreateIssueModalProps> = ({ onClose }) =
               <select
                 value={priority}
                 onChange={(e) => setPriority(e.target.value as Priority)}
-                className="w-full bg-white border border-gray-300 rounded px-3 py-2 text-sm cursor-pointer focus:ring-2 focus:ring-jira-blue focus:border-transparent outline-none"
+                className="w-full bg-white border border-gray-300 rounded px-3 py-2 text-sm cursor-pointer focus:ring-2 focus:ring-xira-blue focus:border-transparent outline-none"
               >
                 {(['Highest', 'High', 'Medium', 'Low', 'Lowest'] as Priority[]).map(
                   (p) => (
@@ -252,7 +252,7 @@ export const CreateIssueModal: React.FC<CreateIssueModalProps> = ({ onClose }) =
                 onChange={(e) =>
                   setSprintId(e.target.value || null)
                 }
-                className="w-full bg-white border border-gray-300 rounded px-3 py-2 text-sm cursor-pointer focus:ring-2 focus:ring-jira-blue focus:border-transparent outline-none"
+                className="w-full bg-white border border-gray-300 rounded px-3 py-2 text-sm cursor-pointer focus:ring-2 focus:ring-xira-blue focus:border-transparent outline-none"
               >
                 <option value="">Backlog</option>
                 {availableSprints.map((s) => (
@@ -275,7 +275,7 @@ export const CreateIssueModal: React.FC<CreateIssueModalProps> = ({ onClose }) =
                   setStoryPoints(parseInt(e.target.value) || 0)
                 }
                 min={0}
-                className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:border-jira-blue focus:ring-1 focus:ring-jira-blue outline-none"
+                className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:border-xira-blue focus:ring-1 focus:ring-xira-blue outline-none"
               />
             </div>
           </div>
@@ -288,7 +288,7 @@ export const CreateIssueModal: React.FC<CreateIssueModalProps> = ({ onClose }) =
             <select
               value={epicId || ''}
               onChange={(e) => setEpicId(e.target.value || null)}
-              className="w-full bg-white border border-gray-300 rounded px-3 py-2 text-sm cursor-pointer focus:ring-2 focus:ring-jira-blue focus:border-transparent outline-none"
+              className="w-full bg-white border border-gray-300 rounded px-3 py-2 text-sm cursor-pointer focus:ring-2 focus:ring-xira-blue focus:border-transparent outline-none"
             >
               <option value="">None</option>
               {epics.map((e) => (
@@ -335,7 +335,7 @@ export const CreateIssueModal: React.FC<CreateIssueModalProps> = ({ onClose }) =
                     addLabel(labelInput);
                   }
                 }}
-                className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:border-jira-blue focus:ring-1 focus:ring-jira-blue outline-none"
+                className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:border-xira-blue focus:ring-1 focus:ring-xira-blue outline-none"
                 placeholder="Type to add labels..."
               />
               {showLabelSuggestions && filteredLabelSuggestions.length > 0 && (
@@ -366,7 +366,7 @@ export const CreateIssueModal: React.FC<CreateIssueModalProps> = ({ onClose }) =
           <button
             onClick={handleCreate}
             disabled={!summary.trim()}
-            className="px-4 py-2 bg-jira-blue text-white rounded font-medium text-sm hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="px-4 py-2 bg-xira-blue text-white rounded font-medium text-sm hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
             Create
           </button>

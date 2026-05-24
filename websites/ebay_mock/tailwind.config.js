@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        ebay: {
+        xbay: {
           blue: '#0064D2',
           yellow: '#F5AF02',
           green: '#86B817',

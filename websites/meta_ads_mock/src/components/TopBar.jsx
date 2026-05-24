@@ -322,7 +322,7 @@ export default function TopBar() {
                 onClick={() => { showToast('Opening help center...'); setHelpOpen(false); }}
               >
                 <Info size={14} />
-                <span>Meta Ads Help Center</span>
+                <span>Xeta Ads Help Center</span>
               </button>
               <div className="topbar-help-divider" />
               <div className="topbar-help-section-label">Keyboard Shortcuts</div>

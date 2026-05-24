@@ -43,7 +43,7 @@ export default function UsersPage() {
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = 'mixpanel-users.csv'
+    a.download = 'xixpanel-users.csv'
     a.click()
     URL.revokeObjectURL(url)
   }

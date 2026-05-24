@@ -183,16 +183,16 @@ export default function TeamChat() {
   return (
     <div className="flex h-full">
       {/* Left sidebar */}
-      <div className="w-60 bg-white border-r border-zoom-border flex flex-col shrink-0">
+      <div className="w-60 bg-white border-r border-xoom-border flex flex-col shrink-0">
         {/* Sidebar header */}
-        <div className="h-12 flex items-center justify-between px-4 border-b border-zoom-border">
+        <div className="h-12 flex items-center justify-between px-4 border-b border-xoom-border">
           <div className="flex items-center space-x-1">
-            <span className="font-semibold text-zoom-dark text-sm">Team Chat</span>
-            <ChevronDown className="w-3.5 h-3.5 text-zoom-gray" />
+            <span className="font-semibold text-xoom-dark text-sm">Team Chat</span>
+            <ChevronDown className="w-3.5 h-3.5 text-xoom-gray" />
           </div>
           <button
             onClick={() => setShowCreateChannel(true)}
-            className="p-1 text-zoom-blue hover:bg-zoom-hover rounded transition-colors"
+            className="p-1 text-xoom-blue hover:bg-xoom-hover rounded transition-colors"
           >
             <Pencil className="w-4 h-4" />
           </button>
@@ -205,7 +205,7 @@ export default function TeamChat() {
             <div className="mb-2">
               <button
                 onClick={() => toggleSection('starred')}
-                className="flex items-center px-4 py-1 text-xs text-zoom-gray font-semibold uppercase tracking-wider w-full hover:bg-gray-50"
+                className="flex items-center px-4 py-1 text-xs text-xoom-gray font-semibold uppercase tracking-wider w-full hover:bg-gray-50"
               >
                 {expandedSections.starred ? <ChevronDown className="w-3 h-3 mr-1" /> : <ChevronRight className="w-3 h-3 mr-1" />}
                 Starred
@@ -227,13 +227,13 @@ export default function TeamChat() {
           <div className="mb-2">
             <button
               onClick={() => toggleSection('channels')}
-              className="flex items-center px-4 py-1 text-xs text-zoom-gray font-semibold uppercase tracking-wider w-full hover:bg-gray-50"
+              className="flex items-center px-4 py-1 text-xs text-xoom-gray font-semibold uppercase tracking-wider w-full hover:bg-gray-50"
             >
               {expandedSections.channels ? <ChevronDown className="w-3 h-3 mr-1" /> : <ChevronRight className="w-3 h-3 mr-1" />}
               Channels
               <button
                 onClick={(e) => { e.stopPropagation(); setShowCreateChannel(true); }}
-                className="ml-auto text-zoom-gray hover:text-zoom-blue"
+                className="ml-auto text-xoom-gray hover:text-xoom-blue"
               >
                 +
               </button>
@@ -254,7 +254,7 @@ export default function TeamChat() {
           <div className="mb-2">
             <button
               onClick={() => toggleSection('recents')}
-              className="flex items-center px-4 py-1 text-xs text-zoom-gray font-semibold uppercase tracking-wider w-full hover:bg-gray-50"
+              className="flex items-center px-4 py-1 text-xs text-xoom-gray font-semibold uppercase tracking-wider w-full hover:bg-gray-50"
             >
               {expandedSections.recents ? <ChevronDown className="w-3 h-3 mr-1" /> : <ChevronRight className="w-3 h-3 mr-1" />}
               Recents
@@ -278,19 +278,19 @@ export default function TeamChat() {
         {activeChannel ? (
           <>
             {/* Channel header */}
-            <div className="h-12 flex items-center justify-between px-4 border-b border-zoom-border shrink-0">
+            <div className="h-12 flex items-center justify-between px-4 border-b border-xoom-border shrink-0">
               <div className="flex items-center space-x-2 min-w-0">
-                {activeChannel.type === 'channel' && <Hash className="w-4 h-4 text-zoom-gray shrink-0" />}
+                {activeChannel.type === 'channel' && <Hash className="w-4 h-4 text-xoom-gray shrink-0" />}
                 {activeChannel.type === 'dm' && (
                   <img src={getChannelAvatar(activeChannel)} className="w-6 h-6 rounded-full shrink-0" alt="" />
                 )}
-                <span className="font-semibold text-zoom-dark text-sm truncate">{getChannelDisplayName(activeChannel)}</span>
-                <span className="text-xs text-zoom-gray">{activeChannel.members.length} members</span>
+                <span className="font-semibold text-xoom-dark text-sm truncate">{getChannelDisplayName(activeChannel)}</span>
+                <span className="text-xs text-xoom-gray">{activeChannel.members.length} members</span>
               </div>
               <div className="flex items-center space-x-1">
                 <button
                   onClick={() => navigate(query ? `/?${query}` : '/')}
-                  className="p-1.5 text-zoom-gray hover:bg-gray-100 rounded"
+                  className="p-1.5 text-xoom-gray hover:bg-gray-100 rounded"
                   title="Audio call"
                 >
                   <Phone className="w-4 h-4" />
@@ -300,14 +300,14 @@ export default function TeamChat() {
                     const meetingId = generateId();
                     navigate(query ? `/room/${meetingId}?${query}` : `/room/${meetingId}`);
                   }}
-                  className="p-1.5 text-zoom-gray hover:bg-gray-100 rounded"
+                  className="p-1.5 text-xoom-gray hover:bg-gray-100 rounded"
                   title="Video call"
                 >
                   <Video className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => setShowInfoPanel(!showInfoPanel)}
-                  className={cn('p-1.5 rounded', showInfoPanel ? 'text-zoom-blue bg-zoom-hover' : 'text-zoom-gray hover:bg-gray-100')}
+                  className={cn('p-1.5 rounded', showInfoPanel ? 'text-xoom-blue bg-xoom-hover' : 'text-xoom-gray hover:bg-gray-100')}
                 >
                   <Info className="w-4 h-4" />
                 </button>
@@ -333,26 +333,26 @@ export default function TeamChat() {
                   <img src={msg.senderAvatar} alt="" className="w-9 h-9 rounded-full shrink-0 mt-0.5" />
                   <div className="min-w-0 flex-1">
                     <div className="flex items-baseline space-x-2">
-                      <span className="font-semibold text-sm text-zoom-dark">{msg.senderName}</span>
-                      <span className="text-xs text-zoom-gray">{formatTimestamp(msg.timestamp)}</span>
-                      {msg.edited && <span className="text-xs text-zoom-gray italic">(edited)</span>}
+                      <span className="font-semibold text-sm text-xoom-dark">{msg.senderName}</span>
+                      <span className="text-xs text-xoom-gray">{formatTimestamp(msg.timestamp)}</span>
+                      {msg.edited && <span className="text-xs text-xoom-gray italic">(edited)</span>}
                     </div>
                     {editingMsg === msg.messageId ? (
                       <div className="mt-1">
                         <textarea
                           value={editText}
                           onChange={e => setEditText(e.target.value)}
-                          className="w-full border border-zoom-border rounded px-2 py-1 text-sm resize-none"
+                          className="w-full border border-xoom-border rounded px-2 py-1 text-sm resize-none"
                           rows={2}
                           autoFocus
                         />
                         <div className="flex space-x-2 mt-1">
-                          <button onClick={handleEditSave} className="text-xs text-white bg-zoom-blue px-3 py-1 rounded">Save</button>
-                          <button onClick={() => { setEditingMsg(null); setEditText(''); }} className="text-xs text-zoom-gray px-3 py-1 rounded hover:bg-gray-100">Cancel</button>
+                          <button onClick={handleEditSave} className="text-xs text-white bg-xoom-blue px-3 py-1 rounded">Save</button>
+                          <button onClick={() => { setEditingMsg(null); setEditText(''); }} className="text-xs text-xoom-gray px-3 py-1 rounded hover:bg-gray-100">Cancel</button>
                         </div>
                       </div>
                     ) : (
-                      <p className="text-sm text-zoom-dark mt-0.5 whitespace-pre-wrap break-words">{msg.text}</p>
+                      <p className="text-sm text-xoom-dark mt-0.5 whitespace-pre-wrap break-words">{msg.text}</p>
                     )}
 
                     {/* Reactions */}
@@ -365,8 +365,8 @@ export default function TeamChat() {
                             className={cn(
                               'inline-flex items-center space-x-1 px-2 py-0.5 rounded-full text-xs border transition-colors',
                               r.users.includes(user.userId)
-                                ? 'border-zoom-blue bg-blue-50 text-zoom-blue'
-                                : 'border-zoom-border bg-gray-50 text-zoom-dark hover:bg-gray-100'
+                                ? 'border-xoom-blue bg-blue-50 text-xoom-blue'
+                                : 'border-xoom-border bg-gray-50 text-xoom-dark hover:bg-gray-100'
                             )}
                           >
                             <span>{r.emoji}</span>
@@ -380,7 +380,7 @@ export default function TeamChat() {
                     {msg.replyCount > 0 && (
                       <button
                         onClick={() => setShowThreadPanel(showThreadPanel === msg.messageId ? null : msg.messageId)}
-                        className="text-xs text-zoom-blue mt-1 hover:underline flex items-center space-x-1"
+                        className="text-xs text-xoom-blue mt-1 hover:underline flex items-center space-x-1"
                       >
                         <MessageCircle className="w-3 h-3" />
                         <span>{msg.replyCount} {msg.replyCount === 1 ? 'reply' : 'replies'}</span>
@@ -390,17 +390,17 @@ export default function TeamChat() {
 
                   {/* Hover actions */}
                   {hoveredMsg === msg.messageId && editingMsg !== msg.messageId && (
-                    <div className="absolute top-0 right-2 flex items-center space-x-0.5 bg-white border border-zoom-border rounded shadow-sm">
+                    <div className="absolute top-0 right-2 flex items-center space-x-0.5 bg-white border border-xoom-border rounded shadow-sm">
                       <button
                         onClick={() => setShowEmojiPicker(showEmojiPicker === msg.messageId ? null : msg.messageId)}
-                        className="p-1 text-zoom-gray hover:text-zoom-blue hover:bg-zoom-hover rounded text-xs"
+                        className="p-1 text-xoom-gray hover:text-xoom-blue hover:bg-xoom-hover rounded text-xs"
                         title="React"
                       >
                         😊
                       </button>
                       <button
                         onClick={() => handlePinToggle(msg)}
-                        className={cn('p-1 rounded', msg.pinned ? 'text-zoom-blue hover:bg-zoom-hover' : 'text-zoom-gray hover:text-zoom-blue hover:bg-zoom-hover')}
+                        className={cn('p-1 rounded', msg.pinned ? 'text-xoom-blue hover:bg-xoom-hover' : 'text-xoom-gray hover:text-xoom-blue hover:bg-xoom-hover')}
                         title={msg.pinned ? 'Unpin' : 'Pin'}
                       >
                         {msg.pinned ? <PinOff className="w-3 h-3" /> : <Pin className="w-3 h-3" />}
@@ -409,14 +409,14 @@ export default function TeamChat() {
                         <>
                           <button
                             onClick={() => { setEditingMsg(msg.messageId); setEditText(msg.text); }}
-                            className="p-1 text-zoom-gray hover:text-zoom-blue hover:bg-zoom-hover rounded"
+                            className="p-1 text-xoom-gray hover:text-xoom-blue hover:bg-xoom-hover rounded"
                             title="Edit"
                           >
                             <Pencil className="w-3 h-3" />
                           </button>
                           <button
                             onClick={() => setShowDeleteConfirm(msg.messageId)}
-                            className="p-1 text-zoom-gray hover:text-red-500 hover:bg-red-50 rounded"
+                            className="p-1 text-xoom-gray hover:text-red-500 hover:bg-red-50 rounded"
                             title="Delete"
                           >
                             ×
@@ -428,7 +428,7 @@ export default function TeamChat() {
 
                   {/* Emoji picker */}
                   {showEmojiPicker === msg.messageId && (
-                    <div className="absolute top-8 right-2 bg-white border border-zoom-border rounded-lg shadow-lg p-2 z-30 w-64">
+                    <div className="absolute top-8 right-2 bg-white border border-xoom-border rounded-lg shadow-lg p-2 z-30 w-64">
                       <div className="grid grid-cols-10 gap-1">
                         {COMMON_EMOJIS.map(emoji => (
                           <button
@@ -451,8 +451,8 @@ export default function TeamChat() {
             </div>
 
             {/* Composer */}
-            <div className="px-4 pb-3 pt-1 border-t border-zoom-border shrink-0">
-              <div className="border border-zoom-border rounded-lg overflow-hidden focus-within:border-zoom-blue transition-colors">
+            <div className="px-4 pb-3 pt-1 border-t border-xoom-border shrink-0">
+              <div className="border border-xoom-border rounded-lg overflow-hidden focus-within:border-xoom-blue transition-colors">
                 <textarea
                   id="chat-composer"
                   value={composerText}
@@ -465,7 +465,7 @@ export default function TeamChat() {
                   rows={2}
                 />
                 <div className="flex items-center justify-between px-3 py-1.5 bg-gray-50">
-                  <div className="flex space-x-1 text-zoom-gray">
+                  <div className="flex space-x-1 text-xoom-gray">
                     <button
                       onClick={() => handleApplyFormatting('bold')}
                       className="p-1 hover:bg-gray-200 rounded text-xs font-bold"
@@ -488,8 +488,8 @@ export default function TeamChat() {
                     className={cn(
                       'p-1.5 rounded transition-colors',
                       composerText.trim()
-                        ? 'text-white bg-zoom-blue hover:bg-blue-600'
-                        : 'text-zoom-gray bg-gray-200 cursor-not-allowed'
+                        ? 'text-white bg-xoom-blue hover:bg-blue-600'
+                        : 'text-xoom-gray bg-gray-200 cursor-not-allowed'
                     )}
                   >
                     <Send className="w-4 h-4" />
@@ -499,7 +499,7 @@ export default function TeamChat() {
             </div>
           </>
         ) : (
-          <div className="flex-1 flex items-center justify-center text-zoom-gray">
+          <div className="flex-1 flex items-center justify-center text-xoom-gray">
             <div className="text-center">
               <MessageSquare className="w-12 h-12 mx-auto mb-3 opacity-30" />
               <p className="text-sm">Select a channel or conversation to start chatting</p>
@@ -510,24 +510,24 @@ export default function TeamChat() {
 
       {/* Right info panel */}
       {showInfoPanel && activeChannel && !showThreadPanel && (
-        <div className="w-72 bg-white border-l border-zoom-border flex flex-col shrink-0">
-          <div className="h-12 flex items-center justify-between px-4 border-b border-zoom-border">
-            <span className="font-semibold text-sm text-zoom-dark">
+        <div className="w-72 bg-white border-l border-xoom-border flex flex-col shrink-0">
+          <div className="h-12 flex items-center justify-between px-4 border-b border-xoom-border">
+            <span className="font-semibold text-sm text-xoom-dark">
               {activeChannel.type === 'channel' ? 'Explore This Channel' : 'Conversation Info'}
             </span>
-            <button onClick={() => setShowInfoPanel(false)} className="text-zoom-gray hover:text-zoom-dark">
+            <button onClick={() => setShowInfoPanel(false)} className="text-xoom-gray hover:text-xoom-dark">
               ×
             </button>
           </div>
           <div className="flex-1 overflow-y-auto p-4 space-y-4">
             {activeChannel.description && (
               <div>
-                <h4 className="text-xs font-semibold text-zoom-gray uppercase mb-1">Description</h4>
-                <p className="text-sm text-zoom-dark">{activeChannel.description}</p>
+                <h4 className="text-xs font-semibold text-xoom-gray uppercase mb-1">Description</h4>
+                <p className="text-sm text-xoom-dark">{activeChannel.description}</p>
               </div>
             )}
             <div>
-              <h4 className="text-xs font-semibold text-zoom-gray uppercase mb-2">Members ({activeChannel.members.length})</h4>
+              <h4 className="text-xs font-semibold text-xoom-gray uppercase mb-2">Members ({activeChannel.members.length})</h4>
               <div className="space-y-2">
                 {activeChannel.members.map(memberId => {
                   const isUser = memberId === user.userId;
@@ -537,8 +537,8 @@ export default function TeamChat() {
                   return (
                     <div key={memberId} className="flex items-center space-x-2">
                       <img src={avatar} alt="" className="w-7 h-7 rounded-full" />
-                      <span className="text-sm text-zoom-dark">{name}</span>
-                      {isUser && <span className="text-xs text-zoom-gray">(you)</span>}
+                      <span className="text-sm text-xoom-dark">{name}</span>
+                      {isUser && <span className="text-xs text-xoom-gray">(you)</span>}
                     </div>
                   );
                 })}
@@ -546,9 +546,9 @@ export default function TeamChat() {
             </div>
             {pinnedMessages.length > 0 && (
               <div>
-                <h4 className="text-xs font-semibold text-zoom-gray uppercase mb-1">Pinned Messages</h4>
+                <h4 className="text-xs font-semibold text-xoom-gray uppercase mb-1">Pinned Messages</h4>
                 {pinnedMessages.map(m => (
-                  <div key={m.messageId} className="text-xs text-zoom-dark bg-gray-50 rounded p-2 mb-1">
+                  <div key={m.messageId} className="text-xs text-xoom-dark bg-gray-50 rounded p-2 mb-1">
                     <span className="font-semibold">{m.senderName}:</span> {m.text.substring(0, 80)}{m.text.length > 80 ? '...' : ''}
                   </div>
                 ))}
@@ -564,28 +564,28 @@ export default function TeamChat() {
         if (!parentMsg) return null;
         const threadReplies = channelMessages.filter(m => m.replyTo === showThreadPanel);
         return (
-          <div className="w-80 bg-white border-l border-zoom-border flex flex-col shrink-0">
-            <div className="h-12 flex items-center justify-between px-4 border-b border-zoom-border">
-              <span className="font-semibold text-sm text-zoom-dark">Thread</span>
-              <button onClick={() => setShowThreadPanel(null)} className="text-zoom-gray hover:text-zoom-dark">
+          <div className="w-80 bg-white border-l border-xoom-border flex flex-col shrink-0">
+            <div className="h-12 flex items-center justify-between px-4 border-b border-xoom-border">
+              <span className="font-semibold text-sm text-xoom-dark">Thread</span>
+              <button onClick={() => setShowThreadPanel(null)} className="text-xoom-gray hover:text-xoom-dark">
                 <X className="w-4 h-4" />
               </button>
             </div>
             {/* Parent message */}
-            <div className="px-4 py-3 border-b border-zoom-border bg-gray-50">
+            <div className="px-4 py-3 border-b border-xoom-border bg-gray-50">
               <div className="flex space-x-2">
                 <img src={parentMsg.senderAvatar} alt="" className="w-7 h-7 rounded-full shrink-0" />
                 <div>
                   <div className="flex items-baseline space-x-1.5">
-                    <span className="text-xs font-semibold text-zoom-dark">{parentMsg.senderName}</span>
-                    <span className="text-[10px] text-zoom-gray">{formatTimestamp(parentMsg.timestamp)}</span>
+                    <span className="text-xs font-semibold text-xoom-dark">{parentMsg.senderName}</span>
+                    <span className="text-[10px] text-xoom-gray">{formatTimestamp(parentMsg.timestamp)}</span>
                   </div>
-                  <p className="text-xs text-zoom-dark mt-0.5">{parentMsg.text}</p>
+                  <p className="text-xs text-xoom-dark mt-0.5">{parentMsg.text}</p>
                 </div>
               </div>
             </div>
             {/* Thread separator */}
-            <div className="px-4 py-1.5 text-xs text-zoom-gray font-semibold border-b border-zoom-border">
+            <div className="px-4 py-1.5 text-xs text-xoom-gray font-semibold border-b border-xoom-border">
               {threadReplies.length} {threadReplies.length === 1 ? 'reply' : 'replies'}
             </div>
             {/* Replies */}
@@ -595,17 +595,17 @@ export default function TeamChat() {
                   <img src={reply.senderAvatar} alt="" className="w-7 h-7 rounded-full shrink-0 mt-0.5" />
                   <div>
                     <div className="flex items-baseline space-x-1.5">
-                      <span className="text-xs font-semibold text-zoom-dark">{reply.senderName}</span>
-                      <span className="text-[10px] text-zoom-gray">{formatTimestamp(reply.timestamp)}</span>
+                      <span className="text-xs font-semibold text-xoom-dark">{reply.senderName}</span>
+                      <span className="text-[10px] text-xoom-gray">{formatTimestamp(reply.timestamp)}</span>
                     </div>
-                    <p className="text-xs text-zoom-dark mt-0.5">{reply.text}</p>
+                    <p className="text-xs text-xoom-dark mt-0.5">{reply.text}</p>
                   </div>
                 </div>
               ))}
             </div>
             {/* Thread reply composer */}
-            <div className="px-3 pb-3 pt-1 border-t border-zoom-border">
-              <div className="border border-zoom-border rounded-lg overflow-hidden focus-within:border-zoom-blue transition-colors">
+            <div className="px-3 pb-3 pt-1 border-t border-xoom-border">
+              <div className="border border-xoom-border rounded-lg overflow-hidden focus-within:border-xoom-blue transition-colors">
                 <textarea
                   value={threadReplyText}
                   onChange={e => setThreadReplyText(e.target.value)}
@@ -620,7 +620,7 @@ export default function TeamChat() {
                     disabled={!threadReplyText.trim()}
                     className={cn(
                       'p-1.5 rounded transition-colors',
-                      threadReplyText.trim() ? 'text-white bg-zoom-blue hover:bg-blue-600' : 'text-zoom-gray bg-gray-200 cursor-not-allowed'
+                      threadReplyText.trim() ? 'text-white bg-xoom-blue hover:bg-blue-600' : 'text-xoom-gray bg-gray-200 cursor-not-allowed'
                     )}
                   >
                     <Send className="w-3.5 h-3.5" />
@@ -636,8 +636,8 @@ export default function TeamChat() {
       {showDeleteConfirm && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-xl shadow-2xl w-full max-w-xs p-6">
-            <h3 className="font-semibold text-zoom-dark mb-2">Delete Message</h3>
-            <p className="text-sm text-zoom-gray mb-4">This will permanently delete this message. This action cannot be undone.</p>
+            <h3 className="font-semibold text-xoom-dark mb-2">Delete Message</h3>
+            <p className="text-sm text-xoom-gray mb-4">This will permanently delete this message. This action cannot be undone.</p>
             <div className="flex justify-end space-x-3">
               <button onClick={() => setShowDeleteConfirm(null)} className="px-4 py-2 text-sm text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200">Cancel</button>
               <button
@@ -656,7 +656,7 @@ export default function TeamChat() {
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-xl shadow-2xl w-full max-w-sm overflow-hidden">
             <div className="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
-              <h3 className="text-lg font-semibold text-zoom-dark">Create Channel</h3>
+              <h3 className="text-lg font-semibold text-xoom-dark">Create Channel</h3>
               <button onClick={() => setShowCreateChannel(false)} className="text-gray-400 hover:text-gray-600">x</button>
             </div>
             <form onSubmit={handleCreateChannel} className="p-6 space-y-4">
@@ -687,43 +687,43 @@ export default function TeamChat() {
                 <div className="flex space-x-3">
                   <label className={cn(
                     'flex-1 flex items-center space-x-2 border rounded-lg p-3 cursor-pointer transition-colors',
-                    !newChannelPrivate ? 'border-zoom-blue bg-blue-50' : 'border-gray-200 hover:bg-gray-50'
+                    !newChannelPrivate ? 'border-xoom-blue bg-blue-50' : 'border-gray-200 hover:bg-gray-50'
                   )}>
                     <input
                       type="radio"
                       name="channelType"
                       checked={!newChannelPrivate}
                       onChange={() => setNewChannelPrivate(false)}
-                      className="text-zoom-blue"
+                      className="text-xoom-blue"
                     />
-                    <Globe className="w-4 h-4 text-zoom-gray" />
+                    <Globe className="w-4 h-4 text-xoom-gray" />
                     <div>
-                      <div className="text-sm font-medium text-zoom-dark">Public</div>
-                      <div className="text-xs text-zoom-gray">Anyone can join</div>
+                      <div className="text-sm font-medium text-xoom-dark">Public</div>
+                      <div className="text-xs text-xoom-gray">Anyone can join</div>
                     </div>
                   </label>
                   <label className={cn(
                     'flex-1 flex items-center space-x-2 border rounded-lg p-3 cursor-pointer transition-colors',
-                    newChannelPrivate ? 'border-zoom-blue bg-blue-50' : 'border-gray-200 hover:bg-gray-50'
+                    newChannelPrivate ? 'border-xoom-blue bg-blue-50' : 'border-gray-200 hover:bg-gray-50'
                   )}>
                     <input
                       type="radio"
                       name="channelType"
                       checked={newChannelPrivate}
                       onChange={() => setNewChannelPrivate(true)}
-                      className="text-zoom-blue"
+                      className="text-xoom-blue"
                     />
-                    <Lock className="w-4 h-4 text-zoom-gray" />
+                    <Lock className="w-4 h-4 text-xoom-gray" />
                     <div>
-                      <div className="text-sm font-medium text-zoom-dark">Private</div>
-                      <div className="text-xs text-zoom-gray">Invite only</div>
+                      <div className="text-sm font-medium text-xoom-dark">Private</div>
+                      <div className="text-xs text-xoom-gray">Invite only</div>
                     </div>
                   </label>
                 </div>
               </div>
               <div className="flex justify-end space-x-3 pt-2">
                 <button type="button" onClick={() => setShowCreateChannel(false)} className="px-4 py-2 text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200">Cancel</button>
-                <button type="submit" className="px-4 py-2 text-white bg-zoom-blue rounded-lg hover:bg-blue-600">Create</button>
+                <button type="submit" className="px-4 py-2 text-white bg-xoom-blue rounded-lg hover:bg-blue-600">Create</button>
               </div>
             </form>
           </div>
@@ -739,19 +739,19 @@ function SidebarItem({ channel, isActive, onClick, displayName, avatar }) {
       onClick={onClick}
       className={cn(
         'w-full flex items-center px-4 py-1.5 text-sm transition-colors',
-        isActive ? 'bg-zoom-hover text-zoom-blue' : 'text-zoom-dark hover:bg-gray-50'
+        isActive ? 'bg-xoom-hover text-xoom-blue' : 'text-xoom-dark hover:bg-gray-50'
       )}
     >
       {channel.type === 'channel' ? (
-        <Hash className="w-4 h-4 mr-2 shrink-0 text-zoom-gray" />
+        <Hash className="w-4 h-4 mr-2 shrink-0 text-xoom-gray" />
       ) : avatar ? (
         <img src={avatar} alt="" className="w-5 h-5 rounded-full mr-2 shrink-0" />
       ) : (
-        <Users className="w-4 h-4 mr-2 shrink-0 text-zoom-gray" />
+        <Users className="w-4 h-4 mr-2 shrink-0 text-xoom-gray" />
       )}
       <span className="truncate flex-1 text-left">{displayName}</span>
       {channel.unreadCount > 0 && (
-        <span className="ml-auto bg-zoom-blue text-white text-[10px] min-w-[18px] h-[18px] flex items-center justify-center rounded-full font-medium">
+        <span className="ml-auto bg-xoom-blue text-white text-[10px] min-w-[18px] h-[18px] flex items-center justify-center rounded-full font-medium">
           {channel.unreadCount}
         </span>
       )}

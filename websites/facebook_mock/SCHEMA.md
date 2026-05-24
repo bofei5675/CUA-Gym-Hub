@@ -19,7 +19,7 @@
 | `/friends` | Friends | Friend requests and all friends list |
 | `/groups` | Groups | Group listings and group posts feed |
 | `/groups/:groupId` | GroupDetail | Individual group page with Discussion, Members, Media, Events tabs |
-| `/pages/:id` | PageProfile | Facebook Page profile with posts, about, reviews |
+| `/pages/:id` | PageProfile | Xacebook Page profile with posts, about, reviews |
 | `/marketplace` | Marketplace | Marketplace listings grid with search/filter/create |
 | `/watch` | Watch | Video feed (video and photo posts) |
 | `/events` | Events | Events listing with RSVP functionality and create event |
@@ -40,8 +40,8 @@
 | `users` | `Record<string, User>` | Map of all users keyed by user ID (`user_1` through `user_10`) |
 | `friendRequests` | `FriendRequest[]` | Pending friend requests for the current user |
 | `outgoingFriendRequests` | `string[]` | User IDs to whom current user has sent friend requests (not yet accepted) |
-| `groups` | `Group[]` | All Facebook groups |
-| `pages` | `Page[]` | All Facebook pages |
+| `groups` | `Group[]` | All Xacebook groups |
+| `pages` | `Page[]` | All Xacebook pages |
 | `posts` | `Post[]` | All posts (feed, group, and page posts) |
 | `notifications` | `Notification[]` | All notifications for the current user |
 | `marketplace` | `MarketplaceListing[]` | All marketplace listings |

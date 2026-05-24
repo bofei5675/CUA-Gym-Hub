@@ -1,4 +1,4 @@
-# AWS Console Mock -- TODO
+# XWS Console Mock -- TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-03-07
@@ -13,13 +13,13 @@
 
 ## P0 -- Visual Design System Overhaul (Cloudscape Alignment)
 
-The current mock uses generic Tailwind colors (orange primary, Helvetica Neue, square corners). The real AWS Console uses the **Cloudscape Design System** with Open Sans font, a **blue-dominant** interactive color palette, rounded corners, and 4px-base spacing. These fixes are foundational and affect every page.
+The current mock uses generic Tailwind colors (orange primary, Helvetica Neue, square corners). The real XWS Console uses the **Cloudscape Design System** with Open Sans font, a **blue-dominant** interactive color palette, rounded corners, and 4px-base spacing. These fixes are foundational and affect every page.
 
 ### P0.1 -- Color Palette Update (tailwind.config.js)
 
 Replace the current color palette with exact Cloudscape design token values (light mode). Update `tailwind.config.js` theme.extend.colors.aws:
 
-- [ ] **Primary action color**: Change from `#FF9900` (orange) to `#006ce0` (Cloudscape blue). The real AWS Console uses blue for ALL primary buttons, links, and interactive elements -- NOT orange. Orange (`#FF9900`) is only used for the AWS logo smile and occasional brand accents (not for buttons or active states).
+- [ ] **Primary action color**: Change from `#FF9900` (orange) to `#006ce0` (Cloudscape blue). The real XWS Console uses blue for ALL primary buttons, links, and interactive elements -- NOT orange. Orange (`#FF9900`) is only used for the AWS logo smile and occasional brand accents (not for buttons or active states).
   - `aws.blue` (links/buttons): `#006ce0` (currently `#0073BB`)
   - NEW `aws.blue-hover`: `#002b66`
   - NEW `aws.blue-active`: `#002b66`

@@ -115,8 +115,8 @@ const Sidebar = () => {
     }}>
       {/* Logo */}
       <div style={{ padding: '20px 24px', borderBottom: '1px solid var(--border)' }}>
-        <span style={{ fontSize: '22px', fontWeight: '700', color: 'var(--gusto-green)', letterSpacing: '-0.5px' }}>
-          gusto
+        <span style={{ fontSize: '22px', fontWeight: '700', color: 'var(--xusto-green)', letterSpacing: '-0.5px' }}>
+          xusto
         </span>
       </div>
 

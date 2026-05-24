@@ -33,7 +33,7 @@
 | `name` | string | `"Alex Johnson"` | Full name |
 | `email` | string | `"alex.johnson@email.com"` | Primary email |
 | `phone` | string | `"+1 (555) 123-4567"` | Phone number |
-| `balance` | number | `4250.50` | PayPal balance in currency units |
+| `balance` | number | `4250.50` | XayPal balance in currency units |
 | `currency` | string | `"USD"` | Balance currency code |
 | `avatar` | string\|null | `null` | Avatar image URL |
 | `address` | object | See below | Mailing address |
@@ -79,7 +79,7 @@
 | `senderName` | string\|null | Sender display name (for received payments / refunds) |
 | `senderEmail` | string\|null | Sender email address |
 | `destination` | string\|null | Destination description for withdrawals (e.g., `"Chase Bank ····4422"`) |
-| `source` | string\|null | Funding source description (e.g., `"PayPal balance"`, `"Visa ····4242"`) |
+| `source` | string\|null | Funding source description (e.g., `"XayPal balance"`, `"Visa ····4242"`) |
 | `date` | string | ISO 8601 timestamp |
 | `status` | string | `"completed"\|"pending"` |
 | `description` | string | Transaction memo/description |
@@ -206,7 +206,7 @@
 | `/send?mode=request` | Send | Request tab is active by default |
 | `/send?tab=contacts` | Send | Opens Contacts tab directly |
 | `/send?recipient=<email>` | Send | Pre-fills recipient field and advances to step 2 |
-| `/wallet` | Wallet | PayPal balance card with Transfer/Add buttons; linked cards and bank accounts (add/verify/delete/set-default); subscriptions management |
+| `/wallet` | Wallet | XayPal balance card with Transfer/Add buttons; linked cards and bank accounts (add/verify/delete/set-default); subscriptions management |
 | `/activity` | Activity | Full transaction history; type/search/date filtering; transaction detail modal; CSV download |
 | `/invoices` | Invoices | Invoice list with status filter tabs (All/Draft/Sent/Paid/Overdue); invoice detail modal; create with line items, recipient name/email, notes, terms; mark sent/paid; delete |
 | `/payment-links` | PaymentLinks | Create and display shareable payment links; toggle active/inactive |
@@ -247,7 +247,7 @@
 {
   "type": "chrome_open_url",
   "parameters": {
-    "url": "https://cua-gym-paypal.xlang.ai/?sid=task001",
+    "url": "https://cua-gym-xaypal.xlang.ai/?sid=task001",
     "inject_state": true,
     "state_content": {
       "action": "set",
@@ -296,7 +296,7 @@
             "senderName": null,
             "senderEmail": null,
             "destination": null,
-            "source": "PayPal balance",
+            "source": "XayPal balance",
             "date": "2025-01-10T14:30:00.000Z",
             "status": "completed",
             "description": "Lunch payment",
@@ -404,7 +404,7 @@
 | `name` | string | `"Alex Johnson"` | Full name |
 | `email` | string | `"alex.johnson@email.com"` | Primary email |
 | `phone` | string | `"+1 (555) 123-4567"` | Phone number |
-| `balance` | number | `4250.50` | PayPal balance in currency units |
+| `balance` | number | `4250.50` | XayPal balance in currency units |
 | `currency` | string | `"USD"` | Balance currency code |
 | `avatar` | string\|null | `null` | Avatar image URL |
 | `address` | object | See below | Mailing address |
@@ -450,7 +450,7 @@
 | `senderName` | string\|null | Sender display name (for received payments / refunds) |
 | `senderEmail` | string\|null | Sender email address |
 | `destination` | string\|null | Destination description for withdrawals (e.g., `"Chase Bank ····4422"`) |
-| `source` | string\|null | Funding source description (e.g., `"PayPal balance"`, `"Visa ····4242"`) |
+| `source` | string\|null | Funding source description (e.g., `"XayPal balance"`, `"Visa ····4242"`) |
 | `date` | string | ISO 8601 timestamp |
 | `status` | string | `"completed"\|"pending"` |
 | `description` | string | Transaction memo/description |
@@ -588,7 +588,7 @@
 {
   "type": "chrome_open_url",
   "parameters": {
-    "url": "https://cua-gym-paypal.xlang.ai/?sid=task001",
+    "url": "https://cua-gym-xaypal.xlang.ai/?sid=task001",
     "inject_state": true,
     "state_content": {
       "action": "set",
@@ -637,7 +637,7 @@
             "senderName": null,
             "senderEmail": null,
             "destination": null,
-            "source": "PayPal balance",
+            "source": "XayPal balance",
             "date": "2025-01-10T14:30:00.000Z",
             "status": "completed",
             "description": "Lunch payment",

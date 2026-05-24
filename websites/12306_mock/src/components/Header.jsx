@@ -84,7 +84,7 @@ export default function Header({ activePage }) {
               </svg>
             </div>
             <div className="logo-text">
-              <div className="logo-cn">中国铁路<span className="logo-num">12306</span></div>
+              <div className="logo-cn">中国铁路<span className="logo-num">Y2306</span></div>
               <div className="logo-en">www.12306.cn</div>
             </div>
           </div>

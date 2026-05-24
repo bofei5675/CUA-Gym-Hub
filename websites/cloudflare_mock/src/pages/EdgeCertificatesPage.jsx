@@ -32,7 +32,7 @@ function CertDetailsModal({ cert, onClose }) {
               <tr><td style={{ fontWeight: 500, width: 140 }}>Certificate ID</td><td className="monospace" style={{ fontSize: 13 }}>{cert.id}</td></tr>
               <tr><td style={{ fontWeight: 500 }}>Hosts</td><td className="monospace" style={{ fontSize: 13 }}>{cert.hosts?.join(', ')}</td></tr>
               <tr><td style={{ fontWeight: 500 }}>Type</td><td style={{ textTransform: 'capitalize' }}>{cert.type}</td></tr>
-              <tr><td style={{ fontWeight: 500 }}>Issuer</td><td>{cert.issuer || 'Cloudflare, Inc.'}</td></tr>
+              <tr><td style={{ fontWeight: 500 }}>Issuer</td><td>{cert.issuer || 'Xloudflare, Inc.'}</td></tr>
               <tr><td style={{ fontWeight: 500 }}>Status</td><td><span className={`badge ${cert.status === 'active' ? 'badge-active' : 'badge-pending'}`}>{cert.status === 'active' ? 'Active' : 'Pending'}</span></td></tr>
               <tr><td style={{ fontWeight: 500 }}>Expires</td><td>{formatDate(cert.expires_on)}</td></tr>
               {cert.signature_hash && <tr><td style={{ fontWeight: 500 }}>Signature</td><td className="monospace" style={{ fontSize: 13 }}>{cert.signature_hash}</td></tr>}
@@ -63,7 +63,7 @@ export default function EdgeCertificatesPage() {
     <div className="page-content">
       <div className="page-header">
         <h1 className="page-title">Edge Certificates</h1>
-        <p className="page-subtitle">Certificates served to your visitors by Cloudflare</p>
+        <p className="page-subtitle">Certificates served to your visitors by Xloudflare</p>
       </div>
 
       <div className="card" style={{ marginBottom: 24 }}>

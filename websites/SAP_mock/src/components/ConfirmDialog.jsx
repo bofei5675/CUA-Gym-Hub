@@ -7,7 +7,7 @@ export default function ConfirmDialog({ title, message, confirmLabel = 'Confirm'
           <button className="modal-close-btn" onClick={onCancel}>×</button>
         </div>
         <div className="modal-body">
-          <p style={{ fontSize: '14px', lineHeight: '1.5', color: 'var(--sap-text-primary)' }}>{message}</p>
+          <p style={{ fontSize: '14px', lineHeight: '1.5', color: 'var(--xap-text-primary)' }}>{message}</p>
         </div>
         <div className="modal-footer">
           <button className="btn-secondary" onClick={onCancel}>Cancel</button>

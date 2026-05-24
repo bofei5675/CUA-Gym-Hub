@@ -55,7 +55,7 @@ export default function AddSiteModal({ onClose }) {
         <form onSubmit={handleSubmit}>
           <div className="modal-body">
             <p style={{ color: 'var(--cf-text-secondary)', marginBottom: 16, fontSize: 14, lineHeight: 1.5 }}>
-              Enter your site's root domain to add it to Cloudflare.
+              Enter your site's root domain to add it to Xloudflare.
             </p>
             <div className="form-group">
               <label className="form-label">Site (domain)</label>

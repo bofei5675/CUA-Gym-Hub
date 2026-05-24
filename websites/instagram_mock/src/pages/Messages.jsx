@@ -362,7 +362,7 @@ const Messages = () => {
             <div className="flex flex-col items-center py-6 border-b border-[#EFEFEF]">
               <img src={otherUsers[0].avatar} alt="" className="w-24 h-24 rounded-full object-cover mb-3" />
               <div className="font-bold text-lg">{otherUsers[0].name}</div>
-              <div className="text-sm text-[#8E8E8E] mb-3">{otherUsers[0].username} · Instagram</div>
+              <div className="text-sm text-[#8E8E8E] mb-3">{otherUsers[0].username} · Xnstagram</div>
               <Link
                 to={`/profile/${otherUsers[0].username}`}
                 className="ig-btn-secondary text-xs px-4 py-1.5"

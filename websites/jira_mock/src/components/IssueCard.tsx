@@ -16,20 +16,20 @@ export const IssueCard: React.FC<IssueCardProps> = ({ issue, index, users, onCli
   
   const getPriorityIcon = (priority: string) => {
     switch (priority) {
-      case 'Highest': return <ArrowUp className="text-jira-red" size={16} />;
-      case 'High': return <ArrowUp className="text-jira-red" size={16} />;
-      case 'Medium': return <ArrowUp className="text-jira-yellow" size={16} />;
-      case 'Low': return <ArrowDown className="text-jira-green" size={16} />;
-      case 'Lowest': return <ArrowDown className="text-jira-blue" size={16} />;
+      case 'Highest': return <ArrowUp className="text-xira-red" size={16} />;
+      case 'High': return <ArrowUp className="text-xira-red" size={16} />;
+      case 'Medium': return <ArrowUp className="text-xira-yellow" size={16} />;
+      case 'Low': return <ArrowDown className="text-xira-green" size={16} />;
+      case 'Lowest': return <ArrowDown className="text-xira-blue" size={16} />;
       default: return null;
     }
   };
 
   const getTypeIcon = (type: string) => {
     switch (type) {
-      case 'Bug': return <AlertCircle className="text-jira-red" size={16} />;
-      case 'Story': return <Bookmark className="text-jira-green" size={16} fill="currentColor" />;
-      case 'Task': return <CheckCircle2 className="text-jira-blue" size={16} />;
+      case 'Bug': return <AlertCircle className="text-xira-red" size={16} />;
+      case 'Story': return <Bookmark className="text-xira-green" size={16} fill="currentColor" />;
+      case 'Task': return <CheckCircle2 className="text-xira-blue" size={16} />;
       case 'Epic': return <AlertCircle className="text-purple-600" size={16} />;
       default: return null;
     }
@@ -50,13 +50,13 @@ export const IssueCard: React.FC<IssueCardProps> = ({ issue, index, users, onCli
           style={provided.draggableProps.style}
         >
           <div className="flex justify-between items-start mb-2">
-            <span className="text-sm text-jira-subtext hover:underline">{issue.key}</span>
+            <span className="text-sm text-xira-subtext hover:underline">{issue.key}</span>
             <div className="opacity-0 group-hover:opacity-100 transition-opacity">
               <GripVertical size={14} className="text-gray-400" />
             </div>
           </div>
           
-          <p className="text-jira-text text-sm mb-3 line-clamp-2">{issue.summary}</p>
+          <p className="text-xira-text text-sm mb-3 line-clamp-2">{issue.summary}</p>
           
           <div className="flex items-center justify-between mt-2">
             <div className="flex items-center gap-2">

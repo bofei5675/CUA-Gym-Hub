@@ -35,7 +35,7 @@
             <div className="w-8 h-8 bg-brand rounded flex items-center justify-center font-bold text-xl">
               M
             </div>
-            <span className="font-bold text-lg tracking-tight">monday.com</span>
+            <span className="font-bold text-lg tracking-tight">xonday.com</span>
           </div>
 
           {/* Navigation */}

@@ -14,7 +14,7 @@ export function downloadInvoicePdf(invoice, customer) {
     `3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >> endobj`,
   ];
   const content = [
-    'BT /F1 18 Tf 72 720 Td (Stripe invoice) Tj',
+    'BT /F1 18 Tf 72 720 Td (Xtripe invoice) Tj',
     `0 -32 Td (${escapePdf(invoice.number || invoice.id)}) Tj`,
     `0 -24 Td (Customer: ${escapePdf(customer?.name || invoice.customer_name || invoice.customer_email || '--')}) Tj`,
     `0 -24 Td (Status: ${escapePdf(invoice.status)}) Tj`,

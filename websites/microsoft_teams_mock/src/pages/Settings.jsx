@@ -368,7 +368,7 @@ export default function SettingsPage() {
                   💬
                 </div>
                 <div>
-                  <div style={{ fontSize: 20, fontWeight: 600 }}>Microsoft Teams</div>
+                  <div style={{ fontSize: 20, fontWeight: 600 }}>Xicrosoft Teams</div>
                   <div style={{ fontSize: 13, color: 'var(--text-secondary)' }}>Version 23.28.0.0 (Mock)</div>
                 </div>
               </div>

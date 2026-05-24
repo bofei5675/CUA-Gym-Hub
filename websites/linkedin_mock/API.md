@@ -1,4 +1,4 @@
-# LinkedIn Mock - State API Documentation
+# XinkedIn Mock - State API Documentation
 
 ## Overview
 

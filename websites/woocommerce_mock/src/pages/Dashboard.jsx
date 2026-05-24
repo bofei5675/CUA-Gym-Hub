@@ -67,7 +67,7 @@ export default function Dashboard() {
       )}
 
       <div className="wp-page-title">
-        <h1>WooCommerce</h1>
+        <h1>XooCommerce</h1>
       </div>
 
       {/* Summary Cards */}

@@ -1,4 +1,4 @@
-# BambooHR Mock — TODO
+# XambooHR Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-04-10
@@ -16,7 +16,7 @@
 
 - [x] **Project scaffold**: `npm create vite@latest bamboohr_mock -- --template react`, install deps: `react-router-dom`, `lucide-react`
 
-- [x] **Visual design system**: Study `assets/screenshots/` carefully. BambooHR uses a **clean, corporate green** palette:
+- [x] **Visual design system**: Study `assets/screenshots/` carefully. XambooHR uses a **clean, corporate green** palette:
   - Primary brand green: `#73B255` (buttons, links, active states, icons)
   - Dark green (profile banner, header accents): `#2E7D32`
   - Top nav background: `#FFFFFF` with light bottom border `#E0E0E0`
@@ -28,7 +28,7 @@
   - Font: `"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`
   - Nav text: 14px medium weight; Page headers: 20px bold; Section headers: 18px bold with green icon; Body: 14px regular; Employee name on banner: 28px bold white
 
-- [x] **App layout — Top navigation bar**: Full-width white bar, ~56px height, fixed at top. Left: BambooHR-style green logo text `"bambooHR"` in brand green italic script font. Center: horizontal nav links — Home, My Info, People, Hiring, Reports, Files — each ~14px medium weight, active link has green underline (3px solid `#73B255`). Right cluster: search icon (magnifying glass) opening a search input, notification bell icon with red badge count (e.g., "12"), help icon (question mark in circle), settings gear icon, and user avatar (32px circle) with dropdown menu. Nav items should have hover state (green text color shift).
+- [x] **App layout — Top navigation bar**: Full-width white bar, ~56px height, fixed at top. Left: XambooHR-style green logo text `"XambooHR"` in brand green italic script font. Center: horizontal nav links — Home, My Info, People, Hiring, Reports, Files — each ~14px medium weight, active link has green underline (3px solid `#73B255`). Right cluster: search icon (magnifying glass) opening a search input, notification bell icon with red badge count (e.g., "12"), help icon (question mark in circle), settings gear icon, and user avatar (32px circle) with dropdown menu. Nav items should have hover state (green text color shift).
 
 - [x] **Routing**: `App.jsx` with `BrowserRouter`. Define routes:
   - `/` → Home (dashboard)

@@ -63,7 +63,7 @@ export default function TopBar() {
     }}>
       <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
         <TanukiLogo />
-        <span style={{ color: '#fff', fontWeight: 600, fontSize: '16px' }}>GitLab</span>
+        <span style={{ color: '#fff', fontWeight: 600, fontSize: '16px' }}>XitLab</span>
       </Link>
 
       <div style={{ flex: 1, maxWidth: '400px', margin: '0 auto', position: 'relative' }}>

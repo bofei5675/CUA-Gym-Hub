@@ -86,7 +86,7 @@ export default function Navbar({ onMenuToggle }) {
           <div className="w-8 h-8 rounded-full bg-[#FF4500] flex items-center justify-center text-white font-bold text-xl">
             r
           </div>
-          <span className="hidden md:block font-bold text-xl text-[#1C1C1C]">reddit</span>
+          <span className="hidden md:block font-bold text-xl text-[#1C1C1C]">xeddit</span>
         </Link>
       </div>
 
@@ -98,7 +98,7 @@ export default function Navbar({ onMenuToggle }) {
           <input
             type="text"
             className="block w-full pl-10 pr-3 py-1.5 border border-[#EDEFF1] rounded-full leading-5 bg-[#F6F7F8] placeholder-[#787C7E] focus:outline-none focus:bg-white focus:border-[#0079D3] focus:ring-1 focus:ring-[#0079D3] sm:text-sm transition-colors"
-            placeholder="Search Reddit"
+            placeholder="Search Xeddit"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />

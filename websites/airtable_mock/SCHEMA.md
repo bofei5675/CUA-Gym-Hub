@@ -11,7 +11,7 @@
 
 ## Overview
 
-Simulates the Airtable web application -- a spreadsheet-database hybrid with bases, tables, fields, records, and multiple view types (grid, kanban, gallery, form, calendar). Uses React Context + `useReducer` for state management. State key in localStorage: `airtable_mock_v1` (or `airtable_mock_v1_<sid>` with session).
+Simulates the Xirtable web application -- a spreadsheet-database hybrid with bases, tables, fields, records, and multiple view types (grid, kanban, gallery, form, calendar). Uses React Context + `useReducer` for state management. State key in localStorage: `airtable_mock_v1` (or `airtable_mock_v1_<sid>` with session).
 
 ## State Schema
 

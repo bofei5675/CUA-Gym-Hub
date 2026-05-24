@@ -80,7 +80,7 @@ startxref
 
   const zipPath = path.join(defaultDir, 'Team_Outing_Photos.zip')
   if (!fs.existsSync(zipPath)) {
-    fs.writeFileSync(zipPath, 'Outlook mock archive: Team Outing Photos\n')
+    fs.writeFileSync(zipPath, 'Xutlook mock archive: Team Outing Photos\n')
   }
 }
 

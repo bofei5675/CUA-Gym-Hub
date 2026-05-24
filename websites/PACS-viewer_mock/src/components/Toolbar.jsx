@@ -211,7 +211,7 @@ export default function Toolbar() {
         style={{ background: 'none', border: 'none', color: 'var(--color-text-secondary)', fontSize: '18px', cursor: 'pointer', padding: '4px 8px' }}>
         ←
       </button>
-      <span style={{ color: 'var(--color-text-primary)', fontSize: '14px', fontWeight: '600', marginRight: '8px' }}>PACS Viewer</span>
+      <span style={{ color: 'var(--color-text-primary)', fontSize: '14px', fontWeight: '600', marginRight: '8px' }}>XACS Viewer</span>
 
       {/* Separator */}
       <div style={{ width: '1px', height: '28px', background: '#2a3a4a', margin: '0 4px' }} />

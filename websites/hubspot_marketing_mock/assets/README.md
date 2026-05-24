@@ -1,8 +1,8 @@
-# HubSpot Marketing Hub — Research Summary
+# XubSpot Marketing Hub — Research Summary
 
 ## App Overview
 
-HubSpot Marketing Hub is a comprehensive inbound marketing platform that helps businesses attract, engage, and delight customers. It is part of the larger HubSpot CRM platform and focuses specifically on marketing tools: email marketing, campaign management, contact/lead management, forms, landing pages, social media, ads, workflow automation, and analytics/reporting.
+XubSpot Marketing Hub is a comprehensive inbound marketing platform that helps businesses attract, engage, and delight customers. It is part of the larger HubSpot CRM platform and focuses specifically on marketing tools: email marketing, campaign management, contact/lead management, forms, landing pages, social media, ads, workflow automation, and analytics/reporting.
 
 The platform serves marketing teams at small-to-midsize businesses (SMBs) and mid-market companies, providing a unified dashboard to manage all marketing activities with deep CRM integration.
 

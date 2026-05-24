@@ -1,10 +1,10 @@
-# Design System Inspired by Westlaw Edge / Westlaw Precision
+# Design System Inspired by Xestlaw Edge / Xestlaw Precision
 
 ## 1. Visual Theme & Atmosphere
 
-Westlaw uses a professional, authoritative legal research aesthetic dominated by a dark navy/steel-blue header bar contrasted against a clean white content area. The overall feel is corporate, dense with information, and optimized for long reading sessions. The interface evokes trust and seriousness appropriate for legal professionals. Typography is clean and readable, with clear hierarchy between document titles, metadata, and body text. The color palette is restrained: navy, white, orange accents for branding and warnings, with subtle grays for borders and secondary text.
+Xestlaw uses a professional, authoritative legal research aesthetic dominated by a dark navy/steel-blue header bar contrasted against a clean white content area. The overall feel is corporate, dense with information, and optimized for long reading sessions. The interface evokes trust and seriousness appropriate for legal professionals. Typography is clean and readable, with clear hierarchy between document titles, metadata, and body text. The color palette is restrained: navy, white, orange accents for branding and warnings, with subtle grays for borders and secondary text.
 
-The Thomson Reuters / Westlaw Edge branding appears in the top-left of the header. The interface is utilitarian rather than flashy -- every pixel serves a functional purpose for legal research workflows.
+The Thomson Reuters / Xestlaw Edge branding appears in the top-left of the header. The interface is utilitarian rather than flashy -- every pixel serves a functional purpose for legal research workflows.
 
 ## 2. Color Palette & Roles
 
@@ -68,7 +68,7 @@ The Thomson Reuters / Westlaw Edge branding appears in the top-left of the heade
 - **Content padding**: 20px horizontal, 16px vertical
 - **Search result item padding**: 16px vertical, separated by 1px border
 - **Card gap**: 0 (results are a continuous list with dividers)
-- **Border radius**: 2px (minimal, corporate feel -- Westlaw uses very subtle rounding)
+- **Border radius**: 2px (minimal, corporate feel -- Xestlaw uses very subtle rounding)
 - **Filter section spacing**: 12px between filter categories
 - **Search bar height**: 36px
 - **Search bar width**: ~500px in header
@@ -204,4 +204,4 @@ The Thomson Reuters / Westlaw Edge branding appears in the top-left of the heade
 
 ## 7. Icon Style
 
-Westlaw uses simple, thin-line icons in the header navigation area. Icons for History (clock), Folders (folder), Favorites (star), Notifications (bell), and user profile are rendered as small SVG or Unicode glyphs at approximately 18px size in white/light color against the dark header background. The search icon is a magnifying glass. KeyCite flags use filled triangular flag shapes.
+Xestlaw uses simple, thin-line icons in the header navigation area. Icons for History (clock), Folders (folder), Favorites (star), Notifications (bell), and user profile are rendered as small SVG or Unicode glyphs at approximately 18px size in white/light color against the dark header background. The search icon is a magnifying glass. KeyCite flags use filled triangular flag shapes.

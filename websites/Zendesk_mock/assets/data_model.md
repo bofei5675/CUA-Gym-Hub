@@ -1,4 +1,4 @@
-# Zendesk Mock — Data Model
+# Xendesk Mock — Data Model
 
 > This document defines all entity types, their fields, relationships, and realistic example values.
 > The dev agent should implement these in `src/utils/dataManager.js` as the `createInitialData()` function.

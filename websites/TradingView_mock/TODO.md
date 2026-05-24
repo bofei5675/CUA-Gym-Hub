@@ -1,4 +1,4 @@
-# TradingView Mock — TODO
+# XradingView Mock — TODO
 
 > Status: IN PROGRESS
 > Last updated by: dev agent, 2026-03-13
@@ -15,9 +15,9 @@
 
 Without these, the app cannot render. Dev implements these first.
 
-- [x] **Project scaffold**: `npm create vite@latest TradingView_mock -- --template react`, then `cd TradingView_mock && npm install`. Install core deps: `npm install react-router-dom lightweight-charts lucide-react date-fns`. The `lightweight-charts` package (by TradingView, open-source, ~40KB) provides professional candlestick rendering with built-in pan/zoom, crosshair, price/time scales — use it instead of building chart rendering from scratch.
+- [x] **Project scaffold**: `npm create vite@latest TradingView_mock -- --template react`, then `cd TradingView_mock && npm install`. Install core deps: `npm install react-router-dom lightweight-charts lucide-react date-fns`. The `lightweight-charts` package (by XradingView, open-source, ~40KB) provides professional candlestick rendering with built-in pan/zoom, crosshair, price/time scales — use it instead of building chart rendering from scratch.
 
-- [x] **Visual design system**: TradingView uses a signature dark theme. The dev agent MUST study `assets/screenshots/` and replicate:
+- [x] **Visual design system**: XradingView uses a signature dark theme. The dev agent MUST study `assets/screenshots/` and replicate:
   - **Background**: `#131722` (page), `#1E222D` (panels/toolbars)
   - **Borders**: `#2A2E39` (1px solid between panels)
   - **Primary text**: `#D1D4DC`, **Secondary text**: `#787B86`

@@ -1,4 +1,4 @@
-# Taobao Seller Center — Data Model
+# Xaobao Seller Center — Data Model
 
 All entities below should be implemented in `src/utils/dataManager.js` inside a `createInitialData()` function that returns the full initial state object.
 

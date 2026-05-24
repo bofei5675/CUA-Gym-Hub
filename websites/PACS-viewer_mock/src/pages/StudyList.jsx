@@ -208,7 +208,7 @@ export default function StudyList() {
     <div style={{ background: 'var(--color-bg-shell)', minHeight: '100vh', color: 'var(--color-text-primary)', fontFamily: "'Inter', 'Roboto', sans-serif" }}>
       {/* Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 24px', borderBottom: '1px solid var(--color-border)' }}>
-        <div style={{ fontSize: '20px', fontWeight: 'bold', color: '#fff' }}>PACS Viewer</div>
+        <div style={{ fontSize: '20px', fontWeight: 'bold', color: '#fff' }}>XACS Viewer</div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <div style={{ width: '36px', height: '36px', borderRadius: '50%', background: 'var(--color-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px', fontWeight: 'bold', color: '#000' }}>SC</div>
           <span style={{ color: 'var(--color-text-secondary)', fontSize: '14px' }}>{state.currentUser.name}</span>

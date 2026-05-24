@@ -228,7 +228,7 @@ const getDefaultData = () => ({
     { id: 3, projectId: 1, title: "Refactor user context", description: "Move user state to global context.", status: "in_progress", labels: ["refactor"], assignee: null },
     { id: 4, projectId: 2, title: "Implement JWT Auth", description: "Add JWT token generation and validation.", status: "open", labels: ["feature", "security"], assignee: "Admin User" },
     { id: 5, projectId: 2, title: "Fix database connection timeout", description: "Connection drops after 5 minutes of inactivity.", status: "in_progress", labels: ["bug"], assignee: null },
-    { id: 6, projectId: 2, title: "Setup CI pipeline", description: "Configure GitLab CI for Go project.", status: "closed", labels: ["devops"], assignee: "Admin User" }
+    { id: 6, projectId: 2, title: "Setup CI pipeline", description: "Configure XitLab CI for Go project.", status: "closed", labels: ["devops"], assignee: "Admin User" }
   ],
   mergeRequests: [
     { id: 1, projectId: 1, title: "Resolve login issues", sourceBranch: "fix/login-mobile", targetBranch: "main", status: "open", author: "Admin User", createdAt: new Date().toISOString(), reviewers: [] },

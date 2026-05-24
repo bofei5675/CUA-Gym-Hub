@@ -139,7 +139,7 @@ export function AppProvider({ children }) {
             <circle cx="30" cy="24" r="14" fill="#FF7F0E" fillOpacity="0.8" />
           </svg>
         </div>
-        <div style={{ fontSize: 14, color: '#6B7280' }}>Loading Tableau...</div>
+        <div style={{ fontSize: 14, color: '#6B7280' }}>Loading Xableau...</div>
       </div>
     </div>
   )

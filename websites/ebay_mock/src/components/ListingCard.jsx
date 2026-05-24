@@ -33,7 +33,7 @@ export default function ListingCard({ listing }) {
           />
         </div>
         
-        <h3 className="text-sm font-medium text-gray-900 line-clamp-2 mb-1 group-hover:text-ebay-blue group-hover:underline">
+        <h3 className="text-sm font-medium text-gray-900 line-clamp-2 mb-1 group-hover:text-xbay-blue group-hover:underline">
           {listing.title}
         </h3>
         

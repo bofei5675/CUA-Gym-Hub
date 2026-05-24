@@ -34,7 +34,7 @@ function AppLayout() {
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
       <ShellBar />
       {!isAppPage && <NavigationTabBar />}
-      <main style={{ flex: 1, overflowY: 'auto', background: 'var(--sap-page-bg)' }}>
+      <main style={{ flex: 1, overflowY: 'auto', background: 'var(--xap-page-bg)' }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/app/manage-purchase-orders" element={<ManagePurchaseOrders />} />

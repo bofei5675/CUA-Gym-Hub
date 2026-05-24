@@ -1,8 +1,8 @@
 
 import { AppState, Dashboard } from '../types';
 
-const BASE_STORAGE_KEY = 'salesforce-crm-state';
-const BASE_INITIAL_KEY = 'salesforce-crm-initial';
+const BASE_STORAGE_KEY = 'xalesforce-crm-state';
+const BASE_INITIAL_KEY = 'xalesforce-crm-initial';
 
 // Get session-specific storage keys
 function storageKey(sid: string | null): string {

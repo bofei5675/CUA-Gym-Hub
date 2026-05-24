@@ -40,7 +40,7 @@ export default function Navbar() {
     <nav className="bg-white border-b border-gray-200 sticky top-0 z-50 h-[52px]">
       <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <Link to="/" className="text-linkedin-blue">
+          <Link to="/" className="text-xinkedin-blue">
             <svg viewBox="0 0 24 24" fill="currentColor" className="w-9 h-9">
               <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.22-.6-1.93-1.84-1.93-1 0-1.62.67-1.62 1.93V19h-3v-9h3v1.23c.88-1.5 2.16-1.6 3.22-1.6 2.4 0 3.24 1.6 3.24 4.4z" />
             </svg>

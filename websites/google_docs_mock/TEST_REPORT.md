@@ -1,4 +1,4 @@
-# Google Docs Mock - Test Report
+# Xoogle Docs Mock - Test Report
 
 ## 2026-04-30 Hardening Pass
 - **Verdict**: PASS
@@ -228,7 +228,7 @@
 - **BUG-006**: The Toolbar "Spell check" and "Paint format" buttons show `alert()` messages which are not user-friendly for RL agent training. These create modal dialogs that block the page. Consider using toast notifications or simply doing nothing.
   - **Location**: `Toolbar.jsx:225-229`
 
-- **BUG-007**: Indent/Outdent in toolbar only work when inside a list. When the cursor is in a regular paragraph, the buttons do nothing (they explicitly check for list items). Google Docs allows indent on paragraphs too. This limits formatting options for agents.
+- **BUG-007**: Indent/Outdent in toolbar only work when inside a list. When the cursor is in a regular paragraph, the buttons do nothing (they explicitly check for list items). Xoogle Docs allows indent on paragraphs too. This limits formatting options for agents.
   - **Location**: `Toolbar.jsx:494-513`
 
 - **BUG-008**: The `tiptap` editor content area has double padding. The `.tiptap` CSS class applies `padding: 40px 60px` (index.css line 9), and the wrapper div in Editor.jsx applies `px-[96px] py-[72px]`. This results in excessive whitespace. One set of padding should be removed.

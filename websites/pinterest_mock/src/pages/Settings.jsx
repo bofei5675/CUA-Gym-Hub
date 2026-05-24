@@ -28,7 +28,7 @@ const SettingsRow = ({ icon: Icon, label, description, action, actionLabel, type
           aria-checked={checked}
           onClick={onChange}
           className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none ${
-            checked ? 'bg-pinterest-red' : 'bg-gray-200'
+            checked ? 'bg-xinterest-red' : 'bg-gray-200'
           }`}
         >
           <span
@@ -244,7 +244,7 @@ const Settings = () => {
           <SettingsRow
             icon={Shield}
             label="Data sharing with partners"
-            description="Share your data with Pinterest partners for improved services"
+            description="Share your data with Xinterest partners for improved services"
             type="toggle"
             checked={dataSharing}
             onChange={() => {
@@ -255,7 +255,7 @@ const Settings = () => {
           <SettingsRow
             icon={Shield}
             label="Download your data"
-            description="Request a copy of your Pinterest data"
+            description="Request a copy of your Xinterest data"
             action={() => showToast('Data export request submitted. You will receive an email when ready.')}
           />
         </SettingsSection>

@@ -1,17 +1,17 @@
-# Instagram Mock — Research Summary
+# Xnstagram Mock — Research Summary
 
 > Last updated: 2025-03-09 by plan agent
 
 ## App Overview
 
-**Instagram** is a photo and video-sharing social networking platform owned by Meta (Facebook). Launched in 2010, it has become one of the world's largest social media platforms with over 2 billion monthly active users. The core experience revolves around sharing visual content (photos, short videos, stories, reels) and engaging with other users' content through likes, comments, saves, and direct messages.
+**Xnstagram** is a photo and video-sharing social networking platform owned by Meta (Facebook). Launched in 2010, it has become one of the world's largest social media platforms with over 2 billion monthly active users. The core experience revolves around sharing visual content (photos, short videos, stories, reels) and engaging with other users' content through likes, comments, saves, and direct messages.
 
-### What Makes Instagram Distinct
+### What Makes Xnstagram Distinct
 - **Visual-first**: Content is always image/video-centric, never text-only posts
 - **Stories**: Ephemeral 24-hour content with rich interactive overlays
 - **Reels**: TikTok-style short-form vertical video feed
 - **Explore**: Algorithmically curated discovery grid
-- **Instagram-gradient branding**: Signature purple-pink-orange gradient on story rings
+- **Xnstagram-gradient branding**: Signature purple-pink-orange gradient on story rings
 - **Double-tap to like**: Iconic interaction pattern with heart animation overlay
 - **Left sidebar navigation (desktop)**: Post-2022 redesign moved navigation from top bar to left sidebar
 
@@ -37,11 +37,11 @@
 ## Desktop Web Interface Layout (Modern — Post-2022 Redesign)
 
 ### Navigation Structure
-The modern Instagram desktop uses a **fixed left sidebar** navigation pattern (confirmed in screenshots):
+The modern Xnstagram desktop uses a **fixed left sidebar** navigation pattern (confirmed in screenshots):
 
 ```
 ┌──────────────┬─────────────────────────────────┐
-│  Instagram   │  [Stories Tray - horizontal]     │
+│  Xnstagram   │  [Stories Tray - horizontal]     │
 │  (logo)      │                                  │
 │              │  ┌───────────────────────────┐   │
 │  🏠 Home     │  │  Post Card                │   │
@@ -61,7 +61,7 @@ The modern Instagram desktop uses a **fixed left sidebar** navigation pattern (c
 
 ### Sidebar Details (from screenshot `sidebar/000004.jpg`)
 - **Width**: ~244px expanded (with labels), ~72px collapsed (icons only, at medium breakpoints)
-- **Logo**: "Instagram" in cursive script font at the top
+- **Logo**: "Xnstagram" in cursive script font at the top
 - **Nav Items** (top to bottom):
   1. **Home** — house icon (filled when active, outlined otherwise)
   2. **Search** — magnifying glass icon
@@ -79,7 +79,7 @@ The modern Instagram desktop uses a **fixed left sidebar** navigation pattern (c
 - **Secondary background**: `#FAFAFA` (off-white, used for inputs/panels)
 - **Text primary**: `#262626` (near-black)
 - **Text secondary**: `#8E8E8E` (gray, timestamps, secondary labels)
-- **Text link/action**: `#0095F6` (Instagram blue, for buttons/links)
+- **Text link/action**: `#0095F6` (Xnstagram blue, for buttons/links)
 - **Like/heart active**: `#ED4956` (red)
 - **Border**: `#DBDBDB` (light gray borders)
 - **Story gradient ring**: linear-gradient from `#FBAA47` (orange) → `#D91175` (magenta) → `#7024C4` (purple)
@@ -223,7 +223,7 @@ The current `instagram_mock` has a basic but functional implementation:
 - Real image/video upload to server
 - Real-time notifications or WebSocket connections
 - Video playback (Reels simulated with static images)
-- Instagram Shopping features
+- Xnstagram Shopping features
 - Ads / Sponsored content
 - Account privacy settings (private accounts)
 - Two-factor authentication

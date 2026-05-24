@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        discord: {
+        xiscord: {
           bg: '#313338',
           dark: '#2b2d31',
           darker: '#1e1f22',

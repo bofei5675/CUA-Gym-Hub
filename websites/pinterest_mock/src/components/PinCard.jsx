@@ -175,7 +175,7 @@ const PinCard = ({ pin, onClick, onDeleted }) => {
                       <input
                         type="text"
                         placeholder="Search"
-                        className="w-full pl-9 pr-3 py-2 bg-[#e5e5e0] rounded-lg text-sm outline-none focus:ring-2 focus:ring-pinterest-focus-blue"
+                        className="w-full pl-9 pr-3 py-2 bg-[#e5e5e0] rounded-lg text-sm outline-none focus:ring-2 focus:ring-xinterest-focus-blue"
                         value={boardSearch}
                         onChange={(e) => setBoardSearch(e.target.value)}
                         autoFocus
@@ -218,14 +218,14 @@ const PinCard = ({ pin, onClick, onDeleted }) => {
                         <input
                           type="text"
                           placeholder="Board name"
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm outline-none focus:ring-2 focus:ring-pinterest-focus-blue mb-2"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm outline-none focus:ring-2 focus:ring-xinterest-focus-blue mb-2"
                           value={newBoardName}
                           onChange={(e) => setNewBoardName(e.target.value)}
                           autoFocus
                           onKeyDown={(e) => { if (e.key === 'Enter') handleCreateBoard(e); }}
                         />
                         <button
-                          className="w-full py-2 bg-pinterest-red text-white rounded-lg text-sm font-semibold hover:bg-pinterest-hover disabled:opacity-50"
+                          className="w-full py-2 bg-xinterest-red text-white rounded-lg text-sm font-semibold hover:bg-xinterest-hover disabled:opacity-50"
                           disabled={!newBoardName.trim()}
                           onClick={handleCreateBoard}
                         >
@@ -242,7 +242,7 @@ const PinCard = ({ pin, onClick, onDeleted }) => {
               className={`font-semibold px-4 py-2.5 rounded-full text-[15px] transition-colors ${
                 isSaved || justSaved
                   ? 'bg-black text-white'
-                  : 'bg-pinterest-red hover:bg-pinterest-hover text-white'
+                  : 'bg-xinterest-red hover:bg-xinterest-hover text-white'
               }`}
               onClick={handleQuickSave}
             >
@@ -335,7 +335,7 @@ const PinCard = ({ pin, onClick, onDeleted }) => {
           )}
           <button
             className={`flex items-center gap-0.5 text-xs flex-shrink-0 p-1 rounded-full hover:bg-gray-100 transition-colors ${
-              isLiked ? 'text-pinterest-red' : 'text-gray-400'
+              isLiked ? 'text-xinterest-red' : 'text-gray-400'
             }`}
             onClick={(e) => {
               e.stopPropagation();

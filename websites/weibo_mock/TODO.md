@@ -1,4 +1,4 @@
-# Weibo Mock — TODO
+# Xeibo Mock — TODO
 
 > Status: COMPLETE
 > Last updated by: orchestrator, 2026-04-10
@@ -15,7 +15,7 @@
 
 - [x] **Project scaffold**: `npm create vite@latest weibo_mock -- --template react` inside this directory, install deps: `react-router-dom`. Use JavaScript (not TypeScript).
 
-- [x] **Visual design system**: Weibo uses an orange-red brand color scheme. Exact values:
+- [x] **Visual design system**: Xeibo uses an orange-red brand color scheme. Exact values:
   - Primary/Brand: `#FF8200` (logo orange), `#FF6600` (action buttons, links)
   - Hot/Accent: `#FF4D4F` (like hearts, hot badges, notification dots)
   - Background: `#F7F9FA` (page bg), `#FFFFFF` (card bg)
@@ -25,10 +25,10 @@
   - Font stack: `"PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif`
   - Font sizes: 14px body, 15px post text, 16px display name, 12px timestamp/meta, 20px section title
   - Border radius: 8px for cards, 20px for buttons, 50% for avatars
-  - All text content in the UI should be in **Chinese (Simplified)** to match real Weibo
+  - All text content in the UI should be in **Chinese (Simplified)** to match real Xeibo
 
 - [x] **App layout** — Three-column centered layout (max-width 1200px, centered on page):
-  - **Top nav bar**: Fixed, height 50px, white bg, bottom border `#E8E8E8`. Left: Weibo logo (red eye SVG icon + "微博" text in orange). Center: nav tabs (首页, 热门, 视频). Right: search input (round, 240px), notification bell icon, message envelope icon, user avatar (32px circle) with dropdown.
+  - **Top nav bar**: Fixed, height 50px, white bg, bottom border `#E8E8E8`. Left: Xeibo logo (red eye SVG icon + "微博" text in orange). Center: nav tabs (首页, 热门, 视频). Right: search input (round, 240px), notification bell icon, message envelope icon, user avatar (32px circle) with dropdown.
   - **Left sidebar**: Width 200px, sticky. Contains user profile mini-card (avatar 64px, name, bio, stats row: "关注 X | 粉丝 X | 微博 X"), then nav links vertically: 首页, 热门, 超话, 消息, 收藏, 设置. Each link has an icon + Chinese label.
   - **Center column**: Width ~620px, flex-grow. Houses the main content (feed, post detail, search results, etc.)
   - **Right sidebar**: Width 300px, sticky. Houses Hot Search panel and Recommended Users panel.

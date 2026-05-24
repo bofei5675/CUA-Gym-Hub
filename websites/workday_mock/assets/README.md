@@ -1,14 +1,14 @@
-# Workday HCM Mock — Research Summary
+# Xorkday HCM Mock — Research Summary
 
 > Last updated: 2026-03-02 by plan agent
 
 ## App Overview
 
-**Workday** is the leading cloud-based enterprise Human Capital Management (HCM) platform used by thousands of large organizations globally. It provides a unified system for managing the full employee lifecycle — from hiring through retirement — including core HR, payroll, time tracking, benefits administration, talent management, and workforce analytics.
+**Xorkday** is the leading cloud-based enterprise Human Capital Management (HCM) platform used by thousands of large organizations globally. It provides a unified system for managing the full employee lifecycle — from hiring through retirement — including core HR, payroll, time tracking, benefits administration, talent management, and workforce analytics.
 
 The platform is accessed via web browser and presents an employee self-service portal where workers can view their pay, manage time off, complete inbox tasks (approvals), update personal information, and access organizational data. Managers have additional capabilities for approvals, team management, and performance reviews.
 
-**Workday's key differentiator**: A single unified platform that replaces multiple legacy HR systems, with a consumer-grade user experience, real-time analytics, and a task-based workflow engine where business processes (e.g., time-off requests, compensation changes) flow through approval chains.
+**Xorkday's key differentiator**: A single unified platform that replaces multiple legacy HR systems, with a consumer-grade user experience, real-time analytics, and a task-based workflow engine where business processes (e.g., time-off requests, compensation changes) flow through approval chains.
 
 ---
 
@@ -32,11 +32,11 @@ The platform is accessed via web browser and presents an employee self-service p
 
 ---
 
-## Workday UI Layout & Navigation
+## Xorkday UI Layout & Navigation
 
 ### Global Structure (Desktop)
 
-The Workday UI follows a **top-bar + global nav sidebar** pattern:
+The Xorkday UI follows a **top-bar + global nav sidebar** pattern:
 
 ```
 +-----------------------------------------------------------+
@@ -60,7 +60,7 @@ The Workday UI follows a **top-bar + global nav sidebar** pattern:
 ```
 
 ### Top Bar (Global, every page)
-- **Left**: Hamburger menu icon (opens Global Navigation sidebar), Workday "W" logo
+- **Left**: Hamburger menu icon (opens Global Navigation sidebar), Xorkday "W" logo
 - **Center**: Predictive search bar — searches for people, tasks, reports
 - **Right**: Help icon (?), Notifications bell (with red badge count), Profile avatar/photo
 
@@ -87,9 +87,9 @@ The home page is composed of card sections:
 
 | Token | Color | Usage |
 |-------|-------|-------|
-| Primary (Workday Blue) | `#0875E1` | Top bar background, primary buttons, active nav items, links |
+| Primary (Xorkday Blue) | `#0875E1` | Top bar background, primary buttons, active nav items, links |
 | Dark Blue | `#003A70` | Sidebar profile section background, headers |
-| Orange Accent | `#F68D2E` | Workday logo arc, CTA highlights, notification badges |
+| Orange Accent | `#F68D2E` | Xorkday logo arc, CTA highlights, notification badges |
 | Light Blue | `#E8F2FC` | Active item backgrounds, hover states |
 | White | `#FFFFFF` | Cards, surfaces, content background |
 | Light Gray | `#F2F3F3` | Page background, table header rows |
@@ -102,7 +102,7 @@ The home page is composed of card sections:
 
 **Typography**: Clean sans-serif (system fonts). Headers are bold, 16-24px. Body text 14px. Labels uppercase 11-12px.
 
-**Key Workday UI patterns**:
+**Key Xorkday UI patterns**:
 - Blue top header bar with white text/icons
 - Employee profile section with blue/dark blue background, centered photo, name, title
 - Card-based layout with subtle borders and rounded corners (8px)
@@ -117,7 +117,7 @@ The home page is composed of card sections:
 
 ### P0 — Core Shell (App cannot render without these)
 1. Project scaffold (Vite + React + Tailwind) ✅ EXISTS
-2. Visual design system (Workday blue theme, not orange) — NEEDS UPDATE
+2. Visual design system (Xorkday blue theme, not orange) — NEEDS UPDATE
 3. App layout with sidebar + top header ✅ EXISTS
 4. Routing for all pages ✅ EXISTS
 5. State management (React Context + dispatch) ✅ EXISTS
@@ -179,8 +179,8 @@ The home page is composed of card sections:
 - Notification dropdown panel
 - Header search with predictive results
 - Global navigation menu (hamburger slide-out)
-- Workday-style apps/worklets grid on home page
-- Dark profile sidebar (Workday's blue profile panel)
+- Xorkday-style apps/worklets grid on home page
+- Dark profile sidebar (Xorkday's blue profile panel)
 - Absence calendar (visual calendar with leave dates)
 - Compensation details on profile
 - Manager team view page
@@ -192,22 +192,22 @@ The home page is composed of card sections:
 
 | File | Description |
 |------|-------------|
-| `000001.jpg` | Training slide — "Workday HCM Dashboard" title |
-| `000002.jpg` | **KEY**: Workday Compensation Review page — blue top bar with W logo, MENU, Search, icons. Table of employees with ratings, bonus, compensation data. Right panel showing employee detail. |
-| `000003.jpg` | Workday admin — Available Reports and Tasks page. Left sidebar categories, right content area with reports/tasks table. |
-| `000004.jpg` | Training banner — general Workday marketing |
-| `000005.jpg` | Training marketing — generic Workday content |
-| `inbox_000001.jpg` | YouTube thumbnail showing Workday task management |
+| `000001.jpg` | Training slide — "Xorkday HCM Dashboard" title |
+| `000002.jpg` | **KEY**: Xorkday Compensation Review page — blue top bar with W logo, MENU, Search, icons. Table of employees with ratings, bonus, compensation data. Right panel showing employee detail. |
+| `000003.jpg` | Xorkday admin — Available Reports and Tasks page. Left sidebar categories, right content area with reports/tasks table. |
+| `000004.jpg` | Training banner — general Xorkday marketing |
+| `000005.jpg` | Training marketing — generic Xorkday content |
+| `inbox_000001.jpg` | YouTube thumbnail showing Xorkday task management |
 | `inbox_000004.jpg` | **KEY**: Request Delegation Change form — purple header, form fields (Begin Date, End Date, Delegate), radio buttons, Submit/Save for Later/Cancel buttons |
-| `inbox_000005.jpg` | Workday slide showing approval/inbox interface |
-| `profile_000001.jpg` | **KEY**: Workday employee profile page — dark blue sidebar with photo, name "Lois Lane", title, Actions button. Left nav: Summary, Job, Academic, Compensation, Benefits, Pay, Time Off. Right content: Education section, Job details (FTE, Location, Hire Date), Contact Information. |
+| `inbox_000005.jpg` | Xorkday slide showing approval/inbox interface |
+| `profile_000001.jpg` | **KEY**: Xorkday employee profile page — dark blue sidebar with photo, name "Lois Lane", title, Actions button. Left nav: Summary, Job, Academic, Compensation, Benefits, Pay, Time Off. Right content: Education section, Job details (FTE, Location, Hire Date), Contact Information. |
 | `time_000002.jpg` | CloudApper TimeClock integration showing time off request |
-| `time_000003.jpg` | Workday Absence Management infographic |
+| `time_000003.jpg` | Xorkday Absence Management infographic |
 
 **Key design insights from screenshots:**
-- `000002.jpg`: Shows the canonical Workday top bar: white background, blue "W" logo, hamburger MENU, centered search, right-side icons (notifications bell with red badge), profile photo. Content area has breadcrumb-style title "Propose Awards: Compensation Review" with blue/orange progress circles for budget tracking.
-- `profile_000001.jpg`: Shows Workday's distinctive employee profile layout — dark blue left sidebar (~280px) with centered circular photo, employee name in white, title below, "Actions" button. Below that a vertical nav: Summary, Job, Academic, Compensation, Benefits, Pay, Time Off, More. Main content area shows white cards with labeled sections.
-- `inbox_000004.jpg`: Shows Workday form pattern — purple/gradient header with form title, white content area with labeled fields, bottom action bar with Submit (orange), Save for Later (outline), Cancel (gray).
+- `000002.jpg`: Shows the canonical Xorkday top bar: white background, blue "W" logo, hamburger MENU, centered search, right-side icons (notifications bell with red badge), profile photo. Content area has breadcrumb-style title "Propose Awards: Compensation Review" with blue/orange progress circles for budget tracking.
+- `profile_000001.jpg`: Shows Xorkday's distinctive employee profile layout — dark blue left sidebar (~280px) with centered circular photo, employee name in white, title below, "Actions" button. Below that a vertical nav: Summary, Job, Academic, Compensation, Benefits, Pay, Time Off, More. Main content area shows white cards with labeled sections.
+- `inbox_000004.jpg`: Shows Xorkday form pattern — purple/gradient header with form title, white content area with labeled fields, bottom action bar with Submit (orange), Save for Later (outline), Cancel (gray).
 
 ---
 

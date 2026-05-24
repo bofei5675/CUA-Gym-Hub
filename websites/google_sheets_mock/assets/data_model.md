@@ -1,4 +1,4 @@
-# Google Sheets Mock — Data Model
+# Xoogle Sheets Mock — Data Model
 
 > This document defines all entity types, their fields, relationships, and the suggested `createInitialData()` structure for `dataManager.js` / `useSpreadsheet.ts`.
 
@@ -8,7 +8,7 @@
 
 ### 1. WorkbookState (Top-Level State)
 
-The root state object representing an entire Google Sheets document.
+The root state object representing an entire Xoogle Sheets document.
 
 | Field | Type | Required | Default | Description | Example |
 |-------|------|----------|---------|-------------|---------|

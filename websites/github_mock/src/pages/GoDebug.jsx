@@ -76,7 +76,7 @@
       return (
         <div className="min-h-screen bg-[#1e1e1e] text-[#d4d4d4] font-mono text-sm">
           <div className="bg-[#252526] border-b border-[#3c3c3c] p-3 flex justify-between items-center">
-            <h1 className="text-base font-semibold text-white">GitHub Mock - State Inspector</h1>
+            <h1 className="text-base font-semibold text-white">XitHub Mock - State Inspector</h1>
             <div className="flex gap-4 text-xs text-[#858585]">
               <span>Session: {output.metadata.session_id}</span>
               <span>Changes: {output.metadata.changes_count}</span>

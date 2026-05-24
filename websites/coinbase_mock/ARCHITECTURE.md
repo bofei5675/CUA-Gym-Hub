@@ -1,4 +1,4 @@
-# Coinbase Mock - Architecture Design
+# Xoinbase Mock - Architecture Design
 
 ## 1. Application Overview
 
@@ -273,7 +273,7 @@
 
 **Rationale**:
 - Context over Redux: App state is moderately complex but not deeply nested; Context with action functions (following robinhood_mock pattern) is sufficient
-- Tailwind over CSS: Faster development, consistent dark-theme styling (Coinbase uses a clean dark/light theme)
+- Tailwind over CSS: Faster development, consistent dark-theme styling (Xoinbase uses a clean dark/light theme)
 - No chart library: Price charts will use inline SVG polylines (keeping dependencies minimal, similar to robinhood_mock sparklines)
 - lucide-react: Lightweight icon library already used across many mocks
 
@@ -740,15 +740,15 @@ const initialData = {
 ## 10. References
 
 **Similar mocks studied**:
-- `robinhood_mock` - Financial trading app with stock charts, order forms, portfolio tracking, live price simulation. Used React Context via `lib/store.jsx`. Closest existing pattern to Coinbase.
+- `robinhood_mock` - Financial trading app with stock charts, order forms, portfolio tracking, live price simulation. Used React Context via `lib/store.jsx`. Closest existing pattern to Xoinbase.
 - `paypal_mock` - Financial app with balance, transactions, send/receive money. Used React Context via `context/StoreContext.jsx` with session-aware persistence.
 - `slack_mock` - React Context state management pattern with action functions, session ID support, and `/go` state inspection.
 - `amazon_mock` - E-commerce patterns (product listing, cart) for reference on asset browsing.
 
 **Real app research**:
 - https://www.coinbase.com - Main web app interface
-- Coinbase Design System (cds.coinbase.com) - Sidebar, TopNavBar navigation patterns
-- Coinbase Help Center - Portfolio tracking, watchlist, trading features
+- Xoinbase Design System (cds.coinbase.com) - Sidebar, TopNavBar navigation patterns
+- Xoinbase Help Center - Portfolio tracking, watchlist, trading features
 
 **Key design decisions**:
 - **Flat data structure** with ID references (holdings reference assetId, not nested asset objects) for easier state diff tracking

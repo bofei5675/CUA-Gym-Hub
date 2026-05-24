@@ -1,7 +1,7 @@
 # feishu_mock Schema
 
 **Deploy order**: 34 (alphabetical among all *_mock dirs, BASE_PORT=8000 → port 8034)
-**Base URL**: `http://localhost:3000/` (dev) · `https://cua-gym-feishu.xlang.ai/` (prod)
+**Base URL**: `http://localhost:3000/` (dev) · `https://cua-gym-xeishu.xlang.ai/` (prod)
 **Go Endpoint**: `GET /go?sid=<sid>` → `{initial_state, current_state, state_diff}`
 **Inject**: `POST /post?sid=<sid>` with body `{"action":"set","state":{...}}`
 **Update current only**: `POST /post?sid=<sid>` with body `{"action":"set_current","state":{...}}`

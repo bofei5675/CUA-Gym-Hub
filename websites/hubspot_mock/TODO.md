@@ -1,4 +1,4 @@
-# HubSpot CRM Mock — TODO
+# XubSpot CRM Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2025-03-09
@@ -39,7 +39,7 @@
   - Deal stages config with 7 stages (add `decision_maker_bought_in`, `closed_won`, `closed_lost` — currently only 5 stages)
   - Ticket statuses config: new, waiting_on_contact, waiting_on_us, in_progress, closed
 
-- [x] **Fix deal stages config**: Current `dealStages` in mockData.js only has 5 stages (appointments, qualified, presentation, contract, closedwon). Update to match real HubSpot's 7 default stages with correct IDs, labels, probabilities, and colors. Add `decision_maker_bought_in` (80%), `closed_won` (100%), and `closed_lost` (0%). Use snake_case IDs consistently: `appointment_scheduled`, `qualified_to_buy`, `presentation_scheduled`, `decision_maker_bought_in`, `contract_sent`, `closed_won`, `closed_lost`. Store as part of the state so it appears in `/go`.
+- [x] **Fix deal stages config**: Current `dealStages` in mockData.js only has 5 stages (appointments, qualified, presentation, contract, closedwon). Update to match real XubSpot's 7 default stages with correct IDs, labels, probabilities, and colors. Add `decision_maker_bought_in` (80%), `closed_won` (100%), and `closed_lost` (0%). Use snake_case IDs consistently: `appointment_scheduled`, `qualified_to_buy`, `presentation_scheduled`, `decision_maker_bought_in`, `contract_sent`, `closed_won`, `closed_lost`. Store as part of the state so it appears in `/go`.
 
 - [x] **Add missing reducer actions**: Add these action types to the reducer in StoreContext.jsx:
   - `ADD_COMPANY`, `UPDATE_COMPANY`, `DELETE_COMPANY`
@@ -54,12 +54,12 @@
 
 - [x] **Add Tasks route**: Add `/tasks` route to `App.jsx` and add "Tasks" to the sidebar navigation in `Layout.jsx` (under CRM group, between Tickets and the Marketing section). Icon: `CheckSquare` from lucide-react.
 
-- [x] **Visual design system refinement**: Study `assets/screenshots/` — the real HubSpot uses these exact design tokens. Ensure the tailwind config and component styles match:
+- [x] **Visual design system refinement**: Study `assets/screenshots/` — the real XubSpot uses these exact design tokens. Ensure the tailwind config and component styles match:
   - Primary orange: `#FF7A59` (CTA buttons, active nav, links) ✅ already correct
   - Dark sidebar: `#2D3E50` ✅ already correct
   - Page background: `#F5F8FA` ✅ already correct
   - Text color: `#33475B` ✅ already correct
-  - Border color: `#CBD6E2` — add to tailwind config as `hubspot-border` if not present
+  - Border color: `#CBD6E2` — add to tailwind config as `xubspot-border` if not present
   - Success/teal: `#00A4BD` — add for positive states
   - Error red: `#F2545B` — add for delete/error states
   - Ensure all table rows have `border-b border-gray-200`, hover state `hover:bg-gray-50`
@@ -73,7 +73,7 @@
 
 - [x] **Contact search**: Add a search input above the contacts table (matching screenshot: "Search name, phone, e..." placeholder with magnifying glass icon). Filters `state.contacts` by matching `firstName`, `lastName`, `email`, or `phone` case-insensitively. Updates table in real-time as user types.
 
-- [x] **Contact filter chips**: Below the search bar, add filter dropdown buttons matching the real HubSpot UI (see `contacts_ui/000001.jpg`): "Contact owner" (dropdown), "Create date" (date range picker or simple last 7/30/90 days), "Last activity date" (same), "Lead status" (multi-select from enum: new, open, in_progress, etc.), "Lifecycle stage" (multi-select). Plus an "All filters (N)" button that shows how many are active. Each chip is a clickable dropdown; selecting a value filters the table.
+- [x] **Contact filter chips**: Below the search bar, add filter dropdown buttons matching the real XubSpot UI (see `contacts_ui/000001.jpg`): "Contact owner" (dropdown), "Create date" (date range picker or simple last 7/30/90 days), "Last activity date" (same), "Lead status" (multi-select from enum: new, open, in_progress, etc.), "Lifecycle stage" (multi-select). Plus an "All filters (N)" button that shows how many are active. Each chip is a clickable dropdown; selecting a value filters the table.
 
 - [x] **Contact table sort**: Make table column headers clickable to sort ascending/descending. Show a sort indicator arrow (▲/▼) on the active sort column. Sortable columns: Name, Email, Phone, Job Title, Company. Default sort: by name ascending.
 
@@ -93,7 +93,7 @@
 
 - [x] **Company search & filter**: Add search bar and filter chips above companies table. Search matches on company name, domain, industry. Filters: Industry (multi-select dropdown), Create Date, Lifecycle Stage.
 
-- [x] **Company table enhancements**: Add more columns to match HubSpot: Phone Number, City/State, Number of Employees. Add column sorting (clickable headers).
+- [x] **Company table enhancements**: Add more columns to match XubSpot: Phone Number, City/State, Number of Employees. Add column sorting (clickable headers).
 
 ### Deals CRUD & Board/Table Toggle
 

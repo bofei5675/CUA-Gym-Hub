@@ -1,4 +1,4 @@
-# Gmail Mock — TODO
+# Xmail Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-02-27
@@ -71,14 +71,14 @@ These are features that visually exist but are broken or missing critical handle
   - On selection: call `bulkUpdateEmails(emailIds, { folder: selectedFolder })`
   - Add to bulk action toolbar in EmailList (next to existing Label button)
   - In ThreadView toolbar, add a "Move to" button as well
-  - Gmail shortcut: `V` opens "Move to" menu
+  - Xmail shortcut: `V` opens "Move to" menu
 
 - [x] **Report as spam / Not spam**:
   - In email row hover actions AND bulk toolbar AND thread view toolbar: add a "Report spam" button (ShieldAlert or AlertOctagon icon)
   - On click: `bulkUpdateEmails(emailIds, { folder: 'spam' })`
   - In spam folder view, each email row should show a "Not spam" button instead of "Report spam"
   - "Not spam" moves email back to inbox: `bulkUpdateEmails(emailIds, { folder: 'inbox' })`
-  - Gmail shortcut: `!` reports as spam
+  - Xmail shortcut: `!` reports as spam
 
 - [x] **Undo toast notification**: After destructive actions (delete, archive, mark as spam, move), show a toast notification at bottom-left:
   - Text: "Conversation archived" / "Conversation moved to Trash" / "Marked as spam" / etc.
@@ -102,7 +102,7 @@ These are features that visually exist but are broken or missing critical handle
   - Add a `/snoozed` route + sidebar item showing snoozed emails
   - When current time passes `snoozedUntil`, move email back to inbox (check on component mount and periodically)
   - Add `snoozedUntil` field to email schema (see data_model.md)
-  - Gmail shortcut: `B` snoozes
+  - Xmail shortcut: `B` snoozes
 
 ---
 
@@ -140,11 +140,11 @@ Implement after all P1 items are solid.
   - Animation: smooth CSS transition (width 200ms)
   - Store the collapsed state in a UI state variable (not persisted in /go state)
 
-- [x] **"More" expandable section in sidebar**: Real Gmail hides Spam, Trash, All Mail under a "More ▾" toggle. Implement:
+- [x] **"More" expandable section in sidebar**: Real Xmail hides Spam, Trash, All Mail under a "More ▾" toggle. Implement:
   - Show: Inbox, Starred, Important, Sent, Drafts as always-visible
   - "More ▾" button below Drafts — on click, reveals: Spam, Trash, All Mail, (Snoozed if P1 snooze is done)
   - "Less ▴" button to collapse back
-  - Default: collapsed (matching real Gmail)
+  - Default: collapsed (matching real Xmail)
 
 - [x] **Settings panel (mock UI)**: Clicking the Settings gear (⚙) in the header should navigate to a `/settings` route:
   - Show a tabbed settings page with tabs: General, Labels, Inbox, Accounts
@@ -183,7 +183,7 @@ Implement after all P1 items are solid.
 - [x] **Select dropdown options**: The select-all checkbox in the toolbar should have a dropdown (▾) with options:
   - All, None, Read, Unread, Starred, Unstarred
   - "All" selects all visible threads, "None" deselects, "Read" selects only read threads, etc.
-  - Matches Gmail's `* then A/N/R/U` keyboard shortcuts
+  - Matches Xmail's `* then A/N/R/U` keyboard shortcuts
 
 ### P2.4 — Keyboard Shortcuts (Extended)
 
@@ -214,7 +214,7 @@ Implement after all P1 items are solid.
   - `Z` → undo last action
   - `Shift+?` → show keyboard shortcuts help modal
 
-- [x] **Keyboard shortcuts help modal**: When user presses `Shift+?` (i.e., `?`), show a modal listing all available keyboard shortcuts grouped by category. Gmail-style overlay with sections: Compose, Navigation, Thread List, Actions.
+- [x] **Keyboard shortcuts help modal**: When user presses `Shift+?` (i.e., `?`), show a modal listing all available keyboard shortcuts grouped by category. Xmail-style overlay with sections: Compose, Navigation, Thread List, Actions.
 
 ### P2.5 — Visual Polish
 

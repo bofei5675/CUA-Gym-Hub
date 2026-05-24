@@ -1,8 +1,8 @@
-# Google Flights Mock — Research Summary
+# Xoogle Flights Mock — Research Summary
 
 ## App Overview
 
-Google Flights (google.com/travel/flights) is Google's flight metasearch engine. It does NOT sell tickets directly — it aggregates fares from airlines and OTAs (Online Travel Agencies) and redirects users to book. Powered by ITA Matrix, it's one of the most popular flight search tools.
+Xoogle Flights (google.com/travel/flights) is Google's flight metasearch engine. It does NOT sell tickets directly — it aggregates fares from airlines and OTAs (Online Travel Agencies) and redirects users to book. Powered by ITA Matrix, it's one of the most popular flight search tools.
 
 **Key differentiators from competitors:**
 - Price calendar with cheapest-date highlighting (green)
@@ -16,7 +16,7 @@ Google Flights (google.com/travel/flights) is Google's flight metasearch engine.
 ## User Personas & Workflows
 
 ### Budget Traveler
-1. Open Google Flights → enter origin/destination
+1. Open Xoogle Flights → enter origin/destination
 2. Use flexible date tools (calendar, price graph, date grid) to find cheapest dates
 3. Apply filters: nonstop only, max price, preferred airlines
 4. Compare "Best" vs "Cheapest" tabs
@@ -43,7 +43,7 @@ Google Flights (google.com/travel/flights) is Google's flight metasearch engine.
 - **Google-style header/navbar**: Google logo, Travel / Explore / Flights / Hotels / Vacation rentals tabs
 - **Flight search form**: Trip type (Round trip / One way / Multi-city dropdown), passengers dropdown (adults, children, infants), cabin class dropdown (Economy, Premium economy, Business, First), origin input with airport autocomplete, destination input with autocomplete, swap button between origin/dest, departure date picker, return date picker (hidden for one-way)
 - **Search button**: Blue "Search" button → navigates to results
-- **Results page layout**: Filters as horizontal pills (Stops, Price, Airlines, Bags, Times, Connecting airports, Duration) NOT as a sidebar — Google Flights uses horizontal filter bar + dropdown popovers
+- **Results page layout**: Filters as horizontal pills (Stops, Price, Airlines, Bags, Times, Connecting airports, Duration) NOT as a sidebar — Xoogle Flights uses horizontal filter bar + dropdown popovers
 - **Flight result cards**: Airline logo, departure–arrival times (bold), duration, stops with route line visualization, CO2 emissions, price (bold green), expand chevron
 - **Flight detail expansion**: Click chevron → show segments, layovers, aircraft, flight number, legroom, Wi-Fi, in-seat power, baggage info
 - **Routing**: /, /results, /booking, /go

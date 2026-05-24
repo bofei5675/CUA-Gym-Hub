@@ -55,7 +55,7 @@ export default function Layout() {
         <div className="top-nav-inner">
           <div className="nav-left">
             <Link to="/" className="nav-logo">
-              <svg className="weibo-logo-svg" viewBox="0 0 48 24" width="48" height="24" fill="none">
+              <svg className="xeibo-logo-svg" viewBox="0 0 48 24" width="48" height="24" fill="none">
                 <circle cx="12" cy="12" r="11" fill="#E6162D"/>
                 <text x="12" y="17" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold" fontFamily="PingFang SC, Microsoft YaHei, sans-serif">微</text>
               </svg>

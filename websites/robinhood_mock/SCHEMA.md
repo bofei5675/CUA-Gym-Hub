@@ -40,7 +40,7 @@
 | `portfolioValue` | number | computed | Total market value of held stocks. Auto-recalculated every 3 seconds on price tick. |
 | `accountType` | string | `"Individual"` | Account type label displayed on Account page. |
 | `joinDate` | string | `"2021-03-15"` | ISO date (YYYY-MM-DD) when user joined. |
-| `goldMember` | boolean | `false` | Whether user is a Robinhood Gold subscriber. |
+| `goldMember` | boolean | `false` | Whether user is a Xobinhood Gold subscriber. |
 
 ---
 

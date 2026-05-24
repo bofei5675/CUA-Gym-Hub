@@ -9,12 +9,12 @@ function formatCurrency(val, cur = 'USD') {
 }
 
 function StatusIcon({ status, deliveryStatus }) {
-  if (deliveryStatus === 'Overdue') return <span title="Overdue" style={{ color: 'var(--sap-status-error)' }}>⚠</span>
-  if (status === 'Fully Delivered') return <span title="Delivered" style={{ color: 'var(--sap-status-success)' }}>✓</span>
-  if (status === 'Partially Delivered') return <span title="Partially Delivered" style={{ color: 'var(--sap-status-warning)' }}>◑</span>
-  if (status === 'Ordered') return <span title="Ordered" style={{ color: 'var(--sap-blue)' }}>●</span>
-  if (status === 'Draft') return <span title="Draft" style={{ color: 'var(--sap-text-secondary)' }}>○</span>
-  if (status === 'Closed') return <span title="Closed" style={{ color: 'var(--sap-text-secondary)' }}>■</span>
+  if (deliveryStatus === 'Overdue') return <span title="Overdue" style={{ color: 'var(--xap-status-error)' }}>⚠</span>
+  if (status === 'Fully Delivered') return <span title="Delivered" style={{ color: 'var(--xap-status-success)' }}>✓</span>
+  if (status === 'Partially Delivered') return <span title="Partially Delivered" style={{ color: 'var(--xap-status-warning)' }}>◑</span>
+  if (status === 'Ordered') return <span title="Ordered" style={{ color: 'var(--xap-blue)' }}>●</span>
+  if (status === 'Draft') return <span title="Draft" style={{ color: 'var(--xap-text-secondary)' }}>○</span>
+  if (status === 'Closed') return <span title="Closed" style={{ color: 'var(--xap-text-secondary)' }}>■</span>
   return <span>—</span>
 }
 
@@ -119,13 +119,13 @@ export default function ManagePurchaseOrders() {
           {showVariants && (
             <div style={{
               position: 'absolute', top: '100%', left: 0, background: '#fff',
-              border: '1px solid var(--sap-border)', borderRadius: '4px',
+              border: '1px solid var(--xap-border)', borderRadius: '4px',
               boxShadow: '0 4px 16px rgba(0,0,0,0.1)', zIndex: 100, minWidth: '180px'
             }}>
               {VARIANT_OPTIONS.map(v => (
                 <div key={v} onClick={() => { setVariant(v.replace(' (Default)', '')); setShowVariants(false) }}
-                  style={{ padding: '8px 12px', fontSize: '13px', cursor: 'pointer', color: 'var(--sap-text-primary)' }}
-                  onMouseEnter={e => e.target.style.background = 'var(--sap-page-bg)'}
+                  style={{ padding: '8px 12px', fontSize: '13px', cursor: 'pointer', color: 'var(--xap-text-primary)' }}
+                  onMouseEnter={e => e.target.style.background = 'var(--xap-page-bg)'}
                   onMouseLeave={e => e.target.style.background = 'none'}
                 >{v}</div>
               ))}
@@ -186,7 +186,7 @@ export default function ManagePurchaseOrders() {
             </div>
           )}
           <div className="filter-bar-actions">
-            <button className="btn-ghost" style={{ fontSize: '12px', color: 'var(--sap-text-secondary)' }}>
+            <button className="btn-ghost" style={{ fontSize: '12px', color: 'var(--xap-text-secondary)' }}>
               Adapt Filters (8)
             </button>
             <button className="btn-primary" onClick={applyFilters}>Go</button>
@@ -194,7 +194,7 @@ export default function ManagePurchaseOrders() {
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4px' }}>
             <button
               onClick={() => setFilterCollapsed(c => !c)}
-              style={{ background: 'none', border: 'none', color: 'var(--sap-text-secondary)', cursor: 'pointer', fontSize: '18px' }}
+              style={{ background: 'none', border: 'none', color: 'var(--xap-text-secondary)', cursor: 'pointer', fontSize: '18px' }}
               title={filterCollapsed ? 'Expand filters' : 'Collapse filters'}
             >
               {filterCollapsed ? '▽' : '△'}
@@ -204,7 +204,7 @@ export default function ManagePurchaseOrders() {
 
         {/* Table */}
         <div className="section-card">
-          <div style={{ padding: '8px 12px', borderBottom: '1px solid var(--sap-border)' }}>
+          <div style={{ padding: '8px 12px', borderBottom: '1px solid var(--xap-border)' }}>
             <div className="table-toolbar">
               <div className="table-toolbar-left">
                 <span className="table-count">Purchase Orders ({filtered.length})</span>
@@ -216,18 +216,18 @@ export default function ManagePurchaseOrders() {
                   className="btn-ghost"
                   onClick={handleDelete}
                   disabled={selected.length === 0}
-                  style={{ color: selected.length > 0 ? 'var(--sap-status-error)' : undefined }}
+                  style={{ color: selected.length > 0 ? 'var(--xap-status-error)' : undefined }}
                 >
                   Delete
                 </button>
-                <span style={{ color: 'var(--sap-border)', margin: '0 4px' }}>|</span>
+                <span style={{ color: 'var(--xap-border)', margin: '0 4px' }}>|</span>
                 <button className="btn-ghost" title="Settings">⚙</button>
                 <button className="btn-ghost" title="Export">⬇</button>
               </div>
             </div>
           </div>
           <div style={{ overflowX: 'auto' }}>
-            <table className="sap-table">
+            <table className="xap-table">
               <thead>
                 <tr>
                   <th style={{ width: '40px' }}>
@@ -246,7 +246,7 @@ export default function ManagePurchaseOrders() {
               </thead>
               <tbody>
                 {filtered.length === 0 ? (
-                  <tr><td colSpan={10} style={{ textAlign: 'center', padding: '32px', color: 'var(--sap-text-secondary)' }}>
+                  <tr><td colSpan={10} style={{ textAlign: 'center', padding: '32px', color: 'var(--xap-text-secondary)' }}>
                     No purchase orders found. Adjust filters and click Go.
                   </td></tr>
                 ) : filtered.map(po => (

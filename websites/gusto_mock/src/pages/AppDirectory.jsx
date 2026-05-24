@@ -7,11 +7,11 @@ const apps = [
   { id: 'app_4', name: 'Google Workspace', category: 'Productivity', description: 'Sync employee directory with Google Contacts and Calendar.', icon: '📧', installed: false, popular: true },
   { id: 'app_5', name: 'Microsoft 365', category: 'Productivity', description: 'Integrate with Outlook and Teams for employee onboarding.', icon: '📎', installed: false, popular: false },
   { id: 'app_6', name: 'Lattice', category: 'Performance', description: 'Connect employee data for seamless performance reviews.', icon: '🎯', installed: false, popular: false },
-  { id: 'app_7', name: 'Greenhouse', category: 'Recruiting', description: 'Automatically onboard new hires from Greenhouse into Gusto.', icon: '🌱', installed: true, popular: true },
+  { id: 'app_7', name: 'Greenhouse', category: 'Recruiting', description: 'Automatically onboard new hires from Greenhouse into Xusto.', icon: '🌱', installed: true, popular: true },
   { id: 'app_8', name: 'Lever', category: 'Recruiting', description: 'Sync candidate data and streamline the hiring-to-onboarding flow.', icon: '🔗', installed: false, popular: false },
   { id: 'app_9', name: 'Expensify', category: 'Expense Management', description: 'Import expense reports and reimbursements into payroll.', icon: '🧾', installed: false, popular: true },
   { id: 'app_10', name: 'Justworks', category: 'Benefits', description: 'Coordinate benefits administration across platforms.', icon: '🏥', installed: false, popular: false },
-  { id: 'app_11', name: 'Zapier', category: 'Automation', description: 'Build custom workflows connecting Gusto with 5,000+ apps.', icon: '⚡', installed: false, popular: true },
+  { id: 'app_11', name: 'Zapier', category: 'Automation', description: 'Build custom workflows connecting Xusto with 5,000+ apps.', icon: '⚡', installed: false, popular: true },
   { id: 'app_12', name: 'Carta', category: 'Equity', description: 'Manage equity grants and cap table alongside payroll.', icon: '📈', installed: false, popular: false },
 ]
 

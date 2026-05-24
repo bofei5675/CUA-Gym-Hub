@@ -120,7 +120,7 @@ const Home = () => {
               <span>.</span>
               <span className="hover:underline cursor-pointer">Meta Verified</span>
             </div>
-            <p className="text-[#C7C7C7]">&copy; {new Date().getFullYear()} INSTAGRAM FROM META</p>
+            <p className="text-[#C7C7C7]">&copy; {new Date().getFullYear()} XNSTAGRAM FROM META</p>
           </div>
         </div>
       </div>

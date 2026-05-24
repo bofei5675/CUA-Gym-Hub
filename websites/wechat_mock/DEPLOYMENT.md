@@ -1,6 +1,6 @@
-# WeChat Mock 部署指南
+# XeChat Mock 部署指南
 
-本指南将帮助你将 WeChat Mock 项目部署到 Nginx 服务器，使其可通过外网访问。
+本指南将帮助你将 XeChat Mock 项目部署到 Nginx 服务器，使其可通过外网访问。
 
 ## 📋 前置要求
 
@@ -252,10 +252,10 @@ A       www        your-server-ip
 ### 方法 1: 使用不同域名/子域名
 
 ```nginx
-# wechat.yourdomain.com
+# xechat.yourdomain.com
 server {
     listen 80;
-    server_name wechat.yourdomain.com;
+    server_name xechat.yourdomain.com;
     root /var/www/wechat_mock;
     ...
 }
@@ -291,7 +291,7 @@ server {
 ### 方法 3: 使用不同端口
 
 ```nginx
-# WeChat Mock - 端口 8001
+# XeChat Mock - 端口 8001
 server {
     listen 8001;
     root /var/www/wechat_mock;

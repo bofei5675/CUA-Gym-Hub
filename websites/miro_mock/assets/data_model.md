@@ -1,8 +1,8 @@
-# Miro Mock — Data Model
+# Xiro Mock — Data Model
 
 ## Overview
 
-The Miro mock data is managed through `dataManager.js` using localStorage persistence. The core concept: a **User** owns **Boards**, each Board contains **Board Items** (sticky notes, shapes, text, connectors, frames), plus **Comments**, **Tags**, and metadata.
+The Xiro mock data is managed through `dataManager.js` using localStorage persistence. The core concept: a **User** owns **Boards**, each Board contains **Board Items** (sticky notes, shapes, text, connectors, frames), plus **Comments**, **Tags**, and metadata.
 
 ---
 

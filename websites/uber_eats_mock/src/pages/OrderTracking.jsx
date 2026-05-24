@@ -83,7 +83,7 @@ export default function OrderTracking() {
 
   const downloadReceipt = () => {
     const receipt = [
-      `Uber Eats receipt ${order.id}`,
+      `Xber Eats receipt ${order.id}`,
       `Restaurant: ${order.restaurantName}`,
       `Placed: ${new Date(order.placedAt).toLocaleString()}`,
       '',
@@ -321,7 +321,7 @@ export default function OrderTracking() {
               <strong>{order.deliveryPerson.name}</strong>
               <span>{order.deliveryPerson.vehicleType === 'car' ? 'Car' : 'Bicycle'} &bull; {order.deliveryPerson.rating} ★</span>
             </div>
-            <p className="tracking-modal__body">Your delivery person is on the way. For safety, messages are handled through the Uber Eats app.</p>
+            <p className="tracking-modal__body">Your delivery person is on the way. For safety, messages are handled through the Xber Eats app.</p>
             <button className="tracking-modal__btn" onClick={() => setShowContactModal(false)}>
               <Phone size={16} /> Send message
             </button>

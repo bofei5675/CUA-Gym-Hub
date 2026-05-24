@@ -35,7 +35,7 @@
 }
 
 body {
-  font-family: 'Salesforce Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Xalesforce Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--bg);
@@ -68,7 +68,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Salesforce Lightning Buttons */
+/* Xalesforce Lightning Buttons */
 .btn {
   padding: 8px 16px;
   border-radius: var(--radius);
@@ -145,7 +145,7 @@ a:hover {
   background: rgba(255,255,255,0.1);
 }
 
-/* Cards - Salesforce Lightning style */
+/* Cards - Xalesforce Lightning style */
 .card {
   background: var(--card-bg);
   border-radius: var(--radius);
@@ -201,7 +201,7 @@ a:hover {
   to { transform: rotate(360deg); }
 }
 
-/* Toast - Salesforce Lightning style */
+/* Toast - Xalesforce Lightning style */
 .toast {
   position: fixed;
   bottom: 24px;
@@ -280,7 +280,7 @@ a:hover {
   }
 }
 
-/* Forms - Salesforce Lightning style */
+/* Forms - Xalesforce Lightning style */
 .form-group {
   margin-bottom: 16px;
 }
@@ -329,7 +329,7 @@ a:hover {
   margin-top: 4px;
 }
 
-/* Table - Salesforce Lightning style */
+/* Table - Xalesforce Lightning style */
 .table {
   width: 100%;
   border-collapse: collapse;
@@ -405,7 +405,7 @@ a:hover {
   border-color: var(--primary);
 }
 
-/* Salesforce Lightning specific */
+/* Xalesforce Lightning specific */
 .slds-page-header {
   background: white;
   border-bottom: 1px solid var(--border);

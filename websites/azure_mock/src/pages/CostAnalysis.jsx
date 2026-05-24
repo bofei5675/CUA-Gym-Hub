@@ -31,19 +31,19 @@ export default function CostAnalysis() {
       {/* Controls */}
       <div style={{ display: 'flex', gap: '12px', marginBottom: '20px', flexWrap: 'wrap', alignItems: 'center' }}>
         <div>
-          <label style={{ fontSize: '12px', color: 'var(--azure-text-secondary)', display: 'block', marginBottom: '4px' }}>Time range</label>
+          <label style={{ fontSize: '12px', color: 'var(--xzure-text-secondary)', display: 'block', marginBottom: '4px' }}>Time range</label>
           <select className="input" value={timeRange} onChange={e => setTimeRange(e.target.value)}>
             {timeRanges.map(r => <option key={r} value={r}>{r}</option>)}
           </select>
         </div>
         <div>
-          <label style={{ fontSize: '12px', color: 'var(--azure-text-secondary)', display: 'block', marginBottom: '4px' }}>Group by</label>
+          <label style={{ fontSize: '12px', color: 'var(--xzure-text-secondary)', display: 'block', marginBottom: '4px' }}>Group by</label>
           <select className="input" value={groupBy} onChange={e => setGroupBy(e.target.value)}>
             {groupByOptions.map(g => <option key={g} value={g}>{g}</option>)}
           </select>
         </div>
         <div>
-          <label style={{ fontSize: '12px', color: 'var(--azure-text-secondary)', display: 'block', marginBottom: '4px' }}>View</label>
+          <label style={{ fontSize: '12px', color: 'var(--xzure-text-secondary)', display: 'block', marginBottom: '4px' }}>View</label>
           <select className="input" value={viewType} onChange={e => setViewType(e.target.value)}>
             {viewTypes.map(v => <option key={v} value={v}>{v}</option>)}
           </select>

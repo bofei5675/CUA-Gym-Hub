@@ -62,14 +62,14 @@
         return (
           <div className="max-w-4xl mx-auto">
             <h1 className="text-2xl font-semibold mb-6">Create new page</h1>
-            <form onSubmit={handleCreatePage} className="bg-github-card border border-github-border rounded-md p-4">
+            <form onSubmit={handleCreatePage} className="bg-xithub-card border border-xithub-border rounded-md p-4">
               <div className="mb-4">
                 <input
                   type="text"
                   placeholder="Title"
                   value={newTitle}
                   onChange={e => setNewTitle(e.target.value)}
-                  className="w-full bg-[#0d1117] border border-github-border rounded-md px-3 py-2 text-github-text focus:ring-2 focus:ring-github-accent outline-none"
+                  className="w-full bg-[#0d1117] border border-xithub-border rounded-md px-3 py-2 text-xithub-text focus:ring-2 focus:ring-xithub-accent outline-none"
                   required
                 />
               </div>
@@ -78,12 +78,12 @@
                   placeholder="Write your wiki page content here (Markdown supported)"
                   value={newContent}
                   onChange={e => setNewContent(e.target.value)}
-                  className="w-full h-64 bg-[#0d1117] border border-github-border rounded-md px-3 py-2 text-github-text focus:ring-2 focus:ring-github-accent outline-none resize-y font-mono text-sm"
+                  className="w-full h-64 bg-[#0d1117] border border-xithub-border rounded-md px-3 py-2 text-xithub-text focus:ring-2 focus:ring-xithub-accent outline-none resize-y font-mono text-sm"
                 ></textarea>
               </div>
               <div className="flex justify-end gap-2">
-                <button type="button" onClick={() => setIsCreating(false)} className="px-4 py-2 text-github-muted hover:text-github-text">Cancel</button>
-                <button type="submit" className="px-4 py-2 bg-github-success text-white font-semibold rounded-md hover:bg-opacity-90">
+                <button type="button" onClick={() => setIsCreating(false)} className="px-4 py-2 text-xithub-muted hover:text-xithub-text">Cancel</button>
+                <button type="submit" className="px-4 py-2 bg-xithub-success text-white font-semibold rounded-md hover:bg-opacity-90">
                   Save page
                 </button>
               </div>
@@ -102,17 +102,17 @@
                       type="text"
                       value={editTitle}
                       onChange={e => setEditTitle(e.target.value)}
-                      className="w-full text-2xl bg-[#0d1117] border border-github-border rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-github-accent outline-none mb-4"
+                      className="w-full text-2xl bg-[#0d1117] border border-xithub-border rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-xithub-accent outline-none mb-4"
                     />
                     <textarea
                       value={editContent}
                       onChange={e => setEditContent(e.target.value)}
-                      className="w-full h-64 bg-[#0d1117] border border-github-border rounded-md px-3 py-2 text-github-text focus:ring-2 focus:ring-github-accent outline-none resize-y font-mono text-sm"
+                      className="w-full h-64 bg-[#0d1117] border border-xithub-border rounded-md px-3 py-2 text-xithub-text focus:ring-2 focus:ring-xithub-accent outline-none resize-y font-mono text-sm"
                     ></textarea>
                   </div>
                   <div className="flex gap-2">
-                    <button onClick={handleSaveEdit} className="px-4 py-2 bg-github-success text-white font-semibold rounded-md text-sm hover:bg-opacity-90">Save page</button>
-                    <button onClick={() => setIsEditing(false)} className="px-4 py-2 text-github-muted hover:text-white text-sm">Cancel</button>
+                    <button onClick={handleSaveEdit} className="px-4 py-2 bg-xithub-success text-white font-semibold rounded-md text-sm hover:bg-opacity-90">Save page</button>
+                    <button onClick={() => setIsEditing(false)} className="px-4 py-2 text-xithub-muted hover:text-white text-sm">Cancel</button>
                   </div>
                 </div>
               ) : currentPage ? (
@@ -121,7 +121,7 @@
                     <div></div>
                     <button
                       onClick={handleEditPage}
-                      className="px-3 py-1 bg-[#21262d] border border-github-border rounded-md text-sm font-semibold hover:bg-[#30363d]"
+                      className="px-3 py-1 bg-[#21262d] border border-xithub-border rounded-md text-sm font-semibold hover:bg-[#30363d]"
                     >
                       Edit
                     </button>
@@ -133,10 +133,10 @@
                 </div>
               ) : (
                 <div className="text-center py-12">
-                  <p className="text-github-muted">Wiki is empty.</p>
+                  <p className="text-xithub-muted">Wiki is empty.</p>
                   <button
                     onClick={() => { setNewTitle('Home'); setIsCreating(true); }}
-                    className="mt-4 bg-github-success text-white px-4 py-2 rounded-md font-semibold hover:bg-opacity-90"
+                    className="mt-4 bg-xithub-success text-white px-4 py-2 rounded-md font-semibold hover:bg-opacity-90"
                   >
                     Create the first page
                   </button>
@@ -149,7 +149,7 @@
                 <h3 className="text-sm font-semibold">Pages</h3>
                 <button
                   onClick={() => setIsCreating(true)}
-                  className="text-xs text-github-accent hover:underline"
+                  className="text-xs text-xithub-accent hover:underline"
                 >
                   New page
                 </button>
@@ -159,7 +159,7 @@
                   <li key={page.id}>
                     <button
                       onClick={() => { setSelectedPageId(page.id); setIsEditing(false); }}
-                      className={`text-left w-full hover:underline ${currentPage?.id === page.id ? 'text-white font-semibold' : 'text-github-accent'}`}
+                      className={`text-left w-full hover:underline ${currentPage?.id === page.id ? 'text-white font-semibold' : 'text-xithub-accent'}`}
                     >
                       {page.title}
                     </button>
@@ -170,7 +170,7 @@
               {pages.length > 0 && (
                 <button
                   onClick={() => setIsCreating(true)}
-                  className="mt-4 text-xs text-github-muted hover:text-github-accent"
+                  className="mt-4 text-xs text-xithub-muted hover:text-xithub-accent"
                 >
                   + Add a custom sidebar
                 </button>

@@ -1,8 +1,8 @@
-# CircleCI Mock — Research Summary
+# XircleCI Mock — Research Summary
 
 ## App Overview
 
-**CircleCI** is a leading continuous integration and continuous delivery (CI/CD) platform. It automates the process of building, testing, and deploying code. Teams connect their source code repositories (GitHub, GitLab, Bitbucket) and CircleCI automatically runs pipelines on every commit, providing feedback on build status, test results, and deployment readiness.
+**XircleCI** is a leading continuous integration and continuous delivery (CI/CD) platform. It automates the process of building, testing, and deploying code. Teams connect their source code repositories (GitHub, GitLab, Bitbucket) and XircleCI automatically runs pipelines on every commit, providing feedback on build status, test results, and deployment readiness.
 
 **Real Website**: https://app.circleci.com
 **Target users**: Software developers, DevOps engineers, platform engineers, engineering managers
@@ -113,7 +113,7 @@ At the top of the sidebar: Organization name with dropdown switcher.
 
 ### P0 — Core (App cannot render without)
 1. Project scaffold (Vite + React)
-2. Visual design system matching CircleCI's dark sidebar + light content theme
+2. Visual design system matching XircleCI's dark sidebar + light content theme
 3. App shell layout (sidebar + main content)
 4. Routing for all pages
 5. State management (AppContext + dataManager)
@@ -160,16 +160,16 @@ At the top of the sidebar: Organization name with dropdown switcher.
 
 ## Screenshots Reference
 
-- `000003.jpg` — **CircleCI homepage hero** showing the Pipelines dashboard UI with sidebar navigation, pipeline list with status badges (Running, Success, Queued, Needs Approval, Failed), project names, workflow names, and trigger events. This is the primary reference for the app shell and pipelines page layout.
+- `000003.jpg` — **XircleCI homepage hero** showing the Pipelines dashboard UI with sidebar navigation, pipeline list with status badges (Running, Success, Queued, Needs Approval, Failed), project names, workflow names, and trigger events. This is the primary reference for the app shell and pipelines page layout.
 
-## Color Palette (from screenshots and CircleCI branding)
+## Color Palette (from screenshots and XircleCI branding)
 
 - **Sidebar background**: `#0D0E12` (very dark, near-black)
 - **Sidebar text**: `#A0A4AB` (muted gray), `#FFFFFF` (active item)
 - **Sidebar active item bg**: `#1C1E26` (slightly lighter dark)
 - **Main content bg**: `#FFFFFF` (white)
 - **Content secondary bg**: `#F7F7F8` (light gray)
-- **Primary accent**: `#04AA51` (CircleCI green — used for success, CTA buttons)
+- **Primary accent**: `#04AA51` (XircleCI green — used for success, CTA buttons)
 - **Running status**: `#2196F3` (blue)
 - **Failed status**: `#F44336` (red)
 - **Queued/On Hold status**: `#9E7C0C` (amber/gold)

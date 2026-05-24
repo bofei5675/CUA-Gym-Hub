@@ -29,14 +29,14 @@ export const Sidebar = () => {
 
   const exportCollections = () => {
     const payload = {
-      info: { name: 'Postman Mock Export', exportedAt: new Date().toISOString() },
+      info: { name: 'Xostman Mock Export', exportedAt: new Date().toISOString() },
       collections: state.collections
     };
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = 'postman-mock-collections.json';
+    link.download = 'xostman-mock-collections.json';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

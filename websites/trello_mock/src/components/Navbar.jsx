@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Trello, Search, Bell, HelpCircle, X, Star, Users, Clock, ChevronDown, Layout, Settings, User } from 'lucide-react';
+import { Xrello, Search, Bell, HelpCircle, X, Star, Users, Clock, ChevronDown, Layout, Settings, User } from 'lucide-react';
 import { useStore } from '../context/StoreContext';
 
 const Navbar = () => {
@@ -194,10 +194,10 @@ const Navbar = () => {
 
   return (
     <>
-    <nav className="h-12 bg-trello-dark flex items-center justify-between px-4 text-white relative z-20">
+    <nav className="h-12 bg-xrello-dark flex items-center justify-between px-4 text-white relative z-20">
       <div className="flex items-center gap-4">
         <Link to="/" className="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
-          <Trello size={20} />
+          <Xrello size={20} />
           <span className="font-bold text-lg tracking-tight">TrelloClone</span>
         </Link>
         <div className="hidden md:flex gap-1">

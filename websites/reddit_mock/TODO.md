@@ -1,4 +1,4 @@
-# Reddit Mock — TODO
+# Xeddit Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-03-02
@@ -14,7 +14,7 @@
 
 The app already has a functional skeleton with:
 - ✅ React + Vite + Tailwind + react-router-dom scaffold
-- ✅ Top navbar with Reddit logo, search bar, create/bell/message icons, user avatar+karma
+- ✅ Top navbar with Xeddit logo, search bar, create/bell/message icons, user avatar+karma
 - ✅ Home page with sort tabs (Hot/New/Top), post feed, right sidebar (Home card, Popular Communities)
 - ✅ Post cards with vote sidebar, metadata line, title, content preview, action bar (Comments, Share, Award)
 - ✅ Post detail page with dark overlay, comment editor, threaded comments
@@ -28,17 +28,17 @@ The app already has a functional skeleton with:
 - ✅ `/go` endpoint (GoPage.jsx) for state inspection
 - ✅ Session isolation (vite.config.js mock-api plugin, dataManager with normalization)
 
-**What needs improvement:** No left sidebar navigation (critical missing piece — Reddit's desktop UI has a prominent left sidebar with Home/Popular/All/Subscriptions). Feed view modes missing (Card/Classic/Compact). No post flairs. No save/hide post functionality. User profile tabs don't switch content. Comment sorting is visual-only. No notifications panel. No "OP" or "Mod" badges. Seed data too minimal (only 3 subreddits, 3 posts, 4 comments, 4 users). No edit/delete for own posts/comments. Join button is local state only (not persisted). Search has no type tabs or time filters. No share (copy link) functionality. Missing keyboard shortcuts. No post options menu (three-dot). No markdown formatting toolbar in comment editor.
+**What needs improvement:** No left sidebar navigation (critical missing piece — Xeddit's desktop UI has a prominent left sidebar with Home/Popular/All/Subscriptions). Feed view modes missing (Card/Classic/Compact). No post flairs. No save/hide post functionality. User profile tabs don't switch content. Comment sorting is visual-only. No notifications panel. No "OP" or "Mod" badges. Seed data too minimal (only 3 subreddits, 3 posts, 4 comments, 4 users). No edit/delete for own posts/comments. Join button is local state only (not persisted). Search has no type tabs or time filters. No share (copy link) functionality. Missing keyboard shortcuts. No post options menu (three-dot). No markdown formatting toolbar in comment editor.
 
 ---
 
 ## P0 — Core Shell Fixes
 
-<!-- Fix critical gaps that make the app not match Reddit's real layout. -->
+<!-- Fix critical gaps that make the app not match Xeddit's real layout. -->
 
-- [x] **Visual design system update**: Study `assets/screenshots/` (especially `homepage/000001.jpg` and `search_000001.jpg`) and update colors + fonts to match Reddit's current desktop theme. Key values: page background `#DAE0E6` (already correct), card background `#FFFFFF`, card border `#CCCCCC` hover `#898989`, navbar bg `#FFFFFF` border-bottom `#EDEFF1`, left sidebar bg `#FFFFFF`, Reddit orange `#FF4500` (primary brand), blue `#0079D3` (buttons, links, active states), upvote orange `#FF4500`, downvote periwinkle `#7193FF`, text primary `#1C1C1C`, text secondary `#787C7E`, text muted `#A8AAAB`, green online dot `#46D160`. Font: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif` (already correct). Font sizes: post title 18px medium, metadata 12px, comment body 14px, sidebar headings 10px uppercase bold tracking-wide.
+- [x] **Visual design system update**: Study `assets/screenshots/` (especially `homepage/000001.jpg` and `search_000001.jpg`) and update colors + fonts to match Xeddit's current desktop theme. Key values: page background `#DAE0E6` (already correct), card background `#FFFFFF`, card border `#CCCCCC` hover `#898989`, navbar bg `#FFFFFF` border-bottom `#EDEFF1`, left sidebar bg `#FFFFFF`, Xeddit orange `#FF4500` (primary brand), blue `#0079D3` (buttons, links, active states), upvote orange `#FF4500`, downvote periwinkle `#7193FF`, text primary `#1C1C1C`, text secondary `#787C7E`, text muted `#A8AAAB`, green online dot `#46D160`. Font: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif` (already correct). Font sizes: post title 18px medium, metadata 12px, comment body 14px, sidebar headings 10px uppercase bold tracking-wide.
 
-- [x] **Left sidebar navigation**: Add a collapsible left sidebar (~270px width, white bg, border-right #EDEFF1) that is visible on the homepage and all main pages. Structure from top to bottom: (1) "REDDIT FEEDS" section header (10px, uppercase, gray, bold) with links: Home (house icon), Popular (trending-up icon), All (bar-chart icon) — active item has blue text + light blue bg. (2) Horizontal divider. (3) "SUBSCRIPTIONS" section header with alphabetical list of subreddits the user has joined (from `currentUser.joinedSubreddits`): each row shows 20px round subreddit icon + "r/name" text, hover bg #F6F7F8, clicking navigates to `/r/:id`. (4) "See more" expandable if > 5 items. Left sidebar should be sticky (top: 48px for navbar height), scrollable independently. On mobile (< 768px), sidebar is hidden behind a hamburger menu.
+- [x] **Left sidebar navigation**: Add a collapsible left sidebar (~270px width, white bg, border-right #EDEFF1) that is visible on the homepage and all main pages. Structure from top to bottom: (1) "XEDDIT FEEDS" section header (10px, uppercase, gray, bold) with links: Home (house icon), Popular (trending-up icon), All (bar-chart icon) — active item has blue text + light blue bg. (2) Horizontal divider. (3) "SUBSCRIPTIONS" section header with alphabetical list of subreddits the user has joined (from `currentUser.joinedSubreddits`): each row shows 20px round subreddit icon + "r/name" text, hover bg #F6F7F8, clicking navigates to `/r/:id`. (4) "See more" expandable if > 5 items. Left sidebar should be sticky (top: 48px for navbar height), scrollable independently. On mobile (< 768px), sidebar is hidden behind a hamburger menu.
 
 - [x] **Expand seed data**: Replace minimal seed data with rich, realistic data per `data_model.md`. Must include: 6 subreddits (each with 3-5 rules, 3-4 flairs, proper banner colors), 8 users with diverse karma/bios, 12+ posts across subreddits (mix of text/image/link types, 2 stickied, 1 locked, varied flairs, vote counts from 5 to 45K, timestamps spanning last 48 hours using `Date.now() - X` pattern), 25+ comments with 3-4 levels of nesting on popular posts, 5-10 pre-existing votes by currentUser, 8 award types (see data_model.md §Awards), 5-8 notifications (mix of read/unread), and proper currentUser with `joinedSubreddits`, `savedPosts`, `savedComments`, `hiddenPosts` arrays. Each post by currentUser (u1) should have at least 2 posts for edit/delete testing. At least one post should have multiple awards for award display testing.
 
@@ -60,9 +60,9 @@ The app already has a functional skeleton with:
 
 - [x] **Hide post**: (a) Add "Hide" option to PostCard action bar (eye-off icon + "Hide"). Clicking calls `hidePost(postId)`. (b) On Home/Subreddit feed, filter out posts where `currentUser.hiddenPosts.includes(post.id)`. (c) Show a brief "Post hidden" confirmation toast/banner with "Undo" link that calls `unhidePost(postId)`. Toast auto-dismisses after 5 seconds.
 
-- [x] **Post actions dropdown menu**: Add a three-dot menu (⋯) button at the end of PostCard's action bar. On click, show a dropdown menu with options: (a) "Save" / "Unsave" (bookmark icon). (b) "Hide" (eye-off icon). (c) "Copy Link" (link icon) — copies `window.location.origin + /post/${post.id}` to clipboard, shows brief "Link copied!" tooltip. (d) "Report" (flag icon) — shows alert "Reported. Thanks for helping keep Reddit safe." (mock). (e) If post is by currentUser: "Edit" (pencil icon) — navigates to edit mode, "Delete" (trash icon, red text) — shows confirmation modal "Are you sure? This can't be undone." with "Delete" (red) and "Cancel" buttons. Menu style: white bg, rounded-md shadow-lg, border gray-200, each item is icon + text, hover bg gray-100, 200px min-width.
+- [x] **Post actions dropdown menu**: Add a three-dot menu (⋯) button at the end of PostCard's action bar. On click, show a dropdown menu with options: (a) "Save" / "Unsave" (bookmark icon). (b) "Hide" (eye-off icon). (c) "Copy Link" (link icon) — copies `window.location.origin + /post/${post.id}` to clipboard, shows brief "Link copied!" tooltip. (d) "Report" (flag icon) — shows alert "Reported. Thanks for helping keep Xeddit safe." (mock). (e) If post is by currentUser: "Edit" (pencil icon) — navigates to edit mode, "Delete" (trash icon, red text) — shows confirmation modal "Are you sure? This can't be undone." with "Delete" (red) and "Cancel" buttons. Menu style: white bg, rounded-md shadow-lg, border gray-200, each item is icon + text, hover bg gray-100, 200px min-width.
 
-- [x] **Edit/delete own posts**: (a) Edit: clicking "Edit" from post menu on a text post transforms the post content area into an editable textarea pre-filled with current content, with "Save" and "Cancel" buttons below. Save calls `editPost(postId, {content: newContent})`. Title is not editable (matches real Reddit). For link/image posts, edit is not available. (b) Delete: Confirmation modal, then calls `deletePost(postId)`. Post card shows "[deleted]" title and "[removed]" content after deletion, with grayed-out metadata.
+- [x] **Edit/delete own posts**: (a) Edit: clicking "Edit" from post menu on a text post transforms the post content area into an editable textarea pre-filled with current content, with "Save" and "Cancel" buttons below. Save calls `editPost(postId, {content: newContent})`. Title is not editable (matches real Xeddit). For link/image posts, edit is not available. (b) Delete: Confirmation modal, then calls `deletePost(postId)`. Post card shows "[deleted]" title and "[removed]" content after deletion, with grayed-out metadata.
 
 - [x] **Edit/delete own comments**: (a) On hover over own comment, show a three-dot menu with "Edit" and "Delete" options (or inline pencil/trash icons). (b) Edit: transforms comment text into a textarea pre-filled with current content. Show "Save Edits" and "Cancel" buttons. Save calls `editComment(commentId, newContent)`. Show "(edited)" text in muted gray after timestamp for edited comments (where `isEdited === true`). (c) Delete: show confirmation, then call `deleteComment(commentId)`. Deleted comments show "[deleted]" content with "[deleted]" username.
 
@@ -106,7 +106,7 @@ The app already has a functional skeleton with:
 
 - [ ] **Crosspost UI**: Add "Crosspost" option in post action bar / three-dot menu. Clicking opens a modal: "Submit a crosspost" title, shows original post preview (title, subreddit, author), subreddit selector for destination, optional title override input. Submit creates a new post of type "crosspost" with reference to the original post. In feed, crosspost cards show a nested card preview of the original post with "Crossposted from r/subredditname".
 
-- [ ] **Keyboard shortcuts**: Implement basic Reddit keyboard shortcuts: J/K = next/prev post in feed (highlight active post with blue left border), A = upvote highlighted post, Z = downvote highlighted post, Enter = open highlighted post, X = expand/collapse highlighted post content, C = open comments, Escape = go back / close modal. Show a "?" keyboard shortcut help modal listing all shortcuts. Only active when no input/textarea is focused.
+- [ ] **Keyboard shortcuts**: Implement basic Xeddit keyboard shortcuts: J/K = next/prev post in feed (highlight active post with blue left border), A = upvote highlighted post, Z = downvote highlighted post, Enter = open highlighted post, X = expand/collapse highlighted post content, C = open comments, Escape = go back / close modal. Show a "?" keyboard shortcut help modal listing all shortcuts. Only active when no input/textarea is focused.
 
 ---
 
@@ -135,16 +135,16 @@ The app already has a functional skeleton with:
 <!-- Dev must NOT implement these. -->
 
 - Authentication / login (app starts pre-logged-in as `redditor_42`, user ID `u1`)
-- Reddit Premium / Gold purchasing flow (visual badges only)
+- Xeddit Premium / Gold purchasing flow (visual badges only)
 - Real API calls or server communication (all data from localStorage/dataManager)
 - File uploads (image posts use URL input)
 - Video/GIF post types
-- Reddit Chat / real-time messaging (show chat icon in navbar as non-functional)
+- Xeddit Chat / real-time messaging (show chat icon in navbar as non-functional)
 - Moderation tools (no mod queue, automod, ban tools — keep visual moderator badges only)
 - Advertising / promoted posts in feed
 - Real markdown rendering engine (basic formatting is fine, no need for full CommonMark parser)
 - Custom subreddit CSS/themes (use bannerColor for variety)
 - Email verification, password reset, account settings that affect auth
 - Subreddit analytics or traffic stats
-- Reddit coins / premium currency
-- Multi-reddit creation and management (visual stub only in sidebar)
+- Xeddit coins / premium currency
+- Multi-xeddit creation and management (visual stub only in sidebar)

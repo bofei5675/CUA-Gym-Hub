@@ -1,4 +1,4 @@
-# ServiceNow Mock — TODO
+# XerviceNow Mock — TODO
 
 > Status: P0+P1 IMPLEMENTED
 > Last updated by: dev agent, 2026-03-13
@@ -15,9 +15,9 @@
 
 Without these, the app cannot render. Dev implements these first.
 
-- [x] **Project scaffold**: `npm create vite@latest ServiceNow_mock -- --template react` inside the repo root, install deps: `react-router-dom`, `lucide-react`, `date-fns`, `uuid`, `recharts`. Use plain CSS (no Tailwind) for maximum control over ServiceNow's unique styling.
+- [x] **Project scaffold**: `npm create vite@latest ServiceNow_mock -- --template react` inside the repo root, install deps: `react-router-dom`, `lucide-react`, `date-fns`, `uuid`, `recharts`. Use plain CSS (no Tailwind) for maximum control over XerviceNow's unique styling.
 
-- [x] **Visual design system**: Study `assets/screenshots/` — replicate ServiceNow's exact look. Create `src/styles/variables.css` with CSS custom properties:
+- [x] **Visual design system**: Study `assets/screenshots/` — replicate XerviceNow's exact look. Create `src/styles/variables.css` with CSS custom properties:
   - `--sn-banner-bg: #1b2a32` (dark navy/teal banner)
   - `--sn-nav-bg: #1f2937` (dark slate navigator sidebar)
   - `--sn-nav-text: #d1d5db` (light grey nav text)
@@ -38,7 +38,7 @@ Without these, the app cannot render. Dev implements these first.
   - Base font size: 13px for body, 12px for form labels, 18px for headings
 
 - [x] **App layout** (see `assets/screenshots/navigation/000004.jpg` and `incident_form/000004.jpg`): Three-zone layout:
-  - **Banner** (top, 48px height, full width): dark bg (`--sn-banner-bg`), contains: left = ServiceNow logo text "service**now**" in white+green italic font; center = nav tabs "All", "Favorites", "History", "⋮" (more) + currently open tab/record title with ★ bookmark icon; right = 🔍 Search input + dropdown arrow, 🌐 globe, ❓ help, 🔔 notification bell with badge count, 👤 user avatar circle
+  - **Banner** (top, 48px height, full width): dark bg (`--sn-banner-bg`), contains: left = XerviceNow logo text "service**now**" in white+green italic font; center = nav tabs "All", "Favorites", "History", "⋮" (more) + currently open tab/record title with ★ bookmark icon; right = 🔍 Search input + dropdown arrow, 🌐 globe, ❓ help, 🔔 notification bell with badge count, 👤 user avatar circle
   - **Application Navigator** (left sidebar, 260px width, collapsible): dark bg (`--sn-nav-bg`), contains: top = 🔍 filter input ("Filter navigator") with clear (×) button; below filter = 3 icon tabs (📋 list / ⭐ favorites / 🕐 history); below tabs = scrollable tree of modules (see Navigator section below). Collapse toggle at bottom
   - **Content Frame** (remaining space, white bg): displays the current view (list view, form view, dashboard) based on route. Has breadcrumb bar at top when navigating sub-views
 
@@ -74,14 +74,14 @@ Without these, the app cannot render. Dev implements these first.
 
 - [x] **`/go` endpoint**: `src/pages/StateInspector.jsx` + route. Returns JSON with `{ initial_state, current_state, state_diff }`. Renders raw JSON in `<pre>` tag.
 
-- [x] **Session isolation**: `vite.config.js` with `servicenow-mock-api` plugin providing:
+- [x] **Session isolation**: `vite.config.js` with `xervicenow-mock-api` plugin providing:
   - `POST /post?sid=<sid>` with `action: "set" | "set_current" | "reset"` + `state` body
   - `GET /go?sid=<sid>` → `{ initial_state, current_state, state_diff }`
   - `GET /state?sid=<sid>` → `{ stored_state, has_custom_state, sid }`
   - `POST /upload?sid=<sid>` (multipart) → `{ files: [...] }`
   - `GET /files/<sid>/<filename>` → file content
   - State files stored in `.mock-states/` directory
-  - Follow jira_mock's `vite.config.ts` as reference (copy and adapt the plugin code, renaming for ServiceNow)
+  - Follow jira_mock's `vite.config.ts` as reference (copy and adapt the plugin code, renaming for XerviceNow)
 
 ---
 
@@ -119,7 +119,7 @@ Core features a user interacts with in the first 5 minutes. Implement after P0 i
   - No filter param → show all incidents
   Column header click sorting must work on any column (string comparison for text, numeric for priority/state).
 
-- [x] **Incident form view** (`/incident/:id` and `/incident/create`): Two-column form layout mimicking ServiceNow exactly (see `assets/screenshots/incident_form/000003.jpg`, `000004.jpg`, `000005.jpg`). Header bar: back arrow (←), "Incident" / "New record" or "INC001XXXX" title, right side = attachment icon (📎), additional actions (⚙️), more (⋯), "Submit" button (grey), "Resolve" button (grey). Below header, the form is organized in sections:
+- [x] **Incident form view** (`/incident/:id` and `/incident/create`): Two-column form layout mimicking XerviceNow exactly (see `assets/screenshots/incident_form/000003.jpg`, `000004.jpg`, `000005.jpg`). Header bar: back arrow (←), "Incident" / "New record" or "INC001XXXX" title, right side = attachment icon (📎), additional actions (⚙️), more (⋯), "Submit" button (grey), "Resolve" button (grey). Below header, the form is organized in sections:
 
   **Top section** (two-column grid, labels right-aligned ~160px, fields ~300px):
   - Left column: Number (read-only, auto-generated), Caller (reference lookup field with 🔍 icon), Category (dropdown), Subcategory (dropdown, depends on Category), Service (optional), Configuration item (reference lookup to CMDB with 🔍)

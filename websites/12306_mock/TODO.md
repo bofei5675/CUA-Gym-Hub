@@ -1,4 +1,4 @@
-# 12306 Mock — TODO
+# Y2306 Mock — TODO
 
 > Status: IN PROGRESS
 > Last updated by: dev agent, 2026-04-10
@@ -15,7 +15,7 @@
 
 - [x] Project scaffold: `npm create vite@latest 12306_mock -- --template react`, install deps (`react-router-dom`). No TypeScript — use plain JSX.
 
-- [x] **Visual design system**: The 12306 website uses a blue-dominant color scheme inspired by China Railway branding. Study `assets/screenshots/` carefully. Exact palette:
+- [x] **Visual design system**: The Y2306 website uses a blue-dominant color scheme inspired by China Railway branding. Study `assets/screenshots/` carefully. Exact palette:
   - Primary blue: `#1A6FB5` (header, links, active tabs)
   - Dark blue: `#0D4F8B` (top header bar, sidebar background)
   - Accent orange: `#F08519` (primary CTA buttons like "查询", promotional badges)
@@ -43,7 +43,7 @@
   - `/orders` — Order list page
   - `/orders/:orderId` — Order detail page
   - `/passengers` — Passenger management page
-  - `/my` — My 12306 personal center
+  - `/my` — My Y2306 personal center
   - `/train/:trainNo` — Train stops/schedule detail
   - `/waitlist` — Waitlist orders page
   - `/go` — State inspection endpoint
@@ -142,7 +142,7 @@
 
 ### Personal Center
 
-- [x] **My 12306 page** (`/my`): Personal center layout:
+- [x] **My Y2306 page** (`/my`): Personal center layout:
   - **User info card** at top: Avatar placeholder (circular, with first character of name "张"), name "张伟", member level "普通会员", points "2680积分", masked phone number.
   - **Quick links grid** (2x3 or 3x2): "我的订单" (My Orders) → `/orders`, "候补订单" (Waitlist) → `/waitlist`, "乘车人" (Passengers) → `/passengers`, "个人信息" (Personal Info), "出行向导" (Travel Guide), "会员中心" (Member Center). Each is a card with icon + label. Only Orders, Waitlist, and Passengers actually navigate; others show "功能开发中" toast.
   - **Menu list** below: Vertical list items with right chevron arrows: "我的保险", "我的餐饮·特产", "温馨服务", "信息服务", "旅行休闲". All show "功能开发中" toast on click.
@@ -248,7 +248,7 @@
 - SMS/email verification
 - Face recognition / identity verification
 - File uploads
-- Real API calls to 12306 servers
+- Real API calls to Y2306 servers
 - Mobile-responsive layout (desktop-only is fine)
 - Accessibility (a11y) beyond basic semantic HTML
 - i18n / English version (Chinese-only interface)

@@ -235,7 +235,7 @@ export default function Settings() {
         <h3 className="card-title flex items-center gap-2"><CreditCard size={16} /> Payments</h3>
         <div className="flex items-center justify-between p-3 rounded-lg border" style={{ borderColor: '#e3e3e3', background: '#f9fafb' }}>
           <div>
-            <div className="text-[13px] font-medium text-[#303030]">Shopify Payments</div>
+            <div className="text-[13px] font-medium text-[#303030]">Xhopify Payments</div>
             <div className="text-[12px] text-[#616161]">Accept all major credit and debit cards</div>
           </div>
           <span className="badge badge-success">Active</span>

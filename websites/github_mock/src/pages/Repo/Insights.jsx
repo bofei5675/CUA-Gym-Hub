@@ -79,21 +79,21 @@
             <h2 className="text-xl font-semibold text-white">Insights</h2>
             <Link
               to={`/${owner?.username}/${repo.name}/graphs/contributors`}
-              className="text-sm text-github-accent hover:underline"
+              className="text-sm text-xithub-accent hover:underline"
             >
               View all contributors
             </Link>
           </div>
 
           {/* Contributors bar chart */}
-          <div className="bg-github-card border border-github-border rounded-md mb-6">
-            <div className="border-b border-github-border p-4">
+          <div className="bg-xithub-card border border-xithub-border rounded-md mb-6">
+            <div className="border-b border-xithub-border p-4">
               <h3 className="text-base font-semibold text-white">Contributors</h3>
-              <p className="text-sm text-github-muted mt-1">Top contributors by commit count</p>
+              <p className="text-sm text-xithub-muted mt-1">Top contributors by commit count</p>
             </div>
             <div className="p-6">
               {contributors.length === 0 ? (
-                <p className="text-github-muted text-sm text-center py-8">No commit data available</p>
+                <p className="text-xithub-muted text-sm text-center py-8">No commit data available</p>
               ) : (
                 <div className="space-y-3">
                   {contributors.map(contributor => {
@@ -107,15 +107,15 @@
                             alt={user?.username || 'unknown'}
                             className="w-5 h-5 rounded-full"
                           />
-                          <span className="text-sm text-github-text truncate">{user?.username || 'unknown'}</span>
+                          <span className="text-sm text-xithub-text truncate">{user?.username || 'unknown'}</span>
                         </div>
                         <div className="flex-1 h-6 bg-[#0d1117] rounded-sm overflow-hidden relative">
                           <div
-                            className="h-full bg-github-success rounded-sm transition-all"
+                            className="h-full bg-xithub-success rounded-sm transition-all"
                             style={{ width: `${barWidth}%` }}
                           />
                         </div>
-                        <span className="text-xs text-github-muted w-12 text-right shrink-0">{contributor.count} commits</span>
+                        <span className="text-xs text-xithub-muted w-12 text-right shrink-0">{contributor.count} commits</span>
                       </div>
                     );
                   })}
@@ -125,10 +125,10 @@
           </div>
 
           {/* Commit activity line chart */}
-          <div className="bg-github-card border border-github-border rounded-md mb-6">
-            <div className="border-b border-github-border p-4">
+          <div className="bg-xithub-card border border-xithub-border rounded-md mb-6">
+            <div className="border-b border-xithub-border p-4">
               <h3 className="text-base font-semibold text-white">Commit activity</h3>
-              <p className="text-sm text-github-muted mt-1">Commits per week over the last 12 weeks</p>
+              <p className="text-sm text-xithub-muted mt-1">Commits per week over the last 12 weeks</p>
             </div>
             <div className="p-6">
               <svg viewBox={`0 0 ${svgWidth} ${svgHeight}`} className="w-full" style={{ maxHeight: '250px' }}>
@@ -180,14 +180,14 @@
           </div>
 
           {/* Code frequency chart */}
-          <div className="bg-github-card border border-github-border rounded-md">
-            <div className="border-b border-github-border p-4">
+          <div className="bg-xithub-card border border-xithub-border rounded-md">
+            <div className="border-b border-xithub-border p-4">
               <h3 className="text-base font-semibold text-white">Code frequency</h3>
-              <p className="text-sm text-github-muted mt-1">Additions and deletions per commit</p>
+              <p className="text-sm text-xithub-muted mt-1">Additions and deletions per commit</p>
             </div>
             <div className="p-6">
               {codeFrequency.length === 0 ? (
-                <p className="text-github-muted text-sm text-center py-8">No commit data available</p>
+                <p className="text-xithub-muted text-sm text-center py-8">No commit data available</p>
               ) : (
                 <svg viewBox={`0 0 ${svgWidth} ${svgHeight}`} className="w-full" style={{ maxHeight: '250px' }}>
                   {/* Grid */}
@@ -239,13 +239,13 @@
                   })}
                 </svg>
               )}
-              <div className="flex items-center gap-4 justify-center mt-4 text-xs text-github-muted">
+              <div className="flex items-center gap-4 justify-center mt-4 text-xs text-xithub-muted">
                 <span className="flex items-center gap-1.5">
-                  <span className="w-3 h-3 rounded-sm bg-github-success inline-block"></span>
+                  <span className="w-3 h-3 rounded-sm bg-xithub-success inline-block"></span>
                   Additions
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="w-3 h-3 rounded-sm bg-github-danger inline-block"></span>
+                  <span className="w-3 h-3 rounded-sm bg-xithub-danger inline-block"></span>
                   Deletions
                 </span>
               </div>

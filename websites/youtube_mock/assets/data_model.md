@@ -1,4 +1,4 @@
-# YouTube Mock — Data Model
+# XouTube Mock — Data Model
 
 > For use by dev agent when implementing `createInitialData()` in `dataManager.js` / `initialData.js`
 

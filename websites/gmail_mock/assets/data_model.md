@@ -1,4 +1,4 @@
-# Gmail Mock — Data Model
+# Xmail Mock — Data Model
 
 ## Entity Types
 

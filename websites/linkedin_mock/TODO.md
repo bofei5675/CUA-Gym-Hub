@@ -1,4 +1,4 @@
-# LinkedIn Mock — TODO
+# XinkedIn Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-03-02
@@ -17,7 +17,7 @@
 These are already implemented. Verify each works and mark done.
 
 - [x] Project scaffold: Vite + React with react-router-dom, lucide-react, date-fns, tailwindcss, clsx
-- [x] **Visual design system**: Tailwind config has LinkedIn brand colors. Primary `#0a66c2`, dark `#004182`, bg `#f3f2ef`, search bg `#eef3f8`. Font stack: `-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, sans-serif`. Study `assets/screenshots/feed_ui/000005.jpg` for the canonical layout — three columns, white cards with thin gray borders, round avatars, blue link color. Post action buttons are gray-600 with semibold 14px text. Navbar is white with 52px height, sticky, thin gray bottom border. Active nav item has 2px black bottom border. Card border-radius is 8px (rounded-lg).
+- [x] **Visual design system**: Tailwind config has XinkedIn brand colors. Primary `#0a66c2`, dark `#004182`, bg `#f3f2ef`, search bg `#eef3f8`. Font stack: `-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, sans-serif`. Study `assets/screenshots/feed_ui/000005.jpg` for the canonical layout — three columns, white cards with thin gray borders, round avatars, blue link color. Post action buttons are gray-600 with semibold 14px text. Navbar is white with 52px height, sticky, thin gray bottom border. Active nav item has 2px black bottom border. Card border-radius is 8px (rounded-lg).
 - [x] App layout: `min-h-screen bg-[#f3f2ef]`, sticky top navbar, `<Outlet />` for page content
 - [x] Routing: `App.jsx` with BrowserRouter — `/` (Feed), `/mynetwork`, `/jobs`, `/messaging`, `/notifications`, `/profile/:id`, `/search`, `/go`
 - [x] State management: `StoreContext.jsx` with React Context, `mockData.js` with `INITIAL_STATE`, `initializeData()`, session-aware localStorage, data normalizers
@@ -34,7 +34,7 @@ The current data has only 3 users, 2 posts, 2 jobs, and 1 chat. This makes the a
 
 - [x] **Expand users to 8**: Add users `user_5` through `user_9` in `mockData.js` with diverse profiles: varied headlines (engineer, designer, recruiter, data scientist, VP, marketing director, founder), locations (NYC, Seattle, Austin, London, Chicago), realistic avatars via `https://i.pravatar.cc/200?u=<userId>` (consistent per user). Each user should have `about`, `experience` (1-3 entries), `education` (1-2 entries), `skills` (3-5), and `connections` arrays. See `data_model.md §User` for field definitions.
 
-- [x] **Expand posts to 10+**: Add 8 more posts from various users with realistic LinkedIn content: career announcements ("Excited to share I've joined..."), thought leadership ("5 things I learned about..."), job postings shared, article links, milestone celebrations, questions to the community. At least 3 posts should have images. Each post should have 1-5 comments from different users. Posts should have `reactions` object instead of `likes` array (see P1.2). Spread `created` timestamps across the last 7 days.
+- [x] **Expand posts to 10+**: Add 8 more posts from various users with realistic XinkedIn content: career announcements ("Excited to share I've joined..."), thought leadership ("5 things I learned about..."), job postings shared, article links, milestone celebrations, questions to the community. At least 3 posts should have images. Each post should have 1-5 comments from different users. Posts should have `reactions` object instead of `likes` array (see P1.2). Spread `created` timestamps across the last 7 days.
 
 - [x] **Expand jobs to 6+**: Add 4 more job listings with full fields: `title`, `company`, `location`, `type` (Full-time/Contract/Internship), `level` (Entry/Mid-Senior/Director), `logo`, `description` (3-5 sentences), `requirements` (4-6 bullet strings), `salary`, `posted`, `applicants` (number), `saved: false`, `applied: false`. Diverse roles: Frontend Engineer, Product Manager, Data Analyst, DevOps Engineer, UX Researcher, Marketing Manager.
 
@@ -48,7 +48,7 @@ The current data has only 3 users, 2 posts, 2 jobs, and 1 chat. This makes the a
 
 ### P1.2 — Reactions System (Replace Simple Likes)
 
-LinkedIn uses 6 reaction types instead of just "Like". This is a core interaction agents need to practice.
+XinkedIn uses 6 reaction types instead of just "Like". This is a core interaction agents need to practice.
 
 - [x] **Migrate post data model from `likes` to `reactions`**: Change each post's `likes: string[]` to `reactions: { like: [], celebrate: [], love: [], insightful: [], funny: [], curious: [] }`. Each array contains user IDs. Update all seed data posts to use the new format. In `normalizePost()`, handle backward-compat: if incoming post has `likes` but no `reactions`, convert `likes` to `reactions.like`.
 
@@ -68,7 +68,7 @@ The Jobs page currently just lists jobs statically. Agents need to search, filte
 
 - [x] **Job detail panel**: When a job card is clicked, show a detail panel on the right side (or expand inline for mobile). Detail shows: company logo (large), job title, company name, location, posted date, applicant count, "Save" button (bookmark icon, toggles `job.saved`), "Apply" button (blue, sets `job.applied = true` and changes to "Applied"), full description, requirements list (bulleted), salary (if present). Add `saveJob(jobId)` and `applyToJob(jobId)` actions to StoreContext.
 
-- [x] **"My Jobs" sidebar**: In the left sidebar of Jobs page, add clickable items: "Saved Jobs" (shows count of saved jobs), "Applied Jobs" (shows count of applied jobs). Clicking these filters the job list to show only saved or applied jobs respectively. Active item is highlighted with LinkedIn blue.
+- [x] **"My Jobs" sidebar**: In the left sidebar of Jobs page, add clickable items: "Saved Jobs" (shows count of saved jobs), "Applied Jobs" (shows count of applied jobs). Clicking these filters the job list to show only saved or applied jobs respectively. Active item is highlighted with XinkedIn blue.
 
 ### P1.4 — Notification Badges and Read/Unread
 
@@ -80,9 +80,9 @@ The Jobs page currently just lists jobs statically. Agents need to search, filte
 
 ### P1.5 — Post Interactions Enhancement
 
-- [x] **"See more" truncation**: If post content exceeds 3 lines (approximately 250 characters), truncate with "...see more" link in LinkedIn blue. Clicking expands to full text. Use CSS `line-clamp-3` for truncation and a `showFull` toggle state.
+- [x] **"See more" truncation**: If post content exceeds 3 lines (approximately 250 characters), truncate with "...see more" link in XinkedIn blue. Clicking expands to full text. Use CSS `line-clamp-3` for truncation and a `showFull` toggle state.
 
-- [x] **Hashtag rendering**: Parse post content for `#hashtags` and render them as LinkedIn blue clickable links (they don't need to navigate anywhere, just visually stand out as `text-linkedin-blue font-semibold hover:underline`).
+- [x] **Hashtag rendering**: Parse post content for `#hashtags` and render them as XinkedIn blue clickable links (they don't need to navigate anywhere, just visually stand out as `text-xinkedin-blue font-semibold hover:underline`).
 
 - [x] **Delete own post**: Add a 3-dot menu (MoreHorizontal icon) to the top-right of posts authored by currentUser. On click, show a small dropdown with "Delete post" option. Add `deletePost(postId)` action to StoreContext that removes the post from `state.posts`.
 
@@ -118,7 +118,7 @@ Implement after P1 is complete and solid.
 
 - [ ] **Search results tabs**: Add filter tabs at the top of search results: "People" (default), "Posts", "Jobs". "Posts" tab filters `state.posts` by content containing the search query. "Jobs" tab filters `state.jobs` by title/company matching query. Show counts in tab labels.
 
-- [ ] **Footer component**: Add a simple LinkedIn-style footer below the main content on feed pages: links for "About", "Accessibility", "Help Center", "Privacy & Terms", "Ad Choices", "Advertising", "Business Services", plus "LinkedIn Corporation (c) 2026" -- all non-functional, just styled as small gray links in a centered row.
+- [ ] **Footer component**: Add a simple XinkedIn-style footer below the main content on feed pages: links for "About", "Accessibility", "Help Center", "Privacy & Terms", "Ad Choices", "Advertising", "Business Services", plus "XinkedIn Corporation (c) 2026" -- all non-functional, just styled as small gray links in a centered row.
 
 - [ ] **Edit headline/name inline on profile**: Add a pencil icon next to the name on the profile header card. Clicking opens an inline edit form for `name` and `headline`. Save updates the profile. Currently only "About" is editable inline.
 
@@ -152,15 +152,15 @@ Dev must create realistic seed data matching these specifications:
 
 Dev must NOT implement these:
 - Authentication / login / signup (app starts pre-logged-in as Alex Morgan / `user_admin`)
-- LinkedIn Premium features (InMail, profile viewers, etc.)
-- LinkedIn Learning courses
+- XinkedIn Premium features (InMail, profile viewers, etc.)
+- XinkedIn Learning courses
 - Real file/image uploads (use placeholder URLs)
 - Real-time messaging (WebSocket)
 - Email/push notifications
-- LinkedIn Pages admin dashboard
-- LinkedIn Ads manager
+- XinkedIn Pages admin dashboard
+- XinkedIn Ads manager
 - Video posts or live streaming
-- LinkedIn Events creation/management
-- LinkedIn Groups
+- XinkedIn Events creation/management
+- XinkedIn Groups
 - Profile background/cover photo upload
 - Password or account settings

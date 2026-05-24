@@ -1,4 +1,4 @@
-# Workday Mock — Data Model
+# Xorkday Mock — Data Model
 
 > Last updated: 2026-03-02 by plan agent
 > This document defines the entity types, fields, relationships, and seed data structure for `src/lib/mockData.js`.
@@ -251,7 +251,7 @@ Weekly timesheet entries, one per employee per day per project.
 | createdDate | string | `"2024-10-20"` | |
 | relatedId | string\|null | `"tr_john_1"` | FK to related entity |
 | initiator | string | `"John Smith"` | Who initiated the task |
-| businessProcess | string | `"Request Time Off"` | Workday business process name |
+| businessProcess | string | `"Request Time Off"` | Xorkday business process name |
 | comments | Comment[] | `[]` | Thread of comments |
 | priority | string | `"Normal"` | High, Normal, Low |
 

@@ -1,4 +1,4 @@
-# PACS Viewer Mock — TODO
+# XACS Viewer Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-03-11
@@ -53,13 +53,13 @@ Without these, the app cannot render. Dev implements these first.
 
 ## P1 — Primary Features
 
-Core features a user interacts with in the first 5 minutes. These define the essential PACS viewer experience.
+Core features a user interacts with in the first 5 minutes. These define the essential XACS Viewer experience.
 
 ### P1.1 — Study List (Worklist)
 
 - [x] **Study list table**: Full-width table on `/studies` page with dark background. Columns: checkbox (for selection), Patient Name, MRN, Study Date (formatted as "Nov 15, 2024"), Description, Modality (colored badge), Accession #, # Series, # Instances, Status (colored dot: green=reported, yellow=in_progress, blue=read, red=unread). Table rows have `#090c29` bg, hover → `#1e2a3a`. Alternate row shading subtle. Header row slightly lighter bg `#0d1117`. Each row clickable → navigates to `/viewer/:studyId`. Study data comes from `state.studies` joined with `state.patients`.
 
-- [x] **Study list header**: Above the table, a header bar with: left side = app logo/title "PACS Viewer" in white, right side = user avatar circle with initials "SC" + name "Dr. Sarah Chen" + settings gear icon. Below header, a filter bar with input fields for each column: Patient Name (text), MRN (text), Study Date (date range picker or text), Description (text), Modality (dropdown: All/CT/MR/CR/US/NM/PT), Accession (text). Inputs styled: dark bg `#0a1628`, border `#1a2a3a`, cyan focus border, white text, placeholder `#556677`.
+- [x] **Study list header**: Above the table, a header bar with: left side = app logo/title "XACS Viewer" in white, right side = user avatar circle with initials "SC" + name "Dr. Sarah Chen" + settings gear icon. Below header, a filter bar with input fields for each column: Patient Name (text), MRN (text), Study Date (date range picker or text), Description (text), Modality (dropdown: All/CT/MR/CR/US/NM/PT), Accession (text). Inputs styled: dark bg `#0a1628`, border `#1a2a3a`, cyan focus border, white text, placeholder `#556677`.
 
 - [x] **Study list sorting**: Click column header to sort ascending/descending. Show sort arrow indicator (▲/▼) next to active sort column. Default sort: Study Date descending (newest first). Dispatch sort changes to `state.uiState.studyListSort`.
 
@@ -71,7 +71,7 @@ Core features a user interacts with in the first 5 minutes. These define the ess
 
 - [x] **Viewer toolbar**: 48px height bar at top of viewer page. Dark bg `#1a1a2e` with 1px bottom border `#2a3a4a`. Layout from left to right:
   1. **Back button**: `←` arrow icon, on click → navigate to `/studies`. Tooltip: "Back to Study List".
-  2. **Logo**: "PACS Viewer" text, small font.
+  2. **Logo**: "XACS Viewer" text, small font.
   3. **Separator**: Vertical 1px line `#2a3a4a`.
   4. **Tool buttons group**: Icon buttons ~40x40px each, with small label text below icon (10px). Each button: icon + label, default color `#8899aa`, active/selected state = `#05d8e6` with underline highlight bar. Tools in order: **Zoom** (Search/ZoomIn icon), **Levels** (contrast icon, circular half-fill), **Pan** (Move icon), **Length** (ruler icon), **Bidirectional** (cross arrows icon), **Ellipse** (circle icon), **Angle** (angle icon), **Annotation** (text cursor icon).
   5. **More Tools dropdown**: Button labeled "More ▾" — on click opens dropdown menu with: Magnify, Probe (pixel value), Rotate CW, Rotate CCW, Flip H, Flip V, Invert, Reset. Each item has icon + label.

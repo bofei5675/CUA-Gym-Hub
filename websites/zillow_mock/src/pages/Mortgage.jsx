@@ -28,7 +28,7 @@ export default function Mortgage() {
     <div className="max-w-5xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold mb-8 flex items-center gap-3">
         <DollarSign className="text-brand-500" size={32} />
-        Zillow Home Loans
+        Xillow Home Loans
       </h1>
 
       {/* Current Mortgage Rates */}

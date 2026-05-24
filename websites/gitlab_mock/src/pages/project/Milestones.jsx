@@ -12,7 +12,7 @@ export default function Milestones() {
     <div>
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold text-gray-800">Milestones</h1>
-        <button className="bg-gitlab-info text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors">
+        <button className="bg-xitlab-info text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors">
           New Milestone
         </button>
       </div>

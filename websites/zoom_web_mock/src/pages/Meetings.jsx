@@ -78,7 +78,7 @@ export default function Meetings() {
 
   const copyInvite = (meeting) => {
     const joinUrl = meeting.joinUrl || `https://zoom-mock.web/j/${meeting.meetingId.replace(/\s/g, '')}`;
-    let text = `Join Zoom Meeting\n${joinUrl}\n\nMeeting ID: ${meeting.meetingId}\nTime: ${format(new Date(meeting.startTime), 'PPpp')}`;
+    let text = `Join Xoom Meeting\n${joinUrl}\n\nMeeting ID: ${meeting.meetingId}\nTime: ${format(new Date(meeting.startTime), 'PPpp')}`;
     if (meeting.password) {
       text += `\nPasscode: ${meeting.password}`;
     }
@@ -100,19 +100,19 @@ export default function Meetings() {
         <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg">
           <button 
             onClick={() => setActiveTab('upcoming')}
-            className={`px-4 py-2 text-sm font-medium rounded-md transition-all ${activeTab === 'upcoming' ? 'bg-white shadow-sm text-zoom-blue' : 'text-gray-500 hover:text-gray-700'}`}
+            className={`px-4 py-2 text-sm font-medium rounded-md transition-all ${activeTab === 'upcoming' ? 'bg-white shadow-sm text-xoom-blue' : 'text-gray-500 hover:text-gray-700'}`}
           >
             Upcoming
           </button>
           <button 
             onClick={() => setActiveTab('previous')}
-            className={`px-4 py-2 text-sm font-medium rounded-md transition-all ${activeTab === 'previous' ? 'bg-white shadow-sm text-zoom-blue' : 'text-gray-500 hover:text-gray-700'}`}
+            className={`px-4 py-2 text-sm font-medium rounded-md transition-all ${activeTab === 'previous' ? 'bg-white shadow-sm text-xoom-blue' : 'text-gray-500 hover:text-gray-700'}`}
           >
             Previous
           </button>
           <button 
             onClick={() => setActiveTab('personal')}
-            className={`px-4 py-2 text-sm font-medium rounded-md transition-all ${activeTab === 'personal' ? 'bg-white shadow-sm text-zoom-blue' : 'text-gray-500 hover:text-gray-700'}`}
+            className={`px-4 py-2 text-sm font-medium rounded-md transition-all ${activeTab === 'personal' ? 'bg-white shadow-sm text-xoom-blue' : 'text-gray-500 hover:text-gray-700'}`}
           >
             Personal Room
           </button>
@@ -120,7 +120,7 @@ export default function Meetings() {
 
         <button 
           onClick={() => setShowModal(true)}
-          className="flex items-center space-x-2 bg-zoom-blue text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
+          className="flex items-center space-x-2 bg-xoom-blue text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
         >
           <Plus className="w-4 h-4" />
           <span>Schedule Meeting</span>
@@ -142,7 +142,7 @@ export default function Meetings() {
              <div className="pt-4 flex space-x-4">
                <button 
                  onClick={() => navigate(`/room/${user.pmi}`)}
-                 className="bg-zoom-blue text-white px-6 py-2 rounded-lg hover:bg-blue-600"
+                 className="bg-xoom-blue text-white px-6 py-2 rounded-lg hover:bg-blue-600"
                >
                  Start
                </button>
@@ -185,7 +185,7 @@ export default function Meetings() {
                     {activeTab === 'upcoming' && (
                       <button
                         onClick={(e) => { e.stopPropagation(); navigate(`/room/${meeting.meetingId}`); }}
-                        className="px-4 py-1.5 bg-zoom-blue text-white text-sm rounded-md hover:bg-blue-600"
+                        className="px-4 py-1.5 bg-xoom-blue text-white text-sm rounded-md hover:bg-blue-600"
                       >
                         Start
                       </button>
@@ -306,7 +306,7 @@ export default function Meetings() {
                 </button>
                 <button 
                   type="submit"
-                  className="px-4 py-2 text-white bg-zoom-blue rounded-lg hover:bg-blue-600"
+                  className="px-4 py-2 text-white bg-xoom-blue rounded-lg hover:bg-blue-600"
                 >
                   Save
                 </button>
@@ -355,7 +355,7 @@ export default function Meetings() {
               <div className="flex space-x-3 pt-2">
                 <button
                   onClick={() => copyLink(createdMeeting)}
-                  className="flex-1 flex items-center justify-center space-x-2 px-4 py-2 bg-zoom-blue text-white rounded-lg hover:bg-blue-600 transition-colors"
+                  className="flex-1 flex items-center justify-center space-x-2 px-4 py-2 bg-xoom-blue text-white rounded-lg hover:bg-blue-600 transition-colors"
                 >
                   <Link className="w-4 h-4" />
                   <span>{copiedField === 'link' ? 'Copied!' : 'Copy Link'}</span>
@@ -433,7 +433,7 @@ export default function Meetings() {
               <div className="flex space-x-3 pt-2">
                 <button
                   onClick={() => copyLink(selectedMeeting)}
-                  className="flex-1 flex items-center justify-center space-x-2 px-4 py-2 bg-zoom-blue text-white rounded-lg hover:bg-blue-600 transition-colors"
+                  className="flex-1 flex items-center justify-center space-x-2 px-4 py-2 bg-xoom-blue text-white rounded-lg hover:bg-blue-600 transition-colors"
                 >
                   <Link className="w-4 h-4" />
                   <span>{copiedField === 'link' ? 'Copied!' : 'Copy Link'}</span>

@@ -1,4 +1,4 @@
-# Facebook Mock — TODO
+# Xacebook Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-03-09
@@ -23,7 +23,7 @@ These items ensure the app can render and function. Most are **already implement
 - [x] `/go` endpoint: Go.jsx returns `{initial_state, current_state, state_diff}` in dark terminal UI
 - [x] Session isolation: vite.config.js mock-api plugin with `POST /post?sid=`, `GET /state?sid=`, `GET /go?sid=`, `POST /upload?sid=`, `GET /files/:sid/:filename`
 
-- [~] **Visual design system audit**: Study `assets/screenshots/` — verify and enforce the exact Facebook design:
+- [~] **Visual design system audit**: Study `assets/screenshots/` — verify and enforce the exact Xacebook design:
   - Primary blue: `#1877F2` (already in tailwind config ✓)
   - Secondary green: `#42b72a` (already in tailwind config ✓)
   - Background: `#F0F2F5` (already in tailwind config ✓)
@@ -207,11 +207,11 @@ Implement these in `getDefaultData()` in `initialData.js` to make the mock feel 
 
 Dev must NOT implement these:
 - Authentication / login / logout (app starts pre-logged-in as `Admin User` / user_1)
-- Real Facebook API / Graph API calls
+- Real Xacebook API / Graph API calls
 - Real file uploads (use external image URLs from picsum.photos)
 - Real-time messaging (WebSocket, polling) — all local state
 - Push notifications / service workers
-- Facebook Pixel / analytics tracking
+- Xacebook Pixel / analytics tracking
 - OAuth / SSO / identity verification
 - Email / SMS sending
 - Payment processing (Marketplace is browse-only)

@@ -64,16 +64,16 @@
           <h1 className="text-2xl font-semibold mb-6">New Issue</h1>
 
           <div className="flex gap-4">
-            <img src={state.currentUser.avatar} alt={state.currentUser.username} className="w-10 h-10 rounded-full border border-github-border" />
+            <img src={state.currentUser.avatar} alt={state.currentUser.username} className="w-10 h-10 rounded-full border border-xithub-border" />
 
-            <form onSubmit={handleSubmit} className="flex-1 bg-github-card border border-github-border rounded-md p-4 relative">
-               <div className="absolute top-4 -left-2 w-3 h-3 bg-github-card border-l border-t border-github-border transform -rotate-45"></div>
+            <form onSubmit={handleSubmit} className="flex-1 bg-xithub-card border border-xithub-border rounded-md p-4 relative">
+               <div className="absolute top-4 -left-2 w-3 h-3 bg-xithub-card border-l border-t border-xithub-border transform -rotate-45"></div>
 
                <div className="mb-4">
                  <input
                    type="text"
                    placeholder="Title"
-                   className="w-full bg-[#0d1117] border border-github-border rounded-md px-3 py-2 text-github-text focus:ring-2 focus:ring-github-accent focus:border-transparent outline-none"
+                   className="w-full bg-[#0d1117] border border-xithub-border rounded-md px-3 py-2 text-xithub-text focus:ring-2 focus:ring-xithub-accent focus:border-transparent outline-none"
                    value={title}
                    onChange={e => setTitle(e.target.value)}
                    required
@@ -83,16 +83,16 @@
                <div className="mb-4">
                  <textarea
                    placeholder="Leave a comment"
-                   className="w-full h-48 bg-[#0d1117] border border-github-border rounded-md px-3 py-2 text-github-text focus:ring-2 focus:ring-github-accent focus:border-transparent outline-none resize-y"
+                   className="w-full h-48 bg-[#0d1117] border border-xithub-border rounded-md px-3 py-2 text-xithub-text focus:ring-2 focus:ring-xithub-accent focus:border-transparent outline-none resize-y"
                    value={description}
                    onChange={e => setDescription(e.target.value)}
                  ></textarea>
-                 <div className="text-xs text-github-muted mt-2 text-right">Markdown supported</div>
+                 <div className="text-xs text-xithub-muted mt-2 text-right">Markdown supported</div>
                </div>
 
                <div className="flex justify-end gap-2">
-                 <button type="button" onClick={() => navigate(-1)} className="px-4 py-2 text-github-muted hover:text-github-text">Cancel</button>
-                 <button type="submit" className="px-4 py-2 bg-github-success text-white font-semibold rounded-md hover:bg-opacity-90">
+                 <button type="button" onClick={() => navigate(-1)} className="px-4 py-2 text-xithub-muted hover:text-xithub-text">Cancel</button>
+                 <button type="submit" className="px-4 py-2 bg-xithub-success text-white font-semibold rounded-md hover:bg-opacity-90">
                    Submit new issue
                  </button>
                </div>
@@ -101,16 +101,16 @@
             {/* Sidebar */}
             <div className="w-64 space-y-4">
               {/* Assignees */}
-              <div className="border-b border-github-border pb-4 relative">
+              <div className="border-b border-xithub-border pb-4 relative">
                 <div
                   onClick={() => { setShowAssigneeMenu(!showAssigneeMenu); setShowLabelMenu(false); setShowMilestoneMenu(false); }}
-                  className="flex items-center justify-between text-github-muted hover:text-github-accent cursor-pointer mb-1"
+                  className="flex items-center justify-between text-xithub-muted hover:text-xithub-accent cursor-pointer mb-1"
                 >
                   <span className="text-sm font-semibold">Assignees</span>
                   <span className="text-xs">&#x2699;</span>
                 </div>
                 {showAssigneeMenu && (
-                  <div className="absolute left-0 top-8 w-full bg-[#161b22] border border-github-border rounded-md shadow-lg z-40 py-1">
+                  <div className="absolute left-0 top-8 w-full bg-[#161b22] border border-xithub-border rounded-md shadow-lg z-40 py-1">
                     {state.users.map(u => (
                       <button
                         key={u.id}
@@ -118,14 +118,14 @@
                         onClick={() => handleToggleAssignee(u.id)}
                         className="w-full text-left px-3 py-1.5 text-xs hover:bg-[#21262d] flex items-center gap-2"
                       >
-                        <span className={`w-3 h-3 rounded-sm border ${selectedAssignees.includes(u.id) ? 'bg-github-accent border-github-accent' : 'border-github-border'}`}></span>
+                        <span className={`w-3 h-3 rounded-sm border ${selectedAssignees.includes(u.id) ? 'bg-xithub-accent border-xithub-accent' : 'border-xithub-border'}`}></span>
                         <img src={u.avatar} alt={u.username} className="w-4 h-4 rounded-full" />
                         {u.username}
                       </button>
                     ))}
                   </div>
                 )}
-                <div className="text-xs text-github-muted">
+                <div className="text-xs text-xithub-muted">
                   {selectedAssignees.length > 0
                     ? selectedAssignees.map(id => state.users.find(u => u.id === id)?.username || id).join(', ')
                     : 'No one\u2014assign yourself'}
@@ -133,16 +133,16 @@
               </div>
 
               {/* Labels */}
-              <div className="border-b border-github-border pb-4 relative">
+              <div className="border-b border-xithub-border pb-4 relative">
                 <div
                   onClick={() => { setShowLabelMenu(!showLabelMenu); setShowAssigneeMenu(false); setShowMilestoneMenu(false); }}
-                  className="flex items-center justify-between text-github-muted hover:text-github-accent cursor-pointer mb-1"
+                  className="flex items-center justify-between text-xithub-muted hover:text-xithub-accent cursor-pointer mb-1"
                 >
                   <span className="text-sm font-semibold">Labels</span>
                   <span className="text-xs">&#x2699;</span>
                 </div>
                 {showLabelMenu && (
-                  <div className="absolute left-0 top-8 w-full bg-[#161b22] border border-github-border rounded-md shadow-lg z-40 py-1 max-h-60 overflow-auto">
+                  <div className="absolute left-0 top-8 w-full bg-[#161b22] border border-xithub-border rounded-md shadow-lg z-40 py-1 max-h-60 overflow-auto">
                     {repoLabels.map(label => (
                       <button
                         key={label.id}
@@ -150,33 +150,33 @@
                         onClick={() => handleToggleLabel(label.name)}
                         className="w-full text-left px-3 py-1.5 text-xs hover:bg-[#21262d] flex items-center gap-2"
                       >
-                        <span className={`w-3 h-3 rounded-sm border ${selectedLabels.includes(label.name) ? 'bg-github-accent border-github-accent' : 'border-github-border'}`}></span>
+                        <span className={`w-3 h-3 rounded-sm border ${selectedLabels.includes(label.name) ? 'bg-xithub-accent border-xithub-accent' : 'border-xithub-border'}`}></span>
                         <span className="w-3 h-3 rounded-full" style={{ backgroundColor: label.color }}></span>
                         {label.name}
                       </button>
                     ))}
-                    {repoLabels.length === 0 && <div className="px-3 py-1.5 text-xs text-github-muted">No labels</div>}
+                    {repoLabels.length === 0 && <div className="px-3 py-1.5 text-xs text-xithub-muted">No labels</div>}
                   </div>
                 )}
                 <div className="flex flex-wrap gap-1 mt-1">
                   {selectedLabels.map(l => (
                     <LabelBadge key={l} name={l} repoId={repo.id} />
                   ))}
-                  {selectedLabels.length === 0 && <span className="text-xs text-github-muted">None yet</span>}
+                  {selectedLabels.length === 0 && <span className="text-xs text-xithub-muted">None yet</span>}
                 </div>
               </div>
 
               {/* Milestone */}
-              <div className="border-b border-github-border pb-4 relative">
+              <div className="border-b border-xithub-border pb-4 relative">
                 <div
                   onClick={() => { setShowMilestoneMenu(!showMilestoneMenu); setShowAssigneeMenu(false); setShowLabelMenu(false); }}
-                  className="flex items-center justify-between text-github-muted hover:text-github-accent cursor-pointer mb-1"
+                  className="flex items-center justify-between text-xithub-muted hover:text-xithub-accent cursor-pointer mb-1"
                 >
                   <span className="text-sm font-semibold">Milestone</span>
                   <span className="text-xs">&#x2699;</span>
                 </div>
                 {showMilestoneMenu && (
-                  <div className="absolute left-0 top-8 w-full bg-[#161b22] border border-github-border rounded-md shadow-lg z-40 py-1">
+                  <div className="absolute left-0 top-8 w-full bg-[#161b22] border border-xithub-border rounded-md shadow-lg z-40 py-1">
                     <button
                       type="button"
                       onClick={() => { setSelectedMilestone(null); setShowMilestoneMenu(false); }}
@@ -194,10 +194,10 @@
                         {ms.title}
                       </button>
                     ))}
-                    {repoMilestones.length === 0 && <div className="px-3 py-1.5 text-xs text-github-muted">No milestones</div>}
+                    {repoMilestones.length === 0 && <div className="px-3 py-1.5 text-xs text-xithub-muted">No milestones</div>}
                   </div>
                 )}
-                <div className="text-xs text-github-muted">
+                <div className="text-xs text-xithub-muted">
                   {selectedMilestone || 'No milestone'}
                 </div>
               </div>

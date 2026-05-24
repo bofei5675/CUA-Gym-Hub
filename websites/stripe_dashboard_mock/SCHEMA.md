@@ -177,7 +177,7 @@
 | `arrival_date` | number | Expected arrival timestamp |
 | `method` | string | `"standard"\|"instant"` |
 | `type` | string | `"bank_account"` |
-| `description` | string | `"STRIPE PAYOUT"` |
+| `description` | string | `"XTRIPE PAYOUT"` |
 | `destination` | object | `{bank_name, last4, routing_number}` |
 | `created` | number | Unix timestamp (seconds) |
 | `metadata` | object | Custom metadata |
@@ -311,7 +311,7 @@
 {
   "type": "chrome_open_url",
   "parameters": {
-    "url": "https://cua-gym-stripe-dashboard.xlang.ai/?sid=task001",
+    "url": "https://cua-gym-xtripe-dashboard.xlang.ai/?sid=task001",
     "inject_state": true,
     "state_content": {
       "action": "set",
@@ -565,7 +565,7 @@
 | `arrival_date` | number | Expected arrival timestamp |
 | `method` | string | `"standard"\|"instant"` |
 | `type` | string | `"bank_account"` |
-| `description` | string | `"STRIPE PAYOUT"` |
+| `description` | string | `"XTRIPE PAYOUT"` |
 | `destination` | object | `{bank_name, last4, routing_number}` |
 | `created` | number | Unix timestamp (seconds) |
 | `metadata` | object | Custom metadata |
@@ -657,7 +657,7 @@
 {
   "type": "chrome_open_url",
   "parameters": {
-    "url": "https://cua-gym-stripe-dashboard.xlang.ai/?sid=task001",
+    "url": "https://cua-gym-xtripe-dashboard.xlang.ai/?sid=task001",
     "inject_state": true,
     "state_content": {
       "action": "set",

@@ -1,4 +1,4 @@
-# Pinterest Mock — TODO
+# Xinterest Mock — TODO
 
 > **Status:** READY FOR DEV
 > **Last updated by:** plan agent, 2025-03-09
@@ -14,7 +14,7 @@
 
 The project already has a working scaffold with these features:
 - ✅ Vite + React project structure with Tailwind CSS
-- ✅ Top navbar with Pinterest logo, Home/Create links, search bar, bell/message icons, avatar
+- ✅ Top navbar with Xinterest logo, Home/Create links, search bar, bell/message icons, avatar
 - ✅ Masonry grid home feed with CSS columns + infinite scroll
 - ✅ Pin card with hover overlay (Save button, link chip, share/more buttons)
 - ✅ Pin detail modal (image left, details right, author info, follow button)
@@ -62,11 +62,11 @@ The project already has a working scaffold with these features:
   - `removePinFromBoard(pinId, boardId)` — removes pin from board.pins and board.sections[].pins
 
 - [x] **Visual design system alignment**: Study `assets/screenshots/` and the design tokens from `assets/README.md` §Design System. Ensure the existing Tailwind config and CSS use:
-  - Pinterest Red: `#E60023` ✅ (already correct)
+  - Xinterest Red: `#E60023` ✅ (already correct)
   - Hover Red: `#AD081B` ✅ (already correct)
   - Dark Text: `#111111` ✅ (already correct)
   - Focus Blue: `#0074E8` (search bar focus border — currently using `border-blue-400`, change to `focus:border-[#0074E8]`)
-  - Font family: add "Pinterest Sans" to the beginning of the font-family stack in `index.css`
+  - Font family: add "Xinterest Sans" to the beginning of the font-family stack in `index.css`
   - Navbar height should be **64px** (currently 80px `h-20`; change to `h-16`)
   - Content offset should be `pt-16` (64px) instead of `pt-24` (96px) to match 64px navbar
 
@@ -93,7 +93,7 @@ The project already has a working scaffold with these features:
 - [x] **Notifications dropdown**: Make the bell icon in navbar functional:
   - Click bell icon → dropdown panel (400px wide, max-height 480px, scrollable) anchored below the bell icon
   - Dropdown header: "Updates" (bold) with "Mark all as read" link button (top-right)
-  - Each notification item: 48px avatar (or Pinterest icon for system), notification message text (bold username, normal text), relative timestamp, thumbnail (pin image, 48px square, if applicable)
+  - Each notification item: 48px avatar (or Xinterest icon for system), notification message text (bold username, normal text), relative timestamp, thumbnail (pin image, 48px square, if applicable)
   - Unread notifications: light blue-50 background tint
   - Click notification: marks as read, navigates to relevant content (pin detail, user profile, or board)
   - Badge: red dot on bell icon if any notification has `read: false`. Show unread count number if > 0
@@ -154,7 +154,7 @@ The project already has a working scaffold with these features:
   - Right content area: form for selected settings section
   - "Edit profile" section: same fields as profile edit modal
   - "Account settings" section: display name, email (read-only), language dropdown (mock)
-  - "Notifications" section: toggle switches for "On Pinterest" / "By email" / "By push" — each has an "Edit" button that expands options
+  - "Notifications" section: toggle switches for "On Xinterest" / "By email" / "By push" — each has an "Edit" button that expands options
   - "Privacy & data" section: toggles for "Private profile", "Show your profile in search engines"
   - All changes save to state (even if mock) so `/go` reflects them
 

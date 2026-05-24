@@ -1,8 +1,8 @@
 import { generateId } from '../utils/helpers';
 
 // --- Session-aware storage functions ---
-const BASE_STORAGE_KEY = 'notion-clone-state';
-const BASE_INITIAL_KEY = 'notion-clone-initialState';
+const BASE_STORAGE_KEY = 'xotion-clone-state';
+const BASE_INITIAL_KEY = 'xotion-clone-initialState';
 
 function storageKey(sid) {
   return sid ? `${BASE_STORAGE_KEY}_${sid}` : BASE_STORAGE_KEY;
@@ -468,7 +468,7 @@ function createDefaultData() {
   // Populate Page 6: Personal Home
   addBlocksToPage(page6Id, [
     createBlock('heading-1', 'Personal Dashboard'),
-    createBlock('callout', '\u{1F3AF} Focus for the week: Complete the Notion Clone.'),
+    createBlock('callout', '\u{1F3AF} Focus for the week: Complete the Xotion Clone.'),
     createBlock('heading-2', 'Habits'),
     createBlock('todo', 'Read 30 mins'),
     createBlock('todo', 'Exercise'),

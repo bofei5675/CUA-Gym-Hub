@@ -141,7 +141,7 @@ export default function UserProfiles() {
               <thead>
                 <tr>
                   <th>User ID <MoreHorizontal size={13} className="th-menu" /></th>
-                  <th>Amplitude ID <MoreHorizontal size={13} className="th-menu" /></th>
+                  <th>Xmplitude ID <MoreHorizontal size={13} className="th-menu" /></th>
                   <th>First Seen <MoreHorizontal size={13} className="th-menu" /></th>
                   <th>Last Seen <MoreHorizontal size={13} className="th-menu" /></th>
                   <th>Watch Session <MoreHorizontal size={13} className="th-menu" /></th>

@@ -4,8 +4,8 @@
 
 @layer base {
   body {
-    @apply text-notion-text bg-notion-bg antialiased;
-    font-size: var(--notion-font-size, 16px);
+    @apply text-xotion-text bg-xotion-bg antialiased;
+    font-size: var(--xotion-font-size, 16px);
   }
 
   /* Dark mode overrides */
@@ -58,15 +58,15 @@
 
   /* Font size variants */
   html.font-small body {
-    --notion-font-size: 14px;
+    --xotion-font-size: 14px;
   }
 
   html.font-default body {
-    --notion-font-size: 16px;
+    --xotion-font-size: 16px;
   }
 
   html.font-large body {
-    --notion-font-size: 18px;
+    --xotion-font-size: 18px;
   }
 }
 

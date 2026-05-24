@@ -25,7 +25,7 @@ export function AnalyticsOrders() {
   return (
     <div>
       <div className="wc-breadcrumb">
-        <a>WooCommerce</a><span>/</span><a>Analytics</a><span>/</span>Orders
+        <a>XooCommerce</a><span>/</span><a>Analytics</a><span>/</span>Orders
       </div>
       <div className="wp-page-title"><h1>Orders</h1></div>
 
@@ -113,7 +113,7 @@ export function AnalyticsCategories() {
   return (
     <div>
       <div className="wc-breadcrumb">
-        <a>WooCommerce</a><span>/</span><a>Analytics</a><span>/</span>Categories
+        <a>XooCommerce</a><span>/</span><a>Analytics</a><span>/</span>Categories
       </div>
       <div className="wp-page-title"><h1>Categories</h1></div>
 
@@ -180,7 +180,7 @@ export function AnalyticsProducts() {
   return (
     <div>
       <div className="wc-breadcrumb">
-        <a>WooCommerce</a><span>/</span><a>Analytics</a><span>/</span>Products
+        <a>XooCommerce</a><span>/</span><a>Analytics</a><span>/</span>Products
       </div>
       <div className="wp-page-title"><h1>Products</h1></div>
 

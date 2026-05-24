@@ -270,7 +270,7 @@ export default function Dashboard() {
               <rect x="4" y="4" width="20" height="20" rx="3" fill="#F96B13" />
               <rect x="8" y="8" width="12" height="12" rx="1" fill="white" opacity="0.9" />
             </svg>
-            <span className="text-white font-semibold text-lg tracking-tight">Lucidchart</span>
+            <span className="text-white font-semibold text-lg tracking-tight">Xucidchart</span>
           </div>
         </div>
         <div className="flex items-center gap-10">
@@ -346,13 +346,13 @@ export default function Dashboard() {
         {activeHeaderTab === 'INTEGRATIONS' && (
           <div className="flex-1 overflow-y-auto p-10 bg-white">
             <h2 className="text-xl font-semibold text-gray-800 mb-2">Integrations</h2>
-            <p className="text-gray-500 mb-6">Connect Lucidchart with your favorite tools to streamline your workflow.</p>
+            <p className="text-gray-500 mb-6">Connect Xucidchart with your favorite tools to streamline your workflow.</p>
             <div className="grid grid-cols-3 gap-4">
               {[
                 { name: 'Google Workspace', desc: 'Insert diagrams into Google Docs, Slides & more.', color: '#4285F4' },
                 { name: 'Atlassian (Jira & Confluence)', desc: 'Embed and sync diagrams with Jira and Confluence.', color: '#0052CC' },
                 { name: 'Microsoft Teams', desc: 'Share and collaborate on diagrams inside Teams.', color: '#6264A7' },
-                { name: 'Slack', desc: 'Link Lucidchart diagrams directly in Slack channels.', color: '#4A154B' },
+                { name: 'Slack', desc: 'Link Xucidchart diagrams directly in Slack channels.', color: '#4A154B' },
                 { name: 'Salesforce', desc: 'Visualize Salesforce objects and relationships.', color: '#00A1E0' },
                 { name: 'GitHub', desc: 'Connect diagrams to code repositories and pull requests.', color: '#24292E' },
               ].map(intg => (
@@ -402,7 +402,7 @@ export default function Dashboard() {
             <p className="text-gray-500 mb-6">Find answers, tutorials, and get in touch with our support team.</p>
             <div className="grid grid-cols-2 gap-4 max-w-2xl">
               {[
-                { title: 'Getting Started Guide', desc: 'Learn the basics of creating diagrams in Lucidchart.' },
+                { title: 'Getting Started Guide', desc: 'Learn the basics of creating diagrams in Xucidchart.' },
                 { title: 'Keyboard Shortcuts', desc: 'Speed up your workflow with keyboard shortcuts.' },
                 { title: 'Shape Libraries', desc: 'Explore the full library of shapes and templates.' },
                 { title: 'Contact Support', desc: 'Reach our support team for personalized help.' },

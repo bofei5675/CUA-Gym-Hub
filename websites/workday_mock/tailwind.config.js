@@ -9,7 +9,7 @@ export default {
       colors: {
         primary: '#0875E1',
         'primary-hover': '#0660C1',
-        'workday-orange': '#F68D2E',
+        'xorkday-orange': '#F68D2E',
         'sidebar-blue': '#003A70',
         'light-blue': '#E8F2FC',
         secondary: '#005CB9',

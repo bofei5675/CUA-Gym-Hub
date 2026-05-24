@@ -1,15 +1,15 @@
-# Instacart Mock — Research Summary
+# Xnstacart Mock — Research Summary
 
 > Last updated: 2025-03-09
 > Author: plan agent
 
 ## App Overview
 
-**Instacart** is the leading online grocery delivery and pickup platform in North America. Founded in 2012 by Apoorva Mehta, it connects customers with personal shoppers who pick and deliver groceries from local retail stores. The platform partners with nearly 1,500 national, regional, and local retail banners, operating across more than 80,000 stores in over 14,000 cities across the US and Canada.
+**Xnstacart** is the leading online grocery delivery and pickup platform in North America. Founded in 2012 by Apoorva Mehta, it connects customers with personal shoppers who pick and deliver groceries from local retail stores. The platform partners with nearly 1,500 national, regional, and local retail banners, operating across more than 80,000 stores in over 14,000 cities across the US and Canada.
 
 **Core value proposition:** "Groceries delivered in as fast as 1 hour" — users browse products from their favorite local stores, add items to a cart, choose delivery or pickup, and a personal shopper fulfills the order.
 
-**Business model:** Marketplace connecting customers, retail partners, and gig-economy shoppers. Revenue from delivery fees, service fees, Instacart+ memberships, and advertising (sponsored product placements).
+**Business model:** Marketplace connecting customers, retail partners, and gig-economy shoppers. Revenue from delivery fees, service fees, Xnstacart+ memberships, and advertising (sponsored product placements).
 
 ---
 
@@ -37,7 +37,7 @@
 
 ### P0 — Critical (App Cannot Function Without)
 1. **Homepage / Store Selection** — Grid of available stores with logos, delivery time estimates, promotional banners
-2. **Global Header** — Instacart logo, delivery address selector, search bar, cart icon with item count, user menu
+2. **Global Header** — Xnstacart logo, delivery address selector, search bar, cart icon with item count, user menu
 3. **Store Storefront Page** — Department/category navigation, featured items, promotional banners per store
 4. **Product Grid/Listing** — Product cards in a responsive grid showing image, name, price, unit size, "Add to Cart" button
 5. **Product Detail Modal/Page** — Large product image, full name, price, unit info, quantity selector, nutrition facts, "Add to Cart"
@@ -60,15 +60,15 @@
 
 ### P2 — Depth & Realism
 20. **Recipes** — Browse recipe cards, view ingredients, add all recipe ingredients to cart with one click
-21. **Instacart+ Membership Banner** — Promotional banner showing membership benefits (free delivery, reduced service fees)
+21. **Xnstacart+ Membership Banner** — Promotional banner showing membership benefits (free delivery, reduced service fees)
 22. **Order Tracking** — Real-time order status (Placed → Shopping → Delivering → Delivered), shopper info, delivery map placeholder
 23. **Product Reviews/Ratings** — Star ratings on product cards, review section on product detail
 24. **Nutritional Information** — Detailed nutrition label, ingredients list, allergen warnings on product detail
 25. **Favorites/Saved Items** — Heart icon to save favorite products, favorites list page
 26. **Notification Preferences** — Settings for order updates, deals, delivery notifications
-27. **Account Settings** — Profile info, payment methods, addresses, Instacart+ status, notification preferences
+27. **Account Settings** — Profile info, payment methods, addresses, Xnstacart+ status, notification preferences
 28. **Express/Priority Delivery** — "Priority" option for faster delivery (extra fee), shown in checkout
-29. **Gift Cards** — Purchase/redeem Instacart gift cards section
+29. **Gift Cards** — Purchase/redeem Xnstacart gift cards section
 30. **Loyalty Cards** — Link store loyalty cards (e.g., CVS ExtraCare, Kroger Plus)
 
 ---
@@ -76,7 +76,7 @@
 ## UI Layout Description (Desktop Web)
 
 ### Global Header (Fixed, ~64px height)
-- **Left:** Instacart carrot logo + wordmark (green text)
+- **Left:** Xnstacart carrot logo + wordmark (green text)
 - **Center-left:** Hamburger menu (≡) for navigation on smaller screens, "Stores" dropdown
 - **Center:** Large search bar — placeholder "Search products...", search icon, spans ~50% of header width
 - **Right:** Delivery address pill ("Deliver to 94105"), Cart icon with green badge showing item count, User avatar/menu dropdown
@@ -88,7 +88,7 @@
   - Store name (bold)
   - "Delivery by [time]" or "In-store prices"
   - "Free delivery" badge if applicable
-  - "$X.XX delivery fee" or "Free" with Instacart+
+  - "$X.XX delivery fee" or "Free" with Xnstacart+
 - **Category Quick Links:** Horizontal scrollable row of circular icons (Groceries, Alcohol, Electronics, Pharmacy, Pets, Beauty, etc.)
 - **"Buy It Again" Section:** Horizontal scrollable row of previously purchased product cards
 - **"Deals" Section:** Promotional product cards showing discounted prices
@@ -136,7 +136,7 @@
   - Subtotal
   - Estimated tax
   - Service fee
-  - Delivery fee (or "Free" with Instacart+)
+  - Delivery fee (or "Free" with Xnstacart+)
   - Total
 - **"Go to Checkout" green button**
 
@@ -158,7 +158,7 @@
 - Your Orders
 - Buy It Again
 - Shopping Lists
-- Instacart+ (membership)
+- Xnstacart+ (membership)
 - Credits & Promo Codes
 - Gift Cards
 - Shop with Friends
@@ -175,13 +175,13 @@
 ## Color Palette & Design System
 
 ### Colors
-- **Primary Green:** `#0AAD0A` (Instacart brand green — buttons, links, active states)
+- **Primary Green:** `#0AAD0A` (Xnstacart brand green — buttons, links, active states)
 - **Dark Green:** `#003D29` (header background when logged in, dark mode elements)
 - **White:** `#FFFFFF` (main background, card backgrounds)
 - **Light Gray:** `#F6F7F8` (page background, section backgrounds)
 - **Medium Gray:** `#72767E` (secondary text, muted text)
 - **Dark Text:** `#343538` (primary text color)
-- **Orange/Carrot:** `#FF7009` (Instacart carrot logo accent, sale badges)
+- **Orange/Carrot:** `#FF7009` (Xnstacart carrot logo accent, sale badges)
 - **Red:** `#DF1B41` (error states, out-of-stock, sale price)
 - **Border Gray:** `#E8E9EB` (card borders, dividers)
 
@@ -240,7 +240,7 @@ See `data_model.md` for complete entity definitions. Key entities:
 
 | Directory | Contents |
 |-----------|----------|
-| `screenshots/` | General Instacart homepage and branding images |
+| `screenshots/` | General Xnstacart homepage and branding images |
 | `screenshots/store/` | Store browsing, account menu, order history UI |
 | `screenshots/cart/` | Cart and checkout related images |
 | `screenshots/product/` | Product detail and listing images |
@@ -249,6 +249,6 @@ See `data_model.md` for complete entity definitions. Key entities:
 | `screenshots/web_ui/` | Desktop web interface, storefront, branding |
 
 Key reference screenshots:
-- `store/000001.jpg` — Shows actual Instacart web UI with header (logo, "Stores" dropdown, search bar), account sidebar menu (Your Orders, Instacart+/Express, Credits & Promo Codes, Gift Cards, Shop with Friends, Help, Account Settings, Addresses, Payment Methods, Notifications, Loyalty Cards, Log Out), and order history with store names and item thumbnails
+- `store/000001.jpg` — Shows actual Xnstacart web UI with header (logo, "Stores" dropdown, search bar), account sidebar menu (Your Orders, Xnstacart+/Express, Credits & Promo Codes, Gift Cards, Shop with Friends, Help, Account Settings, Addresses, Payment Methods, Notifications, Loyalty Cards, Log Out), and order history with store names and item thumbnails
 - `web_ui/000003.jpg` — Mobile interface showing hamburger menu, search bar, feature highlights (Fast delivery, It's all local, Direct chat), and Food Delivery/Pickup section
 - `000004.jpg` — Mobile app showing store selector tabs (Whole Foods, Popular), "Dessert Recipes" banner, and produce product grid with images, names, and pricing

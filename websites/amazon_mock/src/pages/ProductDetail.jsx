@@ -145,7 +145,7 @@ export const ProductDetail = () => {
           >
             <Star
               size={24}
-              className={`transition-colors ${(hovered || value) >= star ? 'text-amazon-yellow fill-amazon-yellow' : 'text-gray-300'}`}
+              className={`transition-colors ${(hovered || value) >= star ? 'text-xmazon-yellow fill-xmazon-yellow' : 'text-gray-300'}`}
             />
           </button>
         ))}
@@ -160,7 +160,7 @@ export const ProductDetail = () => {
     <div className="max-w-[1500px] mx-auto bg-[#eaeded]">
       {/* Breadcrumb */}
       <div className="text-[12px] text-[#007185] px-4 pt-3 pb-1">
-        <Link to="/" className="hover:underline hover:text-[#c7511f]">Amazon.mock</Link>
+        <Link to="/" className="hover:underline hover:text-[#c7511f]">Xmazon.mock</Link>
         <span className="text-[#565959] mx-1">›</span>
         <Link to={`/search?category=${encodeURIComponent(product.category)}`} className="hover:underline hover:text-[#c7511f]">{product.category}</Link>
         <span className="text-[#565959] mx-1">›</span>
@@ -179,7 +179,7 @@ export const ProductDetail = () => {
                     <div
                       key={idx}
                       onClick={() => setSelectedImageIdx(idx)}
-                      className={`w-11 h-11 border-2 rounded cursor-pointer overflow-hidden flex-shrink-0 ${selectedImageIdx === idx ? 'border-amazon-orange' : 'border-gray-200 hover:border-amazon-blue'}`}
+                      className={`w-11 h-11 border-2 rounded cursor-pointer overflow-hidden flex-shrink-0 ${selectedImageIdx === idx ? 'border-xmazon-orange' : 'border-gray-200 hover:border-xmazon-blue'}`}
                     >
                       <img src={img} alt={`View ${idx + 1}`} className="w-full h-full object-contain" />
                     </div>
@@ -216,8 +216,8 @@ export const ProductDetail = () => {
             {product.badges && product.badges.length > 0 && (
               <div className="flex gap-2 mb-2">
                 {product.badges.map(badge => (
-                  <span key={badge} className={`text-xs font-bold px-2 py-0.5 rounded ${badge === 'Best Seller' ? 'bg-amazon-orange text-white' : 'bg-amazon-blue text-white'}`}>
-                    {badge === "Amazon's Choice" ? "Amazon's Choice" : badge}
+                  <span key={badge} className={`text-xs font-bold px-2 py-0.5 rounded ${badge === 'Best Seller' ? 'bg-xmazon-orange text-white' : 'bg-xmazon-blue text-white'}`}>
+                    {badge === "Xmazon's Choice" ? "Xmazon's Choice" : badge}
                   </span>
                 ))}
               </div>
@@ -230,7 +230,7 @@ export const ProductDetail = () => {
               <span className="text-xs text-gray-500">|</span>
               <button
                 onClick={handleScrollToReviews}
-                className="text-xs text-amazon-blue hover:underline cursor-pointer"
+                className="text-xs text-xmazon-blue hover:underline cursor-pointer"
               >
                 {product.reviewCount.toLocaleString()} ratings
               </button>
@@ -295,7 +295,7 @@ export const ProductDetail = () => {
                 <span className="text-sm align-top mt-1 text-red-700">{(product.price % 1).toFixed(2).substring(2)}</span>
               </div>
 
-              <div className="text-sm text-amazon-blue mb-3">
+              <div className="text-sm text-xmazon-blue mb-3">
                 FREE delivery{' '}
                 <span className="font-bold text-black">{deliveryDate}</span>.
                 <div className="flex items-center gap-1 mt-1 text-xs text-black">
@@ -330,13 +330,13 @@ export const ProductDetail = () => {
               )}
 
               <div className="text-xs text-gray-500 space-y-1 mb-4">
-                <div className="flex justify-between"><span>Ships from</span> <span>Amazon</span></div>
+                <div className="flex justify-between"><span>Ships from</span> <span>Xmazon</span></div>
                 <div className="flex justify-between"><span>Sold by</span> <span>{product.seller || product.brand}</span></div>
               </div>
 
               <button
                 onClick={() => toggleWishlist(product.id)}
-                className="w-full text-left text-sm text-amazon-blue hover:text-amazon-darkYellow hover:underline border-t pt-2"
+                className="w-full text-left text-sm text-xmazon-blue hover:text-xmazon-darkYellow hover:underline border-t pt-2"
               >
                 {inWishlist ? '♥ Remove from List' : '♡ Add to List'}
               </button>
@@ -379,7 +379,7 @@ export const ProductDetail = () => {
                   <Link to={`/product/${p.id}`}>
                     <img src={p.image} alt={p.title} className="w-20 h-20 object-contain mb-1" />
                   </Link>
-                  <Link to={`/product/${p.id}`} className="text-xs text-amazon-blue hover:underline line-clamp-2">{p.title}</Link>
+                  <Link to={`/product/${p.id}`} className="text-xs text-xmazon-blue hover:underline line-clamp-2">{p.title}</Link>
                   <span className="text-sm font-bold mt-1">${p.price.toFixed(2)}</span>
                   {p.id === product.id && <span className="text-xs text-gray-500">(This item)</span>}
                 </div>
@@ -391,7 +391,7 @@ export const ProductDetail = () => {
             <span className="text-sm">Total price: <strong>${fbtTotal.toFixed(2)}</strong></span>
             <button
               onClick={() => fbtAll.forEach(p => addToCart(p, 1))}
-              className="bg-amazon-yellow hover:bg-amazon-darkYellow text-sm font-bold px-4 py-2 rounded-full border border-gray-300"
+              className="bg-xmazon-yellow hover:bg-xmazon-darkYellow text-sm font-bold px-4 py-2 rounded-full border border-gray-300"
             >
               Add all 3 to Cart
             </button>
@@ -408,7 +408,7 @@ export const ProductDetail = () => {
               <div key={p.id} className="flex-shrink-0 w-36 text-center">
                 <Link to={`/product/${p.id}`}>
                   <img src={p.image} alt={p.title} className="w-full h-36 object-contain mb-2" />
-                  <div className="text-xs text-amazon-blue hover:underline line-clamp-2 mb-1">{p.title}</div>
+                  <div className="text-xs text-xmazon-blue hover:underline line-clamp-2 mb-1">{p.title}</div>
                 </Link>
                 <Rating value={p.rating} size={10} />
                 <div className="text-sm font-bold">${p.price.toFixed(2)}</div>
@@ -438,14 +438,14 @@ export const ProductDetail = () => {
                   <div key={star} className="flex items-center gap-2 text-xs">
                     <button
                       onClick={handleScrollToReviews}
-                      className="w-8 text-right text-amazon-blue hover:underline"
+                      className="w-8 text-right text-xmazon-blue hover:underline"
                     >
                       {star} star
                     </button>
                     <div className="flex-1 h-3 bg-gray-200 rounded overflow-hidden">
-                      <div className="h-full bg-amazon-yellow rounded" style={{ width: `${pct}%` }} />
+                      <div className="h-full bg-xmazon-yellow rounded" style={{ width: `${pct}%` }} />
                     </div>
-                    <span className="w-7 text-amazon-blue">{pct}%</span>
+                    <span className="w-7 text-xmazon-blue">{pct}%</span>
                   </div>
                 );
               })}
@@ -478,7 +478,7 @@ export const ProductDetail = () => {
                       required
                       value={newReview.title}
                       onChange={e => setNewReview({...newReview, title: e.target.value})}
-                      className="w-full p-2 border rounded text-sm focus:outline-none focus:border-amazon-orange"
+                      className="w-full p-2 border rounded text-sm focus:outline-none focus:border-xmazon-orange"
                       placeholder="What's most important to know?"
                     />
                   </div>
@@ -488,7 +488,7 @@ export const ProductDetail = () => {
                       required
                       value={newReview.content}
                       onChange={e => setNewReview({...newReview, content: e.target.value})}
-                      className="w-full p-2 border rounded h-28 text-sm focus:outline-none focus:border-amazon-orange"
+                      className="w-full p-2 border rounded h-28 text-sm focus:outline-none focus:border-xmazon-orange"
                       placeholder="What did you like or dislike? (min 10 characters)"
                     />
                     <div className="text-xs text-gray-500 mt-1">{newReview.content.length} characters</div>
@@ -510,7 +510,7 @@ export const ProductDetail = () => {
                         <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
                           <User size={16} />
                         </div>
-                        <span className="text-sm font-medium">{review.userName || 'Amazon Customer'}</span>
+                        <span className="text-sm font-medium">{review.userName || 'Xmazon Customer'}</span>
                       </div>
                       <div className="flex items-center gap-2 mb-1">
                         <Rating value={review.rating} size={14} />

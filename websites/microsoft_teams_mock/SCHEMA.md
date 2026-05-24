@@ -51,7 +51,7 @@ Three mock files are auto-created in `.mock-files/_default/` on first server sta
 | `/teams/:teamId/channels/:channelId` | `TeamsPage` | Specific channel open |
 | `/calendar` | `CalendarPage` | Work-week / day calendar with meeting cards |
 | `/calls` | `CallsPage` | Call history and speed-dial contacts |
-| `/files` | `FilesPage` | File browser (Recent / Microsoft Teams / Downloads tabs) |
+| `/files` | `FilesPage` | File browser (Recent / Xicrosoft Teams / Downloads tabs) |
 | `/settings` | `SettingsPage` | Settings page with 7 sections (see below) |
 | `/go` | `Go` | State inspection: renders JSON of `{initial_state, current_state, state_diff}` |
 
@@ -258,7 +258,7 @@ Switching theme to `"dark"` adds CSS class `theme-dark` to `document.body`; swit
   "startDateTime": "2025-03-13T09:00:00.000Z", // string, ISO datetime
   "endDateTime": "2025-03-13T09:30:00.000Z",  // string, ISO datetime
   "isAllDay": false,                          // boolean (optional)
-  "location": "Microsoft Teams Meeting",       // string (optional)
+  "location": "Xicrosoft Teams Meeting",       // string (optional)
   "organizer": "user_2",                      // string, userId
   "participants": [
     {

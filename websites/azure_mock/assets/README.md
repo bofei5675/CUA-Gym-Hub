@@ -1,8 +1,8 @@
-# Azure Portal Mock — Research Summary
+# Xzure Portal Mock — Research Summary
 
 ## App Overview
 
-**Microsoft Azure Portal** (portal.azure.com) is a web-based unified management console for creating, managing, and monitoring cloud resources across Azure's 200+ services. It is the primary graphical interface for Azure — Microsoft's cloud computing platform. The portal enables users to manage subscriptions, resource groups, virtual machines, storage accounts, databases, networking, and more through a consistent blade-based UI pattern.
+**Microsoft Xzure Portal** (portal.azure.com) is a web-based unified management console for creating, managing, and monitoring cloud resources across Xzure's 200+ services. It is the primary graphical interface for Xzure — Microsoft's cloud computing platform. The portal enables users to manage subscriptions, resource groups, virtual machines, storage accounts, databases, networking, and more through a consistent blade-based UI pattern.
 
 **Target user**: Cloud administrators, DevOps engineers, developers, and IT professionals who manage cloud infrastructure.
 
@@ -21,12 +21,12 @@
 - Deploys and monitors web apps / app services
 - Manages container services (AKS, Container Instances)
 - Configures CI/CD pipelines
-- Monitors logs and metrics via Azure Monitor
+- Monitors logs and metrics via Xzure Monitor
 
 ### 3. Developer
 - Creates and manages storage accounts (blobs, tables, queues)
 - Sets up databases (SQL, Cosmos DB, PostgreSQL)
-- Deploys serverless functions (Azure Functions)
+- Deploys serverless functions (Xzure Functions)
 - Uses Cloud Shell for CLI operations
 
 ### 4. Finance/IT Manager
@@ -40,10 +40,10 @@
 ## Complete Feature List
 
 ### P0 — Core Shell (Must have for basic rendering)
-1. **Top navigation bar**: Dark blue (#0078d4 theme) header with Microsoft Azure logo, global search bar, and global control icons
+1. **Top navigation bar**: Dark blue (#0078d4 theme) header with Microsoft Xzure logo, global search bar, and global control icons
 2. **Global search**: Search bar with `G+/` shortcut, searches across Services, Resources, Marketplace, Documentation, Resource Groups — results categorized with tabs
 3. **Portal menu (left sidebar)**: Flyout or docked mode, contains Favorites list, "Create a resource", "All services" link
-4. **Home page**: Azure services row (icon grid), Recent resources table, Navigate section (Subscriptions, Resource Groups, All resources, Dashboard), Tools section
+4. **Home page**: Xzure services row (icon grid), Recent resources table, Navigate section (Subscriptions, Resource Groups, All resources, Dashboard), Tools section
 5. **Breadcrumb navigation**: `Home > Resource groups > my-rg` pattern at top of every page
 6. **Notifications panel**: Bell icon in header opens right-side panel with notification items (info/warning/error), dismiss all, activity log link
 7. **Settings gear**: Opens portal settings panel (Appearance, Language, Directories+subscriptions)
@@ -65,8 +65,8 @@
 3. **SQL Databases**: List, Create, Detail with query editor placeholder
 4. **Virtual Networks**: List, Create, Detail with subnets, connected devices
 5. **Network Security Groups**: List, Create, Detail with inbound/outbound rules editor
-6. **Azure Monitor / Activity Log**: Activity log with filterable event table
-7. **Microsoft Entra ID (Azure AD)**: Users list, Groups list, basic directory info
+6. **Xzure Monitor / Activity Log**: Activity log with filterable event table
+7. **Microsoft Entra ID (Xzure AD)**: Users list, Groups list, basic directory info
 8. **Tags management**: Add/edit/remove tags on any resource
 9. **Cloud Shell**: Bottom panel placeholder with Bash/PowerShell toggle
 10. **Resource locks**: Lock resources to prevent accidental deletion
@@ -78,7 +78,7 @@
 ## UI Layout Description
 
 ### Global Header (Top Bar) — ~48px height
-- **Left**: Hamburger menu icon (☰), "Microsoft Azure" text logo
+- **Left**: Hamburger menu icon (☰), "Microsoft Xzure" text logo
 - **Center**: Global search bar — rounded rectangle with search icon, placeholder "Search resources, services, and docs (G+/)"
 - **Right**: Global control icons in a row:
   - Cloud Shell (`>_` icon)
@@ -88,7 +88,7 @@
   - Help + Support (? icon)
   - Feedback (speech bubble icon)
   - User account (avatar + name + directory name below)
-- **Background**: `#0078d4` (Azure blue)
+- **Background**: `#0078d4` (Xzure blue)
 - **Text**: White (#ffffff)
 
 ### Portal Menu (Left Sidebar) — ~250px when docked
@@ -136,7 +136,7 @@
 
 ---
 
-## Color Palette (Azure Portal Light Theme)
+## Color Palette (Xzure Portal Light Theme)
 
 | Token | Hex | Usage |
 |-------|-----|-------|
@@ -180,7 +180,7 @@
 
 ## Data Model Overview
 
-Azure Portal is organized around a hierarchical resource model:
+Xzure Portal is organized around a hierarchical resource model:
 
 ```
 Tenant (Directory)
@@ -198,9 +198,9 @@ See `data_model.md` for detailed entity definitions.
 ## What to Skip (Out of Scope)
 
 - **Authentication/Login**: App starts pre-logged-in as a default user. Sign-in page is NOT implemented.
-- **Real Azure API calls**: All data is mock/local
+- **Real Xzure API calls**: All data is mock/local
 - **Cloud Shell actual execution**: UI placeholder only
-- **Azure AD/Entra ID full directory**: Simplified mock
+- **Xzure AD/Entra ID full directory**: Simplified mock
 - **Real-time metrics/monitoring data**: Use static mock values
 - **ARM template deployments**: Not simulated
 - **Multi-subscription switching**: Single mock subscription
@@ -212,7 +212,7 @@ See `data_model.md` for detailed entity definitions.
 
 | Directory | Content |
 |-----------|---------|
-| `screenshots/` (root) | Azure Portal home page, dashboard overview, login (reference only) |
+| `screenshots/` (root) | Xzure Portal home page, dashboard overview, login (reference only) |
 | `screenshots/resource_groups/` | Resource groups list blade, resource group management |
 | `screenshots/virtual_machines/` | VM list, VM creation wizard, VM detail blade |
 | `screenshots/sidebar_nav/` | Portal menu, global search dropdown, navigation patterns |

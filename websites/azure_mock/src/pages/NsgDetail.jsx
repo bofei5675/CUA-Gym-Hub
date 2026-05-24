@@ -90,25 +90,25 @@ export default function NsgDetail() {
     <div>
       <Breadcrumb items={[{ label: 'Home', path: '/' }, { label: 'Network security groups', path: '/network-security-groups' }, { label: nsg.name }]} />
       <h1 className="page-title">{nsg.name}</h1>
-      <div style={{ fontSize: '13px', color: 'var(--azure-text-secondary)', marginBottom: '16px' }}>Network security group</div>
+      <div style={{ fontSize: '13px', color: 'var(--xzure-text-secondary)', marginBottom: '16px' }}>Network security group</div>
 
       {/* Essentials */}
       <div className="card" style={{ marginBottom: '16px' }}>
         <div className="section-header" style={{ marginBottom: '12px' }}>Essentials</div>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', fontSize: '14px' }}>
-          <div><strong>Resource group:</strong> <Link to={`/resource-groups/${nsg.resourceGroup}`} style={{ color: 'var(--azure-blue)', textDecoration: 'none' }}>{nsg.resourceGroup}</Link></div>
+          <div><strong>Resource group:</strong> <Link to={`/resource-groups/${nsg.resourceGroup}`} style={{ color: 'var(--xzure-blue)', textDecoration: 'none' }}>{nsg.resourceGroup}</Link></div>
           <div><strong>Location:</strong> {nsg.location}</div>
-          <div><strong>Subscription:</strong> <Link to={`/subscriptions/${sub?.id}`} style={{ color: 'var(--azure-blue)', textDecoration: 'none' }}>{sub?.displayName}</Link></div>
+          <div><strong>Subscription:</strong> <Link to={`/subscriptions/${sub?.id}`} style={{ color: 'var(--xzure-blue)', textDecoration: 'none' }}>{sub?.displayName}</Link></div>
           <div><strong>Subscription ID:</strong> {sub?.subscriptionId}</div>
         </div>
       </div>
 
-      <div style={{ display: 'flex', gap: '0', borderBottom: '1px solid var(--azure-border)', marginBottom: '16px' }}>
+      <div style={{ display: 'flex', gap: '0', borderBottom: '1px solid var(--xzure-border)', marginBottom: '16px' }}>
         {['inbound', 'outbound'].map(tab => (
           <button key={tab} onClick={() => { setActiveTab(tab); setShowAddForm(false); }} style={{
-            padding: '8px 16px', border: 'none', borderBottom: activeTab === tab ? '2px solid var(--azure-blue)' : '2px solid transparent',
+            padding: '8px 16px', border: 'none', borderBottom: activeTab === tab ? '2px solid var(--xzure-blue)' : '2px solid transparent',
             background: 'none', cursor: 'pointer', fontWeight: activeTab === tab ? 600 : 400,
-            color: activeTab === tab ? 'var(--azure-blue)' : 'var(--azure-text-secondary)', fontSize: '14px', textTransform: 'capitalize'
+            color: activeTab === tab ? 'var(--xzure-blue)' : 'var(--xzure-text-secondary)', fontSize: '14px', textTransform: 'capitalize'
           }}>{tab} security rules</button>
         ))}
       </div>
@@ -127,7 +127,7 @@ export default function NsgDetail() {
           </div>
 
           {nameError && (
-            <div style={{ color: 'var(--azure-error)', fontSize: '13px', marginBottom: '12px', padding: '8px 12px', background: '#fde8e8', borderRadius: '2px' }}>{nameError}</div>
+            <div style={{ color: 'var(--xzure-error)', fontSize: '13px', marginBottom: '12px', padding: '8px 12px', background: '#fde8e8', borderRadius: '2px' }}>{nameError}</div>
           )}
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
@@ -190,7 +190,7 @@ export default function NsgDetail() {
       )}
 
       <div className="card" style={{ padding: 0 }}>
-        <table className="azure-table">
+        <table className="xzure-table">
           <thead>
             <tr>
               <th>Priority</th>
@@ -205,7 +205,7 @@ export default function NsgDetail() {
           </thead>
           <tbody>
             {rules.length === 0 && (
-              <tr><td colSpan={8} style={{ textAlign: 'center', padding: '24px', color: 'var(--azure-text-secondary)' }}>No rules configured</td></tr>
+              <tr><td colSpan={8} style={{ textAlign: 'center', padding: '24px', color: 'var(--xzure-text-secondary)' }}>No rules configured</td></tr>
             )}
             {rules.map((r, i) => (
               <tr key={i}>

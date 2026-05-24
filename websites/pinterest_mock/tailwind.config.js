@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        pinterest: {
+        xinterest: {
           red: '#E60023',
           hover: '#AD081B',
           dark: '#111111',
@@ -30,7 +30,7 @@ export default {
         '4xl': '40px'
       },
       fontFamily: {
-        'pinterest': ['"Pinterest Sans"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', '"Fira Sans"', '"Droid Sans"', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+        'xinterest': ['"Xinterest Sans"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', '"Fira Sans"', '"Droid Sans"', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
       }
     },
   },

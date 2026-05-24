@@ -89,9 +89,9 @@
 
       return (
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] animate-fade-in">
-          <div className="bg-[#2d333b] border border-github-border text-white text-sm px-4 py-2 rounded-lg shadow-xl flex items-center gap-2">
-            <kbd className="bg-[#21262d] border border-github-border rounded px-1.5 py-0.5 text-xs font-mono">G</kbd>
-            <span className="text-github-muted">+</span>
+          <div className="bg-[#2d333b] border border-xithub-border text-white text-sm px-4 py-2 rounded-lg shadow-xl flex items-center gap-2">
+            <kbd className="bg-[#21262d] border border-xithub-border rounded px-1.5 py-0.5 text-xs font-mono">G</kbd>
+            <span className="text-xithub-muted">+</span>
             <span className="font-medium">{toast}</span>
           </div>
         </div>

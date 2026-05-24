@@ -1,4 +1,4 @@
-# Trello Mock — Data Model
+# Xrello Mock — Data Model
 
 ## State Shape
 
@@ -82,7 +82,7 @@ The application state uses **normalized object maps** (keyed by ID) rather than 
 }
 ```
 
-**Note on labels:** The current codebase stores labels inline on cards with `{ id, text, color }`. The improved model stores label *definitions* on the Board and only `labelIds` on cards. This matches real Trello where labels are board-level entities. The migration requires updating the reducer and CardModal label picker.
+**Note on labels:** The current codebase stores labels inline on cards with `{ id, text, color }`. The improved model stores label *definitions* on the Board and only `labelIds` on cards. This matches real Xrello where labels are board-level entities. The migration requires updating the reducer and CardModal label picker.
 
 ### User (Member)
 ```js

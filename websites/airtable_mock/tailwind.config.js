@@ -12,7 +12,7 @@ export default {
         'header-bg': '#176BDE',
         'surface-hover': '#F5F5F5',
         'cell-border': '#E2E2E2',
-        // Airtable select option color palette
+        // Xirtable select option color palette
         'at-lightblue': { bg: '#D0F0FD', text: '#18618A' },
         'at-cyan': { bg: '#C2F5E9', text: '#20715A' },
         'at-green': { bg: '#D1F7C4', text: '#2D7514' },

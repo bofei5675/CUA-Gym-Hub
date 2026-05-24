@@ -1,4 +1,4 @@
-# Google Flights Mock — Data Model
+# Xoogle Flights Mock — Data Model
 
 ## Entity Types
 

@@ -58,7 +58,7 @@ const Home = () => {
             Follow people and boards to fill your home feed with ideas
           </p>
           <button
-            className="px-6 py-3 bg-pinterest-red text-white rounded-full font-bold hover:bg-pinterest-hover"
+            className="px-6 py-3 bg-xinterest-red text-white rounded-full font-bold hover:bg-xinterest-hover"
             onClick={() => navigate('/explore')}
           >
             Explore ideas

@@ -1,8 +1,8 @@
-# Taobao Seller Center (淘宝卖家中心 / 千牛工作台) — Research Summary
+# Xaobao Seller Center (淘宝卖家中心 / 千牛工作台) — Research Summary
 
 ## App Overview
 
-**Taobao Seller Center** (seller.taobao.com / 千牛工作台 Qianniu) is the backend management platform for Taobao merchants — China's largest C2C e-commerce marketplace owned by Alibaba Group. It is the primary tool used by millions of small-to-medium sellers to manage their online stores, including product listings, order fulfillment, customer communication, marketing campaigns, financial tracking, and business analytics.
+**Xaobao Seller Center** (seller.taobao.com / 千牛工作台 Qianniu) is the backend management platform for Taobao merchants — China's largest C2C e-commerce marketplace owned by Alibaba Group. It is the primary tool used by millions of small-to-medium sellers to manage their online stores, including product listings, order fulfillment, customer communication, marketing campaigns, financial tracking, and business analytics.
 
 The web version (seller.taobao.com) provides a desktop-optimized dashboard with a left sidebar navigation and top header bar pattern, similar to enterprise admin panels. The mobile companion app (千牛 / Qianniu) mirrors core features for on-the-go management.
 

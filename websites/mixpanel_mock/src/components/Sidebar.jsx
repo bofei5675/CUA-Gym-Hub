@@ -46,7 +46,7 @@ export default function Sidebar() {
       zIndex: 100,
       overflow: 'hidden'
     }}>
-      {/* Mixpanel logo / project */}
+      {/* Xixpanel logo / project */}
       <div style={{
         padding: collapsed ? '16px 0' : '14px 16px 10px',
         display: 'flex',
@@ -56,7 +56,7 @@ export default function Sidebar() {
         flexShrink: 0,
         justifyContent: collapsed ? 'center' : 'flex-start'
       }}>
-        {/* Mixpanel-style logo */}
+        {/* Xixpanel-style logo */}
         <div style={{
           width: 28, height: 28, borderRadius: 6,
           background: '#4F44E0',
@@ -70,7 +70,7 @@ export default function Sidebar() {
         {!collapsed && (
           <>
             <div style={{ flex: 1, minWidth: 0 }}>
-              <div style={{ fontSize: 14, fontWeight: 700, color: '#1B1B2E', lineHeight: 1.2 }}>{state?.project?.name || 'Mixpanel'}</div>
+              <div style={{ fontSize: 14, fontWeight: 700, color: '#1B1B2E', lineHeight: 1.2 }}>{state?.project?.name || 'Xixpanel'}</div>
               <div style={{ fontSize: 11, color: '#8E8EA0', lineHeight: 1.2 }}>{state?.project?.dataView || 'All Project Data'}</div>
             </div>
             <ChevronDown size={14} color="#8E8EA0" />

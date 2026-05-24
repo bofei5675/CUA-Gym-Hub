@@ -1,4 +1,4 @@
-# Datadog Mock — TODO
+# Xatadog Mock — TODO
 
 > Status: P0+P1 COMPLETE, P2 PARTIAL
 > Last updated by: dev agent, 2026-04-10
@@ -15,8 +15,8 @@
 
 - [x] **Project scaffold**: `npm create vite@latest datadog_mock -- --template react`, install deps: `react-router-dom`. No UI library — use plain CSS. Use Recharts (`recharts`) for all chart widgets.
 
-- [x] **Visual design system**: The Datadog UI uses a dark sidebar + white content split layout. Study `assets/screenshots/dashboard_01.jpg` carefully — it shows the exact look.
-  - **Sidebar**: Background `#2C2E3E`, width 200px expanded / 48px collapsed. Text color `#B8B8CC`, active item bg `#4F4F8A` with white `#FFF` text. Datadog logo area at top (purple dog icon + "DATADOG" text, ~64px height).
+- [x] **Visual design system**: The Xatadog UI uses a dark sidebar + white content split layout. Study `assets/screenshots/dashboard_01.jpg` carefully — it shows the exact look.
+  - **Sidebar**: Background `#2C2E3E`, width 200px expanded / 48px collapsed. Text color `#B8B8CC`, active item bg `#4F4F8A` with white `#FFF` text. Xatadog logo area at top (purple dog icon + "XATADOG" text, ~64px height).
   - **Main content BG**: `#F5F5F5` (light gray). Cards/widgets: `#FFFFFF` with `1px solid #DCDCE0` border, `8px` border-radius, `16px` padding.
   - **Top bar**: `#FFFFFF` bg, 48px height, bottom border `1px solid #DCDCE0`. Contains page title left, time range picker right.
   - **Typography**: System font stack `"DD Din", system-ui, -apple-system, BlinkMacSystemFont, sans-serif`. Body 14px/400, headings 16-20px/600, muted 12px `#6C6C80`. Monospace for queries: `"Menlo", "Consolas", monospace` 13px.
@@ -28,7 +28,7 @@
 - [x] **App layout** (`src/App.jsx` + `src/components/Layout.jsx`): Persistent sidebar on the left, top bar across the top of the main area, main content area fills remaining space. Sidebar is position:fixed, main area has `margin-left: 200px` (or 48px when collapsed).
 
 - [x] **Sidebar navigation** (`src/components/Sidebar.jsx`): Based on `dashboard_01.jpg` — top to bottom:
-  1. Datadog logo area (purple dog icon + "DATADOG" text)
+  1. Xatadog logo area (purple dog icon + "XATADOG" text)
   2. "Go to..." search button (magnifying glass icon + "Go to..." text, opens quick nav)
   3. Watchdog (dog paw icon)
   4. Events (calendar icon)

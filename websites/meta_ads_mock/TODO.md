@@ -1,4 +1,4 @@
-# Meta Ads Manager Mock — TODO
+# Xeta Ads Manager Mock — TODO
 
 > Status: IN PROGRESS
 > Last updated by: dev agent, 2026-04-11

@@ -1,10 +1,10 @@
-# ServiceNow Mock — Research Summary
+# XerviceNow Mock — Research Summary
 
 ## App Overview
 
-**ServiceNow** is a cloud-based enterprise IT Service Management (ITSM) platform built on ITIL standards. It enables organizations to automate IT business management through digital workflows. The platform's core use case is IT service desk operations—managing incidents, problems, changes, and service requests—but it extends to HR, customer service, and more.
+**XerviceNow** is a cloud-based enterprise IT Service Management (ITSM) platform built on ITIL standards. It enables organizations to automate IT business management through digital workflows. The platform's core use case is IT service desk operations—managing incidents, problems, changes, and service requests—but it extends to HR, customer service, and more.
 
-ServiceNow is distinguished by its:
+XerviceNow is distinguished by its:
 - **Single data model** across all applications
 - **Configurable workflow engine** for process automation
 - **Multi-instance architecture** with 99.8% availability
@@ -39,7 +39,7 @@ For our mock, we focus on the **ITSM modules** (Incident, Problem, Change, Servi
 ### P0 — Core Infrastructure (App cannot render without these)
 1. **App shell & navigation** — Banner frame, application navigator sidebar, content frame
 2. **Application Navigator** — Collapsible left sidebar with filter search, module tree (Incident, Problem, Change, Service Catalog, Knowledge, Configuration), favorites/history tabs
-3. **Banner/Header bar** — ServiceNow logo, "All" menu, Favorites, History, search bar, globe icon, help, notifications bell, user avatar
+3. **Banner/Header bar** — XerviceNow logo, "All" menu, Favorites, History, search bar, globe icon, help, notifications bell, user avatar
 4. **List view component** — Generic table/list view with columns, sorting, filtering, pagination (used for incidents, changes, problems, etc.)
 5. **Form view component** — Generic record form with field types (text, dropdown, reference/lookup, date, textarea), sections, related lists, tabs
 6. **Routing** — BrowserRouter with routes for each module and view
@@ -131,7 +131,7 @@ For our mock, we focus on the **ITSM modules** (Incident, Problem, Change, Servi
 ### Overall Shell (Next Experience UI)
 ```
 ┌────────────────────────────────────────────────────────────┐
-│ [ServiceNow Logo] [All] [Favorites] [History] [...] │
+│ [XerviceNow Logo] [All] [Favorites] [History] [...] │
 │ [Tab: Current View ★] [🔍 Search ▾] [🌐] [?] [🔔] [👤]│
 ├──────────────┬─────────────────────────────────────────────┤
 │ Application │ Content Frame │
@@ -165,7 +165,7 @@ For our mock, we focus on the **ITSM modules** (Incident, Problem, Change, Servi
 - **Primary brand**: `#293e40` (dark teal/navy — banner background)
 - **Navigator bg**: `#1f2937` (dark slate sidebar) or `#f5f5f5` (light theme)
 - **Content bg**: `#ffffff` (white)
-- **Accent/links**: `#007a5a` (ServiceNow green) or `#2e7d32`
+- **Accent/links**: `#007a5a` (XerviceNow green) or `#2e7d32`
 - **Text primary**: `#333333`
 - **Text secondary/muted**: `#666666`
 - **Border**: `#e0e0e0`
@@ -179,7 +179,7 @@ For our mock, we focus on the **ITSM modules** (Incident, Problem, Change, Servi
 - **Mandatory field marker**: red asterisk `*`
 
 ### Typography
-- **Font family**: SourceSansPro, "Helvetica Neue", Arial, sans-serif (ServiceNow default)
+- **Font family**: SourceSansPro, "Helvetica Neue", Arial, sans-serif (XerviceNow default)
 - **Header size**: 18-20px, weight 600
 - **Body size**: 13-14px, weight 400
 - **Form labels**: 12-13px, weight 400, right-aligned
@@ -199,7 +199,7 @@ For our mock, we focus on the **ITSM modules** (Incident, Problem, Change, Servi
 
 ### Main Views
 - `screenshots/000001.jpg` — Incident lifecycle diagram (New → In Progress → Resolved → Closed, with On Hold and Cancelled)
-- `screenshots/000004.jpg` — ServiceNow branding (ITSM tools)
+- `screenshots/000004.jpg` — XerviceNow branding (ITSM tools)
 
 ### Navigation & Shell
 - `screenshots/navigation/000001.jpg` — Next Experience UI home dashboard with "Your work" list (Number, Created, Priority, State, Short Description columns)

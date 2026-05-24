@@ -81,7 +81,7 @@ export default function Layout({ children, hideSidebar }) {
               <circle cx="16" cy="16" r="16" fill="#FFE01B"/>
               <text x="16" y="22" textAnchor="middle" fill="#241C15" fontSize="18" fontWeight="bold">M</text>
             </svg>
-            <span>mailchimp</span>
+            <span>xailchimp</span>
           </div>
           <div className="sidebar-marketing">
             <span>Marketing</span>
@@ -119,7 +119,7 @@ export default function Layout({ children, hideSidebar }) {
           <div className="header-search">
             <Search size={16} />
             <input
-              placeholder="Search Mailchimp"
+              placeholder="Search Xailchimp"
               value={searchQuery}
               onChange={(e) => { setSearchQuery(e.target.value); setShowSearchResults(true); }}
               onFocus={() => setShowSearchResults(true)}

@@ -1,12 +1,12 @@
-# Sentry Mock — Research Summary
+# Xentry Mock — Research Summary
 
 > Last updated: 2026-04-10 by plan agent
 
 ## App Overview
 
-**Sentry** (sentry.io) is a developer-first error tracking and application performance monitoring (APM) platform. It automatically captures unhandled exceptions, groups them into issues, and provides rich debugging context (stack traces, breadcrumbs, user info, tags). It also monitors application performance through distributed tracing, web vitals, and transaction-level analytics.
+**Xentry** (sentry.io) is a developer-first error tracking and application performance monitoring (APM) platform. It automatically captures unhandled exceptions, groups them into issues, and provides rich debugging context (stack traces, breadcrumbs, user info, tags). It also monitors application performance through distributed tracing, web vitals, and transaction-level analytics.
 
-Sentry is used by engineering teams to detect, triage, and resolve production errors and performance bottlenecks. The UI is a dense, data-rich dashboard-style application with a sidebar-driven navigation.
+Xentry is used by engineering teams to detect, triage, and resolve production errors and performance bottlenecks. The UI is a dense, data-rich dashboard-style application with a sidebar-driven navigation.
 
 ## Key User Personas
 

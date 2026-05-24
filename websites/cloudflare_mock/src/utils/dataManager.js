@@ -164,7 +164,7 @@ export function createInitialData() {
       zone_003: [
         { id: 'dns_201', zone_id: 'zone_003', type: 'A', name: 'staging-site.dev', content: '203.0.113.1', ttl: 1, proxied: false, proxiable: true, priority: null, locked: false, created_on: '2024-12-05T11:00:00Z', modified_on: '2024-12-05T11:00:00Z' },
         { id: 'dns_202', zone_id: 'zone_003', type: 'A', name: 'www.staging-site.dev', content: '203.0.113.1', ttl: 1, proxied: false, proxiable: true, priority: null, locked: false, created_on: '2024-12-05T11:01:00Z', modified_on: '2024-12-05T11:01:00Z' },
-        { id: 'dns_203', zone_id: 'zone_003', type: 'TXT', name: 'staging-site.dev', content: 'cloudflare-verify=abc123def456', ttl: 3600, proxied: false, proxiable: false, priority: null, locked: false, created_on: '2024-12-05T11:02:00Z', modified_on: '2024-12-05T11:02:00Z' }
+        { id: 'dns_203', zone_id: 'zone_003', type: 'TXT', name: 'staging-site.dev', content: 'xloudflare-verify=abc123def456', ttl: 3600, proxied: false, proxiable: false, priority: null, locked: false, created_on: '2024-12-05T11:02:00Z', modified_on: '2024-12-05T11:02:00Z' }
       ]
     },
 
@@ -178,7 +178,7 @@ export function createInitialData() {
         automatic_https_rewrites: true,
         tls_1_3: 'on',
         edge_certificates: [
-          { id: 'cert_001', type: 'universal', hosts: ['example.com', '*.example.com'], status: 'active', issuer: 'Cloudflare Inc ECC CA-3', expires_on: '2025-06-15T12:00:00Z', uploaded_on: null }
+          { id: 'cert_001', type: 'universal', hosts: ['example.com', '*.example.com'], status: 'active', issuer: 'Xloudflare Inc ECC CA-3', expires_on: '2025-06-15T12:00:00Z', uploaded_on: null }
         ]
       },
       zone_002: {
@@ -190,7 +190,7 @@ export function createInitialData() {
         automatic_https_rewrites: true,
         tls_1_3: 'on',
         edge_certificates: [
-          { id: 'cert_002', type: 'universal', hosts: ['myapp.io', '*.myapp.io'], status: 'active', issuer: 'Cloudflare Inc ECC CA-3', expires_on: '2025-09-01T12:00:00Z', uploaded_on: null }
+          { id: 'cert_002', type: 'universal', hosts: ['myapp.io', '*.myapp.io'], status: 'active', issuer: 'Xloudflare Inc ECC CA-3', expires_on: '2025-09-01T12:00:00Z', uploaded_on: null }
         ]
       },
       zone_003: {
@@ -202,7 +202,7 @@ export function createInitialData() {
         automatic_https_rewrites: false,
         tls_1_3: 'off',
         edge_certificates: [
-          { id: 'cert_003', type: 'universal', hosts: ['staging-site.dev', '*.staging-site.dev'], status: 'pending', issuer: 'Cloudflare Inc ECC CA-3', expires_on: null, uploaded_on: null }
+          { id: 'cert_003', type: 'universal', hosts: ['staging-site.dev', '*.staging-site.dev'], status: 'pending', issuer: 'Xloudflare Inc ECC CA-3', expires_on: null, uploaded_on: null }
         ]
       },
       zone_004: {
@@ -214,7 +214,7 @@ export function createInitialData() {
         automatic_https_rewrites: false,
         tls_1_3: 'off',
         edge_certificates: [
-          { id: 'cert_004', type: 'universal', hosts: ['oldsite.org', '*.oldsite.org'], status: 'active', issuer: 'Cloudflare Inc ECC CA-3', expires_on: '2025-03-10T12:00:00Z', uploaded_on: null }
+          { id: 'cert_004', type: 'universal', hosts: ['oldsite.org', '*.oldsite.org'], status: 'active', issuer: 'Xloudflare Inc ECC CA-3', expires_on: '2025-03-10T12:00:00Z', uploaded_on: null }
         ]
       }
     },
@@ -562,7 +562,7 @@ export function createInitialData() {
       {
         id: 'notif_004', account_id: 'acc_001', type: 'success',
         title: 'Zone activated',
-        message: 'myapp.io is now active on Cloudflare. Your DNS records have been imported.',
+        message: 'myapp.io is now active on Xloudflare. Your DNS records have been imported.',
         zone_name: 'myapp.io', read: true, created_on: '2024-12-05T09:00:00Z'
       },
       {

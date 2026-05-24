@@ -165,13 +165,13 @@ export default function TopBar({ sidebarWidth }) {
       zIndex: 90,
       transition: 'left 0.2s ease',
     }}>
-      {/* Clio Manage dropdown */}
+      {/* Xlio Manage dropdown */}
       <button style={{
         display: 'flex', alignItems: 'center', gap: 4, background: 'none', border: 'none',
         cursor: 'pointer', color: '#1A73E8', fontSize: 14, fontWeight: 600, padding: '4px 8px', borderRadius: 4
       }}
       onClick={() => navigate('/')}>
-        Clio Manage
+        Xlio Manage
         <ChevronDown size={14} />
       </button>
 

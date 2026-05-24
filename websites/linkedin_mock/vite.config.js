@@ -150,7 +150,7 @@ export default defineConfig({
   plugins: [
     react(),
     {
-      name: 'linkedin-mock-api',
+      name: 'xinkedin-mock-api',
       configureServer(server) {
         // POST /upload - Upload attachment files
         server.middlewares.use('/upload', async (req, res, next) => {

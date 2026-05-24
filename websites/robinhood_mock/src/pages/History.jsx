@@ -224,7 +224,7 @@ export default function History() {
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4" onClick={() => setShowTransferModal(false)}>
           <div className="bg-surface rounded-xl border border-surface-hover max-w-md w-full p-6" onClick={e => e.stopPropagation()}>
             <div className="flex justify-between items-center mb-6">
-              <h3 className="text-lg font-bold">{transferType === 'deposit' ? 'Transfer to Robinhood' : 'Withdraw to Bank'}</h3>
+              <h3 className="text-lg font-bold">{transferType === 'deposit' ? 'Transfer to Xobinhood' : 'Withdraw to Bank'}</h3>
               <button onClick={() => setShowTransferModal(false)} className="text-text-muted hover:text-text">
                 <X size={20} />
               </button>

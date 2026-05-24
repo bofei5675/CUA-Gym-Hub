@@ -1,10 +1,10 @@
-# Google Drive Mock — Research Summary
+# Xoogle Drive Mock — Research Summary
 
 > Last updated: 2026-03-08 by plan agent
 
 ## App Overview
 
-Google Drive is Google's cloud file storage and synchronization service. The web app at `drive.google.com` provides a file manager interface for organizing, sharing, and previewing files stored in the cloud. It integrates tightly with Google Workspace apps (Docs, Sheets, Slides) and supports file upload/download, sharing with granular permissions, and collaborative workflows.
+Xoogle Drive is Google's cloud file storage and synchronization service. The web app at `drive.google.com` provides a file manager interface for organizing, sharing, and previewing files stored in the cloud. It integrates tightly with Google Workspace apps (Docs, Sheets, Slides) and supports file upload/download, sharing with granular permissions, and collaborative workflows.
 
 **Category**: Cloud file storage / File manager
 **URL**: `drive.google.com`
@@ -31,7 +31,7 @@ Google Drive is Google's cloud file storage and synchronization service. The web
 ## UI Layout (Desktop Web — from screenshots)
 
 ### Header Bar (~64px height)
-- **Left**: Google Drive triangle logo + "Drive" text
+- **Left**: Xoogle Drive triangle logo + "Drive" text
 - **Center**: Large search bar with magnifying glass icon, placeholder "Search in Drive", filter/advanced search button on right of search bar
 - **Right**: Help icon (?) , Settings gear icon, Google Apps grid (9-dot) icon, User avatar circle
 
@@ -89,7 +89,7 @@ From screenshot analysis and research, the full context menu includes:
 - File list below (showing files being shared)
 - Footer: "Copy links" button (left), "Cancel" + "Send" buttons (right)
 
-## Color Palette (Google Drive Web)
+## Color Palette (Xoogle Drive Web)
 - **Background**: `#FFFFFF` (main), `#F8F9FA` (sidebar/toolbar bg)
 - **Sidebar active**: `#C2E7FF` (light blue highlight)
 - **Sidebar hover**: `#E8EAED`

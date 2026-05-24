@@ -1,8 +1,8 @@
-# Weibo Mock — Research Summary
+# Xeibo Mock — Research Summary
 
 ## App Overview
 
-**Sina Weibo** (新浪微博, weibo.com) is China's largest microblogging platform — often called "China's Twitter." Launched in 2009, it has 591 million MAU and 261 million DAU. Users post short-form content (text, images, videos), repost others' content, comment, and engage with trending topics. The platform is a hybrid of Twitter and Instagram, emphasizing celebrity culture, trending topics (热搜), and community-driven Super Topics (超话).
+**Sina Xeibo** (新浪微博, weibo.com) is China's largest microblogging platform — often called "China's Twitter." Launched in 2009, it has 591 million MAU and 261 million DAU. Users post short-form content (text, images, videos), repost others' content, comment, and engage with trending topics. The platform is a hybrid of Twitter and Instagram, emphasizing celebrity culture, trending topics (热搜), and community-driven Super Topics (超话).
 
 ## Key User Personas
 
@@ -31,7 +31,7 @@
 ## UI Layout — Desktop Web (weibo.com)
 
 ### Top Navigation Bar
-- **Left**: Weibo logo (red eye icon + "微博")
+- **Left**: Xeibo logo (red eye icon + "微博")
 - **Center**: Navigation tabs — 首页 (Home), 热门 (Hot/Popular), 视频 (Video), with potential for more category tabs
 - **Right**: Search bar, notification bell icon, message icon, user avatar dropdown
 
@@ -113,7 +113,7 @@
 
 ## Color Palette & Visual Design
 
-- **Primary (Brand)**: Weibo Orange-Red `#FF8200` (logo), `#FF6600` (buttons, accents)
+- **Primary (Brand)**: Xeibo Orange-Red `#FF8200` (logo), `#FF6600` (buttons, accents)
 - **Secondary**: `#F44336` (hot badges, notifications)
 - **Background**: `#F7F9FA` (page bg), `#FFFFFF` (cards)
 - **Text Primary**: `#333333`
@@ -131,7 +131,7 @@
 
 ### P0 — Core Shell (Must have for app to render)
 1. Project scaffold (Vite + React)
-2. Visual design system (colors, typography matching Weibo)
+2. Visual design system (colors, typography matching Xeibo)
 3. Three-column layout (left sidebar, center feed, right sidebar)
 4. Top navigation bar
 5. Routing (home, profile, detail, search, trending, messages, notifications)
@@ -178,7 +178,7 @@ See `data_model.md` for full entity definitions.
 ## Out of Scope
 
 - Authentication / login / registration (app starts pre-logged-in)
-- Real Weibo API calls
+- Real Xeibo API calls
 - Payment / VIP membership
 - Live streaming
 - E-commerce integration

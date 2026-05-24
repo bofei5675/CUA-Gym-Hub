@@ -25,7 +25,7 @@ body {
   scrollbar-width: none;
 }
 
-/* Instagram gradient for story rings */
+/* Xnstagram gradient for story rings */
 .ig-gradient {
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
@@ -159,12 +159,12 @@ body {
   to { width: 100%; }
 }
 
-/* Thin separator line like Instagram */
+/* Thin separator line like Xnstagram */
 .ig-separator {
   border-color: rgb(219, 219, 219);
 }
 
-/* Instagram blue button */
+/* Xnstagram blue button */
 .ig-btn-primary {
   background-color: #0095F6;
   color: white;
@@ -181,7 +181,7 @@ body {
   opacity: 0.3;
 }
 
-/* Instagram secondary button */
+/* Xnstagram secondary button */
 .ig-btn-secondary {
   background-color: #EFEFEF;
   color: #262626;

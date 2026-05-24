@@ -71,10 +71,10 @@ export default function Sidebar({ isOpen, collapsed, onToggleCollapse, onClose }
               <div className="w-7 h-7 bg-primary rounded-md flex items-center justify-center text-white font-bold text-base">
                 W
               </div>
-              <div className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 border-t-2 border-r-2 border-workday-orange rounded-tr-full"></div>
+              <div className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 border-t-2 border-r-2 border-xorkday-orange rounded-tr-full"></div>
             </div>
             <span className="font-bold text-base text-gray-800 tracking-tight">
-              workday
+              xorkday
             </span>
           </>
         )}
@@ -83,7 +83,7 @@ export default function Sidebar({ isOpen, collapsed, onToggleCollapse, onClose }
             <div className="w-7 h-7 bg-primary rounded-md flex items-center justify-center text-white font-bold text-base">
               W
             </div>
-            <div className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 border-t-2 border-r-2 border-workday-orange rounded-tr-full"></div>
+            <div className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 border-t-2 border-r-2 border-xorkday-orange rounded-tr-full"></div>
           </div>
         )}
       </div>

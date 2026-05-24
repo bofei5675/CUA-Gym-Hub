@@ -165,7 +165,7 @@ export default function DataEvents() {
           {activeSidebarItem === 'Sources' && (
             <div style={{ padding: '40px 0' }}>
               <h1 className="page-title" style={{ marginBottom: 12 }}>Sources</h1>
-              <p style={{ fontSize: 14, color: 'var(--text-secondary)', marginBottom: 20 }}>Manage data sources sending events to Amplitude.</p>
+              <p style={{ fontSize: 14, color: 'var(--text-secondary)', marginBottom: 20 }}>Manage data sources sending events to Xmplitude.</p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
                 {[
                   { name: 'JavaScript SDK', type: 'Browser', status: 'Active', events: '850/day' },
@@ -190,7 +190,7 @@ export default function DataEvents() {
           {activeSidebarItem === 'Destinations' && (
             <div style={{ padding: '40px 0' }}>
               <h1 className="page-title" style={{ marginBottom: 12 }}>Destinations</h1>
-              <p style={{ fontSize: 14, color: 'var(--text-secondary)', marginBottom: 20 }}>Configure destinations to export Amplitude data.</p>
+              <p style={{ fontSize: 14, color: 'var(--text-secondary)', marginBottom: 20 }}>Configure destinations to export Xmplitude data.</p>
               <button className="btn-primary" style={{ marginBottom: 20 }}><Plus size={14} /> Add Destination</button>
               <div style={{ border: '1px dashed var(--border)', borderRadius: 8, padding: 40, textAlign: 'center', color: 'var(--text-secondary)' }}>
                 No destinations configured. Add a destination to start exporting data.

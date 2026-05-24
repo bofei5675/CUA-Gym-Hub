@@ -127,7 +127,7 @@ export default function Payments() {
 
   function handleExport() {
     const statusLabel = statusFilter === 'all' ? 'all' : statusFilter;
-    downloadCsv(`stripe-${statusLabel}-payments.csv`, filtered, [
+    downloadCsv(`xtripe-${statusLabel}-payments.csv`, filtered, [
       { label: 'Payment ID', value: p => p.id },
       { label: 'Amount', value: p => formatCurrency(p.amount, p.currency) },
       { label: 'Status', value: p => p.refunded ? 'refunded' : p.status },

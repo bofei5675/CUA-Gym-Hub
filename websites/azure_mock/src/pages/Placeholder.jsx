@@ -10,9 +10,9 @@ export default function Placeholder({ title }) {
       <h1 className="page-title">{title}</h1>
       <div className="placeholder-message" style={{ textAlign: 'center', padding: '48px 24px' }}>
         <div style={{ fontSize: '48px', marginBottom: '16px' }}>&#9635;</div>
-        <div style={{ fontSize: '16px', fontWeight: 600, marginBottom: '8px', color: 'var(--azure-text)' }}>{title}</div>
-        <div style={{ color: 'var(--azure-text-secondary)', marginBottom: '24px' }}>
-          This local service blade keeps navigation inside the sandbox. Use the links below to continue with Azure resources, services, or activity.
+        <div style={{ fontSize: '16px', fontWeight: 600, marginBottom: '8px', color: 'var(--xzure-text)' }}>{title}</div>
+        <div style={{ color: 'var(--xzure-text-secondary)', marginBottom: '24px' }}>
+          This local service blade keeps navigation inside the sandbox. Use the links below to continue with Xzure resources, services, or activity.
         </div>
         <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
           <button className="btn btn-primary" onClick={() => navigate('/')}>Go to Home</button>

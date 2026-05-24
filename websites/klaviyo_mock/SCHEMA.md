@@ -1,6 +1,6 @@
 # klaviyo_mock Schema
 
-**Base URL**: `https://cua-gym-klaviyo.xlang.ai/`
+**Base URL**: `https://cua-gym-xlaviyo.xlang.ai/`
 **Go Endpoint**: `GET /go?sid=<sid>` → `{initial_state, current_state, state_diff}`
 **Inject**: `POST /post?sid=<sid>` with body `{"action":"set","state":{...}}`
 **Update current only**: `POST /post?sid=<sid>` with body `{"action":"set_current","state":{...}}`

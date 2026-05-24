@@ -1,7 +1,7 @@
 # weibo_mock Schema
 
 **Deploy order**: 89 (alphabetical among all *_mock dirs, BASE_PORT=8000 → port 8089)
-**Base URL**: `http://localhost:5173/` (local dev) or `https://cua-gym-weibo.xlang.ai/` (production)
+**Base URL**: `http://localhost:5173/` (local dev) or `https://cua-gym-xeibo.xlang.ai/` (production)
 **Go Endpoint**: `GET /go?sid=<sid>` → `{initial_state, current_state, state_diff}`
 **Inject**: `POST /post?sid=<sid>` with body `{"action":"set","state":{...}}`
 **Reset**: `POST /post?sid=<sid>` with body `{"action":"reset"}`

@@ -38,7 +38,7 @@ export default function Snippets() {
     <div>
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold text-gray-800">Snippets</h1>
-        <button onClick={() => setIsModalOpen(true)} className="bg-gitlab-info text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors">
+        <button onClick={() => setIsModalOpen(true)} className="bg-xitlab-info text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors">
           New Snippet
         </button>
       </div>
@@ -79,7 +79,7 @@ export default function Snippets() {
               <textarea required value={newSnippet.code} onChange={(event) => setNewSnippet(prev => ({ ...prev, code: event.target.value }))} className="mb-4 h-40 w-full rounded border border-gray-300 px-3 py-2 font-mono text-sm" />
               <div className="flex justify-end gap-2">
                 <button type="button" onClick={() => setIsModalOpen(false)} className="rounded px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">Cancel</button>
-                <button type="submit" className="rounded bg-gitlab-info px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">Create snippet</button>
+                <button type="submit" className="rounded bg-xitlab-info px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">Create snippet</button>
               </div>
             </form>
           </div>

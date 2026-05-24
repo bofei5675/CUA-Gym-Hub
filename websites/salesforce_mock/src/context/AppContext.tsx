@@ -26,7 +26,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
 
     if (sid) {
       // Check BEFORE initializeData if session data already exists in localStorage
-      const sessionKey = `salesforce-crm-initial_${sid}`;
+      const sessionKey = `xalesforce-crm-initial_${sid}`;
       const isRefresh = localStorage.getItem(sessionKey) !== null;
 
       if (isRefresh) {

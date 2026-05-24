@@ -73,7 +73,7 @@ export default function Notifications() {
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
           <h3 className="font-semibold text-base mb-2">Manage your Notifications</h3>
           <p
-            className="text-linkedin-blue font-semibold text-sm cursor-pointer hover:underline"
+            className="text-xinkedin-blue font-semibold text-sm cursor-pointer hover:underline"
             onClick={() => navigate('/profile/me')}
           >
             View Settings
@@ -89,7 +89,7 @@ export default function Notifications() {
               <span className="text-sm text-gray-600">{unreadCount} new notification{unreadCount !== 1 ? 's' : ''}</span>
               <button
                 onClick={markAllNotificationsRead}
-                className="flex items-center gap-1 text-linkedin-blue font-semibold text-sm hover:bg-blue-50 px-2 py-1 rounded"
+                className="flex items-center gap-1 text-xinkedin-blue font-semibold text-sm hover:bg-blue-50 px-2 py-1 rounded"
               >
                 <Check size={14} /> Mark all as read
               </button>
@@ -110,7 +110,7 @@ export default function Notifications() {
               >
                 {/* Unread dot */}
                 {!notif.read && (
-                  <div className="absolute left-1.5 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-linkedin-blue"></div>
+                  <div className="absolute left-1.5 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-xinkedin-blue"></div>
                 )}
 
                 {isSystem ? (
@@ -127,7 +127,7 @@ export default function Notifications() {
                     {notif.content}
                   </p>
                   <p
-                    className="text-xs text-linkedin-blue mt-1 font-semibold hover:underline cursor-pointer"
+                    className="text-xs text-xinkedin-blue mt-1 font-semibold hover:underline cursor-pointer"
                     onClick={(e) => handleActionClick(e, notif)}
                   >
                     {actionLabel}

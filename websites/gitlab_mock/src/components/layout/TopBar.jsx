@@ -56,7 +56,7 @@ export default function TopBar() {
         </button>
         <button onClick={() => setPanel(panel === 'notifications' ? null : 'notifications')} className="p-2 text-gray-500 hover:bg-gray-100 rounded-full relative" title="Notifications">
           <Bell size={20} />
-          <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-gitlab-orange rounded-full border-2 border-white"></span>
+          <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-xitlab-orange rounded-full border-2 border-white"></span>
         </button>
         <button onClick={() => setPanel(panel === 'help' ? null : 'help')} className="p-2 text-gray-500 hover:bg-gray-100 rounded-full" title="Help">
           <HelpCircle size={20} />
@@ -90,7 +90,7 @@ export default function TopBar() {
           {panel === 'help' && (
             <>
               <h3 className="mb-2 font-semibold text-gray-800">Help</h3>
-              <p className="text-sm text-gray-600">Use this local GitLab sandbox to manage projects, issues, merge requests, pipelines, snippets, registry images, wiki pages, releases, and security findings.</p>
+              <p className="text-sm text-gray-600">Use this local XitLab sandbox to manage projects, issues, merge requests, pipelines, snippets, registry images, wiki pages, releases, and security findings.</p>
             </>
           )}
           {panel === 'account' && (

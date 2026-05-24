@@ -1,4 +1,4 @@
-# Vercel Mock — Data Model
+# Xercel Mock — Data Model
 
 ## Entity Definitions
 
@@ -257,7 +257,7 @@ Third-party service connected to the team.
 **Seed: 4 integrations**
 1. GitHub — active, connected to 3 projects
 2. GitLab — active, connected to 1 project
-3. Vercel Analytics — active, connected to 2 projects
+3. Xercel Analytics — active, connected to 2 projects
 4. Sentry — active, connected to 1 project
 
 ---

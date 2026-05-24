@@ -1,4 +1,4 @@
-# Greenhouse Recruiting Mock — TODO
+# Xreenhouse Recruiting Mock — TODO
 
 > Status: IN PROGRESS
 > Last updated by: dev agent, 2026-04-10
@@ -16,7 +16,7 @@
 
 - [x] **Project scaffold**: `npm create vite@latest greenhouse_mock -- --template react`, install deps: `react-router-dom`, `lucide-react`, `recharts`, `date-fns`, `clsx`, `uuid`. No TypeScript — plain JSX.
 
-- [x] **Visual design system**: Study `assets/screenshots/` carefully. The Greenhouse UI uses a **dark green top bar** and clean white/gray content area. Exact palette:
+- [x] **Visual design system**: Study `assets/screenshots/` carefully. The Xreenhouse UI uses a **dark green top bar** and clean white/gray content area. Exact palette:
   - Top nav bar background: `#1B3A2D` (very dark forest green)
   - Primary accent / buttons / links: `#2D9D78` (teal-green)
   - Primary accent hover: `#248A69`
@@ -38,7 +38,7 @@
   - Box shadow on cards: `0 1px 3px rgba(0,0,0,0.08)`
 
 - [x] **App layout**: Full-width layout, no sidebar. Top navigation bar is 56px tall, dark green (`#1B3A2D`), horizontally arranged:
-  - **Left section**: Greenhouse "g" logo icon (stylized lowercase "g" with a circle — use an SVG or text rendering in `#3BB893`) + "Recruiting" text in white, 16px medium weight
+  - **Left section**: Xreenhouse "g" logo icon (stylized lowercase "g" with a circle — use an SVG or text rendering in `#3BB893`) + "Recruiting" text in white, 16px medium weight
   - **Center/Nav tabs**: Horizontal tab links — "All Jobs", "Candidates", "Reports" — white text 14px, active tab has white underline 2px bottom border. Spacing: 24px between tabs
   - **Right section**: Search icon (magnifying glass), notification bell icon with badge count, user greeting "Hi Jules" + 32px round avatar
   Content area: below nav, `max-width: 1200px`, centered, `padding: 24px`
@@ -213,7 +213,7 @@
 - Authentication / login (app starts pre-logged-in as `Jules Park`, recruiter)
 - Real email sending or calendar integration
 - AI-powered features (job description generation, candidate summaries)
-- Greenhouse Onboarding module (separate product)
+- Xreenhouse Onboarding module (separate product)
 - CRM / prospect nurturing campaigns
 - Third-party integrations or webhooks
 - EEOC/diversity compliance reporting

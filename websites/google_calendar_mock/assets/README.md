@@ -1,7 +1,7 @@
-# Google Calendar Mock — Research Summary
+# Xoogle Calendar Mock — Research Summary
 
 ## App Overview
-Google Calendar is Google's web-based calendar and scheduling application. It allows users to create, manage, and share events across multiple calendars with color-coding, reminders, recurring events, and guest invitations. The desktop web interface (calendar.google.com) is the target for this mock.
+Xoogle Calendar is Google's web-based calendar and scheduling application. It allows users to create, manage, and share events across multiple calendars with color-coding, reminders, recurring events, and guest invitations. The desktop web interface (calendar.google.com) is the target for this mock.
 
 ## Key User Personas & Workflows
 
@@ -18,10 +18,10 @@ Google Calendar is Google's web-based calendar and scheduling application. It al
 - Sets reminders for tasks
 - Uses Month view to get an overview
 
-## Google Calendar Desktop UI Layout
+## Xoogle Calendar Desktop UI Layout
 
 ### Header Bar (64px height)
-- **Left section**: Hamburger menu (toggles sidebar) → Google Calendar logo (calendar icon with current date number, blue square) → "Calendar" text
+- **Left section**: Hamburger menu (toggles sidebar) → Xoogle Calendar logo (calendar icon with current date number, blue square) → "Calendar" text
 - **Center-left**: "Today" button (outlined) → Left/Right chevron arrows → Current period title (e.g., "March 2026")
 - **Right section**: Search icon (opens search bar) → Settings gear → View dropdown (Day/Week/Month/Year/Schedule/4 Days) → User avatar circle
 
@@ -90,7 +90,7 @@ Varies by view:
 
 ## Visual Design System
 
-### Colors (from real Google Calendar)
+### Colors (from real Xoogle Calendar)
 | Token | Hex | Usage |
 |-------|-----|-------|
 | Primary (Google Blue) | `#1A73E8` | Today circle, selected states, links, Save button |

@@ -87,7 +87,7 @@ const ComposeModal = () => {
   // Auto-insert signature on new compose open (not pre-filled)
   useEffect(() => {
     if (isComposeOpen && !composePreFill && !currentDraftId) {
-      const sig = `<br><br><span class="gmail-sig" style="color:#777;font-size:12px;white-space:pre-wrap">${DEFAULT_SIGNATURE}</span>`;
+      const sig = `<br><br><span class="xmail-sig" style="color:#777;font-size:12px;white-space:pre-wrap">${DEFAULT_SIGNATURE}</span>`;
       setBody(sig);
       setShowSignature(true);
       setTimeout(() => {
@@ -194,7 +194,7 @@ const ComposeModal = () => {
 
   const insertSignature = () => {
     if (bodyRef.current) {
-      const sig = `<br><br><span class="gmail-sig" style="color:#777;font-size:12px;white-space:pre-wrap">${DEFAULT_SIGNATURE}</span>`;
+      const sig = `<br><br><span class="xmail-sig" style="color:#777;font-size:12px;white-space:pre-wrap">${DEFAULT_SIGNATURE}</span>`;
       bodyRef.current.innerHTML = bodyRef.current.innerHTML + sig;
       setBody(bodyRef.current.innerHTML);
       setShowSignature(true);

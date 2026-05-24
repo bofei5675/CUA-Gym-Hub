@@ -1,13 +1,13 @@
-# Design System Inspired by Coinbase
+# Design System Inspired by Xoinbase
 
 ## 1. Visual Theme & Atmosphere
 
-Coinbase's website is a clean, trustworthy crypto platform that communicates financial reliability through a blue-and-white binary palette. The design uses Coinbase Blue (`#0052ff`) — a deep, saturated blue — as the singular brand accent against white and near-black surfaces. The proprietary font family includes CoinbaseDisplay for hero headlines, CoinbaseSans for UI text, CoinbaseText for body reading, and CoinbaseIcons for iconography — a comprehensive four-font system.
+Xoinbase's website is a clean, trustworthy crypto platform that communicates financial reliability through a blue-and-white binary palette. The design uses Xoinbase Blue (`#0052ff`) — a deep, saturated blue — as the singular brand accent against white and near-black surfaces. The proprietary font family includes CoinbaseDisplay for hero headlines, CoinbaseSans for UI text, CoinbaseText for body reading, and CoinbaseIcons for iconography — a comprehensive four-font system.
 
 The button system uses a distinctive 56px radius for pill-shaped CTAs with hover transitions to a lighter blue (`#578bfa`). The design alternates between white content sections and dark (`#0a0b0d`, `#282b31`) feature sections, creating a professional, financial-grade interface.
 
 **Key Characteristics:**
-- Coinbase Blue (`#0052ff`) as singular brand accent
+- Xoinbase Blue (`#0052ff`) as singular brand accent
 - Four-font proprietary family: Display, Sans, Text, Icons
 - 56px radius pill buttons with blue hover transition
 - Near-black (`#0a0b0d`) dark sections + white light sections
@@ -18,7 +18,7 @@ The button system uses a distinctive 56px radius for pill-shaped CTAs with hover
 ## 2. Color Palette & Roles
 
 ### Primary
-- **Coinbase Blue** (`#0052ff`): Primary brand, links, CTA borders
+- **Xoinbase Blue** (`#0052ff`): Primary brand, links, CTA borders
 - **Pure White** (`#ffffff`): Primary light surface
 - **Near Black** (`#0a0b0d`): Text, dark section backgrounds
 - **Cool Gray Surface** (`#eef0f3`): Secondary button background
@@ -101,7 +101,7 @@ Minimal shadow system — depth from color contrast between dark/light sections.
 ## 7. Do's and Don'ts
 
 ### Do
-- Use Coinbase Blue (#0052ff) for primary interactive elements
+- Use Xoinbase Blue (#0052ff) for primary interactive elements
 - Apply 56px radius for all CTA buttons
 - Use CoinbaseDisplay for hero headings only
 - Alternate dark (#0a0b0d) and white sections
@@ -117,7 +117,7 @@ Breakpoints: 400px, 576px, 640px, 768px, 896px, 1280px, 1440px, 1600px
 ## 9. Agent Prompt Guide
 
 ### Quick Color Reference
-- Brand: Coinbase Blue (`#0052ff`)
+- Brand: Xoinbase Blue (`#0052ff`)
 - Background: White (`#ffffff`)
 - Dark surface: `#0a0b0d`
 - Secondary surface: `#eef0f3`

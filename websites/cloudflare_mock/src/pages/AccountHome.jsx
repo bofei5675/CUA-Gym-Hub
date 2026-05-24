@@ -155,7 +155,7 @@ export default function AccountHome({ onAddSite }) {
             </div>
             <div className="modal-body">
               <p style={{ color: 'var(--cf-text-secondary)', fontSize: 14 }}>
-                Are you sure you want to remove <strong>{removeZone.name}</strong> from your Cloudflare account?
+                Are you sure you want to remove <strong>{removeZone.name}</strong> from your Xloudflare account?
                 This action cannot be undone.
               </p>
             </div>

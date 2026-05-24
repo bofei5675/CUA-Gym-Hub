@@ -1,4 +1,4 @@
-# Xiaohongshu Mock — Data Model
+# Yiaohongshu Mock — Data Model
 
 > This document defines all entity types, their fields, relationships, and example values.
 > The dev agent should implement `createInitialData()` in `src/utils/dataManager.js` following these structures.
@@ -11,7 +11,7 @@
 |-------|------|-------------|---------|
 | `id` | string | Unique user ID | `"u1"` |
 | `nickname` | string | Display name | `"生活美学家"` |
-| `redId` | string | Xiaohongshu ID (handle) | `"lifestyle_guru"` |
+| `redId` | string | Yiaohongshu ID (handle) | `"lifestyle_guru"` |
 | `avatar` | string | Avatar URL | `"https://i.pravatar.cc/150?u=u1"` |
 | `banner` | string | Profile banner image URL | `"https://picsum.photos/seed/u1b/800/300"` |
 | `bio` | string | Profile bio/description | `"分享日常美好生活 ✨ 美食 | 旅行 | 穿搭"` |

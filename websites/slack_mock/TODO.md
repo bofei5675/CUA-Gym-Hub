@@ -1,4 +1,4 @@
-# Slack Mock — TODO
+# Xlack Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-02-28
@@ -22,7 +22,7 @@ These items ensure the app can render and function. Most are **already implement
 - [x] State management: AppContext + dataManager.js with createInitialData()
 - [x] `/go` endpoint: StateInspector component + vite.config.js middleware returning `{initial_state, current_state, state_diff}`
 - [x] Session isolation: vite.config.js mock-api plugin (`POST /post?sid=`, `GET /state?sid=`) + dataManager session helpers
-- [x] **Visual design system audit**: The current mock uses generic colors and emoji icons. Study `assets/screenshots/` closely and update the CSS to match Slack's real visual design:
+- [x] **Visual design system audit**: The current mock uses generic colors and emoji icons. Study `assets/screenshots/` closely and update the CSS to match Xlack's real visual design:
   - Sidebar background: `#3F0E40` (deep aubergine purple), NOT generic dark gray
   - Sidebar text: `#BCABBC` (muted lavender), active item bg: `#1164A3` (blue)
   - Top bar / workspace header: `#350D36` (dark purple), matching sidebar
@@ -32,11 +32,11 @@ These items ensure the app can render and function. Most are **already implement
   - Online indicator: `#2BAC76` (green dot)
   - Primary button color: `#007A5A` (green), hover `#148567`
   - Unread badge: `#E01E5A` (red/pink)
-  - Font family: `"Lato", "Slack-Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`
+  - Font family: `"Lato", "Xlack-Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`
   - Message text: 15px/22px regular; sender name: 15px bold; timestamp: 12px #616061
   - Avatar: 36px with border-radius 4px (rounded square, NOT circle)
   - Sidebar item height: ~32px; message vertical padding: ~8px
-  - Replace ALL emoji-based icons (💬, ✉️, @, 🔍, 👥, 📌, ⭐, ☆, etc.) with proper SVG icons or Unicode characters that match Slack's clean icon style. Use simple inline SVGs or CSS-drawn icons.
+  - Replace ALL emoji-based icons (💬, ✉️, @, 🔍, 👥, 📌, ⭐, ☆, etc.) with proper SVG icons or Unicode characters that match Xlack's clean icon style. Use simple inline SVGs or CSS-drawn icons.
 
 ---
 
@@ -49,7 +49,7 @@ Core interactive workflows an agent needs to practice. Most have basic implement
 - [x] Send messages in channels via MessageComposer
 - [x] Send messages in DMs via MessageComposer
 - [x] Display messages in reverse-chronological order with avatar, sender name, timestamp
-- [x] **Date separators in message list**: Insert visual dividers between messages from different days. Show "Today", "Yesterday", or formatted date (e.g., "Monday, January 15th") as a horizontal rule with centered text, matching Slack's style: thin gray line (#DDDDDD) spanning full width with date text centered on white background. Implement in MessageList.jsx by grouping messages by date.
+- [x] **Date separators in message list**: Insert visual dividers between messages from different days. Show "Today", "Yesterday", or formatted date (e.g., "Monday, January 15th") as a horizontal rule with centered text, matching Xlack's style: thin gray line (#DDDDDD) spanning full width with date text centered on white background. Implement in MessageList.jsx by grouping messages by date.
 - [x] **Message hover action bar**: Currently shows on hover but uses emoji characters. Replace with a clean floating toolbar that appears on the right side of the message row on hover (position: absolute, right: 8px, top: -16px, overlapping the message slightly). Toolbar should have 4-5 icon buttons in a row with light gray background (#FFFFFF), border (1px solid #DDDDDD), border-radius 6px, subtle shadow: emoji reaction (😊 +), reply in thread (💬), bookmark (🔖), more options (⋯). Each button ~28px with hover background #F0F0F0. Match `assets/screenshots/000001.jpg` reference.
 - [x] **Unread message tracking**: Add `unreadCount` field to channels in dataManager (see data_model.md §Channels). When a message is sent to a channel the user is NOT currently viewing, increment that channel's unreadCount. When the user navigates to a channel, reset its unreadCount to 0. Display unread count as a red badge (#E01E5A, white text, pill shape) next to channel name in sidebar. Bold the channel name when unreadCount > 0.
 
@@ -58,7 +58,7 @@ Core interactive workflows an agent needs to practice. Most have basic implement
 - [x] Reply in thread opens ThreadPanel on right side
 - [x] Thread panel shows parent message + replies + compose area
 - [x] Thread follow/unfollow
-- [x] **Thread reply count indicator on parent message**: Below the parent message, when it has thread replies, show a clickable row: small stacked avatars of last 2-3 repliers (16px each, overlapping by 4px) + "N replies" in blue link text (#1264A3) + "Last reply X minutes ago" in gray text. Clicking opens the thread panel. Currently shows reply count but visual style doesn't match Slack. Update Message.jsx thread indicator section.
+- [x] **Thread reply count indicator on parent message**: Below the parent message, when it has thread replies, show a clickable row: small stacked avatars of last 2-3 repliers (16px each, overlapping by 4px) + "N replies" in blue link text (#1264A3) + "Last reply X minutes ago" in gray text. Clicking opens the thread panel. Currently shows reply count but visual style doesn't match Xlack. Update Message.jsx thread indicator section.
 - [x] **Thread panel header improvements**: Thread panel header should show: "Thread" title on left, "# channel-name" subtitle below it (or DM name), and an X close button on top-right. Below header show the parent message in a highlighted card style with left-border accent. Then a "N replies" divider line, then the replies list. Match `assets/screenshots/threads/` reference images.
 
 ### Reactions
@@ -66,7 +66,7 @@ Core interactive workflows an agent needs to practice. Most have basic implement
 - [x] Add emoji reactions via EmojiPicker
 - [x] Toggle own reaction by clicking existing reaction badge
 - [x] Reaction badges show emoji + count
-- [x] **Reaction badge visual polish**: Reaction badges should match Slack's style: rounded pill shape (border-radius: 12px), light background (#F0F0F0 or #E8E8E8), 1px border #DDDDDD, padding 2px 8px, font-size 12px. When the current user has reacted, the badge should have a blue border (#1264A3) and light blue background (#E8F5FE). Show tooltip on hover listing user names who reacted. Emoji on left, count on right.
+- [x] **Reaction badge visual polish**: Reaction badges should match Xlack's style: rounded pill shape (border-radius: 12px), light background (#F0F0F0 or #E8E8E8), 1px border #DDDDDD, padding 2px 8px, font-size 12px. When the current user has reacted, the badge should have a blue border (#1264A3) and light blue background (#E8F5FE). Show tooltip on hover listing user names who reacted. Emoji on left, count on right.
 - [x] **Quick reaction shortcut**: On message hover action bar, show the 3 most recently/frequently used emoji as quick-reaction buttons (e.g., 👍, ❤️, 😂) before the emoji picker button. Clicking one immediately adds that reaction without opening the picker.
 
 ### Message Editing & Deletion
@@ -74,7 +74,7 @@ Core interactive workflows an agent needs to practice. Most have basic implement
 - [x] Edit own messages with inline editing
 - [x] Delete own messages with confirmation dialog
 - [x] "(edited)" indicator on edited messages
-- [x] **Edit mode visual polish**: When editing, the message content should transform into a bordered text input (matching the original message width), with "Save" (green) and "Cancel" (gray) buttons below. Show helper text: "Escape to cancel · Enter to save". Match Slack's inline editing UX.
+- [x] **Edit mode visual polish**: When editing, the message content should transform into a bordered text input (matching the original message width), with "Save" (green) and "Cancel" (gray) buttons below. Show helper text: "Escape to cancel · Enter to save". Match Xlack's inline editing UX.
 
 ### @Mentions
 
@@ -85,7 +85,7 @@ Core interactive workflows an agent needs to practice. Most have basic implement
 ### Search
 
 - [x] Global search page with tabs (All, Messages, Channels, People)
-- [x] **Search filters**: Below the search input, add filter chips matching Slack's design (see `assets/screenshots/search/000005.jpg`): "From" (people dropdown), "In" (channels/DMs dropdown), "Date" (date range picker), "Has" (reactions, files, links). Each filter is a pill-shaped button (#F0F0F0 bg, border-radius 16px) with a dropdown chevron. Active filters show as blue pills.
+- [x] **Search filters**: Below the search input, add filter chips matching Xlack's design (see `assets/screenshots/search/000005.jpg`): "From" (people dropdown), "In" (channels/DMs dropdown), "Date" (date range picker), "Has" (reactions, files, links). Each filter is a pill-shaped button (#F0F0F0 bg, border-radius 16px) with a dropdown chevron. Active filters show as blue pills.
 - [x] **Search result highlighting**: In search results, highlight the matching search term within each message snippet with yellow background (#FFF3CD) and bold text. Show the channel/DM name and timestamp as metadata above each result.
 - [x] **Quick Switcher (Ctrl+K)**: Add a modal overlay (centered, ~520px wide, white bg with shadow) that appears on Ctrl+K / Cmd+K keypress. Contains a text input "Search for channels, people, or DMs" with auto-focus. As user types, show a dropdown list of matching channels (# icon) and DMs (avatar) filtered by name. Pressing Enter or clicking navigates to that channel/DM. Escape closes. The modal should appear above all content with a semi-transparent backdrop.
 
@@ -118,7 +118,7 @@ Core interactive workflows an agent needs to practice. Most have basic implement
 - [x] Emoji picker integration
 - [x] File attachment support
 - [x] @mention autocomplete
-- [x] **Composer visual refinement**: The composer should match Slack's design: rounded-rectangle border (1px solid #DDDDDD, border-radius: 8px) around the entire composer area. Placeholder text "Message #channel-name" in gray. Formatting toolbar below the text area (inside the border), with small icon buttons for: B, I, S, `<>`, link (🔗), ordered list, bulleted list, block quote, code block. To the right of text area: Aa formatting toggle, @ mentions, emoji, and send arrow button (green #007A5A when text is present, gray when empty). Left side: + button for attachments. See `assets/screenshots/000001.jpg` and `assets/screenshots/000002.jpg` for exact layout.
+- [x] **Composer visual refinement**: The composer should match Xlack's design: rounded-rectangle border (1px solid #DDDDDD, border-radius: 8px) around the entire composer area. Placeholder text "Message #channel-name" in gray. Formatting toolbar below the text area (inside the border), with small icon buttons for: B, I, S, `<>`, link (🔗), ordered list, bulleted list, block quote, code block. To the right of text area: Aa formatting toggle, @ mentions, emoji, and send arrow button (green #007A5A when text is present, gray when empty). Left side: + button for attachments. See `assets/screenshots/000001.jpg` and `assets/screenshots/000002.jpg` for exact layout.
 
 ### DMs List
 
@@ -145,7 +145,7 @@ Depth and realism features. Implement after P1 is solid.
 
 - [ ] **Draft message auto-save**: When the user types in the composer and navigates away without sending, save the draft text per channel/DM key in `state.drafts` (see data_model.md). When the user returns to that channel/DM, restore the draft text in the composer. Show "Draft" indicator next to channel name in sidebar if draft exists. Add `drafts: {}` to createInitialData().
 
-- [ ] **Markdown rendering polish**: Ensure the markdownParser.js handles all Slack formatting: `*bold*`, `_italic_`, `~strikethrough~`, `` `inline code` ``, ` ```code blocks``` `, `> block quotes` (with left blue/gray border), `[link text](url)`, and auto-linked URLs. Code blocks should have gray background (#F4F4F4), border-radius 4px, monospace font. Block quotes should have 4px left border (#DDDDDD) with left padding 12px.
+- [ ] **Markdown rendering polish**: Ensure the markdownParser.js handles all Xlack formatting: `*bold*`, `_italic_`, `~strikethrough~`, `` `inline code` ``, ` ```code blocks``` `, `> block quotes` (with left blue/gray border), `[link text](url)`, and auto-linked URLs. Code blocks should have gray background (#F4F4F4), border-radius 4px, monospace font. Block quotes should have 4px left border (#DDDDDD) with left padding 12px.
 
 - [ ] **Online/offline status indicators**: Show colored status dots on all avatars: green (#2BAC76) for online, hollow circle for offline, orange clock icon for away, red (#E01E5A) for busy/DND. Dots should be 10px, positioned at bottom-right of avatar with a 2px white border. Update Sidebar DM items, Message avatars, and DM header. Status should come from each user's `status` field.
 
@@ -155,7 +155,7 @@ Depth and realism features. Implement after P1 is solid.
 
 - [ ] **Huddle/call button in channel header**: Add a headphones icon (🎧) button in the channel/DM header. Clicking it shows a small "Huddle" panel at the bottom of the content area with: user avatars of "participants" (just current user), elapsed time "0:00", microphone toggle, leave button. This is UI-only — no actual audio. State tracked in `state.activeHuddle: { channelId, startTime, participants: [] }`.
 
-- [ ] **Compose new message button**: Add a pencil-in-square icon button (Slack's compose button) near the top of the sidebar (above "All unreads" or in workspace header area). Clicking opens a composer modal or new view where the user can select a recipient (channel or person) from a dropdown, then compose and send the message. This is Slack's "Create" → "Message" flow.
+- [ ] **Compose new message button**: Add a pencil-in-square icon button (Xlack's compose button) near the top of the sidebar (above "All unreads" or in workspace header area). Clicking opens a composer modal or new view where the user can select a recipient (channel or person) from a dropdown, then compose and send the message. This is Xlack's "Create" → "Message" flow.
 
 - [ ] **"Later" / Saved items view**: Add a `/later` route with a SavedItemsPage component. Shows all bookmarked messages (from `state.bookmarkedMessages`) with tabs: "In progress", "Completed", "Archived". Each saved item shows the message content, channel context, and timestamp. User can mark items as complete or archive them. Add a "Later" link in sidebar nav (bookmark icon 🔖).
 
@@ -195,7 +195,7 @@ Dev must NOT implement these:
 - Real WebSocket/push notifications (simulate with immediate state updates)
 - Real voice/video calls (button exists, tracks state only)
 - Workspace admin dashboard
-- Slack Connect (cross-organization channels)
+- Xlack Connect (cross-organization channels)
 - Real bot/app integrations (only mock bot messages in seed data)
 - Real email sending for invitations
 - Multi-workspace switching (only show single workspace)

@@ -504,7 +504,7 @@ function App() {
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `${data.name || 'miro-board'}.json`;
+    link.download = `${data.name || 'xiro-board'}.json`;
     link.click();
     URL.revokeObjectURL(url);
   };
@@ -545,7 +545,7 @@ function App() {
         display: 'flex', alignItems: 'center', padding: '0 20px', justifyContent: 'space-between'
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <div style={{ fontWeight: 'bold', fontSize: 20, color: '#050038' }}>Miro Mock</div>
+          <div style={{ fontWeight: 'bold', fontSize: 20, color: '#050038' }}>Xiro Mock</div>
           <div style={{ height: 20, width: 1, background: '#ccc' }} />
           <input
             value={data.name}

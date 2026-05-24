@@ -178,7 +178,7 @@ export default function Reports() {
     // Generate a plain-text PDF-like document and trigger download as .txt
     // In a real app this would use a PDF library; here we produce a text representation
     const lines = [
-      'EXPENSIFY REPORTS EXPORT',
+      'XPENSIFY REPORTS EXPORT',
       '========================',
       'Generated: ' + new Date().toLocaleString(),
       '',

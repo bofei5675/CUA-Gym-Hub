@@ -66,20 +66,20 @@
           <h2 className="text-xl font-semibold mb-4">Workflows</h2>
 
           {repoActions.length === 0 ? (
-            <div className="bg-github-card border border-github-border rounded-md p-12 text-center">
-              <PlayCircle size={48} className="mx-auto mb-4 text-github-muted opacity-50" />
-              <h3 className="text-lg font-semibold text-white mb-2">Get started with GitHub Actions</h3>
-              <p className="text-github-muted text-sm">No workflow runs found for this repository.</p>
+            <div className="bg-xithub-card border border-xithub-border rounded-md p-12 text-center">
+              <PlayCircle size={48} className="mx-auto mb-4 text-xithub-muted opacity-50" />
+              <h3 className="text-lg font-semibold text-white mb-2">Get started with XitHub Actions</h3>
+              <p className="text-xithub-muted text-sm">No workflow runs found for this repository.</p>
             </div>
           ) : (
             <div className="flex gap-6">
               {/* Sidebar - Workflow list */}
               <div className="w-64 shrink-0">
-                <div className="bg-github-card border border-github-border rounded-md overflow-hidden">
-                  <div className="bg-[#161b22] border-b border-github-border p-3 text-sm font-semibold">
+                <div className="bg-xithub-card border border-xithub-border rounded-md overflow-hidden">
+                  <div className="bg-[#161b22] border-b border-xithub-border p-3 text-sm font-semibold">
                     All workflows
                   </div>
-                  <div className="divide-y divide-github-border">
+                  <div className="divide-y divide-xithub-border">
                     {workflowNames.map(name => {
                       const latest = repoActions.find(a => a.name === name);
                       return (
@@ -95,11 +95,11 @@
 
               {/* Main content - Run list */}
               <div className="flex-1">
-                <div className="bg-github-card border border-github-border rounded-md overflow-hidden">
-                  <div className="bg-[#161b22] border-b border-github-border p-3 text-sm font-semibold">
+                <div className="bg-xithub-card border border-xithub-border rounded-md overflow-hidden">
+                  <div className="bg-[#161b22] border-b border-xithub-border p-3 text-sm font-semibold">
                     Workflow runs
                   </div>
-                  <div className="divide-y divide-github-border">
+                  <div className="divide-y divide-xithub-border">
                     {repoActions.map(action => {
                       const triggeredUser = state.users.find(u => u.id === action.triggeredBy);
                       return (
@@ -112,7 +112,7 @@
                               <span className="text-sm font-semibold text-white truncate">{action.name}</span>
                               {getStatusBadge(action.status)}
                             </div>
-                            <div className="flex items-center gap-3 text-xs text-github-muted">
+                            <div className="flex items-center gap-3 text-xs text-xithub-muted">
                               <span className="flex items-center gap-1">
                                 <GitBranch size={12} />
                                 <span className="font-mono">{action.branch}</span>
@@ -123,11 +123,11 @@
                             </div>
                           </div>
                           <div className="shrink-0 flex items-center gap-3">
-                            <span className="text-xs text-github-muted">{action.duration}</span>
-                            <span className="text-xs text-github-muted">{getRelativeDate(action.date)}</span>
+                            <span className="text-xs text-xithub-muted">{action.duration}</span>
+                            <span className="text-xs text-xithub-muted">{getRelativeDate(action.date)}</span>
                             <button
                               onClick={() => handleRerun(action)}
-                              className="p-1.5 rounded-md border border-github-border hover:bg-[#30363d] text-github-muted hover:text-white"
+                              className="p-1.5 rounded-md border border-xithub-border hover:bg-[#30363d] text-xithub-muted hover:text-white"
                               title="Re-run workflow"
                             >
                               <RefreshCw size={14} />

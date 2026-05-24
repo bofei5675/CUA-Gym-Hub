@@ -1,4 +1,4 @@
-# Mixpanel Mock -- Data Model
+# Xixpanel Mock -- Data Model
 
 This document defines all entity types for `dataManager.js`. The dev agent should use this as the authoritative reference for `createInitialData()`.
 
@@ -39,7 +39,7 @@ The pre-logged-in user (app owner).
 
 ## 3. Events (tracked analytics events)
 
-These represent the raw event stream that Mixpanel tracks. Each event is a data point in the Events view.
+These represent the raw event stream that Xixpanel tracks. Each event is a data point in the Events view.
 
 ```js
 {
@@ -64,7 +64,7 @@ These represent the raw event stream that Mixpanel tracks. Each event is a data 
     "Screen Height": 982,
     "Screen Width": 1512,
     "Library Version": "2.73.0",
-    "Mixpanel Library": "web",
+    "Xixpanel Library": "web",
     "Insert ID": "5aqr4d7pt9tdh07g",
     "Autocapture Event": true,
     "[Auto] Event Type": "click",
@@ -292,7 +292,7 @@ A board is a collection of report cards and content blocks.
   category: "events",  // "events" | "eventProperties" | "profileProperties"
   eventName: "$session_end",
   displayName: "Session End",
-  description: "Mixpanel virtual event triggered at the end of each session",
+  description: "Xixpanel virtual event triggered at the end of each session",
   thirtyDayQueries: 7,
   status: "Visible",   // "Visible" | "Hidden" | "Dropped"
   tags: [],

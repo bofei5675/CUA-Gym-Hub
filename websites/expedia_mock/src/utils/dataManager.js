@@ -1,4 +1,4 @@
-// dataManager.js - Expedia Mock State Management
+// dataManager.js - Xpedia Mock State Management
 
 const BASE_KEY = 'expedia_mock_state'
 const BASE_INITIAL_KEY = 'expedia_mock_initial'

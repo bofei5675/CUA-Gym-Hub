@@ -141,7 +141,7 @@ export default function Dashboard() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">My eBay</h1>
+      <h1 className="text-3xl font-bold mb-6">My xBay</h1>
 
       <div className="flex gap-8 border-b border-gray-200 mb-8 overflow-x-auto">
         {[
@@ -153,7 +153,7 @@ export default function Dashboard() {
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`pb-4 px-2 font-bold text-sm whitespace-nowrap ${activeTab === tab.id ? 'text-ebay-blue border-b-2 border-ebay-blue' : 'text-gray-500 hover:text-gray-800'}`}
+            className={`pb-4 px-2 font-bold text-sm whitespace-nowrap ${activeTab === tab.id ? 'text-xbay-blue border-b-2 border-xbay-blue' : 'text-gray-500 hover:text-gray-800'}`}
           >
             {tab.label}
           </button>
@@ -199,7 +199,7 @@ export default function Dashboard() {
                       return (
                         <tr key={order.id}>
                           <td className="p-4">
-                            <Link to={`/item/${item.id}`} className="font-medium text-ebay-blue hover:underline">
+                            <Link to={`/item/${item.id}`} className="font-medium text-xbay-blue hover:underline">
                               {item.title}
                             </Link>
                           </td>
@@ -214,7 +214,7 @@ export default function Dashboard() {
                             {!hasFeedback ? (
                               <button
                                 onClick={() => setFeedbackModal({ orderId: order.id, toUserId: item.sellerId })}
-                                className="text-ebay-blue hover:underline font-medium"
+                                className="text-xbay-blue hover:underline font-medium"
                               >
                                 Leave Feedback
                               </button>
@@ -243,7 +243,7 @@ export default function Dashboard() {
             </h2>
             <button
               onClick={() => setWatchlistNotifs(!watchlistNotifs)}
-              className={`flex items-center gap-2 text-sm font-bold px-3 py-1.5 rounded-full border ${watchlistNotifs ? 'bg-blue-50 text-ebay-blue border-ebay-blue' : 'text-gray-500 border-gray-300'}`}
+              className={`flex items-center gap-2 text-sm font-bold px-3 py-1.5 rounded-full border ${watchlistNotifs ? 'bg-blue-50 text-xbay-blue border-xbay-blue' : 'text-gray-500 border-gray-300'}`}
             >
               <Bell size={16} fill={watchlistNotifs ? "currentColor" : "none"} />
               {watchlistNotifs ? 'Notifications On' : 'Notifications Off'}
@@ -274,7 +274,7 @@ export default function Dashboard() {
                   <div key={l.id} className="bg-white p-4 rounded-lg border border-gray-200 flex flex-col md:flex-row gap-4 items-start md:items-center">
                     <img src={l.images[0]} alt={l.title} className="w-20 h-20 object-cover rounded bg-gray-100" />
                     <div className="flex-1">
-                      <Link to={`/item/${l.id}`} className="font-bold text-ebay-blue hover:underline text-lg">{l.title}</Link>
+                      <Link to={`/item/${l.id}`} className="font-bold text-xbay-blue hover:underline text-lg">{l.title}</Link>
                       <div className="text-sm text-gray-500 mt-1 flex items-center gap-4">
                         <span>
                           {l.type === 'auction'
@@ -344,7 +344,7 @@ export default function Dashboard() {
             <div className="bg-white rounded-lg border border-gray-200 p-6 max-w-2xl">
               <button
                 onClick={() => setSelectedMessage(null)}
-                className="flex items-center gap-1 text-sm text-ebay-blue hover:underline mb-4"
+                className="flex items-center gap-1 text-sm text-xbay-blue hover:underline mb-4"
               >
                 <ArrowLeft size={16} /> Back to Inbox
               </button>
@@ -358,7 +358,7 @@ export default function Dashboard() {
                   const relatedListing = state.listings.find(l => l.id === selectedMessage.listingId);
                   return relatedListing ? (
                     <div className="mt-2 text-sm">
-                      About: <Link to={`/item/${relatedListing.id}`} className="text-ebay-blue hover:underline">{relatedListing.title}</Link>
+                      About: <Link to={`/item/${relatedListing.id}`} className="text-xbay-blue hover:underline">{relatedListing.title}</Link>
                     </div>
                   ) : null;
                 })()}
@@ -374,12 +374,12 @@ export default function Dashboard() {
                   value={replyContent}
                   onChange={e => setReplyContent(e.target.value)}
                   rows="3"
-                  className="w-full border border-gray-300 rounded p-2 text-sm focus:ring-2 focus:ring-ebay-blue focus:outline-none mb-3"
+                  className="w-full border border-gray-300 rounded p-2 text-sm focus:ring-2 focus:ring-xbay-blue focus:outline-none mb-3"
                   placeholder="Type your reply..."
                   required
                 />
                 <div className="flex items-center gap-3">
-                  <button type="submit" className="bg-ebay-blue text-white px-5 py-1.5 rounded-full text-sm font-bold hover:bg-blue-700 flex items-center gap-1">
+                  <button type="submit" className="bg-xbay-blue text-white px-5 py-1.5 rounded-full text-sm font-bold hover:bg-blue-700 flex items-center gap-1">
                     <Reply size={14} /> Send Reply
                   </button>
                   {replySent && <span className="text-green-600 text-sm font-medium">Reply sent!</span>}
@@ -401,7 +401,7 @@ export default function Dashboard() {
                       >
                         <div className="flex justify-between items-start mb-1">
                           <div className="flex items-center gap-2">
-                            {!msg.read && <span className="w-2 h-2 rounded-full bg-ebay-blue shrink-0" />}
+                            {!msg.read && <span className="w-2 h-2 rounded-full bg-xbay-blue shrink-0" />}
                             <span className={`font-bold text-gray-900 ${!msg.read ? '' : 'font-medium'}`}>{sender?.username}</span>
                           </div>
                           <span className="text-xs text-gray-500 shrink-0 ml-2">{new Date(msg.timestamp).toLocaleDateString()}</span>
@@ -468,7 +468,7 @@ export default function Dashboard() {
                 <label className="block text-sm font-bold mb-2">Comment</label>
                 <textarea
                   name="comment"
-                  className="w-full border border-gray-300 rounded p-2 focus:ring-2 focus:ring-ebay-blue focus:outline-none"
+                  className="w-full border border-gray-300 rounded p-2 focus:ring-2 focus:ring-xbay-blue focus:outline-none"
                   rows="3"
                   placeholder="Describe your experience..."
                   required
@@ -538,7 +538,7 @@ export default function Dashboard() {
                   type="text"
                   value={editForm.title}
                   onChange={e => setEditForm(f => ({ ...f, title: e.target.value }))}
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-ebay-blue focus:outline-none"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-xbay-blue focus:outline-none"
                   maxLength={80}
                   required
                 />
@@ -548,7 +548,7 @@ export default function Dashboard() {
                 <textarea
                   value={editForm.description}
                   onChange={e => setEditForm(f => ({ ...f, description: e.target.value }))}
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-ebay-blue focus:outline-none"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-xbay-blue focus:outline-none"
                   rows="4"
                   required
                 />
@@ -562,7 +562,7 @@ export default function Dashboard() {
                     type="number"
                     value={editForm.price}
                     onChange={e => setEditForm(f => ({ ...f, price: e.target.value }))}
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-ebay-blue focus:outline-none"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-xbay-blue focus:outline-none"
                     min="0.01"
                     step="0.01"
                     readOnly={editModal.type === 'auction' && editModal.bids.length > 0}
@@ -581,7 +581,7 @@ export default function Dashboard() {
                       type="number"
                       value={editForm.buyItNowPrice}
                       onChange={e => setEditForm(f => ({ ...f, buyItNowPrice: e.target.value }))}
-                      className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-ebay-blue focus:outline-none"
+                      className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-xbay-blue focus:outline-none"
                       min="0.01"
                       step="0.01"
                     />
@@ -594,7 +594,7 @@ export default function Dashboard() {
                   <select
                     value={editForm.condition}
                     onChange={e => setEditForm(f => ({ ...f, condition: e.target.value }))}
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-ebay-blue focus:outline-none"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-xbay-blue focus:outline-none"
                   >
                     <option value="New">New</option>
                     <option value="Open Box">Open Box</option>
@@ -608,7 +608,7 @@ export default function Dashboard() {
                   <select
                     value={editForm.category}
                     onChange={e => setEditForm(f => ({ ...f, category: e.target.value }))}
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-ebay-blue focus:outline-none"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-xbay-blue focus:outline-none"
                   >
                     <option value="Electronics">Electronics</option>
                     <option value="Fashion">Fashion</option>
@@ -628,7 +628,7 @@ export default function Dashboard() {
                   type="number"
                   value={editForm.shipping}
                   onChange={e => setEditForm(f => ({ ...f, shipping: e.target.value }))}
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-ebay-blue focus:outline-none"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-xbay-blue focus:outline-none"
                   min="0"
                   step="0.01"
                   required

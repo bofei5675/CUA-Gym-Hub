@@ -1,4 +1,4 @@
-# ADP Workforce Now Mock — TODO
+# XDP Workforce Now Mock — TODO
 
 > Status: P0 + P1 + Data Seed COMPLETE — P2 deferred
 > Last updated by: dev agent, 2026-04-10
@@ -17,11 +17,11 @@ Without these, the app cannot render. Dev implements these first.
 
 - [x] Project scaffold: `npm create vite@latest adp_mock -- --template react`, install deps (`react-router-dom`). Set up directory structure: `src/components/`, `src/pages/`, `src/context/`, `src/utils/`.
 
-- [x] **Visual design system**: ADP uses a corporate HR/payroll aesthetic. Study `assets/screenshots/000004.jpg` (navigation), `assets/screenshots/000010.jpg` (benefits cards), and `assets/screenshots/000005.jpg` (pay stub). Exact palette: Primary Red `#D0271D` (ADP brand red — logo, primary CTAs, active nav underline), Dark Navy `#1F2937` (top nav background, headings), White `#FFFFFF` (card backgrounds, main content), Light Gray `#F3F4F6` (page background behind cards), Medium Gray `#6B7280` (secondary text, labels), Border Gray `#E5E7EB` (card borders, dividers, table lines), Success Green `#059669` (approved badges, positive amounts), Warning Amber `#D97706` (pending badges), Info Blue `#2563EB` (links). Font: system sans-serif (`-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`). Body text 14px/400. Headings 600 weight. All cards have `border-radius: 8px`, `box-shadow: 0 1px 3px rgba(0,0,0,0.1)`.
+- [x] **Visual design system**: XDP uses a corporate HR/payroll aesthetic. Study `assets/screenshots/000004.jpg` (navigation), `assets/screenshots/000010.jpg` (benefits cards), and `assets/screenshots/000005.jpg` (pay stub). Exact palette: Primary Red `#D0271D` (XDP brand red — logo, primary CTAs, active nav underline), Dark Navy `#1F2937` (top nav background, headings), White `#FFFFFF` (card backgrounds, main content), Light Gray `#F3F4F6` (page background behind cards), Medium Gray `#6B7280` (secondary text, labels), Border Gray `#E5E7EB` (card borders, dividers, table lines), Success Green `#059669` (approved badges, positive amounts), Warning Amber `#D97706` (pending badges), Info Blue `#2563EB` (links). Font: system sans-serif (`-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`). Body text 14px/400. Headings 600 weight. All cards have `border-radius: 8px`, `box-shadow: 0 1px 3px rgba(0,0,0,0.1)`.
 
-- [x] **App layout**: Full-width top navigation bar (56px height, `#1F2937` background). Below that, a secondary nav area (if on a sub-section page, shows breadcrumb and section tabs). Main content area with `#F3F4F6` background, max-width 1200px centered, 24px padding. No persistent sidebar — ADP uses top nav with dropdown menus (see screenshot 000004.jpg: HOME, RESOURCES, MYSELF tabs in the top bar, clicking MYSELF opens a dropdown flyout).
+- [x] **App layout**: Full-width top navigation bar (56px height, `#1F2937` background). Below that, a secondary nav area (if on a sub-section page, shows breadcrumb and section tabs). Main content area with `#F3F4F6` background, max-width 1200px centered, 24px padding. No persistent sidebar — XDP uses top nav with dropdown menus (see screenshot 000004.jpg: HOME, RESOURCES, MYSELF tabs in the top bar, clicking MYSELF opens a dropdown flyout).
 
-- [x] **Top Navigation Bar**: Left side: ADP logo (red "adp" wordmark in bold, or just the text "ADP" in `#D0271D` bold 24px). Center: nav tabs — "Home", "Myself", "My Team" (each is a clickable tab, active tab has red underline). Right side: icon buttons — Notifications (bell icon with red badge count), Search (magnifying glass), User profile dropdown (avatar circle with initials "SJ", clicking shows: "Sarah Johnson", "Settings", divider, "Sign Out" which is non-functional).
+- [x] **Top Navigation Bar**: Left side: XDP logo (red "xdp" wordmark in bold, or just the text "XDP" in `#D0271D` bold 24px). Center: nav tabs — "Home", "Myself", "My Team" (each is a clickable tab, active tab has red underline). Right side: icon buttons — Notifications (bell icon with red badge count), Search (magnifying glass), User profile dropdown (avatar circle with initials "SJ", clicking shows: "Sarah Johnson", "Settings", divider, "Sign Out" which is non-functional).
 
 - [x] **MYSELF dropdown navigation**: When "Myself" tab is active or hovered, show a dropdown flyout menu (white background, shadow, 280px wide) with sections: **My Information** (links to profile page), **Pay** (links: Pay Statements, Tax Statements (W-2), Direct Deposit), **Time & Attendance** (links: My Timecard, My Schedule, Attendance), **Time Off** (links: Request Time Off, Time Off Balances, Holiday Calendar), **Benefits** (links: My Benefits, My Dependents). Each section header is bold, sub-links are regular weight with left padding. See screenshot 000004.jpg for exact layout.
 
@@ -153,6 +153,6 @@ Dev must NOT implement these:
 - File uploads to real servers
 - Email/SMS sending
 - SSO/OAuth/password management
-- Real ADP API calls
+- Real XDP API calls
 - Database persistence (use localStorage only)
-- ADP Marketplace integrations
+- XDP Marketplace integrations

@@ -1,4 +1,4 @@
-# Pinterest Mock — Data Model
+# Xinterest Mock — Data Model
 
 > This document defines all entity types, their fields, relationships, and the `createInitialData()` structure for `dataManager.js` / `initialData.js`.
 

@@ -23,11 +23,11 @@ const MarkdownText = ({ content }) => {
           const lang = newlineIdx > 0 ? inner.slice(0, newlineIdx).trim() : '';
           const code = newlineIdx > 0 ? inner.slice(newlineIdx + 1) : inner;
           return (
-            <div key={index} className="bg-discord-darker border border-discord-divider rounded-md my-1 overflow-hidden">
+            <div key={index} className="bg-xiscord-darker border border-xiscord-divider rounded-md my-1 overflow-hidden">
               {lang && (
-                <div className="text-xs text-discord-muted px-3 py-1 border-b border-discord-divider">{lang}</div>
+                <div className="text-xs text-xiscord-muted px-3 py-1 border-b border-xiscord-divider">{lang}</div>
               )}
-              <pre className="px-3 py-2 text-sm font-mono text-discord-lightest overflow-x-auto">
+              <pre className="px-3 py-2 text-sm font-mono text-xiscord-lightest overflow-x-auto">
                 <code>{code}</code>
               </pre>
             </div>
@@ -41,7 +41,7 @@ const MarkdownText = ({ content }) => {
             {inlineParts.map((iPart, iIdx) => {
               if (iPart.startsWith('`') && iPart.endsWith('`') && iPart.length > 1) {
                 return (
-                  <code key={iIdx} className="bg-discord-darker px-1 py-0.5 rounded text-sm font-mono text-discord-lightest">
+                  <code key={iIdx} className="bg-xiscord-darker px-1 py-0.5 rounded text-sm font-mono text-xiscord-lightest">
                     {iPart.slice(1, -1)}
                   </code>
                 );
@@ -55,7 +55,7 @@ const MarkdownText = ({ content }) => {
               const flushBlockquote = () => {
                 if (blockquoteLines.length > 0) {
                   result.push(
-                    <div key={`bq-${result.length}`} className="border-l-4 border-discord-divider pl-3 my-1 text-discord-modifier">
+                    <div key={`bq-${result.length}`} className="border-l-4 border-xiscord-divider pl-3 my-1 text-xiscord-modifier">
                       {blockquoteLines.map((l, li) => <div key={li}>{processInline(l)}</div>)}
                     </div>
                   );
@@ -137,7 +137,7 @@ function SpoilerText({ text }) {
       onClick={() => setRevealed(!revealed)}
       className={cn(
         "rounded px-0.5 cursor-pointer transition-all",
-        revealed ? "bg-discord-muted/30" : "bg-discord-muted text-transparent"
+        revealed ? "bg-xiscord-muted/30" : "bg-xiscord-muted text-transparent"
       )}
       style={!revealed ? { filter: 'blur(4px)', WebkitFilter: 'blur(4px)' } : {}}
     >
@@ -150,17 +150,17 @@ function SpoilerText({ text }) {
 const EmbedComponent = ({ embed }) => {
   if (!embed) return null;
   return (
-    <div className="mt-2 max-w-[400px] border-l-4 bg-discord-darker rounded p-3" style={{ borderColor: embed.color || '#5865F2' }}>
+    <div className="mt-2 max-w-[400px] border-l-4 bg-xiscord-darker rounded p-3" style={{ borderColor: embed.color || '#5865F2' }}>
       {embed.author && (
-        <div className="text-xs text-discord-modifier mb-1">{embed.author.name}</div>
+        <div className="text-xs text-xiscord-modifier mb-1">{embed.author.name}</div>
       )}
       {embed.title && (
-        <a href={embed.url} target="_blank" rel="noopener noreferrer" className="font-bold text-discord-blurple hover:underline block mb-1">
+        <a href={embed.url} target="_blank" rel="noopener noreferrer" className="font-bold text-xiscord-blurple hover:underline block mb-1">
           {embed.title}
         </a>
       )}
       {embed.description && (
-        <p className="text-sm text-discord-lightest mb-2">{embed.description}</p>
+        <p className="text-sm text-xiscord-lightest mb-2">{embed.description}</p>
       )}
       {embed.thumbnail && (
         <div className="rounded overflow-hidden inline-block">
@@ -173,7 +173,7 @@ const EmbedComponent = ({ embed }) => {
         </div>
       )}
       {embed.footer && (
-        <div className="text-xs text-discord-muted mt-2">{embed.footer.text}</div>
+        <div className="text-xs text-xiscord-muted mt-2">{embed.footer.text}</div>
       )}
     </div>
   );
@@ -185,7 +185,7 @@ const UrlEmbed = ({ url }) => {
 
   if (isImage) {
     return (
-      <div className="mt-2 max-w-[400px] rounded-lg overflow-hidden border border-discord-darker bg-discord-dark">
+      <div className="mt-2 max-w-[400px] rounded-lg overflow-hidden border border-xiscord-darker bg-xiscord-dark">
         <a href={url} target="_blank" rel="noopener noreferrer" className="block">
           <img src={url} alt="Embed" className="max-w-full h-auto max-h-[300px] object-contain" />
         </a>
@@ -195,9 +195,9 @@ const UrlEmbed = ({ url }) => {
 
   if (isYoutube) {
     return (
-      <div className="mt-2 max-w-[400px] border-l-4 border-[#ff0000] bg-discord-darker rounded p-3">
-        <div className="text-xs text-discord-muted mb-1">YouTube</div>
-        <a href={url} target="_blank" rel="noopener noreferrer" className="font-bold text-discord-blurple hover:underline block mb-2">
+      <div className="mt-2 max-w-[400px] border-l-4 border-[#ff0000] bg-xiscord-darker rounded p-3">
+        <div className="text-xs text-xiscord-muted mb-1">YouTube</div>
+        <a href={url} target="_blank" rel="noopener noreferrer" className="font-bold text-xiscord-blurple hover:underline block mb-2">
           Video Title (Mock)
         </a>
         <div className="relative aspect-video bg-black rounded overflow-hidden group cursor-pointer">
@@ -218,9 +218,9 @@ const UrlEmbed = ({ url }) => {
 
   try {
     return (
-      <div className="mt-2 max-w-[400px] border-l-4 border-discord-divider bg-discord-darker rounded p-3">
-        <div className="text-xs text-discord-muted mb-1">Website</div>
-        <a href={url} target="_blank" rel="noopener noreferrer" className="font-bold text-discord-blurple hover:underline block mb-1">
+      <div className="mt-2 max-w-[400px] border-l-4 border-xiscord-divider bg-xiscord-darker rounded p-3">
+        <div className="text-xs text-xiscord-muted mb-1">Website</div>
+        <a href={url} target="_blank" rel="noopener noreferrer" className="font-bold text-xiscord-blurple hover:underline block mb-1">
           {new URL(url).hostname}
         </a>
       </div>
@@ -239,42 +239,42 @@ const UserProfileModal = ({ userId, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50" onClick={onClose}>
-      <div className="w-[300px] bg-discord-dark rounded-lg overflow-hidden shadow-2xl" onClick={e => e.stopPropagation()}>
+      <div className="w-[300px] bg-xiscord-dark rounded-lg overflow-hidden shadow-2xl" onClick={e => e.stopPropagation()}>
         <div className="h-[60px]" style={{ backgroundColor: user.bannerColor || '#5865F2' }}></div>
         <div className="px-4 relative">
-          <div className="w-[80px] h-[80px] rounded-full border-[6px] border-discord-dark absolute -top-[40px] bg-discord-dark">
+          <div className="w-[80px] h-[80px] rounded-full border-[6px] border-xiscord-dark absolute -top-[40px] bg-xiscord-dark">
             <img src={user.avatar} alt={user.username} className="w-full h-full rounded-full" />
             <div className={cn(
-              "absolute bottom-0 right-0 w-5 h-5 rounded-full border-[4px] border-discord-dark",
-              user.status === 'online' ? "bg-discord-online" :
-              user.status === 'idle' ? "bg-discord-idle" :
-              user.status === 'dnd' ? "bg-discord-dnd" : "bg-discord-offline"
+              "absolute bottom-0 right-0 w-5 h-5 rounded-full border-[4px] border-xiscord-dark",
+              user.status === 'online' ? "bg-xiscord-online" :
+              user.status === 'idle' ? "bg-xiscord-idle" :
+              user.status === 'dnd' ? "bg-xiscord-dnd" : "bg-xiscord-offline"
             )} />
           </div>
         </div>
         <div className="mt-12 px-4 pb-4">
           <div className="font-bold text-xl text-white">{user.username}</div>
-          <div className="text-discord-muted text-sm">#{user.discriminator}</div>
+          <div className="text-xiscord-muted text-sm">#{user.discriminator}</div>
           {user.isBot && (
-            <span className="inline-block bg-discord-blurple text-white text-xs font-bold px-1.5 py-0.5 rounded mt-1">BOT</span>
+            <span className="inline-block bg-xiscord-blurple text-white text-xs font-bold px-1.5 py-0.5 rounded mt-1">BOT</span>
           )}
           {user.customStatus && (
-            <div className="text-sm text-discord-lightest mt-2">{user.customStatus}</div>
+            <div className="text-sm text-xiscord-lightest mt-2">{user.customStatus}</div>
           )}
-          <div className="mt-4 border-t border-discord-modifier/20 pt-3">
-            <div className="text-xs font-bold text-discord-modifier uppercase mb-1">About Me</div>
-            <div className="text-sm text-discord-lightest">{user.aboutMe || 'No bio yet.'}</div>
+          <div className="mt-4 border-t border-xiscord-modifier/20 pt-3">
+            <div className="text-xs font-bold text-xiscord-modifier uppercase mb-1">About Me</div>
+            <div className="text-sm text-xiscord-lightest">{user.aboutMe || 'No bio yet.'}</div>
           </div>
           <div className="mt-4">
-            <div className="text-xs font-bold text-discord-modifier uppercase mb-1">Roles</div>
+            <div className="text-xs font-bold text-xiscord-modifier uppercase mb-1">Roles</div>
             <div className="flex flex-wrap gap-1">
               {userRoles.length > 0 ? userRoles.map(role => (
-                <div key={role.id} className="flex items-center px-1.5 py-0.5 rounded text-xs font-medium bg-discord-darker border border-discord-modifier/20">
+                <div key={role.id} className="flex items-center px-1.5 py-0.5 rounded text-xs font-medium bg-xiscord-darker border border-xiscord-modifier/20">
                   <div className="w-2 h-2 rounded-full mr-1" style={{ backgroundColor: role.color }}></div>
-                  <span className="text-discord-lightest">{role.name}</span>
+                  <span className="text-xiscord-lightest">{role.name}</span>
                 </div>
               )) : (
-                <div className="text-xs text-discord-muted">No roles</div>
+                <div className="text-xs text-xiscord-muted">No roles</div>
               )}
             </div>
           </div>
@@ -282,7 +282,7 @@ const UserProfileModal = ({ userId, onClose }) => {
             <input
               type="text"
               placeholder={`Message @${user.username}`}
-              className="w-full bg-discord-darker text-sm px-2 py-2 rounded outline-none text-discord-lightest placeholder-discord-muted"
+              className="w-full bg-xiscord-darker text-sm px-2 py-2 rounded outline-none text-xiscord-lightest placeholder-xiscord-muted"
             />
           </div>
         </div>
@@ -320,16 +320,16 @@ function ThreadPanel({ threadId, onClose }) {
   };
 
   return (
-    <div className="w-[400px] bg-discord-dark border-l border-discord-darker flex flex-col shrink-0 h-full">
+    <div className="w-[400px] bg-xiscord-dark border-l border-xiscord-darker flex flex-col shrink-0 h-full">
       {/* Thread Header */}
-      <div className="h-12 px-4 flex items-center justify-between border-b border-discord-darker shrink-0">
+      <div className="h-12 px-4 flex items-center justify-between border-b border-xiscord-darker shrink-0">
         <div className="flex items-center min-w-0">
-          <MessageSquare size={20} className="text-discord-modifier mr-2 shrink-0" />
+          <MessageSquare size={20} className="text-xiscord-modifier mr-2 shrink-0" />
           <h3 className="font-bold text-white truncate">{thread.name}</h3>
         </div>
         <button
           onClick={onClose}
-          className="p-1 hover:bg-discord-light rounded text-discord-modifier hover:text-white shrink-0 ml-2"
+          className="p-1 hover:bg-xiscord-light rounded text-xiscord-modifier hover:text-white shrink-0 ml-2"
         >
           <X size={20} />
         </button>
@@ -337,22 +337,22 @@ function ThreadPanel({ threadId, onClose }) {
 
       {/* Parent Message */}
       {parentMessage && (
-        <div className="px-4 py-3 border-b border-discord-darker">
+        <div className="px-4 py-3 border-b border-xiscord-darker">
           <div className="flex items-center mb-1">
             <img src={parentUser?.avatar} alt="" className="w-6 h-6 rounded-full mr-2" />
             <span className="font-medium text-sm text-white">{parentUser?.username}</span>
-            <span className="text-xs text-discord-muted ml-2">
+            <span className="text-xs text-xiscord-muted ml-2">
               {format(new Date(parentMessage.timestamp), 'MM/dd/yyyy h:mm aa')}
             </span>
           </div>
-          <div className="text-sm text-discord-lightest line-clamp-3">
+          <div className="text-sm text-xiscord-lightest line-clamp-3">
             <MarkdownText content={parentMessage.content} />
           </div>
         </div>
       )}
 
       {/* Thread count */}
-      <div className="px-4 py-2 text-xs text-discord-muted border-b border-discord-darker">
+      <div className="px-4 py-2 text-xs text-xiscord-muted border-b border-xiscord-darker">
         {thread.messages.length} {thread.messages.length === 1 ? 'reply' : 'replies'}
       </div>
 
@@ -363,7 +363,7 @@ function ThreadPanel({ threadId, onClose }) {
           const roleId = msgUser?.roles?.[0];
           const roleColor = roleId ? roles[roleId]?.color : null;
           return (
-            <div key={msg.id} className="flex py-2 hover:bg-discord-hover/30">
+            <div key={msg.id} className="flex py-2 hover:bg-xiscord-hover/30">
               <div className="w-8 h-8 mr-3 shrink-0 mt-0.5">
                 <img src={msgUser?.avatar || 'https://picsum.photos/128/128'} alt="" className="w-full h-full rounded-full" />
               </div>
@@ -372,11 +372,11 @@ function ThreadPanel({ threadId, onClose }) {
                   <span className="font-medium text-sm mr-2" style={{ color: roleColor || '#fff' }}>
                     {msgUser?.username || 'Unknown'}
                   </span>
-                  <span className="text-xs text-discord-muted">
+                  <span className="text-xs text-xiscord-muted">
                     {format(new Date(msg.timestamp), 'MM/dd/yyyy h:mm aa')}
                   </span>
                 </div>
-                <div className="text-sm text-discord-lightest whitespace-pre-wrap break-words">
+                <div className="text-sm text-xiscord-lightest whitespace-pre-wrap break-words">
                   <MarkdownText content={msg.content} />
                 </div>
               </div>
@@ -388,14 +388,14 @@ function ThreadPanel({ threadId, onClose }) {
 
       {/* Thread Input */}
       <div className="px-3 pb-4 pt-2 shrink-0">
-        <div className="bg-discord-light rounded-lg px-3 py-2 flex items-center">
+        <div className="bg-xiscord-light rounded-lg px-3 py-2 flex items-center">
           <input
             type="text"
             value={threadInput}
             onChange={(e) => setThreadInput(e.target.value)}
             onKeyDown={handleSendThreadMessage}
             placeholder={`Reply to thread...`}
-            className="bg-transparent flex-1 outline-none text-discord-lightest placeholder-discord-muted/70 text-sm"
+            className="bg-transparent flex-1 outline-none text-xiscord-lightest placeholder-xiscord-muted/70 text-sm"
           />
         </div>
       </div>
@@ -419,7 +419,7 @@ function ImageLightbox({ src, alt, onClose }) {
           href={src}
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute bottom-2 right-2 text-xs text-discord-muted hover:text-white bg-black/50 px-2 py-1 rounded"
+          className="absolute bottom-2 right-2 text-xs text-xiscord-muted hover:text-white bg-black/50 px-2 py-1 rounded"
         >
           Open Original
         </a>
@@ -438,9 +438,9 @@ function DateDivider({ date }) {
 
   return (
     <div className="flex items-center px-4 my-2">
-      <div className="flex-1 h-px bg-discord-divider" />
-      <span className="px-2 text-xs font-bold text-discord-muted">{label}</span>
-      <div className="flex-1 h-px bg-discord-divider" />
+      <div className="flex-1 h-px bg-xiscord-divider" />
+      <span className="px-2 text-xs font-bold text-xiscord-muted">{label}</span>
+      <div className="flex-1 h-px bg-xiscord-divider" />
     </div>
   );
 }
@@ -479,8 +479,8 @@ function ContextMenu({ x, y, items, onClose }) {
             className={cn(
               "w-full text-left px-2 mx-1.5 py-1.5 text-sm rounded flex items-center",
               item.danger
-                ? "text-discord-red hover:bg-discord-red hover:text-white"
-                : "text-discord-lightest hover:bg-discord-blurple hover:text-white"
+                ? "text-xiscord-red hover:bg-xiscord-red hover:text-white"
+                : "text-xiscord-lightest hover:bg-xiscord-blurple hover:text-white"
             )}
             style={{ width: 'calc(100% - 12px)' }}
           >
@@ -599,8 +599,8 @@ function Message({ message, user, roleColor, onUserClick, onOpenThread, onReply,
     <>
       <div
         className={cn(
-          "group flex px-4 py-1 hover:bg-discord-hover/30 mt-0.5 relative",
-          isMentioned && "bg-[#5865f20a] border-l-[3px] border-discord-blurple pl-[13px]"
+          "group flex px-4 py-1 hover:bg-xiscord-hover/30 mt-0.5 relative",
+          isMentioned && "bg-[#5865f20a] border-l-[3px] border-xiscord-blurple pl-[13px]"
         )}
         onContextMenu={handleContextMenu}
       >
@@ -617,11 +617,11 @@ function Message({ message, user, roleColor, onUserClick, onOpenThread, onReply,
         <div className="flex-1 min-w-0">
           {/* Reply reference */}
           {referencedMessage && (
-            <div className="flex items-center text-xs text-discord-muted mb-0.5 ml-0">
-              <div className="w-8 h-4 border-l-2 border-t-2 border-discord-muted/40 rounded-tl-lg mr-1 -mb-1"></div>
+            <div className="flex items-center text-xs text-xiscord-muted mb-0.5 ml-0">
+              <div className="w-8 h-4 border-l-2 border-t-2 border-xiscord-muted/40 rounded-tl-lg mr-1 -mb-1"></div>
               <img src={referencedUser?.avatar} alt="" className="w-4 h-4 rounded-full mr-1" />
-              <span className="font-medium text-discord-modifier mr-1">{referencedUser?.username || 'Unknown'}</span>
-              <span className="truncate max-w-[300px] text-discord-muted hover:text-discord-lightest cursor-pointer">
+              <span className="font-medium text-xiscord-modifier mr-1">{referencedUser?.username || 'Unknown'}</span>
+              <span className="truncate max-w-[300px] text-xiscord-muted hover:text-xiscord-lightest cursor-pointer">
                 {referencedMessage.content.slice(0, 60)}{referencedMessage.content.length > 60 ? '...' : ''}
               </span>
             </div>
@@ -636,13 +636,13 @@ function Message({ message, user, roleColor, onUserClick, onOpenThread, onReply,
               {user?.username || 'Unknown User'}
             </span>
             {user?.isBot && (
-              <span className="bg-discord-blurple text-white text-[10px] font-bold px-1 py-0 rounded mr-1">BOT</span>
+              <span className="bg-xiscord-blurple text-white text-[10px] font-bold px-1 py-0 rounded mr-1">BOT</span>
             )}
-            <span className="text-xs text-discord-muted ml-1">
+            <span className="text-xs text-xiscord-muted ml-1">
               {format(new Date(message.timestamp), 'MM/dd/yyyy h:mm aa')}
             </span>
             {message.isEdited && (
-              <span className="text-xs text-discord-muted ml-1">(edited)</span>
+              <span className="text-xs text-xiscord-muted ml-1">(edited)</span>
             )}
           </div>
 
@@ -652,16 +652,16 @@ function Message({ message, user, roleColor, onUserClick, onOpenThread, onReply,
                 value={editValue}
                 onChange={(e) => setEditValue(e.target.value)}
                 onKeyDown={handleEditSave}
-                className="w-full bg-discord-light text-discord-lightest rounded px-2 py-1 outline-none resize-none text-sm mt-1"
+                className="w-full bg-xiscord-light text-xiscord-lightest rounded px-2 py-1 outline-none resize-none text-sm mt-1"
                 rows={2}
                 autoFocus
               />
-              <div className="text-xs text-discord-muted mt-1">
-                escape to <span className="text-discord-blurple cursor-pointer" onClick={() => { setEditValue(message.content); setIsEditing(false); }}>cancel</span> {'•'} enter to <span className="text-discord-blurple cursor-pointer" onClick={() => { if (editValue.trim()) { editMessage(message.id, editValue); setIsEditing(false); } }}>save</span>
+              <div className="text-xs text-xiscord-muted mt-1">
+                escape to <span className="text-xiscord-blurple cursor-pointer" onClick={() => { setEditValue(message.content); setIsEditing(false); }}>cancel</span> {'•'} enter to <span className="text-xiscord-blurple cursor-pointer" onClick={() => { if (editValue.trim()) { editMessage(message.id, editValue); setIsEditing(false); } }}>save</span>
               </div>
             </div>
           ) : (
-            <div className="text-discord-lightest whitespace-pre-wrap break-words">
+            <div className="text-xiscord-lightest whitespace-pre-wrap break-words">
               <MarkdownText content={message.content} />
             </div>
           )}
@@ -676,23 +676,23 @@ function Message({ message, user, roleColor, onUserClick, onOpenThread, onReply,
             <div key={att.id} className="mt-2 max-w-[400px]">
               {att.contentType?.startsWith('image/') ? (
                 <div
-                  className="rounded-lg overflow-hidden border border-discord-darker cursor-pointer hover:opacity-90 transition-opacity"
+                  className="rounded-lg overflow-hidden border border-xiscord-darker cursor-pointer hover:opacity-90 transition-opacity"
                   onClick={() => setLightboxImage({ src: att.url, alt: att.filename })}
                 >
                   <img src={att.url} alt={att.filename} className="max-w-full h-auto max-h-[300px] object-contain" />
-                  <div className="bg-discord-darker px-2 py-1 flex items-center justify-between">
-                    <span className="text-xs text-discord-muted truncate">{att.filename}</span>
-                    <span className="text-xs text-discord-muted">{att.size ? `${(att.size / 1024).toFixed(0)} KB` : ''}</span>
+                  <div className="bg-xiscord-darker px-2 py-1 flex items-center justify-between">
+                    <span className="text-xs text-xiscord-muted truncate">{att.filename}</span>
+                    <span className="text-xs text-xiscord-muted">{att.size ? `${(att.size / 1024).toFixed(0)} KB` : ''}</span>
                   </div>
                 </div>
               ) : (
-                <div className="flex items-center bg-discord-darker border border-discord-divider rounded p-3 hover:bg-discord-light/30 cursor-pointer">
+                <div className="flex items-center bg-xiscord-darker border border-xiscord-divider rounded p-3 hover:bg-xiscord-light/30 cursor-pointer">
                   <span className="mr-3 text-2xl shrink-0">📄</span>
                   <div className="flex-1 min-w-0">
-                    <div className="text-discord-blurple text-sm font-medium truncate">{att.filename}</div>
-                    <div className="text-xs text-discord-muted">{att.size ? `${(att.size / 1024).toFixed(0)} KB` : 'Unknown size'}</div>
+                    <div className="text-xiscord-blurple text-sm font-medium truncate">{att.filename}</div>
+                    <div className="text-xs text-xiscord-muted">{att.size ? `${(att.size / 1024).toFixed(0)} KB` : 'Unknown size'}</div>
                   </div>
-                  <span className="text-xs text-discord-muted ml-2 shrink-0">Download</span>
+                  <span className="text-xs text-xiscord-muted ml-2 shrink-0">Download</span>
                 </div>
               )}
             </div>
@@ -715,17 +715,17 @@ function Message({ message, user, roleColor, onUserClick, onOpenThread, onReply,
                   key={emoji}
                   onClick={() => addReaction(message.id, emoji)}
                   className={cn(
-                    "flex items-center px-1.5 py-0.5 rounded-[4px] border border-transparent bg-discord-dark hover:border-discord-blurple/50",
-                    userIds.includes(currentUserId) && "bg-discord-blurple/10 border-discord-blurple/50"
+                    "flex items-center px-1.5 py-0.5 rounded-[4px] border border-transparent bg-xiscord-dark hover:border-xiscord-blurple/50",
+                    userIds.includes(currentUserId) && "bg-xiscord-blurple/10 border-xiscord-blurple/50"
                   )}
                 >
                   <span className="mr-1">{emoji}</span>
-                  <span className="text-xs font-bold text-discord-modifier">{userIds.length}</span>
+                  <span className="text-xs font-bold text-xiscord-modifier">{userIds.length}</span>
                 </button>
               ))}
               <button
                 onClick={() => addReaction(message.id, '👍')}
-                className="flex items-center px-1.5 py-0.5 rounded-[4px] border border-dashed border-discord-divider hover:border-discord-modifier text-discord-muted hover:text-discord-modifier"
+                className="flex items-center px-1.5 py-0.5 rounded-[4px] border border-dashed border-xiscord-divider hover:border-xiscord-modifier text-xiscord-muted hover:text-xiscord-modifier"
               >
                 <Smile size={14} />
               </button>
@@ -735,11 +735,11 @@ function Message({ message, user, roleColor, onUserClick, onOpenThread, onReply,
           {/* Thread Indicator */}
           {thread && (
             <div className="mt-2 flex items-center cursor-pointer" onClick={() => onOpenThread(thread.id)}>
-              <div className="h-8 w-6 border-l-2 border-b-2 border-discord-divider rounded-bl-lg mr-2 -mt-4 ml-2"></div>
-              <div className="flex items-center bg-discord-darker hover:bg-discord-light px-2 py-1 rounded transition-colors">
-                <MessageSquare size={16} className="text-discord-modifier mr-2" />
-                <span className="font-bold text-discord-blurple text-sm mr-2">{thread.name}</span>
-                <span className="text-xs text-discord-muted">{thread.messages.length} {thread.messages.length === 1 ? 'reply' : 'replies'}</span>
+              <div className="h-8 w-6 border-l-2 border-b-2 border-xiscord-divider rounded-bl-lg mr-2 -mt-4 ml-2"></div>
+              <div className="flex items-center bg-xiscord-darker hover:bg-xiscord-light px-2 py-1 rounded transition-colors">
+                <MessageSquare size={16} className="text-xiscord-modifier mr-2" />
+                <span className="font-bold text-xiscord-blurple text-sm mr-2">{thread.name}</span>
+                <span className="text-xs text-xiscord-muted">{thread.messages.length} {thread.messages.length === 1 ? 'reply' : 'replies'}</span>
               </div>
             </div>
           )}
@@ -747,23 +747,23 @@ function Message({ message, user, roleColor, onUserClick, onOpenThread, onReply,
 
         {/* Hover Actions */}
         {!isEditing && (
-          <div className="hidden group-hover:flex absolute right-4 top-[-10px] bg-discord-dark border border-discord-divider rounded shadow-sm z-10">
+          <div className="hidden group-hover:flex absolute right-4 top-[-10px] bg-xiscord-dark border border-xiscord-divider rounded shadow-sm z-10">
             <button
-              className="p-1.5 hover:bg-discord-light rounded text-discord-muted hover:text-discord-lightest"
+              className="p-1.5 hover:bg-xiscord-light rounded text-xiscord-muted hover:text-xiscord-lightest"
               onClick={() => addReaction(message.id, '👍')}
               title="Add Reaction"
             >
               <Smile size={18} />
             </button>
             <button
-              className="p-1.5 hover:bg-discord-light rounded text-discord-muted hover:text-discord-lightest"
+              className="p-1.5 hover:bg-xiscord-light rounded text-xiscord-muted hover:text-xiscord-lightest"
               onClick={() => onReply(message)}
               title="Reply"
             >
               <Reply size={18} />
             </button>
             <button
-              className="p-1.5 hover:bg-discord-light rounded text-discord-muted hover:text-discord-lightest"
+              className="p-1.5 hover:bg-xiscord-light rounded text-xiscord-muted hover:text-xiscord-lightest"
               onClick={handleCreateThread}
               title={thread ? "View Thread" : "Create Thread"}
             >
@@ -771,32 +771,32 @@ function Message({ message, user, roleColor, onUserClick, onOpenThread, onReply,
             </button>
             <div className="relative">
               <button
-                className="p-1.5 hover:bg-discord-light rounded text-discord-muted hover:text-discord-lightest"
+                className="p-1.5 hover:bg-xiscord-light rounded text-xiscord-muted hover:text-xiscord-lightest"
                 onClick={() => setShowMoreMenu(!showMoreMenu)}
                 title="More"
               >
                 <MoreHorizontal size={18} />
               </button>
               {showMoreMenu && (
-                <div className="absolute right-0 top-full mt-1 w-48 bg-discord-darker rounded-lg shadow-xl border border-discord-divider z-50 py-1.5" onMouseLeave={() => setShowMoreMenu(false)}>
+                <div className="absolute right-0 top-full mt-1 w-48 bg-xiscord-darker rounded-lg shadow-xl border border-xiscord-divider z-50 py-1.5" onMouseLeave={() => setShowMoreMenu(false)}>
                   {isOwn && (
                     <button
                       onClick={() => { setIsEditing(true); setShowMoreMenu(false); }}
-                      className="w-full text-left px-3 py-1.5 text-sm text-discord-lightest hover:bg-discord-blurple hover:text-white flex items-center"
+                      className="w-full text-left px-3 py-1.5 text-sm text-xiscord-lightest hover:bg-xiscord-blurple hover:text-white flex items-center"
                     >
                       <Pencil size={14} className="mr-2" /> Edit Message
                     </button>
                   )}
                   <button
                     onClick={() => { togglePinMessage(message.id); setShowMoreMenu(false); }}
-                    className="w-full text-left px-3 py-1.5 text-sm text-discord-lightest hover:bg-discord-blurple hover:text-white flex items-center"
+                    className="w-full text-left px-3 py-1.5 text-sm text-xiscord-lightest hover:bg-xiscord-blurple hover:text-white flex items-center"
                   >
                     <Pin size={14} className="mr-2" /> {message.pinned ? 'Unpin' : 'Pin'} Message
                   </button>
                   {isOwn && (
                     <button
                       onClick={() => { setShowDeleteConfirm(true); setShowMoreMenu(false); }}
-                      className="w-full text-left px-3 py-1.5 text-sm text-discord-red hover:bg-discord-red hover:text-white flex items-center"
+                      className="w-full text-left px-3 py-1.5 text-sm text-xiscord-red hover:bg-xiscord-red hover:text-white flex items-center"
                     >
                       <Trash2 size={14} className="mr-2" /> Delete Message
                     </button>
@@ -830,20 +830,20 @@ function Message({ message, user, roleColor, onUserClick, onOpenThread, onReply,
       {/* Delete Confirmation Modal */}
       {showDeleteConfirm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70" onClick={() => setShowDeleteConfirm(false)}>
-          <div className="w-[440px] bg-discord-dark rounded-lg overflow-hidden shadow-2xl" onClick={e => e.stopPropagation()}>
+          <div className="w-[440px] bg-xiscord-dark rounded-lg overflow-hidden shadow-2xl" onClick={e => e.stopPropagation()}>
             <div className="p-4">
               <h2 className="text-xl font-bold text-white mb-2">Delete Message</h2>
-              <p className="text-discord-modifier mb-4">Are you sure you want to delete this message? This cannot be undone.</p>
-              <div className="bg-discord-bg rounded p-3 mb-4">
+              <p className="text-xiscord-modifier mb-4">Are you sure you want to delete this message? This cannot be undone.</p>
+              <div className="bg-xiscord-bg rounded p-3 mb-4">
                 <div className="flex items-center mb-1">
                   <img src={user?.avatar} alt="" className="w-6 h-6 rounded-full mr-2" />
                   <span className="font-medium text-sm text-white mr-2">{user?.username}</span>
-                  <span className="text-xs text-discord-muted">{format(new Date(message.timestamp), 'MM/dd/yyyy h:mm aa')}</span>
+                  <span className="text-xs text-xiscord-muted">{format(new Date(message.timestamp), 'MM/dd/yyyy h:mm aa')}</span>
                 </div>
-                <p className="text-sm text-discord-lightest line-clamp-2">{message.content}</p>
+                <p className="text-sm text-xiscord-lightest line-clamp-2">{message.content}</p>
               </div>
             </div>
-            <div className="bg-discord-darker p-4 flex justify-end gap-3">
+            <div className="bg-xiscord-darker p-4 flex justify-end gap-3">
               <button
                 onClick={() => setShowDeleteConfirm(false)}
                 className="px-4 py-2 text-sm font-medium text-white hover:underline"
@@ -852,7 +852,7 @@ function Message({ message, user, roleColor, onUserClick, onOpenThread, onReply,
               </button>
               <button
                 onClick={handleDelete}
-                className="px-4 py-2 text-sm font-medium bg-discord-red hover:bg-discord-red/80 text-white rounded"
+                className="px-4 py-2 text-sm font-medium bg-xiscord-red hover:bg-xiscord-red/80 text-white rounded"
               >
                 Delete
               </button>
@@ -863,19 +863,19 @@ function Message({ message, user, roleColor, onUserClick, onOpenThread, onReply,
 
       {showThreadDialog && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
-          <form onSubmit={handleConfirmThread} className="w-[420px] rounded-lg bg-discord-dark p-5 shadow-xl">
+          <form onSubmit={handleConfirmThread} className="w-[420px] rounded-lg bg-xiscord-dark p-5 shadow-xl">
             <h3 className="mb-2 text-xl font-semibold text-white">Create thread</h3>
-            <p className="mb-4 text-sm text-discord-muted">Start a local thread from this message.</p>
+            <p className="mb-4 text-sm text-xiscord-muted">Start a local thread from this message.</p>
             <input
               autoFocus
               value={threadName}
               onChange={(e) => setThreadName(e.target.value)}
-              className="mb-5 w-full rounded bg-discord-darker px-3 py-2 text-sm text-discord-lightest outline-none focus:ring-2 focus:ring-discord-blurple"
+              className="mb-5 w-full rounded bg-xiscord-darker px-3 py-2 text-sm text-xiscord-lightest outline-none focus:ring-2 focus:ring-xiscord-blurple"
               placeholder="Thread name"
             />
             <div className="flex justify-end gap-3">
-              <button type="button" onClick={() => setShowThreadDialog(false)} className="rounded px-4 py-2 text-sm font-medium text-discord-lightest hover:underline">Cancel</button>
-              <button type="submit" className="rounded bg-discord-blurple px-4 py-2 text-sm font-medium text-white hover:bg-discord-blurple/80">Create</button>
+              <button type="button" onClick={() => setShowThreadDialog(false)} className="rounded px-4 py-2 text-sm font-medium text-xiscord-lightest hover:underline">Cancel</button>
+              <button type="submit" className="rounded bg-xiscord-blurple px-4 py-2 text-sm font-medium text-white hover:bg-xiscord-blurple/80">Create</button>
             </div>
           </form>
         </div>
@@ -960,8 +960,8 @@ export default function ChatArea() {
     const handler = (e) => {
       setEditingMessageId(e.detail.messageId);
     };
-    window.addEventListener('discord-edit-last-message', handler);
-    return () => window.removeEventListener('discord-edit-last-message', handler);
+    window.addEventListener('xiscord-edit-last-message', handler);
+    return () => window.removeEventListener('xiscord-edit-last-message', handler);
   }, []);
 
   // Typing indicator: show mock "other user typing" after sending
@@ -1136,19 +1136,19 @@ export default function ChatArea() {
   // Get pinned messages for current channel
   const pinnedMessages = messages.filter(m => m.pinned);
 
-  if (!channel) return <div className="flex-1 bg-discord-bg flex items-center justify-center text-discord-muted">Select a channel</div>;
+  if (!channel) return <div className="flex-1 bg-xiscord-bg flex items-center justify-center text-xiscord-muted">Select a channel</div>;
 
   return (
     <div className="flex-1 flex min-w-0">
       {/* Main Chat Area */}
-      <div className="flex-1 flex flex-col bg-discord-bg min-w-0 relative">
+      <div className="flex-1 flex flex-col bg-xiscord-bg min-w-0 relative">
         {/* Header */}
-        <div className="h-12 px-4 flex items-center justify-between shadow-sm border-b border-discord-darker shrink-0">
+        <div className="h-12 px-4 flex items-center justify-between shadow-sm border-b border-xiscord-darker shrink-0">
           <div className="flex items-center min-w-0">
-            <Hash size={24} className="text-discord-muted mr-2 shrink-0" />
+            <Hash size={24} className="text-xiscord-muted mr-2 shrink-0" />
             <h3 className="font-bold text-white mr-4 shrink-0">{channel.name}</h3>
             {editingTopic ? (
-              <div className="flex items-center border-l border-discord-muted pl-4 hidden md:flex">
+              <div className="flex items-center border-l border-xiscord-muted pl-4 hidden md:flex">
                 <input
                   type="text"
                   value={topicValue}
@@ -1166,30 +1166,30 @@ export default function ChatArea() {
                     updateChannelTopic(channelId, topicValue);
                     setEditingTopic(false);
                   }}
-                  className="bg-discord-darker text-discord-lightest text-sm px-2 py-0.5 rounded outline-none border border-discord-blurple min-w-[200px]"
+                  className="bg-xiscord-darker text-xiscord-lightest text-sm px-2 py-0.5 rounded outline-none border border-xiscord-blurple min-w-[200px]"
                   autoFocus
                   placeholder="Add a topic"
                 />
               </div>
             ) : (
               <span
-                className="text-discord-muted text-sm truncate hidden md:block border-l border-discord-muted pl-4 cursor-pointer hover:text-discord-lightest"
+                className="text-xiscord-muted text-sm truncate hidden md:block border-l border-xiscord-muted pl-4 cursor-pointer hover:text-xiscord-lightest"
                 onClick={() => { setTopicValue(channel.topic || ''); setEditingTopic(true); }}
               >
                 {channel.topic || 'Click to add a topic'}
               </span>
             )}
           </div>
-          <div className="flex items-center space-x-4 text-discord-muted shrink-0">
-            <Bell size={24} className="cursor-pointer hover:text-discord-lightest" />
+          <div className="flex items-center space-x-4 text-xiscord-muted shrink-0">
+            <Bell size={24} className="cursor-pointer hover:text-xiscord-lightest" />
             <Pin
               size={24}
-              className={cn("cursor-pointer hover:text-discord-lightest", pinnedPanel && "text-white")}
+              className={cn("cursor-pointer hover:text-xiscord-lightest", pinnedPanel && "text-white")}
               onClick={() => setPinnedPanel(!pinnedPanel)}
             />
             <Users
               size={24}
-              className="cursor-pointer hover:text-discord-lightest"
+              className="cursor-pointer hover:text-xiscord-lightest"
               onClick={toggleMemberSidebar}
             />
             <div className="relative">
@@ -1203,7 +1203,7 @@ export default function ChatArea() {
                   else setSearchOpen(false);
                 }}
                 onFocus={() => { if (searchQuery.trim()) setSearchOpen(true); }}
-                className="bg-discord-darker text-sm px-2 py-1 rounded transition-all w-36 focus:w-60 outline-none text-discord-lightest"
+                className="bg-xiscord-darker text-sm px-2 py-1 rounded transition-all w-36 focus:w-60 outline-none text-xiscord-lightest"
               />
               <Search size={16} className="absolute right-2 top-1.5" />
             </div>
@@ -1214,11 +1214,11 @@ export default function ChatArea() {
         <div className="flex-1 overflow-y-auto custom-scrollbar flex flex-col pt-4">
           {messages.length === 0 ? (
             <div className="mt-auto px-4 mb-6">
-              <div className="w-16 h-16 bg-discord-light rounded-full flex items-center justify-center mb-4">
+              <div className="w-16 h-16 bg-xiscord-light rounded-full flex items-center justify-center mb-4">
                 <Hash size={40} className="text-white" />
               </div>
               <h1 className="text-3xl font-bold text-white mb-2">Welcome to #{channel.name}!</h1>
-              <p className="text-discord-muted">This is the start of the #{channel.name} channel.</p>
+              <p className="text-xiscord-muted">This is the start of the #{channel.name} channel.</p>
             </div>
           ) : (
             messages.map((msg, idx) => {
@@ -1252,11 +1252,11 @@ export default function ChatArea() {
 
         {/* Typing Indicator */}
         {typingUsers.length > 0 && (
-          <div className="px-4 py-1 shrink-0 flex items-center text-xs text-discord-modifier">
+          <div className="px-4 py-1 shrink-0 flex items-center text-xs text-xiscord-modifier">
             <div className="flex space-x-0.5 mr-2">
-              <span className="w-1.5 h-1.5 bg-discord-lightest rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></span>
-              <span className="w-1.5 h-1.5 bg-discord-lightest rounded-full animate-bounce" style={{ animationDelay: '100ms' }}></span>
-              <span className="w-1.5 h-1.5 bg-discord-lightest rounded-full animate-bounce" style={{ animationDelay: '200ms' }}></span>
+              <span className="w-1.5 h-1.5 bg-xiscord-lightest rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></span>
+              <span className="w-1.5 h-1.5 bg-xiscord-lightest rounded-full animate-bounce" style={{ animationDelay: '100ms' }}></span>
+              <span className="w-1.5 h-1.5 bg-xiscord-lightest rounded-full animate-bounce" style={{ animationDelay: '200ms' }}></span>
             </div>
             <span className="font-medium text-white">{typingUsers.join(', ')}</span>
             <span className="ml-1">{typingUsers.length === 1 ? 'is' : 'are'} typing...</span>
@@ -1266,14 +1266,14 @@ export default function ChatArea() {
         {/* Reply Bar */}
         {replyingTo && (
           <div className="px-4 pt-2 shrink-0">
-            <div className="bg-discord-dark rounded-t-lg px-3 py-2 flex items-center justify-between text-sm">
-              <div className="flex items-center text-discord-modifier min-w-0">
+            <div className="bg-xiscord-dark rounded-t-lg px-3 py-2 flex items-center justify-between text-sm">
+              <div className="flex items-center text-xiscord-modifier min-w-0">
                 <Reply size={14} className="mr-2 shrink-0" />
                 <span className="mr-1 shrink-0">Replying to</span>
-                <span className="font-medium text-discord-lightest mr-2 shrink-0">@{store.users[replyingTo.userId]?.username || 'Unknown'}</span>
-                <span className="text-discord-muted truncate">{replyingTo.content.slice(0, 50)}{replyingTo.content.length > 50 ? '...' : ''}</span>
+                <span className="font-medium text-xiscord-lightest mr-2 shrink-0">@{store.users[replyingTo.userId]?.username || 'Unknown'}</span>
+                <span className="text-xiscord-muted truncate">{replyingTo.content.slice(0, 50)}{replyingTo.content.length > 50 ? '...' : ''}</span>
               </div>
-              <button onClick={() => setReplyingTo(null)} className="text-discord-muted hover:text-white shrink-0 ml-2">
+              <button onClick={() => setReplyingTo(null)} className="text-xiscord-muted hover:text-white shrink-0 ml-2">
                 <X size={16} />
               </button>
             </div>
@@ -1283,26 +1283,26 @@ export default function ChatArea() {
         {/* Input Area */}
         <div className={cn("px-4 pb-6 shrink-0 relative", !replyingTo && "pt-2")}>
           {!replyingTo && (
-            <div className="absolute top-[-30px] left-4 flex space-x-1 bg-discord-darker rounded-t-lg px-2 py-1 border border-b-0 border-discord-darker">
-              <button onClick={() => insertFormat('bold')} className="p-1 hover:bg-discord-light rounded text-discord-muted hover:text-white" title="Bold">
+            <div className="absolute top-[-30px] left-4 flex space-x-1 bg-xiscord-darker rounded-t-lg px-2 py-1 border border-b-0 border-xiscord-darker">
+              <button onClick={() => insertFormat('bold')} className="p-1 hover:bg-xiscord-light rounded text-xiscord-muted hover:text-white" title="Bold">
                 <Bold size={14} />
               </button>
-              <button onClick={() => insertFormat('italic')} className="p-1 hover:bg-discord-light rounded text-discord-muted hover:text-white" title="Italic">
+              <button onClick={() => insertFormat('italic')} className="p-1 hover:bg-xiscord-light rounded text-xiscord-muted hover:text-white" title="Italic">
                 <Italic size={14} />
               </button>
-              <button onClick={() => insertFormat('code')} className="p-1 hover:bg-discord-light rounded text-discord-muted hover:text-white" title="Code">
+              <button onClick={() => insertFormat('code')} className="p-1 hover:bg-xiscord-light rounded text-xiscord-muted hover:text-white" title="Code">
                 <Code size={14} />
               </button>
             </div>
           )}
 
           <div className={cn(
-            "bg-discord-light rounded-lg px-4 py-2.5 flex items-center relative z-10",
+            "bg-xiscord-light rounded-lg px-4 py-2.5 flex items-center relative z-10",
             !replyingTo && "rounded-tl-none",
             replyingTo && "rounded-t-none"
           )}>
             <button
-              className="text-discord-muted hover:text-discord-lightest mr-3"
+              className="text-xiscord-muted hover:text-xiscord-lightest mr-3"
               onClick={() => fileInputRef.current?.click()}
               title="Upload a file"
             >
@@ -1318,19 +1318,19 @@ export default function ChatArea() {
             <div className="flex-1 relative">
               {/* Mentions Autocomplete */}
               {mentionQuery !== null && mentionCandidates.length > 0 && (
-                <div className="absolute bottom-full mb-2 left-0 w-64 bg-discord-darker border border-discord-divider rounded-lg shadow-xl z-50 max-h-48 overflow-y-auto">
+                <div className="absolute bottom-full mb-2 left-0 w-64 bg-xiscord-darker border border-xiscord-divider rounded-lg shadow-xl z-50 max-h-48 overflow-y-auto">
                   {mentionCandidates.map((user, idx) => (
                     <div
                       key={user.id}
                       onClick={() => insertMention(user)}
                       className={cn(
                         "flex items-center px-3 py-2 cursor-pointer",
-                        idx === mentionIndex ? "bg-discord-blurple" : "hover:bg-discord-light"
+                        idx === mentionIndex ? "bg-xiscord-blurple" : "hover:bg-xiscord-light"
                       )}
                     >
                       <img src={user.avatar} alt="" className="w-6 h-6 rounded-full mr-2" />
                       <span className="text-sm text-white font-medium">{user.username}</span>
-                      <span className="text-xs text-discord-muted ml-1">#{user.discriminator}</span>
+                      <span className="text-xs text-xiscord-muted ml-1">#{user.discriminator}</span>
                     </div>
                   ))}
                 </div>
@@ -1342,31 +1342,31 @@ export default function ChatArea() {
                 onChange={handleInputChange}
                 onKeyDown={handleKeyDown}
                 placeholder={`Message #${channel.name}`}
-                className="bg-transparent w-full outline-none text-discord-lightest placeholder-discord-muted/70"
+                className="bg-transparent w-full outline-none text-xiscord-lightest placeholder-xiscord-muted/70"
               />
             </div>
-            <div className="flex items-center space-x-3 text-discord-muted relative">
-              <button onClick={() => setInputValue(prev => `${prev}${prev ? ' ' : ''}:gift:`)} className="hover:text-discord-lightest" title="Insert gift">
+            <div className="flex items-center space-x-3 text-xiscord-muted relative">
+              <button onClick={() => setInputValue(prev => `${prev}${prev ? ' ' : ''}:gift:`)} className="hover:text-xiscord-lightest" title="Insert gift">
                 <Gift size={24} />
               </button>
-              <button onClick={() => setInputValue(prev => `${prev}${prev ? ' ' : ''}:sticker:`)} className="hover:text-discord-lightest" title="Insert sticker">
+              <button onClick={() => setInputValue(prev => `${prev}${prev ? ' ' : ''}:sticker:`)} className="hover:text-xiscord-lightest" title="Insert sticker">
                 <Sticker size={24} />
               </button>
               <div className="relative">
                 <Smile
                   size={24}
-                  className={cn("cursor-pointer hover:text-discord-lightest", showEmojiPicker && "text-discord-blurple")}
+                  className={cn("cursor-pointer hover:text-xiscord-lightest", showEmojiPicker && "text-xiscord-blurple")}
                   onClick={() => setShowEmojiPicker(!showEmojiPicker)}
                 />
 
                 {showEmojiPicker && (
-                  <div className="absolute bottom-10 right-0 w-64 bg-discord-dark border border-discord-darker rounded-lg shadow-xl p-2 z-50">
+                  <div className="absolute bottom-10 right-0 w-64 bg-xiscord-dark border border-xiscord-darker rounded-lg shadow-xl p-2 z-50">
                     <div className="grid grid-cols-7 gap-1 h-48 overflow-y-auto custom-scrollbar">
                       {['😀','😂','😍','🔥','👍','👎','🎉','❤️','😎','🤔','😭','👀','✨','🚀','💯','💩','🤡','👻','💀','👽','🤖','🎃','🎄','🎁','🎈','💪','🙏','🤝','👋','😤','🥳','😱','🫡','💜','🧡','💚','💙','🖤','🤍','⭐','🏆','💎','🫠','😮','🤯','🥺','😈','👑','🎵','🎮'].map(emoji => (
                         <button
                           key={emoji}
                           onClick={() => addEmoji(emoji)}
-                          className="hover:bg-discord-light rounded p-1 text-xl flex items-center justify-center"
+                          className="hover:bg-xiscord-light rounded p-1 text-xl flex items-center justify-center"
                         >
                           {emoji}
                         </button>
@@ -1390,33 +1390,33 @@ export default function ChatArea() {
 
       {/* Pinned Messages Panel */}
       {pinnedPanel && (
-        <div className="w-[420px] bg-discord-dark border-l border-discord-darker flex flex-col shrink-0 h-full">
-          <div className="h-12 px-4 flex items-center justify-between border-b border-discord-darker shrink-0">
+        <div className="w-[420px] bg-xiscord-dark border-l border-xiscord-darker flex flex-col shrink-0 h-full">
+          <div className="h-12 px-4 flex items-center justify-between border-b border-xiscord-darker shrink-0">
             <h3 className="font-bold text-white">Pinned Messages</h3>
-            <button onClick={() => setPinnedPanel(false)} className="p-1 hover:bg-discord-light rounded text-discord-muted hover:text-white">
+            <button onClick={() => setPinnedPanel(false)} className="p-1 hover:bg-xiscord-light rounded text-xiscord-muted hover:text-white">
               <X size={20} />
             </button>
           </div>
           <div className="flex-1 overflow-y-auto custom-scrollbar p-4">
             {pinnedMessages.length === 0 ? (
               <div className="text-center mt-10">
-                <Pin size={40} className="mx-auto text-discord-muted mb-4" />
-                <p className="text-discord-muted text-sm">This channel doesn't have any pinned messages yet.</p>
+                <Pin size={40} className="mx-auto text-xiscord-muted mb-4" />
+                <p className="text-xiscord-muted text-sm">This channel doesn't have any pinned messages yet.</p>
               </div>
             ) : (
               <div className="space-y-3">
                 {pinnedMessages.map(msg => {
                   const msgUser = store.users[msg.userId];
                   return (
-                    <div key={msg.id} className="bg-discord-bg rounded-lg p-3 hover:bg-discord-hover transition-colors">
+                    <div key={msg.id} className="bg-xiscord-bg rounded-lg p-3 hover:bg-xiscord-hover transition-colors">
                       <div className="flex items-center mb-2">
                         <img src={msgUser?.avatar} alt="" className="w-6 h-6 rounded-full mr-2" />
                         <span className="font-medium text-sm text-white mr-2">{msgUser?.username}</span>
-                        <span className="text-xs text-discord-muted">
+                        <span className="text-xs text-xiscord-muted">
                           {format(new Date(msg.timestamp), 'MM/dd/yyyy h:mm aa')}
                         </span>
                       </div>
-                      <div className="text-sm text-discord-lightest">
+                      <div className="text-sm text-xiscord-lightest">
                         <MarkdownText content={msg.content} />
                       </div>
                     </div>
@@ -1430,12 +1430,12 @@ export default function ChatArea() {
 
       {/* Search Results Panel */}
       {searchOpen && searchQuery.trim() && (
-        <div className="w-[420px] bg-discord-dark border-l border-discord-darker flex flex-col shrink-0 h-full">
-          <div className="h-12 px-4 flex items-center justify-between border-b border-discord-darker shrink-0">
+        <div className="w-[420px] bg-xiscord-dark border-l border-xiscord-darker flex flex-col shrink-0 h-full">
+          <div className="h-12 px-4 flex items-center justify-between border-b border-xiscord-darker shrink-0">
             <h3 className="font-bold text-white">Search Results</h3>
             <div className="flex items-center">
-              <span className="text-xs text-discord-muted mr-3">{searchResults.length} result{searchResults.length !== 1 ? 's' : ''}</span>
-              <button onClick={() => { setSearchOpen(false); setSearchQuery(''); }} className="p-1 hover:bg-discord-light rounded text-discord-muted hover:text-white">
+              <span className="text-xs text-xiscord-muted mr-3">{searchResults.length} result{searchResults.length !== 1 ? 's' : ''}</span>
+              <button onClick={() => { setSearchOpen(false); setSearchQuery(''); }} className="p-1 hover:bg-xiscord-light rounded text-xiscord-muted hover:text-white">
                 <X size={20} />
               </button>
             </div>
@@ -1443,8 +1443,8 @@ export default function ChatArea() {
           <div className="flex-1 overflow-y-auto custom-scrollbar p-4">
             {searchResults.length === 0 ? (
               <div className="text-center mt-10">
-                <Search size={40} className="mx-auto text-discord-muted mb-4" />
-                <p className="text-discord-muted text-sm">No results found for "{searchQuery}"</p>
+                <Search size={40} className="mx-auto text-xiscord-muted mb-4" />
+                <p className="text-xiscord-muted text-sm">No results found for "{searchQuery}"</p>
               </div>
             ) : (
               <div className="space-y-3">
@@ -1466,7 +1466,7 @@ export default function ChatArea() {
                   return (
                     <div
                       key={msg.id}
-                      className="bg-discord-bg rounded-lg p-3 hover:bg-discord-hover transition-colors cursor-pointer"
+                      className="bg-xiscord-bg rounded-lg p-3 hover:bg-xiscord-hover transition-colors cursor-pointer"
                       onClick={() => {
                         navigate(`/channels/${serverId}/${msg.channelId}`);
                         setSearchOpen(false);
@@ -1474,17 +1474,17 @@ export default function ChatArea() {
                       }}
                     >
                       <div className="flex items-center mb-1">
-                        <Hash size={14} className="text-discord-muted mr-1" />
-                        <span className="text-xs text-discord-muted">{msgChannel?.name}</span>
+                        <Hash size={14} className="text-xiscord-muted mr-1" />
+                        <span className="text-xs text-xiscord-muted">{msgChannel?.name}</span>
                       </div>
                       <div className="flex items-center mb-1">
                         <img src={msgUser?.avatar} alt="" className="w-5 h-5 rounded-full mr-2" />
                         <span className="font-medium text-sm text-white mr-2">{msgUser?.username}</span>
-                        <span className="text-xs text-discord-muted">
+                        <span className="text-xs text-xiscord-muted">
                           {format(new Date(msg.timestamp), 'MM/dd/yyyy h:mm aa')}
                         </span>
                       </div>
-                      <div className="text-sm text-discord-lightest line-clamp-3">
+                      <div className="text-sm text-xiscord-lightest line-clamp-3">
                         {highlightContent(msg.content)}
                       </div>
                     </div>

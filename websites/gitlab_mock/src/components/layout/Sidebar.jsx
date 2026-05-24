@@ -19,14 +19,14 @@ export default function Sidebar() {
   );
 
   return (
-    <aside className="w-64 bg-gitlab-sidebar text-white flex flex-col h-screen fixed left-0 top-0 border-r border-gray-800 z-20">
+    <aside className="w-64 bg-xitlab-sidebar text-white flex flex-col h-screen fixed left-0 top-0 border-r border-gray-800 z-20">
       <div className="p-4 border-b border-gray-700 flex items-center gap-2">
-        <div className="w-8 h-8 bg-gitlab-orange rounded flex items-center justify-center">
+        <div className="w-8 h-8 bg-xitlab-orange rounded flex items-center justify-center">
           <svg viewBox="0 0 24 24" className="w-5 h-5 text-white fill-current">
             <path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58.04l2.5 2.5 1.84-5.56a.42.42 0 0 1 .57-.27.42.42 0 0 1 .23.27l1.84 5.56 2.5-2.5a.43.43 0 0 1 .58-.04.42.42 0 0 1 .11.16l2.44 7.51 1.22 3.78a.84.84 0 0 1-.3.94z"/>
           </svg>
         </div>
-        <span className="font-bold text-lg tracking-tight">GitLab Mock</span>
+        <span className="font-bold text-lg tracking-tight">XitLab Mock</span>
       </div>
 
       <div className="flex-1 overflow-y-auto py-4 px-2 space-y-1">

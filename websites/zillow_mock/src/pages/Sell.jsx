@@ -31,7 +31,7 @@ function FSBOModal({ address, estimatedValue, onClose, onSubmitListing }) {
         {!submitted ? (
           <>
             <p className="text-gray-600 text-sm mb-6">
-              List your home directly on Zillow without an agent. You control the listing, the price, and the negotiations.
+              List your home directly on Xillow without an agent. You control the listing, the price, and the negotiations.
             </p>
 
             {address && (
@@ -242,7 +242,7 @@ export default function Sell() {
         <div className="max-w-5xl mx-auto px-4 py-16 md:py-24">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Sell with Confidence</h1>
           <p className="text-lg text-blue-100 mb-10 max-w-2xl">
-            Whether you list with a top agent or sell directly, Zillow helps you navigate every step.
+            Whether you list with a top agent or sell directly, Xillow helps you navigate every step.
           </p>
 
           {/* Address Lookup */}
@@ -309,7 +309,7 @@ export default function Sell() {
 
       {/* How It Works */}
       <div className="max-w-5xl mx-auto px-4 py-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">How Selling on Zillow Works</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">How Selling on Xillow Works</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {[
             { icon: DollarSign, title: 'Get Your Zestimate', desc: 'Start with a free home value estimate powered by data.' },
@@ -332,11 +332,11 @@ export default function Sell() {
       {/* Why Sell With An Agent */}
       <div className="bg-gray-50 py-16">
         <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">Why Sell With a Zillow Premier Agent</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Why Sell With a Xillow Premier Agent</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               { title: 'Expert Pricing', desc: 'Agents use market data and local expertise to price your home competitively.', stat: '100%', statLabel: 'Data-driven pricing' },
-              { title: 'Maximum Exposure', desc: 'Your listing reaches millions of buyers on Zillow, Trulia, and the MLS.', stat: '236M+', statLabel: 'Monthly visitors' },
+              { title: 'Maximum Exposure', desc: 'Your listing reaches millions of buyers on Xillow, Trulia, and the MLS.', stat: '236M+', statLabel: 'Monthly visitors' },
               { title: 'Skilled Negotiation', desc: 'Top agents negotiate the best terms and price for your home.', stat: '$12K', statLabel: 'Avg. higher sale price' }
             ].map((item, idx) => (
               <div key={idx} className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">

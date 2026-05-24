@@ -1,8 +1,8 @@
-# Design System Inspired by Amazon Seller Central
+# Design System Inspired by Xmazon Seller Central
 
 ## 1. Visual Theme & Atmosphere
 
-Amazon Seller Central is a dense, data-driven business management dashboard designed for professional third-party sellers. The interface prioritizes information density and functional clarity over visual polish. It uses a clean white background with a dark navy/charcoal top navigation bar, creating a strong horizontal anchor. The overall feel is corporate-utilitarian: no rounded corners on cards, minimal decorative elements, tight spacing, and a font stack that emphasizes readability at small sizes. The signature Amazon orange appears sparingly as an accent for primary CTAs, active states, and the iconic Amazon smile logo. The left sidebar navigation (accessible via hamburger menu) uses a dark overlay panel. Tables and data grids dominate most views, with blue hyperlinks for interactive text elements.
+Xmazon Seller Central is a dense, data-driven business management dashboard designed for professional third-party sellers. The interface prioritizes information density and functional clarity over visual polish. It uses a clean white background with a dark navy/charcoal top navigation bar, creating a strong horizontal anchor. The overall feel is corporate-utilitarian: no rounded corners on cards, minimal decorative elements, tight spacing, and a font stack that emphasizes readability at small sizes. The signature Amazon orange appears sparingly as an accent for primary CTAs, active states, and the iconic Amazon smile logo. The left sidebar navigation (accessible via hamburger menu) uses a dark overlay panel. Tables and data grids dominate most views, with blue hyperlinks for interactive text elements.
 
 The design language says: "This is a serious business tool." Every pixel serves a purpose. There is no whitespace luxury -- information is packed densely with small fonts, narrow row heights, and compact form layouts. Color is functional, not decorative: green for healthy/active, red for problems/alerts, orange for primary actions, blue for links.
 

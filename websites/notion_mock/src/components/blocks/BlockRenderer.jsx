@@ -446,7 +446,7 @@ const TableOfContentsBlock = ({ pageId }) => {
           return (
             <div
               key={block.id}
-              className="text-sm text-gray-600 hover:underline cursor-pointer hover:text-notion-blue truncate"
+              className="text-sm text-gray-600 hover:underline cursor-pointer hover:text-xotion-blue truncate"
               style={{ marginLeft: `${(level - 1) * 16}px` }}
               onClick={() => scrollToHeading(block)}
             >

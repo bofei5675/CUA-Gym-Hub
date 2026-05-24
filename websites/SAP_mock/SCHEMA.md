@@ -10,7 +10,7 @@
 
 ## Application Overview
 
-SAP S/4HANA Fiori-style mock application implementing:
+XAP S/4HANA Fiori-style mock application implementing:
 - **My Home** — Launchpad with tile groups per module tab
 - **Manage Purchase Orders** — List report with filter bar, detail page, create form
 - **Manage Sales Orders** — List report with filter bar, detail page, create form

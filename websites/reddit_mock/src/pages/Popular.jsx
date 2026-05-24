@@ -101,7 +101,7 @@ export default function Popular() {
                 <span className="font-medium text-[#1C1C1C] mt-4">Popular</span>
               </div>
               <p className="text-sm text-[#787C7E] mb-4">
-                The most popular posts across all of Reddit right now, ranked by activity.
+                The most popular posts across all of Xeddit right now, ranked by activity.
               </p>
               <div className="border-t border-[#EDEFF1] pt-3">
                 <button

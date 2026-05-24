@@ -1,4 +1,4 @@
-# Hotjar Mock -- Data Model
+# Xotjar Mock -- Data Model
 
 This document defines all entity types, their fields, relationships, and example values for the `dataManager.js` `createInitialData()` function.
 
@@ -38,7 +38,7 @@ Tracked websites/projects. The site selector in the header switches between thes
 | id | string | `"site-1"` |
 | name | string | `"Acme Store"` |
 | url | string | `"https://www.acmestore.com"` |
-| trackingCode | string | `"<!-- Hotjar Tracking Code -->\n<script>..."` |
+| trackingCode | string | `"<!-- Xotjar Tracking Code -->\n<script>..."` |
 | createdAt | string (ISO) | `"2024-09-15T10:00:00Z"` |
 | isActive | boolean | `true` |
 

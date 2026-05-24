@@ -8,9 +8,9 @@ const STATUS_CLASS = {
 }
 
 function StatusIcon({ status }) {
-  if (status === 'Posted') return <span style={{ color: 'var(--sap-status-success)' }}>✓</span>
-  if (status === 'Parked') return <span style={{ color: 'var(--sap-status-warning)' }}>◑</span>
-  if (status === 'Reversed') return <span style={{ color: 'var(--sap-status-error)' }}>×</span>
+  if (status === 'Posted') return <span style={{ color: 'var(--xap-status-success)' }}>✓</span>
+  if (status === 'Parked') return <span style={{ color: 'var(--xap-status-warning)' }}>◑</span>
+  if (status === 'Reversed') return <span style={{ color: 'var(--xap-status-error)' }}>×</span>
   return <span>—</span>
 }
 
@@ -110,32 +110,32 @@ export default function JournalEntries() {
             </div>
           )}
           <div className="filter-bar-actions">
-            <button className="btn-ghost" style={{ fontSize: '12px', color: 'var(--sap-text-secondary)' }}>Adapt Filters (6)</button>
+            <button className="btn-ghost" style={{ fontSize: '12px', color: 'var(--xap-text-secondary)' }}>Adapt Filters (6)</button>
             <button className="btn-primary" onClick={applyFilters}>Go</button>
           </div>
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4px' }}>
             <button onClick={() => setFilterCollapsed(c => !c)}
-              style={{ background: 'none', border: 'none', color: 'var(--sap-text-secondary)', cursor: 'pointer', fontSize: '18px' }}>
+              style={{ background: 'none', border: 'none', color: 'var(--xap-text-secondary)', cursor: 'pointer', fontSize: '18px' }}>
               {filterCollapsed ? '▽' : '△'}
             </button>
           </div>
         </div>
 
         <div className="section-card">
-          <div style={{ padding: '8px 12px', borderBottom: '1px solid var(--sap-border)' }}>
+          <div style={{ padding: '8px 12px', borderBottom: '1px solid var(--xap-border)' }}>
             <div className="table-toolbar">
               <span className="table-count">Journal Entries ({filtered.length})</span>
               <div className="table-toolbar-right">
                 <button className="btn-ghost" onClick={() => navigate('/app/create-journal-entry')}>Create</button>
                 <button className="btn-ghost" disabled={selected.length === 0}>Copy</button>
-                <span style={{ color: 'var(--sap-border)', margin: '0 4px' }}>|</span>
+                <span style={{ color: 'var(--xap-border)', margin: '0 4px' }}>|</span>
                 <button className="btn-ghost" title="Settings">⚙</button>
                 <button className="btn-ghost" title="Export">⬇</button>
               </div>
             </div>
           </div>
           <div style={{ overflowX: 'auto' }}>
-            <table className="sap-table">
+            <table className="xap-table">
               <thead>
                 <tr>
                   <th style={{ width: '40px' }}><input type="checkbox" checked={selected.length === filtered.length && filtered.length > 0} onChange={toggleAll} /></th>
@@ -153,7 +153,7 @@ export default function JournalEntries() {
               </thead>
               <tbody>
                 {filtered.length === 0 ? (
-                  <tr><td colSpan={11} style={{ textAlign: 'center', padding: '32px', color: 'var(--sap-text-secondary)' }}>No journal entries found.</td></tr>
+                  <tr><td colSpan={11} style={{ textAlign: 'center', padding: '32px', color: 'var(--xap-text-secondary)' }}>No journal entries found.</td></tr>
                 ) : filtered.map(je => (
                   <tr key={je.id} className={selected.includes(je.id) ? 'selected' : ''}>
                     <td><input type="checkbox" checked={selected.includes(je.id)} onChange={() => toggleSelect(je.id)} /></td>

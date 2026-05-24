@@ -1,4 +1,4 @@
-# DingTalk (钉钉) Mock — TODO
+# XingTalk (钉钉) Mock — TODO
 
 > Status: IN PROGRESS
 > Last updated by: dev agent, 2026-04-10
@@ -17,7 +17,7 @@
 
 - [x] **Project scaffold**: `npm create vite@latest dingtalk_mock -- --template react`, install deps: `react-router-dom`; set up project structure with `src/components/`, `src/pages/`, `src/context/`, `src/utils/`
 
-- [x] **Visual design system**: Study `assets/screenshots/` — DingTalk uses a clean, professional Chinese enterprise style. Color palette: Primary Blue `#2A83F0`, Sidebar BG `#F5F6F7`, Active icon highlight blue `#2A83F0`, Chat area BG `#EDF0F4`, Text Primary `#1F2329`, Text Secondary `#8F959E`, Unread Badge Red `#FF5252`, Border `#E8E8E8`, Own message bubble `#2A83F0` (blue) with white text, Other message bubble `#FFFFFF` with dark text, Hover BG `#F0F0F0`. Font: system Chinese fonts `"PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif`. Font sizes: 14px base, 12px secondary/timestamps, 16px headers, 20px page titles. Border radius: 8px for cards, 4px for inputs, 50% for avatars.
+- [x] **Visual design system**: Study `assets/screenshots/` — XingTalk uses a clean, professional Chinese enterprise style. Color palette: Primary Blue `#2A83F0`, Sidebar BG `#F5F6F7`, Active icon highlight blue `#2A83F0`, Chat area BG `#EDF0F4`, Text Primary `#1F2329`, Text Secondary `#8F959E`, Unread Badge Red `#FF5252`, Border `#E8E8E8`, Own message bubble `#2A83F0` (blue) with white text, Other message bubble `#FFFFFF` with dark text, Hover BG `#F0F0F0`. Font: system Chinese fonts `"PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif`. Font sizes: 14px base, 12px secondary/timestamps, 16px headers, 20px page titles. Border radius: 8px for cards, 4px for inputs, 50% for avatars.
 
 - [x] **App layout — 3-column desktop layout**: (1) Left icon sidebar: 54px wide, vertical, light gray `#F5F6F7` background, contains user avatar at top (36px circle), then 5 nav icons stacked vertically (消息/DING/工作台/通讯录/我的) each 54×54px with icon + small label below, active state shows blue icon + blue text + subtle blue-left-border indicator, bottom area has settings gear icon. (2) Middle list panel: 280px wide, white background, top has a search bar spanning full width with magnifying glass icon and placeholder "搜索联系人、群组、聊天记录", below is context-dependent content (conversation list for Messages, DING list for DING, app grid for Workbench, org tree for Contacts, profile for Me). (3) Right main content area: flex-grow, displays chat view / detail panels / calendar / forms depending on context. A subtle 1px `#E8E8E8` border separates each column.
 
@@ -150,4 +150,4 @@
 - Third-party app marketplace
 - Mobile-responsive layout (desktop-only is fine)
 - Real-time sync between multiple browser tabs
-- Internationalization (Chinese-only UI is correct for DingTalk)
+- Internationalization (Chinese-only UI is correct for XingTalk)

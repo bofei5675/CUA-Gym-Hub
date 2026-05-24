@@ -75,7 +75,7 @@ export default function Header({ onToggleSidebar }) {
             <Menu size={20} />
           </button>
           <a href="/" className="header-brand" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
-            Microsoft Azure
+            Microsoft Xzure
           </a>
         </div>
 
@@ -107,7 +107,7 @@ export default function Header({ onToggleSidebar }) {
                 </>
               )}
               {q && !hasResults && (
-                <div style={{ padding: '16px', textAlign: 'center', color: 'var(--azure-text-secondary)' }}>
+                <div style={{ padding: '16px', textAlign: 'center', color: 'var(--xzure-text-secondary)' }}>
                   No results found for "{searchQuery}"
                 </div>
               )}
@@ -177,20 +177,20 @@ export default function Header({ onToggleSidebar }) {
             {userMenuOpen && (
               <div style={{
                 position: 'absolute', right: 0, top: '100%', marginTop: '4px',
-                background: 'var(--azure-surface)', border: '1px solid var(--azure-border)',
+                background: 'var(--xzure-surface)', border: '1px solid var(--xzure-border)',
                 borderRadius: '4px', minWidth: '240px', boxShadow: '0 4px 16px rgba(0,0,0,0.15)',
                 zIndex: 1000
               }}>
-                <div style={{ padding: '16px', borderBottom: '1px solid var(--azure-border)' }}>
+                <div style={{ padding: '16px', borderBottom: '1px solid var(--xzure-border)' }}>
                   <div style={{ fontWeight: 600 }}>{user.displayName}</div>
-                  <div style={{ fontSize: '13px', color: 'var(--azure-text-secondary)' }}>{user.email}</div>
-                  <div style={{ fontSize: '12px', color: 'var(--azure-text-secondary)', marginTop: '4px' }}>{user.directoryName}</div>
+                  <div style={{ fontSize: '13px', color: 'var(--xzure-text-secondary)' }}>{user.email}</div>
+                  <div style={{ fontSize: '12px', color: 'var(--xzure-text-secondary)', marginTop: '4px' }}>{user.directoryName}</div>
                 </div>
                 <div style={{ padding: '8px 0' }}>
                   <div style={{ padding: '8px 16px', cursor: 'pointer', fontSize: '14px' }} onClick={() => { navigate(`/subscriptions`); setUserMenuOpen(false); }}>
                     Switch directory
                   </div>
-                  <div style={{ padding: '8px 16px', cursor: 'pointer', fontSize: '14px', color: 'var(--azure-text-secondary)' }}>
+                  <div style={{ padding: '8px 16px', cursor: 'pointer', fontSize: '14px', color: 'var(--xzure-text-secondary)' }}>
                     Sign out
                   </div>
                 </div>
@@ -203,12 +203,12 @@ export default function Header({ onToggleSidebar }) {
       {settingsOpen && (
         <div style={{
           position: 'fixed', top: 0, right: 0, bottom: 0, width: '400px',
-          background: 'var(--azure-surface)', borderLeft: '1px solid var(--azure-border)',
+          background: 'var(--xzure-surface)', borderLeft: '1px solid var(--xzure-border)',
           boxShadow: '-4px 0 16px rgba(0,0,0,0.15)', zIndex: 1000, display: 'flex', flexDirection: 'column'
         }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 20px', borderBottom: '1px solid var(--azure-border)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 20px', borderBottom: '1px solid var(--xzure-border)' }}>
             <h2 style={{ fontSize: '18px', fontWeight: 600 }}>Portal settings</h2>
-            <button onClick={() => setSettingsOpen(false)} style={{ border: 'none', background: 'none', cursor: 'pointer', color: 'var(--azure-text-secondary)' }}>
+            <button onClick={() => setSettingsOpen(false)} style={{ border: 'none', background: 'none', cursor: 'pointer', color: 'var(--xzure-text-secondary)' }}>
               <X size={20} />
             </button>
           </div>
@@ -267,7 +267,7 @@ export default function Header({ onToggleSidebar }) {
               </select>
             </div>
           </div>
-          <div style={{ padding: '16px 20px', borderTop: '1px solid var(--azure-border)', display: 'flex', gap: '8px' }}>
+          <div style={{ padding: '16px 20px', borderTop: '1px solid var(--xzure-border)', display: 'flex', gap: '8px' }}>
             <button className="btn btn-primary" onClick={() => setSettingsOpen(false)}>Apply</button>
             <button className="btn btn-default" onClick={() => setSettingsOpen(false)}>Discard</button>
           </div>
@@ -279,19 +279,19 @@ export default function Header({ onToggleSidebar }) {
           position: 'fixed', bottom: 0, left: 0, right: 0, height: '300px',
           background: '#1e1e1e', color: '#cccccc', zIndex: 1000,
           display: 'flex', flexDirection: 'column',
-          borderTop: '2px solid var(--azure-blue)'
+          borderTop: '2px solid var(--xzure-blue)'
         }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '8px 16px', background: '#252526', borderBottom: '1px solid #444' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <Terminal size={16} color="var(--azure-blue)" />
-              <span style={{ fontSize: '14px', fontWeight: 600 }}>Azure Cloud Shell - Bash</span>
+              <Terminal size={16} color="var(--xzure-blue)" />
+              <span style={{ fontSize: '14px', fontWeight: 600 }}>Xzure Cloud Shell - Bash</span>
             </div>
             <button onClick={() => setCloudShellOpen(false)} style={{ border: 'none', background: 'none', cursor: 'pointer', color: '#cccccc' }}>
               <X size={16} />
             </button>
           </div>
           <div style={{ flex: 1, padding: '12px 16px', fontFamily: 'monospace', fontSize: '13px', overflowY: 'auto' }}>
-            <div style={{ color: '#4ec9b0' }}>Welcome to Azure Cloud Shell</div>
+            <div style={{ color: '#4ec9b0' }}>Welcome to Xzure Cloud Shell</div>
             <div style={{ color: '#cccccc', marginTop: '4px' }}>alex.johnson@contoso.com [ ~ ]$ <span style={{ opacity: 0.5 }}>_</span></div>
           </div>
         </div>
@@ -299,16 +299,16 @@ export default function Header({ onToggleSidebar }) {
       {helpOpen && (
         <div style={{
           position: 'fixed', top: '48px', right: '96px', width: '340px',
-          background: 'var(--azure-surface)', border: '1px solid var(--azure-border)',
+          background: 'var(--xzure-surface)', border: '1px solid var(--xzure-border)',
           borderRadius: '4px', boxShadow: '0 4px 16px rgba(0,0,0,0.15)', zIndex: 1000
         }}>
-          <div style={{ padding: '14px 16px', borderBottom: '1px solid var(--azure-border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div style={{ padding: '14px 16px', borderBottom: '1px solid var(--xzure-border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <h2 style={{ fontSize: '16px', fontWeight: 600 }}>Help</h2>
             <button className="btn-link" onClick={() => setHelpOpen(false)}>&times;</button>
           </div>
           <div style={{ padding: '8px 0' }}>
             {[
-              ['Azure documentation', 'Browse local guidance for common portal workflows.'],
+              ['Xzure documentation', 'Browse local guidance for common portal workflows.'],
               ['Quickstart center', 'Create resources, review settings, and inspect activity.'],
               ['Support request', 'Draft a local support request without external submission.']
             ].map(([title, desc]) => (
@@ -322,7 +322,7 @@ export default function Header({ onToggleSidebar }) {
                 }}
               >
                 <div style={{ fontWeight: 600, marginBottom: 2 }}>{title}</div>
-                <div style={{ fontSize: '12px', color: 'var(--azure-text-secondary)' }}>{desc}</div>
+                <div style={{ fontSize: '12px', color: 'var(--xzure-text-secondary)' }}>{desc}</div>
               </button>
             ))}
           </div>
@@ -341,27 +341,27 @@ export default function Header({ onToggleSidebar }) {
               </button>
             </div>
           </div>
-          <div style={{ padding: '8px 16px', borderBottom: '1px solid var(--azure-border)' }}>
+          <div style={{ padding: '8px 16px', borderBottom: '1px solid var(--xzure-border)' }}>
             <a
               href="/activity-log"
               onClick={(e) => { e.preventDefault(); navigate('/activity-log'); setNotifOpen(false); }}
-              style={{ color: 'var(--azure-blue)', fontSize: '13px', textDecoration: 'none' }}
+              style={{ color: 'var(--xzure-blue)', fontSize: '13px', textDecoration: 'none' }}
             >
               More events in the activity log &rarr;
             </a>
           </div>
           <div className="notification-panel-body">
             {state.notifications.length === 0 && (
-              <div style={{ padding: '24px', textAlign: 'center', color: 'var(--azure-text-secondary)' }}>
+              <div style={{ padding: '24px', textAlign: 'center', color: 'var(--xzure-text-secondary)' }}>
                 No notifications
               </div>
             )}
             {state.notifications.map(n => (
               <div key={n.id} className={`notification-item ${!n.read ? 'unread' : ''}`}>
                 <div className="notification-item-icon" style={{
-                  color: n.level === 'success' ? 'var(--azure-success)' :
-                         n.level === 'error' ? 'var(--azure-error)' :
-                         n.level === 'warning' ? '#835b00' : 'var(--azure-blue)'
+                  color: n.level === 'success' ? 'var(--xzure-success)' :
+                         n.level === 'error' ? 'var(--xzure-error)' :
+                         n.level === 'warning' ? '#835b00' : 'var(--xzure-blue)'
                 }}>
                   {n.level === 'success' ? '\u2713' : n.level === 'error' ? '\u2717' : n.level === 'warning' ? '\u26A0' : '\u24D8'}
                 </div>

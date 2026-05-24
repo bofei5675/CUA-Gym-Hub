@@ -9,14 +9,14 @@ export default function ServiceCenterPage() {
         <div style={{ background: 'white', borderRadius: 8, boxShadow: '0 1px 4px rgba(0,0,0,0.08)', overflow: 'hidden' }}>
           <div style={{ background: 'var(--primary-blue)', color: 'white', padding: '20px 24px' }}>
             <h2 style={{ margin: 0, fontSize: 20 }}>铁路客户服务中心</h2>
-            <div style={{ fontSize: 13, opacity: 0.85, marginTop: 4 }}>全国铁路客户服务热线：12306</div>
+            <div style={{ fontSize: 13, opacity: 0.85, marginTop: 4 }}>全国铁路客户服务热线：Y2306</div>
           </div>
 
           <div style={{ padding: '24px' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 24 }}>
               <div style={{ border: '1px solid #e8e8e8', borderRadius: 8, padding: 20 }}>
                 <h3 style={{ margin: '0 0 8px', fontSize: 16 }}>客服热线</h3>
-                <div style={{ fontSize: 28, fontWeight: 'bold', color: 'var(--primary-blue)' }}>12306</div>
+                <div style={{ fontSize: 28, fontWeight: 'bold', color: 'var(--primary-blue)' }}>Y2306</div>
                 <div style={{ fontSize: 13, color: '#666', marginTop: 4 }}>服务时间：每日06:00-23:00</div>
               </div>
               <div style={{ border: '1px solid #e8e8e8', borderRadius: 8, padding: 20 }}>

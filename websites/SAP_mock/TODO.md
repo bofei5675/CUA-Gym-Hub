@@ -1,4 +1,4 @@
-# SAP S/4HANA Fiori Launchpad Mock — TODO
+# XAP S/4HANA Fiori Launchpad Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2025-03-12
@@ -17,9 +17,9 @@ Without these, the app cannot render. Dev implements these first.
 
 - [ ] **Project scaffold**: `npm create vite@latest SAP_mock -- --template react`, install deps: `react-router-dom`. Do NOT use TypeScript — use plain JSX. Do NOT install any UI library — implement all components from scratch using CSS.
 
-- [ ] **Visual design system**: Study `assets/screenshots/` carefully — the SAP Fiori UI has a very specific look:
-  - **Shell bar**: Dark blue-gray `#354A5F` background, 44px height, SAP logo in white (use bold text "SAP" with the distinctive SAP blue `#0A6ED1` or white text on dark background), white icons
-  - **Primary accent**: `#0A6ED1` (SAP Blue) — used for links, active tab underlines, action buttons, numeric KPI values
+- [ ] **Visual design system**: Study `assets/screenshots/` carefully — the XAP Fiori UI has a very specific look:
+  - **Shell bar**: Dark blue-gray `#354A5F` background, 44px height, XAP logo in white (use bold text "XAP" with the distinctive XAP blue `#0A6ED1` or white text on dark background), white icons
+  - **Primary accent**: `#0A6ED1` (XAP Blue) — used for links, active tab underlines, action buttons, numeric KPI values
   - **Page background**: `#F5F6F7` light gray
   - **Card/Tile surface**: `#FFFFFF` with subtle `1px solid #E5E5E5` border and `border-radius: 8px`
   - **Font**: `'72', '72full', Arial, Helvetica, sans-serif` — use the fallback: `-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif`
@@ -34,7 +34,7 @@ Without these, the app cannot render. Dev implements these first.
   1. Shell Bar (44px, fixed top, dark `#354A5F`)
   2. Navigation Tab Bar (40px, sticky below shell, white bg)
   3. Main Content Area (fills remaining height, `#F5F6F7` bg, scrollable, 16px padding)
-  - Shell Bar contains (left to right): SAP logo text ("SAP" in white, bold), 8px gap, Page title "Home" with dropdown chevron (white text), flexible spacer, Search icon (magnifying glass, white), Help icon (? in circle, white), Notification bell icon (white, with red badge showing count), User avatar circle (36px, `#0A6ED1` bg, white initials "MQ")
+  - Shell Bar contains (left to right): XAP logo text ("XAP" in white, bold), 8px gap, Page title "Home" with dropdown chevron (white text), flexible spacer, Search icon (magnifying glass, white), Help icon (? in circle, white), Notification bell icon (white, with red badge showing count), User avatar circle (36px, `#0A6ED1` bg, white initials "MQ")
   - Reference: `assets/screenshots/launchpad/000002.jpg` and `assets/screenshots/material_master/000001.jpg`
 
 - [ ] **Routing**: `App.jsx` with `BrowserRouter`, define these routes:
@@ -49,7 +49,7 @@ Without these, the app cannot render. Dev implements these first.
   - `/app/product/:id` → `ProductDetail` (object page)
   - `/app/journal-entries` → `JournalEntries` (list report)
   - `/go` → `Go` (state inspector)
-  - When navigating to an app, the shell bar title changes from "Home" to the app name (e.g., "Manage Purchase Orders"), and a back arrow `←` appears before the SAP logo
+  - When navigating to an app, the shell bar title changes from "Home" to the app name (e.g., "Manage Purchase Orders"), and a back arrow `←` appears before the XAP logo
 
 - [ ] **State management**: `AppContext` + `dataManager.js`:
   - `createInitialData()` returns all entities as defined in `assets/data_model.md`
@@ -174,8 +174,8 @@ Core interactive workflows for agent training. These are the apps and interactio
 
 ### Manage Product Master Data
 
-- [ ] **Product list report**: Route `/app/manage-products`. Shell bar title: "Manage Product Master Data ▾" with search field integrated into shell bar (see `assets/screenshots/material_master/000002.jpg` — the shell bar has: back arrow, SAP logo, "Manage Product Master Data" dropdown, then [All ▾] category dropdown + search input field + search icon, right side: notification bell + user avatar).
-  - Filter bar fields: Editing Status (dropdown+search), Product (text + value help), Product Description (text), GTIN (text + value help), Product Group (text + value help), Product Category (text + value help), Division (dropdown, e.g., "SAP (Z1) x" as removable chip)
+- [ ] **Product list report**: Route `/app/manage-products`. Shell bar title: "Manage Product Master Data ▾" with search field integrated into shell bar (see `assets/screenshots/material_master/000002.jpg` — the shell bar has: back arrow, XAP logo, "Manage Product Master Data" dropdown, then [All ▾] category dropdown + search input field + search icon, right side: notification bell + user avatar).
+  - Filter bar fields: Editing Status (dropdown+search), Product (text + value help), Product Description (text), GTIN (text + value help), Product Group (text + value help), Product Category (text + value help), Division (dropdown, e.g., "XAP (Z1) x" as removable chip)
   - "Go" button + "Adapt Filters (1)" link
   - Table toolbar: count "Products (98)" label, then [Create] [Copy] [Mass Processing] [Delete] buttons, separator, [Settings] [Export] [Fullscreen] [View toggle] icons, [···] overflow menu
   - Table columns: [ ] checkbox, Image (40px thumbnail square, gray placeholder with icon), Description/ID (two-line: blue link name + gray ID number below), Group/Type (two-line), GTIN, Product Category, Last Changed (date + time + user name below)
@@ -201,7 +201,7 @@ Core interactive workflows for agent training. These are the apps and interactio
 
 Depth and realism — implement after P1 is solid.
 
-- [ ] **User menu popover**: Clicking the user avatar circle in the shell bar opens a popover. Shows: user name ("Michael Quinn"), role ("Procurement Manager"), email. Links: "Settings", "Theme" (with sub-options: Light/Dark/High Contrast), "About", "Sign Out" (non-functional). Reference typical SAP user menu.
+- [ ] **User menu popover**: Clicking the user avatar circle in the shell bar opens a popover. Shows: user name ("Michael Quinn"), role ("Procurement Manager"), email. Links: "Settings", "Theme" (with sub-options: Light/Dark/High Contrast), "About", "Sign Out" (non-functional). Reference typical XAP user menu.
 
 - [ ] **Journal Entries list**: Route `/app/journal-entries`. List report pattern with filter bar (Document Number, Company Code, Fiscal Year, Document Type, Posting Date From/To, Status dropdown). Table columns: Document Number (link), Company Code, Fiscal Year, Period, Document Type, Posting Date, Document Date, Reference, Header Text, Total Debit, Total Credit, Currency, Status. Click → detail page.
 
@@ -271,13 +271,13 @@ Dev must create realistic seed data matching these specs (see `assets/data_model
 Dev must NOT implement these:
 
 - Authentication / login (app starts pre-logged-in as `Michael Quinn`)
-- Real SAP backend / OData API calls
-- SAP GUI / transaction code execution
+- Real XAP backend / OData API calls
+- XAP GUI / transaction code execution
 - Complex authorization roles
 - Multi-company code switching
 - Real file upload processing
 - Email/notification sending
 - Print layout generation
 - Drag-and-drop tile reordering on launchpad
-- SAP Fiori theme editor / customization engine
+- XAP Fiori theme editor / customization engine
 - ABAP/CDS development tools

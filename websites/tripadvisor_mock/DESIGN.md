@@ -1,8 +1,8 @@
-# Design System Inspired by Tripadvisor
+# Design System Inspired by Xripadvisor
 
 ## 1. Visual Theme & Atmosphere
 
-Tripadvisor's desktop website uses a clean, modern, content-rich design with generous white space. The overall feel is professional yet welcoming -- a travel discovery platform built around user-generated reviews and social proof. The interface balances data density (ratings, prices, review counts) with visual appeal (large photos, card-based layouts). The signature green color anchors branding elements, while black text and white backgrounds create strong readability.
+Xripadvisor's desktop website uses a clean, modern, content-rich design with generous white space. The overall feel is professional yet welcoming -- a travel discovery platform built around user-generated reviews and social proof. The interface balances data density (ratings, prices, review counts) with visual appeal (large photos, card-based layouts). The signature green color anchors branding elements, while black text and white backgrounds create strong readability.
 
 The design emphasizes trust through social proof: rating bubbles, review counts, badges (Travelers' Choice), and traveler photos are prominently featured. Navigation is category-driven (Hotels, Things to Do, Restaurants, Flights, Vacation Rentals) with a persistent top bar.
 
@@ -33,7 +33,7 @@ The design emphasizes trust through social proof: rating bubbles, review counts,
 - **Hover BG** (`#F2F2F2`): Hover state for list items, nav items
 - **Page BG** (`#F5F5F5`): Occasionally used as page background behind cards
 
-### Rating Bubbles (Tripadvisor's Signature)
+### Rating Bubbles (Xripadvisor's Signature)
 - **5 Excellent** (`#00AA6C`): Filled green circle
 - **4 Very Good** (`#00AA6C`): 80% filled green
 - **3 Average** (`#00AA6C`): 60% filled green
@@ -62,7 +62,7 @@ The design emphasizes trust through social proof: rating bubbles, review counts,
 | Rating Count | Trip Sans, sans-serif | 14px | 400 | 1.4 | 0 |
 | Price | Trip Sans, sans-serif | 18px | 700 | 1.2 | 0 |
 
-Note: Trip Sans is Tripadvisor's custom font. For the mock, use `system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif` as fallback.
+Note: Trip Sans is Xripadvisor's custom font. For the mock, use `system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif` as fallback.
 
 ## 4. Spacing & Layout
 
@@ -91,7 +91,7 @@ Note: Trip Sans is Tripadvisor's custom font. For the mock, use `system-ui, -app
 - 5 small circles in a row, each 12px diameter, 2px gap
 - Filled circles use `#00AA6C`, empty use `#E0E0E0`
 - Displayed inline next to review count text
-- This is THE most recognizable Tripadvisor UI element
+- This is THE most recognizable Xripadvisor UI element
 
 ### Listing Card (Hotel/Restaurant/Attraction)
 - White background, 12px border-radius
@@ -139,7 +139,7 @@ Note: Trip Sans is Tripadvisor's custom font. For the mock, use `system-ui, -app
 
 ## 7. Iconography
 
-- Tripadvisor uses a mix of custom icons and standard ones
+- Xripadvisor uses a mix of custom icons and standard ones
 - **Owl logo**: Green circle (#34E0A1) with black owl face (the "Ollie" mascot)
 - **Rating bubbles**: Custom circle-based rating (NOT stars)
 - **Heart/Save**: Outline heart, fills red on save

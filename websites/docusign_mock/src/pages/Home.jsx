@@ -7,7 +7,7 @@ const FEATURE_INFO = [
   {
     title: 'Comments',
     description: 'Add comments to envelopes for better collaboration with your team.',
-    detail: 'You can now add inline comments to any envelope to communicate with co-senders, reviewers, or recipients without leaving DocuSign. Comments are visible to all parties with access to the envelope.'
+    detail: 'You can now add inline comments to any envelope to communicate with co-senders, reviewers, or recipients without leaving XocuSign. Comments are visible to all parties with access to the envelope.'
   },
   {
     title: 'Bulk Send for Multiple Recipients',
@@ -180,9 +180,9 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Right - My DocuSign ID */}
+        {/* Right - My XocuSign ID */}
         <div>
-          <h2 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4">My DocuSign ID</h2>
+          <h2 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4">My XocuSign ID</h2>
           <div className="bg-white rounded-lg border shadow-sm p-4">
             <div className="flex items-center mb-4">
               <img

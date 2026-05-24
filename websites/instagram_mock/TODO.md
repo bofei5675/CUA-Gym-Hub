@@ -1,4 +1,4 @@
-# Instagram Mock — TODO
+# Xnstagram Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2025-03-09
@@ -16,13 +16,13 @@
 
 These items must be completed first. Without them, the app cannot render properly.
 
-- [x] **Visual design system**: Instagram design tokens applied (colors, fonts, icon sizes, avatar sizes, border colors, Satisfy font for logo).
+- [x] **Visual design system**: Xnstagram design tokens applied (colors, fonts, icon sizes, avatar sizes, border colors, Satisfy font for logo).
 
 - [x] **Expand seed data in mockData.js**: 8 users, 15 posts, 8 stories, 12 notifications, 5 conversations, 25 messages, savedPostIds. Normalizers for all new entity types.
 
 - [x] **Update DataContext with new actions**: toggleSave, deletePost, deleteComment, sendMessage, markConversationRead, markNotificationRead, markAllNotificationsRead, getUnreadNotificationCount, getUnreadMessageCount, getSavedPosts, getConversationMessages all implemented and exposed.
 
-- [x] **Fix sidebar navigation**: Full Instagram sidebar (Home, Search, Explore, Reels, Messages, Notifications, Create, Profile, More) with badges, active states, collapsed/expanded modes, slide-out panels.
+- [x] **Fix sidebar navigation**: Full Xnstagram sidebar (Home, Search, Explore, Reels, Messages, Notifications, Create, Profile, More) with badges, active states, collapsed/expanded modes, slide-out panels.
 
 - [x] **Add routing for new pages**: /reels, /direct/inbox, /direct/t/:conversationId all routed.
 
@@ -84,7 +84,7 @@ Dev must NOT implement these:
 - Authentication / login / signup (app starts pre-logged-in as `alex_morgan` / `user_admin`)
 - Real file uploads (mock with picsum.photos URLs)
 - Real video playback (Reels simulated with static images)
-- Instagram Shopping / Marketplace
+- Xnstagram Shopping / Marketplace
 - Ads / Sponsored content
 - Account privacy settings (private/public toggle)
 - Two-factor authentication

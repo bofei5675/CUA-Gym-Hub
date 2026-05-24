@@ -246,7 +246,7 @@ function PerformanceTab({ analytics }) {
   return (
     <div>
       <div style={{ display: 'flex', gap: 12, marginBottom: 24 }}>
-        <StatCard label="Bandwidth Saved" value={perf.bandwidth_saved_percent + '%'} sub="Served from Cloudflare cache" accent="#068D45" />
+        <StatCard label="Bandwidth Saved" value={perf.bandwidth_saved_percent + '%'} sub="Served from Xloudflare cache" accent="#068D45" />
       </div>
 
       <div className="card" style={{ padding: 20 }}>

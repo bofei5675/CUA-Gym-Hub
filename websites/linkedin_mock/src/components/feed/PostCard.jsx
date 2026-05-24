@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { formatDistanceToNow } from 'date-fns';
 
 const REACTION_TYPES = [
-  { key: 'like', emoji: '\uD83D\uDC4D', label: 'Like', color: 'text-linkedin-blue' },
+  { key: 'like', emoji: '\uD83D\uDC4D', label: 'Like', color: 'text-xinkedin-blue' },
   { key: 'celebrate', emoji: '\uD83D\uDC4F', label: 'Celebrate', color: 'text-green-600' },
   { key: 'love', emoji: '\u2764\uFE0F', label: 'Love', color: 'text-red-500' },
   { key: 'insightful', emoji: '\uD83D\uDCA1', label: 'Insightful', color: 'text-yellow-600' },
@@ -31,7 +31,7 @@ function renderContentWithHashtags(text, onHashtagClick) {
       return (
         <span
           key={i}
-          className="text-linkedin-blue font-semibold hover:underline cursor-pointer"
+          className="text-xinkedin-blue font-semibold hover:underline cursor-pointer"
           onClick={() => onHashtagClick && onHashtagClick(part)}
         >
           {part}
@@ -112,7 +112,7 @@ function ShareWithThoughtsModal({ post, author, onClose, onShare }) {
         <div className="p-4 border-t border-gray-200 flex justify-end">
           <button
             onClick={handleSubmit}
-            className="bg-linkedin-blue text-white px-6 py-1.5 rounded-full font-semibold hover:bg-linkedin-dark"
+            className="bg-xinkedin-blue text-white px-6 py-1.5 rounded-full font-semibold hover:bg-xinkedin-dark"
           >
             Post
           </button>
@@ -170,7 +170,7 @@ function SendPostModal({ post, author, onClose }) {
                     <div
                       key={user.id}
                       onClick={() => setSelectedUserId(user.id)}
-                      className={`flex items-center gap-3 p-3 cursor-pointer hover:bg-gray-50 ${selectedUserId === user.id ? 'bg-blue-50 border-l-2 border-linkedin-blue' : ''}`}
+                      className={`flex items-center gap-3 p-3 cursor-pointer hover:bg-gray-50 ${selectedUserId === user.id ? 'bg-blue-50 border-l-2 border-xinkedin-blue' : ''}`}
                     >
                       <img src={user.avatar} className="w-8 h-8 rounded-full" alt={user.name} />
                       <div>
@@ -185,7 +185,7 @@ function SendPostModal({ post, author, onClose }) {
                 value={note}
                 onChange={(e) => setNote(e.target.value)}
                 placeholder="Add a message (optional)"
-                className="w-full border border-gray-200 rounded p-2 text-sm resize-none h-20 focus:outline-none focus:border-linkedin-blue"
+                className="w-full border border-gray-200 rounded p-2 text-sm resize-none h-20 focus:outline-none focus:border-xinkedin-blue"
               />
             </>
           )}
@@ -196,7 +196,7 @@ function SendPostModal({ post, author, onClose }) {
             <button
               onClick={handleSend}
               disabled={!selectedUserId}
-              className="bg-linkedin-blue text-white px-6 py-1.5 rounded-full font-semibold hover:bg-linkedin-dark disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-xinkedin-blue text-white px-6 py-1.5 rounded-full font-semibold hover:bg-xinkedin-dark disabled:opacity-50 disabled:cursor-not-allowed"
             >
               Send
             </button>
@@ -304,7 +304,7 @@ export default function PostCard({ post }) {
         {isRepost && reposter && (
           <div className="px-4 pt-3 pb-1 flex items-center gap-2 text-xs text-gray-500">
             <Repeat2 size={14} />
-            <span className="font-semibold hover:text-linkedin-blue cursor-pointer" onClick={() => navigate(reposter.id === state.currentUser.id ? '/profile/me' : `/profile/${reposter.id}`)}>{reposter.name}</span>
+            <span className="font-semibold hover:text-xinkedin-blue cursor-pointer" onClick={() => navigate(reposter.id === state.currentUser.id ? '/profile/me' : `/profile/${reposter.id}`)}>{reposter.name}</span>
             <span>reposted this</span>
           </div>
         )}
@@ -314,7 +314,7 @@ export default function PostCard({ post }) {
           <img src={author?.avatar} alt={author?.name} className="w-12 h-12 rounded-full object-cover flex-shrink-0 cursor-pointer" onClick={() => navigate(author?.id === state.currentUser.id ? '/profile/me' : `/profile/${author?.id}`)} />
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-1">
-              <h3 className="font-semibold text-sm hover:text-linkedin-blue cursor-pointer" onClick={() => navigate(author?.id === state.currentUser.id ? '/profile/me' : `/profile/${author?.id}`)}>{author?.name}</h3>
+              <h3 className="font-semibold text-sm hover:text-xinkedin-blue cursor-pointer" onClick={() => navigate(author?.id === state.currentUser.id ? '/profile/me' : `/profile/${author?.id}`)}>{author?.name}</h3>
               {degree && <span className="text-xs text-gray-500">&#183; {degree}</span>}
             </div>
             <p className="text-xs text-gray-500 line-clamp-1">{author?.headline}</p>
@@ -351,7 +351,7 @@ export default function PostCard({ post }) {
                 {renderContentWithHashtags(post.content.slice(0, 250), handleHashtagClick)}...
                 <button
                   onClick={() => setIsExpanded(true)}
-                  className="text-linkedin-blue font-semibold hover:underline ml-1"
+                  className="text-xinkedin-blue font-semibold hover:underline ml-1"
                 >
                   see more
                 </button>
@@ -398,7 +398,7 @@ export default function PostCard({ post }) {
               </>
             )}
           </span>
-          <span className="hover:text-linkedin-blue hover:underline cursor-pointer" onClick={() => setShowComments(!showComments)}>
+          <span className="hover:text-xinkedin-blue hover:underline cursor-pointer" onClick={() => setShowComments(!showComments)}>
             {post.comments.length > 0 ? `${post.comments.length} comment${post.comments.length !== 1 ? 's' : ''}` : ''}
           </span>
         </div>
@@ -516,7 +516,7 @@ export default function PostCard({ post }) {
                       <div className="flex items-center gap-3 mt-1 px-2">
                         <span
                           onClick={() => toggleCommentLike(post.id, comment.id)}
-                          className={`text-xs font-semibold cursor-pointer ${isCommentLikedByMe ? 'text-linkedin-blue' : 'text-gray-500 hover:text-linkedin-blue'}`}
+                          className={`text-xs font-semibold cursor-pointer ${isCommentLikedByMe ? 'text-xinkedin-blue' : 'text-gray-500 hover:text-xinkedin-blue'}`}
                         >
                           {isCommentLikedByMe ? 'Liked' : 'Like'}
                           {commentLikes.length > 0 && <span className="ml-1 font-normal text-gray-500">({commentLikes.length})</span>}

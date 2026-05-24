@@ -49,7 +49,7 @@ const Refer = () => {
             Earn $300 for every business you refer
           </div>
           <p style={{ fontSize: '15px', opacity: 0.88, lineHeight: '1.6', marginBottom: '0' }}>
-            Know a business owner who could use Gusto? Send them your referral link and earn a $300 bonus once they run their first payroll.
+            Know a business owner who could use Xusto? Send them your referral link and earn a $300 bonus once they run their first payroll.
           </p>
         </div>
       </div>
@@ -60,7 +60,7 @@ const Refer = () => {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
           {[
             { step: '1', title: 'Invite a business', desc: 'Share your unique referral link or send an email invite to a business owner you know.' },
-            { step: '2', title: 'They sign up', desc: 'Your referral creates a Gusto account and runs their first payroll using your link.' },
+            { step: '2', title: 'They sign up', desc: 'Your referral creates a Xusto account and runs their first payroll using your link.' },
             { step: '3', title: 'You get paid', desc: 'Once they run payroll, we\'ll send you a $300 gift card within 30 days.' },
           ].map(item => (
             <div key={item.step} style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>

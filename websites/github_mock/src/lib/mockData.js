@@ -8,23 +8,23 @@
         avatar: "https://avatars.githubusercontent.com/u/583231?v=4",
         bio: "I love coding and open source!",
         location: "San Francisco, CA",
-        company: "GitHub",
+        company: "XitHub",
         website: "https://github.com/octocat",
         joinedAt: "2020-01-15T00:00:00Z"
       },
 
       users: [
-        { id: "u1", username: "octocat", name: "The Octocat", email: "octocat@github.com", avatar: "https://avatars.githubusercontent.com/u/583231?v=4", bio: "I love coding and open source!", location: "San Francisco, CA", company: "GitHub", website: "https://github.com/octocat", joinedAt: "2020-01-15T00:00:00Z" },
-        { id: "u2", username: "mojombo", name: "Tom Preston-Werner", email: "tom@github.com", avatar: "https://avatars.githubusercontent.com/u/1?v=4", bio: "GitHub co-founder", location: "San Francisco, CA", company: "GitHub", website: "https://tom.preston-werner.com", joinedAt: "2007-10-20T00:00:00Z" },
-        { id: "u3", username: "defunkt", name: "Chris Wanstrath", email: "chris@github.com", avatar: "https://avatars.githubusercontent.com/u/2?v=4", bio: "Another co-founder", location: "San Francisco, CA", company: "GitHub", website: "", joinedAt: "2007-10-20T00:00:00Z" },
-        { id: "u4", username: "pjhyett", name: "PJ Hyett", email: "pj@github.com", avatar: "https://avatars.githubusercontent.com/u/3?v=4", bio: "Developer", location: "San Francisco, CA", company: "GitHub", website: "", joinedAt: "2007-10-20T00:00:00Z" },
+        { id: "u1", username: "octocat", name: "The Octocat", email: "octocat@github.com", avatar: "https://avatars.githubusercontent.com/u/583231?v=4", bio: "I love coding and open source!", location: "San Francisco, CA", company: "XitHub", website: "https://github.com/octocat", joinedAt: "2020-01-15T00:00:00Z" },
+        { id: "u2", username: "mojombo", name: "Tom Preston-Werner", email: "tom@github.com", avatar: "https://avatars.githubusercontent.com/u/1?v=4", bio: "XitHub co-founder", location: "San Francisco, CA", company: "XitHub", website: "https://tom.preston-werner.com", joinedAt: "2007-10-20T00:00:00Z" },
+        { id: "u3", username: "defunkt", name: "Chris Wanstrath", email: "chris@github.com", avatar: "https://avatars.githubusercontent.com/u/2?v=4", bio: "Another co-founder", location: "San Francisco, CA", company: "XitHub", website: "", joinedAt: "2007-10-20T00:00:00Z" },
+        { id: "u4", username: "pjhyett", name: "PJ Hyett", email: "pj@github.com", avatar: "https://avatars.githubusercontent.com/u/3?v=4", bio: "Developer", location: "San Francisco, CA", company: "XitHub", website: "", joinedAt: "2007-10-20T00:00:00Z" },
         { id: "u5", username: "wycats", name: "Yehuda Katz", email: "wycats@github.com", avatar: "https://avatars.githubusercontent.com/u/4?v=4", bio: "Open source contributor", location: "Portland, OR", company: "Tilde", website: "https://yehudakatz.com", joinedAt: "2008-03-15T00:00:00Z" }
       ],
 
       repos: [
         {
           id: "r1", ownerId: "u1", name: "hello-world",
-          description: "A sample repository for testing GitHub features. Contains a basic web app.",
+          description: "A sample repository for testing XitHub features. Contains a basic web app.",
           language: "JavaScript",
           languages: { "JavaScript": 55.2, "TypeScript": 28.1, "CSS": 10.3, "HTML": 6.4 },
           stars: 342, forks: 87, watchers: 56, isPrivate: false,
@@ -122,7 +122,7 @@
         {
           id: "i2", repoId: "r1", number: 2,
           title: "Add dark mode support",
-          description: "It would be great to have a dark mode toggle in the settings.\n\nReference: [GitHub dark mode](https://github.com/settings/appearance)",
+          description: "It would be great to have a dark mode toggle in the settings.\n\nReference: [XitHub dark mode](https://github.com/settings/appearance)",
           status: "open", authorId: "u3", assignees: [],
           labels: ["enhancement", "good first issue"],
           milestone: "v2.0",

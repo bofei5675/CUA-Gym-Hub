@@ -52,16 +52,16 @@
       return (
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-3 mb-6">
-            <Users size={20} className="text-github-muted" />
+            <Users size={20} className="text-xithub-muted" />
             <h2 className="text-xl font-semibold text-white">Contributors</h2>
-            <span className="text-sm text-github-muted">({contributors.length})</span>
+            <span className="text-sm text-xithub-muted">({contributors.length})</span>
           </div>
 
           {contributors.length === 0 ? (
-            <div className="bg-github-card border border-github-border rounded-md p-12 text-center">
-              <Users size={48} className="mx-auto mb-4 text-github-muted opacity-50" />
+            <div className="bg-xithub-card border border-xithub-border rounded-md p-12 text-center">
+              <Users size={48} className="mx-auto mb-4 text-xithub-muted opacity-50" />
               <h3 className="text-lg font-semibold text-white">No contributors yet</h3>
-              <p className="text-github-muted text-sm">There are no commits in this repository.</p>
+              <p className="text-xithub-muted text-sm">There are no commits in this repository.</p>
             </div>
           ) : (
             <div className="space-y-4">
@@ -69,27 +69,27 @@
                 const user = state.users.find(u => u.id === contributor.authorId);
                 const barWidth = (contributor.count / maxCommits) * 100;
                 return (
-                  <div key={contributor.authorId} className="bg-github-card border border-github-border rounded-md overflow-hidden">
+                  <div key={contributor.authorId} className="bg-xithub-card border border-xithub-border rounded-md overflow-hidden">
                     <div className="p-4 flex items-center gap-4">
-                      <span className="text-github-muted text-sm font-mono w-6 text-right shrink-0">#{index + 1}</span>
+                      <span className="text-xithub-muted text-sm font-mono w-6 text-right shrink-0">#{index + 1}</span>
                       <img
                         src={user?.avatar || `https://avatars.githubusercontent.com/u/0?v=4`}
                         alt={user?.username || 'unknown'}
-                        className="w-10 h-10 rounded-full border border-github-border"
+                        className="w-10 h-10 rounded-full border border-xithub-border"
                       />
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2">
                           <Link
                             to={`/profile/${user?.username || 'unknown'}`}
-                            className="font-semibold text-github-accent hover:underline"
+                            className="font-semibold text-xithub-accent hover:underline"
                           >
                             {user?.username || 'unknown'}
                           </Link>
                           {user?.name && (
-                            <span className="text-sm text-github-muted">{user.name}</span>
+                            <span className="text-sm text-xithub-muted">{user.name}</span>
                           )}
                         </div>
-                        <div className="text-xs text-github-muted mt-0.5">
+                        <div className="text-xs text-xithub-muted mt-0.5">
                           {contributor.count} {contributor.count === 1 ? 'commit' : 'commits'}
                           {' / '}
                           <span className="text-green-400">++{contributor.additions}</span>
@@ -98,13 +98,13 @@
                         </div>
                       </div>
                       <div className="text-right shrink-0">
-                        <div className="text-xs text-github-muted">Last commit {timeAgo(contributor.lastDate)}</div>
+                        <div className="text-xs text-xithub-muted">Last commit {timeAgo(contributor.lastDate)}</div>
                       </div>
                     </div>
                     <div className="px-4 pb-3">
                       <div className="h-2 bg-[#0d1117] rounded-full overflow-hidden">
                         <div
-                          className="h-full bg-github-success rounded-full transition-all"
+                          className="h-full bg-xithub-success rounded-full transition-all"
                           style={{ width: `${barWidth}%` }}
                         />
                       </div>

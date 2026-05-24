@@ -48,7 +48,7 @@ export const Settings: React.FC = () => {
           onClick={() => setActiveTab('details')}
           className={`pb-3 text-sm font-medium border-b-2 transition-colors ${
             activeTab === 'details'
-              ? 'border-jira-blue text-jira-blue'
+              ? 'border-xira-blue text-xira-blue'
               : 'border-transparent text-gray-500 hover:text-gray-700'
           }`}
         >
@@ -58,7 +58,7 @@ export const Settings: React.FC = () => {
           onClick={() => setActiveTab('board')}
           className={`pb-3 text-sm font-medium border-b-2 transition-colors ${
             activeTab === 'board'
-              ? 'border-jira-blue text-jira-blue'
+              ? 'border-xira-blue text-xira-blue'
               : 'border-transparent text-gray-500 hover:text-gray-700'
           }`}
         >
@@ -77,7 +77,7 @@ export const Settings: React.FC = () => {
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:border-jira-blue focus:ring-1 focus:ring-jira-blue outline-none"
+                className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:border-xira-blue focus:ring-1 focus:ring-xira-blue outline-none"
               />
             </div>
 
@@ -103,7 +103,7 @@ export const Settings: React.FC = () => {
               <select
                 value={leadId}
                 onChange={(e) => setLeadId(e.target.value)}
-                className="w-full border border-gray-300 rounded px-3 py-2 text-sm cursor-pointer focus:border-jira-blue focus:ring-1 focus:ring-jira-blue outline-none"
+                className="w-full border border-gray-300 rounded px-3 py-2 text-sm cursor-pointer focus:border-xira-blue focus:ring-1 focus:ring-xira-blue outline-none"
               >
                 {state.users.map((u) => (
                   <option key={u.id} value={u.id}>
@@ -120,7 +120,7 @@ export const Settings: React.FC = () => {
               <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-                className="w-full border border-gray-300 rounded px-3 py-2 text-sm cursor-pointer focus:border-jira-blue focus:ring-1 focus:ring-jira-blue outline-none"
+                className="w-full border border-gray-300 rounded px-3 py-2 text-sm cursor-pointer focus:border-xira-blue focus:ring-1 focus:ring-xira-blue outline-none"
               >
                 <option value="Software">Software</option>
                 <option value="Marketing">Marketing</option>
@@ -136,7 +136,7 @@ export const Settings: React.FC = () => {
               <textarea
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:border-jira-blue focus:ring-1 focus:ring-jira-blue outline-none resize-y min-h-[80px]"
+                className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:border-xira-blue focus:ring-1 focus:ring-xira-blue outline-none resize-y min-h-[80px]"
                 placeholder="Add a description for your project..."
                 rows={3}
               />
@@ -145,12 +145,12 @@ export const Settings: React.FC = () => {
             <div className="flex items-center gap-3">
               <button
                 onClick={handleSave}
-                className="bg-jira-blue text-white px-4 py-2 rounded font-medium text-sm hover:bg-blue-700 transition-colors"
+                className="bg-xira-blue text-white px-4 py-2 rounded font-medium text-sm hover:bg-blue-700 transition-colors"
               >
                 Save
               </button>
               {saved && (
-                <span className="text-sm text-jira-green font-medium">
+                <span className="text-sm text-xira-green font-medium">
                   Changes saved successfully
                 </span>
               )}

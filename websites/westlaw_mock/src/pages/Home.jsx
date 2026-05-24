@@ -81,7 +81,7 @@ export default function Home() {
             </div>
           </div>
           <div className="ai-search-area">
-            <h3>Ask Westlaw AI</h3>
+            <h3>Ask Xestlaw AI</h3>
             <div className="ai-jurisdiction-row">
               <span>Jurisdiction:</span>
               <select value={jurisdiction} onChange={e => setJurisdiction(e.target.value)}>

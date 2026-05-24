@@ -62,7 +62,7 @@ const CreatePostModal = ({ onClose, onPost, user }) => {
           <button 
             onClick={handleSubmit}
             disabled={!text.trim()}
-            className="bg-linkedin-blue text-white px-6 py-1.5 rounded-full font-semibold hover:bg-linkedin-dark disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-xinkedin-blue text-white px-6 py-1.5 rounded-full font-semibold hover:bg-xinkedin-dark disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Post
           </button>
@@ -96,7 +96,7 @@ export default function Feed() {
           </div>
           <div className="py-3 px-4 text-xs text-gray-500 font-semibold hover:bg-gray-100 cursor-pointer flex justify-between" onClick={() => navigate('/mynetwork')}>
             <span>Connections</span>
-            <span className="text-linkedin-blue">{state.currentUser.connections.length}</span>
+            <span className="text-xinkedin-blue">{state.currentUser.connections.length}</span>
           </div>
         </div>
       </div>
@@ -146,28 +146,28 @@ export default function Feed() {
       <div className="hidden md:block md:col-span-3">
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sticky top-20">
           <div className="flex justify-between items-center mb-4">
-            <h2 className="font-semibold text-sm text-gray-600">LinkedIn News</h2>
+            <h2 className="font-semibold text-sm text-gray-600">XinkedIn News</h2>
             <div className="bg-gray-400 rounded-full w-4 h-4 text-white flex items-center justify-center text-xs">i</div>
           </div>
           <ul className="space-y-4">
             <li className="cursor-pointer">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-                <h3 className="text-sm font-semibold hover:text-linkedin-blue hover:underline">Tech hiring stabilizes</h3>
+                <h3 className="text-sm font-semibold hover:text-xinkedin-blue hover:underline">Tech hiring stabilizes</h3>
               </div>
               <p className="text-xs text-gray-500 pl-4">10h ago • 12,932 readers</p>
             </li>
             <li className="cursor-pointer">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-                <h3 className="text-sm font-semibold hover:text-linkedin-blue hover:underline">New AI regulations coming</h3>
+                <h3 className="text-sm font-semibold hover:text-xinkedin-blue hover:underline">New AI regulations coming</h3>
               </div>
               <p className="text-xs text-gray-500 pl-4">1d ago • 8,442 readers</p>
             </li>
             <li className="cursor-pointer">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-                <h3 className="text-sm font-semibold hover:text-linkedin-blue hover:underline">Remote work trends 2024</h3>
+                <h3 className="text-sm font-semibold hover:text-xinkedin-blue hover:underline">Remote work trends 2024</h3>
               </div>
               <p className="text-xs text-gray-500 pl-4">2d ago • 22,109 readers</p>
             </li>

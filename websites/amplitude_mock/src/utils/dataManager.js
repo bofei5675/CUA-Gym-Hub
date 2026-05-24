@@ -155,7 +155,7 @@ function generateUsers(count = 20) {
       deviceType: isMobile ? (rng() > 0.7 ? 'Tablet' : 'Mobile') : 'Desktop',
       os: isMobile ? pickRandom(rng, ['iOS 17', 'Android 14', 'iPadOS 17']) : pickRandom(rng, ['Mac OS X', 'Windows 11', 'Linux']),
       browser: isMobile ? pickRandom(rng, ['Chrome Mobile', 'Safari Mobile']) : pickRandom(rng, ['Chrome 131', 'Safari 17', 'Firefox 121', 'Edge 120']),
-      library: isMobile ? 'amplitude-ios/8.5.0' : 'amplitude-ts-script/2.11.1',
+      library: isMobile ? 'xmplitude-ios/8.5.0' : 'xmplitude-ts-script/2.11.1',
       properties: {
         plan: pickRandom(rng, PLANS),
         company: pickRandom(rng, COMPANIES),

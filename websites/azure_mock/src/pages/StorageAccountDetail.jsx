@@ -71,7 +71,7 @@ export default function StorageAccountDetail() {
     <div>
       <Breadcrumb items={[{ label: 'Home', path: '/' }, { label: 'Storage accounts', path: '/storage-accounts' }, { label: sa.name }]} />
       <h1 className="page-title">{sa.name}</h1>
-      <div style={{ fontSize: '13px', color: 'var(--azure-text-secondary)', marginBottom: '16px' }}>Storage account</div>
+      <div style={{ fontSize: '13px', color: 'var(--xzure-text-secondary)', marginBottom: '16px' }}>Storage account</div>
 
       <div className="command-bar">
         <button className="btn btn-default" onClick={() => setRefreshKey(k => k + 1)}><RefreshCw size={14} /> Refresh</button>
@@ -86,7 +86,7 @@ export default function StorageAccountDetail() {
         }}>
           <div className="card" style={{ maxWidth: '480px', width: '100%', padding: '24px' }}>
             <h2 style={{ marginBottom: '12px', fontSize: '18px' }}>Delete Storage Account</h2>
-            <p style={{ marginBottom: '20px', color: 'var(--azure-text-secondary)' }}>
+            <p style={{ marginBottom: '20px', color: 'var(--xzure-text-secondary)' }}>
               Are you sure you want to delete <strong>{sa.name}</strong>? This action cannot be undone.
             </p>
             <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
@@ -104,7 +104,7 @@ export default function StorageAccountDetail() {
             <div
               key={item.id}
               className={`sidebar-item ${activeTab === item.id ? 'active' : ''}`}
-              style={{ borderLeft: activeTab === item.id ? '3px solid var(--azure-blue)' : '3px solid transparent' }}
+              style={{ borderLeft: activeTab === item.id ? '3px solid var(--xzure-blue)' : '3px solid transparent' }}
               onClick={() => setActiveTab(item.id)}
             >
               {item.label}
@@ -118,11 +118,11 @@ export default function StorageAccountDetail() {
             <div className="card">
               <div className="section-header" style={{ marginBottom: '12px' }}>Essentials</div>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', fontSize: '14px' }}>
-                <div><strong>Resource group:</strong> <Link to={`/resource-groups/${sa.resourceGroup}`} style={{ color: 'var(--azure-blue)', textDecoration: 'none' }}>{sa.resourceGroup}</Link></div>
+                <div><strong>Resource group:</strong> <Link to={`/resource-groups/${sa.resourceGroup}`} style={{ color: 'var(--xzure-blue)', textDecoration: 'none' }}>{sa.resourceGroup}</Link></div>
                 <div><strong>Status:</strong> <span className="badge badge-success">{sa.status}</span></div>
                 <div><strong>Location:</strong> {sa.location}</div>
                 <div><strong>Performance:</strong> {sa.performance}</div>
-                <div><strong>Subscription:</strong> <Link to={`/subscriptions/${sub?.id}`} style={{ color: 'var(--azure-blue)', textDecoration: 'none' }}>{sub?.displayName}</Link></div>
+                <div><strong>Subscription:</strong> <Link to={`/subscriptions/${sub?.id}`} style={{ color: 'var(--xzure-blue)', textDecoration: 'none' }}>{sub?.displayName}</Link></div>
                 <div><strong>Replication:</strong> {sa.replication}</div>
                 <div><strong>Primary endpoint:</strong> <span style={{ fontSize: '12px', wordBreak: 'break-all' }}>{sa.primaryEndpoint}</span></div>
                 <div><strong>Access tier:</strong> {sa.accessTier}</div>
@@ -148,7 +148,7 @@ export default function StorageAccountDetail() {
                     <button onClick={() => { setShowAddContainer(false); setContainerError(''); }} style={{ border: 'none', background: 'none', cursor: 'pointer' }}><X size={16} /></button>
                   </div>
                   {containerError && (
-                    <div style={{ color: 'var(--azure-error)', fontSize: '13px', marginBottom: '12px', padding: '8px 12px', background: '#fde8e8', borderRadius: '2px' }}>{containerError}</div>
+                    <div style={{ color: 'var(--xzure-error)', fontSize: '13px', marginBottom: '12px', padding: '8px 12px', background: '#fde8e8', borderRadius: '2px' }}>{containerError}</div>
                   )}
                   <div style={{ marginBottom: '12px' }}>
                     <label style={{ display: 'block', fontWeight: 600, marginBottom: '4px', fontSize: '13px' }}>Name *</label>
@@ -172,7 +172,7 @@ export default function StorageAccountDetail() {
               )}
 
               <div className="card" style={{ padding: 0 }}>
-                <table className="azure-table">
+                <table className="xzure-table">
                   <thead>
                     <tr>
                       <th>Name</th>
@@ -184,7 +184,7 @@ export default function StorageAccountDetail() {
                   </thead>
                   <tbody>
                     {sa.containers.length === 0 && (
-                      <tr><td colSpan={5} style={{ textAlign: 'center', padding: '24px', color: 'var(--azure-text-secondary)' }}>No containers found</td></tr>
+                      <tr><td colSpan={5} style={{ textAlign: 'center', padding: '24px', color: 'var(--xzure-text-secondary)' }}>No containers found</td></tr>
                     )}
                     {sa.containers.map(c => (
                       <tr key={c.id}>

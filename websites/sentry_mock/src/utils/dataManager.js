@@ -1,4 +1,4 @@
-// dataManager.js — Seed data for Sentry mock
+// dataManager.js — Seed data for Xentry mock
 
 export function createInitialData() {
   return {
@@ -334,7 +334,7 @@ export function createInitialData() {
           highlights: {
             handled: 'yes', level: 'error', release: 'd66ac445f3b1',
             environment: 'production', url: '/checkout',
-            transaction: 'sentry.tasks.process_commit_context',
+            transaction: 'xentry.tasks.process_commit_context',
             status_code: '500', sentry_region: 'us',
             silo_mode: 'REGION', trace_id: 'abc123def456', runtime_name: 'CPython', runtime_version: '3.11.8'
           },

@@ -176,11 +176,11 @@ test.describe('Phase 1: Page Navigation & Rendering', () => {
 
 test.describe('Phase 2: Header Navigation', () => {
 
-  test('2.1 GitHub logo navigates to dashboard', async ({ page }) => {
+  test('2.1 XitHub logo navigates to dashboard', async ({ page }) => {
     await freshPage(page);
     await page.goto(`${BASE}/admin/react-clone`);
     await page.waitForLoadState('networkidle');
-    // Click the GitHub logo (first svg in header)
+    // Click the XitHub logo (first svg in header)
     await page.locator('header a[href="/"]').first().click();
     await expect(page).toHaveURL(BASE + '/');
     await expect(page.locator('h1')).toContainText('Home');
@@ -593,7 +593,7 @@ test.describe('Phase 2: Issue Detail Interactions', () => {
     await page.waitForLoadState('networkidle');
 
     // Count existing comments
-    const existingComments = await page.locator('.flex.gap-4 >> .border.border-github-border.rounded-md').count();
+    const existingComments = await page.locator('.flex.gap-4 >> .border.border-xithub-border.rounded-md').count();
 
     const textarea = page.locator('textarea[placeholder="Leave a comment"]');
     await textarea.fill('Playwright test comment');

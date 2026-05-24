@@ -58,7 +58,7 @@
 | `inStock` | `boolean` | Whether product is in stock (`false` hides Add to Cart / Buy Now buttons) |
 | `stockCount` | `number \| null` | Remaining stock count (null = unlimited, shown when <= 10) |
 | `seller` | `string` | Seller name (e.g. "Amazon.com", brand name) |
-| `badges` | `string[]` | Array of badge labels: `"Best Seller"`, `"Amazon's Choice"` |
+| `badges` | `string[]` | Array of badge labels: `"Best Seller"`, `"Xmazon's Choice"` |
 | `createdAt` | `string` | ISO 8601 timestamp of product listing |
 
 ### Product IDs by Category

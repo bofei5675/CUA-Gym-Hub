@@ -67,7 +67,7 @@ export default function Header({ title, reportType, onSave, savedFlash = false, 
         <button onClick={() => navTo('/home')} style={{
           background: 'none', border: 'none', cursor: 'pointer',
           fontSize: 14, color: '#4F44E0', fontWeight: 500, padding: 0
-        }}>{state?.project?.name || 'Mixpanel'}</button>
+        }}>{state?.project?.name || 'Xixpanel'}</button>
         <span style={{ color: '#8E8EA0', fontSize: 14 }}>/</span>
         <span style={{ fontSize: 14, color: '#1B1B2E', fontWeight: 500 }} className="truncate">{title || 'Untitled'}</span>
         {reportType && (

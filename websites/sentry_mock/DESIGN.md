@@ -1,12 +1,12 @@
-# Design System Inspired by Sentry
+# Design System Inspired by Xentry
 
 ## 1. Visual Theme & Atmosphere
 
-Sentry's website is a dark-mode-first developer tool interface that speaks the language of code editors and terminal windows. The entire aesthetic is rooted in deep purple-black backgrounds (`#1f1633`, `#150f23`) that evoke the late-night debugging sessions Sentry was built for. Against this inky canvas, a carefully curated set of purples, pinks, and a distinctive lime-green accent (`#c2ef4e`) create a visual system that feels simultaneously technical and vibrant.
+Xentry's website is a dark-mode-first developer tool interface that speaks the language of code editors and terminal windows. The entire aesthetic is rooted in deep purple-black backgrounds (`#1f1633`, `#150f23`) that evoke the late-night debugging sessions Xentry was built for. Against this inky canvas, a carefully curated set of purples, pinks, and a distinctive lime-green accent (`#c2ef4e`) create a visual system that feels simultaneously technical and vibrant.
 
-The typography pairing is deliberate: "Dammit Sans" appears at hero scale (88px, weight 700) as a display font with personality and attitude that matches Sentry's irreverent brand voice ("Code breaks. Fix it faster."), while Rubik serves as the workhorse UI font across all functional text — headings, body, buttons, captions, and navigation. Monaco provides the monospace layer for code snippets and technical content, completing the developer-tool trinity.
+The typography pairing is deliberate: "Dammit Sans" appears at hero scale (88px, weight 700) as a display font with personality and attitude that matches Xentry's irreverent brand voice ("Code breaks. Fix it faster."), while Rubik serves as the workhorse UI font across all functional text — headings, body, buttons, captions, and navigation. Monaco provides the monospace layer for code snippets and technical content, completing the developer-tool trinity.
 
-What makes Sentry distinctive is its embrace of the "dark IDE" aesthetic without feeling cold or sterile. Warm purple tones replace the typical cool grays of developer tools, and bold illustrative elements (3D characters, colorful product screenshots) punctuate the dark canvas. The button system uses a signature muted purple (`#79628c`) with inset shadows that creates a tactile, almost physical quality — buttons feel like they could be pressed into the surface.
+What makes Xentry distinctive is its embrace of the "dark IDE" aesthetic without feeling cold or sterile. Warm purple tones replace the typical cool grays of developer tools, and bold illustrative elements (3D characters, colorful product screenshots) punctuate the dark canvas. The button system uses a signature muted purple (`#79628c`) with inset shadows that creates a tactile, almost physical quality — buttons feel like they could be pressed into the surface.
 
 **Key Characteristics:**
 - Dark purple-black backgrounds (`#1f1633`, `#150f23`) — never pure black
@@ -27,7 +27,7 @@ What makes Sentry distinctive is its embrace of the "dark IDE" aesthetic without
 - **Border Purple** (`#362d59`): Borders, dividers, subtle structural lines
 
 ### Accent Colors
-- **Sentry Purple** (`#6a5fc1`): Primary interactive color — links, hover states, focus rings
+- **Xentry Purple** (`#6a5fc1`): Primary interactive color — links, hover states, focus rings
 - **Muted Purple** (`#79628c`): Button backgrounds, secondary interactive elements
 - **Deep Violet** (`#422082`): Select dropdowns, active states, high-emphasis surfaces
 - **Lime Green** (`#c2ef4e`): High-visibility accent, special links, badge highlights
@@ -132,7 +132,7 @@ What makes Sentry distinctive is its embrace of the "dark IDE" aesthetic without
 
 ### Links
 - **Default on dark**: `#ffffff`, underline decoration
-- **Hover**: color transitions to `#6a5fc1` (Sentry Purple)
+- **Hover**: color transitions to `#6a5fc1` (Xentry Purple)
 - **Purple links**: `#6a5fc1` default, hover underline
 - **Lime accent links**: `#c2ef4e` default, hover to `#6a5fc1`
 - **Dark context links**: `#362d59`, hover to `#ffffff`
@@ -146,7 +146,7 @@ What makes Sentry distinctive is its embrace of the "dark IDE" aesthetic without
 ### Navigation
 - Dark transparent header over hero content
 - Rubik 15px weight 500 for nav links
-- White text, hover to Sentry Purple (`#6a5fc1`)
+- White text, hover to Xentry Purple (`#6a5fc1`)
 - Uppercase labels with 0.2px letter-spacing for categories
 - Mobile: hamburger menu, full-width expanded
 
@@ -195,7 +195,7 @@ What makes Sentry distinctive is its embrace of the "dark IDE" aesthetic without
 | Prominent (Level 3) | `rgba(0, 0, 0, 0.18) 0px 0.5rem 1.5rem` | Hover states, modals |
 | Ambient (Level 4) | `rgba(22, 15, 36, 0.9) 0px 4px 4px 9px` | Deep purple ambient glow around hero |
 
-**Shadow Philosophy**: Sentry uses a unique combination of inset shadows (buttons feel pressed INTO the surface) and ambient glows (content radiates from the dark background). The deep purple ambient shadow (`rgba(22, 15, 36, 0.9)`) is the signature — it creates a bioluminescent quality where content seems to emit its own purple-tinted light.
+**Shadow Philosophy**: Xentry uses a unique combination of inset shadows (buttons feel pressed INTO the surface) and ambient glows (content radiates from the dark background). The deep purple ambient shadow (`rgba(22, 15, 36, 0.9)`) is the signature — it creates a bioluminescent quality where content seems to emit its own purple-tinted light.
 
 ## 7. Do's and Don'ts
 

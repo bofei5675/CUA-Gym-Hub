@@ -424,7 +424,7 @@ export function AppProvider({ children }) {
   if (!state) {
     return (
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', fontFamily: 'Roboto, sans-serif', color: '#5F6368' }}>
-        <div>Loading Looker Studio...</div>
+        <div>Loading Xooker Studio...</div>
       </div>
     )
   }

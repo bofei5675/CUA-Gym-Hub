@@ -1,4 +1,4 @@
-# Mailchimp Mock — TODO
+# Xailchimp Mock — TODO
 
 > Status: IN PROGRESS
 > Last updated by: dev agent, 2026-04-10
@@ -17,7 +17,7 @@
 
 - [x] **Project scaffold**: `npm create vite@latest mailchimp_mock -- --template react`, install deps: `react-router-dom`, `lucide-react`. No TypeScript.
 
-- [x] **Visual design system**: Study `assets/screenshots/000003.jpg` (full dashboard with sidebar) carefully. Mailchimp uses:
+- [x] **Visual design system**: Study `assets/screenshots/000003.jpg` (full dashboard with sidebar) carefully. Xailchimp uses:
   - **Font**: `"Graphik", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif` — headings are bold 600-700 weight, body is 400
   - **Primary yellow**: `#FFE01B` (Create button, primary CTAs)
   - **Sidebar dark**: `#241C15` (near-black, sidebar background)
@@ -37,7 +37,7 @@
 
 - [x] **App layout**: Fixed left sidebar (220px wide, dark `#241C15` bg, full viewport height) + main content area (flex-grow, `#F6F6F4` bg). Main content has a top header bar (56px height, white bg, bottom border `#E5E5E5`) showing page title on left, search input center, notification bell + user avatar on right. Content area below header has 24px padding. See `assets/screenshots/000003.jpg`.
 
-- [x] **Left sidebar navigation**: Mailchimp logo (Freddie chimp icon — use a simple SVG chimp silhouette or text "mailchimp" in white) at top (16px padding). Below logo: "Marketing" label with "..." menu. Then a full-width **yellow `#FFE01B` "Create" button** (bold text, rounded 20px, 40px height, centered). Below Create button, nav items with 20px left-aligned icons (use lucide-react icons) + label text + right chevron for expandable sub-menus:
+- [x] **Left sidebar navigation**: Xailchimp logo (Freddie chimp icon — use a simple SVG chimp silhouette or text "xailchimp" in white) at top (16px padding). Below logo: "Marketing" label with "..." menu. Then a full-width **yellow `#FFE01B` "Create" button** (bold text, rounded 20px, 40px height, centered). Below Create button, nav items with 20px left-aligned icons (use lucide-react icons) + label text + right chevron for expandable sub-menus:
   - **Campaigns** (icon: Send/Mail) → sub-items: All Campaigns, Email
   - **Automations** (icon: Zap/Workflow) → sub-items: All Automations, Pre-built
   - **Audience** (icon: Users) → sub-items: All Contacts, Segments, Tags

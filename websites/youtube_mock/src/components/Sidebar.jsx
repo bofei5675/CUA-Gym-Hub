@@ -137,7 +137,7 @@ const Sidebar = ({ isOpen, isMini }) => {
           <span>Terms</span>
           <span>Privacy</span>
           <span>Policy & Safety</span>
-          <span>How YouTube works</span>
+          <span>How XouTube works</span>
           <span>Test new features</span>
         </div>
       </div>

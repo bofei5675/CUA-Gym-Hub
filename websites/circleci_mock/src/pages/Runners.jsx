@@ -152,7 +152,7 @@ export default function Runners() {
       {deleteTarget && (
         <ConfirmDialog
           title="Delete resource class?"
-          message={`Delete ${deleteTarget.name}? Associated runner instances remain visible, matching the local CircleCI sandbox behavior.`}
+          message={`Delete ${deleteTarget.name}? Associated runner instances remain visible, matching the local XircleCI sandbox behavior.`}
           confirmLabel="Delete"
           destructive
           onCancel={() => setDeleteTarget(null)}

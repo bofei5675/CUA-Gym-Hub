@@ -1,8 +1,8 @@
-# HubSpot CRM Mock — Research Summary
+# XubSpot CRM Mock — Research Summary
 
 ## Application Overview
 
-**HubSpot CRM** is a comprehensive Customer Relationship Management platform by HubSpot, Inc. It serves as the central hub for managing contacts, companies, deals, tickets, tasks, and marketing activities. The free CRM tier is widely used by small-to-medium businesses and includes contact management, deal pipelines, ticketing, email templates, meeting scheduling, and reporting dashboards.
+**XubSpot CRM** is a comprehensive Customer Relationship Management platform by XubSpot, Inc. It serves as the central hub for managing contacts, companies, deals, tickets, tasks, and marketing activities. The free CRM tier is widely used by small-to-medium businesses and includes contact management, deal pipelines, ticketing, email templates, meeting scheduling, and reporting dashboards.
 
 **Category:** CRM / Sales & Marketing Platform
 **Target Users:** Sales reps, marketing managers, customer service agents, business owners
@@ -44,7 +44,7 @@
 
 ### P0 — Core Shell (Must exist for app to render)
 1. **App Layout**: Left sidebar (dark navy #2D3E50, 256px) + top header bar (64px, white) + main content area (#F5F8FA background)
-2. **Sidebar Navigation**: HubSpot logo/branding at top, grouped nav items (CRM: Dashboard, Contacts, Companies, Deals, Tickets; Marketing & Sales: Email Templates, Meetings, Forms; System: State Inspector), user profile at bottom
+2. **Sidebar Navigation**: XubSpot logo/branding at top, grouped nav items (CRM: Dashboard, Contacts, Companies, Deals, Tickets; Marketing & Sales: Email Templates, Meetings, Forms; System: State Inspector), user profile at bottom
 3. **Top Header**: Page title on left, search bar in center-right, notification/settings/help icons on far right
 4. **Routing**: BrowserRouter with routes for each page + /go state inspector
 5. **State Management**: React Context with useReducer, localStorage persistence, session-aware storage
@@ -120,9 +120,9 @@
 
 ## UI Layout Description
 
-### HubSpot Navigation Structure (from screenshots)
+### XubSpot Navigation Structure (from screenshots)
 
-**Real HubSpot** uses a **top navigation bar** (not a sidebar) with dropdown menus:
+**Real XubSpot** uses a **top navigation bar** (not a sidebar) with dropdown menus:
 - Logo (sprocket icon) on far left
 - **Contacts** dropdown: Contacts, Companies, Activities
 - **Conversations** dropdown: Inbox, Chatflows
@@ -135,7 +135,7 @@
 
 **Our mock** uses a left sidebar (already built), which is simpler and works well for the training sandbox. Keep this pattern.
 
-### Color Palette (from HubSpot brand)
+### Color Palette (from XubSpot brand)
 - **Primary Orange**: #FF7A59 (CTAs, buttons, active states)
 - **Hover Orange**: #D95E40
 - **Obsidian (Dark)**: #2D3E50 (sidebar background, dark text)
@@ -160,9 +160,9 @@
 assets/screenshots/
 ├── contacts/          - Contact list table view with create modal
 ├── contacts_ui/       - Contact list, create form, data model diagram
-├── deals/             - Deal pipeline board view (kanban), real HubSpot UI
+├── deals/             - Deal pipeline board view (kanban), real XubSpot UI
 ├── dashboard/         - Reports dashboard with charts and widgets
-├── navigation/        - HubSpot navigation structure
+├── navigation/        - XubSpot navigation structure
 ├── contact_detail/    - Contact record detail page
 ├── companies/         - Company list view
 ├── tickets/           - Help desk / ticket views
@@ -173,7 +173,7 @@ assets/screenshots/
 
 ### Key Screenshot Analysis
 
-**deals/000001.jpg** (MOST USEFUL — Real HubSpot UI):
+**deals/000001.jpg** (MOST USEFUL — Real XubSpot UI):
 - Top nav: Contacts, Conversations, Marketing, Sales, Service, Automation, Reports dropdowns
 - Page header: "Deals" with dropdown arrow, list/grid view toggle, pipeline selector dropdown "Sales Pipeline", view selector "All deals"
 - Action buttons: "Actions" dropdown, "Import", "Create deal" (orange)
@@ -201,7 +201,7 @@ assets/screenshots/
 - Create contact slide-in panel (right side): Fields: Email, First name, Last name, Contact owner, Job title, Phone number, Lifecycle stage (Lead dropdown), Lead status
 - Pagination: Prev, page numbers, Next, per-page selector
 
-**contacts_ui/000003.jpg** (HubSpot CRM Object Map — Data Model):
+**contacts_ui/000003.jpg** (XubSpot CRM Object Map — Data Model):
 - Contact → Company (many-to-one via Company Domain)
 - Contact → Deal (many-to-many)
 - Contact → Tickets (many-to-many)
@@ -227,7 +227,7 @@ assets/screenshots/
 - ✅ Marketing pages (templates, meetings, forms — read-only)
 - ✅ Go/state inspector route
 - ✅ vite.config.js mock API fully implemented
-- ✅ Tailwind + HubSpot color theme
+- ✅ Tailwind + XubSpot color theme
 
 ### Critical Gaps (Must Fix)
 - ❌ **State not synced to server** — StoreContext saves to localStorage only, not via /post. The /go endpoint reads server files. These are disconnected.

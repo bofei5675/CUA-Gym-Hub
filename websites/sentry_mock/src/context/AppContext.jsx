@@ -310,7 +310,7 @@ export function AppProvider({ children }) {
   if (loading) {
     return (
       <div style={{ padding: 48, fontFamily: '"Rubik", system-ui, sans-serif', color: '#80708F' }}>
-        Loading Sentry...
+        Loading Xentry...
       </div>
     )
   }

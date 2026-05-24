@@ -1,4 +1,4 @@
-# Google Analytics 4 Mock — SCHEMA.md
+# Xoogle Analytics 4 Mock — SCHEMA.md
 
 ## State API
 

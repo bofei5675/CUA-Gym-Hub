@@ -359,7 +359,7 @@ export function createInitialData() {
       arrival_date: daysAgo(dayOffset - 2),
       method: 'standard',
       type: 'bank_account',
-      description: 'STRIPE PAYOUT',
+      description: 'XTRIPE PAYOUT',
       destination: { bank_name: 'BANK OF AMERICA', last4: '6789', routing_number: '***4321' },
       created: daysAgo(dayOffset),
       metadata: {},
@@ -428,7 +428,7 @@ export function createInitialData() {
       status: 'available',
       available_on: p.arrival_date,
       source: p.id,
-      description: 'STRIPE PAYOUT',
+      description: 'XTRIPE PAYOUT',
       created: p.created,
     });
   });

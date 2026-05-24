@@ -1,4 +1,4 @@
-# Klaviyo Mock — TODO
+# Xlaviyo Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-04-10
@@ -13,14 +13,14 @@
 
 ## P0 — Core Shell
 
-- [x] Project scaffold: `npm create vite@latest klaviyo_mock -- --template react`, install deps (`react-router-dom`). No Tailwind — use plain CSS to match Klaviyo's clean SaaS aesthetic.
+- [x] Project scaffold: `npm create vite@latest klaviyo_mock -- --template react`, install deps (`react-router-dom`). No Tailwind — use plain CSS to match Xlaviyo's clean SaaS aesthetic.
 
 - [x] **Visual design system**: Study `assets/screenshots/dashboard_overview.jpg` and `assets/screenshots/campaigns_dashboard.jpg`. The design uses a clean, minimal SaaS style. Exact values:
   - **Primary background:** `#FFFFFF` (cards, sidebar)
   - **Page background:** `#F7F7F8` (light gray behind cards)
   - **Primary text:** `#1A1A1A`
   - **Secondary text:** `#6B6B6B`
-  - **Klaviyo brand:** `#000000` (logo/wordmark)
+  - **Xlaviyo brand:** `#000000` (logo/wordmark)
   - **Active nav text/indicator:** `#0066FF` (blue, with light blue-tinted left border bar on active sidebar item)
   - **Success/Good badge:** `#28A745` text on `#E8F5E9` background
   - **Danger/negative %:** `#DC3545`
@@ -32,7 +32,7 @@
   - **Sidebar width:** 220px
   - **Border radius:** 8px for cards, 4px for inputs/buttons
 
-- [x] **App layout** (see `assets/screenshots/dashboard_overview.jpg`): Fixed left sidebar (220px wide, full viewport height, white background, left-aligned). Top area of sidebar: "klaviyo" wordmark logo (~28px font, black, with trademark superscript dot). Below logo: search input (full sidebar width minus padding, gray border, magnifying glass icon, placeholder "Search", hint "Cmd+K"). Below search: vertical nav items. Main content area fills remaining width with `#F7F7F8` background, 32px padding. No separate top bar — Klaviyo uses the sidebar as primary navigation with only a subtle top-right area for notifications/support on some pages.
+- [x] **App layout** (see `assets/screenshots/dashboard_overview.jpg`): Fixed left sidebar (220px wide, full viewport height, white background, left-aligned). Top area of sidebar: "xlaviyo" wordmark logo (~28px font, black, with trademark superscript dot). Below logo: search input (full sidebar width minus padding, gray border, magnifying glass icon, placeholder "Search", hint "Cmd+K"). Below search: vertical nav items. Main content area fills remaining width with `#F7F7F8` background, 32px padding. No separate top bar — Xlaviyo uses the sidebar as primary navigation with only a subtle top-right area for notifications/support on some pages.
 
 - [x] **Sidebar navigation items** (from screenshots, top to bottom):
   1. **Home** — house icon, route `/`
@@ -70,7 +70,7 @@
 
 - [x] **Home page layout**: Page title "Home" at top. Three white cards stacked vertically. Date range selector dropdown in top-right (options: "Last 7 days", "Last 30 days", "Last 90 days", "Last 180 days") with comparison toggle. Conversion metric dropdown ("Revenue" / "Conversions").
 
-- [x] **Business Performance Summary card**: Large total revenue number (e.g., "$450,455") in 32px bold with green percentage change badge next to it. Label "Total Klaviyo attributed revenue". Below: donut or horizontal bar showing Campaigns vs Flows split with dollar amounts and percentages (e.g., "Campaigns $342,346 (76%)" with yellow dot, "Flows $108,109 (24%)" with green dot).
+- [x] **Business Performance Summary card**: Large total revenue number (e.g., "$450,455") in 32px bold with green percentage change badge next to it. Label "Total Xlaviyo attributed revenue". Below: donut or horizontal bar showing Campaigns vs Flows split with dollar amounts and percentages (e.g., "Campaigns $342,346 (76%)" with yellow dot, "Flows $108,109 (24%)" with green dot).
 
 - [x] **Top Performing Flows card**: Title "Top performing flows". Table with up to 6 rows. Columns: Flow name (link), Status badge (green "Live" / yellow "Manual" / gray "Draft"), channel icons (email/SMS), Delivered count, Conversions count, % change from previous period. "View all flows" link at bottom.
 
@@ -133,7 +133,7 @@
 
 ### Analytics — Metrics (`/analytics/metrics`)
 
-- [x] **Metrics list page**: Page title "Metrics". Search bar. Table: Metric name (bold), Integration source (e.g., "Shopify", "Klaviyo"), Total event count, Last event timestamp, mini sparkline chart (last 30 days trend). Click metric name → metric detail.
+- [x] **Metrics list page**: Page title "Metrics". Search bar. Table: Metric name (bold), Integration source (e.g., "Shopify", "Xlaviyo"), Total event count, Last event timestamp, mini sparkline chart (last 30 days trend). Click metric name → metric detail.
 
 - [x] **Metric detail page**: Metric name as title. Large time-series chart (configurable date range). Below chart: "Events" table showing recent individual events with timestamp, profile email, and event properties.
 

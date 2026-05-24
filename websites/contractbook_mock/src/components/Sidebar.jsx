@@ -186,7 +186,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
       {/* Logo */}
       <div className="sidebar-logo" onClick={() => navTo('/contracts')}>
         <FileText size={20} color="#1C00FF" />
-        {!collapsed && <span className="sidebar-logo-text">Contractbook</span>}
+        {!collapsed && <span className="sidebar-logo-text">Xontractbook</span>}
       </div>
 
       {/* New Contract Button */}

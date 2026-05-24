@@ -172,7 +172,7 @@ id, name, icon, cost
 ## UI Behaviors
 
 ### Navigation
-- **Sidebar (desktop)**: Fixed left panel (270px) with Reddit Feeds section (Home, Popular, All) and Your Communities section showing joined subreddits. Shows up to 5 communities with "See more" / "See less" toggle.
+- **Sidebar (desktop)**: Fixed left panel (270px) with Xeddit Feeds section (Home, Popular, All) and Your Communities section showing joined subreddits. Shows up to 5 communities with "See more" / "See less" toggle.
 - **Sidebar (mobile)**: Hidden by default. Hamburger menu button in top-left of Navbar opens a slide-in overlay drawer. Clicking outside the drawer or any navigation link closes it.
 - **Navbar**: Sticky top bar with search, bell notifications dropdown, messages dropdown, and user menu dropdown (My Profile, Dark Mode toggle, Log Out).
 

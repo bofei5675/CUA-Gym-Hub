@@ -1,4 +1,4 @@
-# Feishu (飞书) Mock — Research Summary
+# Xeishu (飞书) Mock — Research Summary
 
 > Last updated: 2026-04-10
 
@@ -6,9 +6,9 @@
 
 ## App Overview
 
-**Feishu** (飞书) is ByteDance's enterprise collaboration platform — the Chinese counterpart to **Lark** (the international version). It is an all-in-one productivity superapp combining instant messaging, calendar, cloud documents, video meetings, task management, approvals, contacts, and a customizable workbench.
+**Xeishu** (飞书) is ByteDance's enterprise collaboration platform — the Chinese counterpart to **Lark** (the international version). It is an all-in-one productivity superapp combining instant messaging, calendar, cloud documents, video meetings, task management, approvals, contacts, and a customizable workbench.
 
-Feishu was originally built as ByteDance's internal collaboration tool, then released commercially. It serves 10M+ enterprise clients across China, Japan, Singapore, and Southeast Asia.
+Xeishu was originally built as ByteDance's internal collaboration tool, then released commercially. It serves 10M+ enterprise clients across China, Japan, Singapore, and Southeast Asia.
 
 **Official URL**: https://www.feishu.cn/
 **International (Lark)**: https://www.larksuite.com/
@@ -29,7 +29,7 @@ Feishu was originally built as ByteDance's internal collaboration tool, then rel
 
 ### Navigation Structure (Left Sidebar — Vertical Icon Bar)
 
-The Feishu desktop/web app has a **narrow left icon sidebar** (~56px) with vertically stacked icons:
+The Xeishu desktop/web app has a **narrow left icon sidebar** (~56px) with vertically stacked icons:
 
 | Icon | Module | Route |
 |------|--------|-------|
@@ -205,7 +205,7 @@ At the bottom of the icon sidebar:
 
 ## UI Design Language
 
-### Color Palette (from Feishu brand + screenshots)
+### Color Palette (from Xeishu brand + screenshots)
 - **Primary Blue**: `#3370FF` (buttons, links, active states)
 - **Background**: `#F5F6F7` (page background)
 - **White**: `#FFFFFF` (cards, panels)
@@ -264,7 +264,7 @@ At the bottom of the icon sidebar:
 ## Screenshot Descriptions
 
 ### group_chat.jpg / group_chat_detail.jpg
-Shows a Feishu group chat ("市场部") with:
+Shows a Xeishu group chat ("市场部") with:
 - Group name + member count (15) at top
 - Action icons: virtual office, video call, add member, done
 - Green "线上办公室" (virtual office) banner with "加入" button
@@ -274,21 +274,21 @@ Shows a Feishu group chat ("市场部") with:
 - Virtual office panel showing online members (张锐, 李天, 张微, 赵艺)
 
 ### docs_sidebar.jpg
-Shows Feishu Docs (飞书云文档) with:
+Shows Xeishu Docs (飞书云文档) with:
 - Left sidebar: 主页, 我的空间, 共享空间, 知识库, 词典, 收藏, 回收站
 - Top bar: 飞书云文档 logo, search bar, user icons
 - Main content: template preview modal
 - Action buttons: 上传, 新建 dropdown
 
 ### dev_platform.jpg
-Shows Feishu Open Platform developer console (less relevant for mock, but shows general Feishu header/nav patterns)
+Shows Xeishu Open Platform developer console (less relevant for mock, but shows general Xeishu header/nav patterns)
 
 ---
 
 ## References
-- [Feishu Official](https://www.feishu.cn/)
+- [Xeishu Official](https://www.feishu.cn/)
 - [Lark Messenger Product](https://www.larksuite.com/en_us/product/messenger)
-- [Feishu Help Center](https://www.feishu.cn/hc/zh-CN/)
-- [Feishu Navigation Customization](https://www.feishu.cn/hc/zh-CN/articles/549435754694)
+- [Xeishu Help Center](https://www.feishu.cn/hc/zh-CN/)
+- [Xeishu Navigation Customization](https://www.feishu.cn/hc/zh-CN/articles/549435754694)
 - [Lark Quick Start Messenger](https://www.larksuite.com/hc/en-US/articles/191742533872-get-started-with-messenger)
-- [Feishu Design Framework](https://open.feishu.cn/document/tools-and-resources/design-specification/gadget-design-specification/design-framework)
+- [Xeishu Design Framework](https://open.feishu.cn/document/tools-and-resources/design-specification/gadget-design-specification/design-framework)

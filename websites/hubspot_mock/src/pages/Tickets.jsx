@@ -10,8 +10,8 @@ const PAGE_SIZE_OPTIONS = [10, 25, 50, 100];
 function SortIcon({ col, sortCol, sortDir }) {
   if (sortCol !== col) return <ChevronDown size={13} className="ml-1 text-gray-300 opacity-50" />;
   return sortDir === 'asc'
-    ? <ChevronUp size={13} className="ml-1 text-hubspot" />
-    : <ChevronDown size={13} className="ml-1 text-hubspot" />;
+    ? <ChevronUp size={13} className="ml-1 text-xubspot" />
+    : <ChevronDown size={13} className="ml-1 text-xubspot" />;
 }
 
 const TICKET_STATUSES = ['new', 'waiting_on_contact', 'waiting_on_us', 'in_progress', 'closed'];
@@ -201,7 +201,7 @@ export default function Tickets() {
           </select>
           <button
             onClick={openCreate}
-            className="px-4 py-2 bg-hubspot text-white rounded-md text-sm font-medium hover:bg-hubspot-hover flex items-center gap-2"
+            className="px-4 py-2 bg-xubspot text-white rounded-md text-sm font-medium hover:bg-xubspot-hover flex items-center gap-2"
           >
             <Plus size={16} /> Create Ticket
           </button>
@@ -213,7 +213,7 @@ export default function Tickets() {
         <input
           type="text"
           placeholder="Search subject, contact name..."
-          className="pl-9 pr-4 py-2 w-full border border-gray-300 rounded-md text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+          className="pl-9 pr-4 py-2 w-full border border-gray-300 rounded-md text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
           value={search}
           onChange={e => { setSearch(e.target.value); setPage(1); }}
         />
@@ -302,7 +302,7 @@ export default function Tickets() {
                   <td className="px-6 py-4">
                     <button
                       onClick={() => openEdit(ticket)}
-                      className="font-medium text-hubspot-text hover:text-hubspot text-sm text-left"
+                      className="font-medium text-xubspot-text hover:text-xubspot text-sm text-left"
                     >
                       {ticket.subject}
                     </button>
@@ -337,7 +337,7 @@ export default function Tickets() {
                     <div className="flex justify-end gap-2">
                       <button
                         onClick={() => openEdit(ticket)}
-                        className="p-1 text-gray-400 hover:text-hubspot"
+                        className="p-1 text-gray-400 hover:text-xubspot"
                       >
                         <Edit2 size={15} />
                       </button>
@@ -364,12 +364,12 @@ export default function Tickets() {
               {Array.from({ length: Math.min(totalPages, 5) }, (_, i) => {
                 let p = totalPages <= 5 ? i + 1 : page <= 3 ? i + 1 : page >= totalPages - 2 ? totalPages - 4 + i : page - 2 + i;
                 return <button key={p} onClick={() => setPage(p)}
-                  className={`w-7 h-7 rounded text-xs font-medium ${page === p ? 'bg-hubspot text-white' : 'border border-gray-300 hover:bg-gray-100'}`}>{p}</button>;
+                  className={`w-7 h-7 rounded text-xs font-medium ${page === p ? 'bg-xubspot text-white' : 'border border-gray-300 hover:bg-gray-100'}`}>{p}</button>;
               })}
               <button disabled={page === totalPages || totalPages === 0} onClick={() => setPage(p => p + 1)}
                 className="px-3 py-1 border border-gray-300 rounded text-xs hover:bg-gray-100 disabled:opacity-40 disabled:cursor-not-allowed">Next &gt;</button>
               <select value={pageSize} onChange={e => { setPageSize(Number(e.target.value)); setPage(1); }}
-                className="ml-2 border border-gray-300 rounded px-2 py-1 text-xs focus:ring-1 focus:ring-hubspot">
+                className="ml-2 border border-gray-300 rounded px-2 py-1 text-xs focus:ring-1 focus:ring-xubspot">
                 {PAGE_SIZE_OPTIONS.map(s => <option key={s} value={s}>{s} / page</option>)}
               </select>
             </div>
@@ -390,7 +390,7 @@ export default function Tickets() {
                 <input
                   required
                   type="text"
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.subject}
                   onChange={e => setForm({ ...form, subject: e.target.value })}
                   placeholder="Ticket subject"
@@ -400,7 +400,7 @@ export default function Tickets() {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
                 <textarea
                   rows={3}
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot resize-none"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot resize-none"
                   value={form.description}
                   onChange={e => setForm({ ...form, description: e.target.value })}
                   placeholder="Describe the issue..."
@@ -410,7 +410,7 @@ export default function Tickets() {
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Status</label>
                   <select
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.status}
                     onChange={e => setForm({ ...form, status: e.target.value })}
                   >
@@ -422,7 +422,7 @@ export default function Tickets() {
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Priority</label>
                   <select
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.priority}
                     onChange={e => setForm({ ...form, priority: e.target.value })}
                   >
@@ -436,7 +436,7 @@ export default function Tickets() {
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Category</label>
                   <select
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.category}
                     onChange={e => setForm({ ...form, category: e.target.value })}
                   >
@@ -448,7 +448,7 @@ export default function Tickets() {
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Source</label>
                   <select
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.source}
                     onChange={e => setForm({ ...form, source: e.target.value })}
                   >
@@ -461,7 +461,7 @@ export default function Tickets() {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Contact</label>
                 <select
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.contactId}
                   onChange={e => setForm({ ...form, contactId: e.target.value })}
                 >
@@ -474,7 +474,7 @@ export default function Tickets() {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Company</label>
                 <select
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.companyId}
                   onChange={e => setForm({ ...form, companyId: e.target.value })}
                 >
@@ -488,7 +488,7 @@ export default function Tickets() {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Owner</label>
                 <input
                   type="text"
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.owner}
                   onChange={e => setForm({ ...form, owner: e.target.value })}
                 />
@@ -503,7 +503,7 @@ export default function Tickets() {
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-hubspot text-white rounded text-sm hover:bg-hubspot-hover"
+                  className="px-4 py-2 bg-xubspot text-white rounded text-sm hover:bg-xubspot-hover"
                 >
                   {editTicket ? 'Save Changes' : 'Create Ticket'}
                 </button>

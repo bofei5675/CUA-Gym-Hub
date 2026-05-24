@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        gitlab: {
+        xitlab: {
           orange: '#FC6D26',
           dark: '#292961',
           sidebar: '#1f1e24', // Darker sidebar

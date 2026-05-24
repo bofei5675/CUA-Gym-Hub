@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        notion: {
+        xotion: {
           bg: '#FFFFFF',
           sidebar: '#F7F6F3',
           hover: '#EFEEF1',

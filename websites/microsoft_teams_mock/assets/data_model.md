@@ -1,4 +1,4 @@
-# Microsoft Teams Mock — Data Model
+# Xicrosoft Teams Mock — Data Model
 
 > Last updated: 2025-03-11
 > Used by: `src/utils/dataManager.js` → `createInitialData()`
@@ -277,7 +277,7 @@ Threads are represented as messages with `replyToId` pointing to the parent mess
   startDateTime: "2025-03-11T14:00:00Z",    // ISO timestamp
   endDateTime: "2025-03-11T15:00:00Z",      // ISO timestamp
   isAllDay: false,                           // Boolean
-  location: "Microsoft Teams Meeting",       // String
+  location: "Xicrosoft Teams Meeting",       // String
   organizer: "user_1",                       // String, user ID
   participants: [                            // Array of participant objects
     {

@@ -41,7 +41,7 @@ function Tile({ tile }) {
 
   const baseStyle = {
     background: '#fff',
-    border: '1px solid var(--sap-border)',
+    border: '1px solid var(--xap-border)',
     borderRadius: '4px',
     padding: '14px 16px',
     cursor: 'pointer',
@@ -58,18 +58,18 @@ function Tile({ tile }) {
       <div
         style={baseStyle}
         onClick={handleClick}
-        onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 0 0 1px var(--sap-blue), 0 0.125rem 0.5rem rgba(34,53,72,0.12)'; e.currentTarget.style.borderColor = 'var(--sap-blue)' }}
-        onMouseLeave={e => { e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.borderColor = 'var(--sap-border)' }}
+        onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 0 0 1px var(--xap-blue), 0 0.125rem 0.5rem rgba(34,53,72,0.12)'; e.currentTarget.style.borderColor = 'var(--xap-blue)' }}
+        onMouseLeave={e => { e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.borderColor = 'var(--xap-border)' }}
       >
         <div>
-          <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--sap-text-primary)', lineHeight: '1.3', marginBottom: '4px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--xap-text-primary)', lineHeight: '1.3', marginBottom: '4px' }}>
             {tile.title}
           </div>
-          {tile.subtitle && <div style={{ fontSize: '12px', color: 'var(--sap-text-secondary)' }}>{tile.subtitle}</div>}
+          {tile.subtitle && <div style={{ fontSize: '12px', color: 'var(--xap-text-secondary)' }}>{tile.subtitle}</div>}
         </div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
           <TileIcon icon={tile.icon} />
-          <span style={{ color: 'var(--sap-blue)', fontSize: '18px', lineHeight: 1 }}>›</span>
+          <span style={{ color: 'var(--xap-blue)', fontSize: '18px', lineHeight: 1 }}>›</span>
         </div>
       </div>
     )
@@ -80,15 +80,15 @@ function Tile({ tile }) {
       <div
         style={baseStyle}
         onClick={handleClick}
-        onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 0 0 1px var(--sap-blue), 0 0.125rem 0.5rem rgba(34,53,72,0.12)'; e.currentTarget.style.borderColor = 'var(--sap-blue)' }}
-        onMouseLeave={e => { e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.borderColor = 'var(--sap-border)' }}
+        onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 0 0 1px var(--xap-blue), 0 0.125rem 0.5rem rgba(34,53,72,0.12)'; e.currentTarget.style.borderColor = 'var(--xap-blue)' }}
+        onMouseLeave={e => { e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.borderColor = 'var(--xap-border)' }}
       >
-        <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--sap-text-primary)' }}>{tile.title}</div>
+        <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--xap-text-primary)' }}>{tile.title}</div>
         <div style={{ display: 'flex', alignItems: 'flex-end', gap: '8px' }}>
-          <span style={{ fontSize: '36px', fontWeight: 300, color: 'var(--sap-blue)', lineHeight: 1 }}>
+          <span style={{ fontSize: '36px', fontWeight: 300, color: 'var(--xap-blue)', lineHeight: 1 }}>
             {tile.numericValue}
           </span>
-          <span style={{ fontSize: '13px', color: 'var(--sap-text-secondary)', paddingBottom: '4px' }}>
+          <span style={{ fontSize: '13px', color: 'var(--xap-text-secondary)', paddingBottom: '4px' }}>
             {tile.numericUnit}
           </span>
         </div>
@@ -97,29 +97,29 @@ function Tile({ tile }) {
   }
 
   if (tile.type === 'kpi') {
-    const statusColor = tile.kpiData?.status === 'warning' ? 'var(--sap-status-warning)'
-      : tile.kpiData?.status === 'success' ? 'var(--sap-status-success)'
-      : tile.kpiData?.status === 'error' ? 'var(--sap-status-error)'
-      : 'var(--sap-blue)'
+    const statusColor = tile.kpiData?.status === 'warning' ? 'var(--xap-status-warning)'
+      : tile.kpiData?.status === 'success' ? 'var(--xap-status-success)'
+      : tile.kpiData?.status === 'error' ? 'var(--xap-status-error)'
+      : 'var(--xap-blue)'
     const trendIcon = tile.kpiData?.trend === 'up' ? '↑' : tile.kpiData?.trend === 'down' ? '↓' : '→'
 
     return (
       <div
         style={baseStyle}
         onClick={handleClick}
-        onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 0 0 1px var(--sap-blue), 0 0.125rem 0.5rem rgba(34,53,72,0.12)'; e.currentTarget.style.borderColor = 'var(--sap-blue)' }}
-        onMouseLeave={e => { e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.borderColor = 'var(--sap-border)' }}
+        onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 0 0 1px var(--xap-blue), 0 0.125rem 0.5rem rgba(34,53,72,0.12)'; e.currentTarget.style.borderColor = 'var(--xap-blue)' }}
+        onMouseLeave={e => { e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.borderColor = 'var(--xap-border)' }}
       >
         <div>
-          <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--sap-text-primary)' }}>{tile.title}</div>
-          {tile.subtitle && <div style={{ fontSize: '11px', color: 'var(--sap-text-secondary)' }}>{tile.subtitle}</div>}
+          <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--xap-text-primary)' }}>{tile.title}</div>
+          {tile.subtitle && <div style={{ fontSize: '11px', color: 'var(--xap-text-secondary)' }}>{tile.subtitle}</div>}
         </div>
         <div>
           <div style={{ display: 'flex', alignItems: 'flex-end', gap: '4px' }}>
             <span style={{ fontSize: '30px', fontWeight: 300, color: statusColor, lineHeight: 1 }}>
               {tile.numericValue}
             </span>
-            <span style={{ fontSize: '13px', color: 'var(--sap-text-secondary)', paddingBottom: '3px' }}>
+            <span style={{ fontSize: '13px', color: 'var(--xap-text-secondary)', paddingBottom: '3px' }}>
               {tile.numericUnit}
             </span>
             <span style={{ fontSize: '18px', color: statusColor, paddingBottom: '3px' }}>{trendIcon}</span>
@@ -142,7 +142,7 @@ export default function Home() {
 
   if (visibleGroups.length === 0) {
     return (
-      <div style={{ padding: '40px 24px', textAlign: 'center', color: 'var(--sap-text-secondary)' }}>
+      <div style={{ padding: '40px 24px', textAlign: 'center', color: 'var(--xap-text-secondary)' }}>
         <div style={{ fontSize: '40px', marginBottom: '12px' }}>🏠</div>
         <div style={{ fontSize: '16px', marginBottom: '8px' }}>No apps in this area yet</div>
         <div style={{ fontSize: '13px' }}>Select a different tab to explore available apps.</div>
@@ -162,7 +162,7 @@ export default function Home() {
             <h2 style={{
               fontSize: '14px',
               fontWeight: 600,
-              color: 'var(--sap-text-secondary)',
+              color: 'var(--xap-text-secondary)',
               marginBottom: '10px',
               textTransform: 'uppercase',
               letterSpacing: '0.5px'

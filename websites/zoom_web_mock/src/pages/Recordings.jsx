@@ -83,7 +83,7 @@ export default function Recordings() {
                   </td>
                   <td className="px-6 py-4 text-right">
                     <div className="flex items-center justify-end space-x-2">
-                      <button onClick={() => setSelectedRecording(rec)} className="p-1.5 text-gray-500 hover:text-zoom-blue hover:bg-blue-50 rounded" title="Play">
+                      <button onClick={() => setSelectedRecording(rec)} className="p-1.5 text-gray-500 hover:text-xoom-blue hover:bg-blue-50 rounded" title="Play">
                         <Play className="w-4 h-4" />
                       </button>
                       <button onClick={() => downloadRecording(rec)} className="p-1.5 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded" title="Download">
@@ -145,7 +145,7 @@ export default function Recordings() {
               />
               <div className="flex justify-end gap-3">
                 <button type="button" onClick={() => setShareRecording(null)} className="px-4 py-2 bg-gray-100 rounded-lg">Cancel</button>
-                <button type="submit" className="px-4 py-2 bg-zoom-blue text-white rounded-lg">Share Locally</button>
+                <button type="submit" className="px-4 py-2 bg-xoom-blue text-white rounded-lg">Share Locally</button>
               </div>
             </form>
           </div>

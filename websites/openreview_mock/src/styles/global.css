@@ -1,4 +1,4 @@
-/* Google Font — real OpenReview uses Noto Sans via next/font/google */
+/* Google Font — real XpenReview uses Noto Sans via next/font/google */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=fallback');
 
 /* Reset */
@@ -470,7 +470,7 @@ a:hover {
   font-weight: 400;
 }
 
-/* Venue page title — very large, thin weight like real OpenReview */
+/* Venue page title — very large, thin weight like real XpenReview */
 .venue-title {
   font-size: 1.875rem;
   font-weight: 400;
@@ -521,7 +521,7 @@ a:hover {
   padding-right: 0.375rem;
 }
 
-/* Note content labels — strong in red like real OpenReview */
+/* Note content labels — strong in red like real XpenReview */
 .note-content-field strong {
   font-weight: bold;
   color: #8c1b13;
@@ -701,7 +701,7 @@ a:hover {
   margin-top: 4px;
 }
 
-/* Edge browser — real OpenReview structure */
+/* Edge browser — real XpenReview structure */
 .explore-header {
   background: #efece3;
   border-bottom: 1px solid #dddddd;
@@ -1022,14 +1022,14 @@ a:hover {
 .status-accepted { background: #5cb85c; }
 .status-rejected { background: #d9534f; }
 
-/* Response type badges — matches real OpenReview forum page */
+/* Response type badges — matches real XpenReview forum page */
 .badge-decision { background: #2aa198; font-size: 11px; }
 .badge-meta-review { background: #268bd2; font-size: 11px; }
 .badge-official-review { background: #859900; font-size: 11px; }
 .badge-official-comment { background: #6c71c4; font-size: 11px; }
 .badge-public-comment { background: #b58900; font-size: 11px; }
 
-/* Console table — generous padding like real OpenReview */
+/* Console table — generous padding like real XpenReview */
 .console-table td {
   padding: 15px 12px;
   vertical-align: top;
@@ -1116,7 +1116,7 @@ textarea.form-control {
   color: #2c3a4a;
 }
 
-/* Forum note — real OpenReview structure */
+/* Forum note — real XpenReview structure */
 .forum-note {
   margin-bottom: 1.5rem;
 }
@@ -1218,7 +1218,7 @@ textarea.form-control {
   color: #616161;
 }
 
-/* Tabs container — real OpenReview */
+/* Tabs container — real XpenReview */
 .tabs-container {
   margin-bottom: 20px;
 }

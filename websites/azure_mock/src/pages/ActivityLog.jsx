@@ -43,7 +43,7 @@ export default function ActivityLog() {
       </div>
 
       <div className="card" style={{ padding: 0 }}>
-        <table className="azure-table">
+        <table className="xzure-table">
           <thead>
             <tr><th>Operation</th><th>Status</th><th>Time</th><th>Resource group</th><th>Resource</th><th>Initiated by</th></tr>
           </thead>
@@ -59,7 +59,7 @@ export default function ActivityLog() {
               </tr>
             ))}
             {filtered.length === 0 && (
-              <tr><td colSpan={6} style={{ textAlign: 'center', padding: '24px', color: 'var(--azure-text-secondary)' }}>No activity log entries found</td></tr>
+              <tr><td colSpan={6} style={{ textAlign: 'center', padding: '24px', color: 'var(--xzure-text-secondary)' }}>No activity log entries found</td></tr>
             )}
           </tbody>
         </table>

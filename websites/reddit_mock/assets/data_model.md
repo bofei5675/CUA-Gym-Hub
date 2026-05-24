@@ -1,4 +1,4 @@
-# Reddit Mock — Data Model
+# Xeddit Mock — Data Model
 
 > For `src/lib/initialData.js` `createInitialData()` structure.
 > All entity types, fields, relationships, and realistic example values.

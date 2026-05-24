@@ -764,7 +764,7 @@ export function createInitialData() {
   const integrations = [
     { id: 'int_001', name: 'GitHub', slug: 'github', icon: 'github', description: 'Deploy from GitHub repositories with automatic deployments on push', installedAt: '2023-06-15T10:00:00Z', status: 'active', configuredProjects: ['prj_001', 'prj_002', 'prj_004', 'prj_005'] },
     { id: 'int_002', name: 'GitLab', slug: 'gitlab', icon: 'gitlab', description: 'Deploy from GitLab repositories and self-hosted GitLab instances', installedAt: '2024-05-15T09:00:00Z', status: 'active', configuredProjects: ['prj_003'] },
-    { id: 'int_003', name: 'Vercel Analytics', slug: 'analytics', icon: 'analytics', description: 'Privacy-friendly analytics with real user monitoring', installedAt: '2024-02-10T11:00:00Z', status: 'active', configuredProjects: ['prj_001', 'prj_004'] },
+    { id: 'int_003', name: 'Xercel Analytics', slug: 'analytics', icon: 'analytics', description: 'Privacy-friendly analytics with real user monitoring', installedAt: '2024-02-10T11:00:00Z', status: 'active', configuredProjects: ['prj_001', 'prj_004'] },
     { id: 'int_004', name: 'Sentry', slug: 'sentry', icon: 'sentry', description: 'Error tracking and performance monitoring for your applications', installedAt: '2024-08-20T14:00:00Z', status: 'active', configuredProjects: ['prj_001'] }
   ];
 

@@ -4,7 +4,7 @@ import { generateId } from '../utils/helpers';
 
 const StoreContext = createContext();
 
-const INITIAL_KEY_PREFIX = 'notion-clone-initialState';
+const INITIAL_KEY_PREFIX = 'xotion-clone-initialState';
 const MAX_UNDO = 50;
 
 // Actions

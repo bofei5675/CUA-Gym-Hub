@@ -1,12 +1,12 @@
-# Design System Inspired by Vercel
+# Design System Inspired by Xercel
 
 ## 1. Visual Theme & Atmosphere
 
-Vercel's website is the visual thesis of developer infrastructure made invisible — a design system so restrained it borders on philosophical. The page is overwhelmingly white (`#ffffff`) with near-black (`#171717`) text, creating a gallery-like emptiness where every element earns its pixel. This isn't minimalism as decoration; it's minimalism as engineering principle. The Geist design system treats the interface like a compiler treats code — every unnecessary token is stripped away until only structure remains.
+Xercel's website is the visual thesis of developer infrastructure made invisible — a design system so restrained it borders on philosophical. The page is overwhelmingly white (`#ffffff`) with near-black (`#171717`) text, creating a gallery-like emptiness where every element earns its pixel. This isn't minimalism as decoration; it's minimalism as engineering principle. The Geist design system treats the interface like a compiler treats code — every unnecessary token is stripped away until only structure remains.
 
 The custom Geist font family is the crown jewel. Geist Sans uses aggressive negative letter-spacing (-2.4px to -2.88px at display sizes), creating headlines that feel compressed, urgent, and engineered — like code that's been minified for production. At body sizes, the tracking relaxes but the geometric precision persists. Geist Mono completes the system as the monospace companion for code, terminal output, and technical labels. Both fonts enable OpenType `"liga"` (ligatures) globally, adding a layer of typographic sophistication that rewards close reading.
 
-What distinguishes Vercel from other monochrome design systems is its shadow-as-border philosophy. Instead of traditional CSS borders, Vercel uses `box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.08)` — a zero-offset, zero-blur, 1px-spread shadow that creates a border-like line without the box model implications. This technique allows borders to exist in the shadow layer, enabling smoother transitions, rounded corners without clipping, and a subtler visual weight than traditional borders. The entire depth system is built on layered, multi-value shadow stacks where each layer serves a specific purpose: one for the border, one for soft elevation, one for ambient depth.
+What distinguishes Xercel from other monochrome design systems is its shadow-as-border philosophy. Instead of traditional CSS borders, Xercel uses `box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.08)` — a zero-offset, zero-blur, 1px-spread shadow that creates a border-like line without the box model implications. This technique allows borders to exist in the shadow layer, enabling smoother transitions, rounded corners without clipping, and a subtler visual weight than traditional borders. The entire depth system is built on layered, multi-value shadow stacks where each layer serves a specific purpose: one for the border, one for soft elevation, one for ambient depth.
 
 **Key Characteristics:**
 - Geist Sans with extreme negative letter-spacing (-2.4px to -2.88px at display) — text as compressed infrastructure
@@ -21,7 +21,7 @@ What distinguishes Vercel from other monochrome design systems is its shadow-as-
 ## 2. Color Palette & Roles
 
 ### Primary
-- **Vercel Black** (`#171717`): Primary text, headings, dark surface backgrounds. Not pure black — the slight warmth prevents harshness.
+- **Xercel Black** (`#171717`): Primary text, headings, dark surface backgrounds. Not pure black — the slight warmth prevents harshness.
 - **Pure White** (`#ffffff`): Page background, card surfaces, button text on dark.
 - **True Black** (`#000000`): Secondary use, `--geist-console-text-color-default`, used in specific console/code contexts.
 
@@ -146,7 +146,7 @@ What distinguishes Vercel from other monochrome design systems is its shadow-as-
 
 ### Navigation
 - Clean horizontal nav on white, sticky
-- Vercel logotype left-aligned, 262x52px
+- Xercel logotype left-aligned, 262x52px
 - Links: Geist 14px weight 500, `#171717` text
 - Active: weight 600 or underline
 - CTA: dark pill buttons ("Start Deploying", "Contact Sales")
@@ -165,7 +165,7 @@ What distinguishes Vercel from other monochrome design systems is its shadow-as-
 - Three-step horizontal pipeline: Develop → Preview → Ship
 - Each step has its own accent color: Blue → Pink → Red
 - Connected with lines/arrows
-- The visual metaphor for Vercel's core value proposition
+- The visual metaphor for Xercel's core value proposition
 
 **Trust Bar / Logo Grid**
 - Company logos (Perplexity, ChatGPT, Cursor, etc.) in grayscale
@@ -193,7 +193,7 @@ What distinguishes Vercel from other monochrome design systems is its shadow-as-
 - Code/dashboard screenshots as full-width or contained with border
 
 ### Whitespace Philosophy
-- **Gallery emptiness**: Massive vertical padding between sections (80px–120px+). The white space IS the design — it communicates that Vercel has nothing to prove and nothing to hide.
+- **Gallery emptiness**: Massive vertical padding between sections (80px–120px+). The white space IS the design — it communicates that Xercel has nothing to prove and nothing to hide.
 - **Compressed text, expanded space**: The aggressive negative letter-spacing on headlines is counterbalanced by generous surrounding whitespace. The text is dense; the space around it is vast.
 - **Section rhythm**: White sections alternate with white sections — there's no color variation between sections. Separation comes from borders (shadow-borders) and spacing alone.
 
@@ -219,7 +219,7 @@ What distinguishes Vercel from other monochrome design systems is its shadow-as-
 | Full Card (Level 3) | Ring + Subtle + `rgba(0,0,0,0.04) 0px 8px 8px -8px` + inner `#fafafa` ring | Featured cards, highlighted panels |
 | Focus (Accessibility) | `2px solid hsla(212, 100%, 48%, 1)` outline | Keyboard focus on all interactive elements |
 
-**Shadow Philosophy**: Vercel has arguably the most sophisticated shadow system in modern web design. Rather than using shadows for elevation in the traditional Material Design sense, Vercel uses multi-value shadow stacks where each layer has a distinct architectural purpose: one creates the "border" (0px spread, 1px), another adds ambient softness (2px blur), another handles depth at distance (8px blur with negative spread), and an inner ring (`#fafafa`) creates the subtle highlight that makes the card "glow" from within. This layered approach means cards feel built, not floating.
+**Shadow Philosophy**: Xercel has arguably the most sophisticated shadow system in modern web design. Rather than using shadows for elevation in the traditional Material Design sense, Xercel uses multi-value shadow stacks where each layer has a distinct architectural purpose: one creates the "border" (0px spread, 1px), another adds ambient softness (2px blur), another handles depth at distance (8px blur with negative spread), and an inner ring (`#fafafa`) creates the subtle highlight that makes the card "glow" from within. This layered approach means cards feel built, not floating.
 
 ### Decorative Depth
 - Hero gradient: soft, pastel multi-color gradient wash behind hero content (barely visible, atmospheric)
@@ -286,9 +286,9 @@ What distinguishes Vercel from other monochrome design systems is its shadow-as-
 ## 9. Agent Prompt Guide
 
 ### Quick Color Reference
-- Primary CTA: Vercel Black (`#171717`)
+- Primary CTA: Xercel Black (`#171717`)
 - Background: Pure White (`#ffffff`)
-- Heading text: Vercel Black (`#171717`)
+- Heading text: Xercel Black (`#171717`)
 - Body text: Gray 600 (`#4d4d4d`)
 - Border (shadow): `rgba(0, 0, 0, 0.08) 0px 0px 0px 1px`
 - Link: Link Blue (`#0072f5`)
@@ -306,5 +306,5 @@ What distinguishes Vercel from other monochrome design systems is its shadow-as-
 2. Letter-spacing scales with font size: -2.4px at 48px, -1.28px at 32px, -0.96px at 24px, normal at 14px
 3. Three weights only: 400 (read), 500 (interact), 600 (announce)
 4. Color is functional, never decorative — workflow colors (Red/Pink/Blue) mark pipeline stages only
-5. The inner `#fafafa` ring in card shadows is what gives Vercel cards their subtle inner glow
+5. The inner `#fafafa` ring in card shadows is what gives Xercel cards their subtle inner glow
 6. Geist Mono uppercase for technical labels, Geist Sans for everything else

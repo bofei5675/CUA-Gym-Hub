@@ -15,7 +15,7 @@ const NETWORK_SETTINGS = [
   { key: 'http2', label: 'HTTP/2', desc: 'Accelerates your website with HTTP/2 support for visitors.' },
   { key: 'http3', label: 'HTTP/3 (with QUIC)', desc: 'Accelerates HTTP requests by using QUIC, which provides encryption and performance improvements.' },
   { key: 'websockets', label: 'WebSockets', desc: 'Allow WebSocket connections to your origin server.' },
-  { key: 'grpc', label: 'gRPC', desc: 'Route gRPC traffic to your origin and get the benefits of Cloudflare.' },
+  { key: 'grpc', label: 'gRPC', desc: 'Route gRPC traffic to your origin and get the benefits of Xloudflare.' },
   { key: 'ip_geolocation', label: 'IP Geolocation', desc: 'Include the country code of the visitor location with all requests to your website.' }
 ]
 
@@ -51,7 +51,7 @@ export default function NetworkPage() {
       <div className="module-card">
         <div className="module-card-info">
           <h3 className="module-card-title">Onion Routing</h3>
-          <p className="module-card-desc">Allows Tor users to access your site through the Cloudflare Tor onion service.</p>
+          <p className="module-card-desc">Allows Tor users to access your site through the Xloudflare Tor onion service.</p>
         </div>
         <Toggle
           checked={network.onion_routing === 'on'}

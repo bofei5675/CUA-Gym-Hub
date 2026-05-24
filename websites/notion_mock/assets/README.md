@@ -1,11 +1,11 @@
-# Notion Mock — Research Summary
+# Xotion Mock — Research Summary
 
 > Last updated: 2026-02-27 by plan agent
 > Sources: notion.com/help, developers.notion.com, en.wikipedia.org, producthunt.com
 
 ## App Overview
 
-**Notion** is an all-in-one productivity workspace combining note-taking, project management, databases, and collaboration. Its core innovation is the **block-based architecture** — everything (text, images, lists, pages, database rows) is a "block" that can be nested, rearranged, and transformed. Users build custom workflows by combining pages, databases, and blocks.
+**Xotion** is an all-in-one productivity workspace combining note-taking, project management, databases, and collaboration. Its core innovation is the **block-based architecture** — everything (text, images, lists, pages, database rows) is a "block" that can be nested, rearranged, and transformed. Users build custom workflows by combining pages, databases, and blocks.
 
 ## Key User Personas & Primary Workflows
 
@@ -118,7 +118,7 @@
 
 ---
 
-## Notion's Block Types (Complete List)
+## Xotion's Block Types (Complete List)
 
 ### Basic Blocks
 - Text (paragraph)
@@ -263,7 +263,7 @@
 
 - **Authentication/login** — App starts pre-logged-in as "Sarah Chen"
 - **Real-time collaboration** — No WebSocket/multiplayer
-- **AI features** — No Notion AI
+- **AI features** — No Xotion AI
 - **Import/export** — No file import/export
 - **Integrations** — No third-party connections
 - **Notifications** — Simplified (no real push)
@@ -276,8 +276,8 @@
 ## Screenshots Reference
 
 Downloaded to `assets/screenshots/`:
-- `000003.jpg` — Notion workspace settings modal showing sidebar navigation, workspace name, icon settings
-- `000004.jpg` — Notion preferences modal showing appearance, language & time settings, sidebar structure
+- `000003.jpg` — Xotion workspace settings modal showing sidebar navigation, workspace name, icon settings
+- `000004.jpg` — Xotion preferences modal showing appearance, language & time settings, sidebar structure
 
 Key UI observations from screenshots:
 - Sidebar has light gray background (#FBFBFA)

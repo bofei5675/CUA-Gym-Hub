@@ -48,7 +48,7 @@ export const BulkEditModal: React.FC<BulkEditModalProps> = ({ selectedIssueIds, 
                 setFieldToUpdate(e.target.value as any);
                 setValue(''); // Reset value when field changes
               }}
-              className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-jira-blue focus:border-transparent outline-none"
+              className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-xira-blue focus:border-transparent outline-none"
             >
               <option value="status">Status</option>
               <option value="assigneeId">Assignee</option>
@@ -120,7 +120,7 @@ export const BulkEditModal: React.FC<BulkEditModalProps> = ({ selectedIssueIds, 
             <button 
               onClick={handleSave} 
               disabled={!value}
-              className="px-4 py-2 bg-jira-blue text-white rounded font-medium hover:bg-blue-700 disabled:opacity-50"
+              className="px-4 py-2 bg-xira-blue text-white rounded font-medium hover:bg-blue-700 disabled:opacity-50"
             >
               Confirm Change
             </button>

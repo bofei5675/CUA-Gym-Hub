@@ -1,10 +1,10 @@
-# DocuSign Mock — Research Summary
+# XocuSign Mock — Research Summary
 
 ## App Overview
 
-**DocuSign** is the world's leading electronic signature platform (61% market share, 1.7M+ customers). It allows users to prepare documents, place signature/form fields, send them to recipients for signing, and track envelope status through completion. The core product is **DocuSign eSignature**.
+**XocuSign** is the world's leading electronic signature platform (61% market share, 1.7M+ customers). It allows users to prepare documents, place signature/form fields, send them to recipients for signing, and track envelope status through completion. The core product is **XocuSign eSignature**.
 
-**Our mock target**: The DocuSign eSignature web application at `app.docusign.com` — the sender/manager dashboard experience, plus a simulated signing experience for recipients.
+**Our mock target**: The XocuSign eSignature web application at `app.docusign.com` — the sender/manager dashboard experience, plus a simulated signing experience for recipients.
 
 ---
 
@@ -32,7 +32,7 @@
 ## UI Layout (Based on 2024 Interface)
 
 ### Global Header (Top Bar)
-- **Left**: DocuSign logo + branding
+- **Left**: XocuSign logo + branding
 - **Center**: Navigation tabs: **Home** | **Agreements** (renamed from "Manage" in May 2024) | **Templates** | **Reports**
 - **Right**: Help (?) icon, user avatar + name dropdown
 
@@ -46,7 +46,7 @@
     - Expiring Soon (red triangle icon)
     - Completed (green check icon)
   - **Center — WHAT'S NEW**: Feature announcements with "More Info" links
-  - **Right — MY DOCUSIGN ID**: User profile card with avatar, name, email, title, company, member-since date, and signature preview with "Edit" link
+  - **Right — MY XOCUSIGN ID**: User profile card with avatar, name, email, title, company, member-since date, and signature preview with "Edit" link
 - **Footer**: Environmental impact, feedback, help & support links
 
 ### Agreements Page (`/agreements`)
@@ -91,7 +91,7 @@
 - **Top Bar**: Back button, document name, "Save & Close" button, "SEND" button
 
 ### Signing Experience (`/sign/:id`)
-- **Header**: Blue bar with DocuSign branding, document name, "Signing as: [Name]", "FINISH" button
+- **Header**: Blue bar with XocuSign branding, document name, "Signing as: [Name]", "FINISH" button
 - **Top Notification Bar**: Yellow "Please review the document and complete all required fields"
 - **Document View**: Full document with highlighted fields belonging to current signer
 - **Field Interactions**:
@@ -108,7 +108,7 @@
 ## Feature Inventory
 
 ### P0 — Core Shell (Must-have for app to render)
-1. Global header with DocuSign branding and navigation tabs
+1. Global header with XocuSign branding and navigation tabs
 2. React Router with all main routes
 3. State management with AppContext + dataManager
 4. Session isolation (POST /post, GET /state, GET /go)
@@ -147,7 +147,7 @@
 - Mobile responsive design (desktop only)
 - Real PDF rendering (use placeholder document images)
 - ID verification / authentication methods (SMS, access codes)
-- DocuSign Connect (webhook/API) features
+- XocuSign Connect (webhook/API) features
 - Intelligent Agreement Management (IAM) features
 
 ---
@@ -156,21 +156,21 @@
 
 | File | Description |
 |------|-------------|
-| `screenshots/000001.jpg` | Home page with nav tabs (HOME, MANAGE, TEMPLATES, REPORTS), hero banner, overview stats, My DocuSign ID card |
+| `screenshots/000001.jpg` | Home page with nav tabs (HOME, MANAGE, TEMPLATES, REPORTS), hero banner, overview stats, My XocuSign ID card |
 | `screenshots/000002.jpg` | Home page variant: Overview with counts (Action Required: 3, Waiting: 8, Completed: 7), user profile card |
 | `screenshots/000003.jpg` | Newer eSignature interface: top nav with Home/Manage/Templates/Reports/Settings, stats bar, document drop zone |
-| `screenshots/000004.jpg` | Branded DocuSign: same layout with OVERVIEW, WHAT'S NEW, MY DOCUSIGN ID sections |
+| `screenshots/000004.jpg` | Branded XocuSign: same layout with OVERVIEW, WHAT'S NEW, MY XOCUSIGN ID sections |
 | `screenshots/000005.jpg` | Envelope preparation: uploaded document cards, Add Recipients section with name/email/role fields, signing order numbers |
 
 ---
 
 ## Sources
-- [DocuSign Wikipedia](https://en.wikipedia.org/wiki/Docusign)
-- [DocuSign eSignature Features](https://www.docusign.com/products/electronic-signature/features)
-- [DocuSign How eSignature Works](https://www.docusign.com/blog/how-does-docusign-esignature-work)
-- [UW DocuSign UI Changes May 2024](https://it.uw.edu/service-news/esignatures-docusign-user-interface-changes-may-2024/)
-- [SJSU DocuSign UI Refresh](https://blogs.sjsu.edu/informationtechnology/2024/06/06/sjsu-it-tips-docusign-ui-refresh/)
-- [DocuSign Envelope Status Codes](https://developers.docusign.com/docs/esign-rest-api/esign101/concepts/envelopes/status-codes/)
-- [DocuSign Recipient Types](https://developers.docusign.com/docs/esign-rest-api/esign101/concepts/recipients/)
-- [DocuSign Folders Concepts](https://developers.docusign.com/docs/esign-rest-api/esign101/concepts/envelopes/folders/)
-- [DocuSign Envelope Recipients API](https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/enveloperecipients/)
+- [XocuSign Wikipedia](https://en.wikipedia.org/wiki/Docusign)
+- [XocuSign eSignature Features](https://www.docusign.com/products/electronic-signature/features)
+- [XocuSign How eSignature Works](https://www.docusign.com/blog/how-does-xocusign-esignature-work)
+- [UW XocuSign UI Changes May 2024](https://it.uw.edu/service-news/esignatures-xocusign-user-interface-changes-may-2024/)
+- [SJSU XocuSign UI Refresh](https://blogs.sjsu.edu/informationtechnology/2024/06/06/sjsu-it-tips-xocusign-ui-refresh/)
+- [XocuSign Envelope Status Codes](https://developers.docusign.com/docs/esign-rest-api/esign101/concepts/envelopes/status-codes/)
+- [XocuSign Recipient Types](https://developers.docusign.com/docs/esign-rest-api/esign101/concepts/recipients/)
+- [XocuSign Folders Concepts](https://developers.docusign.com/docs/esign-rest-api/esign101/concepts/envelopes/folders/)
+- [XocuSign Envelope Recipients API](https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/enveloperecipients/)

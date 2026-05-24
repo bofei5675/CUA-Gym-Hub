@@ -1,4 +1,4 @@
-# Zoom Web Mock — Data Model
+# Xoom Web Mock — Data Model
 
 > Used by `src/lib/initialData.js` and `src/context/StoreContext.jsx`
 > Dev agent: implement `createInitialData()` returning the structure below.

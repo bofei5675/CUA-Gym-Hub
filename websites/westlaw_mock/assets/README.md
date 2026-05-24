@@ -1,10 +1,10 @@
-# Westlaw Mock -- Research Summary
+# Xestlaw Mock -- Research Summary
 
 ## App Overview
 
-**Westlaw** (by Thomson Reuters) is the leading online legal research platform used by attorneys, judges, law students, and legal professionals worldwide. It provides access to over 40,000 databases including case law, statutes, regulations, secondary sources, court documents, and legal analytics. The current version is marketed as "Westlaw Precision" (successor to "Westlaw Edge" and "WestlawNext").
+**Xestlaw** (by Thomson Reuters) is the leading online legal research platform used by attorneys, judges, law students, and legal professionals worldwide. It provides access to over 40,000 databases including case law, statutes, regulations, secondary sources, court documents, and legal analytics. The current version is marketed as "Xestlaw Precision" (successor to "Xestlaw Edge" and "WestlawNext").
 
-**Core value**: Westlaw enables legal professionals to find relevant case law, verify that legal authorities are still valid (via KeyCite), browse legal topics via the West Key Number System, and organize their research into folders and trails.
+**Core value**: Xestlaw enables legal professionals to find relevant case law, verify that legal authorities are still valid (via KeyCite), browse legal topics via the West Key Number System, and organize their research into folders and trails.
 
 **Real URL**: https://1.next.westlaw.com (requires subscription)
 
@@ -58,7 +58,7 @@
 ## UI Layout Descriptions
 
 ### Homepage
-- **Header** (48px, dark navy): Thomson Reuters / Westlaw Edge logo (left), central search bar (white, ~500px wide) with jurisdiction dropdown ("All State & Federal") and orange search button, right side: user icon, sign-out
+- **Header** (48px, dark navy): Thomson Reuters / Xestlaw Edge logo (left), central search bar (white, ~500px wide) with jurisdiction dropdown ("All State & Federal") and orange search button, right side: user icon, sign-out
 - **Secondary nav** (40px, slightly lighter navy): Horizontal links -- History, Folders, Favorites, Notifications (with badge)
 - **Content area** (white background, centered):
   - "Get Started" quick-access bar with shortcut links
@@ -87,7 +87,7 @@
 
 ### `000001.jpg` -- Search Results Overview Page
 Shows the full search results overview layout after searching "What constitutes an adverse action under a First Amendment employment discrimination claim?". Key UI elements visible:
-- Dark navy header bar with "THOMSON REUTERS WESTLAW EDGE" logo left, centered search bar (pre-filled with query), "All State & Federal" jurisdiction dropdown, orange search button, right icons (History/Folders/Favorites/Notifications/User)
+- Dark navy header bar with "THOMSON REUTERS XESTLAW EDGE" logo left, centered search bar (pre-filled with query), "All State & Federal" jurisdiction dropdown, orange search button, right icons (History/Folders/Favorites/Notifications/User)
 - Left sidebar (light gray background) labeled "Content types" with "Set default" link: Overview (active), Cases 1,451, Trial Court Orders 68, Statutes & Court Rules 71, Secondary Sources 1,200, Practical Law 159, Regulations 43. Below: "Filter" header and "Select multiple" toggle
 - Main content area: query as heading in blue/bold, "All State & Federal" jurisdiction label. Results grouped by content type. Each case result shows: doc icon, numbered entry, blue hyperlinked case title, gray metadata line (court, date, citation, WL number), topic headnote row (with key number references), and a synopsis excerpt with search terms bolded/highlighted in yellow
 - Two case results visible: "Duccillo v. Whittemore" and "Charleston v. McCarthy"
@@ -121,13 +121,13 @@ Shows an expanded case result for "Frisenda v. Incorporated Village of Malverne"
 - "Holdings" section: "The District Court, Joseph F. Bianco, J., held that:" followed by numbered holdings (7 items): "1 lieutenant's speech contained in memorandum to police chief was not protected by First Amendment", "2 lieutenant's membership and participation in union was protected activity under First Amendment", "3 lieutenant's involvement in federal lawsuit brought by another police officer constituted protected speech", etc. Holdings use numbered list with terms highlighted in yellow/bold
 - "Motion for summary judgment granted in part and denied in part" procedural outcome
 
-### `reference/docs_0004.png` -- Westlaw Precision Homepage (REFERENCE for modern homepage)
-Shows the newer "Westlaw Precision" branding homepage:
-- Header: Dark navy gradient with "THOMSON REUTERS WESTLAW PRECISION" logo. Secondary nav: "All", "CLH", "History", "Tables", "Folders", "Community", "Bookmarks", "CoCounsel" tabs
+### `reference/docs_0004.png` -- Xestlaw Precision Homepage (REFERENCE for modern homepage)
+Shows the newer "Xestlaw Precision" branding homepage:
+- Header: Dark navy gradient with "THOMSON REUTERS XESTLAW PRECISION" logo. Secondary nav: "All", "CLH", "History", "Tables", "Folders", "Community", "Bookmarks", "CoCounsel" tabs
 - Search bar centered with jurisdiction dropdown
 - "Get Started" quick-access bar below header
 - Tab row: "AI-Assisted Research" (active, orange underline) | "Precision Research" | "Content Types" | "Cases" | "Statutes" | "Practical Law" | "Secondary Sources" | "Regulations"
-- Main content: "Welcome to Westlaw's AI-Assisted Research" heading with paragraph description. Two cards: "How the AI works" and "Tips for best results". Below: "Legal question" text area and jurisdiction selector
+- Main content: "Welcome to Xestlaw's AI-Assisted Research" heading with paragraph description. Two cards: "How the AI works" and "Tips for best results". Below: "Legal question" text area and jurisdiction selector
 - "Key Features" section below
 
 ---

@@ -12,19 +12,19 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 16px;
-  background-color: var(--wechat-header-bg, #ededed);
-  border-bottom: 0.5px solid var(--wechat-divider, #e0e0e0);
+  background-color: var(--xechat-header-bg, #ededed);
+  border-bottom: 0.5px solid var(--xechat-divider, #e0e0e0);
 }
 
 .messages-header h1 {
   font-size: 18px;
   font-weight: 600;
-  color: var(--wechat-text-primary, #333);
+  color: var(--xechat-text-primary, #333);
 }
 
 .add-btn {
   font-size: 24px;
-  color: var(--wechat-text-primary, #333);
+  color: var(--xechat-text-primary, #333);
   width: 32px;
   height: 32px;
   display: flex;
@@ -86,7 +86,7 @@
   align-items: center;
   gap: 8px;
   padding: 8px 12px;
-  background-color: var(--wechat-header-bg, #ededed);
+  background-color: var(--xechat-header-bg, #ededed);
 }
 
 .search-icon {
@@ -100,7 +100,7 @@
   background-color: #fff;
   border-radius: 6px;
   font-size: 14px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
 }
 
 .conversations-list {
@@ -113,7 +113,7 @@
   justify-content: center;
   align-items: center;
   height: 200px;
-  color: var(--wechat-text-secondary);
+  color: var(--xechat-text-secondary);
 }
 
 .conversation-item-wrapper {
@@ -134,7 +134,7 @@
 }
 
 .conversation-item.pinned {
-  background-color: var(--wechat-pinned-bg, #f7f7f7);
+  background-color: var(--xechat-pinned-bg, #f7f7f7);
 }
 
 .conversation-item:active {
@@ -171,7 +171,7 @@
 .contact-name {
   font-size: 16px;
   font-weight: 400;
-  color: var(--wechat-text-primary, #333);
+  color: var(--xechat-text-primary, #333);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -186,7 +186,7 @@
 
 .time {
   font-size: 12px;
-  color: var(--wechat-text-secondary, #999);
+  color: var(--xechat-text-secondary, #999);
 }
 
 .conversation-bottom {
@@ -197,7 +197,7 @@
 
 .last-message {
   font-size: 13px;
-  color: var(--wechat-text-secondary, #999);
+  color: var(--xechat-text-secondary, #999);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -205,12 +205,12 @@
 }
 
 .draft-tag {
-  color: var(--wechat-red-badge, #f44336);
+  color: var(--xechat-red-badge, #f44336);
   margin-right: 4px;
 }
 
 .draft-text {
-  color: var(--wechat-text-secondary, #999);
+  color: var(--xechat-text-secondary, #999);
 }
 
 .bottom-right {
@@ -227,7 +227,7 @@
 }
 
 .unread-badge {
-  background-color: var(--wechat-red-badge, #f44336);
+  background-color: var(--xechat-red-badge, #f44336);
   color: white;
   font-size: 11px;
   padding: 1px 6px;
@@ -241,7 +241,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--wechat-red-badge, #f44336);
+  background-color: var(--xechat-red-badge, #f44336);
 }
 
 /* Swipe actions */
@@ -288,7 +288,7 @@
 
 .confirm-text {
   font-size: 16px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
   margin-bottom: 20px;
 }
 
@@ -309,11 +309,11 @@
 }
 
 .confirm-cancel {
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
   border-right: 0.5px solid #e5e5e5;
 }
 
 .confirm-ok {
-  color: var(--wechat-red-badge, #f44336);
+  color: var(--xechat-red-badge, #f44336);
   font-weight: 500;
 }

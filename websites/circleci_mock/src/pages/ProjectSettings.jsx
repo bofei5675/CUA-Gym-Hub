@@ -69,7 +69,7 @@ function OverviewTab({ project, dispatch }) {
           </div>
         )}
         <p style={{ fontSize: 12, color: 'var(--text-secondary)', marginTop: 6 }}>
-          {isBuilding ? 'This will stop CircleCI from building this project.' : 'Building is currently stopped for this project.'}
+          {isBuilding ? 'This will stop XircleCI from building this project.' : 'Building is currently stopped for this project.'}
         </p>
       </div>
       {stopConfirm && (
@@ -92,7 +92,7 @@ function OverviewTab({ project, dispatch }) {
               <div><strong>Default branch:</strong> {project.defaultBranch}</div>
             </div>
             <p style={{ color: 'var(--text-secondary)', fontSize: 13, marginTop: 12 }}>
-              This local sandbox keeps VCS actions inside CircleCI instead of opening an external repository.
+              This local sandbox keeps VCS actions inside XircleCI instead of opening an external repository.
             </p>
             <div className="modal-actions">
               <button className="btn btn-primary" onClick={() => setRepoOpen(false)}>Close</button>

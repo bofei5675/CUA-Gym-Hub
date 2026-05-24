@@ -137,7 +137,7 @@ What makes Uber's design truly distinctive is its use of full-bleed photography 
 - Sticky top navigation with white background
 - Logo: Uber wordmark/icon at 24x24px in black
 - Links: UberMoveText at 14-18px, weight 500, in Uber Black
-- Pill-shaped nav chips with Chip Gray (`#efefef`) background for category navigation ("Ride", "Drive", "Business", "Uber Eats")
+- Pill-shaped nav chips with Chip Gray (`#efefef`) background for category navigation ("Ride", "Drive", "Business", "Xber Eats")
 - Menu toggle: circular button with 50% border-radius
 - Mobile: hamburger menu pattern
 
@@ -151,7 +151,7 @@ What makes Uber's design truly distinctive is its use of full-bleed photography 
 ### Distinctive Components
 
 **Category Pill Navigation**
-- Horizontal row of pill-shaped buttons for top-level navigation ("Ride", "Drive", "Business", "Uber Eats", "About")
+- Horizontal row of pill-shaped buttons for top-level navigation ("Ride", "Drive", "Business", "Xber Eats", "About")
 - Each pill: Chip Gray background, black text, 999px radius
 - Active state indicated by black background with white text (inversion)
 

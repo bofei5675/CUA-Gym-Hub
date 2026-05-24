@@ -534,7 +534,7 @@ export default function Layout({ children }) {
           <div className="w-7 h-7 bg-qb-green rounded-full flex items-center justify-center text-white font-bold text-xs mr-2 flex-shrink-0">qb</div>
           <div className="flex flex-col leading-tight">
             <span className="text-[10px] text-gray-400 font-semibold tracking-widest uppercase">Intuit</span>
-            <span className="text-[13px] font-bold text-gray-800 -mt-0.5">QuickBooks</span>
+            <span className="text-[13px] font-bold text-gray-800 -mt-0.5">XuickBooks</span>
           </div>
         </div>
 
@@ -637,7 +637,7 @@ export default function Layout({ children }) {
                 <div className="absolute right-0 top-full mt-1 w-64 bg-white border border-gray-200 rounded-lg shadow-lg z-50 p-3">
                   <p className="text-xs font-semibold text-gray-500 uppercase mb-2">Intuit Apps</p>
                   {[
-                    { name: 'QuickBooks', desc: 'Accounting', path: '/' },
+                    { name: 'XuickBooks', desc: 'Accounting', path: '/' },
                     { name: 'Payroll', desc: 'Employee pay', path: '/payroll' },
                     { name: 'Time Tracking', desc: 'Track hours', path: '/projects' },
                     { name: 'Reports', desc: 'Business insights', path: '/reports' },

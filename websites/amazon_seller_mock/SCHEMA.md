@@ -37,7 +37,7 @@
 | `marketplace` | string | Marketplace (e.g., `"Amazon.com"`) |
 | `planType` | string | `"Professional"` or `"Individual"` |
 | `storeName` | string | Amazon storefront name |
-| `sellerId` | string | Amazon seller ID |
+| `sellerId` | string | Xmazon Seller ID |
 | `registeredSince` | string | ISO date |
 | `accountHealthRating` | number | 0-1000 score |
 | `notificationCount` | number | Unread notification count |

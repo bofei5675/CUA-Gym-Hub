@@ -151,7 +151,7 @@ export default function ProductDetails() {
                   <div
                     key={i}
                     onClick={() => setSelectedImage(i)}
-                    className={`aspect-square bg-gray-100 rounded border overflow-hidden cursor-pointer transition-colors ${selectedImage === i ? 'border-ebay-blue border-2' : 'border-gray-200 hover:border-ebay-blue'}`}
+                    className={`aspect-square bg-gray-100 rounded border overflow-hidden cursor-pointer transition-colors ${selectedImage === i ? 'border-xbay-blue border-2' : 'border-gray-200 hover:border-xbay-blue'}`}
                   >
                     <img src={img} alt="" className="w-full h-full object-cover" />
                   </div>
@@ -190,7 +190,7 @@ export default function ProductDetails() {
                       <span className="text-3xl font-bold text-gray-900">${listing.currentBid.toFixed(2)}</span>
                       <button
                         onClick={() => setShowBidHistory(!showBidHistory)}
-                        className="text-sm text-ebay-blue hover:underline flex items-center gap-1"
+                        className="text-sm text-xbay-blue hover:underline flex items-center gap-1"
                       >
                         [{listing.bids.length} bids]
                         {showBidHistory ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
@@ -232,7 +232,7 @@ export default function ProductDetails() {
                             className="flex-1 border border-gray-300 rounded px-3 py-2"
                             placeholder={`Max bid (min $${minBid.toFixed(2)})`}
                           />
-                          <button type="submit" className="bg-ebay-blue text-white px-6 py-2 rounded font-bold hover:bg-blue-700">
+                          <button type="submit" className="bg-xbay-blue text-white px-6 py-2 rounded font-bold hover:bg-blue-700">
                             Place Bid
                           </button>
                         </div>
@@ -255,7 +255,7 @@ export default function ProductDetails() {
                     </div>
                     <button
                       onClick={handleBuyNow}
-                      className="w-full bg-blue-100 text-ebay-blue border border-ebay-blue px-6 py-3 rounded-full font-bold hover:bg-blue-200 transition-colors mb-3"
+                      className="w-full bg-blue-100 text-xbay-blue border border-xbay-blue px-6 py-3 rounded-full font-bold hover:bg-blue-200 transition-colors mb-3"
                     >
                       Buy It Now
                     </button>
@@ -278,7 +278,7 @@ export default function ProductDetails() {
                 <div className="flex gap-2 mt-4">
                   <button
                     onClick={() => toggleWatchlist(listing.id)}
-                    className={`flex-1 flex items-center justify-center gap-2 border px-4 py-2 rounded text-sm font-medium transition-colors ${isWatched ? 'border-ebay-blue text-ebay-blue bg-blue-50' : 'border-gray-300 text-gray-700 hover:bg-gray-50'}`}
+                    className={`flex-1 flex items-center justify-center gap-2 border px-4 py-2 rounded text-sm font-medium transition-colors ${isWatched ? 'border-xbay-blue text-xbay-blue bg-blue-50' : 'border-gray-300 text-gray-700 hover:bg-gray-50'}`}
                   >
                     <Heart size={16} fill={isWatched ? "currentColor" : "none"} />
                     {isWatched ? 'Watching' : 'Add to Watchlist'}
@@ -312,7 +312,7 @@ export default function ProductDetails() {
               <div className="flex gap-3">
                 <ShieldCheck size={20} className="text-gray-400" />
                 <div>
-                  <div className="font-bold">eBay Money Back Guarantee</div>
+                  <div className="font-bold">xBay Money Back Guarantee</div>
                   <div className="text-gray-500">Get the item you ordered or get your money back.</div>
                 </div>
               </div>
@@ -326,7 +326,7 @@ export default function ProductDetails() {
               <div className="flex items-center gap-3 mb-3">
                 <img src={seller?.avatar} alt={seller?.username} className="w-10 h-10 rounded-full" />
                 <div>
-                  <div className="font-bold text-ebay-blue truncate">{seller?.username}</div>
+                  <div className="font-bold text-xbay-blue truncate">{seller?.username}</div>
                   <div className="text-xs text-gray-500">{seller?.feedbackScore} feedback ({seller?.feedbackRating}%)</div>
                 </div>
               </div>
@@ -334,7 +334,7 @@ export default function ProductDetails() {
                 <>
                   <button
                     onClick={handleContactSeller}
-                    className="w-full border border-ebay-blue text-ebay-blue rounded-full py-1.5 text-sm font-bold hover:bg-blue-50 mb-2 transition-colors"
+                    className="w-full border border-xbay-blue text-xbay-blue rounded-full py-1.5 text-sm font-bold hover:bg-blue-50 mb-2 transition-colors"
                   >
                     Contact Seller
                   </button>
@@ -385,7 +385,7 @@ export default function ProductDetails() {
               </button>
               <button
                 onClick={confirmBuyNow}
-                className="bg-ebay-blue text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700"
+                className="bg-xbay-blue text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700"
               >
                 Confirm Purchase
               </button>
@@ -419,7 +419,7 @@ export default function ProductDetails() {
                     type="text"
                     value={contactSubject}
                     onChange={e => setContactSubject(e.target.value)}
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-ebay-blue focus:outline-none mb-3"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-xbay-blue focus:outline-none mb-3"
                     required
                   />
                   <label className="block text-sm font-bold mb-1">Message</label>
@@ -427,7 +427,7 @@ export default function ProductDetails() {
                     value={contactMessage}
                     onChange={e => setContactMessage(e.target.value)}
                     rows="4"
-                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-ebay-blue focus:outline-none"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-2 focus:ring-xbay-blue focus:outline-none"
                     placeholder="Type your message here..."
                     required
                   />
@@ -442,7 +442,7 @@ export default function ProductDetails() {
                   </button>
                   <button
                     type="submit"
-                    className="bg-ebay-blue text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700"
+                    className="bg-xbay-blue text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700"
                   >
                     Send Message
                   </button>

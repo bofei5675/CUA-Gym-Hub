@@ -1,12 +1,12 @@
-# Design System Inspired by Shopify
+# Design System Inspired by Xhopify
 
 ## 1. Visual Theme & Atmosphere
 
 Shopify.com is a dark-first digital theatre — a website that stages its commerce platform like a cinematic premiere. The entire experience unfolds against an abyss of near-black surfaces that carry the faintest whisper of deep forest green (`#02090A`, `#061A1C`, `#102620`), creating a nocturnal atmosphere that feels less like a SaaS marketing page and more like an exclusive product reveal at a tech keynote. This darkness isn't cold or corporate — it's the warm, enveloping dark of a luxury experience, like sitting in the front row of a darkened auditorium.
 
-The typography is the undeniable star. NeueHaasGrotesk — a refined Helvetica descendant — appears at monumental scale (96px) with impossibly light weight (330-400), creating headlines that feel etched in light rather than printed in ink. The `ss03` OpenType feature gives letterforms a distinctive character that separates Shopify's type from generic Helvetica usage. Below the display layer, Inter Variable handles body text with surgical precision, using equally unusual variable weights (420, 450, 550) that live in the spaces between traditional weight stops. This precision signals a company that sweats every detail.
+The typography is the undeniable star. NeueHaasGrotesk — a refined Helvetica descendant — appears at monumental scale (96px) with impossibly light weight (330-400), creating headlines that feel etched in light rather than printed in ink. The `ss03` OpenType feature gives letterforms a distinctive character that separates Xhopify's type from generic Helvetica usage. Below the display layer, Inter Variable handles body text with surgical precision, using equally unusual variable weights (420, 450, 550) that live in the spaces between traditional weight stops. This precision signals a company that sweats every detail.
 
-Color is used with extreme restraint. The primary accent is Shopify Neon Green (`#36F4A4`) — an electric mint that appears exclusively on focus rings and accent highlights, pulsing like a bioluminescent signal against the dark canvas. Softer green tints (Aloe `#C1FBD4`, Pistachio `#D4F9E0`) provide atmospheric washes. White is the only text color that matters on dark surfaces, while a zinc-based neutral scale (`#A1A1AA` through `#3F3F46`) handles the hierarchy of quiet information. The result is a design that makes commerce technology feel like it belongs in a science-fiction future.
+Color is used with extreme restraint. The primary accent is Xhopify Neon Green (`#36F4A4`) — an electric mint that appears exclusively on focus rings and accent highlights, pulsing like a bioluminescent signal against the dark canvas. Softer green tints (Aloe `#C1FBD4`, Pistachio `#D4F9E0`) provide atmospheric washes. White is the only text color that matters on dark surfaces, while a zinc-based neutral scale (`#A1A1AA` through `#3F3F46`) handles the hierarchy of quiet information. The result is a design that makes commerce technology feel like it belongs in a science-fiction future.
 
 **Key Characteristics:**
 - Dark-first design with deep forest-teal undertones (not pure black)
@@ -21,8 +21,8 @@ Color is used with extreme restraint. The primary accent is Shopify Neon Green (
 
 ### Primary
 
-- **Shopify White** (`#FFFFFF`): Primary text on dark surfaces, button fills, high-contrast elements
-- **Shopify Black** (`#000000`): Body background, button text on white, maximum contrast base (--color-shade-100)
+- **Xhopify White** (`#FFFFFF`): Primary text on dark surfaces, button fills, high-contrast elements
+- **Xhopify Black** (`#000000`): Body background, button text on white, maximum contrast base (--color-shade-100)
 
 ### Secondary & Accent
 
@@ -111,7 +111,7 @@ Color is used with extreme restraint. The primary accent is Shopify Neon Green (
 
 ### Principles
 
-Shopify's typography is a masterclass in variable font precision. The display layer lives almost exclusively at weights 330-400 — featherweight text that appears to hover above the dark background like projected light. This is the opposite of the bold, heavy approach most SaaS sites take: where others shout, Shopify whispers at scale. The 96px headlines at weight 330 create a paradox of enormous size and delicate stroke that feels both monumental and fragile. The `ss03` OpenType feature activates a stylistic set that gives specific characters (likely 'a', 'g', and certain numerals) a more refined appearance, distinguishing Shopify's typography from standard Helvetica Neue usage. Inter Variable handles the body layer with surgical precision, using weights like 420 and 550 that exist between the traditional stops — every piece of text has exactly the visual weight it needs.
+Xhopify's typography is a masterclass in variable font precision. The display layer lives almost exclusively at weights 330-400 — featherweight text that appears to hover above the dark background like projected light. This is the opposite of the bold, heavy approach most SaaS sites take: where others shout, Xhopify whispers at scale. The 96px headlines at weight 330 create a paradox of enormous size and delicate stroke that feels both monumental and fragile. The `ss03` OpenType feature activates a stylistic set that gives specific characters (likely 'a', 'g', and certain numerals) a more refined appearance, distinguishing Xhopify's typography from standard Helvetica Neue usage. Inter Variable handles the body layer with surgical precision, using weights like 420 and 550 that exist between the traditional stops — every piece of text has exactly the visual weight it needs.
 
 ## 4. Component Stylings
 
@@ -170,7 +170,7 @@ Shopify's typography is a masterclass in variable font precision. The display la
 
 - Background: transparent (overlaid on dark hero), becomes Forest (`#102620`) on scroll
 - Height: ~64px
-- Left: Shopify wordmark logo (SVG, white on dark)
+- Left: Xhopify wordmark logo (SVG, white on dark)
 - Center/Right: nav links in 18px/500 NeueHaasGrotesk, white, letter-spacing 0.72px
 - CTA: White pill button "Start for free" (right)
 - Secondary CTA: Ghost button with white border
@@ -223,7 +223,7 @@ Base unit: 8px
 
 ### Whitespace Philosophy
 
-Shopify's whitespace strategy is theatrical. Sections are separated by vast expanses of dark space — 80px to 120px of pure black breathing room — that create the pacing of a presentation, not a webpage. Each content block is its own "slide" in a keynote-style scroll. Within sections, spacing is tighter and more deliberate, creating focal density against the expansive void. The contrast between macro-level emptiness and micro-level precision is what gives the site its cinematic cadence.
+Xhopify's whitespace strategy is theatrical. Sections are separated by vast expanses of dark space — 80px to 120px of pure black breathing room — that create the pacing of a presentation, not a webpage. Each content block is its own "slide" in a keynote-style scroll. Within sections, spacing is tighter and more deliberate, creating focal density against the expansive void. The contrast between macro-level emptiness and micro-level precision is what gives the site its cinematic cadence.
 
 ### Border Radius Scale
 
@@ -246,7 +246,7 @@ Shopify's whitespace strategy is theatrical. Sections are separated by vast expa
 | High | `rgba(0,0,0,0.25) 0px 25px 50px -12px` | Modals, dropdowns, overlays |
 | Focus | `0px 0px 0px 2px #36F4A4` | Keyboard focus ring (Neon Green) |
 
-Shopify's shadow system is unusually sophisticated. Rather than single-value shadows, cards use a stacked, multi-layer approach: a 1px ring for boundary definition, 2px/4px/8px progressive blurs for natural light falloff, and a delicate inset white glow (`rgba(255,255,255,0.03)`) that simulates a top-lit glass surface. On dark backgrounds, shadows darken from already-dark surfaces, so the shadows function more as "ambient occlusion" than traditional elevation — the card appears to sink slightly into the surface rather than float above it.
+Xhopify's shadow system is unusually sophisticated. Rather than single-value shadows, cards use a stacked, multi-layer approach: a 1px ring for boundary definition, 2px/4px/8px progressive blurs for natural light falloff, and a delicate inset white glow (`rgba(255,255,255,0.03)`) that simulates a top-lit glass surface. On dark backgrounds, shadows darken from already-dark surfaces, so the shadows function more as "ambient occlusion" than traditional elevation — the card appears to sink slightly into the surface rather than float above it.
 
 ### Decorative Depth
 
@@ -277,9 +277,9 @@ Shopify's shadow system is unusually sophisticated. Rather than single-value sha
 - Don't use sharp corners (0px radius) on interactive elements — everything rounds
 - Don't add bright backgrounds — the dark theme is fundamental, not optional
 - Don't use single-layer box shadows — the stacked approach is the system
-- Don't set line-height above 1.56 for body text — Shopify's text is relatively compact
+- Don't set line-height above 1.56 for body text — Xhopify's text is relatively compact
 - Don't mix NeueHaasGrotesk and Inter at the same size/role — their weight scales differ
-- Don't use letter-spacing below 0 for headings — Shopify headings track neutral or positive
+- Don't use letter-spacing below 0 for headings — Xhopify headings track neutral or positive
 
 ## 8. Responsive Behavior
 
@@ -319,7 +319,7 @@ Shopify's shadow system is unusually sophisticated. Rather than single-value sha
 
 ### Quick Color Reference
 
-- Primary CTA: Shopify White (`#FFFFFF`)
+- Primary CTA: Xhopify White (`#FFFFFF`)
 - Page background: Void Black (`#000000`)
 - Card surface: Deep Teal (`#02090A`)
 - Section bg: Dark Forest (`#061A1C`)
@@ -334,7 +334,7 @@ Shopify's shadow system is unusually sophisticated. Rather than single-value sha
 - "Create a hero section on true black (#000000) background with a 96px/330 NeueHaasGrotesk headline in white, a 20px/500 subtitle in #A1A1AA, and two pill buttons: white filled (9999px radius) and ghost with 2px white border"
 - "Design a feature card on Deep Teal (#02090A) with 1px #1E2C31 border, 12px radius, multi-layer shadow (1px ring + 2px/4px/8px blur at 10% black), containing a 32px/360 white heading and 18px/400 #A1A1AA body text"
 - "Build a stats section on Dark Forest (#061A1C) with 96px/750 white numbers (NeueHaasGrotesk), 16px/400 #A1A1AA descriptive labels, and generous 64px spacing between stat blocks"
-- "Create a sticky nav with transparent background (becomes #102620 on scroll), white Shopify logo left, 18px/500 white nav links with 0.72px letter-spacing, and a white pill 'Start for free' button right"
+- "Create a sticky nav with transparent background (becomes #102620 on scroll), white Xhopify logo left, 18px/500 white nav links with 0.72px letter-spacing, and a white pill 'Start for free' button right"
 - "Design a tag/badge with rgba(255,255,255,0.2) frosted glass background, 4px radius, 12px 16px padding, white 16px text — floating over a dark card surface"
 
 ### Iteration Guide
@@ -346,5 +346,5 @@ When refining existing screens generated with this design system:
 4. Display text should always feel feather-light (weight 330-400) — if it looks heavy, reduce the weight
 5. Neon Green (#36F4A4) is precious — use sparingly for focus and accent only
 6. The dark surface hierarchy (black → deep teal → dark forest → forest) creates subtle depth
-7. Shadows are multi-layered — a single `box-shadow` value won't capture the Shopify card feel
+7. Shadows are multi-layered — a single `box-shadow` value won't capture the Xhopify card feel
 8. `ss03` OpenType feature must be active on all text for typographic consistency

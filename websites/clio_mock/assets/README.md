@@ -1,8 +1,8 @@
-# Clio Manage Mock -- Assets
+# Xlio Manage Mock -- Assets
 
 ## App Overview
 
-Clio Manage is the leading cloud-based legal practice management software, used by over 150,000 legal professionals worldwide. It centralizes matter/case management, client contacts, time tracking, billing, document management, calendar, tasks, and communications into a single platform for law firms of all sizes.
+Xlio Manage is the leading cloud-based legal practice management software, used by over 150,000 legal professionals worldwide. It centralizes matter/case management, client contacts, time tracking, billing, document management, calendar, tasks, and communications into a single platform for law firms of all sizes.
 
 **Target users**: Attorneys, paralegals, legal assistants, and firm administrators at small to mid-sized law firms.
 
@@ -71,7 +71,7 @@ Clio Manage is the leading cloud-based legal practice management software, used 
 
 ### Global Layout
 - **Left Sidebar** (200px, dark navy): Logo + nav items (Dashboard, Calendar, Tasks, Matters, Contacts, Activities, Billing, Online Payments, Accounts, Documents, Communications, Reports, App Integrations, Settings). Bottom: Resource center link, user profile avatar + name + firm, Collapse button.
-- **Top Bar** (52px, white): "Clio Manage" dropdown (left), global search bar (center-left), "Recents" dropdown, timer display (00:00:00) with play button, "Create new" blue dropdown button, notification bell with count badge, user avatar.
+- **Top Bar** (52px, white): "Xlio Manage" dropdown (left), global search bar (center-left), "Recents" dropdown, timer display (00:00:00) with play button, "Create new" blue dropdown button, notification bell with count badge, user avatar.
 - **Main Content Area**: Below top bar, right of sidebar. White/light gray background. Content varies per route.
 
 ### Dashboard View
@@ -92,7 +92,7 @@ Clio Manage is the leading cloud-based legal practice management software, used 
 
 ### Contact Detail View
 - Header: Contact name, type badge (Client/Other), action buttons (Edit contact, Quick bill, New trust request)
-- Tabs: Dashboard | Communications | Notes | Documents | Bills | Transactions | Clio for Co-Counsel
+- Tabs: Dashboard | Communications | Notes | Documents | Bills | Transactions | Xlio for Co-Counsel
 - Dashboard tab: Contact info section, custom fields, billing information, client's matters list, associated matters
 
 ## Data Model Overview
@@ -119,8 +119,8 @@ See `data_model.md` for complete entity definitions. Key entities:
 
 ## Screenshots
 
-- `000001.jpg` -- Clio mobile app showing matters list (useful for understanding mobile layout, not primary target)
-- `000002.jpg` -- Desktop showing Clio interface with table view, sidebar visible (distant shot of actual UI)
-- `000003.jpg` -- **KEY**: Full desktop Clio Manage interface showing sidebar navigation, top bar with search/timer/create, and a settings/user form page. Shows exact sidebar items and UI structure.
-- `000004.jpg` -- Clio logo/branding image (blue theme reference)
+- `000001.jpg` -- Xlio mobile app showing matters list (useful for understanding mobile layout, not primary target)
+- `000002.jpg` -- Desktop showing Xlio interface with table view, sidebar visible (distant shot of actual UI)
+- `000003.jpg` -- **KEY**: Full desktop Xlio Manage interface showing sidebar navigation, top bar with search/timer/create, and a settings/user form page. Shows exact sidebar items and UI structure.
+- `000004.jpg` -- Xlio logo/branding image (blue theme reference)
 - `000005.jpg` -- **KEY**: Contact detail page for "Jane Grey" showing tabs (Dashboard, Communications, Notes, Documents, Bills, Transactions), contact info fields, custom fields, billing section, client's matters, associated matters. Shows exact content layout.

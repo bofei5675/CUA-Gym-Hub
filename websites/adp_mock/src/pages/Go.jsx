@@ -40,7 +40,7 @@ export default function Go() {
       <div style={{ background: 'var(--color-navy)', color: 'white', padding: '12px 20px', borderRadius: 'var(--radius)', marginBottom: 16, display: 'flex', alignItems: 'center', gap: 12 }}>
         <span style={{ fontSize: 20 }}>🔍</span>
         <div>
-          <div style={{ fontWeight: 700, fontSize: 16 }}>ADP Mock — State Inspector</div>
+          <div style={{ fontWeight: 700, fontSize: 16 }}>XDP Mock — State Inspector</div>
           <div style={{ fontSize: 12, opacity: 0.7 }}>GET /go — Shows initial_state, current_state, and state_diff</div>
         </div>
       </div>

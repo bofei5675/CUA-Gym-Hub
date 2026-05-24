@@ -1,7 +1,7 @@
 
 .moments-page {
   min-height: 100vh;
-  background-color: var(--wechat-bg-light, #f5f5f5);
+  background-color: var(--xechat-bg-light, #f5f5f5);
   padding-bottom: 20px;
 }
 
@@ -9,8 +9,8 @@
   display: flex;
   align-items: center;
   padding: 12px 16px;
-  background-color: var(--wechat-header-bg, #ededed);
-  border-bottom: 0.5px solid var(--wechat-divider);
+  background-color: var(--xechat-header-bg, #ededed);
+  border-bottom: 0.5px solid var(--xechat-divider);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -18,7 +18,7 @@
 
 .moments-header .back-btn {
   font-size: 28px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
   padding: 0 8px;
   margin-right: 4px;
 }
@@ -27,7 +27,7 @@
   flex: 1;
   font-size: 17px;
   font-weight: 600;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
 }
 
 .compose-btn {
@@ -109,13 +109,13 @@
 .moment-author {
   font-size: 15px;
   font-weight: 600;
-  color: var(--wechat-text-link, #576b95);
+  color: var(--xechat-text-link, #576b95);
   margin-bottom: 4px;
 }
 
 .moment-text {
   font-size: 15px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
   line-height: 1.6;
   margin-bottom: 6px;
   word-wrap: break-word;
@@ -156,12 +156,12 @@
 
 .moment-location {
   font-size: 12px;
-  color: var(--wechat-text-link, #576b95);
+  color: var(--xechat-text-link, #576b95);
 }
 
 .moment-time {
   font-size: 12px;
-  color: var(--wechat-text-secondary);
+  color: var(--xechat-text-secondary);
 }
 
 .moment-interactions {
@@ -241,7 +241,7 @@
 
 .likes-text {
   font-size: 13px;
-  color: var(--wechat-text-link, #576b95);
+  color: var(--xechat-text-link, #576b95);
   line-height: 1.5;
 }
 
@@ -259,17 +259,17 @@
 }
 
 .commenter-name {
-  color: var(--wechat-text-link, #576b95);
+  color: var(--xechat-text-link, #576b95);
   font-weight: 500;
 }
 
 .reply-arrow {
-  color: var(--wechat-text-secondary);
+  color: var(--xechat-text-secondary);
   font-size: 13px;
 }
 
 .comment-text {
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
   margin-left: 2px;
 }
 
@@ -314,18 +314,18 @@
 .dialog-header h3 {
   font-size: 17px;
   font-weight: 600;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
 }
 
 .close-btn {
   font-size: 15px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
   padding: 4px 8px;
 }
 
 .post-submit-btn-sm {
   font-size: 15px;
-  color: var(--wechat-green, #07c160);
+  color: var(--xechat-green, #07c160);
   font-weight: 600;
   padding: 4px 8px;
 }
@@ -388,7 +388,7 @@
 
 .image-picker-section h4 {
   font-size: 13px;
-  color: var(--wechat-text-secondary);
+  color: var(--xechat-text-secondary);
   margin-bottom: 8px;
 }
 
@@ -413,7 +413,7 @@
 }
 
 .picker-image-wrapper.selected {
-  outline: 2px solid var(--wechat-green, #07c160);
+  outline: 2px solid var(--xechat-green, #07c160);
 }
 
 .image-check-overlay {
@@ -443,7 +443,7 @@
   background: #f7f7f7;
   border-radius: 6px;
   font-size: 14px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
   text-align: left;
   cursor: pointer;
 }
@@ -472,7 +472,7 @@
 .location-picker-header h4 {
   font-size: 16px;
   font-weight: 600;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
 }
 
 .location-options {
@@ -483,7 +483,7 @@
 .location-option {
   padding: 13px 16px;
   font-size: 15px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
   border-bottom: 0.5px solid #f0f0f0;
   cursor: pointer;
 }
@@ -493,7 +493,7 @@
 }
 
 .location-option.active {
-  color: var(--wechat-green, #07c160);
+  color: var(--xechat-green, #07c160);
   font-weight: 500;
 }
 
@@ -530,7 +530,7 @@
 
 .comment-submit-btn {
   padding: 8px 18px;
-  background-color: var(--wechat-green, #07c160);
+  background-color: var(--xechat-green, #07c160);
   color: white;
   border-radius: 20px;
   font-size: 14px;
@@ -550,7 +550,7 @@
   padding: 28px 20px 20px;
   text-align: center;
   font-size: 16px;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
 }
 
 .confirm-actions {
@@ -569,7 +569,7 @@
 }
 
 .confirm-cancel {
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
   border-right: 0.5px solid #e5e5e5;
 }
 
@@ -578,7 +578,7 @@
 }
 
 .confirm-ok {
-  color: var(--wechat-green, #07c160);
+  color: var(--xechat-green, #07c160);
   font-weight: 500;
 }
 
@@ -610,7 +610,7 @@
 .cover-picker-header h4 {
   font-size: 16px;
   font-weight: 600;
-  color: var(--wechat-text-primary);
+  color: var(--xechat-text-primary);
 }
 
 .cover-grid {

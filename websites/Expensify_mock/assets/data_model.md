@@ -1,4 +1,4 @@
-# Expensify Mock — Data Model
+# Xpensify Mock — Data Model
 
 ## Overview
 
@@ -315,7 +315,7 @@ Inbox notifications and tasks.
 | inb_002 | report_submitted | Engineering Tools report submitted | true | false |
 | inb_003 | expense_violation | Policy violation flagged | true | false |
 | inb_004 | report_approved | Your report was approved | false | true |
-| inb_005 | concierge | Welcome to Expensify! | false | true |
+| inb_005 | concierge | Welcome to Xpensify! | false | true |
 | inb_006 | task | Set up direct reimbursement | false | false |
 
 ---

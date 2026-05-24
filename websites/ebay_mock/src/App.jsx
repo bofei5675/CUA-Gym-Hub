@@ -22,7 +22,7 @@ function Layout({ children }) {
       {!isGo && (
         <footer className="bg-white border-t border-gray-200 py-8 mt-12">
           <div className="container mx-auto px-4 text-center text-xs text-gray-500">
-            <p className="mb-2">Copyright © 1995-2024 eBay Inc. All Rights Reserved.</p>
+            <p className="mb-2">Copyright © 1995-2024 xBay Inc. All Rights Reserved.</p>
             <p>Accessibility, User Agreement, Privacy, Payments Terms of Use, Cookies, CA Privacy Notice, Your Privacy Choices and AdChoice</p>
           </div>
         </footer>

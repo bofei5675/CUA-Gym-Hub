@@ -42,7 +42,7 @@ export default function Dashboard() {
         <h1 className="text-2xl font-bold text-gray-800">Projects</h1>
         <button 
           onClick={() => setIsModalOpen(true)}
-          className="bg-gitlab-info text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors flex items-center gap-2"
+          className="bg-xitlab-info text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors flex items-center gap-2"
         >
           <Plus size={16} />
           New Project
@@ -101,7 +101,7 @@ export default function Dashboard() {
                 </button>
                 <button 
                   type="submit" 
-                  className="px-4 py-2 text-sm font-medium text-white bg-gitlab-info hover:bg-blue-700 rounded-md"
+                  className="px-4 py-2 text-sm font-medium text-white bg-xitlab-info hover:bg-blue-700 rounded-md"
                 >
                   Create Project
                 </button>

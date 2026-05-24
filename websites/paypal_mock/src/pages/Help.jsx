@@ -3,27 +3,27 @@ import { Search, CreditCard, Shield, HelpCircle, FileText, AlertTriangle, User, 
 
 const faqCategories = [
   { id: 'payments', label: 'Payments', icon: CreditCard, description: 'Sending, receiving, and managing payments', faqs: [
-    { q: 'How do I send money?', a: 'Go to the Send & Request page, enter the recipient\'s email or phone number, enter the amount, and click Send. The money will be deducted from your PayPal balance or linked payment method.' },
-    { q: 'How long does it take to receive money?', a: 'Money sent via PayPal is usually available instantly in the recipient\'s PayPal balance. Bank transfers may take 1-3 business days.' },
+    { q: 'How do I send money?', a: 'Go to the Send & Request page, enter the recipient\'s email or phone number, enter the amount, and click Send. The money will be deducted from your XayPal balance or linked payment method.' },
+    { q: 'How long does it take to receive money?', a: 'Money sent via XayPal is usually available instantly in the recipient\'s XayPal balance. Bank transfers may take 1-3 business days.' },
     { q: 'Can I cancel a payment?', a: 'You can cancel a pending payment before it is claimed by the recipient. Go to Activity, find the payment, and click Cancel.' },
   ]},
-  { id: 'wallet', label: 'Wallet', icon: CreditCard, description: 'Cards, banks, and your PayPal balance', faqs: [
+  { id: 'wallet', label: 'Wallet', icon: CreditCard, description: 'Cards, banks, and your XayPal balance', faqs: [
     { q: 'How do I add a bank account?', a: 'Go to Wallet, click "Link a card or bank", select Bank Account, and enter your routing and account numbers.' },
     { q: 'How do I transfer money to my bank?', a: 'From the Dashboard or Wallet page, click "Transfer Money". Select your bank account and the amount you want to transfer.' },
-    { q: 'Why is my card not verified?', a: 'New cards require verification. PayPal will charge a small amount to your card, which you can confirm in the Wallet section.' },
+    { q: 'Why is my card not verified?', a: 'New cards require verification. XayPal will charge a small amount to your card, which you can confirm in the Wallet section.' },
   ]},
   { id: 'account', label: 'Account', icon: User, description: 'Profile, settings, and account management', faqs: [
     { q: 'How do I change my email address?', a: 'Go to Settings > Account, find the Email section, and click Update to change your primary email address.' },
-    { q: 'How do I close my PayPal account?', a: 'Contact PayPal support to close your account. Ensure all pending transactions are complete and your balance is zero before requesting closure.' },
+    { q: 'How do I close my XayPal account?', a: 'Contact XayPal support to close your account. Ensure all pending transactions are complete and your balance is zero before requesting closure.' },
     { q: 'How do I upgrade to a Business account?', a: 'Go to Settings > Account and click "Upgrade to Business". Follow the prompts to provide your business information.' },
   ]},
   { id: 'security', label: 'Security', icon: Shield, description: 'Protecting your account and data', faqs: [
     { q: 'How do I enable 2-step verification?', a: 'Go to Settings > Security and toggle on 2-Step Verification. You can use an authenticator app or receive codes via SMS.' },
-    { q: 'I received a suspicious email claiming to be from PayPal', a: 'Do not click any links. Forward the email to spoof@paypal.com. PayPal will never ask for your password via email.' },
+    { q: 'I received a suspicious email claiming to be from XayPal', a: 'Do not click any links. Forward the email to spoof@paypal.com. XayPal will never ask for your password via email.' },
     { q: 'Someone accessed my account without permission', a: 'Change your password immediately, then go to the Resolution Center to report unauthorized activity.' },
   ]},
   { id: 'disputes', label: 'Disputes', icon: AlertTriangle, description: 'Resolving issues with transactions', faqs: [
-    { q: 'How do I open a dispute?', a: 'Go to the Resolution Center and click "Report a Problem". Select the transaction and describe the issue. PayPal will review your case.' },
+    { q: 'How do I open a dispute?', a: 'Go to the Resolution Center and click "Report a Problem". Select the transaction and describe the issue. XayPal will review your case.' },
     { q: 'How long does a dispute resolution take?', a: 'Most disputes are resolved within 30 days. Complex cases may take up to 75 days.' },
     { q: 'What happens if I lose a dispute?', a: 'If the dispute is resolved in the seller\'s favor, the funds will be released to them. You can appeal the decision within 10 days.' },
   ]},

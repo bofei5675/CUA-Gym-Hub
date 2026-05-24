@@ -174,7 +174,7 @@ Uses **React Context** (`StoreContext`) in `src/lib/store.jsx`. State is a singl
 | `name` | `string` | `"Unknown Account"` | Account name (e.g., `"Checking"`, `"Savings"`) |
 | `type` | `string` | `"Bank"` | Account type: `"Bank"`, `"Accounts Receivable"`, `"Other Current Assets"`, `"Fixed Assets"`, `"Accounts Payable"`, `"Credit Card"`, `"Equity"`, `"Income"`, `"Cost of Goods Sold"`, `"Expenses"` |
 | `detailType` | `string` | `""` | Sub-classification (e.g., `"Checking"`, `"Savings"`, `"Credit Card"`) |
-| `balance` | `number` | `0` | Current balance in QuickBooks (negative for credit cards = amount owed) |
+| `balance` | `number` | `0` | Current balance in XuickBooks (negative for credit cards = amount owed) |
 | `bankBalance` | `number` | same as `balance` | Bank-reported balance (may differ from QB balance) |
 | `isActive` | `boolean` | `true` | Whether account is active |
 

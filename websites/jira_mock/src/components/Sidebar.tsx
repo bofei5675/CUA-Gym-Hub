@@ -15,18 +15,18 @@ export const Sidebar: React.FC<SidebarProps> = ({ onCreateIssue, onToggleNotific
 
   const navClass = ({ isActive }: { isActive: boolean }) =>
     `flex items-center gap-3 px-4 py-2 rounded-md transition-colors ${
-      isActive ? 'bg-jira-blue/10 text-jira-blue font-medium' : 'text-jira-text hover:bg-gray-100'
+      isActive ? 'bg-xira-blue/10 text-xira-blue font-medium' : 'text-xira-text hover:bg-gray-100'
     }`;
 
   return (
-    <div className="w-64 bg-jira-gray border-r border-jira-border h-screen flex flex-col fixed left-0 top-0 z-10">
+    <div className="w-64 bg-xira-gray border-r border-xira-border h-screen flex flex-col fixed left-0 top-0 z-10">
       <div className="p-6 flex items-center gap-3">
-        <div className="w-8 h-8 bg-jira-blue rounded flex items-center justify-center text-white font-bold">
+        <div className="w-8 h-8 bg-xira-blue rounded flex items-center justify-center text-white font-bold">
           {project.key.substring(0, 1)}
         </div>
         <div>
-          <h1 className="font-bold text-jira-text truncate w-32">{project.name}</h1>
-          <p className="text-xs text-jira-subtext">{project.category}</p>
+          <h1 className="font-bold text-xira-text truncate w-32">{project.name}</h1>
+          <p className="text-xs text-xira-subtext">{project.category}</p>
         </div>
       </div>
 
@@ -34,7 +34,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ onCreateIssue, onToggleNotific
       <div className="px-4 mb-3">
         <button
           onClick={onCreateIssue}
-          className="w-full flex items-center justify-center gap-2 bg-jira-blue text-white rounded-md py-2 px-4 font-medium text-sm hover:bg-blue-700 transition-colors"
+          className="w-full flex items-center justify-center gap-2 bg-xira-blue text-white rounded-md py-2 px-4 font-medium text-sm hover:bg-blue-700 transition-colors"
         >
           <PlusCircle size={18} />
           Create
@@ -57,7 +57,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ onCreateIssue, onToggleNotific
         <NavLink to={`/project/${project.key}/settings`} className={navClass}>
           <Settings size={20} /> Settings
         </NavLink>
-        <div className="my-4 border-t border-jira-border mx-2"></div>
+        <div className="my-4 border-t border-xira-border mx-2"></div>
         <NavLink to="/search" className={navClass}>
           <Search size={20} /> Advanced Search
         </NavLink>
@@ -67,16 +67,16 @@ export const Sidebar: React.FC<SidebarProps> = ({ onCreateIssue, onToggleNotific
       </nav>
 
       {/* Notification bell + user info */}
-      <div className="p-4 border-t border-jira-border">
+      <div className="p-4 border-t border-xira-border">
         <div className="flex items-center justify-between mb-3">
           <button
             onClick={onToggleNotifications}
             className="relative p-2 hover:bg-gray-200 rounded-md transition-colors"
             title="Notifications"
           >
-            <Bell size={20} className="text-jira-subtext" />
+            <Bell size={20} className="text-xira-subtext" />
             {unreadCount > 0 && (
-              <span className="absolute -top-0.5 -right-0.5 bg-jira-red text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
+              <span className="absolute -top-0.5 -right-0.5 bg-xira-red text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
                 {unreadCount}
               </span>
             )}
@@ -85,8 +85,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ onCreateIssue, onToggleNotific
         <div className="flex items-center gap-3">
           <img src={state.currentUser.avatar} alt="User" className="w-8 h-8 rounded-full" />
           <div className="flex-1 min-w-0">
-            <p className="text-sm font-medium text-jira-text truncate">{state.currentUser.name}</p>
-            <p className="text-xs text-jira-subtext truncate">{state.currentUser.email}</p>
+            <p className="text-sm font-medium text-xira-text truncate">{state.currentUser.name}</p>
+            <p className="text-xs text-xira-subtext truncate">{state.currentUser.email}</p>
           </div>
         </div>
       </div>

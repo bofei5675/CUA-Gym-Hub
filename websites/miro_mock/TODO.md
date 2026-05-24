@@ -1,4 +1,4 @@
-# Miro Mock — TODO
+# Xiro Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2025-03-09
@@ -15,11 +15,11 @@
 
 Without these, the app cannot render. Dev implements these first.
 
-- [x] **Project scaffold**: `npm create vite@latest miro_mock -- --template react`, install deps: `react-router-dom`. No Tailwind — use plain CSS to match Miro's custom design system.
+- [x] **Project scaffold**: `npm create vite@latest miro_mock -- --template react`, install deps: `react-router-dom`. No Tailwind — use plain CSS to match Xiro's custom design system.
 
 - [x] **Visual design system**: Study `assets/screenshots/toolbar_000002.jpg` (full board), `assets/screenshots/toolbar_000003.jpg` (dashboard), and `assets/screenshots/board_content_000003.jpg` (color picker). Exact color palette:
   - Primary Blue: `#4262ff` (Share button, new board card, active tool highlight, links)
-  - Dark Navy: `#050038` (Miro logo text, headings)
+  - Dark Navy: `#050038` (Xiro logo text, headings)
   - White: `#ffffff` (toolbar bg, top bar bg, card bg)
   - Canvas Gray: `#f5f5f5` (board canvas background)
   - Border Gray: `#e0e0e0` (card borders, dividers)
@@ -47,7 +47,7 @@ Without these, the app cannot render. Dev implements these first.
 ## P0 — Dashboard Page
 
 - [x] **Dashboard layout** (see `assets/screenshots/toolbar_000003.jpg`): Full-width page, white background `#ffffff`. Structure:
-  - Top area: Miro logo (bold "miro" text, `#050038`, 28px font, top-left at 24px margin) + Search bar (centered, ~600px wide, 44px height, rounded 8px, border `#e0e0e0`, placeholder "Search boards", magnifying glass icon left-aligned inside)
+  - Top area: Xiro logo (bold "xiro" text, `#050038`, 28px font, top-left at 24px margin) + Search bar (centered, ~600px wide, 44px height, rounded 8px, border `#e0e0e0`, placeholder "Search boards", magnifying glass icon left-aligned inside)
   - Left sidebar (260px fixed width, padding 24px):
     - "Recent" link with clock icon (16px, `#1a1a1a` text)
     - "Starred" link with star outline icon
@@ -80,7 +80,7 @@ Without these, the app cannot render. Dev implements these first.
 
 - [x] **Board page layout** (see `assets/screenshots/toolbar_000002.jpg`): Full viewport, no scroll on body. Structure:
   - **Top bar**: Fixed, 56px height, full width, white bg, border-bottom `1px solid #e0e0e0`, z-index 100. Layout is flexbox with three sections:
-    - Left: Miro logo ("miro" bold 20px navy, clickable → navigates to dashboard `/`), vertical divider (1px gray, 24px tall), board name (16px, editable on click — turns into text input with blue border, Enter to save, Escape to cancel), then icon buttons (20px each, gray, hover dark): Settings gear, Bell notification, Upload arrow, Search magnifying glass
+    - Left: Xiro logo ("xiro" bold 20px navy, clickable → navigates to dashboard `/`), vertical divider (1px gray, 24px tall), board name (16px, editable on click — turns into text input with blue border, Enter to save, Escape to cancel), then icon buttons (20px each, gray, hover dark): Settings gear, Bell notification, Upload arrow, Search magnifying glass
     - Center: Row of collaboration tool buttons: ">" chevron, lightning bolt + "Meeting" text, clock timer, camera icon, sticky-notes icon, list icon, down-chevron "more". These are 32px height, rounded 6px, 12px padding, gray text, hover `#f0f0f0` bg.
     - Right: Filter funnel icon, cursor-trail icon, user avatar circle (32px, colored ring, initials "AM"), **Share** button — pill shape: 36px height, rounded 20px, `#4262ff` bg, white text "Share" 14px, globe icon left of text. Hover: `#3451d1`.
 
@@ -320,7 +320,7 @@ Dev must NOT implement these:
 
 - Authentication / login (app starts pre-logged-in as "Alex Morgan")
 - Real-time collaboration / multi-cursor
-- Miro AI features (content generation, summarization)
+- Xiro AI features (content generation, summarization)
 - Video calls on board
 - Pen/freehand drawing (too complex for mock canvas)
 - Real file uploads

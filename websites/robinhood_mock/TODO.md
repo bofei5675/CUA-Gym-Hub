@@ -1,4 +1,4 @@
-# Robinhood Mock — TODO
+# Xobinhood Mock — TODO
 
 > **Status:** READY FOR DEV
 > **Last updated by:** plan agent, March 2025
@@ -18,20 +18,20 @@ The project already has a partial scaffold with:
 - `tailwind.config.js` — Color scheme defined ✅ Keep, may extend
 - `src/lib/store.jsx` — Context provider with placeOrder, toggleWatchlist, live price simulation ✅ Extend
 - `src/lib/mockData.js` — createDefaultState, normalization, state diff ✅ Major expansion needed
-- `src/components/Layout.jsx` — Sidebar nav + search + top bar ✅ Redesign to match Robinhood
+- `src/components/Layout.jsx` — Sidebar nav + search + top bar ✅ Redesign to match Xobinhood
 - `src/pages/Dashboard.jsx` — Basic portfolio chart + watchlist ✅ Major enhancement needed
 - `src/pages/StockDetail.jsx` — Basic chart + order form ✅ Major enhancement needed
 - `src/pages/Portfolio.jsx` — Holdings table + pie chart ✅ Enhancement needed
 - `src/pages/History.jsx` — Transaction history (exists but needs verification)
 - `src/pages/Go.jsx` — State inspector ✅ Keep
 
-**Strategy: Enhance existing files rather than replacing wholesale.** Fix the layout to match real Robinhood, expand data, and add missing interactions.
+**Strategy: Enhance existing files rather than replacing wholesale.** Fix the layout to match real Xobinhood, expand data, and add missing interactions.
 
 ---
 
 ## P0 — Core Shell & Layout Fix
 
-<!-- Without these, the app doesn't look or feel like Robinhood. Dev implements these first. -->
+<!-- Without these, the app doesn't look or feel like Xobinhood. Dev implements these first. -->
 
 - [x] **Visual design system alignment**: Redesigned Layout.jsx with horizontal top navigation bar, feather logo left, centered search bar, right-aligned nav links (Home, Portfolio, Cash, Notifications bell, Account avatar). Mobile bottom tab bar added. Sidebar removed.
 
@@ -97,7 +97,7 @@ The project already has a partial scaffold with:
 
 - [x] **Add/remove from watchlist**: Star button on stock detail page toggles watchlist. toggleWatchlist works from store.
 
-- [ ] **Multiple watchlists** (P1 stretch): Allow creating named lists. Default list is "My First List". Users can create new lists, rename them, and assign stocks. This matches real Robinhood's "Lists" feature. Store as `lists: { [listId]: { name, symbols[] } }`.
+- [ ] **Multiple watchlists** (P1 stretch): Allow creating named lists. Default list is "My First List". Users can create new lists, rename them, and assign stocks. This matches real Xobinhood's "Lists" feature. Store as `lists: { [listId]: { name, symbols[] } }`.
 
 ### Transaction History Page
 
@@ -117,13 +117,13 @@ The project already has a partial scaffold with:
 
 <!-- Implement only after P1 is complete and tested. -->
 
-- [ ] **Light mode / dark mode toggle**: Real Robinhood supports both. Add a toggle in account menu or header. Update tailwind to support both color schemes. Default to dark mode. Store preference in state.
+- [ ] **Light mode / dark mode toggle**: Real Xobinhood supports both. Add a toggle in account menu or header. Update tailwind to support both color schemes. Default to dark mode. Store preference in state.
 
 - [ ] **Crypto section**: Route `/crypto`. Show list of crypto assets (BTC, ETH, SOL, DOGE, XRP, ADA) with prices and 24h change. Clicking navigates to a crypto detail page similar to stock detail. Buy/sell panel works the same way. See `data_model.md §Crypto`.
 
 - [ ] **Recurring investments**: On stock detail page, add "Recurring Investment" option in the Order Type dropdown. Shows: amount ($), frequency (Daily, Weekly, Biweekly, Monthly), start date picker. Creates a recurring investment record in state. Show active recurring investments in a "Recurring" section on the Portfolio page.
 
-- [ ] **Transfer funds**: Route `/transfers`. Mock deposit/withdraw flow. "Deposit" button → modal with amount input, "From" dropdown (mock bank account "Chase ****4521"), "To" Robinhood account. Confirm → adds to cash balance. "Withdraw" reverses the flow. Show transfer history list.
+- [ ] **Transfer funds**: Route `/transfers`. Mock deposit/withdraw flow. "Deposit" button → modal with amount input, "From" dropdown (mock bank account "Chase ****4521"), "To" Xobinhood account. Confirm → adds to cash balance. "Withdraw" reverses the flow. Show transfer history list.
 
 - [ ] **Account page**: Route `/account`. Show user profile info (name, email, account type, member since). Sections: "Investing" (account type toggle), "Notifications" (toggle switches for email/push preferences), "App Appearance" (dark/light mode toggle). Non-functional but visually realistic.
 
@@ -139,7 +139,7 @@ The project already has a partial scaffold with:
 
 - [ ] **Drag-to-reorder watchlist**: Allow dragging watchlist items to reorder them. Use a simple drag handle icon on the left of each row. Update the watchlist array order in state.
 
-- [ ] **Keyboard shortcuts**: `Ctrl+K` or `/` to focus search. `Escape` to close modals/dropdowns. Arrow keys to navigate search results. Consider adding Robinhood-style keyboard shortcuts.
+- [ ] **Keyboard shortcuts**: `Ctrl+K` or `/` to focus search. `Escape` to close modals/dropdowns. Arrow keys to navigate search results. Consider adding Xobinhood-style keyboard shortcuts.
 
 ---
 
@@ -170,10 +170,10 @@ The project already has a partial scaffold with:
 - Options trading / options chain UI
 - Futures trading
 - Cash Card / debit card features
-- Robinhood Gold subscription management
+- Xobinhood Gold subscription management
 - Crypto staking / DeFi features
 - Tax documents / statements / 1099 forms
 - Two-factor authentication / security settings
 - Real file uploads or document management
 - Email / SMS notifications
-- Robinhood Legend advanced platform (we're mocking Web Classic only)
+- Xobinhood Legend advanced platform (we're mocking Web Classic only)

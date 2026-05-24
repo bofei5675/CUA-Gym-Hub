@@ -1,11 +1,11 @@
-# GitHub Mock — Research Summary
+# XitHub Mock — Research Summary
 
 > Last updated: 2026-02-28
 > Real website: https://github.com
 
 ## App Overview
 
-GitHub is the world's largest code hosting and collaboration platform for software developers. Founded in 2008 and now owned by Microsoft, it hosts over 200 million repositories and is used by 100+ million developers. The platform provides Git-based version control, issue tracking, pull request code review, CI/CD automation (GitHub Actions), project management, wikis, and community features.
+XitHub is the world's largest code hosting and collaboration platform for software developers. Founded in 2008 and now owned by Microsoft, it hosts over 200 million repositories and is used by 100+ million developers. The platform provides Git-based version control, issue tracking, pull request code review, CI/CD automation (XitHub Actions), project management, wikis, and community features.
 
 **Category**: Developer productivity / Code collaboration platform
 **Core interaction model**: Repository-centric — all features (issues, PRs, code, wiki, settings) are scoped under `/:owner/:repo`
@@ -26,7 +26,7 @@ GitHub is the world's largest code hosting and collaboration platform for softwa
 
 ## Visual Design (Dark Theme)
 
-GitHub uses a dark theme ("GitHub Dark") as one of its primary themes. The mock should use this dark theme exclusively.
+XitHub uses a dark theme ("XitHub Dark") as one of its primary themes. The mock should use this dark theme exclusively.
 
 ### Color Palette
 | Token | Hex | Usage |
@@ -58,8 +58,8 @@ GitHub uses a dark theme ("GitHub Dark") as one of its primary themes. The mock 
 
 ### P0 — Core Shell (App renders)
 - [x] Vite + React project scaffold with Tailwind CSS
-- [x] GitHub dark theme color system
-- [x] Global header: GitHub logo, search bar, nav links (Pull requests, Issues, Codespaces, Marketplace, Explore), notifications bell, create (+) dropdown, profile avatar dropdown
+- [x] XitHub dark theme color system
+- [x] Global header: XitHub logo, search bar, nav links (Pull requests, Issues, Codespaces, Marketplace, Explore), notifications bell, create (+) dropdown, profile avatar dropdown
 - [x] Routing: `/` (Dashboard), `/:owner/:repo` (Repo Code), `/:owner/:repo/issues`, `/:owner/:repo/pulls`, etc.
 - [x] State management: React Context + useReducer
 - [x] `/go` endpoint: GoDebug component with deep diff
@@ -121,7 +121,7 @@ GitHub uses a dark theme ("GitHub Dark") as one of its primary themes. The mock 
 
 ### Global Header (sticky, ~60px height)
 ```
-[GitHub Logo] [Search "Search or jump to..." /] [Pull requests] [Issues] [Codespaces] [Marketplace] [Explore]  ...  [Bell+dot] [+▼] [Avatar▼]
+[XitHub Logo] [Search "Search or jump to..." /] [Pull requests] [Issues] [Codespaces] [Marketplace] [Explore]  ...  [Bell+dot] [+▼] [Avatar▼]
 ```
 - Background: `#010409`
 - Height: ~60px
@@ -204,24 +204,24 @@ See `assets/data_model.md` for full entity definitions.
 - **Email notifications**: No actual email sending
 - **OAuth/SSO**: No identity providers
 - **Billing**: No payment features
-- **GitHub Copilot/AI**: No AI code suggestions
-- **GitHub Pages deployment**: No actual site deployment
+- **XitHub Copilot/AI**: No AI code suggestions
+- **XitHub Pages deployment**: No actual site deployment
 - **Codespaces**: No actual dev environments
-- **GitHub Packages**: No package registry
+- **XitHub Packages**: No package registry
 
 ## Reference Screenshots
 
 Screenshots saved in `assets/screenshots/`:
-- `000002.jpg` — GitHub repository page (facebook/react) showing: header nav, repo breadcrumb, Watch/Star/Fork buttons, tab bar (Code/Issues/PRs/Projects/Wiki/Security/Insights), description, topics, stats bar (commits/branches/releases/contributors/license), branch selector, file tree with commit messages and dates, language bar
+- `000002.jpg` — XitHub repository page (facebook/react) showing: header nav, repo breadcrumb, Watch/Star/Fork buttons, tab bar (Code/Issues/PRs/Projects/Wiki/Security/Insights), description, topics, stats bar (commits/branches/releases/contributors/license), branch selector, file tree with commit messages and dates, language bar
 - Additional screenshots in subdirectories for specific views
 
 ## Key Insights for Implementation
 
-1. **Everything is repo-scoped**: Unlike Slack (workspace-scoped) or Gmail (user-scoped), GitHub's UI revolves around the `/:owner/:repo` path prefix. The repo tab bar is the primary navigation within a repo.
+1. **Everything is repo-scoped**: Unlike Slack (workspace-scoped) or Gmail (user-scoped), XitHub's UI revolves around the `/:owner/:repo` path prefix. The repo tab bar is the primary navigation within a repo.
 
-2. **Issues and PRs share numbering**: In real GitHub, issues and PRs share a single incrementing number per repo. The mock already implements this correctly.
+2. **Issues and PRs share numbering**: In real XitHub, issues and PRs share a single incrementing number per repo. The mock already implements this correctly.
 
-3. **Dark theme consistency**: GitHub's dark theme is very consistent — `#0d1117` background, `#161b22` for elevated surfaces, `#30363d` for borders. The existing mock already uses these correctly via Tailwind config.
+3. **Dark theme consistency**: XitHub's dark theme is very consistent — `#0d1117` background, `#161b22` for elevated surfaces, `#30363d` for borders. The existing mock already uses these correctly via Tailwind config.
 
 4. **Interaction density is high**: A single issue page has: title editing, comment adding, label toggling, assignee toggling, milestone setting, status toggling, reaction adding, markdown previewing — many interactive targets for agent training.
 

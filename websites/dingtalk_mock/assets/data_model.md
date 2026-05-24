@@ -1,4 +1,4 @@
-# DingTalk Mock — Data Model
+# XingTalk Mock — Data Model
 
 > This document defines all entity types, their fields, relationships, and example values for `dataManager.js`.
 
@@ -74,7 +74,7 @@ Individual messages within a conversation.
 
 ### 5. DingMessage (DING消息)
 
-Urgent DING notifications — a unique DingTalk feature.
+Urgent DING notifications — a unique XingTalk feature.
 
 | Field | Type | Description | Example |
 |-------|------|-------------|---------|

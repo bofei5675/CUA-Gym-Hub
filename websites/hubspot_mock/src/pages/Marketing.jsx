@@ -56,7 +56,7 @@ export function Templates() {
           <h2 className="text-2xl font-bold text-gray-800">Email Templates</h2>
           <p className="text-gray-500 text-sm">{state.templates.length} templates</p>
         </div>
-        <button onClick={openCreate} className="px-4 py-2 bg-hubspot text-white rounded-md text-sm font-medium hover:bg-hubspot-hover flex items-center gap-2">
+        <button onClick={openCreate} className="px-4 py-2 bg-xubspot text-white rounded-md text-sm font-medium hover:bg-xubspot-hover flex items-center gap-2">
           <Plus size={16} /> New Template
         </button>
       </div>
@@ -66,11 +66,11 @@ export function Templates() {
           <div key={t.id} className="bg-white p-5 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow group relative">
             <div className="flex justify-between items-start mb-3">
               <div className="p-2 bg-orange-50 rounded">
-                <Mail className="text-hubspot" size={20} />
+                <Mail className="text-xubspot" size={20} />
               </div>
               <div className="flex gap-1">
-                <button onClick={() => handleCopy(t)} className="p-1 text-gray-400 hover:text-hubspot" title="Duplicate"><Copy size={14} /></button>
-                <button onClick={() => openEdit(t)} className="p-1 text-gray-400 hover:text-hubspot"><Edit2 size={14} /></button>
+                <button onClick={() => handleCopy(t)} className="p-1 text-gray-400 hover:text-xubspot" title="Duplicate"><Copy size={14} /></button>
+                <button onClick={() => openEdit(t)} className="p-1 text-gray-400 hover:text-xubspot"><Edit2 size={14} /></button>
                 <button onClick={() => handleDelete(t.id)} className="p-1 text-gray-400 hover:text-red-500"><Trash2 size={14} /></button>
               </div>
             </div>
@@ -94,27 +94,27 @@ export function Templates() {
             <form onSubmit={handleSubmit} className="flex-1 overflow-y-auto p-6 space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Template Name <span className="text-red-500">*</span></label>
-                <input required type="text" className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                <input required type="text" className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Folder</label>
-                <input type="text" className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                <input type="text" className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.folder} onChange={e => setForm({ ...form, folder: e.target.value })} />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Subject <span className="text-red-500">*</span></label>
-                <input required type="text" className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                <input required type="text" className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.subject} onChange={e => setForm({ ...form, subject: e.target.value })} placeholder="e.g. Hi {{first_name}}, following up" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Body</label>
-                <textarea rows={8} className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot resize-none font-mono"
+                <textarea rows={8} className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot resize-none font-mono"
                   value={form.body} onChange={e => setForm({ ...form, body: e.target.value })} placeholder="Use {{first_name}}, {{company_name}} etc." />
               </div>
               <div className="flex justify-end gap-3 pt-4">
                 <button type="button" onClick={() => setIsModalOpen(false)} className="px-4 py-2 border border-gray-300 rounded text-gray-700 text-sm hover:bg-gray-50">Cancel</button>
-                <button type="submit" className="px-4 py-2 bg-hubspot text-white rounded text-sm hover:bg-hubspot-hover">{editTpl ? 'Save' : 'Create'}</button>
+                <button type="submit" className="px-4 py-2 bg-xubspot text-white rounded text-sm hover:bg-xubspot-hover">{editTpl ? 'Save' : 'Create'}</button>
               </div>
             </form>
           </div>
@@ -208,7 +208,7 @@ export function Meetings() {
           <h2 className="text-2xl font-bold text-gray-800">Meetings</h2>
           <p className="text-gray-500 text-sm">{state.meetings.length} meetings</p>
         </div>
-        <button onClick={openCreate} className="px-4 py-2 bg-hubspot text-white rounded-md text-sm font-medium hover:bg-hubspot-hover flex items-center gap-2">
+        <button onClick={openCreate} className="px-4 py-2 bg-xubspot text-white rounded-md text-sm font-medium hover:bg-xubspot-hover flex items-center gap-2">
           <Plus size={16} /> Schedule Meeting
         </button>
       </div>
@@ -223,7 +223,7 @@ export function Meetings() {
           return (
             <div key={m.id} className="p-4 border-b border-gray-200 last:border-0 flex items-center justify-between group hover:bg-gray-50 transition-colors">
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-orange-100 rounded-full text-hubspot flex-shrink-0">
+                <div className="p-3 bg-orange-100 rounded-full text-xubspot flex-shrink-0">
                   <Calendar size={20} />
                 </div>
                 <div>
@@ -239,7 +239,7 @@ export function Meetings() {
               <div className="flex items-center gap-3">
                 <span className={`px-3 py-1 rounded-full text-xs font-medium ${conf.bg} ${conf.text}`}>{conf.label}</span>
                 <div className="flex gap-1">
-                  <button onClick={() => openEdit(m)} className="p-1 text-gray-400 hover:text-hubspot"><Edit2 size={14} /></button>
+                  <button onClick={() => openEdit(m)} className="p-1 text-gray-400 hover:text-xubspot"><Edit2 size={14} /></button>
                   <button onClick={() => handleDelete(m.id)} className="p-1 text-gray-400 hover:text-red-500"><Trash2 size={14} /></button>
                 </div>
               </div>
@@ -258,18 +258,18 @@ export function Meetings() {
             <form onSubmit={handleSubmit} className="flex-1 overflow-y-auto p-6 space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Title <span className="text-red-500">*</span></label>
-                <input required type="text" className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                <input required type="text" className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.title} onChange={e => setForm({ ...form, title: e.target.value })} />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Date & Time</label>
-                  <input type="datetime-local" className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  <input type="datetime-local" className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.date} onChange={e => setForm({ ...form, date: e.target.value })} />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Duration</label>
-                  <select className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  <select className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.duration} onChange={e => setForm({ ...form, duration: parseInt(e.target.value) })}>
                     <option value={15}>15 min</option>
                     <option value={30}>30 min</option>
@@ -282,7 +282,7 @@ export function Meetings() {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Location</label>
-                  <select className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  <select className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.location} onChange={e => setForm({ ...form, location: e.target.value })}>
                     <option>Zoom</option>
                     <option>Google Meet</option>
@@ -293,7 +293,7 @@ export function Meetings() {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Status</label>
-                  <select className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                  <select className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                     value={form.status} onChange={e => setForm({ ...form, status: e.target.value })}>
                     <option value="scheduled">Scheduled</option>
                     <option value="completed">Completed</option>
@@ -304,7 +304,7 @@ export function Meetings() {
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Contact</label>
-                <select className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                <select className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.contactId} onChange={e => setForm({ ...form, contactId: e.target.value })}>
                   <option value="">None</option>
                   {state.contacts.map(c => <option key={c.id} value={c.id}>{c.firstName} {c.lastName}</option>)}
@@ -312,12 +312,12 @@ export function Meetings() {
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Notes</label>
-                <textarea rows={3} className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot resize-none"
+                <textarea rows={3} className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot resize-none"
                   value={form.notes} onChange={e => setForm({ ...form, notes: e.target.value })} />
               </div>
               <div className="flex justify-end gap-3 pt-4">
                 <button type="button" onClick={() => setIsModalOpen(false)} className="px-4 py-2 border border-gray-300 rounded text-gray-700 text-sm hover:bg-gray-50">Cancel</button>
-                <button type="submit" className="px-4 py-2 bg-hubspot text-white rounded text-sm hover:bg-hubspot-hover">{editMeeting ? 'Save' : 'Schedule'}</button>
+                <button type="submit" className="px-4 py-2 bg-xubspot text-white rounded text-sm hover:bg-xubspot-hover">{editMeeting ? 'Save' : 'Schedule'}</button>
               </div>
             </form>
           </div>
@@ -418,7 +418,7 @@ export function Forms() {
           <h2 className="text-2xl font-bold text-gray-800">Forms</h2>
           <p className="text-gray-500 text-sm">{state.forms.length} forms</p>
         </div>
-        <button onClick={openCreate} className="px-4 py-2 bg-hubspot text-white rounded-md text-sm font-medium hover:bg-hubspot-hover flex items-center gap-2">
+        <button onClick={openCreate} className="px-4 py-2 bg-xubspot text-white rounded-md text-sm font-medium hover:bg-xubspot-hover flex items-center gap-2">
           <Plus size={16} /> Create Form
         </button>
       </div>
@@ -442,7 +442,7 @@ export function Forms() {
                   />
                 </button>
                 <div className="flex gap-1">
-                  <button onClick={() => openEdit(f)} className="p-1 text-gray-400 hover:text-hubspot"><Edit2 size={14} /></button>
+                  <button onClick={() => openEdit(f)} className="p-1 text-gray-400 hover:text-xubspot"><Edit2 size={14} /></button>
                   <button onClick={() => handleDelete(f.id)} className="p-1 text-gray-400 hover:text-red-500"><Trash2 size={14} /></button>
                 </div>
               </div>
@@ -462,7 +462,7 @@ export function Forms() {
               <div className="flex gap-2">
                 <button
                   onClick={() => setSubmissionsForm(f)}
-                  className="text-sm text-hubspot hover:underline"
+                  className="text-sm text-xubspot hover:underline"
                 >
                   View Submissions
                 </button>
@@ -485,12 +485,12 @@ export function Forms() {
             <form onSubmit={handleSubmit} className="flex-1 overflow-y-auto p-6 space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Form Name <span className="text-red-500">*</span></label>
-                <input required type="text" className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                <input required type="text" className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Status</label>
-                <select className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-hubspot focus:border-hubspot"
+                <select className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:ring-1 focus:ring-xubspot focus:border-xubspot"
                   value={form.status} onChange={e => setForm({ ...form, status: e.target.value })}>
                   <option value="active">Active</option>
                   <option value="inactive">Inactive</option>
@@ -502,7 +502,7 @@ export function Forms() {
                   {ALL_FIELDS.map(field => (
                     <label key={field} className="flex items-center gap-2 cursor-pointer">
                       <input type="checkbox" checked={form.fields.includes(field)} onChange={() => toggleField(field)}
-                        className="rounded border-gray-300 text-hubspot focus:ring-hubspot" />
+                        className="rounded border-gray-300 text-xubspot focus:ring-xubspot" />
                       <span className="text-sm text-gray-700 capitalize">{field.replace(/_/g, ' ')}</span>
                     </label>
                   ))}
@@ -510,7 +510,7 @@ export function Forms() {
               </div>
               <div className="flex justify-end gap-3 pt-4">
                 <button type="button" onClick={() => setIsModalOpen(false)} className="px-4 py-2 border border-gray-300 rounded text-gray-700 text-sm hover:bg-gray-50">Cancel</button>
-                <button type="submit" className="px-4 py-2 bg-hubspot text-white rounded text-sm hover:bg-hubspot-hover">{editForm ? 'Save Changes' : 'Create Form'}</button>
+                <button type="submit" className="px-4 py-2 bg-xubspot text-white rounded text-sm hover:bg-xubspot-hover">{editForm ? 'Save Changes' : 'Create Form'}</button>
               </div>
             </form>
           </div>
@@ -589,7 +589,7 @@ export function Forms() {
                   addToast(`Exported submissions for "${submissionsForm.name}".`, 'success');
                   setSubmissionsForm(null);
                 }}
-                className="px-4 py-2 bg-hubspot text-white rounded text-sm hover:bg-hubspot-hover"
+                className="px-4 py-2 bg-xubspot text-white rounded text-sm hover:bg-xubspot-hover"
               >
                 Export submissions
               </button>

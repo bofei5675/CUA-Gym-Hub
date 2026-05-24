@@ -1,4 +1,4 @@
-# Alibaba Cloud (Aliyun) Console Mock -- Assets
+# Alibaba Cloud (Xliyun) Console Mock -- Assets
 
 ## Overview
 
@@ -6,7 +6,7 @@ This directory contains research materials, reference screenshots, and data mode
 
 ## App Summary
 
-**Alibaba Cloud (Aliyun)** is China's largest cloud computing platform and a subsidiary of Alibaba Group. The management console is the web-based GUI where users create, manage, and monitor cloud infrastructure resources. It serves a similar role to AWS Console, Azure Portal, or Google Cloud Console, but with a distinct design language based on the Alibaba Fusion design system.
+**Alibaba Cloud (Xliyun)** is China's largest cloud computing platform and a subsidiary of Alibaba Group. The management console is the web-based GUI where users create, manage, and monitor cloud infrastructure resources. It serves a similar role to AWS Console, Azure Portal, or Google Cloud Console, but with a distinct design language based on the Alibaba Fusion design system.
 
 ### Key User Personas
 
@@ -74,7 +74,7 @@ This directory contains research materials, reference screenshots, and data mode
 
 ---
 
-## Aliyun Console UI Layout (from research)
+## Xliyun Console UI Layout (from research)
 
 ### Top Navigation Bar (50px)
 Left to right:
@@ -115,7 +115,7 @@ Left to right:
 - Built on Alibaba Fusion design system (React component library)
 - Chinese-first UI with English translations available
 - Uses Chinese font stack: PingFang SC, Microsoft YaHei, then western fallbacks
-- The Aliyun brand color is orange (#FF6A00) but the console primarily uses blue (#0070CC) for interactive elements
+- The Xliyun brand color is orange (#FF6A00) but the console primarily uses blue (#0070CC) for interactive elements
 - Design is desktop-only, no responsive mobile layout
 - Resource IDs follow pattern: `{type}-bp{random_hex}` (e.g., `i-bp1234567890abcdef`)
 
@@ -124,11 +124,11 @@ Left to right:
 ## Screenshots
 
 ### `screenshots/` -- Downloaded images
-- `000001.jpg`: **PRIMARY REFERENCE** -- Real Aliyun IoT console showing top nav bar (dark #232F3E), left sidebar with menu items, region selector ("华东2（上海）"), search bar, main content area with data table and pagination. Shows the full console layout with all key elements visible.
+- `000001.jpg`: **PRIMARY REFERENCE** -- Real Xliyun IoT console showing top nav bar (dark #232F3E), left sidebar with menu items, region selector ("华东2（上海）"), search bar, main content area with data table and pagination. Shows the full console layout with all key elements visible.
 - `ecs_list_01.jpg`: **ECS INSTANCE DETAIL REFERENCE** -- ECS instance detail page showing tab navigation at top (Instance Details / Monitoring / Security Groups / Cloud Disks / Snapshots / Instance Snapshots / ENIs / Remote Commands/Files). Shows "Basic Info" section with instance name, edit pencil icon, green "Running" status badge, instance ID (i-xxxx format), public IP, security group link. Action links at top right: "Diagnostics / Start / Restart / Stop / Configure Security Group Rules / Reset Instance Password". Blue outlined "Remote Connect" button visible.
 
 ### `screenshots/reference/` -- Pre-existing reference images
-- `docs_0027.webp`: Aliyun pricing model icons (Reserved Instance, Pay-As-You-Go, Subscription, Preemptible)
+- `docs_0027.webp`: Xliyun pricing model icons (Reserved Instance, Pay-As-You-Go, Subscription, Preemptible)
 - `docs_0009.webp`: Globe icon representing global regions
 - `docs_0012.webp`: Instance type diagram showing alternative instance types
 - `docs_0014.webp`: Auto Scaling diagram with cloud monitor

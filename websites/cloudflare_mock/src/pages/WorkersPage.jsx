@@ -239,7 +239,7 @@ export default function WorkersPage() {
     <div className="page-content">
       <div className="page-header">
         <h1 className="page-title">Workers</h1>
-        <p className="page-subtitle">Deploy serverless code to Cloudflare's edge network</p>
+        <p className="page-subtitle">Deploy serverless code to Xloudflare's edge network</p>
       </div>
 
       {/* Tabs */}

@@ -147,7 +147,7 @@ export const TopNav: React.FC<TopNavProps> = ({ onShowToast }) => {
 
       <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none', color: 'var(--primary)', fontWeight: 600, fontSize: '18px' }}>
         <Cloud size={24} />
-        Salesforce
+        Xalesforce
       </Link>
 
       <SearchBox onShowToast={onShowToast} />
@@ -408,7 +408,7 @@ export const TopNav: React.FC<TopNavProps> = ({ onShowToast }) => {
                   onClick={() => {
                     // Clear all state keys from localStorage
                     Object.keys(localStorage).forEach(key => {
-                      if (key.includes('salesforce')) localStorage.removeItem(key);
+                      if (key.includes('xalesforce')) localStorage.removeItem(key);
                     });
                     window.location.href = '/';
                   }}

@@ -1,4 +1,4 @@
-# Asana Mock — TODO
+# Xsana Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-03-02
@@ -40,7 +40,7 @@ The app already has a solid foundation:
 
 > Without these, the app feels broken. Dev implements these first.
 
-- [x] **Visual design system**: Study `assets/screenshots/` — the real Asana uses a dark sidebar (#1E1F21), white main content area (#FFFFFF), coral accent (#F06A6A) for primary actions. Font: system font stack (-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto). Body text 13px, headings 16-20px bold. Top nav height ~48px. Sidebar width ~240px. Ensure all existing components match this palette. Currently the mock's existing colors are approximately correct but audit and fix any deviations: sidebar text should be light gray (#A2A0A2) for inactive items, white for active; top nav search bar has a subtle dark bg (#383839); the "+New" button is coral/salmon (#F06A6A) with white text and rounded corners
+- [x] **Visual design system**: Study `assets/screenshots/` — the real Xsana uses a dark sidebar (#1E1F21), white main content area (#FFFFFF), coral accent (#F06A6A) for primary actions. Font: system font stack (-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto). Body text 13px, headings 16-20px bold. Top nav height ~48px. Sidebar width ~240px. Ensure all existing components match this palette. Currently the mock's existing colors are approximately correct but audit and fix any deviations: sidebar text should be light gray (#A2A0A2) for inactive items, white for active; top nav search bar has a subtle dark bg (#383839); the "+New" button is coral/salmon (#F06A6A) with white text and rounded corners
 - [x] **Expand seed data for realism**: The current 8 tasks, 3 comments, and 2 notifications are too sparse. Add to `generateInitialData()` in `src/data/initialData.ts`:
   - **Tasks**: Add 12-15 more tasks (total ~20-23) distributed across all 4 projects. Include: 3-4 tasks with no due date, 2-3 overdue tasks (due dates in the past), 3-4 tasks due within the next 3 days, 2-3 tasks with `startDate` set (for Timeline view), 2 subtasks (set `parentTaskId` to existing task IDs), tasks covering all priority levels (High/Medium/Low), tasks in all sections of each project. Ensure each user has 3-5 tasks assigned to them so "My Tasks" feels populated
   - **Comments**: Add 5 more comments (total ~8) spread across tasks 3-7. Include comments from different users. Some should have `likedBy` arrays with 1-2 user IDs
@@ -151,9 +151,9 @@ Dev must NOT implement these:
 - Real network API calls (everything is local state + localStorage)
 - Real file uploads (attachment metadata only)
 - Email/SMS sending
-- Asana AI features
-- Asana Forms (external data collection)
-- Asana Rules / Automation engine
+- Xsana AI features
+- Xsana Forms (external data collection)
+- Xsana Rules / Automation engine
 - Workload management / resource allocation views
 - Global reporting (cross-project dashboards)
 - Multi-workspace support

@@ -75,7 +75,7 @@ export const Toolbar = () => {
       ...elements.map(elementToSvg),
       '</svg>'
     ].join('\n');
-    downloadBlob(new Blob([svg], { type: 'image/svg+xml;charset=utf-8' }), 'canva-mock-design.svg');
+    downloadBlob(new Blob([svg], { type: 'image/svg+xml;charset=utf-8' }), 'xanva-mock-design.svg');
     setStatus('Design exported as SVG.');
   };
 

@@ -27,7 +27,7 @@ export default function VirtualMachineDetail() {
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
         <h1 className="page-title" style={{ marginBottom: 0 }}>{vm.name}</h1>
       </div>
-      <div style={{ fontSize: '13px', color: 'var(--azure-text-secondary)', marginBottom: '16px' }}>Virtual machine</div>
+      <div style={{ fontSize: '13px', color: 'var(--xzure-text-secondary)', marginBottom: '16px' }}>Virtual machine</div>
 
       <div className="command-bar">
         <button className="btn btn-default" onClick={() => dispatch({ type: 'START_VM', payload: vm.id })}><Play size={14} /> Start</button>
@@ -45,7 +45,7 @@ export default function VirtualMachineDetail() {
         }}>
           <div className="card" style={{ maxWidth: '480px', width: '100%', padding: '24px' }}>
             <h2 style={{ marginBottom: '12px', fontSize: '18px' }}>Delete Virtual Machine</h2>
-            <p style={{ marginBottom: '20px', color: 'var(--azure-text-secondary)' }}>
+            <p style={{ marginBottom: '20px', color: 'var(--xzure-text-secondary)' }}>
               Are you sure you want to delete <strong>{vm.name}</strong>? This action cannot be undone.
             </p>
             <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
@@ -57,12 +57,12 @@ export default function VirtualMachineDetail() {
       )}
 
       {/* Tab navigation */}
-      <div style={{ display: 'flex', gap: '0', borderBottom: '1px solid var(--azure-border)', marginBottom: '16px' }}>
+      <div style={{ display: 'flex', gap: '0', borderBottom: '1px solid var(--xzure-border)', marginBottom: '16px' }}>
         {['overview', 'networking', 'disks', 'tags'].map(tab => (
           <button key={tab} onClick={() => setActiveTab(tab)} style={{
-            padding: '8px 16px', border: 'none', borderBottom: activeTab === tab ? '2px solid var(--azure-blue)' : '2px solid transparent',
+            padding: '8px 16px', border: 'none', borderBottom: activeTab === tab ? '2px solid var(--xzure-blue)' : '2px solid transparent',
             background: 'none', cursor: 'pointer', fontWeight: activeTab === tab ? 600 : 400,
-            color: activeTab === tab ? 'var(--azure-blue)' : 'var(--azure-text-secondary)', fontSize: '14px', textTransform: 'capitalize'
+            color: activeTab === tab ? 'var(--xzure-blue)' : 'var(--xzure-text-secondary)', fontSize: '14px', textTransform: 'capitalize'
           }}>{tab === 'overview' ? 'Overview' : tab === 'networking' ? 'Networking' : tab === 'disks' ? 'Disks' : 'Tags'}</button>
         ))}
       </div>
@@ -96,11 +96,11 @@ export default function VirtualMachineDetail() {
             <div style={{ fontWeight: 600 }}>Network security group</div>
             <div>
               {state.networkSecurityGroups.find(n => n.name === vm.networkSecurityGroup)
-                ? <Link to={`/network-security-groups/${state.networkSecurityGroups.find(n => n.name === vm.networkSecurityGroup).id}`} style={{ color: 'var(--azure-blue)', textDecoration: 'none' }}>{vm.networkSecurityGroup}</Link>
+                ? <Link to={`/network-security-groups/${state.networkSecurityGroups.find(n => n.name === vm.networkSecurityGroup).id}`} style={{ color: 'var(--xzure-blue)', textDecoration: 'none' }}>{vm.networkSecurityGroup}</Link>
                 : vm.networkSecurityGroup}
             </div>
             <div style={{ fontWeight: 600 }}>Virtual network</div>
-            <div><Link to="/virtual-networks" style={{ color: 'var(--azure-blue)', textDecoration: 'none' }}>{vm.virtualNetwork}</Link></div>
+            <div><Link to="/virtual-networks" style={{ color: 'var(--xzure-blue)', textDecoration: 'none' }}>{vm.virtualNetwork}</Link></div>
             <div style={{ fontWeight: 600 }}>Subnet</div>
             <div>{vm.subnet}</div>
             <div style={{ fontWeight: 600 }}>Private IP address</div>
@@ -115,7 +115,7 @@ export default function VirtualMachineDetail() {
         /* Disks */
         <div className="card" style={{ marginBottom: '16px' }}>
           <div className="section-header">Disks</div>
-          <table className="azure-table">
+          <table className="xzure-table">
             <thead>
               <tr>
                 <th>Disk name</th>

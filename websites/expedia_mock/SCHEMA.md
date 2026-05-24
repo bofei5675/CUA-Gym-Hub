@@ -1,6 +1,6 @@
 # expedia_mock Schema
 
-**Deploy port**: 5180 (dev); deployed at `https://cua-gym-expedia.xlang.ai`
+**Deploy port**: 5180 (dev); deployed at `https://cua-gym-xpedia.xlang.ai`
 **Base URL**: `http://localhost:5180/`
 **Go Endpoint**: `GET /go?sid=<sid>` → `{initial_state, current_state, state_diff}`
 **Inject**: `POST /post?sid=<sid>` with body `{"action":"set","state":{...}}`

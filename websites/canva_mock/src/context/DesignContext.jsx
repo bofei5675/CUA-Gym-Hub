@@ -201,7 +201,7 @@ export const DesignProvider = ({ children }) => {
   const createShareLink = () => {
     const token = Math.random().toString(36).slice(2, 11);
     const sidPart = sidRef.current ? `?sid=${encodeURIComponent(sidRef.current)}` : '';
-    const link = `https://mock-canva.local/design/${token}${sidPart}`;
+    const link = `https://mock-xanva.local/design/${token}${sidPart}`;
     setLastShareLink(link);
     return link;
   };

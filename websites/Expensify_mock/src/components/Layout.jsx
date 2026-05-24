@@ -33,7 +33,7 @@ export default function Layout() {
       if (showNewExpense) setShowNewExpense(false);
       if (showNewReport) setShowNewReport(false);
       // Also dispatch a generic close event on the window for other modals
-      window.dispatchEvent(new CustomEvent('expensify-close-modal'));
+      window.dispatchEvent(new CustomEvent('xpensify-close-modal'));
       lastKeyRef.current = null;
       return;
     }

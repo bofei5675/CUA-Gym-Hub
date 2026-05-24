@@ -157,7 +157,7 @@ export const Board: React.FC = () => {
           </p>
           <Link
             to={`/project/${project.key}/backlog`}
-            className="inline-flex items-center gap-2 bg-jira-blue text-white px-4 py-2 rounded hover:bg-blue-700 font-medium text-sm transition-colors"
+            className="inline-flex items-center gap-2 bg-xira-blue text-white px-4 py-2 rounded hover:bg-blue-700 font-medium text-sm transition-colors"
           >
             Go to Backlog
           </Link>
@@ -201,7 +201,7 @@ export const Board: React.FC = () => {
           <input
             type="text"
             placeholder="Search this board"
-            className="border border-gray-300 rounded px-3 py-1.5 text-sm w-64 focus:border-jira-blue focus:ring-1 focus:ring-jira-blue outline-none"
+            className="border border-gray-300 rounded px-3 py-1.5 text-sm w-64 focus:border-xira-blue focus:ring-1 focus:ring-xira-blue outline-none"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -214,7 +214,7 @@ export const Board: React.FC = () => {
                 }
                 className={`w-8 h-8 rounded-full border-2 border-white overflow-hidden transition-transform hover:z-10 hover:scale-110 ${
                   userFilter === user.id
-                    ? 'ring-2 ring-jira-blue z-10'
+                    ? 'ring-2 ring-xira-blue z-10'
                     : ''
                 }`}
                 title={user.name}
@@ -226,7 +226,7 @@ export const Board: React.FC = () => {
           {userFilter !== 'all' && (
             <button
               onClick={() => setUserFilter('all')}
-              className="text-sm text-jira-blue hover:underline"
+              className="text-sm text-xira-blue hover:underline"
             >
               Clear filters
             </button>
@@ -240,7 +240,7 @@ export const Board: React.FC = () => {
             className={clsx(
               'px-3 py-1 rounded-full text-xs font-medium border transition-colors',
               onlyMyIssues
-                ? 'bg-jira-blue/10 text-jira-blue border-jira-blue'
+                ? 'bg-xira-blue/10 text-xira-blue border-xira-blue'
                 : 'bg-gray-100 text-gray-700 border-transparent hover:bg-gray-200'
             )}
           >
@@ -251,7 +251,7 @@ export const Board: React.FC = () => {
             className={clsx(
               'px-3 py-1 rounded-full text-xs font-medium border transition-colors',
               recentlyUpdated
-                ? 'bg-jira-blue/10 text-jira-blue border-jira-blue'
+                ? 'bg-xira-blue/10 text-xira-blue border-xira-blue'
                 : 'bg-gray-100 text-gray-700 border-transparent hover:bg-gray-200'
             )}
           >
@@ -264,7 +264,7 @@ export const Board: React.FC = () => {
               className={clsx(
                 'px-3 py-1 rounded-full text-xs font-medium border transition-colors',
                 activeLabels.has(label)
-                  ? 'bg-jira-blue/10 text-jira-blue border-jira-blue'
+                  ? 'bg-xira-blue/10 text-xira-blue border-xira-blue'
                   : 'bg-gray-100 text-gray-700 border-transparent hover:bg-gray-200'
               )}
             >
@@ -290,7 +290,7 @@ export const Board: React.FC = () => {
                 setRecentlyUpdated(false);
                 setActiveLabels(new Set());
               }}
-              className="text-xs text-jira-blue hover:underline ml-1"
+              className="text-xs text-xira-blue hover:underline ml-1"
             >
               Clear quick filters
             </button>
@@ -338,7 +338,7 @@ export const Board: React.FC = () => {
                           const colIssues = swimlaneIssues.filter((i) => i.status === columnId);
                           const droppableId = `${columnId}__${epic.id || 'no-epic'}`;
                           return (
-                            <div key={columnId} className="w-80 min-h-[60px] bg-jira-gray/50 rounded p-1">
+                            <div key={columnId} className="w-80 min-h-[60px] bg-xira-gray/50 rounded p-1">
                               <Droppable droppableId={droppableId}>
                                 {(provided, snapshot) => (
                                   <div
@@ -380,7 +380,7 @@ export const Board: React.FC = () => {
                 return (
                   <div
                     key={columnId}
-                    className="flex flex-col w-80 bg-jira-gray rounded-lg max-h-full"
+                    className="flex flex-col w-80 bg-xira-gray rounded-lg max-h-full"
                   >
                     <div className="p-3 text-xs font-semibold text-gray-500 uppercase flex justify-between">
                       <span>{columnId}</span>

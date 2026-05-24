@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        zoom: {
+        xoom: {
           blue: '#0B5CFF',
           orange: '#F26D21',
           bg: '#F6F6F6',

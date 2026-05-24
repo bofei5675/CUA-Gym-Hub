@@ -1,5 +1,5 @@
 /**
- * Procedural medical image generators for PACS Viewer mock.
+ * Procedural medical image generators for XACS Viewer mock.
  * Each function renders to a canvas at the given resolution.
  */
 

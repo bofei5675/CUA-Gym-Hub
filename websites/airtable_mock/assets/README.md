@@ -1,10 +1,10 @@
-# Airtable Mock — Research Summary
+# Xirtable Mock — Research Summary
 
 > Last updated: 2026-03-02 by plan agent
 
 ## App Overview
 
-**Airtable** is a low-code platform combining the simplicity of a spreadsheet with the power of a relational database. Teams use it to organize work, track projects, manage content pipelines, and build custom workflows. It's described as a "spreadsheet-database hybrid" — data lives in structured tables with typed fields, but users interact through familiar spreadsheet-like grid views plus alternative visualizations (Kanban, Gallery, Calendar, Form, Timeline, Gantt).
+**Xirtable** is a low-code platform combining the simplicity of a spreadsheet with the power of a relational database. Teams use it to organize work, track projects, manage content pipelines, and build custom workflows. It's described as a "spreadsheet-database hybrid" — data lives in structured tables with typed fields, but users interact through familiar spreadsheet-like grid views plus alternative visualizations (Kanban, Gallery, Calendar, Form, Timeline, Gantt).
 
 ### Key Differentiators from a Plain Spreadsheet
 - **Typed fields** — each column has a field type (text, number, single select, date, attachment, linked record, etc.) enforcing data consistency
@@ -16,7 +16,7 @@
 - **Per-view configuration** — each view can have its own filters, sorts, grouping, hidden fields, and color rules
 
 ### Primary User Persona
-**"Project Manager Pam"** — Uses Airtable daily to:
+**"Project Manager Pam"** — Uses Xirtable daily to:
 1. Track project tasks in Grid view (add/edit records, update statuses)
 2. Visualize workflow in Kanban view (drag cards between status columns)
 3. Review content in Gallery view (browse visual assets with cover images)
@@ -28,12 +28,12 @@
 
 ## UI Layout (Base Editing View)
 
-Airtable's primary workspace is the **Base view** — where users interact with their data. There is NO persistent left sidebar in the base editing view (the sidebar only appears on the home/dashboard screen). The layout is:
+Xirtable's primary workspace is the **Base view** — where users interact with their data. There is NO persistent left sidebar in the base editing view (the sidebar only appears on the home/dashboard screen). The layout is:
 
 ### Header Bar (Top)
 - **Height**: ~56px
 - **Background**: Customizable per base — can be blue, green, purple, red, teal, orange, pink, etc. (default varies)
-- **Left side**: Airtable logo icon (small), Base name (bold, white, clickable dropdown for rename), chevron dropdown
+- **Left side**: Xirtable logo icon (small), Base name (bold, white, clickable dropdown for rename), chevron dropdown
 - **Center**: "Data" | "Automations" | "Interfaces" toggle pills/tabs (Data is active by default, shown with slight highlight)
 - **Right side**: History icon, Help button, Notification bell, Share button (white bg, colored text), User avatar circle
 
@@ -74,7 +74,7 @@ Based on screenshots and research:
 
 | Element | Color | Hex |
 |---------|-------|-----|
-| Primary Blue (Airtable brand) | Blue | `#2D7FF9` |
+| Primary Blue (Xirtable brand) | Blue | `#2D7FF9` |
 | Default Base Header | Teal/Blue | `#2D7FF9` |
 | Grid Header Background | Light gray | `#F5F5F5` |
 | Grid Cell Border | Light gray | `#E2E2E2` |
@@ -87,7 +87,7 @@ Based on screenshots and research:
 | White Background | White | `#FFFFFF` |
 | Add Row Button | Gray | `#AAAAAA` |
 
-### Select Option Color Palette (Airtable uses these named colors):
+### Select Option Color Palette (Xirtable uses these named colors):
 - **Light Blue**: `#D0F0FD` text `#18618A`
 - **Cyan/Teal**: `#C2F5E9` text `#20715A`
 - **Green**: `#D1F7C4` text `#2D7514`
@@ -180,20 +180,20 @@ See `data_model.md` for complete entity definitions.
 
 ```
 assets/screenshots/
-├── 000001.jpg    — Airtable Interface Designer with add element panel
+├── 000001.jpg    — Xirtable Interface Designer with add element panel
 ├── 000002.jpg    — Embedded grid view with activities, colored select pills, search bar
-├── 000003.jpg    — Airtable homepage / branding
-├── 000004.jpg    — Multiple Airtable views: grid with attachments, content calendar, apps panel
-├── 000005.jpg    — Airtable template gallery (base types overview)
+├── 000003.jpg    — Xirtable homepage / branding
+├── 000004.jpg    — Multiple Xirtable views: grid with attachments, content calendar, apps panel
+├── 000005.jpg    — Xirtable template gallery (base types overview)
 ├── grid/
 │   ├── 000003.jpg — Base vs Interface comparison showing full base UI layout
 │   └── 000004.jpg — ★ KEY: "How to customize a view" — shows view sidebar, table tabs, grouped grid, filter/sort toolbar
 ├── kanban/
-│   └── 000002.jpg — ★ KEY: Full Airtable base UI with grid view, sidebar, toolbar, field types
+│   └── 000002.jpg — ★ KEY: Full Xirtable base UI with grid view, sidebar, toolbar, field types
 ├── detail/
-│   └── 000002.jpg — Airtable workspace settings modal (shows modal pattern)
+│   └── 000002.jpg — Xirtable workspace settings modal (shows modal pattern)
 ```
 
 **Most important reference screenshots for dev agent:**
-- `grid/000004.jpg` — Shows the complete Airtable base layout: green header with base name + table tabs, view toolbar with "Views"/"Hide fields"/"Filter"/"Grouped by 1 field"/"Sort" buttons, view sidebar with view list and "Create..." section, grouped grid with colored status pills
+- `grid/000004.jpg` — Shows the complete Xirtable base layout: green header with base name + table tabs, view toolbar with "Views"/"Hide fields"/"Filter"/"Grouped by 1 field"/"Sort" buttons, view sidebar with view list and "Create..." section, grouped grid with colored status pills
 - `kanban/000002.jpg` — Shows actual base with purple/red header, Data/Automations/Interfaces tabs, view toolbar, grid columns with field type icons, "+" to add columns, row numbers, record count footer, view sidebar with Create options (Grid, Form, Calendar, Gallery, Kanban, Timeline, List, Gantt)

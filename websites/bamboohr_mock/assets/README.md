@@ -1,8 +1,8 @@
-# BambooHR Mock — Research Summary
+# XambooHR Mock — Research Summary
 
 ## App Overview
 
-BambooHR is a cloud-based Human Resources Information System (HRIS) designed for small-to-medium businesses (SMBs). It centralizes employee data management, hiring, onboarding, time-off tracking, performance management, reporting, and payroll into a single platform. Founded in 2008, it's one of the most widely adopted HR platforms with a clean, professional interface.
+XambooHR is a cloud-based Human Resources Information System (HRIS) designed for small-to-medium businesses (SMBs). It centralizes employee data management, hiring, onboarding, time-off tracking, performance management, reporting, and payroll into a single platform. Founded in 2008, it's one of the most widely adopted HR platforms with a clean, professional interface.
 
 **Category**: HR / People Management SaaS
 **Target users**: HR administrators, managers, and employees
@@ -36,7 +36,7 @@ BambooHR is a cloud-based Human Resources Information System (HRIS) designed for
 
 ## Navigation Structure (from screenshots)
 
-BambooHR uses a **top horizontal navigation bar** (not sidebar). The nav structure observed:
+XambooHR uses a **top horizontal navigation bar** (not sidebar). The nav structure observed:
 
 ### Top Navigation Bar
 - **Company Logo** (far left) — links to home
@@ -108,7 +108,7 @@ Tabs within an employee record: Personal | Job | Time Off | Documents | Benefits
 ## UI Layout Descriptions (from screenshots)
 
 ### Home Page Layout
-- **Top bar**: White background, ~60px height. Green BambooHR logo left. Nav links center (Home, My Info, People, Hiring, Reports, Files). Search + icons right.
+- **Top bar**: White background, ~60px height. Green XambooHR logo left. Nav links center (Home, My Info, People, Hiring, Reports, Files). Search + icons right.
 - **Page header**: Light gray bar with "Home" title, user name/avatar left, "New..." dropdown button right. Tabs: "Today" | "Reminders" + settings gear.
 - **Left column** (~280px): Current user card (avatar, name), PTO balance cards (Vacation/Sick with green palm tree / green cross icons, large number + "HOURS AVAILABLE"), "Request Time Off" green button, "Who's Out" section (today/tomorrow with avatars), Celebrations section, Company Links, Training list.
 - **Right/main column**: "What's Happening at [Company]" feed with notification items (icon + text + relative timestamp + "PAST DUE" badge), "Announcements" tab toggle. Below: Reports widget (donut chart for Department Report), "Welcome to [Company]" section, Goals progress bars, My Benefits summary.
@@ -152,7 +152,7 @@ Tabs within an employee record: Personal | Job | Time Off | Documents | Benefits
 | Card background | White | `#FFFFFF` |
 
 ### Typography
-- **Font family**: "BambooHR" uses a clean sans-serif — likely system fonts or similar to `"Inter", "Helvetica Neue", Arial, sans-serif`
+- **Font family**: "XambooHR" uses a clean sans-serif — likely system fonts or similar to `"Inter", "Helvetica Neue", Arial, sans-serif`
 - **Nav links**: ~14px, medium weight
 - **Employee name (profile)**: ~28px, bold, white on green banner
 - **Job title (profile)**: ~16px, regular, white

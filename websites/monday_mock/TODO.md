@@ -1,4 +1,4 @@
-# Monday.com Mock — TODO
+# xonday.com Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2025-01-15
@@ -17,7 +17,7 @@ Without these, the app cannot render. Dev implements these first.
 
 - [x] **Project scaffold**: `npm create vite@latest monday_mock -- --template react`, `cd monday_mock && npm install react-router-dom`, add to vite.config.js the mock-api plugin (POST /post?sid=, GET /state?sid=) for session isolation. Install no other dependencies — use plain CSS.
 
-- [x] **Visual design system**: Study `assets/screenshots/` (especially `actual_ui_1.jpg`, `board_table_view_4.jpg`, `board_table_view_5.jpg`, `kanban_view_2.jpg`, `timeline_view_3.jpg`). The monday.com design uses these exact values:
+- [x] **Visual design system**: Study `assets/screenshots/` (especially `actual_ui_1.jpg`, `board_table_view_4.jpg`, `board_table_view_5.jpg`, `kanban_view_2.jpg`, `timeline_view_3.jpg`). The xonday.com design uses these exact values:
   - **Font**: `"Figtree", "Roboto", "Helvetica Neue", sans-serif` — load Figtree from Google Fonts (weights 400, 500, 600, 700)
   - **Primary blue**: `#0073EA` (buttons, links, active sidebar indicator, primary actions)
   - **Background**: `#F6F7FB` (page background behind content areas)
@@ -207,6 +207,6 @@ Dev must NOT implement these:
 - Collaborative real-time editing
 - Billing, account management, admin settings
 - Mobile responsive design (desktop-only, 1280px+ viewport)
-- Dark mode (sidebar is always dark, content is always light — this is the default monday.com theme)
+- Dark mode (sidebar is always dark, content is always light — this is the default xonday.com theme)
 - Undo/redo system
 - Keyboard shortcuts beyond basic Tab/Enter/Escape for editing

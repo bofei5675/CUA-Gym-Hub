@@ -42,7 +42,7 @@ export const Cart = () => {
     .slice(0, 6);
 
   return (
-    <div className="bg-amazon-bg min-h-screen">
+    <div className="bg-xmazon-bg min-h-screen">
       <div className="max-w-[1500px] mx-auto p-4 flex flex-col md:flex-row gap-6">
         {/* Main Cart Area */}
         <div className="flex-1">
@@ -52,9 +52,9 @@ export const Cart = () => {
             {state.cart.length === 0 ? (
               <div className="py-8 text-center">
                 <div className="text-4xl mb-4">🛒</div>
-                <h2 className="text-2xl font-medium mb-2">Your Amazon Cart is empty</h2>
+                <h2 className="text-2xl font-medium mb-2">Your Xmazon Cart is empty</h2>
                 <p className="text-sm text-gray-600 mb-4">Your shopping cart lives here. Add items you want to purchase.</p>
-                <Link to="/" className="text-amazon-blue hover:underline text-sm font-bold">Shop today's deals</Link>
+                <Link to="/" className="text-xmazon-blue hover:underline text-sm font-bold">Shop today's deals</Link>
               </div>
             ) : (
               <>
@@ -68,7 +68,7 @@ export const Cart = () => {
                         <img src={product.image} alt={product.title} className="w-32 h-32 object-contain" />
                       </Link>
                       <div className="flex-1">
-                        <Link to={`/product/${product.id}`} className="text-base font-medium hover:text-amazon-darkYellow hover:underline line-clamp-2 text-amazon-blue">
+                        <Link to={`/product/${product.id}`} className="text-base font-medium hover:text-xmazon-darkYellow hover:underline line-clamp-2 text-xmazon-blue">
                           {product.title}
                         </Link>
                         <div className={`text-sm my-1 ${product.inStock !== false ? 'text-green-700' : 'text-red-600'}`}>
@@ -87,9 +87,9 @@ export const Cart = () => {
                             ))}
                           </select>
                           <span className="text-gray-300">|</span>
-                          <button onClick={() => removeFromCart(item.productId)} className="text-amazon-blue hover:underline text-xs">Delete</button>
+                          <button onClick={() => removeFromCart(item.productId)} className="text-xmazon-blue hover:underline text-xs">Delete</button>
                           <span className="text-gray-300">|</span>
-                          <button onClick={() => saveForLater(item.productId)} className="text-amazon-blue hover:underline text-xs">Save for later</button>
+                          <button onClick={() => saveForLater(item.productId)} className="text-xmazon-blue hover:underline text-xs">Save for later</button>
                         </div>
                       </div>
                       <div className="text-right font-bold text-base">
@@ -121,7 +121,7 @@ export const Cart = () => {
                         <img src={product.image} alt={product.title} className="w-24 h-24 object-contain" />
                       </Link>
                       <div className="flex-1">
-                        <Link to={`/product/${product.id}`} className="font-medium hover:text-amazon-darkYellow hover:underline line-clamp-2 text-amazon-blue text-sm">
+                        <Link to={`/product/${product.id}`} className="font-medium hover:text-xmazon-darkYellow hover:underline line-clamp-2 text-xmazon-blue text-sm">
                           {product.title}
                         </Link>
                         <div className="text-red-700 font-bold text-sm my-1">${product.price.toFixed(2)}</div>
@@ -130,9 +130,9 @@ export const Cart = () => {
                         </div>
 
                         <div className="flex gap-4 text-xs">
-                          <button onClick={() => moveToCart(item.productId)} className="text-amazon-blue hover:underline">Move to Cart</button>
+                          <button onClick={() => moveToCart(item.productId)} className="text-xmazon-blue hover:underline">Move to Cart</button>
                           <span className="text-gray-300">|</span>
-                          <button onClick={() => removeSavedItem(item.productId)} className="text-amazon-blue hover:underline">Delete</button>
+                          <button onClick={() => removeSavedItem(item.productId)} className="text-xmazon-blue hover:underline">Delete</button>
                         </div>
                       </div>
                     </div>
@@ -151,12 +151,12 @@ export const Cart = () => {
                   <div key={p.id} className="flex-shrink-0 w-36 text-center">
                     <Link to={`/product/${p.id}`}>
                       <img src={p.image} alt={p.title} className="w-full h-32 object-contain mb-2" />
-                      <div className="text-xs text-amazon-blue hover:underline line-clamp-2 mb-1">{p.title}</div>
+                      <div className="text-xs text-xmazon-blue hover:underline line-clamp-2 mb-1">{p.title}</div>
                     </Link>
                     <div className="text-sm font-bold">${p.price.toFixed(2)}</div>
                     <button
                       onClick={() => addToCart(p)}
-                      className="mt-1 w-full bg-amazon-yellow hover:bg-amazon-darkYellow text-xs py-1 rounded-full border border-gray-300"
+                      className="mt-1 w-full bg-xmazon-yellow hover:bg-xmazon-darkYellow text-xs py-1 rounded-full border border-gray-300"
                     >
                       Add to Cart
                     </button>
@@ -205,7 +205,7 @@ export const Cart = () => {
                     value={promoCode}
                     onChange={e => { setPromoCode(e.target.value); setPromoError(''); }}
                     placeholder="Enter promo code"
-                    className="flex-1 border rounded px-2 py-1.5 text-sm focus:outline-none focus:border-amazon-orange"
+                    className="flex-1 border rounded px-2 py-1.5 text-sm focus:outline-none focus:border-xmazon-orange"
                   />
                   <button
                     onClick={handleApplyPromo}

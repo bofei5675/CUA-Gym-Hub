@@ -156,7 +156,7 @@ export const AdvancedSearch: React.FC = () => {
         {selectedIssueIds.size > 0 && (
           <button
             onClick={() => setShowBulkEdit(true)}
-            className="bg-jira-blue text-white px-4 py-2 rounded hover:bg-blue-700 font-medium text-sm flex items-center gap-2"
+            className="bg-xira-blue text-white px-4 py-2 rounded hover:bg-blue-700 font-medium text-sm flex items-center gap-2"
           >
             <Layers size={16} />
             Bulk Change ({selectedIssueIds.size})
@@ -171,7 +171,7 @@ export const AdvancedSearch: React.FC = () => {
         </div>
         <input
           type="text"
-          className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg leading-5 bg-white placeholder-gray-500 focus:outline-none focus:border-jira-blue focus:ring-1 focus:ring-jira-blue sm:text-sm"
+          className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg leading-5 bg-white placeholder-gray-500 focus:outline-none focus:border-xira-blue focus:ring-1 focus:ring-xira-blue sm:text-sm"
           placeholder="Search issues by summary, key, status, or priority..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -183,7 +183,7 @@ export const AdvancedSearch: React.FC = () => {
         <select
           value={typeFilter}
           onChange={(e) => setTypeFilter(e.target.value as IssueType | 'all')}
-          className="bg-white border border-gray-300 rounded px-3 py-1.5 text-sm focus:ring-2 focus:ring-jira-blue focus:border-transparent outline-none"
+          className="bg-white border border-gray-300 rounded px-3 py-1.5 text-sm focus:ring-2 focus:ring-xira-blue focus:border-transparent outline-none"
         >
           <option value="all">All Types</option>
           <option value="Story">Story</option>
@@ -195,7 +195,7 @@ export const AdvancedSearch: React.FC = () => {
         <select
           value={statusFilter}
           onChange={(e) => setStatusFilter(e.target.value as IssueStatus | 'all')}
-          className="bg-white border border-gray-300 rounded px-3 py-1.5 text-sm focus:ring-2 focus:ring-jira-blue focus:border-transparent outline-none"
+          className="bg-white border border-gray-300 rounded px-3 py-1.5 text-sm focus:ring-2 focus:ring-xira-blue focus:border-transparent outline-none"
         >
           <option value="all">All Statuses</option>
           <option value="To Do">To Do</option>
@@ -207,7 +207,7 @@ export const AdvancedSearch: React.FC = () => {
         <select
           value={priorityFilter}
           onChange={(e) => setPriorityFilter(e.target.value as Priority | 'all')}
-          className="bg-white border border-gray-300 rounded px-3 py-1.5 text-sm focus:ring-2 focus:ring-jira-blue focus:border-transparent outline-none"
+          className="bg-white border border-gray-300 rounded px-3 py-1.5 text-sm focus:ring-2 focus:ring-xira-blue focus:border-transparent outline-none"
         >
           <option value="all">All Priorities</option>
           <option value="Highest">Highest</option>
@@ -220,7 +220,7 @@ export const AdvancedSearch: React.FC = () => {
         <select
           value={assigneeFilter}
           onChange={(e) => setAssigneeFilter(e.target.value)}
-          className="bg-white border border-gray-300 rounded px-3 py-1.5 text-sm focus:ring-2 focus:ring-jira-blue focus:border-transparent outline-none"
+          className="bg-white border border-gray-300 rounded px-3 py-1.5 text-sm focus:ring-2 focus:ring-xira-blue focus:border-transparent outline-none"
         >
           <option value="all">All Assignees</option>
           <option value="unassigned">Unassigned</option>
@@ -234,7 +234,7 @@ export const AdvancedSearch: React.FC = () => {
         {hasFilters && (
           <button
             onClick={clearAllFilters}
-            className="text-sm text-jira-blue hover:underline flex items-center gap-1"
+            className="text-sm text-xira-blue hover:underline flex items-center gap-1"
           >
             <X size={14} /> Clear all filters
           </button>
@@ -251,7 +251,7 @@ export const AdvancedSearch: React.FC = () => {
                   type="checkbox"
                   checked={filteredAndSortedIssues.length > 0 && selectedIssueIds.size === filteredAndSortedIssues.length}
                   onChange={toggleSelectAll}
-                  className="rounded border-gray-300 text-jira-blue focus:ring-jira-blue cursor-pointer"
+                  className="rounded border-gray-300 text-xira-blue focus:ring-xira-blue cursor-pointer"
                 />
               </th>
               <th className={thClass} onClick={() => handleSort('key')}>
@@ -294,10 +294,10 @@ export const AdvancedSearch: React.FC = () => {
                       type="checkbox"
                       checked={isSelected}
                       readOnly
-                      className="rounded border-gray-300 text-jira-blue focus:ring-jira-blue cursor-pointer"
+                      className="rounded border-gray-300 text-xira-blue focus:ring-xira-blue cursor-pointer"
                     />
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-jira-blue">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-xira-blue">
                     {issue.key}
                   </td>
                   <td className="px-6 py-4 text-sm text-gray-900">

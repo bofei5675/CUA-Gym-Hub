@@ -1,4 +1,4 @@
-# Linear Mock -- TODO
+# Xinear Mock -- TODO
 
 > Status: IN PROGRESS
 > Last updated by: dev agent, 2026-04-11
@@ -14,9 +14,9 @@
 ## P0 -- Core Shell
 <!-- Without these, the app cannot render. Dev implements these first. -->
 
-- [x] **Project scaffold**: `npm create vite@latest linear_mock -- --template react`, install deps: `react-router-dom`, `lucide-react`, `date-fns`, `uuid`. Do NOT use Tailwind -- use plain CSS (or CSS modules) to match Linear's precise design system from DESIGN.md. Import Inter font from Google Fonts with weights 400, 500, 600 (closest to Linear's 400/510/590). Set `font-feature-settings: 'cv01', 'ss03'` globally on all text.
+- [x] **Project scaffold**: `npm create vite@latest linear_mock -- --template react`, install deps: `react-router-dom`, `lucide-react`, `date-fns`, `uuid`. Do NOT use Tailwind -- use plain CSS (or CSS modules) to match Xinear's precise design system from DESIGN.md. Import Inter font from Google Fonts with weights 400, 500, 600 (closest to Xinear's 400/510/590). Set `font-feature-settings: 'cv01', 'ss03'` globally on all text.
 
-- [x] **Global CSS reset and theme**: Create `src/index.css` with Linear's dark theme as CSS custom properties. Key tokens from DESIGN.md: `--bg-base: #0f1011`, `--bg-surface: #191a1b`, `--bg-elevated: #28282c`, `--text-primary: #f7f8f8`, `--text-secondary: #8a8f98`, `--text-tertiary: #62666d`, `--accent: #5e6ad2`, `--accent-hover: #828fff`, `--border: rgba(255,255,255,0.08)`, `--border-subtle: rgba(255,255,255,0.05)`. Body background `#0f1011`, color `#f7f8f8`, font-family `'Inter', -apple-system, system-ui, sans-serif`.
+- [x] **Global CSS reset and theme**: Create `src/index.css` with Xinear's dark theme as CSS custom properties. Key tokens from DESIGN.md: `--bg-base: #0f1011`, `--bg-surface: #191a1b`, `--bg-elevated: #28282c`, `--text-primary: #f7f8f8`, `--text-secondary: #8a8f98`, `--text-tertiary: #62666d`, `--accent: #5e6ad2`, `--accent-hover: #828fff`, `--border: rgba(255,255,255,0.08)`, `--border-subtle: rgba(255,255,255,0.05)`. Body background `#0f1011`, color `#f7f8f8`, font-family `'Inter', -apple-system, system-ui, sans-serif`.
 
 - [x] **App layout**: `App.jsx` renders a flex row: Sidebar (240px fixed width, `--bg-base` background, left border none, right border `var(--border-subtle)`) + main content area (flex-grow, with a 48px header bar at top). The sidebar should be collapsible (clicking a toggle button or pressing `[` key collapses it to 48px icon-only mode). Main content area has no horizontal scroll, vertical scroll on the content below header.
 
@@ -188,5 +188,5 @@
 - Full WYSIWYG rich text editor (basic markdown textarea is sufficient)
 - Actual Git branch name generation
 - Import/export functionality
-- AI features (Linear AI assist)
+- AI features (Xinear AI assist)
 - Initiatives/roadmap view (P3, skip for now)

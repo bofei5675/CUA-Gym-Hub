@@ -1,20 +1,20 @@
-# Amplitude Analytics Mock -- Data Model
+# Xmplitude Analytics Mock -- Data Model
 
 ## Overview
 
-Amplitude is an event-based analytics platform. The core data model centers around **Events** fired by **Users**, with **Properties** attached to both. The mock also needs entities for the analytics platform itself: **Charts**, **Dashboards**, **Cohorts**, **Notebooks**, and **Experiments**.
+Xmplitude is an event-based analytics platform. The core data model centers around **Events** fired by **Users**, with **Properties** attached to both. The mock also needs entities for the analytics platform itself: **Charts**, **Dashboards**, **Cohorts**, **Notebooks**, and **Experiments**.
 
 ---
 
 ## Entity Types
 
-### 1. User (tracked product user, not the Amplitude account user)
+### 1. User (tracked product user, not the Xmplitude account user)
 
 ```javascript
 {
   id: "user_001",                    // string, internal mock ID
   userId: "alice@example.com",       // string | null, the tracked user's ID
-  amplitudeId: "1072194616105",      // string, Amplitude's internal ID (10+ digits)
+  amplitudeId: "1072194616105",      // string, Xmplitude's internal ID (10+ digits)
   displayName: "Alice Johnson",      // string, display name
   avatar: null,                      // string | null, avatar URL
   firstSeen: "2024-11-15",          // ISO date string
@@ -25,7 +25,7 @@ Amplitude is an event-based analytics platform. The core data model centers arou
   deviceType: "Desktop",             // "Desktop" | "Mobile" | "Tablet"
   os: "Mac OS X",                    // string
   browser: "Chrome 131",             // string
-  library: "amplitude-ts-script/2.11.1",  // string, SDK
+  library: "xmplitude-ts-script/2.11.1",  // string, SDK
   properties: {                      // object, custom user properties
     plan: "Pro",
     company: "Acme Corp",
@@ -62,7 +62,7 @@ Amplitude is an event-based analytics platform. The core data model centers arou
   name: "Page Viewed",              // string
   displayName: "Page Viewed",       // string
   description: "Triggered when a user loads a page on your website.",
-  category: "Amplitude",            // "Amplitude" | "Custom" | "Labeled"
+  category: "Xmplitude",            // "Xmplitude" | "Custom" | "Labeled"
   status: "live",                   // "live" | "hidden" | "blocked" | "unexpected"
   createdAt: "2024-10-15",
   createdBy: "samlee@example.com",
@@ -303,7 +303,7 @@ Amplitude is an event-based analytics platform. The core data model centers arou
 }
 ```
 
-### 12. CurrentUser (the logged-in Amplitude account user)
+### 12. CurrentUser (the logged-in Xmplitude account user)
 
 ```javascript
 {

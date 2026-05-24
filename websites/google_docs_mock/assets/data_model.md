@@ -1,4 +1,4 @@
-# Google Docs Mock — Data Model
+# Xoogle Docs Mock — Data Model
 
 ## Entity Types
 

@@ -1,10 +1,10 @@
-# LinkedIn Mock — Research Summary
+# XinkedIn Mock — Research Summary
 
 > Last updated: 2026-03-02 by plan agent
 
 ## App Overview
 
-**LinkedIn** is a professional networking platform (owned by Microsoft) with ~1 billion members worldwide. It serves as a hub for professional identity management, career development, job searching, content sharing, and business networking. The desktop web app (linkedin.com) is the primary interface for power users.
+**XinkedIn** is a professional networking platform (owned by Microsoft) with ~1 billion members worldwide. It serves as a hub for professional identity management, career development, job searching, content sharing, and business networking. The desktop web app (linkedin.com) is the primary interface for power users.
 
 **Category**: Professional social networking / Career platform
 **Primary use cases**: Profile building, job searching, professional content sharing, messaging, networking
@@ -33,7 +33,7 @@
 ## Desktop Layout Description
 
 ### Top Navigation Bar (52px height, white, sticky)
-- **Left**: LinkedIn logo (blue "in" icon) + Search bar (light blue bg `#eef3f8`, expandable)
+- **Left**: XinkedIn logo (blue "in" icon) + Search bar (light blue bg `#eef3f8`, expandable)
 - **Center/Right**: Icon nav items, each ~80px wide with icon + label below:
   - Home (house icon)
   - My Network (people icon)
@@ -48,7 +48,7 @@
 ### Home Feed Page — Three Column Layout
 - **Left sidebar** (~225px): Profile mini-card with banner bg, avatar overlapping, name, headline, connections count
 - **Center feed** (~540px): Create post box (avatar + "Start a post" button + Media/Event/Article buttons), then post cards in reverse-chronological order, with "Sort by: Top" divider
-- **Right sidebar** (~300px): "LinkedIn News" widget with bullet-pointed trending stories (title + timeago + reader count)
+- **Right sidebar** (~300px): "XinkedIn News" widget with bullet-pointed trending stories (title + timeago + reader count)
 
 ### Post Card Structure
 - **Header**: 48px circular avatar, bold author name, gray headline, relative timestamp + globe icon, 3-dot menu
@@ -120,14 +120,14 @@
 - [ ] More realistic mock data (more users, posts, jobs, chats)
 - [ ] "People also viewed" on profile (with real data from users map)
 - [ ] Edit experience/education (not just add/delete)
-- [ ] Footer with LinkedIn links
+- [ ] Footer with XinkedIn links
 - [ ] Profile "Activity" section (recent posts by user)
 - [ ] Hashtag rendering in post content
 - [ ] "See more" truncation on long post content
 - [ ] Connection degree labels (1st, 2nd, 3rd)
 - [ ] Company entities in data model (for job logos & experience)
 
-## Color Palette (from LinkedIn brand guidelines)
+## Color Palette (from XinkedIn brand guidelines)
 
 | Token | Hex | Usage |
 |-------|-----|-------|
@@ -155,7 +155,7 @@
 
 ```
 assets/screenshots/
-├── 000001-000005.jpg    ← LinkedIn homepage/general (older versions + feed widgets)
+├── 000001-000005.jpg    ← XinkedIn homepage/general (older versions + feed widgets)
 ├── profile/             ← Profile page screenshots (about, experience, education, header card)
 ├── messaging/           ← Messaging inbox & conversation view
 ├── jobs/                ← Jobs search results and saved jobs
@@ -167,7 +167,7 @@ assets/screenshots/
 ```
 
 Key reference screenshots:
-- `feed_ui/000005.jpg` — **Best reference**: Shows complete LinkedIn desktop homepage with left sidebar profile card, center feed with create post box and post cards (avatar, name, timestamp, content, image, like count, Like/Comment/Share actions), right sidebar news widget. LinkedIn blue header with search + nav icons.
+- `feed_ui/000005.jpg` — **Best reference**: Shows complete XinkedIn desktop homepage with left sidebar profile card, center feed with create post box and post cards (avatar, name, timestamp, content, image, like count, Like/Comment/Share actions), right sidebar news widget. XinkedIn blue header with search + nav icons.
 - `profile/000001.jpg` — Profile header card: banner, circular avatar, name, degree badge, headline, location, connections count, Message button, More button (...)
 - `profile/000002.jpg` — Education and Volunteer Experience sections with school/org logos
 - `profile/000003.jpg` — Profile with About section expanded, banner image, avatar
@@ -198,11 +198,11 @@ Key reference screenshots:
 
 ## Out of Scope
 - Authentication / Login / Signup flows (app starts pre-logged-in as "Admin User")
-- LinkedIn Premium features
-- LinkedIn Learning
-- LinkedIn Events (beyond placeholder)
+- XinkedIn Premium features
+- XinkedIn Learning
+- XinkedIn Events (beyond placeholder)
 - Real file/image uploads
 - Real-time messaging (WebSocket)
 - Email/push notifications
-- LinkedIn Pages admin
+- XinkedIn Pages admin
 - Ad management

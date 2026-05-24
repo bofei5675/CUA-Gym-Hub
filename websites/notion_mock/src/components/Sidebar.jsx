@@ -191,8 +191,8 @@ const SidebarItem = ({ page, depth = 0, onDragStart, onDragOver, onDrop, onDragE
         <Link
           to={`/page/${page.id}`}
           className={clsx(
-            "group flex items-center min-h-[28px] py-1 pr-2 text-sm rounded-sm cursor-pointer select-none hover:bg-notion-hover text-notion-textGray hover:text-notion-text",
-            isActive && "bg-notion-hover text-notion-text font-medium"
+            "group flex items-center min-h-[28px] py-1 pr-2 text-sm rounded-sm cursor-pointer select-none hover:bg-xotion-hover text-xotion-textGray hover:text-xotion-text",
+            isActive && "bg-xotion-hover text-xotion-text font-medium"
           )}
           style={{ paddingLeft: `${depth * 12 + 12}px` }}
         >
@@ -421,7 +421,7 @@ export const SearchModal = ({ onClose }) => {
                 key={page.id}
                 className={clsx(
                   "flex items-center px-4 py-2 cursor-pointer text-sm",
-                  index === clampedIndex ? "bg-notion-hover" : "hover:bg-gray-50"
+                  index === clampedIndex ? "bg-xotion-hover" : "hover:bg-gray-50"
                 )}
                 onClick={() => {
                   navigate(`/page/${page.id}`);
@@ -553,7 +553,7 @@ export const Sidebar = () => {
   if (isCollapsed) {
     return (
       <>
-        <div className="w-12 h-full bg-notion-sidebar border-r border-notion-border flex flex-col items-center py-4 group relative z-50">
+        <div className="w-12 h-full bg-xotion-sidebar border-r border-xotion-border flex flex-col items-center py-4 group relative z-50">
           <button
             className="p-2 hover:bg-gray-200 rounded text-gray-500 mb-4"
             onClick={() => setIsCollapsed(false)}
@@ -586,7 +586,7 @@ export const Sidebar = () => {
     <>
       <div
         ref={sidebarRef}
-        className="bg-notion-sidebar border-r border-notion-border flex flex-col h-full select-none flex-shrink-0 relative group"
+        className="bg-xotion-sidebar border-r border-xotion-border flex flex-col h-full select-none flex-shrink-0 relative group"
         style={{ width: width }}
       >
         {/* Collapse Button */}
@@ -599,7 +599,7 @@ export const Sidebar = () => {
         </div>
 
         {/* Workspace Header */}
-        <div className="h-12 flex items-center px-4 hover:bg-notion-hover cursor-pointer transition-colors m-2 rounded-md">
+        <div className="h-12 flex items-center px-4 hover:bg-xotion-hover cursor-pointer transition-colors m-2 rounded-md">
           <div className="w-5 h-5 bg-orange-400 rounded flex items-center justify-center text-xs text-white mr-2 font-bold">
             {state.workspace.name[0]}
           </div>
@@ -610,14 +610,14 @@ export const Sidebar = () => {
         {/* Quick Links */}
         <div className="px-2 mb-4">
           <div
-            className="flex items-center px-3 py-1 text-sm text-notion-textGray hover:bg-notion-hover rounded cursor-pointer"
+            className="flex items-center px-3 py-1 text-sm text-xotion-textGray hover:bg-xotion-hover rounded cursor-pointer"
             onClick={() => setShowSearch(true)}
           >
             <Search size={16} className="mr-2" />
             <span>Search</span>
           </div>
           <div
-            className="flex items-center px-3 py-1 text-sm text-notion-textGray hover:bg-notion-hover rounded cursor-pointer"
+            className="flex items-center px-3 py-1 text-sm text-xotion-textGray hover:bg-xotion-hover rounded cursor-pointer"
             onClick={() => setShowNotifications(true)}
           >
             <Bell size={16} className="mr-2" />
@@ -627,7 +627,7 @@ export const Sidebar = () => {
             )}
           </div>
           <div
-            className="flex items-center px-3 py-1 text-sm text-notion-textGray hover:bg-notion-hover rounded cursor-pointer"
+            className="flex items-center px-3 py-1 text-sm text-xotion-textGray hover:bg-xotion-hover rounded cursor-pointer"
             onClick={() => setShowSettings(true)}
           >
             <Settings size={16} className="mr-2" />
@@ -677,7 +677,7 @@ export const Sidebar = () => {
           ))}
 
           <div
-            className="flex items-center px-3 py-1 mt-2 text-sm text-notion-textGray hover:bg-notion-hover rounded cursor-pointer"
+            className="flex items-center px-3 py-1 mt-2 text-sm text-xotion-textGray hover:bg-xotion-hover rounded cursor-pointer"
             onClick={() => addPage(null)}
           >
             <Plus size={16} className="mr-2" />
@@ -687,14 +687,14 @@ export const Sidebar = () => {
           {/* Templates Section */}
           <div className="mt-6 mb-2 px-3 text-xs font-semibold text-gray-500">Templates</div>
           <div
-            className="flex items-center px-3 py-1 text-sm text-notion-textGray hover:bg-notion-hover rounded cursor-pointer"
+            className="flex items-center px-3 py-1 text-sm text-xotion-textGray hover:bg-xotion-hover rounded cursor-pointer"
             onClick={() => setShowTemplates(true)}
           >
             <LayoutTemplate size={16} className="mr-2" />
             <span>Templates</span>
           </div>
           <div
-            className="flex items-center px-3 py-1 text-sm text-notion-textGray hover:bg-notion-hover rounded cursor-pointer"
+            className="flex items-center px-3 py-1 text-sm text-xotion-textGray hover:bg-xotion-hover rounded cursor-pointer"
             onClick={() => setShowTemplates(true)}
           >
             <Plus size={16} className="mr-2" />
@@ -703,9 +703,9 @@ export const Sidebar = () => {
         </div>
 
         {/* Bottom Actions */}
-        <div className="p-2 border-t border-notion-border">
+        <div className="p-2 border-t border-xotion-border">
           <div
-            className="flex items-center px-3 py-1 text-sm text-notion-textGray hover:bg-notion-hover rounded cursor-pointer"
+            className="flex items-center px-3 py-1 text-sm text-xotion-textGray hover:bg-xotion-hover rounded cursor-pointer"
             onClick={() => setShowTrash(true)}
           >
             <Trash size={16} className="mr-2" />

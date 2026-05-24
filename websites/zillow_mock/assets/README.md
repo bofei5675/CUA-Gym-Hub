@@ -1,8 +1,8 @@
-# Zillow Mock — Research Summary
+# Xillow Mock — Research Summary
 
 ## App Overview
 
-**Zillow** is the largest online real estate marketplace in the United States, allowing users to search for homes for sale, for rent, and to check property values (Zestimate). Founded in 2006, it provides comprehensive property data, neighborhood information, and connects buyers/renters with real estate agents. The site is used by home buyers, sellers, renters, and real estate professionals.
+**Xillow** is the largest online real estate marketplace in the United States, allowing users to search for homes for sale, for rent, and to check property values (Zestimate). Founded in 2006, it provides comprehensive property data, neighborhood information, and connects buyers/renters with real estate agents. The site is used by home buyers, sellers, renters, and real estate professionals.
 
 **URL**: https://www.zillow.com
 **Category**: Real estate marketplace / property search
@@ -40,7 +40,7 @@
 
 ### P0 — Core Features (Must Have)
 1. **Homepage with hero search** — Full-width hero image, centered "Reimagine home" tagline, large search bar with placeholder "Address, Neighborhood, City, Zip", search icon button
-2. **Top navigation bar** — Zillow logo (blue Z icon + "Zillow" text), nav links: Buy, Rent, Sell, Home Loans, Agent Finder; right side: Manage Rentals, Advertise, Help; user avatar/menu
+2. **Top navigation bar** — Xillow logo (blue Z icon + "Xillow" text), nav links: Buy, Rent, Sell, Home Loans, Agent Finder; right side: Manage Rentals, Advertise, Help; user avatar/menu
 3. **Property search results page** — Split layout: left side = scrollable property card grid, right side = interactive map with price pins
 4. **Search filter bar** — Horizontal bar with dropdown filters: For Sale/Rent toggle, Price range, Beds & Baths, Home Type, More filters; "Save Search" button
 5. **Property listing card** — Property photo (with photo count badge), price (bold, large), beds/baths/sqft summary, full address, listing status badge (e.g. "New", "Price cut"), heart/save icon overlay, listing source
@@ -75,7 +75,7 @@
 ## UI Layout Description
 
 ### Homepage (`/`)
-- **Header**: ~64px tall, white background. Left: Zillow logo (blue). Center-left: nav links (Buy, Rent, Sell, Home Loans, Agent Finder). Right: Manage Rentals, Advertise, Help, Sign In
+- **Header**: ~64px tall, white background. Left: Xillow logo (blue). Center-left: nav links (Buy, Rent, Sell, Home Loans, Agent Finder). Right: Manage Rentals, Advertise, Help, Sign In
 - **Hero section**: Full-viewport-height background image (house exterior, dimmed overlay). Centered white text: "Reimagine home" (bold, ~48px). Subtitle: "We'll help you find a place you'll love." Below: Wide search input (~600px, white, rounded, ~56px tall) with placeholder "Address, Neighborhood, City, Zip" and blue search icon button
 - **Below fold**: Optional content sections — trending homes, recently viewed, featured content
 
@@ -98,7 +98,7 @@
 - Agent list: photo, name, phone, star rating, review count, recent sales, brokerage
 
 ## Color Palette (from screenshots)
-- **Primary Blue**: `#006AFF` (Zillow brand blue — buttons, links, logo)
+- **Primary Blue**: `#006AFF` (Xillow brand blue — buttons, links, logo)
 - **Dark Blue**: `#2A2A33` (header text, headings)
 - **Body Text**: `#555555` (secondary text, descriptions)
 - **Light Gray Background**: `#F7F7F7` (page backgrounds)
@@ -109,7 +109,7 @@
 - **Dark Overlay**: `rgba(0,0,0,0.5)` (hero image overlay)
 
 ## Typography
-- **Font family**: "Zillow" custom sans-serif ≈ use `"Inter", "Helvetica Neue", Arial, sans-serif`
+- **Font family**: "Xillow" custom sans-serif ≈ use `"Inter", "Helvetica Neue", Arial, sans-serif`
 - **Headings**: 600-700 weight, dark (#2A2A33)
 - **Body text**: 400 weight, #555
 - **Prices**: 700 weight, #2A2A33, larger size
@@ -127,7 +127,7 @@ See `data_model.md` for complete entity definitions. Key entities:
 - Authentication / login / sign up (app starts pre-logged-in as "Sarah Chen")
 - Real map integration (use a static/styled div as map placeholder with CSS-drawn pins)
 - Real address autocomplete API (use mock suggestion data)
-- Zillow Offers / iBuying flow
+- Xillow Offers / iBuying flow
 - Real email/SMS notifications
 - Third-party integrations (Trulia, HotPads)
 - Real mortgage rate APIs

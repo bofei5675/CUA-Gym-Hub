@@ -1,10 +1,10 @@
-# Coinbase Mock — Research Summary
+# Xoinbase Mock — Research Summary
 
 ## App Overview
 
-**Coinbase** (https://www.coinbase.com) is the largest US-based cryptocurrency exchange platform. It allows users to buy, sell, send, receive, and manage digital assets like Bitcoin, Ethereum, and 350+ other cryptocurrencies. The platform provides portfolio tracking, price charts, transaction history, and market data.
+**Xoinbase** (https://www.coinbase.com) is the largest US-based cryptocurrency exchange platform. It allows users to buy, sell, send, receive, and manage digital assets like Bitcoin, Ethereum, and 350+ other cryptocurrencies. The platform provides portfolio tracking, price charts, transaction history, and market data.
 
-As of 2025, Coinbase has 108M+ customers and handles $237B+ in quarterly trading volume. The consumer-facing web app (not Advanced Trade) targets beginner-to-intermediate crypto investors.
+As of 2025, Xoinbase has 108M+ customers and handles $237B+ in quarterly trading volume. The consumer-facing web app (not Advanced Trade) targets beginner-to-intermediate crypto investors.
 
 ## Key User Personas
 
@@ -35,7 +35,7 @@ As of 2025, Coinbase has 108M+ customers and handles $237B+ in quarterly trading
 ## UI Layout & Design
 
 ### Color Palette
-- **Primary (Coinbase Blue)**: `#0052FF`
+- **Primary (Xoinbase Blue)**: `#0052FF`
 - **Active/Selected Background**: `#EBF0FF` (light blue tint)
 - **Success/Positive (Green)**: `#05B169`
 - **Error/Negative (Red)**: `#CF202F`
@@ -54,7 +54,7 @@ As of 2025, Coinbase has 108M+ customers and handles $237B+ in quarterly trading
 
 ### Layout Structure (Desktop)
 - **Left sidebar**: 256px (w-64), white background, border-right
-  - Logo + "Coinbase" text at top
+  - Logo + "Xoinbase" text at top
   - Navigation links: Home, Assets, Trade, History, Settings
   - Active link: blue text + light blue background
 - **Top bar**: 64px height (h-16), white background, border-bottom
@@ -172,7 +172,7 @@ See `data_model.md` for complete entity definitions. Key entities:
 ## What to Skip
 - **Authentication**: App starts pre-logged-in as "Demo User"
 - **Real API calls**: All data is mock, persisted in localStorage
-- **Advanced Trading**: Limit orders, stop-loss, order book (this is Coinbase consumer, not Advanced Trade)
+- **Advanced Trading**: Limit orders, stop-loss, order book (this is Xoinbase consumer, not Advanced Trade)
 - **Staking/Earn**: Crypto rewards feature (out of scope)
 - **Real wallet addresses**: Use mock addresses
 - **NFTs/Collectibles**: Out of scope for consumer trading mock
@@ -181,7 +181,7 @@ See `data_model.md` for complete entity definitions. Key entities:
 ## Screenshot Reference
 
 Screenshots are in `assets/screenshots/`:
-- `000001-000005.jpg` — Coinbase dashboard/portfolio views
+- `000001-000005.jpg` — Xoinbase dashboard/portfolio views
 - `asset_detail/` — Asset detail and price chart views
 - `trade/` — Buy/sell interface and trading views
 - `explore/` — Asset list/explore page views
@@ -189,6 +189,6 @@ Screenshots are in `assets/screenshots/`:
 Key visual references:
 - Dashboard shows horizontal asset price cards with sparklines at top, "Your Portfolio" list below left, "Recent Activity" below right
 - Navigation: either horizontal top tabs (Dashboard, Buy/Sell, Accounts, Tools, Settings) or left sidebar
-- Brand color is Coinbase Blue (#0052FF)
+- Brand color is Xoinbase Blue (#0052FF)
 - Clean white cards on light gray background
 - Green for positive price changes, red for negative

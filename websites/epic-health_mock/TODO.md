@@ -1,4 +1,4 @@
-# Epic MyChart Patient Portal Mock — TODO
+# Xpic MyChart Patient Portal Mock — TODO
 
 > Status: IN PROGRESS
 > Last updated by: dev agent, 2026-03-13
@@ -16,7 +16,7 @@
 
 <!-- Without these, the app cannot render. Dev implements these first. -->
 
-- [x] **Project scaffold**: `npm create vite@latest epic-health_mock -- --template react`, install deps: `react-router-dom`, `lucide-react`. Use **plain CSS** (no Tailwind) for pixel-accurate styling matching MyChart screenshots.
+- [x] **Project scaffold**: `npm create vite@latest xpic-health_mock -- --template react`, install deps: `react-router-dom`, `lucide-react`. Use **plain CSS** (no Tailwind) for pixel-accurate styling matching MyChart screenshots.
 
 - [x] **Visual design system**: Study `assets/screenshots/dashboard_000001.jpg` and `assets/screenshots/messaging_000001.jpg` carefully. Create `src/styles/variables.css` with CSS custom properties:
   - `--color-header-bg`: Linear gradient from `#0075BC` to `#004B87` (deep blue/teal)
@@ -41,7 +41,7 @@
   - `--shadow-sm: 0 1px 3px rgba(0,0,0,0.1)`, `--shadow-md: 0 2px 8px rgba(0,0,0,0.15)`
 
 - [x] **App layout** (`src/App.jsx` + `src/App.css`): As seen in `dashboard_000001.jpg`:
-  - **Top header bar**: Full-width, 50px height, blue gradient background. Left: "MyChart" logo text (white, with small "MyChart by Epic" sub-logo). Right: globe icon (language), user avatar circle (40px, teal with white initials "SC") + "Sarah Chen" text + "Switch ▼" dropdown, logout icon.
+  - **Top header bar**: Full-width, 50px height, blue gradient background. Left: "MyChart" logo text (white, with small "MyChart by Xpic" sub-logo). Right: globe icon (language), user avatar circle (40px, teal with white initials "SC") + "Sarah Chen" text + "Switch ▼" dropdown, logout icon.
   - **Navigation tab bar**: Full-width, 44px, light gray `#F5F5F5` background, below header. Tab items with icons: 🏠 `Your Menu` (hamburger icon) | 📅 `Visits` | ✉ `Messages` (with red badge for unread count) | 🔬 `Test Results` | 💰 `Billing & Insurance`. Each tab is ~120px wide, separated by subtle dividers. Active tab has white background and blue bottom border.
   - **Main content area**: Max-width 1200px, centered, padding 20px on sides. Background `#F0F2F5`.
   - **Slide-out sidebar** ("Your Menu"): 340px wide panel that slides in from left when "Your Menu" tab is clicked. White background with shadow. Search input at top ("Search the menu"), then categorized menu items with small icons (see full list in `messaging_000001.jpg` screenshot). Categories: **Find Care** (Schedule an Appointment, E-Visit, View Care Team), **Communication** (Messages, Ask a Question, Letters), **My Record** (Visits, Test Results, Medications, Health Summary, Preventive Care, Questionnaires, Medical and Family History), **Billing** (Billing Summary, Insurance). Click item → navigate to route, close sidebar.

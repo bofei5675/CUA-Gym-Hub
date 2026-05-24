@@ -180,7 +180,7 @@ function TradeForm({ onPreview, initialMode, initialAssetId }) {
             <span className="font-medium text-gray-900">{formatCurrency(selectedAsset.currentPrice)}</span>
           </div>
           <div className="flex justify-between text-sm">
-            <span className="text-gray-500">Coinbase fee (1.49%)</span>
+            <span className="text-gray-500">Xoinbase fee (1.49%)</span>
             <span className="font-medium text-gray-900">{formatCurrency(fee)}</span>
           </div>
           <div className="border-t border-gray-200 pt-2 flex justify-between text-sm font-semibold">

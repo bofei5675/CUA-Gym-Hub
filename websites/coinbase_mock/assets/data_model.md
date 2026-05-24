@@ -1,4 +1,4 @@
-# Coinbase Mock — Data Model
+# Xoinbase Mock — Data Model
 
 ## Entity Relationship Overview
 

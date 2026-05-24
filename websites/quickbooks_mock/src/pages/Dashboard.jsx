@@ -167,7 +167,7 @@ export default function Dashboard() {
                     <div className="text-xs text-gray-400">Updated moments ago</div>
                     <div className="flex justify-between text-xs mt-1">
                       <span className="text-gray-500">Bank balance <span className="font-medium text-gray-800">${fmtD(acc.bankBalance || acc.balance)}</span></span>
-                      <span className="text-gray-500">In QuickBooks <span className="font-medium text-gray-800">${fmtD(acc.balance)}</span></span>
+                      <span className="text-gray-500">In XuickBooks <span className="font-medium text-gray-800">${fmtD(acc.balance)}</span></span>
                     </div>
                   </div>
                 ))}

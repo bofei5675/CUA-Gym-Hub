@@ -1,4 +1,4 @@
-# Zillow Mock — Data Model
+# Xillow Mock — Data Model
 
 This document defines all entity types, their fields, relationships, and the `createInitialData()` structure for `dataManager.js`.
 
@@ -28,7 +28,7 @@ The core entity. Array of property listings.
 | Field | Type | Example | Notes |
 |-------|------|---------|-------|
 | id | string | `"prop-1"` | Unique ID |
-| zpid | string | `"29384756"` | Zillow property ID (mock) |
+| zpid | string | `"29384756"` | Xillow property ID (mock) |
 | address | object | see below | Full address breakdown |
 | address.street | string | `"1234 Oak Avenue"` | |
 | address.city | string | `"San Francisco"` | |
@@ -37,7 +37,7 @@ The core entity. Array of property listings.
 | address.neighborhood | string | `"Pacific Heights"` | |
 | address.full | string | `"1234 Oak Avenue, San Francisco, CA 94102"` | Computed display string |
 | price | number | `875000` | Listing price in dollars |
-| zestimate | number | `890000` | Zillow estimated value |
+| zestimate | number | `890000` | Xillow estimated value |
 | zestimateRange | object | `{ low: 845000, high: 935000 }` | Estimate range |
 | rentZestimate | number | `4200` | Monthly rent estimate |
 | beds | number | `3` | |

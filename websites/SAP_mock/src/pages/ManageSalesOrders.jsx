@@ -10,10 +10,10 @@ const STATUS_CLASS = {
 }
 
 function StatusIcon({ status }) {
-  if (status === 'Open') return <span style={{ color: 'var(--sap-blue)' }}>●</span>
-  if (status === 'In Process') return <span style={{ color: 'var(--sap-status-warning)' }}>◑</span>
-  if (status === 'Completed') return <span style={{ color: 'var(--sap-status-success)' }}>✓</span>
-  if (status === 'Cancelled') return <span style={{ color: 'var(--sap-status-error)' }}>×</span>
+  if (status === 'Open') return <span style={{ color: 'var(--xap-blue)' }}>●</span>
+  if (status === 'In Process') return <span style={{ color: 'var(--xap-status-warning)' }}>◑</span>
+  if (status === 'Completed') return <span style={{ color: 'var(--xap-status-success)' }}>✓</span>
+  if (status === 'Cancelled') return <span style={{ color: 'var(--xap-status-error)' }}>×</span>
   return <span>—</span>
 }
 
@@ -128,34 +128,34 @@ export default function ManageSalesOrders() {
             </div>
           )}
           <div className="filter-bar-actions">
-            <button className="btn-ghost" style={{ fontSize: '12px', color: 'var(--sap-text-secondary)' }}>Adapt Filters (8)</button>
+            <button className="btn-ghost" style={{ fontSize: '12px', color: 'var(--xap-text-secondary)' }}>Adapt Filters (8)</button>
             <button className="btn-primary" onClick={applyFilters}>Go</button>
           </div>
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4px' }}>
             <button onClick={() => setFilterCollapsed(c => !c)}
-              style={{ background: 'none', border: 'none', color: 'var(--sap-text-secondary)', cursor: 'pointer', fontSize: '18px' }}>
+              style={{ background: 'none', border: 'none', color: 'var(--xap-text-secondary)', cursor: 'pointer', fontSize: '18px' }}>
               {filterCollapsed ? '▽' : '△'}
             </button>
           </div>
         </div>
 
         <div className="section-card">
-          <div style={{ padding: '8px 12px', borderBottom: '1px solid var(--sap-border)' }}>
+          <div style={{ padding: '8px 12px', borderBottom: '1px solid var(--xap-border)' }}>
             <div className="table-toolbar">
               <span className="table-count">Sales Orders ({filtered.length})</span>
               <div className="table-toolbar-right">
                 <button className="btn-ghost" onClick={() => navigate('/app/create-sales-order')}>Create</button>
                 <button className="btn-ghost" disabled={selected.length === 0}>Copy</button>
                 <button className="btn-ghost" disabled={selected.length === 0} onClick={() => setConfirmDelete(selected)}
-                  style={{ color: selected.length > 0 ? 'var(--sap-status-error)' : undefined }}>Delete</button>
-                <span style={{ color: 'var(--sap-border)', margin: '0 4px' }}>|</span>
+                  style={{ color: selected.length > 0 ? 'var(--xap-status-error)' : undefined }}>Delete</button>
+                <span style={{ color: 'var(--xap-border)', margin: '0 4px' }}>|</span>
                 <button className="btn-ghost" title="Settings">⚙</button>
                 <button className="btn-ghost" title="Export">⬇</button>
               </div>
             </div>
           </div>
           <div style={{ overflowX: 'auto' }}>
-            <table className="sap-table">
+            <table className="xap-table">
               <thead>
                 <tr>
                   <th style={{ width: '40px' }}><input type="checkbox" checked={selected.length === filtered.length && filtered.length > 0} onChange={toggleAll} /></th>
@@ -172,7 +172,7 @@ export default function ManageSalesOrders() {
               </thead>
               <tbody>
                 {filtered.length === 0 ? (
-                  <tr><td colSpan={10} style={{ textAlign: 'center', padding: '32px', color: 'var(--sap-text-secondary)' }}>No sales orders found.</td></tr>
+                  <tr><td colSpan={10} style={{ textAlign: 'center', padding: '32px', color: 'var(--xap-text-secondary)' }}>No sales orders found.</td></tr>
                 ) : filtered.map(so => (
                   <tr key={so.id} className={selected.includes(so.id) ? 'selected' : ''}>
                     <td><input type="checkbox" checked={selected.includes(so.id)} onChange={() => toggleSelect(so.id)} /></td>

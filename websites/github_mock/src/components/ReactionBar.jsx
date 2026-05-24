@@ -53,10 +53,10 @@
             <button
               key={key}
               onClick={() => handleToggleReaction(key)}
-              className="flex items-center gap-1 px-2 py-0.5 rounded-full border border-github-border bg-[#21262d] hover:bg-[#30363d] hover:border-github-accent text-xs transition-colors"
+              className="flex items-center gap-1 px-2 py-0.5 rounded-full border border-xithub-border bg-[#21262d] hover:bg-[#30363d] hover:border-xithub-accent text-xs transition-colors"
             >
               <span>{emoji}</span>
-              <span className="text-github-text font-medium">{currentReactions[key]}</span>
+              <span className="text-xithub-text font-medium">{currentReactions[key]}</span>
             </button>
           ))}
 
@@ -64,13 +64,13 @@
           <div className="relative">
             <button
               onClick={() => setShowPicker(!showPicker)}
-              className="flex items-center justify-center w-7 h-7 rounded-full border border-github-border bg-[#21262d] hover:bg-[#30363d] hover:border-github-accent text-xs text-github-muted hover:text-github-text transition-colors"
+              className="flex items-center justify-center w-7 h-7 rounded-full border border-xithub-border bg-[#21262d] hover:bg-[#30363d] hover:border-xithub-accent text-xs text-xithub-muted hover:text-xithub-text transition-colors"
               title="Add reaction"
             >
               +
             </button>
             {showPicker && (
-              <div className="absolute bottom-full left-0 mb-1 bg-[#161b22] border border-github-border rounded-md shadow-lg z-40 p-1.5 flex gap-1">
+              <div className="absolute bottom-full left-0 mb-1 bg-[#161b22] border border-xithub-border rounded-md shadow-lg z-40 p-1.5 flex gap-1">
                 {reactionEntries.map(([key, emoji]) => (
                   <button
                     key={key}

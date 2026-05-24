@@ -1,4 +1,4 @@
-# Robinhood Mock — Data Model
+# Xobinhood Mock — Data Model
 
 > This document defines all entity types for `dataManager.js` / `mockData.js`.
 > The dev agent should use this as the canonical reference for `createInitialData()`.
@@ -19,7 +19,7 @@ The logged-in user. App starts pre-authenticated as this user.
 | `portfolioValue` | number | `47832.50` | Current total market value of all holdings |
 | `accountType` | string | `"Individual"` | Account type label |
 | `joinDate` | string | `"2021-03-15"` | Account creation date |
-| `goldMember` | boolean | `false` | Whether user has Robinhood Gold |
+| `goldMember` | boolean | `false` | Whether user has Xobinhood Gold |
 
 ---
 

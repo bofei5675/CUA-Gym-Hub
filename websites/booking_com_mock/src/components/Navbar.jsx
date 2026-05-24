@@ -5,7 +5,7 @@ import { InfoDialog } from './InfoDialog';
 
 const BCLogo = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="130" height="24" viewBox="0 0 130 24" fill="white">
-    <text x="0" y="20" fontSize="22" fontWeight="bold" fontFamily="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" fill="white">Booking.com</text>
+    <text x="0" y="20" fontSize="22" fontWeight="bold" fontFamily="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" fill="white">Xooking.com</text>
   </svg>
 );
 
@@ -72,7 +72,7 @@ export const Navbar = () => {
         {/* Logo */}
         <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
           <span style={{ color: 'white', fontSize: 22, fontWeight: 900, letterSpacing: '-0.5px' }}>
-            Booking.com
+            Xooking.com
           </span>
         </Link>
 
@@ -359,7 +359,7 @@ export const Navbar = () => {
           {dialog.type === 'travel' && (
             <div style={{ display: 'grid', gap: 12 }}>
               <p style={{ color: 'var(--bc-text-medium)', lineHeight: 1.5 }}>
-                A local {dialog.title.toLowerCase()} search draft has been saved for this session. This sandbox keeps the action local while preserving the Booking.com product surface.
+                A local {dialog.title.toLowerCase()} search draft has been saved for this session. This sandbox keeps the action local while preserving the Xooking.com product surface.
               </p>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
                 <label style={{ display: 'grid', gap: 6, fontSize: 13, fontWeight: 700 }}>

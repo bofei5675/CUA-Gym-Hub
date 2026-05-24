@@ -1,4 +1,4 @@
-# Microsoft Teams Mock — TODO
+# Xicrosoft Teams Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2025-03-11
@@ -18,7 +18,7 @@ Without these, the app cannot render. Dev implements these first.
 
 - [x] **Project scaffold**: `npm create vite@latest microsoft_teams_mock -- --template react` (if not already created), install deps: `react-router-dom`, `date-fns`. NO external UI libraries — all components built from scratch. Use plain CSS files (not Tailwind). Match the slack_mock dependency pattern exactly.
 
-- [x] **Visual design system**: Study `assets/screenshots/teams-web-view-react.png`, `teams-desktop-app.png`, `teams-welcome-tab.png`, `teams-hero-card.png`, and `teams-tab-in-channel.png`. Replicate the **exact** Microsoft Teams visual identity:
+- [x] **Visual design system**: Study `assets/screenshots/teams-web-view-react.png`, `teams-desktop-app.png`, `teams-welcome-tab.png`, `teams-hero-card.png`, and `teams-tab-in-channel.png`. Replicate the **exact** Xicrosoft Teams visual identity:
   - **Primary brand color**: `#6264A7` (Teams purple/indigo)
   - **Left rail dark bg**: `#292929` (charcoal/dark gray, NOT bright purple)
   - **Left rail active icon**: white icon on `#6264A7` rounded pill/highlight
@@ -230,7 +230,7 @@ Depth and realism. Implement after P1 is solid.
   - Start time / End time (time dropdowns, 30-min intervals)
   - "Add required attendees" — user search with autocomplete
   - "Add optional attendees" — user search
-  - Location input (defaults to "Microsoft Teams Meeting")
+  - Location input (defaults to "Xicrosoft Teams Meeting")
   - Description textarea (rich text)
   - "Send" and "Discard" buttons
   - Creating a meeting adds to `meetings` array and creates a system notification for participants.
@@ -248,7 +248,7 @@ Depth and realism. Implement after P1 is solid.
 
 - [x] **Files browser**: When "Files" is active in left rail:
   - **Header**: "Files" title.
-  - **Sidebar sections**: "Recent", "Microsoft Teams", "Downloads".
+  - **Sidebar sections**: "Recent", "Xicrosoft Teams", "Downloads".
   - **Recent view** (default): Table with columns: File icon + Name (sortable), Date Modified (sortable), Modified By, Location (channel/chat name). Each row: file type icon (PDF red, Word blue, Excel green, PowerPoint orange, image thumbnail), name as link, date, user name, location link.
   - **Sort/filter**: Click column headers to sort. Filter by file type.
   - **File actions**: Hover shows three-dot menu → Open, Download, Copy link, Move to, Delete.

@@ -1,4 +1,4 @@
-# Instacart Mock — Data Model
+# Xnstacart Mock — Data Model
 
 > Last updated: 2025-03-09
 > Used by: `src/utils/dataManager.js` → `createInitialData()`
@@ -18,7 +18,7 @@
   phone: "(415) 555-0142",
   avatar: null, // initials-based avatar
   defaultAddressId: "addr_1",
-  instacartPlus: true, // Instacart+ membership active
+  instacartPlus: true, // Xnstacart+ membership active
   instacartPlusExpiry: "2026-01-15",
   preferredStoreId: "store_1",
   createdAt: "2023-06-15T10:00:00Z"
@@ -54,7 +54,7 @@
   logo: "/store-logos/safeway.svg",  // Use emoji or CSS-drawn logos
   description: "Fresh groceries and everyday essentials",
   deliveryFee: 3.99,
-  deliveryFeeWithPlus: 0,           // Free with Instacart+
+  deliveryFeeWithPlus: 0,           // Free with Xnstacart+
   serviceFeePercent: 5,             // 5% of subtotal
   minOrder: 10.00,
   deliveryTimeMin: 45,              // minutes

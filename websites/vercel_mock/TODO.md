@@ -1,4 +1,4 @@
-# Vercel Dashboard Mock — TODO
+# Xercel Dashboard Mock — TODO
 
 > Status: COMPLETE
 > Last updated by: orchestrator, 2026-04-10
@@ -20,7 +20,7 @@
 
 - [x] **App layout**: Full-viewport flex layout. Left sidebar (240px width, collapsible to 48px icon rail via toggle) with `#000000` bg and right `var(--border)` border. Main content area fills remaining width. No fixed top header bar — instead, each page has its own breadcrumb/header area at the top of the main content. Sidebar is full height (100vh), sticky. Main content scrolls independently.
 
-- [x] **Sidebar component**: At top: Vercel triangle logo (▲ as SVG, white, 20px) + team name "Acme Inc" as text (truncated). Below: team/account switcher dropdown (click team name → dropdown with "Personal Account" and team names). Navigation items with 20px icons from lucide-react + 14px labels: **Overview** (layout-grid icon), **Integrations** (puzzle icon), **Activity** (activity icon), **Domains** (globe icon), **Usage** (bar-chart icon), **Settings** (settings icon). Active item: white text + `var(--bg-tertiary)` bg + left 2px white accent border. Inactive: `var(--fg-secondary)` text. Hover: `var(--bg-hover)` bg. Section divider line between team nav and project nav. At bottom: avatar circle (32px) + username + help button.
+- [x] **Sidebar component**: At top: Xercel triangle logo (▲ as SVG, white, 20px) + team name "Acme Inc" as text (truncated). Below: team/account switcher dropdown (click team name → dropdown with "Personal Account" and team names). Navigation items with 20px icons from lucide-react + 14px labels: **Overview** (layout-grid icon), **Integrations** (puzzle icon), **Activity** (activity icon), **Domains** (globe icon), **Usage** (bar-chart icon), **Settings** (settings icon). Active item: white text + `var(--bg-tertiary)` bg + left 2px white accent border. Inactive: `var(--fg-secondary)` text. Hover: `var(--bg-hover)` bg. Section divider line between team nav and project nav. At bottom: avatar circle (32px) + username + help button.
 
 - [x] **Routing**: `App.jsx` with `BrowserRouter`. Routes: `/` → Dashboard (project list), `/project/:projectId` → ProjectLayout (with nested: `overview`, `deployments`, `deployments/:deploymentId`, `analytics`, `speed-insights`, `logs`, `storage`, `settings`, `settings/domains`, `settings/environment-variables`, `settings/git`, `settings/functions`, `settings/general`), `/activity` → ActivityLog, `/domains` → DomainsPage (team-level), `/integrations` → IntegrationsPage, `/usage` → UsagePage, `/settings` → TeamSettings, `/settings/members` → TeamMembers, `/new` → NewProject, `/go` → StateInspector.
 
@@ -107,7 +107,7 @@
 
 - [x] **Team Members**: 4 members per `data_model.md` — Alex (owner), Sarah (member), Marcus (developer), Priya (developer). Use dicebear avatars.
 
-- [x] **Integrations**: 4 integrations per `data_model.md` — GitHub, GitLab, Vercel Analytics, Sentry.
+- [x] **Integrations**: 4 integrations per `data_model.md` — GitHub, GitLab, Xercel Analytics, Sentry.
 
 ---
 

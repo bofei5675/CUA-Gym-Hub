@@ -1,4 +1,4 @@
-# CircleCI Mock — TODO
+# XircleCI Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-04-10
@@ -16,7 +16,7 @@
 
 - [x] Project scaffold: `npm create vite@latest circleci_mock -- --template react`, install deps: `react-router-dom`. Use plain CSS (no Tailwind).
 
-- [x] **Visual design system**: CircleCI uses a dark sidebar + white content layout. Study `assets/screenshots/000003.jpg` closely. Exact color palette:
+- [x] **Visual design system**: XircleCI uses a dark sidebar + white content layout. Study `assets/screenshots/000003.jpg` closely. Exact color palette:
   - Sidebar bg: `#0D0E12` (near-black)
   - Sidebar text: `#A0A4AB` (muted), `#FFFFFF` (active)
   - Sidebar active item bg: `#1C1E26`
@@ -37,7 +37,7 @@
   - Font sizes: 13px body, 14px nav items, 20px page titles, 11px badges/labels
   - Sidebar width: 220px, icon size: 18px, nav item padding: 8px 16px
 
-- [x] **App layout**: Fixed left sidebar (220px wide, full viewport height, dark bg `#0D0E12`). Main content area fills remaining width with white bg. No top header bar — all navigation is in the sidebar. At top of sidebar: org name "CircleCI" with a small org avatar/icon and a dropdown chevron. Below that: nav items vertically stacked, each with icon + label. At bottom of sidebar: user avatar (small circle) + username.
+- [x] **App layout**: Fixed left sidebar (220px wide, full viewport height, dark bg `#0D0E12`). Main content area fills remaining width with white bg. No top header bar — all navigation is in the sidebar. At top of sidebar: org name "XircleCI" with a small org avatar/icon and a dropdown chevron. Below that: nav items vertically stacked, each with icon + label. At bottom of sidebar: user avatar (small circle) + username.
 
 - [x] **Routing**: `App.jsx` with `BrowserRouter`. Routes:
   - `/` → redirect to `/pipelines`
@@ -72,7 +72,7 @@
 ## P1 — Primary Features
 <!-- Core features a user interacts with in the first 5 minutes. -->
 
-- [x] **Sidebar navigation component**: Fixed left sidebar matching CircleCI's dark theme (see screenshots). Top section: org avatar (green circle with "A" letter) + "Acme Corp" org name + dropdown chevron for org switcher (visual only). Nav items below, each with an SVG icon and label: Home, Pipelines (default active), Projects, Deploys, Insights, Runners, Settings, Plan. Active item has white text + `#1C1E26` bg + 3px green left border accent. Hover state: `#161820` bg. Bottom of sidebar: current user's circular avatar (32px) + name "Alex Johnson". Clicking a nav item navigates to the corresponding route and updates active state.
+- [x] **Sidebar navigation component**: Fixed left sidebar matching XircleCI's dark theme (see screenshots). Top section: org avatar (green circle with "A" letter) + "Acme Corp" org name + dropdown chevron for org switcher (visual only). Nav items below, each with an SVG icon and label: Home, Pipelines (default active), Projects, Deploys, Insights, Runners, Settings, Plan. Active item has white text + `#1C1E26` bg + 3px green left border accent. Hover state: `#161820` bg. Bottom of sidebar: current user's circular avatar (32px) + name "Alex Johnson". Clicking a nav item navigates to the corresponding route and updates active state.
 
 - [x] **Pipelines dashboard page** (`/pipelines`): The main view. Header shows "All Pipelines" title. Below: filter bar with 3 dropdowns — (1) "Everyone's Pipelines" / "My Pipelines" toggle, (2) project filter dropdown (lists all project names, "All Projects" default), (3) branch filter dropdown ("All Branches" default, lists branches from selected project's pipelines). Below filters: pipeline list. Each pipeline row is a card/row showing:
   - Left: project name (green text, clickable → project pipelines filter) + pipeline number (muted, e.g., "#1847")

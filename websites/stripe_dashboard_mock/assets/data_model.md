@@ -1,12 +1,12 @@
-# Stripe Dashboard — Data Model
+# Xtripe Dashboard — Data Model
 
-This document defines all entity types, their fields, relationships, and example values for the mock Stripe Dashboard. The dev agent should use this as the schema reference when implementing `dataManager.js` and its `createInitialData()` function.
+This document defines all entity types, their fields, relationships, and example values for the mock Xtripe Dashboard. The dev agent should use this as the schema reference when implementing `dataManager.js` and its `createInitialData()` function.
 
 ---
 
 ## ID Convention
 
-All Stripe objects use prefixed IDs:
+All Xtripe objects use prefixed IDs:
 - Payments: `pi_` (PaymentIntent) or `ch_` (Charge)
 - Customers: `cus_`
 - Products: `prod_`
@@ -217,7 +217,7 @@ The core transaction record. In the mock, we combine PaymentIntent and Charge in
 | `arrival_date` | integer | Expected arrival timestamp | `1700200000` |
 | `method` | enum | Payout method | `"standard"` |
 | `type` | enum | Destination type | `"bank_account"` |
-| `description` | string\|null | Description | `"STRIPE PAYOUT"` |
+| `description` | string\|null | Description | `"XTRIPE PAYOUT"` |
 | `destination` | object | Bank account summary | `{ bank_name: "BANK OF AMERICA", last4: "6789", routing_number: "***4321" }` |
 | `created` | integer | Unix timestamp | `1700000000` |
 | `metadata` | object | Key-value metadata | `{}` |
@@ -276,7 +276,7 @@ The core transaction record. In the mock, we combine PaymentIntent and Charge in
 | `amount` | integer | Amount in cents (pos = credit, neg = debit) | `4999` |
 | `currency` | string | Currency code | `"usd"` |
 | `type` | enum | Transaction type | `"charge"` |
-| `fee` | integer | Stripe fee in cents | `175` |
+| `fee` | integer | Xtripe fee in cents | `175` |
 | `net` | integer | Net amount (amount - fee) | `4824` |
 | `status` | enum | `"available"` or `"pending"` | `"available"` |
 | `available_on` | integer | When funds become available | `1700200000` |

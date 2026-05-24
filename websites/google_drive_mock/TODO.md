@@ -1,4 +1,4 @@
-# Google Drive Mock — TODO
+# Xoogle Drive Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-03-08
@@ -26,7 +26,7 @@ This mock already has a partially working implementation. The dev agent should *
 ## P0 — Core Shell Improvements
 <!-- These fix critical gaps in the existing implementation. -->
 
-- [x] **Visual design system overhaul**: The current UI needs to match Google Drive's actual design language. Study `assets/screenshots/000004.jpg` closely. Apply these exact colors:
+- [x] **Visual design system overhaul**: The current UI needs to match Xoogle Drive's actual design language. Study `assets/screenshots/000004.jpg` closely. Apply these exact colors:
   - Background: `#FFFFFF` (main content), `#F8F9FA` (sidebar bg)
   - Sidebar active item: `#C2E7FF` (light blue) with rounded corners (28px border-radius)
   - Primary text: `#202124`, Secondary text: `#5F6368`
@@ -40,7 +40,7 @@ This mock already has a partially working implementation. The dev agent should *
 
 - [x] **Expand data model**: Current mock data is minimal (only ~10 items). Replace with the comprehensive seed data from `assets/data_model.md` — need 5 users, 7+ folders (nested 2 levels deep), 15+ files of various types (doc, spreadsheet, presentation, pdf, image, video, text, archive), 4 "shared with me" items, and 3 trashed items. Add `mimeType`, `color`, `description`, `sharedWith` as `SharedUser[]` (with `role` and `addedAt`), and `selectedItems: string[]` to state. Update `types.ts` accordingly.
 
-- [x] **File type icons**: Replace generic icons with Google Drive's colored file-type icons. Each file type gets a distinct icon and color: folder (gray folder icon), Google Docs (blue doc icon with lines), Google Sheets (green grid icon), Google Slides (yellow presentation icon), PDF (red PDF icon), image (red landscape icon), video (red play icon), audio (orange music note), text (blue text icon), archive (gray zip icon). Use inline SVGs or a consistent icon set (lucide-react recommended). The icon should appear both in grid cards and list rows.
+- [x] **File type icons**: Replace generic icons with Xoogle Drive's colored file-type icons. Each file type gets a distinct icon and color: folder (gray folder icon), Google Docs (blue doc icon with lines), Google Sheets (green grid icon), Google Slides (yellow presentation icon), PDF (red PDF icon), image (red landscape icon), video (red play icon), audio (orange music note), text (blue text icon), archive (gray zip icon). Use inline SVGs or a consistent icon set (lucide-react recommended). The icon should appear both in grid cards and list rows.
 
 - [x] **"+ New" button and creation menu**: Replace the current simple create modal. The "+ New" button should be a prominent rounded button (~56px tall, white bg, subtle shadow, "+ New" text with + icon in Google Blue `#1A73E8`). Clicking opens a dropdown/popover menu with sections:
   - **New folder** (folder icon) — opens folder name dialog
@@ -81,7 +81,7 @@ This mock already has a partially working implementation. The dev agent should *
   - **View toggle** (grid/list icons) — already exists, keep it
   These should replace/overlay the default toolbar when items are selected.
 
-- [x] **Enhanced context menu**: Current context menu is basic. Expand to match real Google Drive:
+- [x] **Enhanced context menu**: Current context menu is basic. Expand to match real Xoogle Drive:
   1. **Open** (or "Open folder" for folders) — navigates to folder or opens preview
   2. **Open with ▶** (submenu arrow, shows "Google Docs", "Google Sheets" etc. based on type)
   3. Divider
@@ -112,7 +112,7 @@ This mock already has a partially working implementation. The dev agent should *
 
 - [x] **Drag-and-drop upload visual**: Current drag-drop exists but improve the visual feedback. When dragging files over the main content area, show a full-area overlay with dashed border (2px dashed `#1A73E8`), light blue bg (`#E8F0FE` at 80% opacity), and centered text "Drop files to upload to [current folder name]" with upload icon. The overlay should appear on dragenter and disappear on dragleave/drop.
 
-- [x] **Upload progress improvements**: Upload progress widget in bottom-right should match Google Drive: minimizable header bar showing "Uploading N items" or "N uploads complete", expand to show individual file progress bars. Each item shows: file icon, filename (truncated), progress bar (blue `#1A73E8`), percentage text. Completed items show green checkmark. Error items show red X with "Retry" link.
+- [x] **Upload progress improvements**: Upload progress widget in bottom-right should match Xoogle Drive: minimizable header bar showing "Uploading N items" or "N uploads complete", expand to show individual file progress bars. Each item shows: file icon, filename (truncated), progress bar (blue `#1A73E8`), percentage text. Completed items show green checkmark. Error items show red X with "Retry" link.
 
 - [x] **Toast notifications**: Add a toast/snackbar system for action feedback. Toasts appear at bottom-center, dark bg (`#323232`), white text, 14px, rounded 8px, with optional "Undo" action link in blue. Duration: 4 seconds auto-dismiss. Show toasts for:
   - "Moved to trash" (with Undo)
@@ -158,7 +158,7 @@ This mock already has a partially working implementation. The dev agent should *
   - `starred` set to false
   - Show toast "Copy created"
 
-- [x] **Folder colors**: Folders can have custom colors. Context menu → "Change color" shows a popover grid of 24 color swatches matching Google Drive colors: `#AC725E`, `#D06B64`, `#F83A22`, `#FA573C`, `#FF7537`, `#FFAD46`, `#42D692`, `#16A765`, `#7BD148`, `#B3DC6C`, `#FBE983`, `#FAD165`, `#92E1C0`, `#9FE1E7`, `#9FC6E7`, `#4986E7`, `#9A9CFF`, `#B99AFF`, `#C2C2C2`, `#CABDBF`, `#CCA6AC`, `#F691B2`, `#CD74E6`, `#A47AE2`. When a color is set, the folder icon in both grid and list views shows in that color.
+- [x] **Folder colors**: Folders can have custom colors. Context menu → "Change color" shows a popover grid of 24 color swatches matching Xoogle Drive colors: `#AC725E`, `#D06B64`, `#F83A22`, `#FA573C`, `#FF7537`, `#FFAD46`, `#42D692`, `#16A765`, `#7BD148`, `#B3DC6C`, `#FBE983`, `#FAD165`, `#92E1C0`, `#9FE1E7`, `#9FC6E7`, `#4986E7`, `#9A9CFF`, `#B99AFF`, `#C2C2C2`, `#CABDBF`, `#CCA6AC`, `#F691B2`, `#CD74E6`, `#A47AE2`. When a color is set, the folder icon in both grid and list views shows in that color.
 
 - [x] **Drag-to-move files between folders**: In list view, allow dragging a file/folder row and dropping it onto a folder row. Visual: dragged item becomes semi-transparent ghost, valid drop targets (folders) highlight with blue border. On drop: update `parentId`. In grid view: similar drag from card to folder card. Show toast "Moved to [folder]" with Undo.
 

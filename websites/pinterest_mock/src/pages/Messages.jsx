@@ -80,7 +80,7 @@ const Messages = () => {
               <input
                 type="text"
                 placeholder="Search conversations"
-                className="w-full pl-9 pr-3 py-2 bg-[#e5e5e0] rounded-full text-sm outline-none focus:ring-2 focus:ring-pinterest-focus-blue"
+                className="w-full pl-9 pr-3 py-2 bg-[#e5e5e0] rounded-full text-sm outline-none focus:ring-2 focus:ring-xinterest-focus-blue"
                 value={searchFilter}
                 onChange={(e) => setSearchFilter(e.target.value)}
               />
@@ -175,7 +175,7 @@ const Messages = () => {
                       )}
                       <div className={`max-w-[70%] px-4 py-2.5 rounded-[20px] text-[14px] ${
                         isMe
-                          ? 'bg-pinterest-red text-white rounded-br-sm'
+                          ? 'bg-xinterest-red text-white rounded-br-sm'
                           : 'bg-[#e5e5e0] text-black rounded-bl-sm'
                       }`}>
                         <p>{msg.text}</p>
@@ -195,14 +195,14 @@ const Messages = () => {
                   <input
                     type="text"
                     placeholder="Type a message..."
-                    className="flex-1 px-4 py-2.5 bg-[#e5e5e0] rounded-full text-[14px] outline-none focus:ring-2 focus:ring-pinterest-focus-blue"
+                    className="flex-1 px-4 py-2.5 bg-[#e5e5e0] rounded-full text-[14px] outline-none focus:ring-2 focus:ring-xinterest-focus-blue"
                     value={messageText}
                     onChange={(e) => setMessageText(e.target.value)}
                   />
                   <button
                     type="submit"
                     disabled={!messageText.trim()}
-                    className="w-10 h-10 rounded-full bg-pinterest-red hover:bg-pinterest-hover text-white flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                    className="w-10 h-10 rounded-full bg-xinterest-red hover:bg-xinterest-hover text-white flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
                   >
                     <Send size={16} />
                   </button>
@@ -218,7 +218,7 @@ const Messages = () => {
                 <p className="text-lg font-bold text-gray-600 mb-1">Your messages</p>
                 <p className="text-sm">Send messages to friends about Pins you love</p>
                 <button
-                  className="mt-4 px-6 py-2.5 bg-pinterest-red text-white rounded-full font-semibold hover:bg-pinterest-hover"
+                  className="mt-4 px-6 py-2.5 bg-xinterest-red text-white rounded-full font-semibold hover:bg-xinterest-hover"
                   onClick={() => setShowNewConversation(true)}
                 >
                   Send message

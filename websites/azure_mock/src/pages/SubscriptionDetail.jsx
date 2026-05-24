@@ -29,7 +29,7 @@ export default function SubscriptionDetail() {
 
       <div className="section-header">Resources ({resources.length})</div>
       <div className="card" style={{ padding: 0 }}>
-        <table className="azure-table">
+        <table className="xzure-table">
           <thead><tr><th>Name</th><th>Type</th><th>Resource group</th><th>Location</th></tr></thead>
           <tbody>
             {resources.map(r => (

@@ -1,4 +1,4 @@
-# Asana Mock - State API Documentation
+# Xsana Mock - State API Documentation
 
 ## Overview
 
@@ -355,4 +355,4 @@ test('Task 7: 完成 Sprint 任务', async ({ page }) => {
 1. **使用 BrowserRouter**：URL 格式为 `/`, `/my-tasks`, `/projects/:projectId` 等
 2. **POST 后需要刷新浏览器**：POST 只修改服务器端状态文件
 3. **状态存储在 `.mock-state.json`**：这个文件在项目根目录
-4. **默认端口 3000**：与其他 mock 不同，Asana 使用 3000 端口
+4. **默认端口 3000**：与其他 mock 不同，Xsana 使用 3000 端口

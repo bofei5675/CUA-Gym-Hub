@@ -1,4 +1,4 @@
-# Twitter/X Mock — TODO
+# Xwitter/X Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-02-28
@@ -24,7 +24,7 @@ These items maintain/fix the existing foundation. The mock already has a working
 - [x] Session isolation: vite.config.js mock-api plugin with POST `/post?sid=` and GET `/state?sid=` (already done)
 
 - [x] **Visual design system audit**: Review all components against `assets/screenshots/profile_000002.jpg`. The existing mock uses Tailwind. Ensure the following exact design tokens are applied consistently:
-  - **Primary color**: `#1DA1F2` (Twitter Blue) — used for links, active tab indicators, Follow button fill, Post button fill, active icons
+  - **Primary color**: `#1DA1F2` (Xwitter Blue) — used for links, active tab indicators, Follow button fill, Post button fill, active icons
   - **Text primary**: `#0F1419` — display names, post body, page titles
   - **Text secondary**: `#536471` — handles, timestamps, inactive nav labels, meta text
   - **Background**: `#FFFFFF` — main bg
@@ -155,7 +155,7 @@ Depth and realism features. Implement only after all P1 is solid.
 
 - [ ] **Mute/block user from post menu**: When clicking "Mute @handle" in the three-dot menu: add userId to a `mutedUsers[]` array in state, hide their posts from feeds (filter out), show confirmation toast "You muted @handle". When clicking "Block @handle": add to `blockedUsers[]`, remove from following/followers, hide posts, show confirmation toast.
 
-- [ ] **Keyboard shortcuts**: Implement the core keyboard shortcuts from the Twitter shortcut panel. Priority shortcuts: `N` (new post → open compose modal), `/` (focus search), `G+H` (go home), `G+E` (go explore), `G+N` (go notifications), `G+M` (go messages), `G+P` (go profile), `G+B` (go bookmarks). Post-level shortcuts when a post is "focused" (via J/K navigation): `L` (like), `R` (reply), `T` (repost), `B` (bookmark), `Enter` (open detail). Show "?" modal with shortcut reference.
+- [ ] **Keyboard shortcuts**: Implement the core keyboard shortcuts from the Xwitter shortcut panel. Priority shortcuts: `N` (new post → open compose modal), `/` (focus search), `G+H` (go home), `G+E` (go explore), `G+N` (go notifications), `G+M` (go messages), `G+P` (go profile), `G+B` (go bookmarks). Post-level shortcuts when a post is "focused" (via J/K navigation): `L` (like), `R` (reply), `T` (repost), `B` (bookmark), `Enter` (open detail). Show "?" modal with shortcut reference.
 
 - [x] **Character counter ring animation**: Replace text-only character counter in composer with a circular SVG ring (20px diameter). The ring fills clockwise as user types. Blue (`#1DA1F2`) from 0-260 chars, yellow (`#FFAD1F`) from 260-280, red (`#F4212E`) above 280. When <20 chars remaining, show the remaining count number inside the ring. When at 280, ring is complete. Above 280, ring overflows with a red sector and count turns negative.
 

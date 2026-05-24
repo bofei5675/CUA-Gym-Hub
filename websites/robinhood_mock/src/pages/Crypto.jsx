@@ -121,9 +121,9 @@ export default function Crypto() {
 
       {/* Educational Callout */}
       <div className="bg-surface border border-surface-hover rounded-xl p-6">
-        <h3 className="font-bold mb-2">About Crypto on Robinhood</h3>
+        <h3 className="font-bold mb-2">About Crypto on Xobinhood</h3>
         <p className="text-sm text-text-muted leading-relaxed">
-          Robinhood Crypto is not a member of FINRA or SIPC. Crypto is highly speculative and volatile. Investments in crypto involve significant risk, including the risk of losing all your invested amount.
+          Xobinhood Crypto is not a member of FINRA or SIPC. Crypto is highly speculative and volatile. Investments in crypto involve significant risk, including the risk of losing all your invested amount.
         </p>
       </div>
     </div>

@@ -1,4 +1,4 @@
-# Sentry Mock — TODO
+# Xentry Mock — TODO
 
 > Status: READY FOR DEV
 > Last updated by: plan agent, 2026-04-10
@@ -17,7 +17,7 @@
 
 - [ ] **Project scaffold**: `npm create vite@latest sentry_mock -- --template react`, install deps: `react-router-dom`, `lucide-react`, `recharts` (for sparklines/charts), `date-fns`
 
-- [ ] **Visual design system**: Study `assets/screenshots/` — replicate Sentry's exact look:
+- [ ] **Visual design system**: Study `assets/screenshots/` — replicate Xentry's exact look:
   - Sidebar background: dark purple `#362D59` (deepest), sidebar text muted `#9386A0`, active text white
   - Active nav item: left 3px purple `#6C5FC7` border + lighter bg `#4A3E6B`
   - Main content bg: `#FFFFFF`, subtle gray bg `#FAF9FB` for table header rows
@@ -111,7 +111,7 @@
 
 - [ ] **Breadcrumb header**: "Issues" link > project shortId (e.g., "JAVASCRIPT-SHQH"). Right side: "Events" count + "Users" count displayed as large numbers
 
-- [ ] **Issue title section**: Large text — exception type (e.g., "TypeError") + subtitle message. Below: red dot + culprit path (e.g., `sentry.tasks.process_commit_context`)
+- [ ] **Issue title section**: Large text — exception type (e.g., "TypeError") + subtitle message. Below: red dot + culprit path (e.g., `xentry.tasks.process_commit_context`)
 
 - [ ] **Action toolbar**: Row of action buttons:
   - **Resolve** button: green/purple outlined, with dropdown arrow (Immediately, In next release, In current release). Clicking toggles `status` to "resolved"

@@ -132,11 +132,11 @@ export const IssueModal: React.FC<IssueModalProps> = ({ issue, onClose }) => {
   const getTypeIcon = (type: IssueType) => {
     switch (type) {
       case 'Bug':
-        return <AlertCircle className="text-jira-red" size={16} />;
+        return <AlertCircle className="text-xira-red" size={16} />;
       case 'Story':
-        return <Bookmark className="text-jira-green" size={16} fill="currentColor" />;
+        return <Bookmark className="text-xira-green" size={16} fill="currentColor" />;
       case 'Task':
-        return <CheckCircle2 className="text-jira-blue" size={16} />;
+        return <CheckCircle2 className="text-xira-blue" size={16} />;
       case 'Epic':
         return <Zap className="text-purple-600" size={16} />;
     }
@@ -149,7 +149,7 @@ export const IssueModal: React.FC<IssueModalProps> = ({ issue, onClose }) => {
         <div className="p-4 border-b border-gray-200 flex justify-between items-center sticky top-0 bg-white rounded-t-lg z-10">
           <div className="flex items-center gap-2 text-sm text-gray-500">
             {getTypeIcon(editedIssue.type)}
-            <span className="font-medium text-jira-subtext">{issue.key}</span>
+            <span className="font-medium text-xira-subtext">{issue.key}</span>
             <span>/</span>
             <span>{issue.type}</span>
           </div>
@@ -176,7 +176,7 @@ export const IssueModal: React.FC<IssueModalProps> = ({ issue, onClose }) => {
             <div className="bg-white rounded-lg w-full max-w-md shadow-2xl p-5">
               <h2 className="text-lg font-bold text-gray-900 mb-2">Delete issue?</h2>
               <p className="text-sm text-gray-600 mb-5">
-                This removes {issue.key} from the local Jira project state.
+                This removes {issue.key} from the local Xira project state.
               </p>
               <div className="flex justify-end gap-3">
                 <button onClick={() => setDeletePending(false)} className="px-4 py-2 text-sm rounded hover:bg-gray-100">
@@ -204,14 +204,14 @@ export const IssueModal: React.FC<IssueModalProps> = ({ issue, onClose }) => {
               type="text"
               value={editedIssue.summary}
               onChange={(e) => handleChange('summary', e.target.value)}
-              className="text-2xl font-semibold text-gray-900 w-full border-transparent hover:border-gray-300 border rounded px-2 py-1 mb-4 focus:border-jira-blue focus:ring-1 focus:ring-jira-blue outline-none transition-colors"
+              className="text-2xl font-semibold text-gray-900 w-full border-transparent hover:border-gray-300 border rounded px-2 py-1 mb-4 focus:border-xira-blue focus:ring-1 focus:ring-xira-blue outline-none transition-colors"
             />
 
             <div className="mb-6">
               <h3 className="text-sm font-semibold text-gray-900 mb-2">
                 Description
               </h3>
-              <div className="border border-gray-300 rounded-md focus-within:border-jira-blue focus-within:ring-1 focus-within:ring-jira-blue transition-all">
+              <div className="border border-gray-300 rounded-md focus-within:border-xira-blue focus-within:ring-1 focus-within:ring-xira-blue transition-all">
                 <div className="flex items-center gap-1 p-2 border-b border-gray-200 bg-gray-50 rounded-t-md">
                   <button className="p-1 hover:bg-gray-200 rounded text-gray-600" title="Bold"><Bold size={16} /></button>
                   <button className="p-1 hover:bg-gray-200 rounded text-gray-600" title="Italic"><Italic size={16} /></button>
@@ -245,7 +245,7 @@ export const IssueModal: React.FC<IssueModalProps> = ({ issue, onClose }) => {
                 <div className="flex items-center gap-2">
                   <div className="w-32 h-2 bg-gray-200 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-jira-blue transition-all duration-300"
+                      className="h-full bg-xira-blue transition-all duration-300"
                       style={{ width: `${calculateProgress()}%` }}
                     />
                   </div>
@@ -263,9 +263,9 @@ export const IssueModal: React.FC<IssueModalProps> = ({ issue, onClose }) => {
                   >
                     <button
                       onClick={() => toggleSubtask(subtask.id)}
-                      className={`text-gray-400 hover:text-jira-blue ${
+                      className={`text-gray-400 hover:text-xira-blue ${
                         subtask.completed
-                          ? 'text-jira-green hover:text-jira-green'
+                          ? 'text-xira-green hover:text-xira-green'
                           : ''
                       }`}
                     >
@@ -303,7 +303,7 @@ export const IssueModal: React.FC<IssueModalProps> = ({ issue, onClose }) => {
                       e.key === 'Enter' && handleAddSubtask()
                     }
                     placeholder="What needs to be done?"
-                    className="flex-1 border border-gray-300 rounded px-3 py-1.5 text-sm focus:border-jira-blue focus:ring-1 focus:ring-jira-blue outline-none"
+                    className="flex-1 border border-gray-300 rounded px-3 py-1.5 text-sm focus:border-xira-blue focus:ring-1 focus:ring-xira-blue outline-none"
                     autoFocus
                   />
                   <button
@@ -344,7 +344,7 @@ export const IssueModal: React.FC<IssueModalProps> = ({ issue, onClose }) => {
                       className="flex items-center gap-2 p-2 bg-gray-50 rounded group"
                     >
                       <span className="text-xs text-gray-500">relates to</span>
-                      <span className="text-sm font-medium text-jira-blue">
+                      <span className="text-sm font-medium text-xira-blue">
                         {linkedIssue.key}
                       </span>
                       <span className="text-sm text-gray-700 truncate flex-1">
@@ -408,7 +408,7 @@ export const IssueModal: React.FC<IssueModalProps> = ({ issue, onClose }) => {
                             }}
                             className="w-full text-left px-3 py-1.5 text-sm hover:bg-gray-100 flex items-center gap-2"
                           >
-                            <span className="text-jira-blue font-medium">
+                            <span className="text-xira-blue font-medium">
                               {i.key}
                             </span>
                             <span className="text-gray-700 truncate">
@@ -446,7 +446,7 @@ export const IssueModal: React.FC<IssueModalProps> = ({ issue, onClose }) => {
                   <Paperclip size={20} />
                   <span className="text-sm">
                     Drop files to attach, or{' '}
-                    <span className="text-jira-blue">browse</span>
+                    <span className="text-xira-blue">browse</span>
                   </span>
                 </div>
               </div>
@@ -459,7 +459,7 @@ export const IssueModal: React.FC<IssueModalProps> = ({ issue, onClose }) => {
                   onClick={() => setActiveTab('comments')}
                   className={`pb-2 text-sm font-semibold border-b-2 transition-colors ${
                     activeTab === 'comments'
-                      ? 'border-jira-blue text-jira-blue'
+                      ? 'border-xira-blue text-xira-blue'
                       : 'border-transparent text-gray-500 hover:text-gray-700'
                   }`}
                 >
@@ -469,7 +469,7 @@ export const IssueModal: React.FC<IssueModalProps> = ({ issue, onClose }) => {
                   onClick={() => setActiveTab('activity')}
                   className={`pb-2 text-sm font-semibold border-b-2 transition-colors ${
                     activeTab === 'activity'
-                      ? 'border-jira-blue text-jira-blue'
+                      ? 'border-xira-blue text-xira-blue'
                       : 'border-transparent text-gray-500 hover:text-gray-700'
                   }`}
                 >
@@ -488,14 +488,14 @@ export const IssueModal: React.FC<IssueModalProps> = ({ issue, onClose }) => {
                       <textarea
                         value={newComment}
                         onChange={(e) => setNewComment(e.target.value)}
-                        className="w-full border border-gray-300 rounded-md p-2 focus:border-jira-blue focus:ring-1 focus:ring-jira-blue outline-none text-sm"
+                        className="w-full border border-gray-300 rounded-md p-2 focus:border-xira-blue focus:ring-1 focus:ring-xira-blue outline-none text-sm"
                         placeholder="Add a comment..."
                         rows={2}
                       />
                       <div className="mt-2 flex justify-end">
                         <button
                           onClick={handleAddComment}
-                          className="bg-jira-blue text-white px-4 py-1.5 rounded hover:bg-blue-700 font-medium text-sm disabled:opacity-50 transition-colors"
+                          className="bg-xira-blue text-white px-4 py-1.5 rounded hover:bg-blue-700 font-medium text-sm disabled:opacity-50 transition-colors"
                           disabled={!newComment.trim()}
                         >
                           Save
@@ -606,7 +606,7 @@ export const IssueModal: React.FC<IssueModalProps> = ({ issue, onClose }) => {
               <select
                 value={editedIssue.status}
                 onChange={(e) => handleChange('status', e.target.value)}
-                className="w-full bg-gray-100 border border-gray-300 rounded px-2 py-1.5 text-sm font-medium hover:bg-gray-200 cursor-pointer focus:ring-2 focus:ring-jira-blue focus:border-transparent outline-none"
+                className="w-full bg-gray-100 border border-gray-300 rounded px-2 py-1.5 text-sm font-medium hover:bg-gray-200 cursor-pointer focus:ring-2 focus:ring-xira-blue focus:border-transparent outline-none"
               >
                 {validStatuses.map((s) => (
                   <option key={s} value={s}>
@@ -630,7 +630,7 @@ export const IssueModal: React.FC<IssueModalProps> = ({ issue, onClose }) => {
                 <select
                   value={editedIssue.type}
                   onChange={(e) => handleChange('type', e.target.value)}
-                  className="flex-1 bg-transparent border border-transparent hover:bg-gray-200 rounded px-2 py-1.5 text-sm cursor-pointer focus:ring-2 focus:ring-jira-blue focus:border-transparent outline-none"
+                  className="flex-1 bg-transparent border border-transparent hover:bg-gray-200 rounded px-2 py-1.5 text-sm cursor-pointer focus:ring-2 focus:ring-xira-blue focus:border-transparent outline-none"
                 >
                   {(['Story', 'Task', 'Bug', 'Epic'] as IssueType[]).map(
                     (t) => (
@@ -652,7 +652,7 @@ export const IssueModal: React.FC<IssueModalProps> = ({ issue, onClose }) => {
                 onChange={(e) =>
                   handleChange('assigneeId', e.target.value || null)
                 }
-                className="w-full bg-transparent border border-transparent hover:bg-gray-200 rounded px-2 py-1.5 text-sm cursor-pointer focus:ring-2 focus:ring-jira-blue focus:border-transparent outline-none"
+                className="w-full bg-transparent border border-transparent hover:bg-gray-200 rounded px-2 py-1.5 text-sm cursor-pointer focus:ring-2 focus:ring-xira-blue focus:border-transparent outline-none"
               >
                 <option value="">Unassigned</option>
                 {state.users.map((u) => (
@@ -691,7 +691,7 @@ export const IssueModal: React.FC<IssueModalProps> = ({ issue, onClose }) => {
               <select
                 value={editedIssue.priority}
                 onChange={(e) => handleChange('priority', e.target.value)}
-                className="w-full bg-transparent border border-transparent hover:bg-gray-200 rounded px-2 py-1.5 text-sm cursor-pointer focus:ring-2 focus:ring-jira-blue focus:border-transparent outline-none"
+                className="w-full bg-transparent border border-transparent hover:bg-gray-200 rounded px-2 py-1.5 text-sm cursor-pointer focus:ring-2 focus:ring-xira-blue focus:border-transparent outline-none"
               >
                 {(['Highest', 'High', 'Medium', 'Low', 'Lowest'] as Priority[]).map(
                   (p) => (
@@ -713,7 +713,7 @@ export const IssueModal: React.FC<IssueModalProps> = ({ issue, onClose }) => {
                 onChange={(e) =>
                   handleChange('storyPoints', parseInt(e.target.value) || 0)
                 }
-                className="w-full bg-transparent border border-gray-300 rounded px-2 py-1.5 text-sm focus:ring-2 focus:ring-jira-blue focus:border-transparent outline-none"
+                className="w-full bg-transparent border border-gray-300 rounded px-2 py-1.5 text-sm focus:ring-2 focus:ring-xira-blue focus:border-transparent outline-none"
               />
             </div>
 
@@ -756,7 +756,7 @@ export const IssueModal: React.FC<IssueModalProps> = ({ issue, onClose }) => {
                       addLabel(labelInput);
                     }
                   }}
-                  className="w-full border border-gray-300 rounded px-2 py-1 text-sm focus:border-jira-blue focus:ring-1 focus:ring-jira-blue outline-none"
+                  className="w-full border border-gray-300 rounded px-2 py-1 text-sm focus:border-xira-blue focus:ring-1 focus:ring-xira-blue outline-none"
                   placeholder="Add a label..."
                 />
                 {showLabelSuggestions &&

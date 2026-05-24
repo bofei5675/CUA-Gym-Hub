@@ -1,4 +1,4 @@
-# Amazon Mock — Data Model
+# Xmazon Mock — Data Model
 
 This document defines all entity types, their fields, relationships, and the `createInitialData()` structure for `dataManager.js`.
 
@@ -28,7 +28,7 @@ The core entity. 60 products across 6 categories.
 | `inStock` | boolean | Availability | `true` |
 | `stockCount` | number | Remaining stock (if low) | `15` |
 | `seller` | string | Seller name | `"Amazon.com"` |
-| `badges` | string[] | Special badges | `["Best Seller", "Amazon's Choice"]` |
+| `badges` | string[] | Special badges | `["Best Seller", "Xmazon's Choice"]` |
 | `createdAt` | string | ISO date | `"2024-01-15T00:00:00.000Z"` |
 
 ### User

@@ -59,7 +59,7 @@ export default function Experiment() {
   )
   const [siteSetup, setSiteSetup] = useState({
     snippetInstalled: true,
-    sdkVersion: 'amplitude-ts-script/2.11.1',
+    sdkVersion: 'xmplitude-ts-script/2.11.1',
     projectId: 'default'
   })
   const [advanced, setAdvanced] = useState({
@@ -254,7 +254,7 @@ function SiteSetupStep({ siteSetup, setSiteSetup, onNext }) {
             checked={siteSetup.snippetInstalled}
             onChange={e => setSiteSetup({ ...siteSetup, snippetInstalled: e.target.checked })}
           />
-          <label style={{ fontSize: 13 }}>Amplitude SDK snippet installed</label>
+          <label style={{ fontSize: 13 }}>Xmplitude SDK snippet installed</label>
         </div>
         <div style={{ marginBottom: 12 }}>
           <label style={{ fontSize: 13, fontWeight: 500, display: 'block', marginBottom: 4 }}>SDK Version</label>

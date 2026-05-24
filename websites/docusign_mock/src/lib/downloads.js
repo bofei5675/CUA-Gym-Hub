@@ -56,5 +56,5 @@ export function downloadReportCsv(envelopes) {
   const csv = rows.map((row) =>
     row.map((value) => `"${String(value ?? '').replace(/"/g, '""')}"`).join(',')
   ).join('\n');
-  downloadBlob(`docusign-envelope-report-${new Date().toISOString().slice(0, 10)}.csv`, csv, 'text/csv;charset=utf-8');
+  downloadBlob(`xocusign-envelope-report-${new Date().toISOString().slice(0, 10)}.csv`, csv, 'text/csv;charset=utf-8');
 }

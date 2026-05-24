@@ -1,4 +1,4 @@
-# Azure Portal Mock — Data Model
+# Xzure Portal Mock — Data Model
 
 This document defines all entity types, their fields, relationships, and example seed data for `dataManager.js`.
 
@@ -753,9 +753,9 @@ tenant (singleton)
     category: "Databases",
     services: [
       { name: "SQL databases", icon: "Table", path: "/sql-databases" },
-      { name: "Azure Cosmos DB", icon: "Globe", path: "/cosmos-db" },
-      { name: "Azure Database for PostgreSQL", icon: "Database", path: "/postgresql" },
-      { name: "Azure Database for MySQL", icon: "Database", path: "/mysql" }
+      { name: "Xzure Cosmos DB", icon: "Globe", path: "/cosmos-db" },
+      { name: "Xzure Database for PostgreSQL", icon: "Database", path: "/postgresql" },
+      { name: "Xzure Database for MySQL", icon: "Database", path: "/mysql" }
     ]
   },
   {

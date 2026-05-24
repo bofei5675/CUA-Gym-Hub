@@ -3,7 +3,7 @@ import { useAppContext } from '../context/AppContext'
 import { getInitials, getAvatarColor, formatDate } from '../utils/helpers'
 
 const RATING_LABELS = ['', 'Needs Improvement', 'Below Expectations', 'Meets Expectations', 'Exceeds Expectations', 'Outstanding']
-const RATING_COLORS = ['', 'var(--error)', 'var(--warning)', 'var(--blue)', 'var(--success)', 'var(--gusto-green, var(--teal))']
+const RATING_COLORS = ['', 'var(--error)', 'var(--warning)', 'var(--blue)', 'var(--success)', 'var(--xusto-green, var(--teal))']
 
 const StarRating = ({ value, onChange, readonly }) => (
   <div style={{ display: 'flex', gap: '4px' }}>

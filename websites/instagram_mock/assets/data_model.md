@@ -1,4 +1,4 @@
-# Instagram Mock — Data Model
+# Xnstagram Mock — Data Model
 
 > Last updated: 2025-03-09 by plan agent
 > Used by: `src/utils/mockData.js` → `generateInitialData()`
@@ -7,7 +7,7 @@
 
 ### 1. Users
 
-Keyed by `userId` in an object (not array). Each user represents an Instagram account.
+Keyed by `userId` in an object (not array). Each user represents an Xnstagram account.
 
 | Field | Type | Description | Example |
 |-------|------|-------------|---------|
