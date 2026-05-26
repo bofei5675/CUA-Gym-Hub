@@ -179,6 +179,22 @@ Build a new mock for Figma with full state API support.
 
 See [SANDBOX_COMPLETENESS_GUIDE.md](SANDBOX_COMPLETENESS_GUIDE.md) for design principles and acceptance criteria.
 
+## Citation
+
+If you use CUA-Gym-Hub in your research, please cite the CUA-Gym paper:
+
+```bibtex
+@misc{wang2026cuagymscalingverifiabletraining,
+      title={CUA-Gym: Scaling Verifiable Training Environments and Tasks for Computer-Use Agents},
+      author={Bowen Wang and Dunjie Lu and Junli Wang and Tianyi Bai and Shixuan Liu and Zhipeng Zhang and Haiquan Wang and Hao Hu and Tianbao Xie and Shuai Bai and Dayiheng Liu and Que Shen and Junyang Lin and Tao Yu},
+      year={2026},
+      eprint={2605.25624},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2605.25624},
+}
+```
+
 ## License
 
 [Apache 2.0](LICENSE) · Part of [CUA-Gym](https://github.com/xlang-ai/CUA-Gym)
